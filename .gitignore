@@ -1,0 +1,22 @@
+# Office lock files
+~$*.xlsx
+~$*.docx
+*.tmp
+*.bak
+
+# Local credentials and runtime files
+.env
+.env.*
+!.env.example
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary authoring output, not real evidence
+*.inspect.ndjson
+tmp/
+.scratch/
