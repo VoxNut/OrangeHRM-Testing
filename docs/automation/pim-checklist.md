@@ -10,6 +10,8 @@
 
 Đây là kế hoạch; chưa có kết quả chạy automation hoặc fixture đã tạo trên website.
 
+Katalon Recorder là lựa chọn cá nhân cho phần PIM của Nhựt. Những thành viên khác tự chọn công cụ, không bị ràng buộc bởi kế hoạch này.
+
 ## Trình tự
 
 1. Ghi môi trường, đọc lại UI/validation và xác nhận baseline OrangeHRM. Khác biệt phải cập nhật design trước run.
@@ -18,7 +20,7 @@
 4. Làm smoke trước: `TC_PIM_EMP_001`, `TC_PIM_EMP_003`, `TC_PIM_EMP_020`, `TC_PIM_PERSONAL_001`, `TC_PIM_JOB_001`, `TC_PIM_JOB_012`, `TC_PIM_JOB_013`.
 5. Record/chỉnh lệnh trên Katalon Recorder, thêm assertion. Chạy từng case rồi mới chạy nhóm.
 6. Hoàn thiện các case P1, sau đó P2 trong workbook. Upload/download cần thử khả năng tương tác file của extension trước.
-7. Lưu suite thật vào `automation/katalon/PIM_<module>/`, dữ liệu và hướng dẫn import kèm theo.
+7. Lưu suite thật vào `automation/23130226/KatalonRecorder/PIM_<module>/`, dữ liệu và hướng dẫn import kèm theo.
 8. Ghi actual, ngày thực chạy, lỗi, ảnh và log vào đúng Case ID. Report sẽ tự đếm khi cột Result đổi.
 9. Khôi phục/xóa riêng fixture của nhóm. Lưu bằng chứng trước cleanup.
 

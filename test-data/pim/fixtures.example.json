@@ -46,5 +46,6 @@
   },
   "date_format_observed": null,
   "browser_and_version": null,
+  "automation_tool": "Katalon Recorder",
   "katalon_recorder_version": null
 }
