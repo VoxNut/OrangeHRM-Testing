@@ -11,7 +11,7 @@ git pull --ff-only origin dev
 git switch -c thang/asm6-leave
 ```
 
-Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng được giao. Nhựt đã có nhánh `nhat/asm6-pim`, không tạo lại.
+Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng được giao. Nhựt đã có nhánh `nhut`, không tạo lại.
 
 ## 2. Viết workbook cá nhân
 
@@ -21,6 +21,7 @@ Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng 
 - ID không trùng giữa các thành viên. Dùng prefix chức năng trong bảng phân công, ví dụ `TC_PIM_EMP_001`.
 - Giữ tên cột của mẫu. Input và tiền điều kiện nằm trong `Test Case Procedure`.
 - Chưa chạy: `Untested`. Không điền ngày chạy, actual hoặc minh chứng giả.
+- Mỗi thành viên tự chọn công cụ automation; ghi công cụ/phiên bản và hướng dẫn chạy trong tài liệu cá nhân. Không bắt buộc dùng Katalon Recorder.
 - Mỗi người chỉnh một file riêng. Không đồng thời chỉnh file tổng hợp `.xlsx`, vì Git không merge nội dung Excel như file văn bản.
 
 ## 3. Commit và push
@@ -32,7 +33,7 @@ git branch --show-current
 git status --short
 git add -- docs/test-cases/members/Group01_23130226_VoMinhNhut.xlsx
 git commit -m "docs: add PIM test design for 23130226"
-git push -u origin nhat/asm6-pim
+git push -u origin nhut
 ```
 
 Đổi tên workbook, message và nhánh theo người làm. Không dùng `git add .` nếu chưa kiểm tra toàn bộ file thay đổi.
@@ -55,6 +56,7 @@ git push -u origin nhat/asm6-pim
 - [ ] Case độc lập hoặc ghi rõ fixture/dependency.
 - [ ] Mã TestDesign truy được sang test case.
 - [ ] Có kế hoạch automation, assertion, setup và cleanup.
+- [ ] Ghi rõ công cụ thực tế; có hướng dẫn chạy lại phù hợp công cụ đó.
 - [ ] Kết quả, ngày, log và ảnh chỉ được ghi sau thực thi thật.
 - [ ] Công thức tổng hợp và tên sheet tham chiếu không lỗi.
 
