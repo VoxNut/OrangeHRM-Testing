@@ -1,6 +1,6 @@
 # Quy ước workbook mẫu
 
-Mẫu đã điền của Nhựt: `docs/test-cases/members/Group01_23130226_VoMinhNhut.xlsx` trên nhánh `nhat/asm6-pim`. Sau review và merge, mẫu sẽ có trên `dev`.
+Mẫu đã điền của Nhựt: `docs/test-cases/members/Group01_23130226_VoMinhNhut.xlsx` trên nhánh `nhut`. Sau review và merge, mẫu sẽ có trên `dev`.
 
 ## Cấu trúc thống nhất
 
@@ -15,6 +15,8 @@ Mẫu đã điền của Nhựt: `docs/test-cases/members/Group01_23130226_VoMin
 | Test Report | Tổng hợp tự động Passed/Failed/Untested/Blocked/Skipped |
 
 Sao chép mẫu sang **tên file cá nhân**, đổi metadata và thay toàn bộ nội dung PIM bằng phần được giao. Không chỉ đổi tên sheet: phải cập nhật mã TC/TD, nội dung, công thức report và số dòng đếm.
+
+Kế hoạch PIM dùng Katalon Recorder là ví dụ cá nhân của Nhựt. Thành viên chọn công cụ khác cần thay công cụ, command/assertion, file suite/script và cách chạy tương ứng. Giữ chung format test design, không bắt buộc chung công cụ.
 
 ## Ví dụ viết một case
 
