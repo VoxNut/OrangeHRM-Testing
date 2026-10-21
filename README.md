@@ -11,10 +11,14 @@ Tài liệu phân tích, thiết kế test case và kế hoạch automation cho 
 | MSSV | Họ tên | Vai trò | Chức năng đã nhận |
 | --- | --- | --- | --- |
 | 23130226 | Võ Minh Nhựt | Nhóm trưởng | PIM_EMP, PIM_PERSONAL, PIM_JOB |
-| 23130299 | Nguyễn Văn Thắng | Thành viên | Chưa chọn |
-| 23130339 | Tôn Bích Trâm | Thành viên | Chưa chọn |
-| 22130254 | Cao Tiến Thành | Thành viên | Chưa chọn |
-| 23130171 | Nguyễn Thị Thủy Linh | Thành viên | Chưa chọn |
+| 23130299 | Nguyễn Văn Thắng | Thành viên | RECR_VAC, RECR_CAND, RECR_FLOW |
+| 23130339 | Tôn Bích Trâm | Thành viên | TIME_ATTEND, TIME_MY, TIME_EMP |
+| 22130254 | Cao Tiến Thành | Thành viên | LEAVE_CONFIG, LEAVE_SELF, LEAVE_ADMIN |
+| 23130171 | Nguyễn Thị Thủy Linh | Thành viên | ADM_STRUCT, ADM_JOB, ADM_USER |
+
+Nhóm trưởng xác nhận các thành viên đã hoàn thành phần thiết kế cho các chức năng được giao. Mỗi người phụ trách 3 chức năng, khoảng 20–30 test case mỗi chức năng. Phân bổ thiết kế là 25 case/chức năng, tổng dự kiến 375 case; số case thực tế lấy từ workbook đã review. Xem [phạm vi và phân công chi tiết](docs/planning/function-allocation.md).
+
+Hoàn thành thiết kế không đồng nghĩa automation đã chạy hoặc mọi workbook đã được merge. Chỉ ghi kết quả thực thi khi có log/ảnh tương ứng; không tự chuyển các case Untested sang Passed.
 
 ## Cấu trúc
 
@@ -38,20 +42,23 @@ OrangeHRM-Testing/
     └── executions/                  # Log và screenshot test thực tế
 ```
 
-## Bắt đầu làm bài
+## Rà soát và tích hợp tài liệu
 
-1. Xem `docs/planning/function-allocation.md`, đăng ký đủ 3 chức năng không trùng người khác.
-2. Đọc `docs/templates/README.md` và workbook mẫu của Nhựt trên nhánh `nhut` trước khi viết tài liệu riêng.
-3. Tuần đầu hoàn thiện ít nhất 1 chức năng khoảng 20–30 test case. Tiếp tục đủ 3 chức năng theo tiến độ của nhóm.
-4. Làm trên nhánh riêng, commit và push, chụp bằng chứng, tạo pull request vào `dev`. Xem `CONTRIBUTING.md`.
-5. Nhóm trưởng review rồi gộp tài liệu đã thống nhất vào `docs/test-cases/merged/Group01_OrangeHRM.xlsx`.
+1. Đối chiếu 3 chức năng của mỗi thành viên với `docs/planning/function-allocation.md`; kiểm tra không trùng phạm vi.
+2. Rà soát workbook theo `docs/templates/README.md`: ID, TestDesign, bước/input/expected, fixture và kế hoạch automation.
+3. Push bản hoàn chỉnh lên nhánh cá nhân, lưu bằng chứng và tạo pull request vào `dev`. Xem `CONTRIBUTING.md`.
+4. Nhóm trưởng review, merge rồi tổng hợp vào `docs/test-cases/merged/Group01_OrangeHRM.xlsx`; kiểm tra công thức và truy vết sau khi ghép.
+5. Ghi nhận riêng tiến độ thiết kế, tích hợp tài liệu và thực thi automation. Cập nhật Result theo bằng chứng của từng case.
+
+ZIP nộp Classroom được chuẩn bị trên máy cá nhân, không lưu trong repo. Các thư mục `submission/` và `submissions/` được bỏ qua bởi Git; tài liệu nguồn và minh chứng vẫn lưu theo cấu trúc trên.
 
 ## Nhánh
 
 - `main`: bản nền và các mốc đã được nhóm thống nhất.
 - `dev`: tích hợp phần của thành viên sau review.
 - `nhut`: phần PIM của Võ Minh Nhựt.
-- Nhánh thành viên đề xuất: `thang/asm6-<module>`, `tram/asm6-<module>`, `thanh/asm6-<module>`, `linh/asm6-<module>`; thay `<module>` bằng tên phần đã chọn.
+- Các nhánh cá nhân hiện có trên remote: `nhut`, `NVThang`, `thanh`.
+- Trâm và Linh dùng nhánh cá nhân của mình; nếu chưa tạo, có thể dùng `tram` và `linh`. Kiểm tra tên nhánh thực tế trước khi push, không tạo lại nhánh đã có.
 
 Luồng nộp: **nhánh thành viên → pull request → dev**. Không sửa workbook của thành viên khác trên nhánh riêng. Chưa có automation execution thì để `Untested`; không dùng log hoặc ảnh mẫu làm minh chứng thực thi.
 

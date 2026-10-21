@@ -2,6 +2,18 @@
 
 Mỗi thành viên tự chọn công cụ phù hợp với chức năng được giao. Không bắt buộc Katalon Recorder hoặc bất kỳ công cụ chung nào.
 
+Phân công và phần thiết kế của 15 chức năng đã được nhóm trưởng xác nhận hoàn thành. Kế hoạch thực thi theo người phụ trách:
+
+| Người phụ trách | Phạm vi automation |
+| --- | --- |
+| Võ Minh Nhựt – 23130226 | PIM_EMP, PIM_PERSONAL, PIM_JOB |
+| Cao Tiến Thành – 22130254 | LEAVE_CONFIG, LEAVE_SELF, LEAVE_ADMIN |
+| Tôn Bích Trâm – 23130339 | TIME_ATTEND, TIME_MY, TIME_EMP |
+| Nguyễn Văn Thắng – 23130299 | RECR_VAC, RECR_CAND, RECR_FLOW |
+| Nguyễn Thị Thủy Linh – 23130171 | ADM_STRUCT, ADM_JOB, ADM_USER |
+
+Trạng thái thiết kế không thay cho kết quả chạy. Checklist bên dưới dùng cho từng suite; chỉ đánh dấu khi có script, dữ liệu hoặc bằng chứng tương ứng.
+
 ## Checklist chung
 
 - [ ] Chốt phạm vi, quy tắc nghiệp vụ và test design của từng chức năng.
@@ -15,4 +27,6 @@ Mỗi thành viên tự chọn công cụ phù hợp với chức năng được
 - [ ] Chạy, chụp ảnh/log thật, ghi actual và phân loại lỗi script/môi trường/sản phẩm.
 - [ ] Dọn đúng dữ liệu nhóm tạo, review và merge vào dev.
 
-Chi tiết PIM nằm trong sheet `Automation Plan` của workbook Nhựt. Các chức năng khác bổ sung kế hoạch sau khi phân công.
+Kế hoạch chi tiết nằm trong sheet `Automation Plan` của từng workbook cá nhân. Phạm vi, phân bổ case, tiền điều kiện và phối hợp dữ liệu của cả 15 chức năng nằm trong [bảng phân công](../planning/function-allocation.md).
+
+Thứ tự chuẩn bị dữ liệu: Leave Types/Entitlements trước Apply Leave và Leave List; Project/Activity và My Timesheets trước Employee Timesheets; Vacancies trước Candidates và Candidate Workflow. Các suite Admin/PIM chỉ dùng danh mục và hồ sơ test riêng; không xóa dữ liệu mà suite khác đang sử dụng.

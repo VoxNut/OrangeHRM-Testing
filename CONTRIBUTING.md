@@ -1,17 +1,17 @@
 # Quy trình làm việc của Group01
 
-## 1. Tạo nhánh riêng từ dev
+## 1. Cập nhật nhánh riêng từ dev
 
-Sau khi nhóm trưởng đã push nhánh `dev` lên GitHub, thành viên thực hiện:
+Đã có các nhánh remote `nhut`, `NVThang` và `thanh`. Với nhánh cá nhân đã tồn tại, thành viên cập nhật như sau (ví dụ Thắng):
 
 ```powershell
 git fetch origin
-git switch dev
-git pull --ff-only origin dev
-git switch -c thang/asm6-leave
+git switch NVThang
+git pull --ff-only origin NVThang
+git merge origin/dev
 ```
 
-Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng được giao. Nhựt đã có nhánh `nhut`, không tạo lại.
+Đổi `NVThang` theo tên nhánh thực tế. Chỉ tạo nhánh mới từ `origin/dev` khi chưa có nhánh cá nhân; không tạo lại hoặc ghi đè nhánh của người khác. Nếu có conflict trong workbook Excel, phối hợp với người sở hữu file thay vì tự chọn một bản và bỏ thay đổi.
 
 ## 2. Viết workbook cá nhân
 
@@ -23,6 +23,7 @@ Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng 
 - Chưa chạy: `Untested`. Không điền ngày chạy, actual hoặc minh chứng giả.
 - Mỗi thành viên tự chọn công cụ automation; ghi công cụ/phiên bản và hướng dẫn chạy trong tài liệu cá nhân. Không bắt buộc dùng Katalon Recorder.
 - Mỗi người chỉnh một file riêng. Không đồng thời chỉnh file tổng hợp `.xlsx`, vì Git không merge nội dung Excel như file văn bản.
+- Phần thiết kế của các thành viên đã hoàn thành theo xác nhận nhóm trưởng. Lần cập nhật tiếp theo tập trung review, chuẩn hóa và tích hợp theo `docs/planning/function-allocation.md`; không tự thay đổi phạm vi hoặc kết quả test của người khác.
 
 ## 3. Commit và push
 
@@ -72,3 +73,5 @@ MaSV_HoTen.zip
 ```
 
 `Group01.txt` chứa link repo chung public. PNG là minh chứng push/merge của chính thành viên. Không nén cả thư mục `.git`. Kiểm tra deadline thật trên Classroom; không dùng thời gian tạo file để thay bằng chứng push đúng hạn.
+
+Chuẩn bị ZIP ngoài repo trên máy cá nhân. Không commit thư mục `submission/` hoặc `submissions/`; `.gitignore` đã bỏ qua hai thư mục này. Chỉ lưu workbook nguồn, tài liệu chung, script/test data và minh chứng cần thiết trên GitHub.
