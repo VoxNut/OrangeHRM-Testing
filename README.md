@@ -57,6 +57,6 @@ Luồng nộp: **nhánh thành viên → pull request → dev**. Không sửa wo
 
 ## Công cụ automation
 
-Các thành viên không cần dùng cùng công cụ. Mỗi người ghi rõ công cụ, phiên bản, cách cài đặt/import, cách chạy và dữ liệu cần chuẩn bị trong phần của mình. Katalon Recorder trong kế hoạch PIM chỉ là lựa chọn của Nhựt, không phải quy định của cả nhóm.
+Các thành viên không cần dùng cùng công cụ. Mỗi người ghi rõ công cụ, phiên bản, cách cài đặt/import, cách chạy và dữ liệu cần chuẩn bị trong phần của mình. Phần PIM_EMP của Nhựt dùng Playwright, không phải quy định công cụ của cả nhóm.
 
 Tài liệu test design dùng format chung và không phụ thuộc công cụ. Suite/script, assertion và báo cáo chạy phải tương ứng công cụ thực tế của người thực hiện. Lưu theo `automation/MaSV/TenCongCu/MaChucNang/`.
