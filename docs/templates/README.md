@@ -16,7 +16,7 @@ Mẫu đã điền của Nhựt: `docs/test-cases/members/Group01_23130226_VoMin
 
 Sao chép mẫu sang **tên file cá nhân**, đổi metadata và thay toàn bộ nội dung PIM bằng phần được giao. Không chỉ đổi tên sheet: phải cập nhật mã TC/TD, nội dung, công thức report và số dòng đếm.
 
-Kế hoạch PIM dùng Katalon Recorder là ví dụ cá nhân của Nhựt. Thành viên chọn công cụ khác cần thay công cụ, command/assertion, file suite/script và cách chạy tương ứng. Giữ chung format test design, không bắt buộc chung công cụ.
+Phần PIM_EMP dùng Playwright là ví dụ cá nhân của Nhựt. Thành viên chọn công cụ khác cần thay công cụ, command/assertion, file suite/script và cách chạy tương ứng. Giữ chung format test design, không bắt buộc chung công cụ. Case ID dùng `Module_Action_XX`, đánh số từ 01 trong từng hành động, ví dụ `PIM_EMP_Create_01`, `PIM_EMP_Search_01`.
 
 ## Ví dụ viết một case
 

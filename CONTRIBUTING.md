@@ -18,7 +18,7 @@ Tên trên chỉ là ví dụ, phải đổi theo thành viên và chức năng 
 - Tên: `Group01_MaSV_HoTen.xlsx`, họ tên không dấu, viết liền. Ví dụ `Group01_23130226_VoMinhNhut.xlsx`.
 - Vị trí: `docs/test-cases/members/`.
 - Mỗi chức năng có TestDesign và 20–30 test case với input, bước, expected output cụ thể.
-- ID không trùng giữa các thành viên. Dùng prefix chức năng trong bảng phân công, ví dụ `TC_PIM_EMP_001`.
+- ID không trùng giữa các thành viên. Dùng `Module_Action_XX`, ví dụ `PIM_EMP_Create_01`, `PIM_EMP_Search_01`, `USER_MGT_Login_01`. Đánh số từ 01 riêng cho từng hành động, theo yêu cầu của giảng viên.
 - Giữ tên cột của mẫu. Input và tiền điều kiện nằm trong `Test Case Procedure`.
 - Chưa chạy: `Untested`. Không điền ngày chạy, actual hoặc minh chứng giả.
 - Mỗi thành viên tự chọn công cụ automation; ghi công cụ/phiên bản và hướng dẫn chạy trong tài liệu cá nhân. Không bắt buộc dùng Katalon Recorder.
