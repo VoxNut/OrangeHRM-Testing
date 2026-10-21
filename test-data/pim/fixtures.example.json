@@ -1,0 +1,51 @@
+{
+  "run_token": "N01",
+  "base_url": "https://opensource-demo.orangehrmlive.com/",
+  "setup_status": "NOT_CREATED",
+  "fixtures": {
+    "F_DUP": {
+      "employee_id": "G1N01D0001",
+      "first_name": "G01N01",
+      "last_name": "NhutDuplicate",
+      "employee_key": null
+    },
+    "F_PERSON": {
+      "employee_id": "G1N01P0001",
+      "first_name": "G01N01",
+      "middle_name": "Minh",
+      "last_name": "NhutPerson",
+      "employee_key": null,
+      "baseline": null
+    },
+    "F_JOB": {
+      "employee_id": "G1N01J0001",
+      "first_name": "G01N01",
+      "last_name": "NhutJob",
+      "employee_key": null,
+      "baseline": null
+    },
+    "F_FILTER": {
+      "positive_employee_id": "G1N01F0001",
+      "negative_employee_id": "G1N01F0002",
+      "positive_employee_key": null,
+      "negative_employee_key": null
+    }
+  },
+  "catalog_labels_to_record_before_run": {
+    "TITLE_A": null,
+    "CATEGORY_A": null,
+    "SUBUNIT_A": null,
+    "LOCATION_A": null,
+    "STATUS_A": null,
+    "NATIONALITY_A": null
+  },
+  "attachment_config_to_record_before_run": {
+    "max_size_bytes": null,
+    "allowed_mime_types": null,
+    "observed_at": null
+  },
+  "date_format_observed": null,
+  "browser_and_version": null,
+  "automation_tool": "Katalon Recorder",
+  "katalon_recorder_version": null
+}
