@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Migrated from RECRUIT_VAC_25.side; requires OrangeHRM demo and valid login. Executed results not yet verified.</description>
+  <name>RECRUIT_VAC_Update_02</name>
+  <tag />
+  <comment>Screenshots saved via Katalon Studio WebUI.takeScreenshot</comment>
+  <testCaseGuid>2442c634-b362-43bd-89ab-6818b6147c0d</testCaseGuid>
+</TestCaseEntity>

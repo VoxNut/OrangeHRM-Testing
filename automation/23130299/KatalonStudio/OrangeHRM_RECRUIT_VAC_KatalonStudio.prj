@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project>
+  <description>Recruitment Vacancies 25 test cases - ported from Katalon Recorder</description>
+  <name>OrangeHRM_RECRUIT_VAC_KatalonStudio</name>
+  <tag />
+  <UUID>0cd07384-5cbe-4b12-9be7-cd67002f68cf</UUID>
+  <freeLicense>true</freeLicense>
+  <migratedVersion>5.9.0</migratedVersion>
+  <pageLoadTimeout>30</pageLoadTimeout>
+  <projectFileLocation />
+  <timeStampInProperties>true</timeStampInProperties>
+  <type>WEBUI</type>
+  <sourceContent>
+    <sourceFolderList>
+      <sourceFolderConfiguration>
+        <url>Include/scripts/groovy</url>
+      </sourceFolderConfiguration>
+    </sourceFolderList>
+    <systemFolderList>
+      <systemFolderConfiguration>
+        <url>Include/scripts/groovy</url>
+      </systemFolderConfiguration>
+      <systemFolderConfiguration>
+        <url>Include/features</url>
+      </systemFolderConfiguration>
+      <systemFolderConfiguration>
+        <url>Include/config</url>
+      </systemFolderConfiguration>
+    </systemFolderList>
+  </sourceContent>
+</Project>
