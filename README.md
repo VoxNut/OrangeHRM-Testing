@@ -1,6 +1,6 @@
 # Group01 – OrangeHRM Testing
 
-Tài liệu phân tích, thiết kế test case và kế hoạch automation cho môn Software Testing, Assignment 6.
+Tài liệu phân tích, thiết kế test case và script automation cho môn Software Testing, Assignment 6–7.
 
 - Website: https://opensource-demo.orangehrmlive.com/
 - Mỗi thành viên tự chọn công cụ automation phù hợp; giảng viên không bắt buộc một công cụ chung.
@@ -64,6 +64,12 @@ Luồng nộp: **nhánh thành viên → pull request → dev**. Không sửa wo
 
 ## Công cụ automation
 
-Các thành viên không cần dùng cùng công cụ. Mỗi người ghi rõ công cụ, phiên bản, cách cài đặt/import, cách chạy và dữ liệu cần chuẩn bị trong phần của mình. Phần PIM_EMP của Nhựt dùng Playwright, không phải quy định công cụ của cả nhóm.
+Các thành viên không cần dùng cùng công cụ. Mỗi người ghi rõ công cụ, phiên bản, cách cài đặt/import, cách chạy và dữ liệu cần chuẩn bị trong phần của mình. Phần PIM của Nhựt dùng Playwright, không phải quy định công cụ của cả nhóm.
 
 Tài liệu test design dùng format chung và không phụ thuộc công cụ. Suite/script, assertion và báo cáo chạy phải tương ứng công cụ thực tế của người thực hiện. Lưu theo `automation/MaSV/TenCongCu/MaChucNang/`.
+
+## Assignment 7 — phần cá nhân Võ Minh Nhựt
+
+[23130226_VoMinhNhut_ASM7.mjs](automation/23130226/Playwright/23130226_VoMinhNhut_ASM7.mjs) triển khai 15 case đại diện cho PIM_EMP, PIM_PERSONAL và PIM_JOB, gồm positive, negative, lưu/mở lại hồ sơ, attachment và hợp đồng. Chạy bằng `npm run asm7`; xem [hướng dẫn và bảng truy vết](automation/23130226/Playwright/ASM7.md).
+
+Lần chạy ngày 24/10/2026: **15 Passed, 0 Failed, 0 Blocked**, cleanup đã xác nhận không còn hồ sơ test. [Report và 19 screenshot thật](evidence/executions/23130226/ASM7_2026-10-24T02-46-28-365Z/README.md). Kết quả này chỉ áp dụng cho 15 case đã chạy, không thay kết quả ASM6 hoặc kết quả của thành viên khác.

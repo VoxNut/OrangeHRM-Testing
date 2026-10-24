@@ -1,4 +1,10 @@
-# PIM_EMP – Playwright
+# PIM – Playwright
+
+## Assignment 7: ba chức năng cá nhân
+
+Chạy `npm run asm7` để thực thi `23130226_VoMinhNhut_ASM7.mjs`: 15 case đại diện cho PIM_EMP, PIM_PERSONAL và PIM_JOB, có assertion, screenshot, JSON report và bản quay trình duyệt thật. Xem [phạm vi, truy vết case và cách chạy ASM7](ASM7.md).
+
+## Assignment 6: PIM_EMP
 
 Runner thực thi 25 test case của Võ Minh Nhựt. Công cụ: Node.js, Playwright 1.62.1, Microsoft Edge headless. Không dùng phiên đăng nhập cá nhân. Tài khoản Admin/admin123 là tài khoản demo công khai.
 

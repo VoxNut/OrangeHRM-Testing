@@ -75,3 +75,11 @@ MaSV_HoTen.zip
 `Group01.txt` chứa link repo chung public. PNG là minh chứng push/merge của chính thành viên. Không nén cả thư mục `.git`. Kiểm tra deadline thật trên Classroom; không dùng thời gian tạo file để thay bằng chứng push đúng hạn.
 
 Chuẩn bị ZIP ngoài repo trên máy cá nhân. Không commit thư mục `submission/` hoặc `submissions/`; `.gitignore` đã bỏ qua hai thư mục này. Chỉ lưu workbook nguồn, tài liệu chung, script/test data và minh chứng cần thiết trên GitHub.
+
+## 6. Assignment 7: script cá nhân
+
+Mỗi thành viên triển khai automation cho 3 chức năng đã nhận bằng công cụ phù hợp; dùng ID truy vết được về workbook. File script mang tên `MaSV_HoTen_ASM7` kèm phần mở rộng của ngôn ngữ. Lưu phần của mình trong `automation/MaSV/TenCongCu/`, kèm cách cài đặt, chạy, fixture và cleanup. Push nhánh cá nhân và tạo PR vào `dev` như quy trình trên.
+
+Chạy trên website online, giữ log và ảnh/video thật. Ghi rõ phạm vi đã triển khai; không coi một suite smoke là toàn bộ test design. Script của Nhựt dùng Playwright và 15 case đại diện cho ba chức năng PIM; xem `automation/23130226/Playwright/ASM7.md`.
+
+Bài nộp Classroom ASM7 gồm gói script `.zip` khi có nhiều tệp và `MaSV_HoTen_ASM7.txt`. Dòng đầu TXT là link video quay màn hình trên YouTube, dòng thứ hai là link repo public có script. Kiểm tra video xem được bằng link và nhánh trong URL thực sự chứa script. Chỉ điền link sau khi tải lên thành công; không dùng URL mẫu. Gói Classroom và video lưu ngoài Git, script và bằng chứng thực thi lưu theo cấu trúc repo.

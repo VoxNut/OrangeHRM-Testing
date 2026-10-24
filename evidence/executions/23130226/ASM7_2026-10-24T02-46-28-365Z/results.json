@@ -1,0 +1,195 @@
+{
+  "runId": "ASM7_2026-10-24T02-46-28-365Z",
+  "student": "23130226 - Võ Minh Nhựt",
+  "startedAt": "2026-10-24T02:46:28.367Z",
+  "website": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "tool": "Playwright",
+  "coverage": "15 representative cases: 5 per function, not all 75 ASM6 cases",
+  "employee": {
+    "id": "N7f86d260a",
+    "first": "Nhutf86d260a",
+    "middle": "Minh",
+    "last": "NhutUpdated"
+  },
+  "results": [
+    {
+      "id": "PIM_EMP_Create_03",
+      "title": "Bỏ trống First Name",
+      "startedAt": "2026-10-24T02:46:41.646Z",
+      "actual": "First Name: Required; no employee was created",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:46:49.511Z",
+      "durationMs": 7865,
+      "screenshot": "screenshots/PIM_EMP_Create_03.png"
+    },
+    {
+      "id": "PIM_EMP_CancelCreate_01",
+      "title": "Hủy thêm nhân viên",
+      "startedAt": "2026-10-24T02:46:49.628Z",
+      "actual": "Cancel returned to Employee List; no employee was created",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:46:56.008Z",
+      "durationMs": 6380,
+      "screenshot": "screenshots/PIM_EMP_CancelCreate_01.png"
+    },
+    {
+      "id": "PIM_EMP_Create_01",
+      "title": "Tạo nhân viên và kiểm tra sau tải lại",
+      "startedAt": "2026-10-24T02:46:56.088Z",
+      "actual": "Created numeric employee key 221; names and ID persisted; exactly one list row",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:10.076Z",
+      "durationMs": 13988,
+      "screenshot": "screenshots/PIM_EMP_Create_01.png"
+    },
+    {
+      "id": "PIM_EMP_Search_01",
+      "title": "Tìm đúng nhân viên theo Employee Id",
+      "startedAt": "2026-10-24T02:47:10.152Z",
+      "actual": "Search returned only N7f86d260a with the expected first name",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:12.637Z",
+      "durationMs": 2485,
+      "screenshot": "screenshots/PIM_EMP_Search_01.png"
+    },
+    {
+      "id": "PIM_EMP_Search_03",
+      "title": "Tìm mã nhân viên không tồn tại",
+      "startedAt": "2026-10-24T02:47:12.716Z",
+      "actual": "Search Z7f86d260a: zero rows and No Records Found",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:15.056Z",
+      "durationMs": 2340,
+      "screenshot": "screenshots/PIM_EMP_Search_03.png"
+    },
+    {
+      "id": "PIM_PERSONAL_Update_01",
+      "title": "Cập nhật ba thành phần tên",
+      "startedAt": "2026-10-24T02:47:15.139Z",
+      "actual": "First/Middle/Last persisted on the same numeric employee key after reopening",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:21.978Z",
+      "durationMs": 6839,
+      "screenshot": "screenshots/PIM_PERSONAL_Update_01.png"
+    },
+    {
+      "id": "PIM_PERSONAL_Update_02",
+      "title": "Chặn lưu First Name rỗng",
+      "startedAt": "2026-10-24T02:47:22.075Z",
+      "actual": "Required was displayed; the previously saved First Name remained unchanged",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:28.138Z",
+      "durationMs": 6063,
+      "screenshot": "screenshots/PIM_PERSONAL_Update_02.png"
+    },
+    {
+      "id": "PIM_PERSONAL_Update_14",
+      "title": "Ngày sinh nhuận hợp lệ",
+      "startedAt": "2026-10-24T02:47:28.219Z",
+      "actual": "Leap-day DOB persisted: 2000-29-02 in the actual UI date format",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:34.513Z",
+      "durationMs": 6294,
+      "screenshot": "screenshots/PIM_PERSONAL_Update_14.png"
+    },
+    {
+      "id": "PIM_PERSONAL_Update_18",
+      "title": "Lưu quốc tịch từ danh mục",
+      "startedAt": "2026-10-24T02:47:34.586Z",
+      "actual": "Nationality persisted after reopening: Afghan",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:41.474Z",
+      "durationMs": 6888,
+      "screenshot": "screenshots/PIM_PERSONAL_Update_18.png"
+    },
+    {
+      "id": "PIM_PERSONAL_CreateAttachment_01",
+      "title": "Upload và tải lại attachment PDF",
+      "startedAt": "2026-10-24T02:47:41.557Z",
+      "actual": "Exactly one attachment row with the expected filename/description; downloaded SHA-256 matches",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:49.102Z",
+      "durationMs": 7546,
+      "screenshot": "screenshots/PIM_PERSONAL_CreateAttachment_01.png"
+    },
+    {
+      "id": "PIM_JOB_UpdateJob_08",
+      "title": "Lưu ngày vào làm và 5 danh mục công việc",
+      "startedAt": "2026-10-24T02:47:49.222Z",
+      "actual": "Joined Date and all 5 selected job catalog values persisted: {\"Nationality\":\"Afghan\",\"joinedDate\":\"2024-01-10\",\"Job Title\":\"Account Assistant\",\"Job Category\":\"Craft Workers\",\"Sub Unit\":\"Administration\",\"Location\":\"Canadian Regional HQ\",\"Employment Status\":\"Freelance\"}",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:47:57.952Z",
+      "durationMs": 8730,
+      "screenshot": "screenshots/PIM_JOB_UpdateJob_08.png"
+    },
+    {
+      "id": "PIM_JOB_UpdateJob_02",
+      "title": "Chặn ngày vào làm không tồn tại",
+      "startedAt": "2026-10-24T02:47:58.052Z",
+      "actual": "Nonexistent 31 February was rejected; saved Joined Date remained unchanged",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:48:03.791Z",
+      "durationMs": 5739,
+      "screenshot": "screenshots/PIM_JOB_UpdateJob_02.png"
+    },
+    {
+      "id": "PIM_JOB_ToggleContract_01",
+      "title": "Bật phần thông tin hợp đồng",
+      "startedAt": "2026-10-24T02:48:03.884Z",
+      "actual": "Toggling the switch displayed start date, end date and contract upload; no save claimed",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:48:06.681Z",
+      "durationMs": 2797,
+      "screenshot": "screenshots/PIM_JOB_ToggleContract_01.png"
+    },
+    {
+      "id": "PIM_JOB_UpdateContract_02",
+      "title": "Chặn End Date trước Start Date",
+      "startedAt": "2026-10-24T02:48:06.818Z",
+      "actual": "End date should be after Start date; invalid dates were not persisted",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:48:13.093Z",
+      "durationMs": 6275,
+      "screenshot": "screenshots/PIM_JOB_UpdateContract_02.png"
+    },
+    {
+      "id": "PIM_JOB_UploadContract_01",
+      "title": "Lưu hợp đồng PDF và kiểm tra tải xuống",
+      "startedAt": "2026-10-24T02:48:13.216Z",
+      "actual": "Contract start/end and filename persisted; downloaded PDF SHA-256 matches a973a72bec4a300e860514bbbe7519d5d6c5020076162dcf8136ac6cfa5fc617",
+      "status": "Passed",
+      "finishedAt": "2026-10-24T02:48:22.336Z",
+      "durationMs": 9120,
+      "screenshot": "screenshots/PIM_JOB_UploadContract_01.png"
+    }
+  ],
+  "cleanup": {
+    "status": "Deleted and absence verified",
+    "id": "N7f86d260a",
+    "key": "221"
+  },
+  "fixtureSha256": "a973a72bec4a300e860514bbbe7519d5d6c5020076162dcf8136ac6cfa5fc617",
+  "browserVersion": "156.0.4314.42",
+  "videoStartedAt": "2026-10-24T02:46:28.669Z",
+  "createdEmployee": {
+    "id": "N7f86d260a",
+    "key": "221"
+  },
+  "catalog": {
+    "Nationality": "Afghan",
+    "joinedDate": "2024-01-10",
+    "Job Title": "Account Assistant",
+    "Job Category": "Craft Workers",
+    "Sub Unit": "Administration",
+    "Location": "Canadian Regional HQ",
+    "Employment Status": "Freelance"
+  },
+  "video": "video/browser-recording.webm",
+  "finishedAt": "2026-10-24T02:48:39.778Z",
+  "summary": {
+    "Passed": 15,
+    "Failed": 0,
+    "Blocked": 0,
+    "NotRun": 0
+  }
+}
