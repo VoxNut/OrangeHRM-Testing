@@ -1,7 +1,5 @@
 # Test data
 
-Chỉ lưu dữ liệu giả, có tiền tố nhóm và MSSV/run token. Không lưu cookie, session, CV thật hoặc thông tin nhân viên thật.
+Dùng dữ liệu giả với tiền tố MSSV/run token. Mỗi suite ghi fixture, trạng thái ban đầu, giới hạn tệp, định dạng ngày và cleanup; đối chiếu với sheet `Test Data` trong workbook.
 
-Mỗi module ghi rõ fixture, cách tạo, trạng thái ban đầu, giới hạn upload, định dạng ngày và cleanup. Mã fixture phải thống nhất với workbook.
-
-Fixture PIM được mô tả chi tiết trong sheet `Test Data`. Các fixture trên website chưa được tạo bởi việc khởi tạo repo.
+Không commit cookie, phiên đăng nhập hoặc dữ liệu cá nhân thật. Chỉ dọn bản ghi do suite tạo.
