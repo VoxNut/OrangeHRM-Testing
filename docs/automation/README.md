@@ -14,6 +14,8 @@ Phân công và phần thiết kế của 15 chức năng đã được nhóm tr
 
 Trạng thái thiết kế không thay cho kết quả chạy. Checklist bên dưới dùng cho từng suite; chỉ đánh dấu khi có script, dữ liệu hoặc bằng chứng tương ứng.
 
+Phần ASM7 của Võ Minh Nhựt đã triển khai 15 case đại diện trên cả 3 chức năng PIM, với 15 Passed trong lần chạy ngày 24/10/2026. Xem [script, setup/cleanup và truy vết](../../automation/23130226/Playwright/ASM7.md) và [kết quả chạy thật](../../evidence/executions/23130226/ASM7_2026-10-24T02-46-28-365Z/README.md). Không đánh dấu checklist chung của thành viên khác dựa trên kết quả này.
+
 ## Checklist chung
 
 - [ ] Chốt phạm vi, quy tắc nghiệp vụ và test design của từng chức năng.
