@@ -1,5 +1,8 @@
-# Minh chứng thực thi
+# Kết quả thực thi
 
-Sau khi chạy, lưu theo `MaSV/RunID/CaseID/`. Bao gồm log nguyên bản và ảnh thể hiện input, assertion hoặc thông báo và kết quả.
+Lưu theo `MaSV/RunID/`: report/log, ảnh theo Case ID, môi trường, thời điểm chạy và cleanup.
 
-Ghi ngày/giờ, phiên bản browser/extension và trạng thái fixture. Phân biệt run lỗi ban đầu và rerun sau sửa. Không đặt tên Passed cho case chưa chạy, không dùng ảnh UI rời để chứng minh assertion đã chạy.
+- [23130226 – PIM](23130226/README.md)
+- Recruitment: `23130299/RECRUIT_VAC_20261023_01/`.
+
+Đối chiếu Result với đúng run; giữ riêng kết quả ban đầu và retest.
