@@ -1,0 +1,12 @@
+{
+  "name": "orangehrm-playwright-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test",
+    "asm7": "npx playwright test 23130171_NguyenThiThuyLinh_ASM7.mjs --reporter=list,html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
