@@ -39,8 +39,5 @@ Cần Node.js 20+ và Edge. Nếu thiếu bộ ghi video: `npx playwright instal
 | ADM_STRUCT_Delete_04     | Kiểm tra tính bền vững của dữ liệu cây tổ chức sau khi tải lại trang (Reload) |
 
 
-
-15 case đại diện, 5 case/chức năng. Suite chạy tuần tự: Create_01 tạo nhân viên cho các case cập nhật phía sau. ID ngẫu nhiên theo run; cleanup đối chiếu Employee Id và employee key trước khi xóa.
-
-Kết quả ở `results/ASM7_<timestamp>/`: JSON, screenshot, PDF và `video/browser-recording.webm`. Đổi thư mục bằng `ASM7_OUTPUT_DIR`. Failed = assertion không đạt; Blocked = không hoàn tất do setup/timeout; NotRun = chưa chạy. Exit code khác 0 nếu suite chưa đạt hoặc cleanup lỗi; xem JSON để xử lý đúng hồ sơ còn lại.
+Kết quả ở `results/ASM7_<timestamp>/`, screenshot
 
