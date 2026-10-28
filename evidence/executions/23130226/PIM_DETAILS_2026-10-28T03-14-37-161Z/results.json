@@ -1,0 +1,2029 @@
+{
+  "runId": "PIM_DETAILS_2026-10-28T03-14-37-161Z",
+  "startedAt": "2026-10-28T03:14:37.163Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "browser": "156.0.4314.50",
+  "created": [
+    {
+      "id": "J26ec5757f",
+      "key": "348",
+      "first": "G01N01",
+      "middle": "Minh",
+      "last": "NhutJ26ec5757f",
+      "allowedIds": [
+        "J26ec5757f"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "module": "PIM_JOB",
+      "row": 9,
+      "id": "PIM_JOB_UpdateJob_01",
+      "title": "Lưu Joined Date hợp lệ",
+      "expected": "Joined Date được lưu đúng ngày 01/10/2024.",
+      "startedAt": "2026-10-28T03:14:52.391Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": "2024-01-10"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Lưu Joined Date hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 7099,
+      "finishedAt": "2026-10-28T03:14:59.490Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 10,
+      "id": "PIM_JOB_UpdateJob_02",
+      "title": "Joined Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng. Không lưu ngày 31/02/2024.",
+      "startedAt": "2026-10-28T03:14:59.491Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": "2024-31-02"
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_02-validation.png",
+        "screenshots/PIM_JOB_UpdateJob_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Joined Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5260,
+      "finishedAt": "2026-10-28T03:15:04.751Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 11,
+      "id": "PIM_JOB_UpdateJob_03",
+      "title": "Thay đổi Job Title",
+      "expected": "Job Title giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-28T03:15:04.752Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Title": "Account Assistant"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Job Title | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6561,
+      "finishedAt": "2026-10-28T03:15:11.313Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 12,
+      "id": "PIM_JOB_UpdateJob_04",
+      "title": "Thay đổi Job Category",
+      "expected": "Job Category giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-28T03:15:11.314Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Category": "Craft Workers"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Job Category | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6891,
+      "finishedAt": "2026-10-28T03:15:18.205Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 13,
+      "id": "PIM_JOB_UpdateJob_05",
+      "title": "Thay đổi Sub Unit",
+      "expected": "Sub Unit giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-28T03:15:18.206Z",
+      "status": "Passed",
+      "inputs": {
+        "Sub Unit": "Administration"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_05-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Sub Unit | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6386,
+      "finishedAt": "2026-10-28T03:15:24.592Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 14,
+      "id": "PIM_JOB_UpdateJob_06",
+      "title": "Thay đổi Location",
+      "expected": "Location giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-28T03:15:24.593Z",
+      "status": "Passed",
+      "inputs": {
+        "Location": "Canadian Regional HQ"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_06-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "Canadian Regional HQ"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Location | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6560,
+      "finishedAt": "2026-10-28T03:15:31.153Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 15,
+      "id": "PIM_JOB_UpdateJob_07",
+      "title": "Thay đổi Employment Status",
+      "expected": "Employment Status giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-28T03:15:31.154Z",
+      "status": "Passed",
+      "inputs": {
+        "Employment Status": "Freelance"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_07-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "Canadian Regional HQ"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Freelance"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Employment Status | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6610,
+      "finishedAt": "2026-10-28T03:15:37.764Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 16,
+      "id": "PIM_JOB_UpdateJob_08",
+      "title": "Lưu đồng thời các trường Job Details",
+      "expected": "Ngày và toàn bộ 5 danh mục đều giữ đúng giá trị đã lưu trên F_JOB.",
+      "startedAt": "2026-10-28T03:15:37.765Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Title": "Automaton Tester",
+        "Job Category": "Laborers and Helpers",
+        "Sub Unit": "Engineering",
+        "Location": "HQ - CA, USA",
+        "Employment Status": "Full-Time Contract"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_08-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Lưu đồng thời các trường Job Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 9575,
+      "finishedAt": "2026-10-28T03:15:47.340Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 17,
+      "id": "PIM_JOB_UpdateJob_09",
+      "title": "Xóa Joined Date tùy chọn",
+      "expected": "Có thể lưu Joined Date rỗng. Không tự gán ngày khác.",
+      "startedAt": "2026-10-28T03:15:47.341Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": ""
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_09-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Xóa Joined Date tùy chọn | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 11586,
+      "finishedAt": "2026-10-28T03:15:58.927Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 18,
+      "id": "PIM_JOB_ToggleContract_01",
+      "title": "Bật hiển thị Employment Contract Details",
+      "expected": "Hiển thị Start Date, End Date và vùng Contract Details/upload. Không coi thao tác bật là bằng chứng đã lưu hợp đồng.",
+      "startedAt": "2026-10-28T03:15:58.928Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ToggleContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Bật hiển thị Employment Contract Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 3883,
+      "finishedAt": "2026-10-28T03:16:02.811Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 19,
+      "id": "PIM_JOB_ToggleContract_02",
+      "title": "Tắt phần mở rộng hợp đồng không xóa dữ liệu",
+      "expected": "Phần hợp đồng ẩn rồi hiện. Ngày và tệp vẫn còn khi bật lại. Không tự xóa dữ liệu do thao tác toggle.",
+      "startedAt": "2026-10-28T03:16:02.812Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ToggleContract_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Tắt phần mở rộng hợp đồng không xóa dữ liệu | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 11318,
+      "finishedAt": "2026-10-28T03:16:14.130Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 20,
+      "id": "PIM_JOB_UpdateContract_01",
+      "title": "Hợp đồng có End Date sau Start Date",
+      "expected": "Lưu đúng hai ngày. End Date sau Start Date, không có lỗi.",
+      "startedAt": "2026-10-28T03:16:14.131Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-31-12"
+        }
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Hợp đồng có End Date sau Start Date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 8602,
+      "finishedAt": "2026-10-28T03:16:22.733Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 21,
+      "id": "PIM_JOB_UpdateContract_02",
+      "title": "End Date trước Start Date",
+      "expected": "End Date có lỗi yêu cầu sau Start Date. Không lưu cặp ngày sai.",
+      "startedAt": "2026-10-28T03:16:22.734Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2025-31-12"
+        }
+      },
+      "assertions": [
+        "End date should be after Start date"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_02-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date trước Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 7270,
+      "finishedAt": "2026-10-28T03:16:30.004Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 22,
+      "id": "PIM_JOB_UpdateContract_03",
+      "title": "End Date bằng Start Date",
+      "expected": "End Date bị từ chối vì phải sau Start Date (không chấp nhận cùng ngày theo baseline 5.9).",
+      "startedAt": "2026-10-28T03:16:30.005Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-01-01"
+        }
+      },
+      "assertions": [
+        "End date should be after Start date"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_03-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date bằng Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 7253,
+      "finishedAt": "2026-10-28T03:16:37.258Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 23,
+      "id": "PIM_JOB_UpdateContract_04",
+      "title": "Start Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng tại Start Date. Không lưu ngày không tồn tại.",
+      "startedAt": "2026-10-28T03:16:37.259Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-31-02",
+          "end": "2026-31-12"
+        }
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_04-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Start Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 7714,
+      "finishedAt": "2026-10-28T03:16:44.973Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 24,
+      "id": "PIM_JOB_UpdateContract_05",
+      "title": "End Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng tại End Date. Không lưu ngày không tồn tại.",
+      "startedAt": "2026-10-28T03:16:44.974Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-31-04"
+        }
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_05-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_05-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 7488,
+      "finishedAt": "2026-10-28T03:16:52.462Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 25,
+      "id": "PIM_JOB_UploadContract_01",
+      "title": "Tải tệp hợp đồng PDF hợp lệ",
+      "expected": "Tên contract_v1.pdf còn sau tải lại. Nội dung tải xuống là hợp đồng mẫu v1.",
+      "startedAt": "2026-10-28T03:16:52.463Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_01-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Tải tệp hợp đồng PDF hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 22968,
+      "finishedAt": "2026-10-28T03:17:15.431Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 26,
+      "id": "PIM_JOB_UploadContract_02",
+      "title": "Từ chối tệp hợp đồng vượt giới hạn",
+      "expected": "Có lỗi dung lượng. Tệp hợp đồng cũ không bị thay bằng tệp quá cỡ.",
+      "startedAt": "2026-10-28T03:17:15.433Z",
+      "status": "Passed",
+      "inputs": {
+        "upload": {
+          "hint": "Joined Date\nJob Title\nAutomaton Tester\nJob Specification\n\nNot Defined\n\nJob Category\nLaborers and Helpers\nSub Unit\nEngineering\nLocation\nHQ - CA, USA\nEmployment Status\nFull-Time Contract\n\nInclude Employment Contract Details\n\nContract Start Date\nContract End Date\nContract Details\n\ncontract_v1.pdf \n\nKeep Current\nDelete Current\nReplace Current\nUpload Contract Details\nBrowse\nNo file selected\n\nAccepts up to 1MB\n\nSave",
+          "size": 1048577,
+          "limit": 1048576
+        }
+      },
+      "assertions": [
+        "Attachment Size Exceeded"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_02-validation.png",
+        "screenshots/PIM_JOB_UploadContract_02-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_02-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Từ chối tệp hợp đồng vượt giới hạn | Attachment Size Exceeded | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 16607,
+      "finishedAt": "2026-10-28T03:17:32.040Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 27,
+      "id": "PIM_JOB_UploadContract_03",
+      "title": "Từ chối loại file hợp đồng không cho phép",
+      "expected": "Có lỗi loại tệp. Không lưu tệp không được phép, hợp đồng cũ còn nguyên.",
+      "startedAt": "2026-10-28T03:17:32.041Z",
+      "status": "Passed",
+      "inputs": {
+        "upload": {
+          "filename": "contract_disallowed.bin",
+          "reason": "CSV accepted on public demo; test design permits another disallowed type"
+        }
+      },
+      "assertions": [
+        "File type not allowed"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_03-validation.png",
+        "screenshots/PIM_JOB_UploadContract_03-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_03-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Từ chối loại file hợp đồng không cho phép | File type not allowed | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 15828,
+      "finishedAt": "2026-10-28T03:17:47.869Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 28,
+      "id": "PIM_JOB_KeepContract_01",
+      "title": "Giữ tệp hợp đồng hiện tại khi đổi ngày",
+      "expected": "Ngày kết thúc mới được lưu. Tệp vẫn là contract_v1.pdf, nội dung không đổi.",
+      "startedAt": "2026-10-28T03:17:47.870Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_KeepContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_KeepContract_01-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2027-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Giữ tệp hợp đồng hiện tại khi đổi ngày | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 17721,
+      "finishedAt": "2026-10-28T03:18:05.591Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 29,
+      "id": "PIM_JOB_ReplaceContract_01",
+      "title": "Thay thế tệp hợp đồng hiện tại",
+      "expected": "Tệp hợp đồng hiện tại là contract_v2.pdf với nội dung v2; không còn dùng v1 làm tệp hiện tại.",
+      "startedAt": "2026-10-28T03:18:05.592Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ReplaceContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_ReplaceContract_01-contract_v2.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay thế tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 18067,
+      "finishedAt": "2026-10-28T03:18:23.659Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 30,
+      "id": "PIM_JOB_ReplaceContract_02",
+      "title": "Replace Current nhưng không chọn tệp mới",
+      "expected": "Vùng tệp mới hiển thị Required. Không mất tệp hợp đồng cũ.",
+      "startedAt": "2026-10-28T03:18:23.661Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [
+        "Required"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_ReplaceContract_02-validation.png",
+        "screenshots/PIM_JOB_ReplaceContract_02-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_ReplaceContract_02-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Replace Current nhưng không chọn tệp mới | Required | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 40291,
+      "finishedAt": "2026-10-28T03:19:03.952Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 31,
+      "id": "PIM_JOB_DeleteContract_01",
+      "title": "Xóa riêng tệp hợp đồng hiện tại",
+      "expected": "Tệp hiện tại được xóa. Hai ngày hợp đồng không bị đổi ngoài ý muốn.",
+      "startedAt": "2026-10-28T03:19:03.953Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_DeleteContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Xóa riêng tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 33866,
+      "finishedAt": "2026-10-28T03:19:37.819Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 32,
+      "id": "PIM_JOB_CreateAttachment_01",
+      "title": "Thêm attachment tại tab Job",
+      "expected": "Có dòng attachment với đúng tên và mô tả tại tab Job, không nhầm attachment của Personal Details.",
+      "startedAt": "2026-10-28T03:19:37.821Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_CreateAttachment_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Job attachment\n921.00 B\napplication/pdf\n2026-28-10\nAdmin"
+        ]
+      },
+      "actual": "Thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 17131,
+      "finishedAt": "2026-10-28T03:19:54.952Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 33,
+      "id": "PIM_JOB_CancelAttachment_01",
+      "title": "Hủy thêm attachment tại tab Job",
+      "expected": "Form thêm đóng. Không có dòng mới với mô tả G01N01 Job cancel.",
+      "startedAt": "2026-10-28T03:19:54.954Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_CancelAttachment_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Automaton Tester"
+          },
+          {
+            "label": "Job Category",
+            "value": "Laborers and Helpers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Job attachment\n921.00 B\napplication/pdf\n2026-28-10\nAdmin"
+        ]
+      },
+      "actual": "Hủy thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6840,
+      "finishedAt": "2026-10-28T03:20:01.794Z"
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "J26ec5757f",
+      "key": "348",
+      "status": "Deleted and absence verified"
+    }
+  ],
+  "setupErrors": [],
+  "plannedCaseIds": [
+    "PIM_JOB_UpdateJob_01",
+    "PIM_JOB_UpdateJob_02",
+    "PIM_JOB_UpdateJob_03",
+    "PIM_JOB_UpdateJob_04",
+    "PIM_JOB_UpdateJob_05",
+    "PIM_JOB_UpdateJob_06",
+    "PIM_JOB_UpdateJob_07",
+    "PIM_JOB_UpdateJob_08",
+    "PIM_JOB_UpdateJob_09",
+    "PIM_JOB_ToggleContract_01",
+    "PIM_JOB_ToggleContract_02",
+    "PIM_JOB_UpdateContract_01",
+    "PIM_JOB_UpdateContract_02",
+    "PIM_JOB_UpdateContract_03",
+    "PIM_JOB_UpdateContract_04",
+    "PIM_JOB_UpdateContract_05",
+    "PIM_JOB_UploadContract_01",
+    "PIM_JOB_UploadContract_02",
+    "PIM_JOB_UploadContract_03",
+    "PIM_JOB_KeepContract_01",
+    "PIM_JOB_ReplaceContract_01",
+    "PIM_JOB_ReplaceContract_02",
+    "PIM_JOB_DeleteContract_01",
+    "PIM_JOB_CreateAttachment_01",
+    "PIM_JOB_CancelAttachment_01"
+  ],
+  "scriptSha256": "ac74322fc851c71821017e1eca134fda37380c6d83784b379b301f0880b35cae",
+  "finishedAt": "2026-10-28T03:20:14.908Z",
+  "summary": {
+    "Passed": 25,
+    "Failed": 0,
+    "Blocked": 0,
+    "NotRun": 0
+  }
+}

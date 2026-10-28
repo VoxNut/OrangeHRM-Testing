@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node run-pim.mjs",
-    "asm7": "node 23130226_VoMinhNhut_ASM7.mjs"
+    "asm7": "node 23130226_VoMinhNhut_ASM7.mjs",
+    "details": "node run-pim-details.mjs"
   },
   "dependencies": {
     "playwright": "1.62.1",
