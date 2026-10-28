@@ -12,4 +12,6 @@
 
 Case sửa ID mở bằng employee key. Case replace/delete tệp cần chuẩn bị tệp ban đầu. Runner ASM6 dùng ID cố định nên không chạy đồng thời.
 
+`npm run details` triển khai đủ 25 case PIM_PERSONAL và 25 case PIM_JOB, gồm validation, lưu/mở lại, attachment và hợp đồng.
+
 [Script và lệnh chạy](../../automation/23130226/Playwright/README.md) · [Kết quả](../../evidence/executions/23130226/README.md)
