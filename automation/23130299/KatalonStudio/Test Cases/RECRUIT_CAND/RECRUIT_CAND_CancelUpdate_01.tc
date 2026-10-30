@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Hủy chỉnh sửa hồ sơ ứng viên
+Expected (workbook): Email vẫn đúng baseline; không lưu email tạm.</description>
+  <name>RECRUIT_CAND_CancelUpdate_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A32:H32; selectors need live verification.</comment>
+  <testCaseGuid>2f78bf57-9061-50e6-ae5d-c48035ad0ce3</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Email thiếu ký tự @
+Expected (workbook): Email báo invalid; không tạo hồ sơ.</description>
+  <name>RECRUIT_CAND_Create_09</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A17:H17; selectors need live verification.</comment>
+  <testCaseGuid>a1123864-6ad3-5fc7-b824-ec042b04b3b5</testCaseGuid>
+</TestCaseEntity>

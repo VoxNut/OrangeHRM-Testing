@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Không chọn interviewer đã xóa
+Expected (workbook): Không chấp nhận một chuỗi không khớp nhân viên còn hiệu lực; báo Required/Invalid.</description>
+  <name>RECRUIT_FLOW_SelectInterviewer_03</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A23:H23; selectors need live verification.</comment>
+  <testCaseGuid>b7925527-76e7-5805-9b2c-c466cc2da639</testCaseGuid>
+</TestCaseEntity>

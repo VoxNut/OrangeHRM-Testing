@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Reject ứng viên từ trạng thái ban đầu
+Expected (workbook): Status chuyển Rejected; Candidate History có sự kiện reject.</description>
+  <name>RECRUIT_FLOW_Reject_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A11:H11; selectors need live verification.</comment>
+  <testCaseGuid>6c3c0daa-fb9b-5a01-83a9-2576d1514b4a</testCaseGuid>
+</TestCaseEntity>

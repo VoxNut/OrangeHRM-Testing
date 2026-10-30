@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Schedule Interview không có ở trạng thái mới
+Expected (workbook): Không có thao tác Schedule Interview hợp lệ từ trạng thái đầu vào; phải Shortlist trước.</description>
+  <name>RECRUIT_FLOW_ValidateAction_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A24:H24; selectors need live verification.</comment>
+  <testCaseGuid>bc3106c3-b108-5e07-893f-bc431e3d9478</testCaseGuid>
+</TestCaseEntity>

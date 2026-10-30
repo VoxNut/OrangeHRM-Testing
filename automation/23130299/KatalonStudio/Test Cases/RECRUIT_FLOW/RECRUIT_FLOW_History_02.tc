@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>History sau Shortlist
+Expected (workbook): Có event Shortlist gắn với đúng ứng viên và trình tự sau khi tạo.</description>
+  <name>RECRUIT_FLOW_History_02</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A31:H31; selectors need live verification.</comment>
+  <testCaseGuid>71bf2fd9-8a2c-5274-9cde-ba56e4b13ba0</testCaseGuid>
+</TestCaseEntity>

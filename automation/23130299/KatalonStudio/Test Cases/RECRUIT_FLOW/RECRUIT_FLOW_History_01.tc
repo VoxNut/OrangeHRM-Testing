@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>History sau khi tạo ứng viên
+Expected (workbook): Có dữ liệu sự kiện khởi tạo/đính vacancy theo cơ chế bản demo; không có event interview/reject.</description>
+  <name>RECRUIT_FLOW_History_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A30:H30; selectors need live verification.</comment>
+  <testCaseGuid>69b8dda5-3326-5659-9bd5-b566071e10b5</testCaseGuid>
+</TestCaseEntity>
