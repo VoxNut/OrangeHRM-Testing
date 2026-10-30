@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Số điện thoại hợp lệ
+Expected (workbook): Contact Number giữ đúng '0900000012' và không mất số 0 đầu.</description>
+  <name>RECRUIT_CAND_Create_12</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A20:H20; selectors need live verification.</comment>
+  <testCaseGuid>03286f2a-e7e0-5edc-896e-e9964c5fdc89</testCaseGuid>
+</TestCaseEntity>

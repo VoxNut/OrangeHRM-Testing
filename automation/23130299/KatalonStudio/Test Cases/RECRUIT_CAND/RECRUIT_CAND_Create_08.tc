@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Email hợp lệ dạng example.com
+Expected (workbook): Email được lưu nguyên vẹn; có thể tìm đúng hồ sơ.</description>
+  <name>RECRUIT_CAND_Create_08</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A16:H16; selectors need live verification.</comment>
+  <testCaseGuid>8a1a9bca-2543-518e-b022-5858071b626d</testCaseGuid>
+</TestCaseEntity>

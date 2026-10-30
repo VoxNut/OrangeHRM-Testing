@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Candidate Details chứa đúng bản ghi
+Expected (workbook): Tên, email, vacancy và trạng thái đúng một ứng viên; không hiển thị fixture khác.</description>
+  <name>RECRUIT_FLOW_VerifyDetails_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A29:H29; selectors need live verification.</comment>
+  <testCaseGuid>8ce66456-883e-5f39-9d25-017a99f06195</testCaseGuid>
+</TestCaseEntity>

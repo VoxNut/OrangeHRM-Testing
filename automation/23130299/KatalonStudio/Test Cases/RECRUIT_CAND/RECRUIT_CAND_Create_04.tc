@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Bỏ trống Last Name
+Expected (workbook): Last Name báo Required; hồ sơ không được tạo.</description>
+  <name>RECRUIT_CAND_Create_04</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A12:H12; selectors need live verification.</comment>
+  <testCaseGuid>e789509a-4a28-54d8-8d4e-00cc5ad2a0a1</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Đối chiếu dữ liệu hồ sơ sau tải lại
+Expected (workbook): Chi tiết và dòng danh sách nhất quán; không mất dữ liệu khi reload.</description>
+  <name>RECRUIT_CAND_VerifyDetails_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A33:H33; selectors need live verification.</comment>
+  <testCaseGuid>4042610c-5888-5d15-af5f-03bf5dcbc0ec</testCaseGuid>
+</TestCaseEntity>

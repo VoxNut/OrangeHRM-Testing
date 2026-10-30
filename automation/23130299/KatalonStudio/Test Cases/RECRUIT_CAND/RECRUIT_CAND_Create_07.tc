@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Kiểm tra consent khi tạo hồ sơ
+Expected (workbook): Lưu thành công; trạng thái consent đúng tùy chọn hoặc hệ thống có ghi nhận chọn đồng ý.</description>
+  <name>RECRUIT_CAND_Create_07</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A15:H15; selectors need live verification.</comment>
+  <testCaseGuid>87f68659-f1ec-5da7-809a-24c72dc9c90d</testCaseGuid>
+</TestCaseEntity>

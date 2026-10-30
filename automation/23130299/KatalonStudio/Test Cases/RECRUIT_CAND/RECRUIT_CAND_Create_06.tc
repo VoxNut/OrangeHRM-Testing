@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Không chọn Vacancy tùy chọn
+Expected (workbook): Nếu demo cho phép vacancy tùy chọn: lưu ứng viên và hiển thị Vacancy rỗng; ghi nhận chính xác hành vi.</description>
+  <name>RECRUIT_CAND_Create_06</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A14:H14; selectors need live verification.</comment>
+  <testCaseGuid>44abee09-da0e-533e-8224-89f29be3abee</testCaseGuid>
+</TestCaseEntity>
