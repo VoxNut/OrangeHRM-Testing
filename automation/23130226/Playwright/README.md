@@ -2,6 +2,8 @@
 
 Node.js 20+, Microsoft Edge; Playwright 1.62.1. Dùng tài khoản demo `Admin/admin123`.
 
+Chạy các lệnh sau trong thư mục này; [runner ASM8 tại repo root](../../../Automation%20Testing%20Project%20-%20Group%2001/README.md) dùng lệnh riêng.
+
 ```powershell
 npm install
 npm test       # ASM6: 25 case PIM_EMP
@@ -18,5 +20,7 @@ npm run details # 25 PIM_PERSONAL + 25 PIM_JOB
 `node report-html.mjs <duong-dan-results.json>` tạo báo cáo HTML. Nếu cleanup lỗi, xem ID/key trong JSON; `PIM_DETAILS_CLEANUP=<duong-dan-JSON>` chỉ dọn fixture của run đó qua UI, không chạy case.
 
 ASM6 hỗ trợ `PIM_RUN_ID`, `PIM_REPO`, `PIM_ONLY` (số case 1–25, phân cách dấu phẩy). `PIM_CLEANUP_PREVIOUS` nhận các đường dẫn JSON của chính runner, phân cách bằng dấu chấm phẩy; cleanup kiểm tra ID và employee key.
+
+ASM8: tìm tên dùng `NhutPerson`; Sort tạo hai fixture Alpha/Zulu, đối chiếu thứ tự UI/response và vị trí hai fixture ở cả hai chiều. Hàm chờ bảng chuẩn hóa Employee ID null thành ô rỗng. Oracle Sort chưa kiểm chứng collation tên đa ngôn ngữ.
 
 [Kết quả thực thi](../../../evidence/executions/23130226/README.md)

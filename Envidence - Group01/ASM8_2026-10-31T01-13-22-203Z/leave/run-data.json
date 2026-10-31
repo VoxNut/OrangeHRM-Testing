@@ -1,0 +1,68 @@
+{
+  "runId": "mvvq1ybg",
+  "recordedAt": "2026-10-31T01:31:17.217Z",
+  "cleanupAttempted": true,
+  "cleanupCompleted": true,
+  "fixtures": [
+    {
+      "id": "410075197",
+      "name": "ASM7Thanh Tien T0mvvq1ybg",
+      "username": "thanh_22130254_0_mvvq1ybg",
+      "empNumber": "230",
+      "createdDuringRun": true
+    },
+    {
+      "id": "410075198",
+      "name": "ASM7Thanh Tien T1mvvq1ybg",
+      "username": "thanh_22130254_1_mvvq1ybg",
+      "empNumber": "231",
+      "createdDuringRun": true
+    }
+  ],
+  "trackedTypes": [
+    "ASM7_22130254_mvvq1ybg"
+  ],
+  "shifts": [
+    "ASM7_8h_mvvq1ybg_410075197"
+  ],
+  "periods": {
+    "current": {
+      "label": "2026-01-01 - 2026-31-12",
+      "from": {
+        "year": "2026",
+        "month": "01",
+        "day": "01",
+        "iso": "2026-01-01"
+      },
+      "to": {
+        "year": "2026",
+        "month": "12",
+        "day": "31",
+        "iso": "2026-12-31"
+      }
+    },
+    "target": {
+      "label": "2027-01-01 - 2027-31-12",
+      "from": {
+        "year": "2027",
+        "month": "01",
+        "day": "01",
+        "iso": "2027-01-01"
+      },
+      "to": {
+        "year": "2027",
+        "month": "12",
+        "day": "31",
+        "iso": "2027-12-31"
+      }
+    }
+  },
+  "dates": [
+    {
+      "year": "2027",
+      "month": "01",
+      "day": "04",
+      "iso": "2027-01-04"
+    }
+  ]
+}

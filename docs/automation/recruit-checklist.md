@@ -8,6 +8,8 @@
 4. Lưu report/ảnh theo Case ID và cùng timestamp.
 5. Dọn đúng Vacancy đã tạo, push và tạo PR vào `dev`.
 
-Run `20261023_115454`: RECRUIT_VAC **23 Passed, 2 Error**; Update_02/03 timeout chờ toast, chưa xác nhận persistence. RECRUIT_CAND/FLOW chưa có execution được xác minh. Mã sửa sau run cần chạy lại để có kết quả mới.
+`dev` có đủ ba suite VAC/CAND/FLOW, mỗi suite 25 case. VAC có HTML run `20261023_115454`: 23 Passed, 2 Error. CAND/FLOW có screenshot ngày 30/10/2026 nhưng chưa có report tổng hợp trong Git để xác nhận số Pass/Fail.
+
+ASM8 bỏ qua Recruitment theo yêu cầu nhóm trưởng. Khi chạy lại cần bổ sung profile, `maintenance/preflight58-plan.json`, tài nguyên worker và cấu hình đường dẫn evidence của project.
 
 [Cài đặt và chạy](../../automation/23130299/KatalonStudio/README.md)

@@ -1,24 +1,13 @@
-Script: `23130339_TonBichTram_ASM7.js`. Puppeteer/Chrome; tài khoản demo `Admin/admin123`.
+# Time – Puppeteer
+
+Script `23130339_TonBichTram_ASM7.js` dùng Puppeteer/Chrome, dù thư mục có tên KatalonRecorder. Phạm vi demo: Punch In/Out, sửa/Submit My Timesheet, tìm/Approve Employee Timesheet.
+
+Cần Node.js 18+, Chrome và package `puppeteer`. Đường dẫn script tính từ repo root:
 
 ```powershell
-npm install
-node automation/23130339/23130339_TonBichTram_ASM7.js
+node automation/23130339/KatalonRecorder/23130339_TonBichTram_ASM7.js
+```
 
-Cần Node.js 18+ và Google Chrome.
+ASM8 chưa chạy script này: đang thao tác trên attendance/timesheet của Admin, bỏ qua một số lỗi và chưa trả kết quả từng case. Cần tài khoản/nhân viên test riêng, assertion trạng thái/giờ đã lưu, log theo Case ID và exit code khác 0 khi lỗi. Reset bộ lọc không chứng minh đã xóa hay khôi phục dữ liệu.
 
-Case triển khai
-ID,Kiểm tra
-TIME_ATTEND_PunchIn_01,"Kiểm tra nhập giờ Punch In hợp lệ, ghi nhận giờ vào ca và hiển thị toast ""Successfully Saved"""
-TIME_ATTEND_PunchOut_01,"Kiểm tra nhập giờ Punch Out hợp lệ, đối chiếu xác nhận kết thúc ca làm việc"
-TIME_MY_Edit_01,"Mở My Timesheet, chọn Project & Activity và nhập 8 giờ làm việc cho các ngày trong tuần"
-TIME_MY_Submit_01,Gửi nộp (Submit) bảng chấm công cá nhân lên hệ thống và kiểm tra assertion
-TIME_EMP_Search_01,Tìm kiếm bảng công của nhân viên theo tên từ gợi ý autocomplete
-TIME_EMP_Approve_01,Quản trị viên thực hiện phê duyệt (Approve) bảng chấm công nhân viên và reset dọn dẹp
-
-Kịch bản End-to-End chạy tuần tự qua 3 chức năng chính của module Time:
-
-TIME_ATTEND: Thực hiện chu trình chấm công Punch In -> Punch Out và dọn dẹp bản ghi trong lịch sử điểm danh.
-
-TIME_MY: Tạo, lưu, gửi duyệt và hoàn trả trạng thái ban đầu của bảng công cá nhân.
-
-TIME_EMP: Tìm kiếm hồ sơ nhân viên, kiểm tra bảng công và thực hiện thao tác duyệt (Approve).
+[Project tích hợp](../../../Automation%20Testing%20Project%20-%20Group%2001/README.md)

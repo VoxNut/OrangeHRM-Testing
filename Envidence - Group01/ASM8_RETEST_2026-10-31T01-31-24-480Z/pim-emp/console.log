@@ -1,0 +1,16 @@
+PIM_EMP_Search_02: Passed (3384 ms) Autocomplete đã chọn trả 1 dòng | Đúng F_PERSON có ID G1N01P0001
+PIM_EMP_Sort_01: Failed (26391 ms) AssertionError: Tên hiển thị phải khớp thứ tự response
++ actual - expected
+... Skipped lines
+
+  [
+    'Idtest',
+    'ilxbjwky',
+    'James',
+    'Jhaziel',
+...
+    'Lucas Automacao',
++   'Lucia QA',
+-   'Lucia  QA',
+    
+SUMMARY {"Passed":1,"Failed":1,"Blocked":0,"Untested":0} OUT D:\My WorkSpace\OrangeHRM-Testing\Envidence - Group01\ASM8_RETEST_2026-10-31T01-31-24-480Z\pim-emp\evidence\executions\23130226\ASM8_RETEST_2026-10-31T01-31-24-480Z

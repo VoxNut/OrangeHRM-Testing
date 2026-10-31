@@ -1,0 +1,14 @@
+{
+  "commit": "2dd65b6e85b3db46b989cc3a628416f1dd5a3475",
+  "runId": "ASM8_RETEST_2026-10-31T01-31-24-480Z",
+  "sources": [
+    {
+      "key": "pim-emp",
+      "member": "23130226",
+      "tool": "Playwright",
+      "source": "automation/23130226/Playwright/run-pim.mjs",
+      "sha256": "83b9fcbc25f8900155cc70b60fa55012b32a9aac40c491c97d93d9e686696e8e",
+      "planned": 2
+    }
+  ]
+}
