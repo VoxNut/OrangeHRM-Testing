@@ -1,0 +1,4565 @@
+{
+  "runId": "PIM_DETAILS_2026-10-31T01-19-53-422Z",
+  "startedAt": "2026-10-31T01:19:53.423Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "browser": "156.0.4314.50",
+  "created": [
+    {
+      "id": "P2bf87bdc9",
+      "key": "227",
+      "first": "G01N01",
+      "middle": "Minh",
+      "last": "NhutP2bf87bdc9",
+      "allowedIds": [
+        "P2bf87bdc9",
+        "T2bf87bdc9"
+      ]
+    },
+    {
+      "id": "J2bf87bdc9",
+      "key": "228",
+      "first": "G01N01",
+      "middle": "Minh",
+      "last": "NhutJ2bf87bdc9",
+      "allowedIds": [
+        "J2bf87bdc9"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "module": "PIM_PERSONAL",
+      "row": 9,
+      "id": "PIM_PERSONAL_Update_01",
+      "title": "Cập nhật đầy đủ ba thành phần tên",
+      "expected": "Ba trường giữ đúng giá trị mới sau tải lại. Đúng employee key, không sửa nhân viên khác.",
+      "startedAt": "2026-10-31T01:20:16.626Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "G01N01"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Cập nhật đầy đủ ba thành phần tên | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6334,
+      "finishedAt": "2026-10-31T01:20:22.960Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 10,
+      "id": "PIM_PERSONAL_Update_02",
+      "title": "First Name bắt buộc",
+      "expected": "First Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại.",
+      "startedAt": "2026-10-31T01:20:22.961Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [
+        "Required",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_02-validation.png",
+        "screenshots/PIM_PERSONAL_Update_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "G01N01"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "First Name bắt buộc | Required | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5609,
+      "finishedAt": "2026-10-31T01:20:28.570Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 11,
+      "id": "PIM_PERSONAL_Update_03",
+      "title": "Last Name bắt buộc",
+      "expected": "Last Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại.",
+      "startedAt": "2026-10-31T01:20:28.571Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [
+        "Required",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_03-validation.png",
+        "screenshots/PIM_PERSONAL_Update_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "G01N01"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Last Name bắt buộc | Required | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5769,
+      "finishedAt": "2026-10-31T01:20:34.340Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 12,
+      "id": "PIM_PERSONAL_Update_04",
+      "title": "First Name đúng giới hạn 30 ký tự",
+      "expected": "Lưu nguyên 30 ký tự và không có lỗi giới hạn.",
+      "startedAt": "2026-10-31T01:20:34.341Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "First Name đúng giới hạn 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6247,
+      "finishedAt": "2026-10-31T01:20:40.588Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 13,
+      "id": "PIM_PERSONAL_Update_05",
+      "title": "First Name vượt giới hạn 30 ký tự",
+      "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế.",
+      "startedAt": "2026-10-31T01:20:40.589Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      "assertions": [
+        "Should not exceed 30 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_05-validation.png",
+        "screenshots/PIM_PERSONAL_Update_05-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "First Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5199,
+      "finishedAt": "2026-10-31T01:20:45.788Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 14,
+      "id": "PIM_PERSONAL_Update_06",
+      "title": "Middle Name vượt giới hạn 30 ký tự",
+      "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế.",
+      "startedAt": "2026-10-31T01:20:45.789Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      "assertions": [
+        "Should not exceed 30 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_06-validation.png",
+        "screenshots/PIM_PERSONAL_Update_06-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Middle Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5271,
+      "finishedAt": "2026-10-31T01:20:51.060Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 15,
+      "id": "PIM_PERSONAL_Update_07",
+      "title": "Last Name vượt giới hạn 30 ký tự",
+      "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế.",
+      "startedAt": "2026-10-31T01:20:51.061Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      },
+      "assertions": [
+        "Should not exceed 30 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_07-validation.png",
+        "screenshots/PIM_PERSONAL_Update_07-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Last Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5175,
+      "finishedAt": "2026-10-31T01:20:56.236Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 16,
+      "id": "PIM_PERSONAL_Update_08",
+      "title": "Employee Id dài 10 ký tự",
+      "expected": "ID mới 10 ký tự được lưu nguyên và hồ sơ vẫn là F_PERSON.",
+      "startedAt": "2026-10-31T01:20:56.236Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "T2bf87bdc9"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_08-saved.png",
+        "screenshots/PIM_PERSONAL_Update_08-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Employee Id dài 10 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 14373,
+      "finishedAt": "2026-10-31T01:21:10.609Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 17,
+      "id": "PIM_PERSONAL_Update_09",
+      "title": "Employee Id dài 11 ký tự",
+      "expected": "Có lỗi giới hạn 10 ký tự, không lưu ID 11 ký tự.",
+      "startedAt": "2026-10-31T01:21:10.610Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "T2bf87bdc9X"
+      },
+      "assertions": [
+        "Should not exceed 10 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_09-validation.png",
+        "screenshots/PIM_PERSONAL_Update_09-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Employee Id dài 11 ký tự | Should not exceed 10 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5768,
+      "finishedAt": "2026-10-31T01:21:16.378Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 18,
+      "id": "PIM_PERSONAL_Update_10",
+      "title": "Other Id dài 30 ký tự",
+      "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn.",
+      "startedAt": "2026-10-31T01:21:16.379Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_10-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Other Id dài 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5983,
+      "finishedAt": "2026-10-31T01:21:22.362Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 19,
+      "id": "PIM_PERSONAL_Update_11",
+      "title": "Other Id dài 31 ký tự",
+      "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu.",
+      "startedAt": "2026-10-31T01:21:22.364Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+      },
+      "assertions": [
+        "Should not exceed 30 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_11-validation.png",
+        "screenshots/PIM_PERSONAL_Update_11-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Other Id dài 31 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5165,
+      "finishedAt": "2026-10-31T01:21:27.529Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 20,
+      "id": "PIM_PERSONAL_Update_12",
+      "title": "Driver's License Number dài 30 ký tự",
+      "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn.",
+      "startedAt": "2026-10-31T01:21:27.530Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_12-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Driver's License Number dài 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6051,
+      "finishedAt": "2026-10-31T01:21:33.581Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 21,
+      "id": "PIM_PERSONAL_Update_13",
+      "title": "Driver's License Number dài 31 ký tự",
+      "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu.",
+      "startedAt": "2026-10-31T01:21:33.582Z",
+      "status": "Passed",
+      "inputs": {
+        "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+      },
+      "assertions": [
+        "Should not exceed 30 characters",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_13-validation.png",
+        "screenshots/PIM_PERSONAL_Update_13-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Driver's License Number dài 31 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5109,
+      "finishedAt": "2026-10-31T01:21:38.691Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 22,
+      "id": "PIM_PERSONAL_Update_14",
+      "title": "Date of Birth là ngày nhuận hợp lệ",
+      "expected": "Lưu đúng ngày 29/02/2000. Không có lỗi định dạng ngày.",
+      "startedAt": "2026-10-31T01:21:38.693Z",
+      "status": "Passed",
+      "inputs": {
+        "Date of Birth": "2000-29-02"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_14-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Date of Birth là ngày nhuận hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6025,
+      "finishedAt": "2026-10-31T01:21:44.718Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 23,
+      "id": "PIM_PERSONAL_Update_15",
+      "title": "Date of Birth là ngày không tồn tại",
+      "expected": "Hiển thị lỗi ngày/định dạng; không lưu ngày 30/02/2000.",
+      "startedAt": "2026-10-31T01:21:44.719Z",
+      "status": "Passed",
+      "inputs": {
+        "Date of Birth": "2000-30-02"
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_15-validation.png",
+        "screenshots/PIM_PERSONAL_Update_15-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Date of Birth là ngày không tồn tại | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5224,
+      "finishedAt": "2026-10-31T01:21:49.943Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 24,
+      "id": "PIM_PERSONAL_Update_16",
+      "title": "License Expiry Date hợp lệ",
+      "expected": "Lưu đúng ngày 31/12/2030, không có lỗi định dạng.",
+      "startedAt": "2026-10-31T01:21:49.944Z",
+      "status": "Passed",
+      "inputs": {
+        "License Expiry Date": "2030-31-12"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_16-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "License Expiry Date hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6058,
+      "finishedAt": "2026-10-31T01:21:56.002Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 25,
+      "id": "PIM_PERSONAL_Update_17",
+      "title": "License Expiry Date không hợp lệ",
+      "expected": "Hiển thị lỗi ngày/định dạng và không lưu ngày không tồn tại.",
+      "startedAt": "2026-10-31T01:21:56.003Z",
+      "status": "Passed",
+      "inputs": {
+        "License Expiry Date": "2030-31-04"
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_17-validation.png",
+        "screenshots/PIM_PERSONAL_Update_17-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "License Expiry Date không hợp lệ | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5260,
+      "finishedAt": "2026-10-31T01:22:01.263Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 26,
+      "id": "PIM_PERSONAL_Update_18",
+      "title": "Thay đổi Nationality",
+      "expected": "Nationality giữ đúng nhãn đã chọn sau tải lại.",
+      "startedAt": "2026-10-31T01:22:01.264Z",
+      "status": "Passed",
+      "inputs": {
+        "Nationality": "Afghan"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_18-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Nationality | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6006,
+      "finishedAt": "2026-10-31T01:22:07.270Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 27,
+      "id": "PIM_PERSONAL_Update_19",
+      "title": "Thay đổi Marital Status",
+      "expected": "Trạng thái hôn nhân được lưu đúng lựa chọn đã ghi trong run.",
+      "startedAt": "2026-10-31T01:22:07.271Z",
+      "status": "Passed",
+      "inputs": {
+        "Marital Status": "Married"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_19-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Marital Status | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6045,
+      "finishedAt": "2026-10-31T01:22:13.316Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 28,
+      "id": "PIM_PERSONAL_Update_20",
+      "title": "Thay đổi Gender",
+      "expected": "Chỉ radio đã chọn được đánh dấu. Giá trị giữ đúng sau tải lại.",
+      "startedAt": "2026-10-31T01:22:13.318Z",
+      "status": "Passed",
+      "inputs": {
+        "Gender": "Female"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_Update_20-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Gender | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5998,
+      "finishedAt": "2026-10-31T01:22:19.316Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 29,
+      "id": "PIM_PERSONAL_CreateAttachment_01",
+      "title": "Thêm attachment hợp lệ vào Personal Details",
+      "expected": "Có đúng một dòng tệp mới với tên và mô tả đã nhập. Tệp tải về đọc được.",
+      "startedAt": "2026-10-31T01:22:19.317Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_CreateAttachment_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_PERSONAL_CreateAttachment_01-attachment_valid.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Personal attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Thêm attachment hợp lệ vào Personal Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 9871,
+      "finishedAt": "2026-10-31T01:22:29.188Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 30,
+      "id": "PIM_PERSONAL_CreateAttachment_02",
+      "title": "Không chọn file khi thêm attachment",
+      "expected": "Trường file hiển thị Required. Không xuất hiện dòng attachment mới.",
+      "startedAt": "2026-10-31T01:22:29.189Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_CreateAttachment_02-validation.png",
+        "screenshots/PIM_PERSONAL_CreateAttachment_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Personal attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Không chọn file khi thêm attachment | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5250,
+      "finishedAt": "2026-10-31T01:22:34.439Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 31,
+      "id": "PIM_PERSONAL_CreateAttachment_03",
+      "title": "Mô tả attachment đúng 200 ký tự",
+      "expected": "Attachment được lưu. Mô tả có đủ 200 ký tự, không bị cắt.",
+      "startedAt": "2026-10-31T01:22:34.441Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_CreateAttachment_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Comment",
+            "value": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Mô tả attachment đúng 200 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 9479,
+      "finishedAt": "2026-10-31T01:22:43.920Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 32,
+      "id": "PIM_PERSONAL_CreateAttachment_04",
+      "title": "Mô tả attachment vượt 200 ký tự",
+      "expected": "Có lỗi giới hạn 200 ký tự. Không lưu mô tả vượt giới hạn.",
+      "startedAt": "2026-10-31T01:22:43.922Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_CreateAttachment_04-validation.png",
+        "screenshots/PIM_PERSONAL_CreateAttachment_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "1",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Personal attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin",
+          "attachment_valid.pdf\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Mô tả attachment vượt 200 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5259,
+      "finishedAt": "2026-10-31T01:22:49.181Z"
+    },
+    {
+      "module": "PIM_PERSONAL",
+      "row": 33,
+      "id": "PIM_PERSONAL_DeleteAttachment_01",
+      "title": "Hủy rồi xác nhận xóa attachment của nhóm",
+      "expected": "Sau Cancel, tệp vẫn có. Sau xác nhận xóa, đúng tệp đích biến mất và các tệp khác không thay đổi.",
+      "startedAt": "2026-10-31T01:22:49.183Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_PERSONAL_DeleteAttachment_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "firstName",
+            "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "name": "middleName",
+            "value": "Minh"
+          },
+          {
+            "name": "lastName",
+            "value": "NhutUpdated"
+          },
+          {
+            "name": "",
+            "label": "Employee Id",
+            "value": "P2bf87bdc9"
+          },
+          {
+            "name": "",
+            "label": "Other Id",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "Driver's License Number",
+            "value": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+          },
+          {
+            "name": "",
+            "label": "License Expiry Date",
+            "value": "2030-31-12"
+          },
+          {
+            "name": "",
+            "label": "Date of Birth",
+            "value": "2000-29-02"
+          },
+          {
+            "name": "",
+            "label": "Male",
+            "value": "1",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Female",
+            "value": "2",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Test_Field",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "1",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Nationality",
+            "value": "Afghan"
+          },
+          {
+            "label": "Marital Status",
+            "value": "Married"
+          },
+          {
+            "label": "Blood Type",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Personal attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin",
+          "attachment_valid.pdf\nDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Hủy rồi xác nhận xóa attachment của nhóm | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 12115,
+      "finishedAt": "2026-10-31T01:23:01.298Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 9,
+      "id": "PIM_JOB_UpdateJob_01",
+      "title": "Lưu Joined Date hợp lệ",
+      "expected": "Joined Date được lưu đúng ngày 01/10/2024.",
+      "startedAt": "2026-10-31T01:23:01.299Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": "2024-01-10"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Lưu Joined Date hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6473,
+      "finishedAt": "2026-10-31T01:23:07.772Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 10,
+      "id": "PIM_JOB_UpdateJob_02",
+      "title": "Joined Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng. Không lưu ngày 31/02/2024.",
+      "startedAt": "2026-10-31T01:23:07.773Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": "2024-31-02"
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format",
+        "Saved value unchanged after reopening"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_02-validation.png",
+        "screenshots/PIM_JOB_UpdateJob_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Joined Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 5137,
+      "finishedAt": "2026-10-31T01:23:12.911Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 11,
+      "id": "PIM_JOB_UpdateJob_03",
+      "title": "Thay đổi Job Title",
+      "expected": "Job Title giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-31T01:23:12.913Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Title": "<b>x</b> swarmm4"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "<b>x</b> swarmm4"
+          },
+          {
+            "label": "Job Category",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Job Title | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6129,
+      "finishedAt": "2026-10-31T01:23:19.042Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 12,
+      "id": "PIM_JOB_UpdateJob_04",
+      "title": "Thay đổi Job Category",
+      "expected": "Job Category giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-31T01:23:19.043Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Category": "Category 1793408363488_baox0e"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "<b>x</b> swarmm4"
+          },
+          {
+            "label": "Job Category",
+            "value": "Category 1793408363488_baox0e"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Job Category | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6463,
+      "finishedAt": "2026-10-31T01:23:25.506Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 13,
+      "id": "PIM_JOB_UpdateJob_05",
+      "title": "Thay đổi Sub Unit",
+      "expected": "Sub Unit giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-31T01:23:25.507Z",
+      "status": "Passed",
+      "inputs": {
+        "Sub Unit": "Administration"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_05-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "<b>x</b> swarmm4"
+          },
+          {
+            "label": "Job Category",
+            "value": "Category 1793408363488_baox0e"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "-- Select --"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Sub Unit | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6391,
+      "finishedAt": "2026-10-31T01:23:31.899Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 14,
+      "id": "PIM_JOB_UpdateJob_06",
+      "title": "Thay đổi Location",
+      "expected": "Location giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-31T01:23:31.900Z",
+      "status": "Passed",
+      "inputs": {
+        "Location": "Canadian Regional HQ"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_06-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "<b>x</b> swarmm4"
+          },
+          {
+            "label": "Job Category",
+            "value": "Category 1793408363488_baox0e"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "Canadian Regional HQ"
+          },
+          {
+            "label": "Employment Status",
+            "value": "-- Select --"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Location | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6413,
+      "finishedAt": "2026-10-31T01:23:38.313Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 15,
+      "id": "PIM_JOB_UpdateJob_07",
+      "title": "Thay đổi Employment Status",
+      "expected": "Employment Status giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác.",
+      "startedAt": "2026-10-31T01:23:38.314Z",
+      "status": "Passed",
+      "inputs": {
+        "Employment Status": "Freelance"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_07-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "<b>x</b> swarmm4"
+          },
+          {
+            "label": "Job Category",
+            "value": "Category 1793408363488_baox0e"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Administration"
+          },
+          {
+            "label": "Location",
+            "value": "Canadian Regional HQ"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Freelance"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay đổi Employment Status | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6955,
+      "finishedAt": "2026-10-31T01:23:45.269Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 16,
+      "id": "PIM_JOB_UpdateJob_08",
+      "title": "Lưu đồng thời các trường Job Details",
+      "expected": "Ngày và toàn bộ 5 danh mục đều giữ đúng giá trị đã lưu trên F_JOB.",
+      "startedAt": "2026-10-31T01:23:45.271Z",
+      "status": "Passed",
+      "inputs": {
+        "Job Title": "Account Assistant",
+        "Job Category": "Craft Workers",
+        "Sub Unit": "Engineering",
+        "Location": "HQ - CA, USA",
+        "Employment Status": "Full-Time Contract"
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_08-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": "2024-01-10"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Lưu đồng thời các trường Job Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 9448,
+      "finishedAt": "2026-10-31T01:23:54.719Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 17,
+      "id": "PIM_JOB_UpdateJob_09",
+      "title": "Xóa Joined Date tùy chọn",
+      "expected": "Có thể lưu Joined Date rỗng. Không tự gán ngày khác.",
+      "startedAt": "2026-10-31T01:23:54.721Z",
+      "status": "Passed",
+      "inputs": {
+        "JoinedDate": ""
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateJob_09-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Xóa Joined Date tùy chọn | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6137,
+      "finishedAt": "2026-10-31T01:24:00.858Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 18,
+      "id": "PIM_JOB_ToggleContract_01",
+      "title": "Bật hiển thị Employment Contract Details",
+      "expected": "Hiển thị Start Date, End Date và vùng Contract Details/upload. Không coi thao tác bật là bằng chứng đã lưu hợp đồng.",
+      "startedAt": "2026-10-31T01:24:00.860Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ToggleContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Bật hiển thị Employment Contract Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 2451,
+      "finishedAt": "2026-10-31T01:24:03.311Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 19,
+      "id": "PIM_JOB_ToggleContract_02",
+      "title": "Tắt phần mở rộng hợp đồng không xóa dữ liệu",
+      "expected": "Phần hợp đồng ẩn rồi hiện. Ngày và tệp vẫn còn khi bật lại. Không tự xóa dữ liệu do thao tác toggle.",
+      "startedAt": "2026-10-31T01:24:03.313Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ToggleContract_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Tắt phần mở rộng hợp đồng không xóa dữ liệu | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 9570,
+      "finishedAt": "2026-10-31T01:24:12.883Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 20,
+      "id": "PIM_JOB_UpdateContract_01",
+      "title": "Hợp đồng có End Date sau Start Date",
+      "expected": "Lưu đúng hai ngày. End Date sau Start Date, không có lỗi.",
+      "startedAt": "2026-10-31T01:24:12.886Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-31-12"
+        }
+      },
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Hợp đồng có End Date sau Start Date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 8298,
+      "finishedAt": "2026-10-31T01:24:21.184Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 21,
+      "id": "PIM_JOB_UpdateContract_02",
+      "title": "End Date trước Start Date",
+      "expected": "End Date có lỗi yêu cầu sau Start Date. Không lưu cặp ngày sai.",
+      "startedAt": "2026-10-31T01:24:21.186Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2025-31-12"
+        }
+      },
+      "assertions": [
+        "End date should be after Start date"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_02-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_02-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date trước Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6646,
+      "finishedAt": "2026-10-31T01:24:27.833Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 22,
+      "id": "PIM_JOB_UpdateContract_03",
+      "title": "End Date bằng Start Date",
+      "expected": "End Date bị từ chối vì phải sau Start Date (không chấp nhận cùng ngày theo baseline 5.9).",
+      "startedAt": "2026-10-31T01:24:27.835Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-01-01"
+        }
+      },
+      "assertions": [
+        "End date should be after Start date"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_03-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_03-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date bằng Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6755,
+      "finishedAt": "2026-10-31T01:24:34.590Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 23,
+      "id": "PIM_JOB_UpdateContract_04",
+      "title": "Start Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng tại Start Date. Không lưu ngày không tồn tại.",
+      "startedAt": "2026-10-31T01:24:34.592Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-31-02",
+          "end": "2026-31-12"
+        }
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_04-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_04-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Start Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6801,
+      "finishedAt": "2026-10-31T01:24:41.393Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 24,
+      "id": "PIM_JOB_UpdateContract_05",
+      "title": "End Date không tồn tại",
+      "expected": "Có lỗi ngày/định dạng tại End Date. Không lưu ngày không tồn tại.",
+      "startedAt": "2026-10-31T01:24:41.395Z",
+      "status": "Passed",
+      "inputs": {
+        "contract": {
+          "start": "2026-01-01",
+          "end": "2026-31-04"
+        }
+      },
+      "assertions": [
+        "Should be a valid date in yyyy-dd-mm format"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UpdateContract_05-validation.png",
+        "screenshots/PIM_JOB_UpdateContract_05-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "End Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6586,
+      "finishedAt": "2026-10-31T01:24:47.981Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 25,
+      "id": "PIM_JOB_UploadContract_01",
+      "title": "Tải tệp hợp đồng PDF hợp lệ",
+      "expected": "Tên contract_v1.pdf còn sau tải lại. Nội dung tải xuống là hợp đồng mẫu v1.",
+      "startedAt": "2026-10-31T01:24:47.984Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_01-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Tải tệp hợp đồng PDF hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 21357,
+      "finishedAt": "2026-10-31T01:25:09.341Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 26,
+      "id": "PIM_JOB_UploadContract_02",
+      "title": "Từ chối tệp hợp đồng vượt giới hạn",
+      "expected": "Có lỗi dung lượng. Tệp hợp đồng cũ không bị thay bằng tệp quá cỡ.",
+      "startedAt": "2026-10-31T01:25:09.342Z",
+      "status": "Passed",
+      "inputs": {
+        "upload": {
+          "hint": "Joined Date\nJob Title\nAccount Assistant\nJob Specification\n\nNot Defined\n\nJob Category\nCraft Workers\nSub Unit\nEngineering\nLocation\nHQ - CA, USA\nEmployment Status\nFull-Time Contract\n\nInclude Employment Contract Details\n\nContract Start Date\nContract End Date\nContract Details\n\ncontract_v1.pdf \n\nKeep Current\nDelete Current\nReplace Current\nUpload Contract Details\nBrowse\nNo file selected\n\nAccepts up to 1MB\n\nSave",
+          "size": 1048577,
+          "limit": 1048576
+        }
+      },
+      "assertions": [
+        "Attachment Size Exceeded"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_02-validation.png",
+        "screenshots/PIM_JOB_UploadContract_02-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_02-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Từ chối tệp hợp đồng vượt giới hạn | Attachment Size Exceeded | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 15355,
+      "finishedAt": "2026-10-31T01:25:24.697Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 27,
+      "id": "PIM_JOB_UploadContract_03",
+      "title": "Từ chối loại file hợp đồng không cho phép",
+      "expected": "Có lỗi loại tệp. Không lưu tệp không được phép, hợp đồng cũ còn nguyên.",
+      "startedAt": "2026-10-31T01:25:24.700Z",
+      "status": "Passed",
+      "inputs": {
+        "upload": {
+          "filename": "contract_disallowed.bin",
+          "reason": "CSV accepted on public demo; test design permits another disallowed type"
+        }
+      },
+      "assertions": [
+        "File type not allowed"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_UploadContract_03-validation.png",
+        "screenshots/PIM_JOB_UploadContract_03-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_UploadContract_03-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Từ chối loại file hợp đồng không cho phép | File type not allowed | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 15735,
+      "finishedAt": "2026-10-31T01:25:40.435Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 28,
+      "id": "PIM_JOB_KeepContract_01",
+      "title": "Giữ tệp hợp đồng hiện tại khi đổi ngày",
+      "expected": "Ngày kết thúc mới được lưu. Tệp vẫn là contract_v1.pdf, nội dung không đổi.",
+      "startedAt": "2026-10-31T01:25:40.437Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_KeepContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_KeepContract_01-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2027-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Giữ tệp hợp đồng hiện tại khi đổi ngày | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 17205,
+      "finishedAt": "2026-10-31T01:25:57.642Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 29,
+      "id": "PIM_JOB_ReplaceContract_01",
+      "title": "Thay thế tệp hợp đồng hiện tại",
+      "expected": "Tệp hợp đồng hiện tại là contract_v2.pdf với nội dung v2; không còn dùng v1 làm tệp hiện tại.",
+      "startedAt": "2026-10-31T01:25:57.643Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_ReplaceContract_01-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_ReplaceContract_01-contract_v2.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Thay thế tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 16289,
+      "finishedAt": "2026-10-31T01:26:13.932Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 30,
+      "id": "PIM_JOB_ReplaceContract_02",
+      "title": "Replace Current nhưng không chọn tệp mới",
+      "expected": "Vùng tệp mới hiển thị Required. Không mất tệp hợp đồng cũ.",
+      "startedAt": "2026-10-31T01:26:13.934Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [
+        "Required"
+      ],
+      "screenshots": [
+        "screenshots/PIM_JOB_ReplaceContract_02-validation.png",
+        "screenshots/PIM_JOB_ReplaceContract_02-result.png"
+      ],
+      "downloads": [
+        "assets/PIM_JOB_ReplaceContract_02-contract_v1.pdf"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "label": "Keep Current",
+            "value": "keepCurrent",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Delete Current",
+            "value": "deleteCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "label": "Replace Current",
+            "value": "replaceCurrent",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Replace Current nhưng không chọn tệp mới | Required | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 18346,
+      "finishedAt": "2026-10-31T01:26:32.280Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 31,
+      "id": "PIM_JOB_DeleteContract_01",
+      "title": "Xóa riêng tệp hợp đồng hiện tại",
+      "expected": "Tệp hiện tại được xóa. Hai ngày hợp đồng không bị đổi ngoài ý muốn.",
+      "startedAt": "2026-10-31T01:26:32.282Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_DeleteContract_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": []
+      },
+      "actual": "Xóa riêng tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 15946,
+      "finishedAt": "2026-10-31T01:26:48.228Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 32,
+      "id": "PIM_JOB_CreateAttachment_01",
+      "title": "Thêm attachment tại tab Job",
+      "expected": "Có dòng attachment với đúng tên và mô tả tại tab Job, không nhầm attachment của Personal Details.",
+      "startedAt": "2026-10-31T01:26:48.229Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_CreateAttachment_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Job attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 17075,
+      "finishedAt": "2026-10-31T01:27:05.304Z"
+    },
+    {
+      "module": "PIM_JOB",
+      "row": 33,
+      "id": "PIM_JOB_CancelAttachment_01",
+      "title": "Hủy thêm attachment tại tab Job",
+      "expected": "Form thêm đóng. Không có dòng mới với mô tả G01N01 Job cancel.",
+      "startedAt": "2026-10-31T01:27:05.306Z",
+      "status": "Passed",
+      "inputs": {},
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_JOB_CancelAttachment_01-result.png"
+      ],
+      "observed": {
+        "fields": [
+          {
+            "name": "",
+            "label": "Joined Date",
+            "value": ""
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "name": "",
+            "label": "Contract Start Date",
+            "value": "2026-01-01"
+          },
+          {
+            "name": "",
+            "label": "Contract End Date",
+            "value": "2026-31-12"
+          },
+          {
+            "name": "",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "name": "",
+            "value": "0",
+            "checked": false
+          }
+        ],
+        "selections": [
+          {
+            "label": "Job Title",
+            "value": "Account Assistant"
+          },
+          {
+            "label": "Job Category",
+            "value": "Craft Workers"
+          },
+          {
+            "label": "Sub Unit",
+            "value": "Engineering"
+          },
+          {
+            "label": "Location",
+            "value": "HQ - CA, USA"
+          },
+          {
+            "label": "Employment Status",
+            "value": "Full-Time Contract"
+          }
+        ],
+        "attachmentRows": [
+          "attachment_valid.pdf\nG01N01 Job attachment\n921.00 B\napplication/pdf\n2026-31-10\nAdmin"
+        ]
+      },
+      "actual": "Hủy thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report",
+      "durationMs": 6963,
+      "finishedAt": "2026-10-31T01:27:12.269Z"
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "P2bf87bdc9",
+      "key": "227",
+      "status": "Deleted and absence verified"
+    },
+    {
+      "id": "J2bf87bdc9",
+      "key": "228",
+      "status": "Deleted and absence verified"
+    }
+  ],
+  "setupErrors": [],
+  "plannedCaseIds": [
+    "PIM_PERSONAL_Update_01",
+    "PIM_PERSONAL_Update_02",
+    "PIM_PERSONAL_Update_03",
+    "PIM_PERSONAL_Update_04",
+    "PIM_PERSONAL_Update_05",
+    "PIM_PERSONAL_Update_06",
+    "PIM_PERSONAL_Update_07",
+    "PIM_PERSONAL_Update_08",
+    "PIM_PERSONAL_Update_09",
+    "PIM_PERSONAL_Update_10",
+    "PIM_PERSONAL_Update_11",
+    "PIM_PERSONAL_Update_12",
+    "PIM_PERSONAL_Update_13",
+    "PIM_PERSONAL_Update_14",
+    "PIM_PERSONAL_Update_15",
+    "PIM_PERSONAL_Update_16",
+    "PIM_PERSONAL_Update_17",
+    "PIM_PERSONAL_Update_18",
+    "PIM_PERSONAL_Update_19",
+    "PIM_PERSONAL_Update_20",
+    "PIM_PERSONAL_CreateAttachment_01",
+    "PIM_PERSONAL_CreateAttachment_02",
+    "PIM_PERSONAL_CreateAttachment_03",
+    "PIM_PERSONAL_CreateAttachment_04",
+    "PIM_PERSONAL_DeleteAttachment_01",
+    "PIM_JOB_UpdateJob_01",
+    "PIM_JOB_UpdateJob_02",
+    "PIM_JOB_UpdateJob_03",
+    "PIM_JOB_UpdateJob_04",
+    "PIM_JOB_UpdateJob_05",
+    "PIM_JOB_UpdateJob_06",
+    "PIM_JOB_UpdateJob_07",
+    "PIM_JOB_UpdateJob_08",
+    "PIM_JOB_UpdateJob_09",
+    "PIM_JOB_ToggleContract_01",
+    "PIM_JOB_ToggleContract_02",
+    "PIM_JOB_UpdateContract_01",
+    "PIM_JOB_UpdateContract_02",
+    "PIM_JOB_UpdateContract_03",
+    "PIM_JOB_UpdateContract_04",
+    "PIM_JOB_UpdateContract_05",
+    "PIM_JOB_UploadContract_01",
+    "PIM_JOB_UploadContract_02",
+    "PIM_JOB_UploadContract_03",
+    "PIM_JOB_KeepContract_01",
+    "PIM_JOB_ReplaceContract_01",
+    "PIM_JOB_ReplaceContract_02",
+    "PIM_JOB_DeleteContract_01",
+    "PIM_JOB_CreateAttachment_01",
+    "PIM_JOB_CancelAttachment_01"
+  ],
+  "scriptSha256": "ac74322fc851c71821017e1eca134fda37380c6d83784b379b301f0880b35cae",
+  "finishedAt": "2026-10-31T01:27:39.019Z",
+  "summary": {
+    "Passed": 50,
+    "Failed": 0,
+    "Blocked": 0,
+    "NotRun": 0
+  }
+}

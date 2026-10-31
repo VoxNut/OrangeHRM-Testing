@@ -19,5 +19,7 @@ Dự án kiểm thử website [OrangeHRM Demo](https://opensource-demo.orangehrm
 - [Automation](automation/README.md) · [Kế hoạch triển khai](docs/automation/README.md)
 - [Dữ liệu test](test-data/README.md) · [Kết quả chạy](evidence/executions/README.md)
 - [Quy trình đóng góp](CONTRIBUTING.md)
+- [ASM8: cài đặt và chạy suite nhóm](Automation%20Testing%20Project%20-%20Group%2001/README.md)
+- [Slide cá nhân ASM8](docs/presentations/README.md)
 
 Mỗi thành viên tự chọn công cụ và ghi hướng dẫn chạy trong thư mục của mình. Tích hợp qua **nhánh cá nhân → PR → dev**; `main` lưu các mốc thống nhất.

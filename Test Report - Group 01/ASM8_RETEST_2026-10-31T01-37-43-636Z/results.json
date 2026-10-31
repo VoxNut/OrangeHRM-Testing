@@ -1,0 +1,106 @@
+{
+  "runId": "ASM8_RETEST_2026-10-31T01-37-43-636Z",
+  "startedAt": "2026-10-31T01:37:43.638Z",
+  "finishedAt": "2026-10-31T01:40:33.738Z",
+  "durationMs": 170027,
+  "commit": "2dd65b6e85b3db46b989cc3a628416f1dd5a3475",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/",
+  "scope": "pim-retest",
+  "results": [
+    {
+      "id": "PIM_EMP_Search_02",
+      "module": "PIM_EMP",
+      "title": "Tìm nhân viên bằng autocomplete tên",
+      "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. F_PERSON (G1N01P0001) đã tạo trong setup.\nInput: Employee Name: chọn chính xác G01N01 Minh NhutPerson (F_PERSON)\n1. Vào Employee List, Reset.\n2. Nhập G01N01 vào Employee Name; đợi gợi ý.\n3. Chọn đúng F_PERSON trong gợi ý, bấm Search.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+      "expected": "Hiển thị nhân viên đã chọn với Employee Id G1N01P0001.",
+      "suite": "pim-emp",
+      "member": "23130226",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "Passed",
+      "actual": "Autocomplete đã chọn trả 1 dòng | Đúng F_PERSON có ID G1N01P0001",
+      "durationMs": 3532,
+      "evidence": [
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\results.json",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\console.log",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\screenshots\\PIM_EMP_Search_02.png"
+      ]
+    },
+    {
+      "id": "PIM_EMP_Sort_01",
+      "module": "PIM_EMP",
+      "title": "Sắp xếp danh sách theo First Name",
+      "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. Có ít nhất hai nhân viên tên khác nhau; ghi tổng số bản ghi trước sắp xếp.\nInput: Ít nhất hai nhân viên có First Name khác nhau trong tập kết quả\n1. Vào Employee List, Reset rồi Search.\n2. Bấm sắp xếp First (& Middle) Name tăng dần.\n3. Đối chiếu chuỗi tên tại trang hiện tại; đổi sang giảm dần và kiểm tra lại.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+      "expected": "Tên trên trang hiện tại được sắp xếp đúng chiều tăng/giảm đã chọn theo quy tắc giao diện. Tổng số bản ghi không đổi; không có lỗi tải bảng khi đổi chiều.",
+      "suite": "pim-emp",
+      "member": "23130226",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "Passed",
+      "actual": "Có đủ hai fixture tên khác nhau trong danh sách đã đọc | Hai fixture Alpha/Zulu đúng chiều Ascending; từng trang khớp response | Có đủ hai fixture tên khác nhau trong danh sách đã đọc | Hai fixture Alpha/Zulu đúng chiều Descending; từng trang khớp response | Tổng bản ghi không đổi giữa hai chiều sắp xếp",
+      "durationMs": 29214,
+      "evidence": [
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\results.json",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\console.log",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\screenshots\\PIM_EMP_Sort_01-Ascending.png",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\screenshots\\PIM_EMP_Sort_01-Descending.png",
+        "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\pim-emp\\evidence\\executions\\23130226\\ASM8_RETEST_2026-10-31T01-37-43-636Z\\screenshots\\PIM_EMP_Sort_01.png"
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "key": "pim-emp",
+      "member": "23130226",
+      "tool": "Playwright",
+      "source": "automation/23130226/Playwright/run-pim.mjs",
+      "sha256": "d67ce7cb1636fc9948cffbb8d040dc9d7a37b8f63a636ed513f3c52b04c0f792",
+      "planned": 2,
+      "startedAt": "2026-10-31T01:37:43.711Z",
+      "exitCode": 0,
+      "rawReport": "Envidence - Group01/ASM8_RETEST_2026-10-31T01-37-43-636Z/pim-emp/evidence/executions/23130226/ASM8_RETEST_2026-10-31T01-37-43-636Z/results.json",
+      "browser": "156.0.4314.50",
+      "cleanup": [
+        {
+          "id": "G1N01D0001",
+          "key": "246",
+          "status": "Deleted"
+        },
+        {
+          "id": "G1N01P0001",
+          "key": "247",
+          "status": "Deleted"
+        },
+        {
+          "id": "G1N01F0001",
+          "key": "248",
+          "status": "Deleted"
+        },
+        {
+          "id": "G1N01F0002",
+          "key": "249",
+          "status": "Deleted"
+        },
+        {
+          "id": "G1N01S0001",
+          "key": "250",
+          "status": "Deleted"
+        },
+        {
+          "id": "G1N01S0002",
+          "key": "251",
+          "status": "Deleted"
+        }
+      ],
+      "finishedAt": "2026-10-31T01:40:33.736Z"
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "Pass": 2,
+    "Fail": 0,
+    "Skipped": 0
+  },
+  "attempted": 2,
+  "selected": 2
+}

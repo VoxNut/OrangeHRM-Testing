@@ -1,0 +1,285 @@
+{
+  "browserName": "edge",
+  "browserPath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "browserVersion": "156.0.4314.50",
+  "config": {
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 20000,
+    "requestTimeout": 30000,
+    "responseTimeout": 60000,
+    "viewportWidth": 1440,
+    "viewportHeight": 1000,
+    "retries": 0,
+    "baseUrl": "https://opensource-demo.orangehrmlive.com",
+    "specPattern": "D:\\My WorkSpace\\OrangeHRM-Testing\\automation\\22130254\\cypress\\e2e\\**\\*.cy.js",
+    "supportFile": "D:\\My WorkSpace\\OrangeHRM-Testing\\Automation Testing Project - Group 01\\cypress-support.cjs",
+    "fixturesFolder": "D:\\My WorkSpace\\OrangeHRM-Testing\\automation\\22130254\\cypress\\fixtures",
+    "testIsolation": false,
+    "projectRoot": "D:\\My WorkSpace\\OrangeHRM-Testing",
+    "projectName": "OrangeHRM-Testing",
+    "configFile": "cypress.config.cjs",
+    "isTextTerminal": true,
+    "screenshotsFolder": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots",
+    "videosFolder": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\videos",
+    "animationDistanceThreshold": 5,
+    "arch": "x64",
+    "blockHosts": null,
+    "chromeWebSecurity": true,
+    "clientCertificates": [],
+    "defaultBrowser": null,
+    "allowCypressEnv": true,
+    "downloadsFolder": "D:\\My WorkSpace\\OrangeHRM-Testing\\cypress\\downloads",
+    "env": {
+      "runDataFile": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\run-data.json"
+    },
+    "expose": {},
+    "execTimeout": 60000,
+    "experimentalCspAllowList": false,
+    "experimentalInteractiveRunEvents": false,
+    "experimentalRunAllSpecs": false,
+    "experimentalMemoryManagement": false,
+    "experimentalModifyObstructiveThirdPartyCode": false,
+    "injectDocumentDomain": false,
+    "experimentalOriginDependencies": false,
+    "experimentalSourceRewriting": false,
+    "experimentalSingleTabRunMode": false,
+    "experimentalWebKitSupport": false,
+    "experimentalFastVisibility": false,
+    "fileServerFolder": "D:\\My WorkSpace\\OrangeHRM-Testing",
+    "excludeSpecPattern": "*.hot-update.js",
+    "includeShadowDom": false,
+    "justInTimeCompile": true,
+    "keystrokeDelay": 0,
+    "modifyObstructiveCode": true,
+    "numTestsKeptInMemory": 0,
+    "platform": "win32",
+    "pageLoadTimeout": 60000,
+    "port": 48549,
+    "projectId": null,
+    "redirectionLimit": 20,
+    "removeSRIAttributes": false,
+    "reporter": "spec",
+    "reporterOptions": null,
+    "resolvedNodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "resolvedNodeVersion": "22.17.0",
+    "slowTestThreshold": 10000,
+    "scrollBehavior": "top",
+    "taskTimeout": 60000,
+    "trashAssetsBeforeRuns": true,
+    "userAgent": null,
+    "videoCompression": false,
+    "waitForAnimations": true,
+    "watchForFileChanges": false,
+    "browsers": [
+      {
+        "channel": "stable",
+        "displayName": "Edge",
+        "family": "chromium",
+        "majorVersion": "156",
+        "name": "edge",
+        "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "version": "156.0.4314.50"
+      },
+      {
+        "channel": "stable",
+        "displayName": "Electron",
+        "family": "chromium",
+        "majorVersion": 138,
+        "name": "electron",
+        "path": "",
+        "version": "138.0.7204.251"
+      }
+    ],
+    "cypressBinaryRoot": "C:\\Users\\HI\\AppData\\Local\\Cypress\\Cache\\15.21.1\\Cypress\\resources\\app",
+    "hosts": null,
+    "isInteractive": false,
+    "version": "15.21.1",
+    "testingType": "e2e",
+    "browser": null,
+    "cypressInternalEnv": "production"
+  },
+  "cypressVersion": "15.21.1",
+  "endedTestsAt": "2026-10-31T01:31:18.893Z",
+  "osName": "win32",
+  "osVersion": "Microsoft Windows 11 Home Single Language - 10.0.26300",
+  "runs": [
+    {
+      "error": null,
+      "reporter": "spec",
+      "reporterStats": {
+        "suites": 4,
+        "tests": 6,
+        "passes": 6,
+        "pending": 0,
+        "failures": 0,
+        "start": "2026-10-31T01:27:55.171Z",
+        "end": "2026-10-31T01:31:18.894Z",
+        "duration": 203723
+      },
+      "screenshots": [
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_001",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_001.png",
+          "takenAt": "2026-10-31T01:29:13.214Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_016",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_016.png",
+          "takenAt": "2026-10-31T01:29:25.229Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_008",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_008.png",
+          "takenAt": "2026-10-31T01:30:01.449Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_SELF_001",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_001.png",
+          "takenAt": "2026-10-31T01:30:16.154Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_ADMIN_010",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_010.png",
+          "takenAt": "2026-10-31T01:30:34.797Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_ADMIN_011",
+          "path": "D:\\My WorkSpace\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-10-31T01-13-22-203Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_011.png",
+          "takenAt": "2026-10-31T01:30:46.740Z",
+          "width": 1254
+        }
+      ],
+      "spec": {
+        "absolute": "D:/My WorkSpace/OrangeHRM-Testing/automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+        "fileExtension": ".js",
+        "fileName": "22130254_CaoTienThanh_ASM7",
+        "name": "22130254_CaoTienThanh_ASM7.cy.js",
+        "relative": "automation\\22130254\\cypress\\e2e\\leave\\22130254_CaoTienThanh_ASM7.cy.js"
+      },
+      "stats": {
+        "duration": 203726,
+        "endedAt": "2026-10-31T01:31:18.893Z",
+        "failures": 0,
+        "passes": 6,
+        "pending": 0,
+        "skipped": 0,
+        "startedAt": "2026-10-31T01:27:55.167Z",
+        "suites": 4,
+        "tests": 6
+      },
+      "tests": [
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 78292,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_001 – Thêm mới Leave Type với các trường bắt buộc"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 11948,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_016 – Thêm Leave Entitlement hợp lệ với số ngày nguyên"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 36246,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_008 – Lọc Employee Entitlements theo nhân viên, loại phép và kỳ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 14656,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_001 – Nộp đơn nghỉ một ngày hợp lệ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 18598,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_010 – Approve một đơn Pending Approval"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 43879,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_011 – Scheduled đồng bộ sang My Leave của nhân viên"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ],
+  "startedTestsAt": "2026-10-31T01:27:55.167Z",
+  "totalDuration": 203726,
+  "totalFailed": 0,
+  "totalPassed": 6,
+  "totalPending": 0,
+  "totalSkipped": 0,
+  "totalSuites": 4,
+  "totalTests": 6
+}

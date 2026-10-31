@@ -1,15 +1,7 @@
-# PIM – Playwright
+# Admin – Playwright
 
-Node.js 20+, Microsoft Edge; Playwright 1.62.1. Dùng tài khoản demo `Admin/admin123`.
+`23130171_NguyenThiThuyLinh_ASM7.mjs` khai báo 25 case ADM_STRUCT bằng `@playwright/test`. `run-adm.mjs` là runner riêng cho cùng phạm vi. Chưa có script ADM_JOB/ADM_USER trong `dev`.
 
-```powershell
-npm install
-npm test       # ASM6: 25 case ADM_STRUC
-npm run asm7   # ASM7: 25 case, ADM_STRUC
-```
+Cài bằng `npm ci` trong thư mục này. [Danh sách case](ASM7.md) · [Minh chứng đã nộp](../../../evidence/executions/23130171/ADM_STRUCT/).
 
-- ASM6: kết quả tại `evidence/executions/23130171/<run-id>/`. 
-- ASM7: [case và cách chạy](ASM7.md); kết quả mặc định tại `results/ASM7_<timestamp>/`.
-
-
-[Kết quả thực thi](../../../evidence/executions/23130171/README.md)
+Trước khi chạy ASM8, cần giới hạn sửa/xóa vào node tạo riêng cho lần chạy, bổ sung assertion và cleanup. Script hiện chọn `.bi-pencil.first()`/`.bi-trash.first()`/`.last()` nên runner nhóm ghi Skipped. Các ảnh ASM7 không thay cho report chạy ASM8.
