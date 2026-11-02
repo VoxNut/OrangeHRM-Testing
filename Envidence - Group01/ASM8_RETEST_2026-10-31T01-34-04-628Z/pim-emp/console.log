@@ -1,0 +1,3 @@
+PIM_EMP_Search_02: Passed (3363 ms) Autocomplete đã chọn trả 1 dòng | Đúng F_PERSON có ID G1N01P0001
+PIM_EMP_Sort_01: Blocked (45657 ms) TimeoutError: page.waitForFunction: Timeout 20000ms exceeded.
+SUMMARY {"Passed":1,"Failed":0,"Blocked":1,"Untested":0} OUT D:\My WorkSpace\OrangeHRM-Testing\Envidence - Group01\ASM8_RETEST_2026-10-31T01-34-04-628Z\pim-emp\evidence\executions\23130226\ASM8_RETEST_2026-10-31T01-34-04-628Z

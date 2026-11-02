@@ -1,0 +1,4 @@
+# Preserve original execution evidence bytes across Windows/Linux checkouts.
+* -text
+*.log binary
+*.bin binary

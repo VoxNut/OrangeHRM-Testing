@@ -1,0 +1,19 @@
+{
+  "name": "orangehrm-testing-group01",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node \"Automation Testing Project - Group 01/run.mjs\"",
+    "check": "node \"Automation Testing Project - Group 01/run.mjs\" --check",
+    "test:pim": "node \"Automation Testing Project - Group 01/run.mjs\" --member=23130226",
+    "test:leave": "node \"Automation Testing Project - Group 01/run.mjs\" --member=22130254",
+    "retest:pim": "node \"Automation Testing Project - Group 01/run.mjs\" --retest-pim",
+    "cy:open": "cypress open --config-file \"Automation Testing Project - Group 01/cypress.config.cjs\""
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.5",
+    "pdf-lib": "1.17.1",
+    "cypress": "15.21.1"
+  }
+}

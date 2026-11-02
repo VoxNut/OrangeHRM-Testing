@@ -1,0 +1,101 @@
+RUN PIM_PERSONAL_Update_01
+PIM_PERSONAL_Update_01: Passed (6334 ms) Cập nhật đầy đủ ba thành phần tên | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_02
+PIM_PERSONAL_Update_02: Passed (5609 ms) First Name bắt buộc | Required | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_03
+PIM_PERSONAL_Update_03: Passed (5769 ms) Last Name bắt buộc | Required | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_04
+PIM_PERSONAL_Update_04: Passed (6247 ms) First Name đúng giới hạn 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_05
+PIM_PERSONAL_Update_05: Passed (5199 ms) First Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_06
+PIM_PERSONAL_Update_06: Passed (5271 ms) Middle Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_07
+PIM_PERSONAL_Update_07: Passed (5175 ms) Last Name vượt giới hạn 30 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_08
+PIM_PERSONAL_Update_08: Passed (14373 ms) Employee Id dài 10 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_09
+PIM_PERSONAL_Update_09: Passed (5768 ms) Employee Id dài 11 ký tự | Should not exceed 10 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_10
+PIM_PERSONAL_Update_10: Passed (5983 ms) Other Id dài 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_11
+PIM_PERSONAL_Update_11: Passed (5165 ms) Other Id dài 31 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_12
+PIM_PERSONAL_Update_12: Passed (6051 ms) Driver's License Number dài 30 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_13
+PIM_PERSONAL_Update_13: Passed (5109 ms) Driver's License Number dài 31 ký tự | Should not exceed 30 characters | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_14
+PIM_PERSONAL_Update_14: Passed (6025 ms) Date of Birth là ngày nhuận hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_15
+PIM_PERSONAL_Update_15: Passed (5224 ms) Date of Birth là ngày không tồn tại | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_16
+PIM_PERSONAL_Update_16: Passed (6058 ms) License Expiry Date hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_17
+PIM_PERSONAL_Update_17: Passed (5260 ms) License Expiry Date không hợp lệ | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_18
+PIM_PERSONAL_Update_18: Passed (6006 ms) Thay đổi Nationality | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_19
+PIM_PERSONAL_Update_19: Passed (6045 ms) Thay đổi Marital Status | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_Update_20
+PIM_PERSONAL_Update_20: Passed (5998 ms) Thay đổi Gender | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_CreateAttachment_01
+PIM_PERSONAL_CreateAttachment_01: Passed (9871 ms) Thêm attachment hợp lệ vào Personal Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_CreateAttachment_02
+PIM_PERSONAL_CreateAttachment_02: Passed (5250 ms) Không chọn file khi thêm attachment | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_CreateAttachment_03
+PIM_PERSONAL_CreateAttachment_03: Passed (9479 ms) Mô tả attachment đúng 200 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_CreateAttachment_04
+PIM_PERSONAL_CreateAttachment_04: Passed (5259 ms) Mô tả attachment vượt 200 ký tự | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_PERSONAL_DeleteAttachment_01
+PIM_PERSONAL_DeleteAttachment_01: Passed (12115 ms) Hủy rồi xác nhận xóa attachment của nhóm | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_01
+PIM_JOB_UpdateJob_01: Passed (6473 ms) Lưu Joined Date hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_02
+PIM_JOB_UpdateJob_02: Passed (5137 ms) Joined Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Saved value unchanged after reopening | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_03
+PIM_JOB_UpdateJob_03: Passed (6129 ms) Thay đổi Job Title | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_04
+PIM_JOB_UpdateJob_04: Passed (6463 ms) Thay đổi Job Category | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_05
+PIM_JOB_UpdateJob_05: Passed (6391 ms) Thay đổi Sub Unit | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_06
+PIM_JOB_UpdateJob_06: Passed (6413 ms) Thay đổi Location | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_07
+PIM_JOB_UpdateJob_07: Passed (6955 ms) Thay đổi Employment Status | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_08
+PIM_JOB_UpdateJob_08: Passed (9448 ms) Lưu đồng thời các trường Job Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateJob_09
+PIM_JOB_UpdateJob_09: Passed (6137 ms) Xóa Joined Date tùy chọn | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_ToggleContract_01
+PIM_JOB_ToggleContract_01: Passed (2451 ms) Bật hiển thị Employment Contract Details | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_ToggleContract_02
+PIM_JOB_ToggleContract_02: Passed (9570 ms) Tắt phần mở rộng hợp đồng không xóa dữ liệu | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateContract_01
+PIM_JOB_UpdateContract_01: Passed (8298 ms) Hợp đồng có End Date sau Start Date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateContract_02
+PIM_JOB_UpdateContract_02: Passed (6646 ms) End Date trước Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateContract_03
+PIM_JOB_UpdateContract_03: Passed (6755 ms) End Date bằng Start Date | End date should be after Start date | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateContract_04
+PIM_JOB_UpdateContract_04: Passed (6801 ms) Start Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UpdateContract_05
+PIM_JOB_UpdateContract_05: Passed (6586 ms) End Date không tồn tại | Should be a valid date in yyyy-dd-mm format | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UploadContract_01
+PIM_JOB_UploadContract_01: Passed (21357 ms) Tải tệp hợp đồng PDF hợp lệ | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UploadContract_02
+PIM_JOB_UploadContract_02: Passed (15355 ms) Từ chối tệp hợp đồng vượt giới hạn | Attachment Size Exceeded | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_UploadContract_03
+PIM_JOB_UploadContract_03: Passed (15735 ms) Từ chối loại file hợp đồng không cho phép | File type not allowed | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_KeepContract_01
+PIM_JOB_KeepContract_01: Passed (17205 ms) Giữ tệp hợp đồng hiện tại khi đổi ngày | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_ReplaceContract_01
+PIM_JOB_ReplaceContract_01: Passed (16289 ms) Thay thế tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_ReplaceContract_02
+PIM_JOB_ReplaceContract_02: Passed (18346 ms) Replace Current nhưng không chọn tệp mới | Required | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_DeleteContract_01
+PIM_JOB_DeleteContract_01: Passed (15946 ms) Xóa riêng tệp hợp đồng hiện tại | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_CreateAttachment_01
+PIM_JOB_CreateAttachment_01: Passed (17075 ms) Thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+RUN PIM_JOB_CancelAttachment_01
+PIM_JOB_CancelAttachment_01: Passed (6963 ms) Hủy thêm attachment tại tab Job | Assertion đạt; dữ liệu sau mở lại và ảnh trong report
+SUMMARY {"Passed":50,"Failed":0,"Blocked":0,"NotRun":0} CLEANUP [{"id":"P2bf87bdc9","key":"227","status":"Deleted and absence verified"},{"id":"J2bf87bdc9","key":"228","status":"Deleted and absence verified"}] OUTPUT D:\My WorkSpace\OrangeHRM-Testing\Envidence - Group01\ASM8_2026-10-31T01-13-22-203Z\pim-details\PIM_DETAILS_2026-10-31T01-19-53-422Z

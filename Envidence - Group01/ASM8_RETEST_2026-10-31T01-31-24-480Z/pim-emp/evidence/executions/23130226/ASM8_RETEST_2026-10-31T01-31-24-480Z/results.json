@@ -1,0 +1,374 @@
+{
+  "runId": "ASM8_RETEST_2026-10-31T01-31-24-480Z",
+  "startedAt": "2026-10-31T01:31:25.139Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "tool": "Playwright",
+  "browser": "156.0.4314.50",
+  "fixtures": {
+    "G1N01D0001": {
+      "key": "234",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/234",
+      "id": "G1N01D0001"
+    },
+    "G1N01P0001": {
+      "key": "235",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/235",
+      "id": "G1N01P0001"
+    },
+    "G1N01F0001": {
+      "key": "236",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/236",
+      "id": "G1N01F0001"
+    },
+    "G1N01F0002": {
+      "key": "237",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/237",
+      "id": "G1N01F0002"
+    }
+  },
+  "created": [
+    {
+      "id": "G1N01D0001",
+      "key": "234",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/234"
+    },
+    {
+      "id": "G1N01P0001",
+      "key": "235",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/235"
+    },
+    {
+      "id": "G1N01F0001",
+      "key": "236",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/236"
+    },
+    {
+      "id": "G1N01F0002",
+      "key": "237",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/237"
+    },
+    {
+      "id": "G1N01S0001",
+      "key": "238",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/238"
+    },
+    {
+      "id": "G1N01S0002",
+      "key": "239",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/239"
+    }
+  ],
+  "results": [
+    {
+      "oldId": "TC_PIM_EMP_021",
+      "id": "PIM_EMP_Search_02",
+      "startedAt": "2026-10-31T01:32:23.077Z",
+      "status": "Passed",
+      "actual": "Autocomplete đã chọn trả 1 dòng | Đúng F_PERSON có ID G1N01P0001",
+      "assertions": [
+        "Autocomplete đã chọn trả 1 dòng",
+        "Đúng F_PERSON có ID G1N01P0001"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Search_02.png"
+      ],
+      "durationMs": 3384,
+      "finishedAt": "2026-10-31T01:32:26.461Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:32:23.088Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/236"
+        },
+        {
+          "time": "2026-10-31T01:32:23.204Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/236/screen/job/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:32:23.451Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/236/employment-contract"
+        },
+        {
+          "time": "2026-10-31T01:32:24.515Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:25.742Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?nameOrId=NhutPerson&includeEmployees=onlyCurrent"
+        },
+        {
+          "time": "2026-10-31T01:32:26.339Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&empNumber=235&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_025",
+      "id": "PIM_EMP_Sort_01",
+      "startedAt": "2026-10-31T01:32:26.462Z",
+      "status": "Failed",
+      "actual": "AssertionError: Tên hiển thị phải khớp thứ tự response\n+ actual - expected\n... Skipped lines\n\n  [\n    'Idtest',\n    'ilxbjwky',\n    'James',\n    'Jhaziel',\n...\n    'Lucas Automacao',\n+   'Lucia QA',\n-   'Lucia  QA',\n    'Mohamed Ember',\n    'murugan moorthi',\n    'Nalim',\n    'njycvonotxnjycvonotx',\n    'Orange',\n",
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_EMP_Sort_01-Ascending.png",
+        "screenshots/PIM_EMP_Sort_01.png"
+      ],
+      "error": {
+        "name": "AssertionError",
+        "message": "Tên hiển thị phải khớp thứ tự response\n+ actual - expected\n... Skipped lines\n\n  [\n    'Idtest',\n    'ilxbjwky',\n    'James',\n    'Jhaziel',\n...\n    'Lucas Automacao',\n+   'Lucia QA',\n-   'Lucia  QA',\n    'Mohamed Ember',\n    'murugan moorthi',\n    'Nalim',\n    'njycvonotxnjycvonotx',\n    'Orange',\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Tên hiển thị phải khớp thứ tự response\n+ actual - expected\n... Skipped lines\n\n  [\n    'Idtest',\n    'ilxbjwky',\n    'James',\n    'Jhaziel',\n...\n    'Lucas Automacao',\n+   'Lucia QA',\n-   'Lucia  QA',\n    'Mohamed Ember',\n    'murugan moorthi',\n    'Nalim',\n    'njycvonotxnjycvonotx',\n    'Orange',\n\n    at file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:100:12\n    at async caseRun (file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:36:6)\n    at async file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:60:115"
+      },
+      "durationMs": 26391,
+      "finishedAt": "2026-10-31T01:32:52.853Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:32:27.997Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:28.530Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01S0001&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:29.778Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:31.165Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:35.005Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:32:35.123Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:32:35.128Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238"
+        },
+        {
+          "time": "2026-10-31T01:32:35.199Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:32:35.545Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:37.259Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238"
+        },
+        {
+          "time": "2026-10-31T01:32:37.302Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:32:37.384Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:32:37.424Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/238/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:32:37.802Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:39.650Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:40.126Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01S0002&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:41.380Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:42.747Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:46.533Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:32:46.570Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239"
+        },
+        {
+          "time": "2026-10-31T01:32:46.613Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:32:46.739Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:32:46.981Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:48.655Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239"
+        },
+        {
+          "time": "2026-10-31T01:32:48.698Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:32:48.774Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:32:48.896Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/239/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:32:49.344Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:32:51.221Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:51.801Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:32:52.601Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=50&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "G1N01D0001",
+      "key": "234",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01P0001",
+      "key": "235",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01F0001",
+      "key": "236",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01F0002",
+      "key": "237",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01S0001",
+      "key": "238",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01S0002",
+      "key": "239",
+      "status": "Deleted"
+    }
+  ],
+  "setupErrors": [],
+  "assets": {
+    "jpg": 523,
+    "png": 1087,
+    "pdf": 583,
+    "large": 1048577
+  },
+  "catalog": {
+    "title": "<b>x</b> swarmm4",
+    "status": "Freelance"
+  },
+  "finishedAt": "2026-10-31T01:33:41.115Z",
+  "summary": {
+    "Passed": 1,
+    "Failed": 1,
+    "Blocked": 0,
+    "Untested": 0
+  }
+}

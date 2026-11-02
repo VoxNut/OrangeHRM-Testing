@@ -32,5 +32,8 @@ Trước khi merge: kiểm tra tên file, ID, input/expected, dependency, công 
 | --- | --- |
 | ASM6 | `MaSV_HoTen.zip`: `Group01.txt`, ảnh Git `MaSV_HoTen.png`, `Group01_MaSV_HoTen.xlsx` |
 | ASM7 | Script `MaSV_HoTen_ASM7` (nhiều tệp nén ZIP) và `MaSV_HoTen_ASM7.txt`: dòng 1 link YouTube, dòng 2 link repo public |
+| ASM8 | `MaSV_HoTen.pptx` và `MaSV_HoTen_TestScript.zip`; project, report và evidence nhóm lưu trên Git |
 
 Giữ gói nộp ngoài repo; `submission/`, `submissions/`, `node_modules/` và thông tin đăng nhập riêng không được commit.
+
+ASM8: chạy tuần tự qua [project nhóm](Automation%20Testing%20Project%20-%20Group%2001/README.md). Giữ riêng từng Run ID và retest; không cộng lại case trùng từ ASM7 hoặc biến Skipped thành Pass.

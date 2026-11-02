@@ -1,0 +1,44 @@
+[
+  {
+    "id": "TC_LEAVE_CONFIG_001",
+    "module": "LEAVE_CONFIG",
+    "title": "Thêm mới Leave Type với các trường bắt buộc",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Bộ fixture F_TYPE chưa tồn tại.\nInput: Name=G01T01_Annual; Is Entitlement Situational=No (mặc định)\n1. Vào Leave > Configure > Leave Types.\n2. Bấm nút + Add.\n3. Nhập Name, giữ nguyên Situational là No.\n4. Bấm Save. Đối chiếu danh sách Leave Types.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Radio Is Entitlement Situational = No được chọn trước Save. Sau Save có Successfully Saved và đúng tên loại phép trong danh sách; danh sách chỉ có Name và Actions."
+  },
+  {
+    "id": "TC_LEAVE_CONFIG_016",
+    "module": "LEAVE_CONFIG",
+    "title": "Thêm Leave Entitlement hợp lệ với số ngày nguyên cho nhân viên",
+    "input": "Tiền điều kiện: Admin đăng nhập; F_EMP/F_TYPE tồn tại; tổ hợp nhân viên, loại phép, kỳ thử nghiệm chưa có entitlement.\nInput: Individual Employee; Employee = F_EMP; Leave Type = F_TYPE; Entitlement = 20; chọn kỳ sẽ xin nghỉ (ASM7: 2027).\n1. Mở Entitlements > Add Entitlements.\n2. Chọn F_EMP qua autocomplete, F_TYPE và đúng Leave Period.\n3. Nhập Entitlement = 20, Save.\n4. Ở Updating Entitlement, Confirm; kiểm tra lại bảng Employee Entitlements.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+    "expected": "Successfully Saved. Bảng có đúng F_TYPE, kỳ đã chọn và Days bằng số 20; chấp nhận cách hiển thị 20 hoặc 20.00 vì giá trị số tương đương."
+  },
+  {
+    "id": "TC_LEAVE_CONFIG_008",
+    "module": "LEAVE_CONFIG",
+    "title": "Lọc Employee Entitlements và đối chiếu hạn mức theo nhân viên, loại phép, kỳ",
+    "input": "Tiền điều kiện: Admin đăng nhập; F_EMP và F_EMP_B có entitlement cùng F_TYPE ở hai kỳ; baseline từng tổ hợp đã ghi.\nInput: Employee = F_EMP; Leave Type = F_TYPE; Leave Period = 2026; tổng riêng tổ hợp này = 20 ngày.\n1. Mở Entitlements > Employee Entitlements.\n2. Chọn F_EMP qua autocomplete, F_TYPE và kỳ 2026.\n3. Search; đọc Leave Type, Valid From/To và Days của từng dòng.\n4. Đối chiếu Total Days với tổng các dòng, loại trừ entitlement nhân viên/kỳ khác.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+    "expected": "Chỉ trả về entitlement đúng nhân viên, loại phép và kỳ đã chọn. Tổng Days = 20; không cộng dữ liệu F_EMP_B hoặc kỳ khác."
+  },
+  {
+    "id": "TC_LEAVE_SELF_001",
+    "module": "LEAVE_SELF",
+    "title": "Nộp đơn xin nghỉ phép 1 ngày hợp lệ khi đủ hạn mức",
+    "input": "Tiền điều kiện: ESS đăng nhập; F_TYPE có hạn mức khả dụng ít nhất 1 ngày trong kỳ xin nghỉ; ngày chưa có đơn.\nInput: F_TYPE; From Date = To Date = D0; Full Day; comments riêng theo RUN. ASM7: D0 = 2027-11-01.\n1. Mở Apply; chọn F_TYPE.\n2. Nhập cùng ngày làm việc D0 cho From/To theo placeholder UI; Duration mặc định Full Day.\n3. Nhập Comments và Apply.\n4. Mở My Leave, lọc đúng khoảng ngày/loại phép của fixture để tìm đơn.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+    "expected": "Successfully Saved. My Leave có đúng đơn D0 của nhân viên/loại phép fixture, Pending Approval và Number of Days = 1.00."
+  },
+  {
+    "id": "TC_LEAVE_ADMIN_010",
+    "module": "LEAVE_ADMIN",
+    "title": "Phê duyệt (Approve) một đơn nghỉ phép đang ở trạng thái Pending Approval",
+    "input": "Tiền điều kiện: Có đơn nghỉ phép F_REQ_PEND của nhân viên F_EMP ở trạng thái \"Pending Approval\".\nInput: Click nút Approve tại dòng đơn F_REQ_PEND\n1. Vào Leave List, tìm dòng F_REQ_PEND.\n2. Tại cột Actions, nhấp nút Approve (hoặc chọn Approve trong menu hành động).\n3. Tải lại danh sách kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Thông báo \"Successfully Updated\". Cột Status của đơn chuyển ngay từ \"Pending Approval\" sang \"Scheduled\". Nút Approve/Reject biến mất."
+  },
+  {
+    "id": "TC_LEAVE_ADMIN_011",
+    "module": "LEAVE_ADMIN",
+    "title": "Xác nhận trạng thái Scheduled sau khi Approve hiển thị đồng bộ bên Employee",
+    "input": "Tiền điều kiện: Có đơn riêng đã được Admin Approve thành Scheduled; ASM7 dùng đơn D1 từ TC_LEAVE_ADMIN_010.\nInput: ESS của đúng F_EMP; cùng Leave Type, ngày và thời lượng đơn đã duyệt.\n1. Đăng xuất Admin, đăng nhập ESS F_EMP.\n2. Mở My Leave và lọc đúng kỳ/loại phép/ngày.\n3. Tìm đúng đơn đã duyệt, đối chiếu với thông tin phía Admin.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+    "expected": "My Leave hiển thị Scheduled trên đúng đơn/loại phép; ngày và Number of Days khớp bản ghi Admin đã duyệt (ASM7: D1, 1.00 ngày)."
+  }
+]

@@ -1,6 +1,6 @@
 # 22130254 – Cao Tiến Thành – ASM7
 
-[Script Cypress](../../../automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js) đã rút gọn còn **6 testcase trong video demo**, chạy theo thứ tự cấu hình phép → nhân viên xin nghỉ → Admin duyệt → nhân viên kiểm tra kết quả.
+[Script Cypress](e2e/leave/22130254_CaoTienThanh_ASM7.cy.js) có **6 testcase**, chạy theo thứ tự cấu hình phép → nhân viên xin nghỉ → Admin duyệt → nhân viên kiểm tra kết quả.
 
 | Testcase | Nội dung |
 | --- | --- |
@@ -11,7 +11,7 @@
 | `TC_LEAVE_ADMIN_010` | Admin duyệt đơn Pending Approval thành Scheduled |
 | `TC_LEAVE_ADMIN_011` | Nhân viên thấy đơn Scheduled trên My Leave |
 
-[Video demo](videos/22130254_CaoTienThanh_ASM7.mp4) dài 68 giây, ghi lại lượt demo 6/6 ca PASS trên Edge 156 / Cypress 15.21.1. Các đoạn được tăng tốc có chú thích; khung kết quả cuối được giữ để đọc.
+Các kết quả ASM8 lấy từ JSON Cypress và screenshot của lần chạy mới. Video ASM7 không có trong nhánh `dev` hiện tại.
 
 ## Cài đặt và chạy
 
@@ -19,10 +19,10 @@ Cần Node.js 20.19+ và Microsoft Edge. Chạy tại thư mục gốc `OrangeHR
 
 ```powershell
 npm ci
-npm test
+npm run test:leave
 ```
 
-Mở giao diện Cypress bằng `npm run cy:open`. Cấu hình tại gốc repo trỏ tới spec, support và fixture trong `automation/22130254/cypress/`.
+Mở giao diện Cypress bằng `npm run cy:open`. Cấu hình nhóm trỏ tới spec, support và fixture gốc; `testIsolation: false` giữ phiên giữa các case phụ thuộc. Runner không tự retry các thao tác ghi dữ liệu.
 
 Nếu terminal có `ELECTRON_RUN_AS_NODE=1` và Cypress báo `bad option: --smoke-test`, bỏ biến trong phiên terminal rồi chạy lại:
 

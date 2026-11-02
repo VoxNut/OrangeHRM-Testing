@@ -243,7 +243,7 @@ function prepareCalendar() {
 
 // Ghi dữ liệu thực tế để dọn đúng fixture nếu lần chạy bị gián đoạn.
 function writeRunData(cleanupCompleted = false) {
-  return cy.then(() => cy.writeFile('evidence/executions/22130254/run-data.json', {
+  return cy.then(() => cy.writeFile(Cypress.env('runDataFile') || 'evidence/executions/22130254/run-data.json', {
     runId,
     recordedAt: new Date().toISOString(),
     cleanupAttempted: Boolean(ctx.cleanupAttempted),
