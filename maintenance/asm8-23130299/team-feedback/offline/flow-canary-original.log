@@ -1,0 +1,21 @@
+LATEST FLOW PASS 1: two native interviewer fields use exact Add Another spelling once
+LATEST FLOW PASS 2: one interviewer canary never enters changed branch
+LATEST FLOW PASS 3: zero interviewer negative path never adds a field
+LATEST FLOW PASS 4: duplicate employee labels remain rejected before any native addition
+LATEST FLOW PASS 5: more than five entries remain rejected
+LATEST FLOW PASS 6: ambiguous Add Another native controls fail closed
+LATEST FLOW PASS 7: disabled Add Another never dispatches
+LATEST FLOW PASS 8: missing Add Another remains ERROR; never Save
+LATEST FLOW PASS 9: stale uncertain click dispatch is not replayed
+LATEST FLOW OFFLINE PASS 9; actual production methods with native boundary doubles only
+PORTABILITY PASS 1: relocated project uses project evidence directory, not shell cwd
+PORTABILITY PASS 2: relative runtime output resolves against supplied project
+PORTABILITY PASS 3: absolute dedicated evidence override is retained
+PORTABILITY PASS 4: foreign member namespace is rejected
+PORTABILITY PASS 5: relative override is rejected
+PORTABILITY PASS 6: project root cannot become shared evidence sink
+PORTABILITY PASS 7: another drive path can be resolved without touching that drive
+PORTABILITY PASS 8: first run and retest classifications never inferred from execution order
+PORTABILITY PASS 9: new contexts isolate runtime UUID and evidence namespaces
+PORTABILITY PASS 10: atomic screenshot-like file output refuses overwrite
+LATEST PORTABILITY OFFLINE PASS 10; temporary files only; no browser/network/real screenshot

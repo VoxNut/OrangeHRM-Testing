@@ -1,0 +1,18 @@
+{
+  "groupReferenceBranch": "NVThang",
+  "groupReferenceCommit": "6b4b36287ab25893feb0c419c3027031761a5d52",
+  "mode": "--check only; no website/browser/report output",
+  "exitCode": 0,
+  "stdout": "23130226 pim-emp: 25 RUN\n23130226 pim-details: 50 RUN\n22130254 leave: 6 RUN\n23130171 admin: 25 SKIP\n23130339 time: 6 SKIP\n23130299 recruit-vac: 25 SKIP\n23130299 recruit-cand: 25 SKIP\n23130299 recruit-flow: 25 SKIP\nInventory OK: 187 IDs; 5 members; 13 functions represented. ADM_JOB/ADM_USER have no script in dev.\n",
+  "stderr": "",
+  "sourceSha256": {
+    "Automation Testing Project - Group 01/run.mjs": "5eb4c5b75b8d175bccba2a2f068eb718c91e52d541905440362b714a93aa235b",
+    "Automation Testing Project - Group 01/summarize.mjs": "f93209062aec00657e2603364c30f7c6819007ad085442e8969edf4a9cd3886e"
+  },
+  "releaseHasRunner": false,
+  "executionAdapter": "NOT_IMPLEMENTED_FOR_KATALON",
+  "recruitmentStatus": "SKIPPED_BY_GROUP_DECISION / GROUP_INTEGRATION_PENDING",
+  "aggregator": "Group JSON only; no official Katalon parser; Pass/Fail/Skipped totals",
+  "cliExecutableExists": true,
+  "licensedKreExecution": "NOT_VERIFIED"
+}

@@ -1,0 +1,11 @@
+PORTABILITY PASS 1: relocated project uses project evidence directory, not shell cwd
+PORTABILITY PASS 2: relative runtime output resolves against supplied project
+PORTABILITY PASS 3: absolute dedicated evidence override is retained
+PORTABILITY PASS 4: foreign member namespace is rejected
+PORTABILITY PASS 5: relative override is rejected
+PORTABILITY PASS 6: project root cannot become shared evidence sink
+PORTABILITY PASS 7: another drive path can be resolved without touching that drive
+PORTABILITY PASS 8: first run and retest classifications never inferred from execution order
+PORTABILITY PASS 9: new contexts isolate runtime UUID and evidence namespaces
+PORTABILITY PASS 10: atomic screenshot-like file output refuses overwrite
+LATEST PORTABILITY OFFLINE PASS 10; temporary files only; no browser/network/real screenshot

@@ -25,6 +25,8 @@ Mỗi thành viên tự chọn công cụ và ghi hướng dẫn chạy trong th
 
 ## Assignment 8 — Recruitment release (23130299)
 
+Bổ sung bàn giao 02/11: [báo cáo sửa phản hồi nhóm trưởng](docs/automation/ASM8_RECRUITMENT_TEAM_LEADER_FIX_REPORT.md), [Recruitment index](Test%20Report%20-%20Group%2001/Individual/23130299/index.html), [75 case official](Test%20Report%20-%20Group%2001/Individual/23130299/RESULTS75.md). Release `e7c8970` đã có report/evidence; branch feedback kế thừa release chỉ bổ sung khả năng truy cập và kiểm chứng offline. `NVThang` có runner nhóm riêng; đoạn mô tả thiếu runner bên dưới áp dụng cho base release này. Recruitment vẫn SKIPPED_BY_GROUP_DECISION / GROUP_INTEGRATION_PENDING.
+
 Nhóm **01**, thành viên/module ở bảng trên đã được đối chiếu metadata repo. Công cụ từng phần: Recruitment Katalon Studio 11.6.0; PIM/ADM Playwright, LEAVE Cypress (version cụ thể theo package lock và README thành viên). TIME chưa có automation source trên branch được audit. Repo hiện là nhiều project theo thành viên; **chưa có một unified automation project/runner toàn nhóm**.
 
 Clone `git clone https://github.com/VoxNut/OrangeHRM-Testing.git`; dùng branch release được ghi trong `maintenance/asm8-23130299/GIT_HANDOFF.md`, không tự merge main/dev. Mở `automation/23130299/KatalonStudio/OrangeHRM_RECRUIT_VAC_KatalonStudio.prj` bằng Studio 11.6.0. README tại project hướng dẫn generated files, Profile, môi trường, manual login, standalone TC, ba suite và prerequisites có kiểm soát. Không có shared suite chung để khẳng định đã chạy toàn nhóm.

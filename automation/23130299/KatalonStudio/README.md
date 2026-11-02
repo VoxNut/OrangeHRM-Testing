@@ -29,9 +29,13 @@ FIRST_RUN và RETEST: đặt ASM8_RUN_KIND **trước khi mở Studio**; giữ o
 
 ## Report và evidence
 
+Điểm vào repository đã kiểm tra link: [Recruitment report index](../../../Test%20Report%20-%20Group%2001/Individual/23130299/index.html), [75 case](../../../Test%20Report%20-%20Group%2001/Individual/23130299/RESULTS75.md), [failure analysis](../../../Test%20Report%20-%20Group%2001/Individual/23130299/recruitment-failure-analysis.md). Các đường dẫn `Reports/` và `Documentation/` bên dưới mô tả layout project lúc chạy; bản nộp nằm trong index repository này.
+
 Official HTML/JUnit/console/execution logs ở `Reports/<launch>/<suite>/<execution>/`. Supplementary `results.json`, `results.html`, `results.xml`, `execution.log` ở `evidence/executions/23130299/RECRUIT_<module>_<UUID-prefix>/reports/UNCLASSIFIED/`. Đây là callback-derived bổ sung, không thay official Katalon report. `Documentation/index.html`, `RESULTS75.csv`, `RESULTS75.json`, `ERROR_STOPPED_ANALYSIS.md` map case → execution UUID → ảnh/log/report. Tên ảnh ERROR/STOPPED không quyết định final status. Historical official files giữ nguyên SHA, có thể chứa đường dẫn máy tác giả trong metadata; dùng index tương đối mới để truy cập.
 
 ## Kiểm tra offline và giới hạn
+
+Kiểm chứng bổ sung 02/11: **OFFLINE PORTABILITY VERIFIED** — harness gốc 10/10 trong temporary directory mới; layout repo với khoảng trắng, UUID/case manifest và preflight-only PASS. Antlr2/Parrot production 104 units PASS. Log mới tại [team-feedback/offline](../../../maintenance/asm8-23130299/team-feedback/offline/). Log portability cũ dừng sau 9 nhóm được bảo toàn, không sửa lại để thành PASS. Không có browser execution hoặc cross-machine browser PASS.
 
 Python 3 chỉ cần cho tooling; `python maintenance/run_isolated.py --preflight-only --suites VAC CAND FLOW` đọc cấu hình, không khởi động browser. Không thêm `--execute` khi chỉ chuẩn bị. Kết quả compiler/regression của release ở `Documentation/validation/`; compiler PASS không phải business/integration PASS. Full regression PARTIAL, legacy FAIL/UNAVAILABLE được giữ nguyên. Archive source lịch sử `ASM7_CURRENT_STATUS.md` và `ASM8_RECRUITMENT_PPTX_SOURCE.md` là tài liệu tham khảo cũ; ưu tiên README và Documentation của release này, không dùng link lịch sử thiếu đích làm bằng chứng mới.
 
