@@ -103,5 +103,6 @@ Không chỉnh PowerPoint, Excel, ZIP, source PIM/ADM/LEAVE/TIME, historical rep
 - Working branch: `feat/asm8-recruitment-feedback-23130299`, isolated worktree kế thừa `feat/asm8-recruitment-23130299`.
 - Verified release commit: `e7c89705625cb4809ae6a8e5da81fb6871ab011d`; `git ls-remote` trên GitHub trả đúng SHA. Parent base khác NVThang, không merge/rebase branch chung.
 - Remote: `origin` — `https://github.com/VoxNut/OrangeHRM-Testing.git`.
-- Payload commit/push: pending tại thời điểm tạo báo cáo; mục này được cập nhật bằng receipt sau thao tác thực tế. Không force push, không merge dev/main; chỉ publish feature branch để review.
+- Payload commit: `e1ee72c4639dbea2ffd2c0689a2bd7e9acbdea54` — 41 file bàn giao/tooling Recruitment. **Push SUCCESS** lên `origin/feat/asm8-recruitment-feedback-23130299`; `git ls-remote` trả đúng payload SHA sau push. [Git receipt](../../maintenance/asm8-23130299/team-feedback/git-receipt.json) ghi trạng thái tại thời điểm push payload. Commit bổ sung chứa cập nhật receipt này; xem `git log -1` để lấy tip cuối mà không nhúng self-referential commit hash.
+- Branch release cũ vẫn ở `e7c89705625cb4809ae6a8e5da81fb6871ab011d`; không force push, không merge dev/main, không thay NVThang. Feature branch riêng được publish để nhóm trưởng review.
 - Changed files được giới hạn ở README/checklist/report mới và tooling Recruitment như mục C; source/config/assertions/official originals không thay đổi. Kiểm tra actual Git diff, file lớn và secret scan trước commit.
