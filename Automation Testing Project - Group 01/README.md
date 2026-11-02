@@ -1,15 +1,56 @@
-# BLOCKED — unified group project
+# Automation Testing Project - Group 01
 
-## Recruitment feedback verification — 2026-11-02
+Runner ASM8 gọi script gốc trong `automation/MSSV/`, chạy tuần tự trên OrangeHRM online và tạo một report nhóm. Giữ nguyên công cụ của từng thành viên.
 
-The release base checked here has no `run.mjs` or `summarize.mjs`. The preserved NVThang checkout does have both: `run.mjs --check` verified 187 IDs including three Recruitment suites of 25, all explicitly SKIP. Its execution adapters handle Playwright PIM and Cypress Leave. `--member=23130299` selects inventory but has no Katalon execution adapter; it must not be treated as a Recruitment run. Its skip text still mentions missing Profile/plan, which are already supplied on the Recruitment release. This is a branch-integration gap, not missing source handoff. `summarize.mjs` reads group-run JSON; it does not import official Katalon HTML/JUnit and currently has only Pass/Fail/Skipped totals.
+## Cài đặt
 
-Keep **SKIPPED_BY_GROUP_DECISION / GROUP_INTEGRATION_PENDING**. No shared runner code or other member modules were copied or changed. Review [Recruitment checklist](../docs/automation/recruit-checklist.md), [report index](../Test%20Report%20-%20Group%2001/Individual/23130299/index.html) and [verification report](../docs/automation/ASM8_RECRUITMENT_TEAM_LEADER_FIX_REPORT.md).
+Cần Node.js 22+, Microsoft Edge, mạng Internet. Chạy tại repo root:
 
-Before an opt-in Katalon adapter, the lead must approve demo writes, fixtures/cleanup, exact active numeric identities, manual login and licensed KRE availability. Studio's package includes a CLI executable on the inspected machine; license readiness and CLI browser execution are NOT VERIFIED. Preserve ERROR separately from FAILED when designing aggregation. For the operator's future standalone/suite smoke, follow the canonical Recruitment README and SMOKE_PLAN; create distinct FIRST_RUN/RETEST outputs. Do not reuse the three UNCLASSIFIED local runs as a shared run or replay uncertain Candidate81 Save. No adapter is enabled by this handoff.
+```powershell
+npm ci
+npx cypress install
+npm run check
+npm test
+```
 
-The original staging note below describes this release branch, not every branch in the repository.
+Nếu Cypress báo `bad option: --smoke-test`, xóa biến `ELECTRON_RUN_AS_NODE` trong terminal. Nếu npm chặn postinstall, lệnh `npx cypress install` cài binary riêng.
 
-This folder is a deliverable staging marker, not a completed unified automation project. Canonical Recruitment project: `../automation/23130299/KatalonStudio/OrangeHRM_RECRUIT_VAC_KatalonStudio.prj`.
+## Phạm vi chạy
 
-Repository contains separate member projects: Recruitment Katalon, PIM/ADM Playwright, LEAVE Cypress. No existing common Katalon project or agreed all-member runner exists in the checked branch. TIME source is not present on this branch. Copying these into one folder would not integrate them. Preserve canonical layout and obtain the group's integration design/missing source. Recruitment stays SKIPPED by lead; source compilation does not prove shared execution. No duplicate `.prj` was created here.
+| Thành viên | Script trong inventory | ASM8 |
+| --- | ---: | --- |
+| 23130226 | 75 case PIM | Chạy 25 EMP, sau đó 50 Personal/Job |
+| 22130254 | 6 case Leave | Chạy Cypress, fixture và cleanup riêng |
+| 23130171 | 25 case ADM_STRUCT | Skipped: selector sửa/xóa chưa giới hạn node test, thiếu assertion/cleanup |
+| 23130339 | 6 bước Time theo tài liệu | Skipped: dùng dữ liệu Admin, bỏ qua lỗi, chưa có report theo case |
+| 23130299 | 75 case Recruitment | Skipped theo yêu cầu nhóm trưởng, thiếu cấu hình/Katalon |
+
+Inventory có 187 ID, gồm 6 ID Time lấy từ mô tả ASM7. Đây không phải toàn bộ case thiết kế trong workbook. Chưa có script ADM_JOB/ADM_USER; các suite ASM7 rút gọn không chứng minh đã triển khai đủ 20–30 case/chức năng.
+
+## Chạy riêng và đọc kết quả
+
+```powershell
+npm run test:pim
+npm run test:leave
+npm run retest:pim   # Search_02 và Sort_01 sau sửa script
+```
+
+Mỗi lệnh tạo Run ID mới. `npm test` chọn toàn bộ inventory; `--member=MSSV` chọn một thành viên. Lệnh `--check` chỉ kiểm tra source, số ID và trùng ID, không thao tác website.
+
+`node "Automation Testing Project - Group 01/summarize.mjs" <JSON-luot-nhom> <JSON-retest-1> <JSON-retest-2>` tổng hợp kết quả mới nhất theo Case ID, giữ nguyên từng report gốc và tính riêng số lần thực thi có retest.
+
+- `Test Report - Group 01/<RunID>/index.html`: tổng hợp và chi tiết từng case; JSON ở cùng thư mục.
+- `Envidence - Group01/<RunID>/`: log, screenshot, fixture, report gốc và SHA-256 source. Giữ cách viết `Envidence` theo đề.
+- Pass: assertion hoàn tất. Fail: assertion lỗi hoặc runner gốc báo Blocked, giữ nguyên trạng thái gốc và lý do. Skipped: chưa thực thi, không tính pass rate.
+- Exit code 1 nếu có Fail, Skipped hoặc lỗi hạ tầng/cleanup. Không dùng exit code của script con để tự suy ra toàn bộ case Pass.
+
+PIM_EMP dùng ID fixture cố định, không chạy đồng thời. Personal/Job và Leave tạo dữ liệu riêng. Kiểm tra ledger cleanup trước khi chạy lại; chỉ dọn bản ghi xác nhận thuộc lần chạy. Retest lưu Run ID riêng và so sánh cùng Case ID trước khi kết luận flaky.
+
+## Việc cần hoàn thiện
+
+1. Linh sửa selector theo ID/node riêng, assertion và cleanup; bổ sung ADM_JOB/ADM_USER, cấu hình `testMatch` cho `.mjs`.
+2. Trâm dùng nhân viên test riêng, assert giờ/trạng thái đã lưu, xuất kết quả từng ID và báo lỗi qua exit code.
+3. Khi các script đạt điều kiện, cập nhật inventory/adapter trong `run.mjs`, chạy riêng rồi chạy nhóm lại. Recruitment giữ Skipped theo yêu cầu hiện tại.
+4. Mỗi người làm 8 phần slide theo đề, dùng cùng bố cục slide của nhóm. Nộp PPTX và ZIP cá nhân lên Classroom.
+
+[Báo cáo](../Test%20Report%20-%20Group%2001/README.md) · [Minh chứng](../Envidence%20-%20Group01/README.md)

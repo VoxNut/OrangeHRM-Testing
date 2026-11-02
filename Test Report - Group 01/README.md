@@ -1,9 +1,9 @@
 # Test Report - Group 01
 
-Mở [index Recruitment 23130299](Individual/23130299/index.html) để xem VAC/CAND/FLOW official HTML/JUnit, supplementary HTML/JSON/XML và logs. [75 case](Individual/23130299/RESULTS75.md) · [JSON có provenance](Individual/23130299/RESULTS75.json) · [failure analysis](Individual/23130299/recruitment-failure-analysis.md) · [ERROR/STOPPED/FAILED index](Individual/23130299/ANOMALY_SCREENSHOTS.md). Các summary mới sửa đường dẫn truy cập của layout nộp nhóm; summary/report lịch sử trong Documentation được giữ nguyên.
+Mỗi thư mục là một lần chạy ASM8: `index.html` để mở bằng trình duyệt, `results.json` để đối chiếu từng Case ID. Kết quả đầu và retest giữ riêng; không cộng trùng case giữa các lượt.
 
-`Individual/23130299/UNCLASSIFIED/Reports/` contains the three latest official Recruitment leaves, unchanged HTML/JUnit/console/execution logs. Supplementary HTML/JSON/XML are under `../Envidence - Group01/23130299/evidence/executions/23130299/*/reports/UNCLASSIFIED/`.
+[Tổng hợp 31/10/2026](ASM8_SUMMARY_2026-10-31T01-37-43-636Z/index.html): **81 Pass, 0 Fail, 106 Skipped** theo kết quả mới nhất của 187 ID. Đã thực thi 81 case khác nhau, 87 lần nếu tính retest; tổng thời gian các lượt 1.539,47 giây. PIM 75/75, Leave 6/6 Pass. Admin/Time chưa đủ điều kiện chạy; Recruitment bỏ qua theo yêu cầu nhóm trưởng.
 
-`Individual/23130299/Documentation/` has derived summaries and mapping. Use `index.html` in this folder for working relative links across group deliverables. Historical FIRST_RUN/RETEST cannot be inferred; these runs remain UNCLASSIFIED. All original reports remain untouched at their source. No all-member report was invented or individual reports added into a group execution.
+Lượt đầu: 79 Pass, 2 Fail. Ba lượt retest Search_02/Sort_01: 1/2, 1/2, 2/2 Pass. Các lỗi thuộc script/oracle/đồng bộ dữ liệu; chưa kết luận flaky. Chưa chạy lại toàn bộ suite sau sửa hàm chờ bảng.
 
-**GROUP_EXECUTION_PENDING — Recruitment SKIPPED in ASM8 integration.** Other members' existing evidence is preserved in repository `evidence/executions/<member>/`; this Recruitment release does not certify their completeness.
+[Cách chạy và giới hạn](../Automation%20Testing%20Project%20-%20Group%2001/README.md) · [Evidence](../Envidence%20-%20Group01/README.md)
