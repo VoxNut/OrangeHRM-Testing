@@ -1,0 +1,77 @@
+{
+  "suiteId": "Test Suites/RECRUIT_CAND_25_ASC_001_TO_025",
+  "caseId": "RECRUIT_CAND_Create_11",
+  "runId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+  "executionId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+  "caseRunId": "611a1c09-9502-42c4-8b10-bdb756adfdd5",
+  "processId": 26680,
+  "workerId": "main-1",
+  "timestamp": "2026-11-01T21:49:41.900919300+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-11-01T21:50:16.555272500+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "BEFORE_ACTION_Search",
+      "kind": "before",
+      "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'.",
+      "observed": {
+        "phase": "BEFORE_ACTION_Search",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 546,
+      "screenshotPath": "215016_001_BEFORE.png",
+      "sha256": "9ae91f18a1987031e9f8d9103f851f80630c6768ce661a60f285d07337e2fb31"
+    },
+    {
+      "timestamp": "2026-11-01T21:50:19.355193200+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "AFTER_ACTION_Search",
+      "kind": "after",
+      "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'.",
+      "observed": {
+        "phase": "AFTER_ACTION_Search",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 675,
+      "screenshotPath": "215019_002_AFTER.png",
+      "sha256": "3d027fc8b03e9bea97264612932233b3da6304fe99fe04001a76a460595821f2"
+    },
+    {
+      "timestamp": "2026-11-01T21:50:34.067942800+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate",
+      "checkpoint": "BEFORE_ACTION_Save",
+      "kind": "before",
+      "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'.",
+      "observed": {
+        "phase": "BEFORE_ACTION_Save",
+        "url": "/web/index.php/recruitment/addCandidate",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 677,
+      "screenshotPath": "215034_003_BEFORE.png",
+      "sha256": "8a448f201d36609f258b4aac50f18004f9e4e79402ea576407f5281217d744ec"
+    },
+    {
+      "timestamp": "2026-11-01T21:50:45.347820600+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 675,
+      "screenshotPath": "215045_004_RESULT.png",
+      "sha256": "3d027fc8b03e9bea97264612932233b3da6304fe99fe04001a76a460595821f2"
+    }
+  ]
+}

@@ -35,11 +35,12 @@ class RecruitmentUi {
     static final String SELECTED_PAGE = "//button[${cls('oxd-pagination-page-item--page-selected')}]"
     // Header sort menus contain hidden Ascending/Descending text. Match the header's own text node.
     static String column(String name) { return "//div[@role='columnheader'][text()[normalize-space(.)=${lit(name)}]]" }
+    static String cardHeader(String name) { return "//div[${cls('oxd-table-card-cell')}]/div[${cls('header')} and normalize-space()=${lit(name)}]" }
     static final Map<String,String> CANDIDATE_MARKERS = [
         vacancy:select('Vacancy'), candidateName:field('Candidate Name'),
         search:"//form//button[normalize-space()='Search']", add:button('Add'),
-        candidateHeader:column('Candidate'),
-        tableBody:column('Candidate') + "/ancestor::div[${cls('oxd-table')}][1]//div[${cls('oxd-table-body')}]",
+        candidateHeader:column('Candidate') + ' | ' + cardHeader('Candidate'),
+        tableBody:'(' + column('Candidate') + ' | ' + cardHeader('Candidate') + ')' + "/ancestor::div[${cls('oxd-table')}][1]//div[${cls('oxd-table-body')}]",
         empty:EMPTY
     ].asImmutable()
     final String caseId
@@ -52,6 +53,8 @@ class RecruitmentUi {
     private boolean candidatesStarted = false
     private String navigationPhase = 'NOT_STARTED'
     private String navigationLocator = ''
+    // Resume destination for opt-in authentication recovery; never a Save/action replay.
+    String recoveryRoute = ''
     private static class ManualChallenge extends RuntimeException {}
     private static class SelectClosedAfterScroll extends RuntimeException {}
     private final Map<String,Integer> perfCounts = [navigation:0, vacancyFixtures:0, candidateFixtures:0, retries:0, timeouts:0, browserStarts:0]
@@ -107,6 +110,7 @@ class RecruitmentUi {
     }
 
     RecruitmentUi(String caseId) {
+        ConfigurationPreflight.guard(caseId)
         assert caseId.startsWith('RECRUIT_CAND_') || caseId.startsWith('RECRUIT_FLOW_')
         this.caseId = caseId
         output = executionContext.caseDirectory(caseId,token)
@@ -196,14 +200,14 @@ class RecruitmentUi {
     boolean shown(String xp) { return !visible(xp).empty }
     void ready() { waitFor().until { visible(LOADER).empty } }
     void click(String xp) {
-        waitFor().until {
-            if (shown(LOADER)) return false
+        WebElement control = waitFor().until {
+            if (shown(LOADER)) return null
             List<WebElement> found = visible(xp)
             assert found.size() <= 1 : 'Ambiguous click selector: ' + xp
-            if (!found || !found[0].enabled || found[0].getAttribute('aria-disabled') == 'true') return false
-            found[0].click()
-            return true
+            if (!found || !found[0].enabled || found[0].getAttribute('aria-disabled') == 'true') return null
+            return found[0]
         }
+        control.click() // Dispatch outside retrying readiness closure: a stale/uncertain click is never replayed.
     }
     static String button(String label) { return "//button[normalize-space()=${lit(label)}]" }
     void buttonClick(String label) {
@@ -271,7 +275,7 @@ class RecruitmentUi {
             const text = (document.body ? document.body.innerText : '').toLowerCase(), title = document.title.toLowerCase();
             return {url:location.href, title:document.title, flags:result, domComplete:document.readyState === 'complete',
                 challenge:/just a moment|attention required/.test(title) || /verify you are human|verifying you are human|checking your browser|performing security verification/.test(text) || !!document.querySelector('iframe[src*="challenges.cloudflare.com"]'),
-                networkError:/err_connection|err_name_not_resolved|err_internet_disconnected|this site can.t be reached|502 bad gateway|503 service unavailable|504 gateway time/.test(text)};
+                networkError:/err_connection|err_name_not_resolved|err_internet_disconnected|this site can.t be reached|http error 500|this page isn.t working|502 bad gateway|503 service unavailable|504 gateway time/.test(text)};
         ''', selectors)
         String url = raw.url.toString()
         URI here = new URI(url)
@@ -349,6 +353,7 @@ class RecruitmentUi {
         long started = System.nanoTime()
         Map last = [:]
         boolean manualChallengeUsed = false
+        SessionRecovery recovery = SessionRecovery.eligible(caseId) ? navigationRecovery() : null
         navigationLog('WAIT', [waitingFor:locator, timeoutSeconds:timeout])
         try {
             while (true) {
@@ -358,7 +363,14 @@ class RecruitmentUi {
                         if (state.url != last.url) navigationLog('URL_OBSERVED', [url:state.url])
                         last = state
                         if (state.challenge) throw new ManualChallenge()
-                        return condition.call(state)
+                        if (recovery && state.login && recovery.inspectNavigation(this,state,phase)) return false
+                        if (caseId.startsWith('RECRUIT_CAND_') && phase=='CANDIDATES_READY' &&
+                            (state.networkError || (!recovery && state.login)) &&
+                            candidateDocumentRecovery().inspectNavigation(this,state,phase)) return false
+                        if (!recovery) return condition.call(state) // Original protected-case contract.
+                        boolean complete = condition.call(state)
+                        if (!complete && recovery) recovery.inspectNavigation(this,state,phase)
+                        return complete
                     }
                     navigationLog('READY', last + [elapsedMs:(System.nanoTime() - started).intdiv(1000000L)])
                     return
@@ -382,6 +394,8 @@ class RecruitmentUi {
             stopped.initCause(error); timeoutAlias(error, stopped); throw stopped
         }
     }
+    protected SessionRecovery navigationRecovery() { new SessionRecovery(executionContext) }
+    protected CandidateNavigationRecovery candidateDocumentRecovery() { new CandidateNavigationRecovery(executionContext) }
     void openDashboard() {
         SessionGuard.requireAllowance()
         navigationAction('OPEN_DASHBOARD', DASHBOARD) { ensureBrowser(); WebUI.navigateToUrl(DASHBOARD) }
@@ -407,8 +421,18 @@ class RecruitmentUi {
         }
     }
     void waitForCandidates() {
+        boolean expanded = false
         awaitNavigation('CANDIDATES_READY', 'Exact Candidates route; interactive filters/Search/Add; Candidate table shell OR empty state; ' + CANDIDATE_MARKERS) { s ->
             if (s.login) SessionGuard.lost('Login redirect while waiting for Candidates')
+            if (!expanded && s.candidates && s.authenticated && !s.loading && !s.markers.candidateName) {
+                String filter = "//div[${cls('oxd-table-filter')}][.//h5[normalize-space()='Candidates']]"
+                List<WebElement> hidden = driver().findElements(By.xpath(filter+"//div[${cls('oxd-table-filter-area')}]"))
+                List<WebElement> toggle = visible(filter+"//div[${cls('oxd-table-filter-header')}]//button[.//i[${cls('bi-caret-down-fill')}]]")
+                if (hidden.size()==1 && !hidden[0].displayed && toggle.size()==1 && toggle[0].enabled) {
+                    centeredNativeClick(toggle[0]); expanded = true
+                    return false
+                }
+            }
             candidateListReady(s)
         }
     }
@@ -440,6 +464,7 @@ class RecruitmentUi {
         if (!candidatesStarted) openCandidatesFromMenu()
     }
     void waitForRoute(String url, String expectedHeading = '') {
+        if (SessionRecovery.eligible(caseId)) recoveryRoute = url
         awaitNavigation('TECHNICAL_ROUTE_READY', safeUrl(url) + '; heading=' + expectedHeading) { s ->
             if (s.login) SessionGuard.lost('Login redirect while waiting for Recruitment route')
             sameRoute(driver().currentUrl, url) && s.authenticated && s.domComplete && !s.loading && !s.networkError &&
@@ -456,6 +481,7 @@ class RecruitmentUi {
     protected void goInternal(String route, String expectedHeading, boolean fresh) {
         SessionGuard.requireAllowance()
         String url = route.startsWith('https://') ? route : ROOT + route
+        if (SessionRecovery.eligible(caseId)) recoveryRoute = url
         assert url.startsWith(ROOT) : 'Only Recruitment demo routes are allowed'
         if (sameRoute(url, ROOT + 'viewCandidates')) { openCandidatesFromMenu(); return }
         ensureCandidatesStarted()
@@ -896,22 +922,43 @@ class RecruitmentUi {
                 getComputedStyle(n).visibility!=='hidden';
             const nodes=s=>Array.from(document.querySelectorAll(s)).filter(visible);
             const label=n=>n.closest('.oxd-input-group')?.querySelector('label')?.textContent.trim() || '(form)';
+            const validationDetail=(n,message)=>{
+                let control=n.matches?.('input,textarea,select')?n:null;
+                for(let p=n.parentElement;!control&&p&&p.tagName!=='FORM';p=p.parentElement){
+                    const inputs=Array.from(p.querySelectorAll('input,textarea,select')).filter(i=>i.type!=='hidden');
+                    if(inputs.length===1)control=inputs[0];
+                }
+                const name=control?.getAttribute('name')||'',id=control?.id||'';
+                const candidate=new RegExp('^/web/index[.]php/recruitment/addCandidate(?:/[1-9][0-9]*)?$').test(location.pathname);
+                const rules=candidate?{firstName:{binding:'candidate.firstName',limit:30},middleName:{binding:'candidate.middleName',limit:30},
+                    lastName:{binding:'candidate.lastName',limit:30}}:{};
+                const rule=rules[name];
+                return {field:label(n),message,inputName:name,inputId:id,
+                    inputLabel:control?.getAttribute('placeholder')||label(n),
+                    valueLength:control?String(control.value||'').length:null,value:'[MASKED]',
+                    limit:rule?.limit??null,limitSource:rule?'SaveCandidate.vue:rules + FullNameInput.vue:name binding':'UNVERIFIED',
+                    binding:rule?.binding||'UNVERIFIED',domPosition:{tag:n.tagName||'',css:n.className||'',
+                        parentCss:n.parentElement?.className||'',errorIndex:nodes('form .oxd-input-field-error-message').indexOf(n)}};
+            };
             const toasts=nodes('.oxd-toast');
-            const validation=nodes('form .oxd-input-field-error-message').map(n=>({field:label(n),message:n.textContent.trim()}));
+            const validation=nodes('form .oxd-input-field-error-message').map(n=>validationDetail(n,n.textContent.trim()));
             for(const n of nodes('form input, form textarea, form select'))
-                if(n.validationMessage)validation.push({field:label(n),message:n.validationMessage});
+                if(n.validationMessage)validation.push(validationDetail(n,n.validationMessage));
             const saves=nodes('form button').filter(n=>n.textContent.trim()==='Save');
+            const profileInputs=nodes('form input[name="firstName"], form input[name="lastName"]');
             return {url:location.href,title:document.title,
                 login:location.pathname.startsWith('/web/index.php/auth/') || !!document.querySelector('input[name="username"]'),
                 validation,toasts:toasts.map(n=>n.textContent.trim()),
                 errorToasts:toasts.filter(n=>['oxd-toast--error','oxd-toast--warn','oxd-toast--warning'].some(c=>n.classList.contains(c))).map(n=>n.textContent.trim()),
                 successToast:toasts.some(n=>n.textContent.includes(arguments[0])),
+                profileReadOnly:profileInputs.length===2 && profileInputs.every(n=>n.disabled) && saves.length===0,
                 saveButtons:saves.map(n=>({enabled:!n.disabled,ariaDisabled:n.getAttribute('aria-disabled')})),
                 loading:document.readyState!=='complete' || nodes('.oxd-loading-spinner, .oxd-form-loader').length>0};
         ''', message) }
             catch (WebDriverException error) { if (!detachedDocument(error)) throw error; return null }
         }
         if (raw.login) SessionGuard.lost(context.saveAttempted ? 'Login redirect after Save dispatch' : 'Login redirect before Save')
+        raw.validation.each { v -> v.inputRole=(context.validationRoles ?: [:])[v.inputName] ?: 'UNCLASSIFIED' }
         return raw + [url:safeUrl(raw.url.toString()), title:raw.title.toString().take(160), fixtureName:context.fixtureName ?: '',
             urlBeforeSave:context.urlBeforeSave,
             saveAttempted:context.saveAttempted == true, submitted:context.submitted == true,
@@ -1088,10 +1135,13 @@ class RecruitmentUi {
         List<WebElement> next = visible(path).findAll { it.enabled && it.getAttribute('aria-disabled') != 'true' }
         if (!next) return false
         assert next.size() == 1 : 'Ambiguous pagination'
-        List<WebElement> oldRows = table(header).findElements(By.xpath(ROWS))
+        WebElement tableRoot = table(header)
+        List<WebElement> oldRows = tableRoot.findElements(By.xpath(ROWS))
         assert oldRows : 'Next page on empty result'
-        next[0].click()
-        waitFor().until(EC.stalenessOf(oldRows[0])); ready()
+        String previousPage = VacancyTable.state(driver()).page?.toString()
+        measure('PAGINATION') { VacancyTable.refresh(driver(), next[0], seconds) }
+        waitFor().until { Map state = VacancyTable.state(driver()); state.ready && state.page?.toString() != previousPage }
+        ready()
         return true
     }
     List<Map<String,String>> allRows(String header) {
@@ -1118,12 +1168,9 @@ class RecruitmentUi {
     protected void tableActionInternal(String action, String header) {
         if (action == 'Reset') { resetCandidatesTable(header); return }
         ready()
-        WebElement oldTable = shown(column(header)) ? table(header) : null
-        List<WebElement> oldRows = oldTable ? oldTable.findElements(By.xpath(ROWS)) : []
-        WebElement anchor = oldRows ? oldRows[0] : oldTable ?: one(EMPTY)
-        // OrangeHRM replaces table rows during Search/Reset. Never accept the old table snapshot.
-        click("//form//button[normalize-space()=${lit(action)}]")
-        waitFor().until(EC.stalenessOf(anchor))
+        assert action == 'Search' : 'Unsupported table action: '+action
+        WebElement control = one("//form//button[normalize-space()=${lit(action)}]")
+        VacancyTable.refresh(driver(), control, seconds)
         ready()
         waitFor().until { shown(EMPTY) || shown(column(header)) }
     }

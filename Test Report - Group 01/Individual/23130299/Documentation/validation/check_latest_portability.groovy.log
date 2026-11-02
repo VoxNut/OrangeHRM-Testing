@@ -1,0 +1,22 @@
+PORTABILITY PASS 1: relocated project uses project evidence directory, not shell cwd
+PORTABILITY PASS 2: relative runtime output resolves against supplied project
+PORTABILITY PASS 3: absolute dedicated evidence override is retained
+PORTABILITY PASS 4: foreign member namespace is rejected
+PORTABILITY PASS 5: relative override is rejected
+PORTABILITY PASS 6: project root cannot become shared evidence sink
+PORTABILITY PASS 7: another drive path can be resolved without touching that drive
+PORTABILITY PASS 8: first run and retest classifications never inferred from execution order
+PORTABILITY PASS 9: new contexts isolate runtime UUID and evidence namespaces
+
+Caught: java.nio.file.FileAlreadyExistsException: C:\Users\Admin\AppData\Local\Temp\asm7-passed35-59hqdgu4\latest-portability\synthetic-atomic-check.txt
+java.nio.file.FileAlreadyExistsException: C:\Users\Admin\AppData\Local\Temp\asm7-passed35-59hqdgu4\latest-portability\synthetic-atomic-check.txt
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at recruitment.AtomicFiles.bytes(AtomicFiles.groovy:16)
+	at recruitment.AtomicFiles$bytes$0.call(Unknown Source)
+	at check_latest_portability$_run_closure11.doCall(check_latest_portability.groovy:49)
+	at check_latest_portability$_run_closure11.doCall(check_latest_portability.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at check_latest_portability$_run_closure1.doCall(check_latest_portability.groovy:5)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at check_latest_portability.run(check_latest_portability.groovy:47)
+	at RunCheck.run(RunCheck.groovy:6)

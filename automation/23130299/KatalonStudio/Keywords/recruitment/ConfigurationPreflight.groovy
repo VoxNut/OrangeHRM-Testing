@@ -5,7 +5,9 @@ import com.kms.katalon.core.configuration.RunConfiguration
 import org.openqa.selenium.By
 import org.openqa.selenium.TimeoutException
 
-/** Configuration admission and read-only employee auto-discovery. Business assertions, fixture ownership and Save paths are unchanged. */
+/** Configuration admission with PIM discovery and explicit opt-in employee preparation.
+ * Recruitment eligibility still requires its own native autocomplete verification.
+ */
 class ConfigurationPreflight {
     static final List<String> EMPLOYEE_SETTINGS = ['hiringManagerName','hiringManagerAlternativeName','interviewerA','interviewerB'].asImmutable()
 
@@ -31,6 +33,9 @@ class ConfigurationPreflight {
         if (!c) return ''
         String raw = (c.settings?.get(name) ?: '').toString().trim()
         if (raw) return raw
+        if (name in ['interviewerA','interviewerB'] && c.interviewerDiscovery[name]?.state == 'VERIFIED') {
+            return c.interviewerDiscovery[name].displayName.toString().trim()
+        }
         Map idEntry = (Map) c.preflight?.identities?.get(name)
         if (idEntry && idEntry.state in ['READY', 'VERIFIED'] && idEntry.selected?.toString()?.trim()) {
             return idEntry.selected.toString().trim()
@@ -97,9 +102,38 @@ class ConfigurationPreflight {
         println('[EXECUTION CONFIGURATION PREFLIGHT] '+new Gson().toJson([executionId:c.executionId,snapshot:c.preflight.snapshot,
             missing:missing,autoDiscover:autoDiscover,
             configurationReadyCases:entries.findAll { id,row->row.state in ['READY','DISCOVERY_PENDING'] }.keySet(),
-            policy:'Empty employee settings use read-only AUTO_DISCOVER from Vacancies table + Add Vacancy/Schedule Interview autocomplete verification; missing cvLimitBytes is officially SKIPPED before testcase script/setup.']))
+            policy:'PIM active employee discovery; native Add Employee only with explicit ASM7_ALLOW_PIM_FIXTURE_CREATE=true, maximum two owned slots; actual Recruitment selection remains required. No historical Vacancy repair.']))
     }
     static Map admit(String caseId,File root,Closure verifier=null) {
+        ExecutionContext c=ExecutionContext.current()
+        if(c.preflight.decisions?.containsKey(caseId) && c.preflight.decisions[caseId].caseRunId==c.caseRunId)
+            return c.preflight.decisions[caseId]
+        c.admissionInProgress=true
+        try {
+            if(verifier==null) {
+                new CandidateNavigationRecovery(c).beforeAdmission(caseId)
+                new WorkflowRouteRecovery().beforeAdmission(caseId)
+            }
+            return admitInternal(caseId,root,verifier)
+        }
+        catch(RuntimeException error) {
+            // Even an unexpected framework/transport exception must become a canonical
+            // admission denial before Katalon is allowed to invoke the case body.
+            String state=error instanceof PimEmployeeFixtures.Fault ? error.state : 'PREFLIGHT_FRAMEWORK_ERROR'
+            RuntimeException canonical=error instanceof PimEmployeeFixtures.Fault ? error :
+                new PimEmployeeFixtures.Fault(state,'Unexpected preflight exception; no fixture',error)
+            Map stopped=[caseId:caseId,caseRunId:c.caseRunId,state:state,canonicalState:state,
+                problems:[[errorType:error.class.name,detail:ExecutionReport.clean(error.message)]]]
+            c.preflightErrors[caseId]=canonical
+            if(!c.preflight.decisions)c.preflight.decisions=[:]
+            c.preflight.decisions[caseId]=stopped
+            c.technicalPreflightFailure=stopped
+            c.evidence.preflight=stopped
+            persist();return stopped
+        }
+        finally {c.admissionInProgress=false}
+    }
+    private static Map admitInternal(String caseId,File root,Closure verifier) {
         ExecutionContext c=ExecutionContext.current()
         if (!c.preflight.initialized) initialize(root,[caseId])
         Map result=c.preflight.entries[caseId]
@@ -107,11 +141,15 @@ class ConfigurationPreflight {
             result=configuration(caseId,c.settings,requirements(root));c.preflight.entries[caseId]=result
         }
         if(c.preflight.snapshot.state!='READY') result=result+[state:'STALE_SNAPSHOT',canonicalState:'STALE_SNAPSHOT',problems:[c.preflight.snapshot]]
+        boolean needsEmployee=(result.requires as List).any {it!='cvLimitBytes'}
+        if(result.state in ['READY','DISCOVERY_PENDING'] && needsEmployee && c.technicalPreflightFailure) {
+            result=result+c.technicalPreflightFailure+[caseId:caseId,reusedExecutionFailure:true]
+        }
         if(result.state in ['READY','DISCOVERY_PENDING']) {
             boolean allVerified = true
             for(String name in (result.requires as List).findAll { it!='cvLimitBytes' }) {
                 Map identity=c.preflight.identities[name]
-                if (!identity) {
+                if (!identity || (verifier==null && identity.pimVerified==true && name in ['hiringManagerName','hiringManagerAlternativeName'])) {
                     identity=(Map)EvidenceCapture.fixture { verifier ? verifier.call(name,caseId) : probeIdentity(name,caseId) }
                     c.preflight.identities[name]=identity
                     syncDiscoveredIdentity(c, name, identity)
@@ -124,15 +162,28 @@ class ConfigurationPreflight {
                 }
             }
             if (allVerified) {
-                result = result + [state:'READY', canonicalState:'VERIFIED', verificationState:'VERIFIED', problems:[]]
+                boolean pending=(result.requires as List).any { c.preflight.identities[it]?.verificationStatus=='SCHEDULE_INTERVIEW_AUTOCOMPLETE_REQUIRED' }
+                result = result + [state:'READY', canonicalState:pending ? 'DISCOVERY_PENDING' : 'VERIFIED', verificationState:pending ? 'RECRUITMENT_INTERVIEWER_VERIFICATION_PENDING' : 'VERIFIED', problems:[]]
             }
         }
+        result=result+[caseId:caseId,caseRunId:c.caseRunId]
         c.preflight.decisions[caseId]=result
+        if(result.state!='READY' && !maySkip(result) && needsEmployee && !c.technicalPreflightFailure)
+            c.technicalPreflightFailure=result
+        if(result.reusedExecutionFailure && c.technicalPreflightFailure?.caseId)
+            c.preflightErrors[caseId]=c.preflightErrors[c.technicalPreflightFailure.caseId]
+        if(result.state!='READY' && !c.preflightErrors[caseId]) {
+            String detail=(result.problems ?: result).toString()
+            c.preflightErrors[caseId]=new PimEmployeeFixtures.Fault(result.state,'Preflight admission: '+detail)
+        }
         if(result.state!='READY') {
-            println('[CONFIGURATION BLOCKED -> OFFICIAL SKIP] '+caseId+'; '+new Gson().toJson(result.problems))
+            println('[PREFLIGHT STOPPED / '+(maySkip(result) ? 'SKIPPED_CONFIGURATION' : 'ERROR')+'] '+caseId+'; '+new Gson().toJson(result.problems))
             c.evidence.preflight=result
         }
         persist();result
+    }
+    static boolean maySkip(Map admission) {
+        admission.state in ['MISSING_CONFIGURATION','INVALID_CONFIGURATION','NO_VERIFIED_HIRING_MANAGER'] || PimEmployeeFixtures.SKIPPABLE.contains(admission.state)
     }
     static void syncDiscoveredIdentity(ExecutionContext c, String setting, Map identity) {
         if (!c || !identity || !(identity.state in ['READY','VERIFIED'])) return
@@ -150,6 +201,7 @@ class ConfigurationPreflight {
             executionId: c.executionId,
             submitted: false
         ] + identity
+        record.state = identity.verificationStatus == 'SCHEDULE_INTERVIEW_AUTOCOMPLETE_REQUIRED' ? 'READY' : 'VERIFIED'
         if (setting == 'hiringManagerName') {
             c.managerDiscovery.managerA = record
             c.managerDiscovery.status = 'VERIFIED'
@@ -164,67 +216,30 @@ class ConfigurationPreflight {
         c.persist()
     }
     static Map probeIdentity(String setting,String caseId) {
-        ExecutionContext c = ExecutionContext.current()
+        ExecutionContext c=ExecutionContext.current()
         String expected=(c.settings[setting] ?: '').toString().trim()
-        RecorderBridge runner=new RecorderBridge(caseId)
-        VacancyChecks checks=new VacancyChecks(runner)
-        if (!expected) {
-            try {
-                if (setting in ['hiringManagerName', 'hiringManagerAlternativeName']) {
-                    Map discovered = checks.discoverAndVerifyManager(setting)
-                    if (discovered.state in ['VERIFIED', 'READY'] && discovered.displayName) {
-                        return [state:'READY', verificationStatus:'VERIFIED', canonicalState:'VERIFIED', mode:'AUTO_DISCOVER',
-                            expected:'', selected:discovered.displayName] + discovered
-                    }
-                    return [state:discovered.state ?: 'NO_VERIFIED_HIRING_MANAGER', canonicalState:'NO_VERIFIED_HIRING_MANAGER',
-                        mode:'AUTO_DISCOVER', expected:'', submitted:false] + discovered
-                }
-                // For interviewerA / interviewerB when blank: discover candidate employees from Vacancies table;
-                // actual Interviewer eligibility is verified on Schedule Interview's InterviewerAutocomplete (/api/v2/recruitment/interviewers).
-                List<Map<String, Object>> candidates = (c.managerDiscovery?.candidates as List<Map<String, Object>>) ?: []
-                if (candidates.isEmpty()) candidates = checks.discoverManagerCandidatesFromVacancyTable()
-                c.interviewerDiscovery.candidates = candidates
-                String other = setting == 'interviewerB' ? resolvedIdentity('interviewerA', c) : ''
-                Map chosen = candidates.find { Map cand ->
-                    String n = VacancyChecks.normalizeManagerName(cand.candidateName?.toString())
-                    !VacancyTable.isExcludedManagerCandidate(n) && (!other || n != VacancyChecks.normalizeManagerName(other))
-                }
-                if (!chosen) {
-                    return [state:'NO_VERIFIED_HIRING_MANAGER', canonicalState:'NO_VERIFIED_HIRING_MANAGER',
-                        mode:'AUTO_DISCOVER', setting:setting, submitted:false]
-                }
-                String candName = VacancyChecks.normalizeManagerName(chosen.candidateName.toString())
-                Map record = [state:'READY', verificationStatus:'SCHEDULE_INTERVIEW_AUTOCOMPLETE_REQUIRED', canonicalState:'DISCOVERY_PENDING',
-                    mode:'AUTO_DISCOVER', displayName:candName, selected:candName,
-                    discoverySource:'Recruitment > Vacancies table (requires Schedule Interview InterviewerAutocomplete verification)',
-                    executionId:c.executionId, submitted:false]
-                if (setting == 'interviewerA') c.interviewerDiscovery.interviewerA = record
-                else c.interviewerDiscovery.interviewerB = record
-                c.persist()
-                return record
-            } catch(IllegalStateException error) {
-                if (!(error.message?.contains('CONFIGURATION') || error.message?.contains('AUTHENTICATION'))) throw error
-                def state=error.message =~ /\/\s*([A-Z_]+)\]/
-                String value=state.find() ? state.group(1) : 'AUTHENTICATION'
-                return [state:normalizeState(value),canonicalState:normalizeCanonicalState(value),mode:'AUTO_DISCOVER',expected:'',errorType:error.class.name,submitted:false]
-            } catch(TimeoutException error) {
-                return [state:'NO_VERIFIED_HIRING_MANAGER',canonicalState:'NO_VERIFIED_HIRING_MANAGER',phase:'AUTO_DISCOVER_PREFLIGHT',mode:'AUTO_DISCOVER',expected:'',errorType:error.class.name,submitted:false]
-            }
+        if (expected && setting in ['interviewerA','interviewerB']) {
+            return [state:'READY',verificationStatus:'SCHEDULE_INTERVIEW_AUTOCOMPLETE_REQUIRED',canonicalState:'DISCOVERY_PENDING',
+                mode:'MANUAL_OVERRIDE',expected:expected,selected:expected,displayName:expected,
+                verificationMethod:'Pending actual Recruitment InterviewerAutocomplete; PIM alone is not eligibility proof',submitted:false]
         }
+        PimEmployeeFixtures fixtures=new PimEmployeeFixtures(new RecorderBridge(caseId))
         try {
-            runner.go('/web/index.php/recruitment/addJobVacancy')
-            checks.waitFor().until { !runner.driver().findElements(By.xpath("//h6[normalize-space()='Add Vacancy']")).empty }
-            String selected=checks.selectApprovedManager(expected) // generic EmployeeAutocomplete; no Save
-            return [state:'READY',verificationStatus:'VERIFIED',canonicalState:'VERIFIED',mode:'MANUAL_OVERRIDE',
-                expected:expected,selected:selected,displayName:selected,
-                validation:'Exact unique active EmployeeAutocomplete selection; actual interviewer form still verifies eligibility']
+            if(setting in ['hiringManagerName','hiringManagerAlternativeName']) {
+                Map verified=fixtures.manager(setting)
+                return verified+[mode:expected ? 'MANUAL_OVERRIDE' : 'PIM_AUTO_DISCOVER',submitted:false]
+            }
+            return fixtures.interviewerSeed(setting)+[mode:'PIM_DISCOVERY_PENDING',submitted:false]
+        } catch(PimEmployeeFixtures.Fault stopped) {
+            c.preflightErrors[caseId]=stopped
+            return [state:stopped.state,canonicalState:stopped.state,setting:setting,
+                mode:'PIM_PRECONDITION',provisioningAllowed:c.allowPimFixtureCreate,detail:stopped.message,
+                submitted:false,errorType:stopped.class.name,rootExceptionType:(stopped.cause ?: stopped).class.name,rootExceptionMessage:ExecutionReport.clean((stopped.cause ?: stopped).message)]
+        } catch(TimeoutException timeout) {
+            return [state:'UI_LOCATOR_FAILURE',canonicalState:'UI_LOCATOR_FAILURE',detail:'PIM/Recruitment readiness timed out; no configuration skip',errorType:timeout.class.name]
         } catch(IllegalStateException error) {
-            if (!(error.message?.contains('CONFIGURATION') || error.message?.contains('AUTHENTICATION'))) throw error
-            def state=error.message =~ /\/\s*([A-Z_]+)\]/
-            String value=state.find() ? state.group(1) : 'AUTHENTICATION'
-            return [state:normalizeState(value),canonicalState:normalizeCanonicalState(value),mode:'MANUAL_OVERRIDE',expected:expected,errorType:error.class.name,submitted:false]
-        } catch(TimeoutException error) {
-            return [state:'LOCATOR_MISMATCH',canonicalState:'LOCATOR_MISMATCH',phase:'ADD_VACANCY_PREFLIGHT_FORM',mode:'MANUAL_OVERRIDE',expected:expected,errorType:error.class.name,submitted:false]
+            if(!error.message?.contains('AUTHENTICATION'))throw error
+            return [state:'SESSION_EXPIRED',canonicalState:'SESSION_EXPIRED',detail:'Execution authentication lost; no skip',errorType:error.class.name]
         }
     }
     static String normalizeState(String state) {
@@ -233,23 +248,35 @@ class ConfigurationPreflight {
     static String normalizeCanonicalState(String state) {
         [MISSING_CONFIGURATION:'CONFIG_MISSING',AMBIGUOUS_SUGGESTION:'AMBIGUOUS',AUTHENTICATION:'AUTH_LOST',READY:'VERIFIED'].get(state,state)
     }
+    /** Admission is enforced at the shared entry paths because Katalon listener exceptions
+     * are logged by its event executor and do not reliably prevent the TC body invocation.
+     */
+    static void guard(String caseId) {
+        ExecutionContext c=ExecutionContext.peek()
+        if(!c || c.admissionInProgress)return
+        Map decision=c.preflight?.decisions?.get(caseId)
+        if(!decision || decision.state=='READY')return
+        RuntimeException original=c.preflightErrors[caseId]
+        if(!original) {
+            original=new PimEmployeeFixtures.Fault(decision.state,'Canonical preflight: '+decision.problems)
+            c.preflightErrors[caseId]=original
+        }
+        throw original
+    }
     static void requireConfigured(String name,String caseId) {
+        guard(caseId)
         ExecutionContext c=ExecutionContext.current()
-        String value=resolvedIdentity(name, c)
-        if (value) {
-            if (value.length()>80) throw new IllegalStateException('[CONFIGURATION BLOCKED / INVALID_CONFIGURATION] '+caseId+' invalid '+name)
+        String value=resolvedIdentity(name,c)
+        if(value) {
+            if(value.length()>=100)throw new IllegalStateException('[CONFIGURATION BLOCKED / INVALID_CONFIGURATION] '+caseId+' invalid '+name)
             return
         }
-        String decisionState=c.preflight?.decisions?.get(caseId)?.state?.toString()
-        String identityState=c.preflight?.identities?.get(name)?.state?.toString()
-        String discoveryStatus=c.managerDiscovery?.status?.toString()
-        if ((decisionState && decisionState != 'READY') ||
-            (identityState && !(identityState in ['READY', 'VERIFIED', 'DISCOVERY_PENDING'])) ||
-            discoveryStatus == 'NO_VERIFIED_HIRING_MANAGER' ||
-            !(name in ['hiringManagerName', 'hiringManagerAlternativeName'])) {
-            throw new IllegalStateException('[CONFIGURATION BLOCKED / NO_VERIFIED_HIRING_MANAGER] '+caseId+
-                ' requires '+name+'. Neither manual override in Profiles/default nor verified auto-discovery succeeded; preflight listener prevents repeated fixture setup. RECRUIT_VAC_Create_05 intentionally omits Manager; RECRUIT_CAND_Create_05 still requires its Vacancy fixture.')
-        }
+        Map identity=c.preflight?.identities?.get(name)
+        if(identity && !(identity.state in ['READY','VERIFIED','DISCOVERY_PENDING']))
+            throw new PimEmployeeFixtures.Fault(identity.state,'Identity preflight: '+identity.detail)
+        // No admission yet: the PIM orchestrator owns lazy discovery at the manager helper.
+        if(!(name in ['hiringManagerName','hiringManagerAlternativeName']))
+            throw new IllegalStateException('[CONFIGURATION BLOCKED / MISSING_CONFIGURATION] '+caseId+' requires '+name)
     }
     static void persist() {
         ExecutionContext c=ExecutionContext.current()

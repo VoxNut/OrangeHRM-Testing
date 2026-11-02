@@ -1,0 +1,3 @@
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_UploadCV_04","phase":"ASSERTION","operationId":1,"startEpochMs":1793595603584,"elapsedMs":47,"outcome":"BLOCKED","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+COMPLETION75 PASS: current namespace ownership; scoped VAC option selection; retained-row refresh requires observed signal; stable pagination; no dispatch replay; evidence 3+2 quota; CV display does not imply exact bytes. All driver boundaries synthetic.
+

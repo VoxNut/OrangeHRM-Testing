@@ -1,0 +1,183 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RECRUIT_FLOW_25_ASC_001_TO_025,Chrome 156.0.8078.79,ASM7; workbook rows 9-33 in order; NOT RUN / NEEDS LIVE VERIFICATION; independent per-case fixtures.,,02-11-2026 01:18:46,02-11-2026 02:29:18,"1h - 10m - 32,578s",ERROR
+,,,,,,,
+Start listener action : beforeSuite,Chrome 156.0.8078.79,,,02-11-2026 01:18:46,02-11-2026 01:18:47,"1,176s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01,Chrome 156.0.8078.79,"Kiểm tra trạng thái ứng viên mới
+Expected (workbook): Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",ASM7_NOT_RUN,02-11-2026 01:18:47,02-11-2026 01:20:59,"2m - 11,918s",ERROR
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:18:47,02-11-2026 01:19:28,"40,525s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Status_01),Chrome 156.0.8078.79,,,02-11-2026 01:19:28,02-11-2026 01:19:28,"0,178s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:19:28,02-11-2026 01:20:56,"1m - 28,373s",PASSED
+catch (Throwable failure),Chrome 156.0.8078.79,,,02-11-2026 01:20:56,02-11-2026 01:20:58,"1,487s",ERROR
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:20:58,02-11-2026 01:20:59,"0,731s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01,Chrome 156.0.8078.79,"Shortlist ứng viên mới
+Expected (workbook): Status chuyển Shortlisted; History ghi sự kiện shortlist đúng ứng viên.",ASM7_NOT_RUN,02-11-2026 01:20:59,02-11-2026 01:23:14,"2m - 15,353s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:20:59,02-11-2026 01:21:00,"0,831s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Shortlist_01),Chrome 156.0.8078.79,,,02-11-2026 01:21:00,02-11-2026 01:21:00,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:21:00,02-11-2026 01:23:14,"2m - 13,639s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:23:14,02-11-2026 01:23:14,"0,678s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01,Chrome 156.0.8078.79,"Reject ứng viên từ trạng thái ban đầu
+Expected (workbook): Status chuyển Rejected; Candidate History có sự kiện reject.",ASM7_NOT_RUN,02-11-2026 01:23:14,02-11-2026 01:25:33,"2m - 18,655s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:23:14,02-11-2026 01:23:15,"0,737s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Reject_01),Chrome 156.0.8078.79,,,02-11-2026 01:23:15,02-11-2026 01:23:15,"0,011s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:23:15,02-11-2026 01:25:32,"2m - 16,995s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:25:32,02-11-2026 01:25:33,"0,682s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02,Chrome 156.0.8078.79,"Reject ứng viên đã Shortlisted
+Expected (workbook): Trạng thái Rejected; lịch sử còn sự kiện shortlist cũ và thêm reject.",ASM7_NOT_RUN,02-11-2026 01:25:33,02-11-2026 01:28:45,"3m - 11,538s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:25:33,02-11-2026 01:25:34,"0,739s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Reject_02),Chrome 156.0.8078.79,,,02-11-2026 01:25:34,02-11-2026 01:25:34,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:25:34,02-11-2026 01:28:44,"3m - 9,889s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:28:44,02-11-2026 01:28:45,"0,689s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01,Chrome 156.0.8078.79,"Hủy hộp thoại Shortlist
+Expected (workbook): Status vẫn Application Initiated; History không có sự kiện Shortlist mới.",ASM7_NOT_RUN,02-11-2026 01:28:45,02-11-2026 01:30:47,"2m - 2,150s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:28:45,02-11-2026 01:28:47,"2,167s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_CancelShortlist_01),Chrome 156.0.8078.79,,,02-11-2026 01:28:47,02-11-2026 01:28:47,"0,011s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:28:47,02-11-2026 01:30:46,"1m - 59,092s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:30:46,02-11-2026 01:30:47,"0,708s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01,Chrome 156.0.8078.79,"Đặt lịch phỏng vấn với dữ liệu đầy đủ
+Expected (workbook): Chuyển sang Interview Scheduled; tiêu đề, người phỏng vấn, ngày 2026-11-10, giờ 10:30 và ghi chú đã lưu.",ASM7_NOT_RUN,02-11-2026 01:30:47,02-11-2026 01:34:21,"3m - 34,664s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:30:47,02-11-2026 01:30:48,"1,559s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_01),Chrome 156.0.8078.79,,,02-11-2026 01:30:49,02-11-2026 01:30:49,"0,010s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:30:49,02-11-2026 01:34:21,"3m - 32,260s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:34:21,02-11-2026 01:34:21,"0,695s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02,Chrome 156.0.8078.79,"Bỏ trống Interview Title
+Expected (workbook): Interview Title hiển thị Required; chưa có lịch mới.",ASM7_NOT_RUN,02-11-2026 01:34:21,02-11-2026 01:37:23,"3m - 1,641s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:34:22,02-11-2026 01:34:22,"0,697s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_02),Chrome 156.0.8078.79,,,02-11-2026 01:34:22,02-11-2026 01:34:22,"0,014s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:34:22,02-11-2026 01:37:22,"3m - 0,092s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:37:22,02-11-2026 01:37:23,"0,664s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03,Chrome 156.0.8078.79,"Bỏ trống Interviewer
+Expected (workbook): Interviewer hiển thị Required; không tạo lịch.",ASM7_NOT_RUN,02-11-2026 01:37:23,02-11-2026 01:40:23,"2m - 59,538s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:37:23,02-11-2026 01:37:24,"0,734s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_03),Chrome 156.0.8078.79,,,02-11-2026 01:37:24,02-11-2026 01:37:24,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:37:24,02-11-2026 01:40:22,"2m - 57,968s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:40:22,02-11-2026 01:40:23,"0,686s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04,Chrome 156.0.8078.79,"Bỏ trống ngày phỏng vấn
+Expected (workbook): Date hiển thị Required; không lưu lịch.",ASM7_NOT_RUN,02-11-2026 01:40:23,02-11-2026 01:43:24,"3m - 1,063s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:40:23,02-11-2026 01:40:23,"0,762s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_04),Chrome 156.0.8078.79,,,02-11-2026 01:40:24,02-11-2026 01:40:24,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:40:24,02-11-2026 01:43:23,"2m - 59,461s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:43:23,02-11-2026 01:43:24,"0,675s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05,Chrome 156.0.8078.79,"Ngày phỏng vấn không tồn tại
+Expected (workbook): Ngày không hợp lệ bị chặn hoặc báo lỗi; không tạo lịch với ngày này.",ASM7_NOT_RUN,02-11-2026 01:43:24,02-11-2026 01:46:25,"3m - 1,091s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:43:24,02-11-2026 01:43:25,"0,742s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_05),Chrome 156.0.8078.79,,,02-11-2026 01:43:25,02-11-2026 01:43:25,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:43:25,02-11-2026 01:46:24,"2m - 59,517s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:46:24,02-11-2026 01:46:25,"0,679s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06,Chrome 156.0.8078.79,"Thời gian sai định dạng
+Expected (workbook): Không nhận thời gian ngoài miền hợp lệ; chặn nhập hoặc báo lỗi.",ASM7_NOT_RUN,02-11-2026 01:46:25,02-11-2026 01:49:37,"3m - 11,999s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:46:25,02-11-2026 01:46:26,"0,734s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_06),Chrome 156.0.8078.79,,,02-11-2026 01:46:26,02-11-2026 01:46:26,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:46:26,02-11-2026 01:49:36,"3m - 10,430s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:49:36,02-11-2026 01:49:37,"0,679s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07,Chrome 156.0.8078.79,"Lưu ghi chú phỏng vấn
+Expected (workbook): Ghi chú hiển thị chính xác, không lỗi dấu; lịch được tạo đúng candidate.",ASM7_NOT_RUN,02-11-2026 01:49:37,02-11-2026 01:53:10,"3m - 33,127s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:49:37,02-11-2026 01:49:38,"0,745s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_07),Chrome 156.0.8078.79,,,02-11-2026 01:49:38,02-11-2026 01:49:38,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:49:38,02-11-2026 01:53:08,"3m - 30,356s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:53:08,02-11-2026 01:53:10,"1,866s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01,Chrome 156.0.8078.79,"Chọn interviewer qua autocomplete
+Expected (workbook): Interviewer là INT_A, không lưu tên gõ tự do.",ASM7_NOT_RUN,02-11-2026 01:53:10,02-11-2026 01:56:45,"3m - 35,154s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:53:10,02-11-2026 01:53:11,"0,765s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_01),Chrome 156.0.8078.79,,,02-11-2026 01:53:11,02-11-2026 01:53:11,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:53:11,02-11-2026 01:56:44,"3m - 33,538s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 01:56:44,02-11-2026 01:56:45,"0,691s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02,Chrome 156.0.8078.79,"Chọn nhiều interviewer
+Expected (workbook): Lưu đúng cả hai interviewer, không trùng; hiển thị đúng trên chi tiết.",ASM7_NOT_RUN,02-11-2026 01:56:45,02-11-2026 02:00:01,"3m - 15,757s",ERROR
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 01:56:45,02-11-2026 01:56:47,"1,516s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_02),Chrome 156.0.8078.79,,,02-11-2026 01:56:47,02-11-2026 01:56:47,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 01:56:47,02-11-2026 01:59:59,"3m - 11,944s",PASSED
+catch (Throwable failure),Chrome 156.0.8078.79,,,02-11-2026 01:59:59,02-11-2026 02:00:00,"1,361s",ERROR
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:00:00,02-11-2026 02:00:01,"0,714s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03,Chrome 156.0.8078.79,"Không chọn interviewer đã xóa
+Expected (workbook): Không chấp nhận một chuỗi không khớp nhân viên còn hiệu lực; báo Required/Invalid.",ASM7_NOT_RUN,02-11-2026 02:00:01,02-11-2026 02:03:01,"2m - 59,939s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:00:01,02-11-2026 02:00:02,"0,714s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_03),Chrome 156.0.8078.79,,,02-11-2026 02:00:02,02-11-2026 02:00:02,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:00:02,02-11-2026 02:03:00,"2m - 58,366s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:03:00,02-11-2026 02:03:01,"0,700s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01,Chrome 156.0.8078.79,"Schedule Interview không có ở trạng thái mới
+Expected (workbook): Không có thao tác Schedule Interview hợp lệ từ trạng thái đầu vào; phải Shortlist trước.",ASM7_NOT_RUN,02-11-2026 02:03:01,02-11-2026 02:04:30,"1m - 29,374s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:03:01,02-11-2026 02:03:02,"0,726s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_01),Chrome 156.0.8078.79,,,02-11-2026 02:03:02,02-11-2026 02:03:02,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:03:02,02-11-2026 02:04:30,"1m - 27,860s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:04:30,02-11-2026 02:04:30,"0,639s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02,Chrome 156.0.8078.79,"Schedule Interview xuất hiện sau Shortlist
+Expected (workbook): Nút Schedule Interview khả dụng; mở được form lịch của đúng candidate.",ASM7_NOT_RUN,02-11-2026 02:04:30,02-11-2026 02:07:11,"2m - 41,216s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:04:30,02-11-2026 02:04:31,"0,731s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_02),Chrome 156.0.8078.79,,,02-11-2026 02:04:31,02-11-2026 02:04:31,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:04:31,02-11-2026 02:07:11,"2m - 39,687s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:07:11,02-11-2026 02:07:11,"0,672s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_02,Chrome 156.0.8078.79,"Trạng thái sau khi đặt lịch
+Expected (workbook): Status là Interview Scheduled; không còn status Shortlisted.",ASM7_NOT_RUN,02-11-2026 02:07:11,02-11-2026 02:10:54,"3m - 42,592s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:07:11,02-11-2026 02:07:12,"0,733s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Status_02),Chrome 156.0.8078.79,,,02-11-2026 02:07:13,02-11-2026 02:07:13,"0,011s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:07:13,02-11-2026 02:10:53,"3m - 40,820s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:10:53,02-11-2026 02:10:54,"0,682s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03,Chrome 156.0.8078.79,"Không tái Shortlist sau khi Reject
+Expected (workbook): Không hiển thị thao tác Shortlist trái quy tắc trạng thái; status vẫn Rejected.",ASM7_NOT_RUN,02-11-2026 02:10:54,02-11-2026 02:13:14,"2m - 20,103s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:10:54,02-11-2026 02:10:55,"0,725s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_03),Chrome 156.0.8078.79,,,02-11-2026 02:10:55,02-11-2026 02:10:55,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:10:55,02-11-2026 02:13:13,"2m - 18,510s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:13:13,02-11-2026 02:13:14,"0,702s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01,Chrome 156.0.8078.79,"Hủy Reject không đổi trạng thái
+Expected (workbook): Vẫn Shortlisted; không thêm bản ghi Reject vào History.",ASM7_NOT_RUN,02-11-2026 02:13:14,02-11-2026 02:16:00,"2m - 46,314s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:13:14,02-11-2026 02:13:15,"0,727s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_CancelReject_01),Chrome 156.0.8078.79,,,02-11-2026 02:13:15,02-11-2026 02:13:15,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:13:15,02-11-2026 02:16:00,"2m - 44,742s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:16:00,02-11-2026 02:16:00,"0,704s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01,Chrome 156.0.8078.79,"Candidate Details chứa đúng bản ghi
+Expected (workbook): Tên, email, vacancy và trạng thái đúng một ứng viên; không hiển thị fixture khác.",ASM7_NOT_RUN,02-11-2026 02:16:01,02-11-2026 02:18:04,"2m - 3,360s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:16:01,02-11-2026 02:16:01,"0,722s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_VerifyDetails_01),Chrome 156.0.8078.79,,,02-11-2026 02:16:01,02-11-2026 02:16:01,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:16:01,02-11-2026 02:18:03,"2m - 1,820s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:18:03,02-11-2026 02:18:04,"0,658s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_01,Chrome 156.0.8078.79,"History sau khi tạo ứng viên
+Expected (workbook): Có dữ liệu sự kiện khởi tạo/đính vacancy theo cơ chế bản demo; không có event interview/reject.",ASM7_NOT_RUN,02-11-2026 02:18:04,02-11-2026 02:19:42,"1m - 38,325s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:18:04,02-11-2026 02:18:05,"0,718s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_01),Chrome 156.0.8078.79,,,02-11-2026 02:18:05,02-11-2026 02:18:05,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:18:05,02-11-2026 02:19:42,"1m - 36,768s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:19:42,02-11-2026 02:19:42,"0,693s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_02,Chrome 156.0.8078.79,"History sau Shortlist
+Expected (workbook): Có event Shortlist gắn với đúng ứng viên và trình tự sau khi tạo.",ASM7_NOT_RUN,02-11-2026 02:19:42,02-11-2026 02:22:24,"2m - 41,478s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:19:42,02-11-2026 02:19:43,"0,727s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_02),Chrome 156.0.8078.79,,,02-11-2026 02:19:43,02-11-2026 02:19:43,"0,012s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:19:43,02-11-2026 02:22:23,"2m - 39,836s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:22:23,02-11-2026 02:22:24,"0,654s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_03,Chrome 156.0.8078.79,"History sau Reject
+Expected (workbook): Có event Reject của đúng ứng viên; trạng thái Rejected phù hợp event.",ASM7_NOT_RUN,02-11-2026 02:22:24,02-11-2026 02:25:05,"2m - 40,830s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:22:24,02-11-2026 02:22:24,"0,725s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_03),Chrome 156.0.8078.79,,,02-11-2026 02:22:25,02-11-2026 02:22:25,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:22:25,02-11-2026 02:25:04,"2m - 39,208s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:25:04,02-11-2026 02:25:05,"0,704s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_04,Chrome 156.0.8078.79,"History sau Schedule Interview
+Expected (workbook): Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",ASM7_NOT_RUN,02-11-2026 02:25:05,02-11-2026 02:29:17,"4m - 12,655s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,02-11-2026 02:25:05,02-11-2026 02:25:05,"0,731s",PASSED
+ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_04),Chrome 156.0.8078.79,,,02-11-2026 02:25:05,02-11-2026 02:25:05,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,02-11-2026 02:25:05,02-11-2026 02:29:16,"4m - 11,076s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,02-11-2026 02:29:16,02-11-2026 02:29:17,"0,691s",PASSED
+,,,,,,,
+Start listener action : afterSuite,Chrome 156.0.8078.79,,,02-11-2026 02:29:17,02-11-2026 02:29:18,"1,053s",PASSED

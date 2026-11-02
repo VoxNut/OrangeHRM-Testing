@@ -1,0 +1,26 @@
+RETEST1609 JS PASS 1: actual Add setup has owned option and sends active/excludeInterviewers/limit0
+RETEST1609 JS PASS 2: actual List setup can lack same option and omits status; empty200 is distinct from500
+RETEST1609 JS PASS 3: actual Dropdown HTTP500 leaves options empty with rejected request, not successful empty response
+RETEST1609 JS PASS 4: closed suffix comes from status=false, no publish or client Active filter in List
+RETEST1609 JS PASS 5: actual parent props establish different dropdown semantics
+RETEST1609 JS PASS 6: actual remount resets options; no stale Add option adopted in List
+RETEST1609 JS PASS 7: actual profile v-if starts null, shell mount alone does not mean Profile mounted
+RETEST1609 JS PASS 8: actual profile GET exact107 sets candidate only after response
+RETEST1609 JS PASS 9: actual profile GET401 leaves component candidate null; distinct HTTP evidence
+RETEST1609 JS PASS 10: actual profile GET403 leaves component candidate null; distinct HTTP evidence
+RETEST1609 JS PASS 11: actual profile GET404 leaves component candidate null; distinct HTTP evidence
+RETEST1609 JS PASS 12: actual profile GET500 leaves component candidate null; distinct HTTP evidence
+RETEST1609 JS PASS 13: actual mount chain preserves runtime exception; not session or browser-error classification
+RETEST1609 JS PASS 14: compiled production exact GET107200 returns object once without POST
+RETEST1609 JS PASS 15: compiled production rejects effective origin null before fetch
+RETEST1609 JS PASS 16: compiled production rejects effective origin https://foreign.invalid before fetch
+RETEST1609 JS PASS 17: compiled endpoint rejects nonpositive numeric ID before fetch
+RETEST1609 JS PASS 18: compiled GET HTTP401 retained
+RETEST1609 JS PASS 19: compiled GET HTTP403 retained
+RETEST1609 JS PASS 20: compiled GET HTTP404 retained
+RETEST1609 JS PASS 21: compiled GET HTTP500 retained
+RETEST1609 JS PASS 22: compiled GET HTML instead of JSON is parse failure
+RETEST1609 JS PASS 23: compiled GET network failure retained
+RETEST1609 JS PASS 24: compiled GET abort timeout finishes callback once
+RETEST1609 JS: 24 production/source groups PASS, VM doubles only
+

@@ -1,0 +1,59 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "99N75 425 5TlV",
+    "verifiedLabel": "99N75 425 5TlV",
+    "submitted": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_02",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "82ab3314-a1a3-484e-b275-1e8d19432bbd",
+    "name": "G01_23130299_e61c66f84aa2daa5cd95_2_V02",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": false,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_02",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "82ab3314-a1a3-484e-b275-1e8d19432bbd",
+    "name": "G01_23130299_e61c66f84aa2daa5cd95_2_V02",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": true,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_02",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "name": "G01_23130299_e61c66f84aa2daa5cd95_2_V02",
+    "numericId": "41",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/41",
+    "state": "observed",
+    "submitted": true,
+    "observed": true,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_02",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  }
+]

@@ -1,0 +1,86 @@
+SESSION RECOVERY PASS 1: exact thirteen cases eligible; protected VAC/CAND excluded
+SESSION RECOVERY PASS 2: healthy authenticated session: admission once, no recovery GET or navigation
+SESSION RECOVERY PASS 3: normal HTTP 200 retains original data and no recovery
+SESSION RECOVERY PASS 4: HTTP 401 classified and exhausts only current session
+SESSION RECOVERY PASS 5: authentication redirect normalized to confirmed 401, never configuration skip
+SESSION RECOVERY PASS 6: expired login route is detected before API dispatch
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 7: manual login succeeds: UI plus PIM GET, immediate completion
+SESSION RECOVERY PASS 8: login page and loading document do not poll PIM
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 9: still 401 after authenticated-looking DOM stops; no GET storm
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 10: manual login timeout is ERROR, preserves expired evidence
+SESSION RECOVERY PASS 11: attempts exhausted: zero navigation, zero GET
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 12: original numeric Employee ID revalidated and reused exactly
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 13: Employee ID changed: fail, no auto-discovery/replacement
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 14: numeric ID same but name/code changed: fail
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 15: preflight 401 recovered then only read-only admission retried
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 16: cached 401 cleared only after proof; next case no cascade
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 17: non-authentication fatal outcome is never cleared
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 18: failed recovery stored as canonical guard denial, never skipped
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 19: expired before next case detected from actual login page
+SESSION RECOVERY PASS 20: Create_12 independent execution: no earlier fixture/manager required
+SESSION COMPAT: excluded ONLY the obsolete helper-byte assertion; original harness remains FAIL; all behavior assertions unchanged; protected script SHA checked separately
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_12","phase":"TECHNICAL_ROUTE_READY","operationId":1,"startEpochMs":1793595780481,"elapsedMs":232,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 21: Add Candidate URL correct, async form later mounted: actual readiness wait
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_12","phase":"TECHNICAL_ROUTE_READY","operationId":1,"startEpochMs":1793595780763,"elapsedMs":232,"outcome":"TIMEOUT","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":1,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 22: component never mounts: timeout, no assertion bypass
+SESSION RECOVERY PASS 23: component mounted but untranslated: diagnose, one safe GET reopen
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_12","phase":"TECHNICAL_ROUTE_READY","operationId":1,"startEpochMs":1793595781115,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 24: mounted translated form needs no localization recovery
+SESSION RECOVERY PASS 25: healthy 200 but component absent remains bounded async wait, no fake reauth
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 26: session expired during navigation GET: proof before recovery, read-only reopen
+[MANUAL SESSION RECOVERY] Dang nhap lai trong Chrome Katalon hien tai; toi da 120 giay. Khong nhap mat khau vao source/log.
+SESSION RECOVERY PASS 27: login redirect during navigation resumes intended route, never auth URL
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_01","phase":"TECHNICAL_ROUTE_READY","operationId":1,"startEpochMs":1793595781305,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 28: protected navigation follows original condition, no recovery instance
+SESSION RECOVERY PASS 29: owned numeric Vacancy must be freshly revalidated before reopening route
+SESSION RECOVERY PASS 30: owned Vacancy missing after auth recovery stops without duplicate create
+SESSION RECOVERY PASS 31: owned record changed: fail instead of using foreign fixture
+SESSION RECOVERY PASS 32: uncertain Save after session loss is never replayed or resumed
+SESSION RECOVERY PASS 33: confirmed transition supersedes older submitted journal; no second Save
+SESSION RECOVERY PASS 34: fixture from another case/execution rejected
+SESSION RECOVERY PASS 35: Candidate/Vacancy creation single-dispatch contracts retained
+SESSION RECOVERY PASS 36: missing exact Resume bytes stays blocked, no guessing from MB label
+SESSION RECOVERY PASS 37: VAC Filter_02 discrepancy and all assertions remain explicit
+SESSION RECOVERY PASS 38: no fixed production sleep/delay or runtime lock bypass
+SESSION RECOVERY PASS 39: recovery verification uses unchanged production GET and restores cached fault until proof complete
+SESSION RECOVERY PASS 40: recovery GET 401 preserves original cached cause and dispatches once
+SESSION RECOVERY PASS 41: non-auth cached GET failure is never retried by recovery wrapper
+SESSION RECOVERY PASS 42: actual owned Vacancy reconciliation verifies all seven persisted values
+SESSION RECOVERY PASS 43: same owned numeric Vacancy but changed positions is rejected
+SESSION RECOVERY PASS 44: actual owned Candidate reconciliation matches full name/email on numeric GET
+SESSION RECOVERY PASS 45: actual Candidate Update reconciliation retains keyword/note oracle
+SESSION RECOVERY PASS 46: authentication loss after Save before fresh persistence proof cannot replay Save
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_VerifyDetails_01","phase":"ASSERTION","operationId":1,"startEpochMs":1793595782051,"elapsedMs":45,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_VerifyDetails_01","phase":"ASSERTION","operationId":2,"startEpochMs":1793595782098,"elapsedMs":0,"outcome":"ERROR","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 47: actual Details oracle checks every field/date/vacancy; rejects dirty persisted value
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_CancelUpdate_01","phase":"ASSERTION","operationId":1,"startEpochMs":1793595782140,"elapsedMs":1,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 48: actual CancelUpdate leaves persisted email/details intact, with zero Save
+SESSION RECOVERY PASS 49: UploadCV_01/02 small valid generated PDF/DOCX persistence support remains independent
+SESSION RECOVERY PASS 50: actual UploadCV_03 invalid-resume oracle requires error and no persisted candidate
+SESSION RECOVERY PASS 51: UploadCV_05 noncreation and no cancelled attachment leakage oracles stay active
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Search_01","phase":"CANDIDATE_FIXTURE","operationId":1,"startEpochMs":1793595782430,"elapsedMs":1,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Search_01","phase":"CANDIDATE_FIXTURE","operationId":2,"startEpochMs":1793595782435,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_01","phase":"CANDIDATE_FIXTURE","operationId":1,"startEpochMs":1793595782455,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_01","phase":"CANDIDATE_FIXTURE","operationId":2,"startEpochMs":1793595782457,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_02","phase":"CANDIDATE_FIXTURE","operationId":1,"startEpochMs":1793595782477,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_02","phase":"CANDIDATE_FIXTURE","operationId":2,"startEpochMs":1793595782479,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_03","phase":"CANDIDATE_FIXTURE","operationId":1,"startEpochMs":1793595782500,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_03","phase":"CANDIDATE_FIXTURE","operationId":2,"startEpochMs":1793595782502,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Filter_03","phase":"CANDIDATE_FIXTURE","operationId":3,"startEpochMs":1793595782506,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Reset_01","phase":"CANDIDATE_FIXTURE","operationId":1,"startEpochMs":1793595782526,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Reset_01","phase":"CANDIDATE_FIXTURE","operationId":2,"startEpochMs":1793595782528,"elapsedMs":0,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+SESSION RECOVERY PASS 52: actual Search/Filter/Reset fixture factory uses only this case owned controls
+SESSION RECOVERY TOTAL 52 production-contract groups PASS; OFFLINE DOUBLES ONLY
+

@@ -1,0 +1,554 @@
+{
+  "status": "PASS",
+  "scripts": 75,
+  "tc": 75,
+  "suites": {
+    "CAND": {
+      "path": "Test Suites/RECRUIT_CAND_25_ASC_001_TO_025.ts",
+      "order": [
+        "RECRUIT_CAND_Create_01",
+        "RECRUIT_CAND_Create_02",
+        "RECRUIT_CAND_Create_03",
+        "RECRUIT_CAND_Create_04",
+        "RECRUIT_CAND_Create_05",
+        "RECRUIT_CAND_Create_06",
+        "RECRUIT_CAND_Create_07",
+        "RECRUIT_CAND_Create_08",
+        "RECRUIT_CAND_Create_09",
+        "RECRUIT_CAND_Create_10",
+        "RECRUIT_CAND_Create_11",
+        "RECRUIT_CAND_Create_12",
+        "RECRUIT_CAND_UploadCV_01",
+        "RECRUIT_CAND_UploadCV_02",
+        "RECRUIT_CAND_UploadCV_03",
+        "RECRUIT_CAND_UploadCV_04",
+        "RECRUIT_CAND_UploadCV_05",
+        "RECRUIT_CAND_Filter_01",
+        "RECRUIT_CAND_Search_01",
+        "RECRUIT_CAND_Filter_02",
+        "RECRUIT_CAND_Filter_03",
+        "RECRUIT_CAND_Reset_01",
+        "RECRUIT_CAND_Update_01",
+        "RECRUIT_CAND_CancelUpdate_01",
+        "RECRUIT_CAND_VerifyDetails_01"
+      ],
+      "links": [
+        {
+          "caseId": "RECRUIT_CAND_Create_01",
+          "tcGuid": "f941407a-2743-5214-a27e-cca296dc1a69",
+          "linkGuid": "a8f10938-55ec-52a0-90a3-70925c4ecb45",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_02",
+          "tcGuid": "8fc77c92-afa6-5e5c-87c1-ce7ee1dace1e",
+          "linkGuid": "9d58b93b-43f7-5884-b9f9-afca6a343057",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_03",
+          "tcGuid": "a3f2a948-448b-5e21-b5a6-eb55d503fa9e",
+          "linkGuid": "c0939f24-0399-5493-b20d-a34d64103d7d",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_04",
+          "tcGuid": "e789509a-4a28-54d8-8d4e-00cc5ad2a0a1",
+          "linkGuid": "e2c86402-493b-5af5-ae00-8d7e3997df00",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_04/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_05",
+          "tcGuid": "eb0ed8ad-57f1-5df6-916f-6ed45f45e5b4",
+          "linkGuid": "89e9cd88-7632-597f-9974-3144b58ff5dc",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_05/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_06",
+          "tcGuid": "44abee09-da0e-533e-8224-89f29be3abee",
+          "linkGuid": "5d52a250-c451-52cf-9c29-6914d01cbd9e",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_06/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_07",
+          "tcGuid": "87f68659-f1ec-5da7-809a-24c72dc9c90d",
+          "linkGuid": "5b3b5f29-ab8c-58fc-9f22-b8378ae623ce",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_07/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_08",
+          "tcGuid": "8a1a9bca-2543-518e-b022-5858071b626d",
+          "linkGuid": "359c7302-5774-5a00-b929-c0f5805d1fa3",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_08/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_09",
+          "tcGuid": "a1123864-6ad3-5fc7-b824-ec042b04b3b5",
+          "linkGuid": "d3753534-7fb0-50ac-b5ac-b9bac7e24503",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_09/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_10",
+          "tcGuid": "f7b1da3d-d7e3-589e-8d50-32474f707b80",
+          "linkGuid": "eacbd126-ebbd-50cf-b688-1efcabe95fda",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_10/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_11",
+          "tcGuid": "7519c67d-ec30-5d16-b0b2-629933df34d7",
+          "linkGuid": "959faa6f-0693-534e-9361-a70e7fe64f44",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_11/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Create_12",
+          "tcGuid": "03286f2a-e7e0-5edc-896e-e9964c5fdc89",
+          "linkGuid": "c66467be-2ca5-599f-a82c-af5b3fcbcab2",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_12/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_UploadCV_01",
+          "tcGuid": "5ecfa3d4-f9cf-5e83-9d67-af042bc952a9",
+          "linkGuid": "9e0b11a7-27b8-5be8-ae56-54946e11e602",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_UploadCV_02",
+          "tcGuid": "5a9ae502-14cb-571c-bbe9-2bf865a5d7fd",
+          "linkGuid": "b7981d5f-1c0a-5812-a980-f40db03f1a00",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_UploadCV_03",
+          "tcGuid": "5bcd8a2a-3e74-5d85-a80a-cb079d21beda",
+          "linkGuid": "607d45f2-5dbe-50e0-b90d-b547d7d5bcf7",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_UploadCV_04",
+          "tcGuid": "b37560c1-c3d3-5cfa-85a2-4d0f551f7270",
+          "linkGuid": "8627419a-0f14-5c96-b268-b3c657f8905b",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_04/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_UploadCV_05",
+          "tcGuid": "60c16af1-aca6-55b8-9fda-826e4d7bbe2e",
+          "linkGuid": "1696c8d8-e075-5b98-a4b2-0f1dce3cbb6c",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_05/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Filter_01",
+          "tcGuid": "e9538e03-b812-5508-8a94-5bb004b2ab8f",
+          "linkGuid": "b5999a55-5043-5e87-8fef-0dc9835a27dd",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Search_01",
+          "tcGuid": "d05cb796-2629-5cec-ae29-3d05219b3318",
+          "linkGuid": "019580e0-16eb-5d4d-b767-ee8b36850d16",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Search_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Filter_02",
+          "tcGuid": "0cebdb85-cfd0-584d-95f4-8e9221d107c7",
+          "linkGuid": "a98c9bc6-9880-5837-909a-282d1d28c5e2",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Filter_03",
+          "tcGuid": "4e3e0c92-98cf-5842-bbbe-3cc2688b46fb",
+          "linkGuid": "4f705b44-3fb4-5f8e-96b8-87c43e6bfa08",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Reset_01",
+          "tcGuid": "579444b1-b51f-5c23-9ffb-1438f2ff0b6f",
+          "linkGuid": "939d9292-37c4-5fad-82c4-1a5913bebbb4",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Reset_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_Update_01",
+          "tcGuid": "c722c619-1d47-5c44-ba2e-d2f310000a7a",
+          "linkGuid": "396e257f-5919-5df1-a84d-efc84899c817",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Update_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_CancelUpdate_01",
+          "tcGuid": "2f78bf57-9061-50e6-ae5d-c48035ad0ce3",
+          "linkGuid": "fb797be0-cb24-5680-a8f2-5a09429112db",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_CancelUpdate_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_CAND_VerifyDetails_01",
+          "tcGuid": "4042610c-5888-5d15-af5f-03bf5dcbc0ec",
+          "linkGuid": "9e07c615-7ca7-5e6a-a695-c104d676f952",
+          "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_VerifyDetails_01/Script20261027000000.groovy"
+        }
+      ]
+    },
+    "FLOW": {
+      "path": "Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025.ts",
+      "order": [
+        "RECRUIT_FLOW_Status_01",
+        "RECRUIT_FLOW_Shortlist_01",
+        "RECRUIT_FLOW_Reject_01",
+        "RECRUIT_FLOW_Reject_02",
+        "RECRUIT_FLOW_CancelShortlist_01",
+        "RECRUIT_FLOW_ScheduleInterview_01",
+        "RECRUIT_FLOW_ScheduleInterview_02",
+        "RECRUIT_FLOW_ScheduleInterview_03",
+        "RECRUIT_FLOW_ScheduleInterview_04",
+        "RECRUIT_FLOW_ScheduleInterview_05",
+        "RECRUIT_FLOW_ScheduleInterview_06",
+        "RECRUIT_FLOW_ScheduleInterview_07",
+        "RECRUIT_FLOW_SelectInterviewer_01",
+        "RECRUIT_FLOW_SelectInterviewer_02",
+        "RECRUIT_FLOW_SelectInterviewer_03",
+        "RECRUIT_FLOW_ValidateAction_01",
+        "RECRUIT_FLOW_ValidateAction_02",
+        "RECRUIT_FLOW_Status_02",
+        "RECRUIT_FLOW_ValidateAction_03",
+        "RECRUIT_FLOW_CancelReject_01",
+        "RECRUIT_FLOW_VerifyDetails_01",
+        "RECRUIT_FLOW_History_01",
+        "RECRUIT_FLOW_History_02",
+        "RECRUIT_FLOW_History_03",
+        "RECRUIT_FLOW_History_04"
+      ],
+      "links": [
+        {
+          "caseId": "RECRUIT_FLOW_Status_01",
+          "tcGuid": "3634c835-c9c7-5f2c-8431-3721b93dea9d",
+          "linkGuid": "5e3fa307-92e6-5819-8d7a-78db1b93e4a7",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Status_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_Shortlist_01",
+          "tcGuid": "543ba8d2-a4f9-54be-bdc2-4149001190ec",
+          "linkGuid": "036967ad-544d-5f21-9382-05dda1506e0b",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_Reject_01",
+          "tcGuid": "6c3c0daa-fb9b-5a01-83a9-2576d1514b4a",
+          "linkGuid": "ed4650ec-a794-58a1-b75f-84f861b467e2",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_Reject_02",
+          "tcGuid": "432a6442-4288-5bd5-994a-220883789b02",
+          "linkGuid": "1b7cabfe-f317-5fb0-82f3-20f00265e723",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_CancelShortlist_01",
+          "tcGuid": "bff3c559-9539-528b-a599-09668bde041a",
+          "linkGuid": "bfbe1862-e05a-55c9-b9b1-1b7e7198255d",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_01",
+          "tcGuid": "5c484755-aa47-5a10-b27c-79299ee797e0",
+          "linkGuid": "1064c993-cabc-56db-a8d0-a97084544386",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_02",
+          "tcGuid": "ca4b5983-0294-574c-97df-35d0f5a1371b",
+          "linkGuid": "063904c3-2c0a-52f5-ac09-99198759ebf2",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_03",
+          "tcGuid": "3c2ad6bb-01dc-5a78-8f0f-7655f5ed11af",
+          "linkGuid": "efa4ff7d-1c15-59a3-a366-d0bf0ec8091c",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_04",
+          "tcGuid": "f20ab918-a5ce-5e59-b366-0d8d9dcbcb49",
+          "linkGuid": "8f92d31c-b70f-5f41-8fb6-b85cf45ecd30",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_05",
+          "tcGuid": "198c8c36-3b6b-53d2-980b-95e2249e0f10",
+          "linkGuid": "125bf744-cbea-5749-b934-da3fa0d4c815",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_06",
+          "tcGuid": "212a4be8-a5fe-5cc8-834a-5ab6377c89d6",
+          "linkGuid": "6bc4346c-fefd-550b-b525-c6c042a7b689",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ScheduleInterview_07",
+          "tcGuid": "4f17c577-d666-5fb7-a006-d3deb00e2001",
+          "linkGuid": "8b3d6a61-0c77-5c94-b83c-e98e8c58c30f",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_SelectInterviewer_01",
+          "tcGuid": "cee7949a-da60-516e-ad89-00492800ab58",
+          "linkGuid": "7140ebe1-7578-5fb0-9b5f-d4046e402019",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_SelectInterviewer_02",
+          "tcGuid": "ad8422cb-c418-5fbe-900e-8fc07449c45d",
+          "linkGuid": "382a6a23-d4de-5644-8205-80c1e1a67f7c",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_SelectInterviewer_03",
+          "tcGuid": "b7925527-76e7-5805-9b2c-c466cc2da639",
+          "linkGuid": "12008ef1-50db-58f4-a175-f564a709ad1e",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ValidateAction_01",
+          "tcGuid": "bc3106c3-b108-5e07-893f-bc431e3d9478",
+          "linkGuid": "1376fb8a-a969-56a8-85e5-45b74e2421de",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ValidateAction_02",
+          "tcGuid": "9717807a-bb59-5ad0-b2d8-272bb496dae0",
+          "linkGuid": "2c0deca5-47a7-5033-98d2-d22904323fe0",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_Status_02",
+          "tcGuid": "a5dd7593-101a-545f-aea5-3d60470b0f0a",
+          "linkGuid": "1befbf4d-fa8d-5856-a570-d01f627aaced",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Status_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_ValidateAction_03",
+          "tcGuid": "d54e845b-3321-5219-b810-33f4d35bf9e7",
+          "linkGuid": "4255f837-9df0-5654-b3b9-7ccfcabba09f",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_CancelReject_01",
+          "tcGuid": "f7cd6fbf-8216-5ac4-b345-a9ac9684e20b",
+          "linkGuid": "464b8293-28ea-51f9-bc28-0ed239dd41ad",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_VerifyDetails_01",
+          "tcGuid": "8ce66456-883e-5f39-9d25-017a99f06195",
+          "linkGuid": "b4b6e9ee-d9c3-5644-b9e5-61c8d885a9b5",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_History_01",
+          "tcGuid": "69b8dda5-3326-5659-9bd5-b566071e10b5",
+          "linkGuid": "cf3891f7-9d13-5523-b8ac-7ef7219a4358",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_01/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_History_02",
+          "tcGuid": "71bf2fd9-8a2c-5274-9cde-ba56e4b13ba0",
+          "linkGuid": "b955e286-c40d-583b-8489-a8aa0665e882",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_02/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_History_03",
+          "tcGuid": "c79901ec-c48a-577d-81bd-5dd69b50f5bb",
+          "linkGuid": "fd45cbf6-a60a-567a-b04e-b3a04b2965dc",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_03/Script20261027000000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_FLOW_History_04",
+          "tcGuid": "94c35ce2-9223-5687-81a9-59d9b7d8f4ca",
+          "linkGuid": "b957b397-9772-5f83-8839-16ae5ec0b14d",
+          "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_04/Script20261027000000.groovy"
+        }
+      ]
+    },
+    "VAC": {
+      "path": "Test Suites/RECRUIT_VAC_25_ASC_001_TO_025.ts",
+      "order": [
+        "RECRUIT_VAC_Create_01",
+        "RECRUIT_VAC_Create_02",
+        "RECRUIT_VAC_Create_03",
+        "RECRUIT_VAC_Create_04",
+        "RECRUIT_VAC_Create_05",
+        "RECRUIT_VAC_Create_06",
+        "RECRUIT_VAC_Create_07",
+        "RECRUIT_VAC_Create_08",
+        "RECRUIT_VAC_Create_09",
+        "RECRUIT_VAC_Create_10",
+        "RECRUIT_VAC_Create_11",
+        "RECRUIT_VAC_Create_12",
+        "RECRUIT_VAC_Create_13",
+        "RECRUIT_VAC_Create_14",
+        "RECRUIT_VAC_Update_01",
+        "RECRUIT_VAC_Search_01",
+        "RECRUIT_VAC_Search_02",
+        "RECRUIT_VAC_Search_03",
+        "RECRUIT_VAC_Filter_01",
+        "RECRUIT_VAC_Filter_02",
+        "RECRUIT_VAC_Reset_01",
+        "RECRUIT_VAC_Update_02",
+        "RECRUIT_VAC_Update_03",
+        "RECRUIT_VAC_CancelCreate_01",
+        "RECRUIT_VAC_CancelUpdate_01"
+      ],
+      "links": [
+        {
+          "caseId": "RECRUIT_VAC_Create_01",
+          "tcGuid": "aae3998c-ca56-4183-9ca7-89c072f52e5b",
+          "linkGuid": "a568fb15-90a6-4957-86b7-2874ed5a1d4d",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_02",
+          "tcGuid": "a4ac092c-3c65-4130-832e-feb881ee87d8",
+          "linkGuid": "8ae4d767-8983-4e8e-9fb9-42d23688c453",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_02/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_03",
+          "tcGuid": "b68af78b-5df3-4f21-b0d1-781d2e81dd8b",
+          "linkGuid": "44dee436-326e-47fb-9b90-caf4e5c27f36",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_03/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_04",
+          "tcGuid": "7f5d2e2b-1c4b-4750-904f-7780f10b399c",
+          "linkGuid": "256fa2f1-2f3f-4834-8bd7-cdf67a8d54ec",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_04/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_05",
+          "tcGuid": "11d8bba7-ae6c-4c04-adba-efbb779d4063",
+          "linkGuid": "422da03f-9260-4358-88c5-d98e624bb3f5",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_05/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_06",
+          "tcGuid": "055b7c8f-cf2f-44fc-b962-ecbe4f21f641",
+          "linkGuid": "6ef8e93a-4369-4bcd-8c71-e9210d21e9e0",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_06/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_07",
+          "tcGuid": "4fc2cc04-7d0c-4082-9f5f-ac251b83c0d4",
+          "linkGuid": "56d9466c-ba8a-4e15-937b-a8b3f88cc919",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_07/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_08",
+          "tcGuid": "626aeb95-e914-47e7-a926-331d7d9e76e7",
+          "linkGuid": "835032a4-7354-4135-803c-857b8e834a31",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_08/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_09",
+          "tcGuid": "39f80922-f8c8-41a6-bc62-6feb4183faf2",
+          "linkGuid": "5f2aa8d7-9290-43d6-99e1-3ae380c80621",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_09/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_10",
+          "tcGuid": "5344626c-44a3-456b-b8c2-0a15cced2b51",
+          "linkGuid": "a3c1b3b7-56a5-4fb6-b363-39e4445afa0a",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_10/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_11",
+          "tcGuid": "4f82606b-ceb6-4f26-bcd3-40d76a2d87b1",
+          "linkGuid": "05c5f5e7-c30d-44fd-8852-0d01a06b33e6",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_11/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_12",
+          "tcGuid": "ed94ab3c-4b66-4d4e-b5cc-55b0f1817880",
+          "linkGuid": "00be322e-18a9-4456-85bb-7365cd1a88cd",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_12/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_13",
+          "tcGuid": "c2a6c5d4-0127-45ba-93ab-d2030507e3c3",
+          "linkGuid": "694d86e9-7573-4d5d-a2fb-2a49136d2245",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_13/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Create_14",
+          "tcGuid": "7c55ad20-406e-46b0-9134-337cdf0036d1",
+          "linkGuid": "1f73e07c-6b80-45d1-b59e-f396aaeb186c",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_14/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Update_01",
+          "tcGuid": "bfff6724-cc96-4452-9995-b77b184b22a1",
+          "linkGuid": "aeb11f93-95c9-4489-8210-1f4233703435",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Search_01",
+          "tcGuid": "5891624c-f091-45a3-b403-12f53a31619c",
+          "linkGuid": "84da83a5-b49d-47d7-9fb3-f6970b3d003e",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Search_02",
+          "tcGuid": "fc480efd-7122-443b-a1cc-7f3086c54c3b",
+          "linkGuid": "4eedd1c2-2b1b-4ede-b481-8c5e0dce4ccf",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_02/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Search_03",
+          "tcGuid": "75a1f4ec-8f93-404c-86cc-47a02bd9bc9c",
+          "linkGuid": "f3b3101e-fc52-4cda-8dee-c440837b03f7",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_03/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Filter_01",
+          "tcGuid": "8a7995e5-d69c-4d9c-9545-a606d226b729",
+          "linkGuid": "ba828613-13aa-4ec8-9b19-98c647a9e32a",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Filter_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Filter_02",
+          "tcGuid": "1b73b697-c023-48f0-9386-140538a650fb",
+          "linkGuid": "a0968cc3-94e3-4d60-8afe-113cdd899f7d",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Filter_02/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Reset_01",
+          "tcGuid": "12469736-97bd-4b11-a0dc-2d658e8e2742",
+          "linkGuid": "c021b009-5a3f-49d4-b7f4-251557eb28e9",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Reset_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Update_02",
+          "tcGuid": "2442c634-b362-43bd-89ab-6818b6147c0d",
+          "linkGuid": "ba515eb0-55cb-4151-a65a-1cd54ca69193",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_02/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_Update_03",
+          "tcGuid": "53a2f0af-0e1a-4e41-bc8b-c3e770d87610",
+          "linkGuid": "003980d4-cf8e-488b-8a82-a7d07f2bc1a5",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_03/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_CancelCreate_01",
+          "tcGuid": "e919c7c5-8e62-4087-b0ea-07cc99e22d6f",
+          "linkGuid": "ce3658e3-16c2-48b2-a4ad-79886fecefa7",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_CancelCreate_01/Script20261023080000.groovy"
+        },
+        {
+          "caseId": "RECRUIT_VAC_CancelUpdate_01",
+          "tcGuid": "2c6e5f71-0eb5-4322-bc97-7006a2a637f8",
+          "linkGuid": "73009e5c-f0cd-4016-b2ba-c832b64d7b04",
+          "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_CancelUpdate_01/Script20261023080000.groovy"
+        }
+      ]
+    }
+  },
+  "runtimePersonalPaths": []
+}

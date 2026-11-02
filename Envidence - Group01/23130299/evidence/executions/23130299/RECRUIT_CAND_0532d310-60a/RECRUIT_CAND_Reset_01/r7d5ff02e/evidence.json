@@ -1,0 +1,77 @@
+{
+  "suiteId": "Test Suites/RECRUIT_CAND_25_ASC_001_TO_025",
+  "caseId": "RECRUIT_CAND_Reset_01",
+  "runId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+  "executionId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+  "caseRunId": "7d5ff02e-18d0-403c-ad55-24f78b730983",
+  "processId": 26680,
+  "workerId": "main-1",
+  "timestamp": "2026-11-01T22:07:13.146240900+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-11-01T22:09:43.288597400+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "BEFORE_ACTION_Search",
+      "kind": "before",
+      "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+      "observed": {
+        "phase": "BEFORE_ACTION_Search",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 656,
+      "screenshotPath": "220943_001_BEFORE.png",
+      "sha256": "75b334c730f32c47a2359f996fb26addf946b09e5f487c588b12fc8c5bff9b25"
+    },
+    {
+      "timestamp": "2026-11-01T22:09:46.534570300+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "AFTER_ACTION_Search",
+      "kind": "after",
+      "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+      "observed": {
+        "phase": "AFTER_ACTION_Search",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 664,
+      "screenshotPath": "220946_002_AFTER.png",
+      "sha256": "6a12f99f5264e41e8ec266321266cac9d159081c04df8cb361b15d10bdfcb6ce"
+    },
+    {
+      "timestamp": "2026-11-01T22:09:51.588318900+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "BEFORE_ACTION_Reset",
+      "kind": "before",
+      "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+      "observed": {
+        "phase": "BEFORE_ACTION_Reset",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 651,
+      "screenshotPath": "220951_003_BEFORE.png",
+      "sha256": "6a12f99f5264e41e8ec266321266cac9d159081c04df8cb361b15d10bdfcb6ce"
+    },
+    {
+      "timestamp": "2026-11-01T22:12:35.945442+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/viewCandidates",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 686,
+      "screenshotPath": "221235_004_RESULT.png",
+      "sha256": "e4a1a5077c78f67c047e7ce34e79796b66fcc9c93660b02cddf1da179db80fda"
+    }
+  ]
+}

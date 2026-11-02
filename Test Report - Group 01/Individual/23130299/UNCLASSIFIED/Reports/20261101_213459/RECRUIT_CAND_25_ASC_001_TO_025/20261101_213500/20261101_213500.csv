@@ -1,0 +1,179 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+RECRUIT_CAND_25_ASC_001_TO_025,Chrome 156.0.8078.79,ASM7; workbook rows 9-33 in order; NOT RUN / NEEDS LIVE VERIFICATION; independent per-case fixtures.,,01-11-2026 21:35:12,01-11-2026 22:18:03,"42m - 50,834s",PASSED
+,,,,,,,
+Start listener action : beforeSuite,Chrome 156.0.8078.79,,,01-11-2026 21:35:13,01-11-2026 21:35:14,"1,567s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_01,Chrome 156.0.8078.79,"Tạo ứng viên tối thiểu
+Expected (workbook): Tạo được ứng viên; tên, email và vacancy đúng input.",ASM7_NOT_RUN,01-11-2026 21:35:14,01-11-2026 21:37:51,"2m - 36,868s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:35:14,01-11-2026 21:35:54,"39,206s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_01),Chrome 156.0.8078.79,,,01-11-2026 21:35:54,01-11-2026 21:35:54,"0,164s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:35:54,01-11-2026 21:37:50,"1m - 56,310s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:37:50,01-11-2026 21:37:51,"0,831s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_02,Chrome 156.0.8078.79,"Tạo ứng viên với thông tin đầy đủ
+Expected (workbook): Lưu đúng tên đầy đủ, email, phone, vacancy, keyword và notes.",ASM7_NOT_RUN,01-11-2026 21:37:51,01-11-2026 21:39:42,"1m - 51,125s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:37:51,01-11-2026 21:37:52,"1,069s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_02),Chrome 156.0.8078.79,,,01-11-2026 21:37:53,01-11-2026 21:37:53,"0,026s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:37:53,01-11-2026 21:39:42,"1m - 48,838s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:39:42,01-11-2026 21:39:42,"0,695s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_03,Chrome 156.0.8078.79,"Bỏ trống First Name
+Expected (workbook): First Name báo Required; hồ sơ không được tạo.",ASM7_NOT_RUN,01-11-2026 21:39:42,01-11-2026 21:40:54,"1m - 11,241s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:39:42,01-11-2026 21:39:43,"0,845s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_03),Chrome 156.0.8078.79,,,01-11-2026 21:39:43,01-11-2026 21:39:43,"0,010s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:39:43,01-11-2026 21:40:53,"1m - 9,512s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:40:53,01-11-2026 21:40:54,"0,588s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_04,Chrome 156.0.8078.79,"Bỏ trống Last Name
+Expected (workbook): Last Name báo Required; hồ sơ không được tạo.",ASM7_NOT_RUN,01-11-2026 21:40:54,01-11-2026 21:42:01,"1m - 7,469s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:40:54,01-11-2026 21:40:54,"0,710s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_04),Chrome 156.0.8078.79,,,01-11-2026 21:40:54,01-11-2026 21:40:54,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:40:54,01-11-2026 21:42:00,"1m - 5,896s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:42:00,01-11-2026 21:42:01,"0,751s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_05,Chrome 156.0.8078.79,"Bỏ trống Email
+Expected (workbook): Email báo Required; hồ sơ không được tạo.",ASM7_NOT_RUN,01-11-2026 21:42:01,01-11-2026 21:43:06,"1m - 5,318s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:42:01,01-11-2026 21:42:02,"0,903s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_05),Chrome 156.0.8078.79,,,01-11-2026 21:42:02,01-11-2026 21:42:02,"0,014s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:42:02,01-11-2026 21:43:06,"1m - 3,394s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:43:06,01-11-2026 21:43:06,"0,808s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_06,Chrome 156.0.8078.79,"Không chọn Vacancy tùy chọn
+Expected (workbook): Nếu demo cho phép vacancy tùy chọn: lưu ứng viên và hiển thị Vacancy rỗng; ghi nhận chính xác hành vi.",ASM7_NOT_RUN,01-11-2026 21:43:06,01-11-2026 21:44:07,"1m - 0,908s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:43:06,01-11-2026 21:43:06,"0,049s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_06),Chrome 156.0.8078.79,,,01-11-2026 21:43:07,01-11-2026 21:43:07,"0,019s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:43:07,01-11-2026 21:44:07,"59,977s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:44:07,01-11-2026 21:44:07,"0,675s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_07,Chrome 156.0.8078.79,"Kiểm tra consent khi tạo hồ sơ
+Expected (workbook): Lưu thành công; trạng thái consent đúng tùy chọn hoặc hệ thống có ghi nhận chọn đồng ý.",ASM7_NOT_RUN,01-11-2026 21:44:07,01-11-2026 21:45:26,"1m - 18,284s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:44:07,01-11-2026 21:44:08,"0,761s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_07),Chrome 156.0.8078.79,,,01-11-2026 21:44:08,01-11-2026 21:44:08,"0,014s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:44:08,01-11-2026 21:45:25,"1m - 16,559s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:45:25,01-11-2026 21:45:26,"0,779s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_08,Chrome 156.0.8078.79,"Email hợp lệ dạng example.com
+Expected (workbook): Email được lưu nguyên vẹn; có thể tìm đúng hồ sơ.",ASM7_NOT_RUN,01-11-2026 21:45:26,01-11-2026 21:47:15,"1m - 49,086s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:45:26,01-11-2026 21:45:26,"0,801s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_08),Chrome 156.0.8078.79,,,01-11-2026 21:45:27,01-11-2026 21:45:27,"0,013s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:45:27,01-11-2026 21:47:14,"1m - 47,301s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:47:14,01-11-2026 21:47:15,"0,803s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_09,Chrome 156.0.8078.79,"Email thiếu ký tự @
+Expected (workbook): Email báo invalid; không tạo hồ sơ.",ASM7_NOT_RUN,01-11-2026 21:47:15,01-11-2026 21:48:26,"1m - 11,289s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:47:15,01-11-2026 21:47:16,"0,948s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_09),Chrome 156.0.8078.79,,,01-11-2026 21:47:16,01-11-2026 21:47:16,"0,015s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:47:16,01-11-2026 21:48:25,"1m - 9,431s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:48:25,01-11-2026 21:48:26,"0,585s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_10,Chrome 156.0.8078.79,"Email thiếu phần domain
+Expected (workbook): Email báo invalid; không tạo hồ sơ.",ASM7_NOT_RUN,01-11-2026 21:48:26,01-11-2026 21:49:41,"1m - 15,357s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:48:26,01-11-2026 21:48:27,"1,398s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_10),Chrome 156.0.8078.79,,,01-11-2026 21:48:27,01-11-2026 21:48:27,"0,005s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:48:27,01-11-2026 21:49:41,"1m - 13,216s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:49:41,01-11-2026 21:49:41,"0,665s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_11,Chrome 156.0.8078.79,"Số điện thoại dạng chữ
+Expected (workbook): Không nhận số điện thoại sai dạng nếu có validation; ghi lại thông báo đúng UI.",ASM7_NOT_RUN,01-11-2026 21:49:41,01-11-2026 21:50:45,"1m - 3,485s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:49:41,01-11-2026 21:49:42,"0,835s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_11),Chrome 156.0.8078.79,,,01-11-2026 21:49:42,01-11-2026 21:49:42,"0,011s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:49:42,01-11-2026 21:50:44,"1m - 1,764s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:50:44,01-11-2026 21:50:45,"0,686s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Create_12,Chrome 156.0.8078.79,"Số điện thoại hợp lệ
+Expected (workbook): Contact Number giữ đúng '0900000012' và không mất số 0 đầu.",ASM7_NOT_RUN,01-11-2026 21:50:45,01-11-2026 21:51:56,"1m - 11,016s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:50:45,01-11-2026 21:50:47,"1,862s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Create_12),Chrome 156.0.8078.79,,,01-11-2026 21:50:47,01-11-2026 21:50:47,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:50:47,01-11-2026 21:51:55,"1m - 8,380s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:51:55,01-11-2026 21:51:56,"0,661s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_UploadCV_01,Chrome 156.0.8078.79,"Tải lên CV PDF hợp lệ
+Expected (workbook): CV được đính kèm đúng tên và có thể mở/tải theo quyền của demo.",ASM7_NOT_RUN,01-11-2026 21:51:56,01-11-2026 21:53:15,"1m - 19,051s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:51:56,01-11-2026 21:51:58,"1,738s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_UploadCV_01),Chrome 156.0.8078.79,,,01-11-2026 21:51:58,01-11-2026 21:51:58,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:51:58,01-11-2026 21:53:14,"1m - 16,313s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:53:14,01-11-2026 21:53:15,"0,820s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_UploadCV_02,Chrome 156.0.8078.79,"Tải lên CV DOCX hợp lệ
+Expected (workbook): CV DOCX được đính kèm và hiển thị đúng tên.",ASM7_NOT_RUN,01-11-2026 21:53:15,01-11-2026 21:54:31,"1m - 16,475s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:53:15,01-11-2026 21:53:17,"1,763s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_UploadCV_02),Chrome 156.0.8078.79,,,01-11-2026 21:53:17,01-11-2026 21:53:17,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:53:17,01-11-2026 21:54:31,"1m - 13,919s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:54:31,01-11-2026 21:54:31,"0,626s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_UploadCV_03,Chrome 156.0.8078.79,"Tải CV định dạng không hợp lệ
+Expected (workbook): Hệ thống từ chối định dạng không hỗ trợ; không lưu tệp .exe.",ASM7_NOT_RUN,01-11-2026 21:54:31,01-11-2026 21:56:01,"1m - 29,144s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:54:31,01-11-2026 21:54:33,"1,676s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_UploadCV_03),Chrome 156.0.8078.79,,,01-11-2026 21:54:33,01-11-2026 21:54:33,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:54:33,01-11-2026 21:56:00,"1m - 26,615s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:56:00,01-11-2026 21:56:01,"0,737s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_UploadCV_04,Chrome 156.0.8078.79,"Tải CV vượt dung lượng tối đa
+Expected (workbook): Hiển thị lỗi vượt giới hạn; file quá lớn không được đính kèm.",ASM7_NOT_RUN,01-11-2026 21:56:01,01-11-2026 21:56:01,"0,122s",SKIPPED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:56:01,01-11-2026 21:56:01,"0,075s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:56:01,01-11-2026 21:56:01,"0,014s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_UploadCV_05,Chrome 156.0.8078.79,"Hủy chọn CV trước lưu
+Expected (workbook): Không có CV của lần thao tác hủy trong hồ sơ mới; không phát sinh ứng viên lần đầu.",ASM7_NOT_RUN,01-11-2026 21:56:01,01-11-2026 21:57:50,"1m - 49,271s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:56:01,01-11-2026 21:56:03,"1,943s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_UploadCV_05),Chrome 156.0.8078.79,,,01-11-2026 21:56:03,01-11-2026 21:56:03,"0,006s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:56:03,01-11-2026 21:57:49,"1m - 46,453s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 21:57:49,01-11-2026 21:57:50,"0,707s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Filter_01,Chrome 156.0.8078.79,"Lọc ứng viên theo Vacancy
+Expected (workbook): CAND_FILTER_A xuất hiện; kết quả thuộc VAC_A.",ASM7_NOT_RUN,01-11-2026 21:57:50,01-11-2026 22:00:26,"2m - 36,365s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 21:57:50,01-11-2026 21:57:52,"1,738s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Filter_01),Chrome 156.0.8078.79,,,01-11-2026 21:57:52,01-11-2026 21:57:52,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 21:57:52,01-11-2026 22:00:26,"2m - 33,847s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:00:26,01-11-2026 22:00:26,"0,689s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Search_01,Chrome 156.0.8078.79,"Lọc theo Candidate Name
+Expected (workbook): Hiện CAND_FILTER_A, không lẫn CAND_FILTER_B khác tên.",ASM7_NOT_RUN,01-11-2026 22:00:26,01-11-2026 22:02:14,"1m - 47,239s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:00:26,01-11-2026 22:00:28,"1,831s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Search_01),Chrome 156.0.8078.79,,,01-11-2026 22:00:28,01-11-2026 22:00:28,"0,006s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:00:28,01-11-2026 22:02:13,"1m - 44,616s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:02:13,01-11-2026 22:02:14,"0,678s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Filter_02,Chrome 156.0.8078.79,"Lọc ứng viên theo Keywords
+Expected (workbook): Hiện ứng viên có keyword phù hợp, gồm CAND_FILTER_A.",ASM7_NOT_RUN,01-11-2026 22:02:14,01-11-2026 22:04:09,"1m - 55,879s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:02:14,01-11-2026 22:02:15,"1,826s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Filter_02),Chrome 156.0.8078.79,,,01-11-2026 22:02:16,01-11-2026 22:02:16,"0,006s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:02:16,01-11-2026 22:04:09,"1m - 53,325s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:04:09,01-11-2026 22:04:09,"0,635s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Filter_03,Chrome 156.0.8078.79,"Lọc kết hợp Vacancy và ngày ứng tuyển
+Expected (workbook): Chỉ xuất hiện ứng viên thỏa vacancy và ngày trong khoảng đã nhập.",ASM7_NOT_RUN,01-11-2026 22:04:09,01-11-2026 22:07:13,"3m - 3,099s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:04:10,01-11-2026 22:04:11,"1,891s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Filter_03),Chrome 156.0.8078.79,,,01-11-2026 22:04:11,01-11-2026 22:04:11,"0,007s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:04:11,01-11-2026 22:07:12,"3m - 0,365s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:07:12,01-11-2026 22:07:13,"0,750s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Reset_01,Chrome 156.0.8078.79,"Reset bộ lọc Candidates
+Expected (workbook): Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",ASM7_NOT_RUN,01-11-2026 22:07:13,01-11-2026 22:12:35,"5m - 22,855s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:07:13,01-11-2026 22:07:14,"1,831s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Reset_01),Chrome 156.0.8078.79,,,01-11-2026 22:07:15,01-11-2026 22:07:15,"0,009s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:07:15,01-11-2026 22:12:35,"5m - 20,199s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:12:35,01-11-2026 22:12:35,"0,696s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_Update_01,Chrome 156.0.8078.79,"Sửa Keywords và Notes hồ sơ
+Expected (workbook): Keywords và Notes đúng giá trị mới; email và vacancy không đổi.",ASM7_NOT_RUN,01-11-2026 22:12:35,01-11-2026 22:14:40,"2m - 4,166s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:12:36,01-11-2026 22:12:37,"1,803s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_Update_01),Chrome 156.0.8078.79,,,01-11-2026 22:12:37,01-11-2026 22:12:37,"0,006s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:12:37,01-11-2026 22:14:39,"2m - 1,547s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:14:39,01-11-2026 22:14:40,"0,685s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_CancelUpdate_01,Chrome 156.0.8078.79,"Hủy chỉnh sửa hồ sơ ứng viên
+Expected (workbook): Email vẫn đúng baseline; không lưu email tạm.",ASM7_NOT_RUN,01-11-2026 22:14:40,01-11-2026 22:16:09,"1m - 28,995s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:14:40,01-11-2026 22:14:41,"1,758s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_CancelUpdate_01),Chrome 156.0.8078.79,,,01-11-2026 22:14:41,01-11-2026 22:14:41,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:14:41,01-11-2026 22:16:08,"1m - 26,472s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:16:08,01-11-2026 22:16:09,"0,661s",PASSED
+,,,,,,,
+Test Cases/RECRUIT_CAND/RECRUIT_CAND_VerifyDetails_01,Chrome 156.0.8078.79,"Đối chiếu dữ liệu hồ sơ sau tải lại
+Expected (workbook): Chi tiết và dòng danh sách nhất quán; không mất dữ liệu khi reload.",ASM7_NOT_RUN,01-11-2026 22:16:09,01-11-2026 22:18:02,"1m - 53,643s",PASSED
+Start listener action : beforeCase,Chrome 156.0.8078.79,,,01-11-2026 22:16:09,01-11-2026 22:16:11,"1,912s",PASSED
+ui = new recruitment.CandidateChecks(RECRUIT_CAND_VerifyDetails_01),Chrome 156.0.8078.79,,,01-11-2026 22:16:11,01-11-2026 22:16:11,"0,008s",PASSED
+try,Chrome 156.0.8078.79,,,01-11-2026 22:16:11,01-11-2026 22:18:02,"1m - 50,978s",PASSED
+Start listener action : afterCase,Chrome 156.0.8078.79,,,01-11-2026 22:18:02,01-11-2026 22:18:02,"0,649s",PASSED
+,,,,,,,
+Start listener action : afterSuite,Chrome 156.0.8078.79,,,01-11-2026 22:18:02,01-11-2026 22:18:03,"0,926s",PASSED

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+  <description>ASM7: manual login, no credentials. Fill live-confirmed fixture settings before Run.</description>
+  <name>default</name>
+  <tag>ASM7</tag>
+  <defaultProfile>true</defaultProfile>
+  <GlobalVariableEntity>
+    <description>Explicit opt-in for up to two execution-owned PIM Employee fixtures through native UI only when no suitable existing PIM employee is available. Environment ASM7_ALLOW_PIM_FIXTURE_CREATE=true/false overrides this Boolean. Never creates a login account; no automatic employee deletion.</description>
+    <initValue>false</initValue>
+    <name>ASM7_ALLOW_PIM_FIXTURE_CREATE</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Independent Katalon processes/workspaces; cases stay sequential inside each suite. No project-wide test lock.</description>
+    <initValue>'ISOLATED_CONCURRENT'</initValue>
+    <name>executionMode</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Resource slots for the isolated process launcher, queued before Katalon starts. Set 3 only after verifying capacity. Direct IDE Run bypasses this launcher admission.</description>
+    <initValue>2</initValue>
+    <name>maxConcurrentSessions</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Legacy screenshotDirectory only; relative values resolve against project. Business capture uses ASM7_EVIDENCE_ROOT or automatic member/project evidence root.</description>
+    <initValue>''</initValue>
+    <name>evidenceDir</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>All modules: empty uses project/runtime/ASM7. Relative paths resolve against project. Every execution has an independent UUID directory.</description>
+    <initValue>''</initValue>
+    <name>asm7OutputDir</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Existing Job Title; no shared catalog is created/changed. Employee provisioning has its own explicit OFF-by-default opt-in.</description>
+    <initValue>'QA Engineer'</initValue>
+    <name>jobTitle</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Optional exact active MANAGER_A override. Empty uses live PIM discovery and actual Hiring Manager selection, then optional execution-owned PIM fixture creation only with explicit opt-in. Create_05 in VAC deliberately omits Manager; CAND_Create_06 needs neither Vacancy nor Manager. No employee is inferred from historical Vacancies.</description>
+    <initValue>''</initValue>
+    <name>hiringManagerName</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Approved exact active MANAGER_B suggestion, distinct from hiringManagerName; required only when Update_03 changes manager.</description>
+    <initValue>''</initValue>
+    <name>hiringManagerAlternativeName</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Optional INT_A override. Empty uses discovery candidates, then exact active identity verification on Schedule Interview; no sample employee is hardcoded.</description>
+    <initValue>''</initValue>
+    <name>interviewerA</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Optional INT_B override, distinct from INT_A. Empty uses discovery and Schedule Interview verification where a second interviewer is required.</description>
+    <initValue>''</initValue>
+    <name>interviewerB</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Exact live CV limit in bytes, including confirmed MB/KiB convention. 0 deliberately blocks uploads.</description>
+    <initValue>0L</initValue>
+    <name>cvLimitBytes</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Supplied OxdTimeInput source uses 12-hour hh:mm a. Empty retains that source-confirmed formatting; 24h deliberately blocks if deployment differs. Verify the live widget before scheduling.</description>
+    <initValue>''</initValue>
+    <name>timeFormat</name>
+  </GlobalVariableEntity>
+  <GlobalVariableEntity>
+    <description>Set true only after confirming the workbook's conditional invalid-phone rejection rule. Free-text acceptance requires design review.</description>
+    <initValue>false</initValue>
+    <name>phoneValidationConfirmed</name>
+  </GlobalVariableEntity>
+</GlobalVariableEntities>

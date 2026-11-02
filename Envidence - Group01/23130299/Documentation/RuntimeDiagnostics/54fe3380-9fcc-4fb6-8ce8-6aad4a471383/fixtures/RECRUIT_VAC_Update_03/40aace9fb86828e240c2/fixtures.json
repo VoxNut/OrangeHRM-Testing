@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "A8DCo 4Ys 010Z",
+    "verifiedLabel": "A8DCo 4Ys 010Z",
+    "submitted": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Update_03",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  }
+]

@@ -1,0 +1,37 @@
+CAND NAV PASS 1: browser launch wrapper is active before any supplied launch closure
+CAND NAV PASS 2: trusted source Candidates and numeric detail routes accepted; unknown/foreign/blank/Chrome/login rejected
+CAND NAV PASS 3: valid target URL cannot substitute for effective origin or real Vue mount
+CAND NAV PASS 4: raw translation key is a distinct mounted state, not proof that English business controls exist
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"OPEN_CANDIDATES","operationId":2,"parentId":1,"startEpochMs":1793595817031,"elapsedMs":30,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"CANDIDATES_READY","operationId":3,"parentId":1,"startEpochMs":1793595817092,"elapsedMs":49,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"OPEN_CANDIDATES","operationId":1,"startEpochMs":1793595816997,"elapsedMs":147,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+CAND NAV PASS 5: healthy native Recruitment click keeps original path; zero recovery GET or identity read
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"OPEN_CANDIDATES","operationId":1,"startEpochMs":1793595817186,"elapsedMs":1,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+CAND NAV PASS 6: healthy Candidates list reused without menu click, GET, Save or recovery
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"OPEN_CANDIDATES","operationId":2,"parentId":1,"startEpochMs":1793595817232,"elapsedMs":0,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"CANDIDATES_READY","operationId":3,"parentId":1,"startEpochMs":1793595817235,"elapsedMs":304,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_CAND_Create_08","phase":"OPEN_CANDIDATES","operationId":1,"startEpochMs":1793595817230,"elapsedMs":310,"outcome":"OK","counters":{"navigation":1,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+CAND NAV PASS 7: actual navigation wait recovers HTTP500 document via explicit list GET once and resumes original readiness
+CAND NAV PASS 8: pre-PIM recovery prevents stale Chrome document cascade and fresh-verifies original employee86
+CAND NAV PASS 9: healthy preflight adds no navigation and leaves normal PIM identity admission untouched
+CAND NAV PASS 10: VAC24 and FLOW5 excluded from new recovery even on bad document
+CAND NAV PASS 11: persistent HTTP500 keeps ERROR and records one-attempt budget, never retries Save
+CAND NAV PASS 12: execution budget bounds retries across case boundaries
+CAND NAV PASS 13: wrong driver session/window blocks before GET or API
+CAND NAV PASS 14: foreign and unknown WebDriver target cannot trigger recovery
+CAND NAV PASS 15: unmounted/blank/foreign application contexts cannot start PIM or silently navigate
+CAND NAV PASS 16: changed numeric Hiring Manager stops, no replacement discovery or creation
+CAND NAV PASS 17: only proven cached Chrome ORIGIN fault is cleared after safe list plus pinned identity proof
+CAND NAV PASS 18: HTTP403/500 and unrelated origin failures never cleared or retried as navigation
+CAND NAV PASS 19: uncertain Candidate Save blocks list recovery before any GET
+CAND NAV PASS 20: new manual-login entry points keep original13 set and enforce exact CAND execution scope
+CAND NAV PASS 21: confirmed cached401 on a healthy-looking document still uses existing manual authentication recovery
+CAND NAV PASS 22: safe GET redirect to confirmed login uses manual recovery then verifies list; no write replay
+CAND NAV PASS 23: login returning after manual recovery remains SESSION_EXPIRED, not a network/configuration failure
+CAND NAV PASS 24: already healthy next-case document clears only the prior owned navigation denial after pinned ID proof
+CAND NAV PASS 25: mounted untranslated list with missing mandatory controls is a localization ERROR, never a fake ready list
+CAND NAV PASS 26: original verifyListAndReopen executes unique rows, vacancy, native View, numeric102 and profile assertions with no Save
+CAND NAV PASS 27: missing/duplicate list candidate or wrong vacancy cannot pass after recovery
+CAND NAV PASS 28: list opening another numeric Candidate ID fails without resubmitting Candidate
+CAND NAVIGATION REPAIR: 28 production-method groups PASS; doubles only, no browser/API live
+

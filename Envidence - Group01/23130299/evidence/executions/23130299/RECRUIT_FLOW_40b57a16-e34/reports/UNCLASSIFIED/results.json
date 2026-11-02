@@ -1,0 +1,484 @@
+{
+  "kind": "KATALON_CALLBACK_DERIVED",
+  "module": "RECRUIT_FLOW",
+  "suiteName": "Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025",
+  "executionId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+  "runKind": "UNCLASSIFIED",
+  "startedAt": "2026-11-02T01:18:46.882115500+07:00",
+  "endedAt": "2026-11-02T02:29:18.633685400+07:00",
+  "durationSeconds": 4231.751,
+  "environment": {
+    "os": "Windows 11",
+    "java": "21.0.12"
+  },
+  "integrationState": "ASM8_INTEGRATION_DEFERRED",
+  "expectedCaseIds": [
+    "RECRUIT_FLOW_Status_01",
+    "RECRUIT_FLOW_Shortlist_01",
+    "RECRUIT_FLOW_Reject_01",
+    "RECRUIT_FLOW_Reject_02",
+    "RECRUIT_FLOW_CancelShortlist_01",
+    "RECRUIT_FLOW_ScheduleInterview_01",
+    "RECRUIT_FLOW_ScheduleInterview_02",
+    "RECRUIT_FLOW_ScheduleInterview_03",
+    "RECRUIT_FLOW_ScheduleInterview_04",
+    "RECRUIT_FLOW_ScheduleInterview_05",
+    "RECRUIT_FLOW_ScheduleInterview_06",
+    "RECRUIT_FLOW_ScheduleInterview_07",
+    "RECRUIT_FLOW_SelectInterviewer_01",
+    "RECRUIT_FLOW_SelectInterviewer_02",
+    "RECRUIT_FLOW_SelectInterviewer_03",
+    "RECRUIT_FLOW_ValidateAction_01",
+    "RECRUIT_FLOW_ValidateAction_02",
+    "RECRUIT_FLOW_Status_02",
+    "RECRUIT_FLOW_ValidateAction_03",
+    "RECRUIT_FLOW_CancelReject_01",
+    "RECRUIT_FLOW_VerifyDetails_01",
+    "RECRUIT_FLOW_History_01",
+    "RECRUIT_FLOW_History_02",
+    "RECRUIT_FLOW_History_03",
+    "RECRUIT_FLOW_History_04"
+  ],
+  "cases": [
+    {
+      "caseId": "RECRUIT_FLOW_Status_01",
+      "caseRunId": "b0410af1-4916-471a-ad21-a7c00779aece",
+      "result": "ERROR",
+      "rawKatalonResult": "ERROR",
+      "startedAt": "2026-11-02T01:18:47.775963300+07:00",
+      "endedAt": "2026-11-02T01:20:58.854841+07:00",
+      "durationSeconds": 131.078,
+      "message": "Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.\nReason:\norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318\r\n(tried for 30 seconds with 200 milliseconds interval)\nBuild info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'\nDriver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\\Users\\Admin\\Downloads\\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4ecb5e9e7134db47eef1e3787af03463\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)\r\n\tat recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)\r\n\tat recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)\r\n\tat recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)\r\n\tat recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)\r\n\tat recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)\r\n\tat recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks.create(CandidateChecks.groovy:283)\r\n\tat recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)\r\n\tat recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)\r\n\tat recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)\r\n\tat Script20261027000000.run(Script20261027000000.groovy:23)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1102_0.run(S1102_0.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "stackTrace": "Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.\nReason:\norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318\r\n(tried for 30 seconds with 200 milliseconds interval)\nBuild info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'\nDriver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\\Users\\Admin\\Downloads\\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4ecb5e9e7134db47eef1e3787af03463\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)\r\n\tat recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)\r\n\tat recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)\r\n\tat recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)\r\n\tat recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)\r\n\tat recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)\r\n\tat recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.CandidateChecks.create(CandidateChecks.groovy:283)\r\n\tat recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)\r\n\tat recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)\r\n\tat recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)\r\n\tat Script20261027000000.run(Script20261027000000.groovy:23)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1102_0.run(S1102_0.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "configurationState": "READY",
+      "executionState": "ERROR",
+      "evidence": [
+        "RECRUIT_FLOW_Status_01/rb0410af1/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_Shortlist_01",
+      "caseRunId": "f9141c8e-ec34-45ce-bca9-eb787817a789",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:20:59.647974400+07:00",
+      "endedAt": "2026-11-02T01:23:14.267414+07:00",
+      "durationSeconds": 134.619,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_Shortlist_01/rf9141c8e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_Reject_01",
+      "caseRunId": "b37c99c2-5ea3-4e17-835d-e77a95eb45dc",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:23:14.985359700+07:00",
+      "endedAt": "2026-11-02T01:25:32.926188200+07:00",
+      "durationSeconds": 137.94,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_Reject_01/rb37c99c2/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_Reject_02",
+      "caseRunId": "9d186d03-620a-409e-a906-004adc617c7b",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:25:33.651307900+07:00",
+      "endedAt": "2026-11-02T01:28:44.466032800+07:00",
+      "durationSeconds": 190.814,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_Reject_02/r9d186d03/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_CancelShortlist_01",
+      "caseRunId": "8092fe04-f684-4d3d-a78b-202fd06dbac9",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:28:45.193158+07:00",
+      "endedAt": "2026-11-02T01:30:46.607658200+07:00",
+      "durationSeconds": 121.414,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_CancelShortlist_01/r8092fe04/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_01",
+      "caseRunId": "ae594092-b36e-431e-9965-60f2cec4eb5c",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:30:47.376335700+07:00",
+      "endedAt": "2026-11-02T01:34:21.291942700+07:00",
+      "durationSeconds": 213.915,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_01/rae594092/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_02",
+      "caseRunId": "a62d9dec-1384-493d-a950-4f16a19eaa97",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:34:22.029451100+07:00",
+      "endedAt": "2026-11-02T01:37:22.970553+07:00",
+      "durationSeconds": 180.941,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_02/ra62d9dec/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_03",
+      "caseRunId": "1037875e-40f3-482f-b181-959ab66a531f",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:37:23.674849200+07:00",
+      "endedAt": "2026-11-02T01:40:22.496906400+07:00",
+      "durationSeconds": 178.822,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_03/r1037875e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_04",
+      "caseRunId": "51a09d8f-eb4a-4d79-af58-98acc49648a9",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:40:23.226687200+07:00",
+      "endedAt": "2026-11-02T01:43:23.580110700+07:00",
+      "durationSeconds": 180.353,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_04/r51a09d8f/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_05",
+      "caseRunId": "223a21f0-bf72-416b-b7a7-cad40b2f8451",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:43:24.287576500+07:00",
+      "endedAt": "2026-11-02T01:46:24.675018+07:00",
+      "durationSeconds": 180.387,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_05/r223a21f0/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_06",
+      "caseRunId": "32d6d6be-420b-44e3-80ee-fe375e9b2727",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:46:25.389830800+07:00",
+      "endedAt": "2026-11-02T01:49:36.679808700+07:00",
+      "durationSeconds": 191.289,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_06/r32d6d6be/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ScheduleInterview_07",
+      "caseRunId": "122b01ad-a2dc-42bb-a39a-99b269cc535e",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:49:37.411996+07:00",
+      "endedAt": "2026-11-02T01:53:08.627303500+07:00",
+      "durationSeconds": 211.215,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ScheduleInterview_07/r122b01ad/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_SelectInterviewer_01",
+      "caseRunId": "8844028a-51d7-4493-88e5-4bb3ab6a4dfd",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T01:53:10.525606900+07:00",
+      "endedAt": "2026-11-02T01:56:44.963086100+07:00",
+      "durationSeconds": 214.437,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_SelectInterviewer_01/r8844028a/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_SelectInterviewer_02",
+      "caseRunId": "f1409988-e4ae-404c-89aa-45a7475c127a",
+      "result": "ERROR",
+      "rawKatalonResult": "ERROR",
+      "startedAt": "2026-11-02T01:56:45.705299700+07:00",
+      "endedAt": "2026-11-02T02:00:00.702946600+07:00",
+      "durationSeconds": 194.997,
+      "message": "Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.\nReason:\norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c\r\n(tried for 30 seconds with 200 milliseconds interval)\nBuild info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'\nDriver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\\Users\\Admin\\Downloads\\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4ecb5e9e7134db47eef1e3787af03463\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)\r\n\tat recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)\r\n\tat recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)\r\n\tat recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)\r\n\tat Script20261027000000.run(Script20261027000000.groovy:30)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1102_0.run(S1102_0.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "stackTrace": "Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.\nReason:\norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c\r\n(tried for 30 seconds with 200 milliseconds interval)\nBuild info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'\nSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'\nDriver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\\Users\\Admin\\Downloads\\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 4ecb5e9e7134db47eef1e3787af03463\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)\r\n\tat recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)\r\n\tat recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n\tat recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)\r\n\tat recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)\r\n\tat Script20261027000000.run(Script20261027000000.groovy:30)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1102_0.run(S1102_0.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "configurationState": "READY",
+      "executionState": "ERROR",
+      "evidence": [
+        "RECRUIT_FLOW_SelectInterviewer_02/rf1409988/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_SelectInterviewer_03",
+      "caseRunId": "763521d2-26fa-4026-9d0d-279d2bbeff35",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:00:01.452801200+07:00",
+      "endedAt": "2026-11-02T02:03:00.663886600+07:00",
+      "durationSeconds": 179.211,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_SelectInterviewer_03/r763521d2/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ValidateAction_01",
+      "caseRunId": "7413d9d4-6d9c-4ce1-a430-0abdb556f60b",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:03:01.405984+07:00",
+      "endedAt": "2026-11-02T02:04:30.107052300+07:00",
+      "durationSeconds": 88.701,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ValidateAction_01/r7413d9d4/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ValidateAction_02",
+      "caseRunId": "3c9fd7e3-49c4-4cb6-ab05-1e14b5af6121",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:04:30.783571600+07:00",
+      "endedAt": "2026-11-02T02:07:11.297758100+07:00",
+      "durationSeconds": 160.514,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ValidateAction_02/r3c9fd7e3/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_Status_02",
+      "caseRunId": "3c78d087-a943-426d-8912-70eec4a739a5",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:07:12.005275800+07:00",
+      "endedAt": "2026-11-02T02:10:53.883987500+07:00",
+      "durationSeconds": 221.878,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_Status_02/r3c78d087/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_ValidateAction_03",
+      "caseRunId": "70caf079-25f8-40b0-a72b-edf8c843f463",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:10:54.599793400+07:00",
+      "endedAt": "2026-11-02T02:13:13.976845400+07:00",
+      "durationSeconds": 139.377,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_ValidateAction_03/r70caf079/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_CancelReject_01",
+      "caseRunId": "73fac750-2f7e-4e4f-b89d-ea919b02df67",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:13:14.719985200+07:00",
+      "endedAt": "2026-11-02T02:16:00.294491100+07:00",
+      "durationSeconds": 165.574,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_CancelReject_01/r73fac750/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_VerifyDetails_01",
+      "caseRunId": "f5a1cd8e-0f3e-4c8c-b590-87f4c35bc486",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:16:01.041987400+07:00",
+      "endedAt": "2026-11-02T02:18:03.712085300+07:00",
+      "durationSeconds": 122.67,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_VerifyDetails_01/rf5a1cd8e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_History_01",
+      "caseRunId": "b834de3d-9ac5-40bf-b373-a3b3c24e4023",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:18:04.400781600+07:00",
+      "endedAt": "2026-11-02T02:19:42.009781800+07:00",
+      "durationSeconds": 97.609,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_History_01/rb834de3d/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_History_02",
+      "caseRunId": "a8c94096-0aa7-41d1-9138-0f6660b1b52d",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:19:42.744762600+07:00",
+      "endedAt": "2026-11-02T02:22:23.533776400+07:00",
+      "durationSeconds": 160.789,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_History_02/ra8c94096/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_History_03",
+      "caseRunId": "c1b836d0-df07-4c07-9f0e-6227d1467465",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:22:24.218316400+07:00",
+      "endedAt": "2026-11-02T02:25:04.320027700+07:00",
+      "durationSeconds": 160.101,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_History_03/rc1b836d0/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_FLOW_History_04",
+      "caseRunId": "07d336b4-c8b8-422c-869c-078c17fc4f15",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-02T02:25:05.068836900+07:00",
+      "endedAt": "2026-11-02T02:29:16.999764400+07:00",
+      "durationSeconds": 251.93,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_FLOW_History_04/r07d336b4/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    }
+  ],
+  "limitations": [
+    "Supplementary listener report; retain the official Katalon report and console separately.",
+    "Katalon version is unknown unless recorded by the official report."
+  ],
+  "caseStartedAt": "2026-11-02T02:25:05.068836900+07:00",
+  "lifecycle": "FINISHED",
+  "summary": {
+    "PASSED": 23,
+    "FAILED": 0,
+    "ERROR": 2,
+    "SKIPPED": 0,
+    "INCOMPLETE": 0,
+    "UNKNOWN": 0,
+    "NOT_EXECUTED": 0
+  }
+}

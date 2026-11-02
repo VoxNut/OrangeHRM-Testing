@@ -5,7 +5,7 @@ import java.security.MessageDigest
 
 /** Observational only. Every mutable field lives in ExecutionContext. */
 class EvidenceCapture {
-    static final File ROOT=ExecutionContext.EVIDENCE_ROOT
+    static File getROOT() { ExecutionContext.getEVIDENCE_ROOT() }
     static String getSuiteId() { ExecutionContext.peek()?.suiteId ?: '' }
     static String getRunId() { ExecutionContext.peek()?.executionId ?: '' }
     static Map getCurrent() { ExecutionContext.peek()?.evidence ?: [:] }
@@ -16,7 +16,7 @@ class EvidenceCapture {
         ExecutionContext c=ExecutionContext.current(); c.fixtureDepth++
         try { return action.call() } finally { c.fixtureDepth-- }
     }
-    static String stamp() { java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern('yyyyMMdd_HHmmss_SSS'))+'_'+UUID.randomUUID().toString() }
+    static String stamp() { java.time.LocalTime.now().format(java.time.format.DateTimeFormatter.ofPattern('HHmmss')) }
     static void startSuite(String id) {
         if (!ExecutionContext.peek()) ExecutionContext.start(id,true)
     }
@@ -26,7 +26,12 @@ class EvidenceCapture {
     }
     static void startCase(String id) {
         ExecutionContext c=ExecutionContext.current();c.beginCase(id)
-        c.evidenceFolder=new File(c.evidenceRoot,c.module+'_'+c.executionId+'/screenshots/'+c.caseId+'/'+c.caseRunId)
+        c.evidenceFolder=new File(c.evidenceDirectory(),c.caseId+'/r'+c.caseRunId.take(8))
+        if (!c.evidenceFolder.mkdirs()) {
+            c.evidenceFolder=null;c.evidence=[:]
+            println('[EVIDENCE UNAVAILABLE] Case output directory already exists or cannot be created')
+            return
+        }
         c.evidence=[suiteId:c.suiteId ?: 'STANDALONE',caseId:c.caseId,runId:c.executionId,executionId:c.executionId,
             caseRunId:c.caseRunId,processId:c.processId,workerId:c.workerId,timestamp:java.time.OffsetDateTime.now().toString(),
             finalResult:null,checkpoints:[]]
@@ -71,13 +76,14 @@ class EvidenceCapture {
             // Guard a navigation to Login occurring while the screenshot command was in flight.
             if (!safePage(d.currentUrl,!d.findElements(By.cssSelector('input[type=password]')).empty)) return
             String label=checkpointLabel(phase,terminal && c.evidence.finalResult in ['FAILED','ERROR'])
-            File target=new File(c.evidenceFolder,stamp()+'_'+label+'.png')
+            String shortLabel=terminal ? label.take(12) : kind=='before' ? 'BEFORE' : kind=='after' ? 'AFTER' : 'CHECK'
+            File target=new File(c.evidenceFolder,stamp()+'_'+String.format('%03d',rows.size()+1)+'_'+shortLabel+'.png')
             AtomicFiles.bytes(target,bytes,false)
             String browser=d instanceof HasCapabilities ? ((HasCapabilities)d).capabilities.browserName : d.class.simpleName
             URI u=new URI(url)
             rows << [timestamp:java.time.OffsetDateTime.now().toString(),browser:browser,url:u.scheme+'://'+u.host+u.path,
                 checkpoint:phase,kind:kind,expected:expectedFor(c.caseId),observed:[phase:phase,url:u.path,assertions:'Final result supplied by Katalon AfterTestCase'],elapsedMs:(System.nanoTime()-started).intdiv(1000000L),
-                screenshotPath:target.absolutePath,sha256:MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString()]
+                screenshotPath:target.name,sha256:MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString()]
         } catch(Throwable unavailable) { println('[EVIDENCE UNAVAILABLE] '+unavailable.class.simpleName) }
     }
     static void failure(Throwable error,String phase) {

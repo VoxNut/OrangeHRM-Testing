@@ -1,0 +1,33 @@
+[PERFORMANCE] {"caseId":"RECRUIT_VAC_Create_01","phase":"AUTOCOMPLETE","operationId":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2:1","instrumentationScope":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2","startEpochMs":1793595694919,"elapsedMs":710,"outcome":"OK"}
+[PERFORMANCE] {"caseId":"RECRUIT_VAC_Create_01","phase":"AUTOCOMPLETE","operationId":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2:2","instrumentationScope":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2","startEpochMs":1793595695654,"elapsedMs":216,"outcome":"OK"}
+[PERFORMANCE] {"caseId":"RECRUIT_VAC_Create_01","phase":"AUTOCOMPLETE","operationId":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2:3","instrumentationScope":"recorder:874156ef-c7d0-4a29-8dc0-fae7a253dbb2","startEpochMs":1793595695874,"elapsedMs":4,"outcome":"ERROR"}
+[PERFORMANCE] {"caseId":"RECRUIT_VAC_Create_01","phase":"AUTOCOMPLETE","operationId":"recorder:26b6db99-e96b-4819-8878-14eefcfb30d1:1","instrumentationScope":"recorder:26b6db99-e96b-4819-8878-14eefcfb30d1","startEpochMs":1793595695886,"elapsedMs":233,"outcome":"OK"}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":1,"startEpochMs":1793595696200,"elapsedMs":362,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":2,"startEpochMs":1793595696567,"elapsedMs":236,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":3,"startEpochMs":1793595696841,"elapsedMs":18,"outcome":"ERROR","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":4,"startEpochMs":1793595696863,"elapsedMs":9,"outcome":"ERROR","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":5,"startEpochMs":1793595696875,"elapsedMs":13,"outcome":"ERROR","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+[PERFORMANCE] {"caseId":"RECRUIT_FLOW_SelectInterviewer_02","phase":"INTERVIEWER_AUTOCOMPLETE","operationId":1,"startEpochMs":1793595696953,"elapsedMs":223,"outcome":"OK","counters":{"navigation":0,"vacancyFixtures":0,"candidateFixtures":0,"retries":0,"timeouts":0,"browserStarts":0},"diagnosticWriteMs":0}
+
+Caught: Assertion failed: 
+
+assert label=='Add another'
+       |    |
+       |    false
+       'Add Another'
+
+Assertion failed: 
+
+assert label=='Add another'
+       |    |
+       |    false
+       'Add Another'
+
+	at RepairFill.buttonClick(check_frontend_repair_offline.groovy:127)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks$fillInterview$1.call(Unknown Source)
+	at check_frontend_repair_offline.run(check_frontend_repair_offline.groovy:192)
+	at RunCheck.run(RunCheck.groovy:6)

@@ -1,0 +1,19 @@
+FLOW DOM PASS 1: complete original profile proves exact identity/status/allowed native action
+FLOW DOM PASS 2: changed first is rejected
+FLOW DOM PASS 3: missing first is rejected
+FLOW DOM PASS 4: ambiguous first is rejected
+FLOW DOM PASS 5: changed last is rejected
+FLOW DOM PASS 6: missing last is rejected
+FLOW DOM PASS 7: ambiguous last is rejected
+FLOW DOM PASS 8: changed email is rejected
+FLOW DOM PASS 9: missing email is rejected
+FLOW DOM PASS 10: ambiguous email is rejected
+FLOW DOM PASS 11: wrong persisted workflow status is rejected
+FLOW DOM PASS 12: missing status is rejected
+FLOW DOM PASS 13: disabled Schedule action is rejected
+FLOW DOM PASS 14: hidden Schedule action is rejected
+FLOW DOM PASS 15: missing Schedule action is rejected
+FLOW DOM PASS 16: ambiguous Schedule action is rejected
+FLOW DOM PASS 17: no DOM click or fetch exists in the read-only profile proof
+FLOW DOM OFFLINE PASS 17; no browser/API execution
+

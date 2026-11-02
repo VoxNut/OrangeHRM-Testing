@@ -1,0 +1,59 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "99N75 425 5TlV",
+    "verifiedLabel": "99N75 425 5TlV",
+    "submitted": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_CancelUpdate_01",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "67cc6945-09de-4638-8f83-06c7430a1789",
+    "name": "G01_23130299_94883605b8565cb351cc_23_V25",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": false,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_CancelUpdate_01",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "67cc6945-09de-4638-8f83-06c7430a1789",
+    "name": "G01_23130299_94883605b8565cb351cc_23_V25",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": true,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_CancelUpdate_01",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "name": "G01_23130299_94883605b8565cb351cc_23_V25",
+    "numericId": "55",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/55",
+    "state": "observed",
+    "submitted": true,
+    "observed": true,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_CancelUpdate_01",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  }
+]

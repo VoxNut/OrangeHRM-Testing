@@ -1,0 +1,5 @@
+
+Caught: java.io.FileNotFoundException: C:\Users\Admin\AppData\Local\Temp\asm7-passed35-59hqdgu4\unavailable-historical.xml (The system cannot find the file specified)
+java.io.FileNotFoundException: C:\Users\Admin\AppData\Local\Temp\asm7-passed35-59hqdgu4\unavailable-historical.xml (The system cannot find the file specified)
+	at check_performance_offline.run(check_performance_offline.groovy:16)
+	at RunCheck.run(RunCheck.groovy:6)

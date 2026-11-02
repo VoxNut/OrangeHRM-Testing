@@ -1,0 +1,6 @@
+AUDIT75 PURE PASS: suite breaker/reset; URL/password exclusion; unavailable evidence context; inherited hit-test dispatch waits for clear stable geometry then one native click. No browser.
+[EVIDENCE UNAVAILABLE] No browser owned by this execution
+[EVIDENCE UNAVAILABLE] No browser owned by this execution
+[EVIDENCE UNAVAILABLE] No browser owned by this execution
+EVIDENCE PASS: unavailable real DriverFactory does not launch browser or write PNG; final ERROR manifest and sanitized exception retained.
+

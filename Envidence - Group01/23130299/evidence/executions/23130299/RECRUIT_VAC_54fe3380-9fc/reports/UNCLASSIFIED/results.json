@@ -1,0 +1,484 @@
+{
+  "kind": "KATALON_CALLBACK_DERIVED",
+  "module": "RECRUIT_VAC",
+  "suiteName": "Test Suites/RECRUIT_VAC_25_ASC_001_TO_025",
+  "executionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+  "runKind": "UNCLASSIFIED",
+  "startedAt": "2026-11-01T14:26:29.351650400+07:00",
+  "endedAt": "2026-11-01T14:47:26.202157300+07:00",
+  "durationSeconds": 1256.85,
+  "environment": {
+    "os": "Windows 11",
+    "java": "21.0.12"
+  },
+  "integrationState": "ASM8_INTEGRATION_DEFERRED",
+  "expectedCaseIds": [
+    "RECRUIT_VAC_Create_01",
+    "RECRUIT_VAC_Create_02",
+    "RECRUIT_VAC_Create_03",
+    "RECRUIT_VAC_Create_04",
+    "RECRUIT_VAC_Create_05",
+    "RECRUIT_VAC_Create_06",
+    "RECRUIT_VAC_Create_07",
+    "RECRUIT_VAC_Create_08",
+    "RECRUIT_VAC_Create_09",
+    "RECRUIT_VAC_Create_10",
+    "RECRUIT_VAC_Create_11",
+    "RECRUIT_VAC_Create_12",
+    "RECRUIT_VAC_Create_13",
+    "RECRUIT_VAC_Create_14",
+    "RECRUIT_VAC_Update_01",
+    "RECRUIT_VAC_Search_01",
+    "RECRUIT_VAC_Search_02",
+    "RECRUIT_VAC_Search_03",
+    "RECRUIT_VAC_Filter_01",
+    "RECRUIT_VAC_Filter_02",
+    "RECRUIT_VAC_Reset_01",
+    "RECRUIT_VAC_Update_02",
+    "RECRUIT_VAC_Update_03",
+    "RECRUIT_VAC_CancelCreate_01",
+    "RECRUIT_VAC_CancelUpdate_01"
+  ],
+  "cases": [
+    {
+      "caseId": "RECRUIT_VAC_Create_01",
+      "caseRunId": "ef8777ee-8ceb-4a7d-ab43-06b4bdf95a06",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:26:30.580263600+07:00",
+      "endedAt": "2026-11-01T14:27:45.401823+07:00",
+      "durationSeconds": 74.821,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_01/ref8777ee/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_02",
+      "caseRunId": "d58503c8-df6c-4cb0-844d-27de20e8a8cd",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:27:46.110374200+07:00",
+      "endedAt": "2026-11-01T14:28:23.799278500+07:00",
+      "durationSeconds": 37.688,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_02/rd58503c8/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_03",
+      "caseRunId": "d680bb4b-43ad-4502-b3dc-690e560abd96",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:28:24.468292+07:00",
+      "endedAt": "2026-11-01T14:28:59.352719200+07:00",
+      "durationSeconds": 34.884,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_03/rd680bb4b/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_04",
+      "caseRunId": "5622bfa5-00ac-4d29-9e33-07c541045f31",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:29:00.019028400+07:00",
+      "endedAt": "2026-11-01T14:29:24.459912500+07:00",
+      "durationSeconds": 24.44,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_04/r5622bfa5/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_05",
+      "caseRunId": "f511d094-5032-44e8-aab6-382f7ed69e10",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:29:25.113958400+07:00",
+      "endedAt": "2026-11-01T14:29:55.112827500+07:00",
+      "durationSeconds": 29.998,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_05/rf511d094/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_06",
+      "caseRunId": "f28bb31e-d7f9-44ee-b321-187421a933a1",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:29:55.810752200+07:00",
+      "endedAt": "2026-11-01T14:30:15.565734900+07:00",
+      "durationSeconds": 19.754,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_06/rf28bb31e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_07",
+      "caseRunId": "4679b84e-f059-4fe4-a109-315712d75549",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:30:16.257390100+07:00",
+      "endedAt": "2026-11-01T14:30:51.471905300+07:00",
+      "durationSeconds": 35.214,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_07/r4679b84e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_08",
+      "caseRunId": "cdcfaba6-8baa-4470-b4b6-4a33366061ba",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:30:52.168595200+07:00",
+      "endedAt": "2026-11-01T14:31:25.910971600+07:00",
+      "durationSeconds": 33.742,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_08/rcdcfaba6/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_09",
+      "caseRunId": "40a5f33e-f04c-46f9-9ff0-eb865fe65c61",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:31:26.592264800+07:00",
+      "endedAt": "2026-11-01T14:32:01.380772400+07:00",
+      "durationSeconds": 34.788,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_09/r40a5f33e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_10",
+      "caseRunId": "a646765d-bc7a-4f03-b05b-3e05fa567204",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:32:02.048330+07:00",
+      "endedAt": "2026-11-01T14:32:36.996195800+07:00",
+      "durationSeconds": 34.947,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_10/ra646765d/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_11",
+      "caseRunId": "8b9d63e6-c2bb-480b-97a7-4454db92d40e",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:32:37.674596300+07:00",
+      "endedAt": "2026-11-01T14:33:13.250110200+07:00",
+      "durationSeconds": 35.575,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_11/r8b9d63e6/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_12",
+      "caseRunId": "ba22aee9-655b-4c63-9321-db51d944993e",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:33:13.904203700+07:00",
+      "endedAt": "2026-11-01T14:33:48.413717+07:00",
+      "durationSeconds": 34.509,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_12/rba22aee9/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_13",
+      "caseRunId": "1a3856e1-4970-40b2-9167-71063b6b2eb9",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:33:49.100061200+07:00",
+      "endedAt": "2026-11-01T14:34:27.994098200+07:00",
+      "durationSeconds": 38.894,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_13/r1a3856e1/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Create_14",
+      "caseRunId": "b550a831-871d-4bf5-a83e-b80557ddd1f3",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:34:28.658669300+07:00",
+      "endedAt": "2026-11-01T14:35:07.275750300+07:00",
+      "durationSeconds": 38.617,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Create_14/rb550a831/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Update_01",
+      "caseRunId": "0a938fe2-f826-4ba5-ae04-eaffff32ca57",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:35:07.957625600+07:00",
+      "endedAt": "2026-11-01T14:36:33.011502700+07:00",
+      "durationSeconds": 85.053,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Update_01/r0a938fe2/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Search_01",
+      "caseRunId": "6b18c301-b369-43bf-8ebf-56d97a7ba31b",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:36:33.722553300+07:00",
+      "endedAt": "2026-11-01T14:37:36.111540400+07:00",
+      "durationSeconds": 62.388,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Search_01/r6b18c301/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Search_02",
+      "caseRunId": "c9375639-c14b-411c-a164-b3aa50522632",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:37:36.867457300+07:00",
+      "endedAt": "2026-11-01T14:38:55.430722200+07:00",
+      "durationSeconds": 78.563,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Search_02/rc9375639/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Search_03",
+      "caseRunId": "3406b3a3-9049-47ca-812c-08b7e8609824",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:38:56.176098600+07:00",
+      "endedAt": "2026-11-01T14:39:43.148952400+07:00",
+      "durationSeconds": 46.972,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Search_03/r3406b3a3/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Filter_01",
+      "caseRunId": "bd59c318-75de-4bcf-885e-d3b73c39c6cf",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:39:43.856787900+07:00",
+      "endedAt": "2026-11-01T14:41:17.033549300+07:00",
+      "durationSeconds": 93.176,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Filter_01/rbd59c318/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Filter_02",
+      "caseRunId": "24db4656-ba14-4df6-b1a9-d2d311cdc35c",
+      "result": "ERROR",
+      "rawKatalonResult": "ERROR",
+      "startedAt": "2026-11-01T14:41:17.755802200+07:00",
+      "endedAt": "2026-11-01T14:41:25.158915900+07:00",
+      "durationSeconds": 7.403,
+      "message": "Test Cases/RECRUIT_VAC/RECRUIT_VAC_Filter_02 FAILED.\nReason:\njava.lang.IllegalStateException: [BLOCKED / WORKBOOK-UI MISMATCH] REQUIREMENT_DISCREPANCY: RECRUIT_VAC_Filter_02 requires searching nonexistent Vacancy [VAC_NOT_EXIST_26c1d9385020]. Supplied viewJobVacancy.html and app.js use VacancyDropdown (select by existing id); no free-text Vacancy filter exists. No substitute fixture, incompatible Job Title or synthetic option was used. Requires an approved workbook/UI resolution; No Records Found remains unverified.\r\n\tat recruitment.VacancyChecks.searchMissingVacancy(VacancyChecks.groovy:414)\r\n\tat Script20261023080000.run(Script20261023080000.groovy:9)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1101_3.run(S1101_3.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "stackTrace": "Test Cases/RECRUIT_VAC/RECRUIT_VAC_Filter_02 FAILED.\nReason:\njava.lang.IllegalStateException: [BLOCKED / WORKBOOK-UI MISMATCH] REQUIREMENT_DISCREPANCY: RECRUIT_VAC_Filter_02 requires searching nonexistent Vacancy [VAC_NOT_EXIST_26c1d9385020]. Supplied viewJobVacancy.html and app.js use VacancyDropdown (select by existing id); no free-text Vacancy filter exists. No substitute fixture, incompatible Job Title or synthetic option was used. Requires an approved workbook/UI resolution; No Records Found remains unverified.\r\n\tat recruitment.VacancyChecks.searchMissingVacancy(VacancyChecks.groovy:414)\r\n\tat Script20261023080000.run(Script20261023080000.groovy:9)\r\n\tat com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)\r\n\tat com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)\r\n\tat com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)\r\n\tat com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)\r\n\tat com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)\r\n\tat com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)\r\n\tat S1101_3.run(S1101_3.groovy:41)\r\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\r\n",
+      "configurationState": "READY",
+      "executionState": "ERROR",
+      "evidence": [
+        "RECRUIT_VAC_Filter_02/r24db4656/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Reset_01",
+      "caseRunId": "073b2227-8e00-429f-8017-4005efe0ef3d",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:41:25.921697400+07:00",
+      "endedAt": "2026-11-01T14:43:14.497642900+07:00",
+      "durationSeconds": 108.575,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Reset_01/r073b2227/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Update_02",
+      "caseRunId": "1bf93815-2b4c-4593-ae12-e154de3987f4",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:43:15.361522900+07:00",
+      "endedAt": "2026-11-01T14:44:19.870256700+07:00",
+      "durationSeconds": 64.508,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Update_02/r1bf93815/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_Update_03",
+      "caseRunId": "23e6c9a6-c726-4b0f-9345-6dd4d1990fa5",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:44:20.661111500+07:00",
+      "endedAt": "2026-11-01T14:45:42.524309+07:00",
+      "durationSeconds": 81.863,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_Update_03/r23e6c9a6/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_CancelCreate_01",
+      "caseRunId": "84387598-2e47-46c0-8b19-6422e26d34e5",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:45:43.224447600+07:00",
+      "endedAt": "2026-11-01T14:46:29.920417600+07:00",
+      "durationSeconds": 46.695,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_CancelCreate_01/r84387598/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_VAC_CancelUpdate_01",
+      "caseRunId": "29388486-9f40-44ce-b2ee-a3bd3a779229",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T14:46:30.605842100+07:00",
+      "endedAt": "2026-11-01T14:47:24.742857+07:00",
+      "durationSeconds": 54.137,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_VAC_CancelUpdate_01/r29388486/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    }
+  ],
+  "limitations": [
+    "Supplementary listener report; retain the official Katalon report and console separately.",
+    "Katalon version is unknown unless recorded by the official report."
+  ],
+  "caseStartedAt": "2026-11-01T14:46:30.605842100+07:00",
+  "lifecycle": "FINISHED",
+  "summary": {
+    "PASSED": 24,
+    "FAILED": 0,
+    "ERROR": 1,
+    "SKIPPED": 0,
+    "INCOMPLETE": 0,
+    "UNKNOWN": 0,
+    "NOT_EXECUTED": 0
+  }
+}

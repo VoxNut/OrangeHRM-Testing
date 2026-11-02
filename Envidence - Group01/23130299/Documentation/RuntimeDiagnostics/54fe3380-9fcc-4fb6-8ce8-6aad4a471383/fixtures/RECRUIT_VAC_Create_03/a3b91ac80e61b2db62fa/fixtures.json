@@ -1,0 +1,44 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "99N75 425 5TlV",
+    "verifiedLabel": "99N75 425 5TlV",
+    "submitted": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_03",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "e032c3a2-ef82-44c8-b157-9d7b963e23d8",
+    "name": "G01_23130299_a3b91ac80e61b2db62fa_3_V03",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": false,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_03",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  },
+  {
+    "attemptId": "e032c3a2-ef82-44c8-b157-9d7b963e23d8",
+    "name": "G01_23130299_a3b91ac80e61b2db62fa_3_V03",
+    "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+    "state": "submitted",
+    "submitted": true,
+    "observed": false,
+    "verified": false,
+    "uncertain": false,
+    "ownerExecutionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+    "caseId": "RECRUIT_VAC_Create_03",
+    "processId": 50836,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_54fe3380-9fcc-4fb6-8ce8-6aad4a471383"
+  }
+]

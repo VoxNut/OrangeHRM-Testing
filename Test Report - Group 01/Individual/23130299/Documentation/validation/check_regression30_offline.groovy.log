@@ -1,0 +1,2 @@
+REGRESSION30 OFFLINE PASS: nonexclusive context facade; auth isolation/reset/circuit; inherited atomic Save snapshot with stale read; one-submit/uncertain/no-toast proof; unrelated errors preserved; locator reacquisition; observed Vacancy ID retained without false persistence. No browser/network/TC execution.
+
