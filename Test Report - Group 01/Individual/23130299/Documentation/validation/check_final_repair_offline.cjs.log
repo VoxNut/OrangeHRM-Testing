@@ -1,9 +1,0 @@
-FINAL JS PASS 1: actual production snapshot maps nested FullNameInput error to lastName, binding and source limit
-FINAL JS PASS 2: first/middle/last field-level limits all come from candidate source, no raw names/emails logged
-FINAL JS PASS 3: unknown field and unrelated form cannot inherit a guessed 30 character limit
-FINAL JS PASS 4: no validation and success toast keep the normal snapshot contract
-FINAL JS PASS 5: actual transport succeeds in legitimate same-origin action document
-FINAL JS PASS 6: Chrome error document with retained WebDriver target URL rejects before GET and records effective origin
-FINAL JS PASS 7: foreign document origin still rejected without network
-FINAL JS OFFLINE PASS: 7 groups; actual production scripts; no network/browser
-

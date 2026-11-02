@@ -1,2 +1,0 @@
-REFERENCE DOM PASS: real supplied four rendered snapshots, exact scoped Vacancy fields/selects/switches, Candidate fields/file hint/Reset/date filters. Dropdown open/closed state is snapshot-only; no dynamic fixture data asserted.
-

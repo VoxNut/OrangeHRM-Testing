@@ -1,3 +1,0 @@
-RUNTIME DISPATCH OK: real CandidateChecks/WorkflowChecks constructors; inherited helper bodies exercised on offline descendants.
-NEGATIVE PRIVATE-PARENT + ACTUAL SOURCE MUTATIONS OK (enterCandidates/goInternal); actual helper closure/overload/runtime-dispatch checks OK; capture without listener context writes nothing and preserves original failures. Active screenshot path is NOT VERIFIED here. Browser integration NOT RUN.
-

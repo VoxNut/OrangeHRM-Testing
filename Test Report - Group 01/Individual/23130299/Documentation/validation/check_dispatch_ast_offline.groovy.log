@@ -1,2 +1,0 @@
-CLOSURE ACCESS AUDIT OK: all six helper sources, 350 closures; negative private-method/private-field fixture detected. Actual dynamic-dispatch harness also required.
-

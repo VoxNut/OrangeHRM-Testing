@@ -1,3 +1,0 @@
-NOT VERIFIED: historical list Download DOM capture unavailable; pure checks still execute.
-REMAINING11 OFFLINE PURE OK: actual autocomplete post-selection (blank/full middle, duplicate/wrong identity); Reset in-place/empty/loading; Update single-submit/fresh-read/re-auth/mismatch/uncertain; login classification. Historical Download DOM coverage depends on the explicit capture check above. Synthetic transport, browser integration NOT RUN.
-

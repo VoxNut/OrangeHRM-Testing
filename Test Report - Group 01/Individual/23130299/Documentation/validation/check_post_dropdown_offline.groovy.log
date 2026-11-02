@@ -1,3 +1,0 @@
-NOT VERIFIED: historical Candidate Profile DOM capture unavailable; pure checks still execute.
-OFFLINE POST-DROPDOWN PURE CHECKS OK: Candidate/Vacancy route separation; toast retained across loading; exact fields/mismatches; no second submit; ledger observed/identified/verified/uncertain; bounded dropdown reopen; scoped Email pattern; small-file versus exact-boundary rule. Historical DOM coverage depends on the explicit capture check above. No browser execution.
-

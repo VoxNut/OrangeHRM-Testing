@@ -1,2 +1,0 @@
-# Keep unchanged upstream harness bytes stable on Windows clones.
-*.groovy text eol=lf
