@@ -1,0 +1,302 @@
+{
+  "RECRUIT_VAC_Create_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN01; Job Title=QA Engineer; Hiring Manager=NVThangA101; Positions=1\n1. Vào Recruitment > Vacancies > Add.\n2. Điền tên, chọn QA Engineer, chọn NVThangA101 qua suggestion; Positions=1.\n3. Save, tìm VAC_RUN01 và mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Lưu thành công; hiển thị đúng tên, Job Title, Hiring Manager, Positions=1."
+  },
+  "RECRUIT_VAC_Create_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN02; QA Engineer; NVThangA101; Positions=3; Description=QA automation; Active=On; Publish=On\n1. Mở Add Vacancy.\n2. Điền tất cả các trường và bật hai checkbox.\n3. Save; tìm lại VAC_RUN02, mở edit.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Tên, mô tả, số lượng, manager, Active và Publish giữ đúng giá trị đã lưu."
+  },
+  "RECRUIT_VAC_Create_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN03; Job Title trống; Manager=NVThangA101\n1. Mở Add Vacancy; điền tên, manager và để Job Title rỗng.\n2. Bấm Save; kiểm tra lỗi và tìm tên.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Job Title hiện Required; VAC_RUN03 không được tạo."
+  },
+  "RECRUIT_VAC_Create_04": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name rỗng; QA Engineer; NVThangA101\n1. Mở Add Vacancy; chọn QA Engineer, NVThangA101 và để trống Name.\n2. Bấm Save; quan sát validation.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Vacancy Name hiện Required; không tạo vacancy."
+  },
+  "RECRUIT_VAC_Create_05": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN05; QA Engineer; Manager trống\n1. Mở Add Vacancy; điền Name và QA Engineer nhưng không chọn Manager.\n2. Bấm Save; kiểm tra lỗi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hiring Manager hiện Required; không lưu."
+  },
+  "RECRUIT_VAC_Create_06": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name='   '; QA Engineer; NVThangA101\n1. Mở Add Vacancy; nhập 3 dấu cách tại Name.\n2. Bấm Save, tìm bản ghi nếu cần.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không tạo được vacancy chỉ có khoảng trắng; có lỗi bắt buộc/không hợp lệ."
+  },
+  "RECRUIT_VAC_Create_07": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN07; gõ tiền tố NVThangA101, chọn suggestion chính xác\n1. Mở Add Vacancy, điền Name và QA Engineer.\n2. Gõ một phần NVThangA101, chọn đúng suggestion; Save.\n3. Mở lại bản ghi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Lưu đúng nhân viên từ suggestion, không phải chuỗi tên tự do."
+  },
+  "RECRUIT_VAC_Create_08": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN08; Positions=1\n1. Mở Add, nhập đủ trường và Positions=1.\n2. Save rồi mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Chấp nhận giá trị 1; Positions=1 sau reload."
+  },
+  "RECRUIT_VAC_Create_09": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN09; Positions=0\n1. Mở Add, nhập đủ trường và Positions=0.\n2. Save; xem validation và kiểm tra danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Positions=0 bị validation của form từ chối (giá trị hợp lệ khi có số là 1–99); không tạo VAC_RUN09."
+  },
+  "RECRUIT_VAC_Create_10": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN10; Positions=-1\n1. Mở Add, nhập đủ trường và -1 vào Positions.\n2. Save; quan sát lỗi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không lưu số âm; UI chặn hoặc hiển thị lỗi."
+  },
+  "RECRUIT_VAC_Create_11": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN11; Positions='abc'\n1. Mở Add, điền Name/QA Engineer/NVThangA101.\n2. Nhập hoặc paste 'abc' vào Positions; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Chỉ chấp nhận số; chuỗi 'abc' bị chặn hoặc báo Invalid; không lưu 'abc'."
+  },
+  "RECRUIT_VAC_Create_12": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN12; Active=On; Publish=Off\n1. Mở Add, điền đủ trường.\n2. Bật Active, tắt Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Active bật và Publish tắt sau reload."
+  },
+  "RECRUIT_VAC_Create_13": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN13; Active=Off; Publish=Off\n1. Mở Add, nhập đủ trường.\n2. Tắt Active và Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Active vẫn tắt sau reload."
+  },
+  "RECRUIT_VAC_Create_14": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN14; Active=On; Publish=On\n1. Mở Add, nhập đủ trường.\n2. Bật Active và Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hai checkbox giữ trạng thái On; không suy diễn về cổng tuyển dụng ngoài demo."
+  },
+  "RECRUIT_VAC_Update_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Active=On→Off→On\n1. Mở VAC_EDIT (Active=On).\n2. Đổi Off, Save và reload.\n3. Đổi lại On, Save và reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Mỗi lần reload phản ánh trạng thái đã lưu; các trường khác không đổi."
+  },
+  "RECRUIT_VAC_Search_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer; VAC_FILTER_A thuộc QA Engineer\n1. Vào Vacancies; chọn Job Title=QA Engineer, Search.\n2. Kiểm tra tên và Job Title trên từng dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer."
+  },
+  "RECRUIT_VAC_Search_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: NVThangA101; VAC_FILTER_A thuộc NVThangA101\n1. Mở Vacancies, chọn Manager=NVThangA101, Search.\n2. Kiểm tra danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "VAC_FILTER_A xuất hiện; các dòng có manager phù hợp."
+  },
+  "RECRUIT_VAC_Search_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_FILTER_A\n1. Mở Vacancies, nhập/chọn đúng Vacancy Name=VAC_FILTER_A.\n2. Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Có VAC_FILTER_A, không có VAC_FILTER_B."
+  },
+  "RECRUIT_VAC_Filter_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer + NVThangA101\n1. Mở Vacancies; chọn QA Engineer và NVThangA101.\n2. Search; đối chiếu mỗi dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Chỉ có vacancy thỏa đồng thời hai điều kiện."
+  },
+  "RECRUIT_VAC_Filter_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_NOT_EXIST_RUN\n1. Tìm tên vacancy được bảo đảm chưa tồn tại.\n2. Search; quan sát bảng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không có kết quả hoặc hiển thị No Records Found; không hiện dữ liệu khác."
+  },
+  "RECRUIT_VAC_Reset_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer + NVThangA101\n1. Áp dụng hai bộ lọc, Search.\n2. Nhấn Reset.\n3. Kiểm tra input và danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Bộ lọc về mặc định; danh sách trở về trạng thái không lọc."
+  },
+  "RECRUIT_VAC_Update_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Description cũ→'Description updated RUN'\n1. Ghi baseline của VAC_EDIT; mở edit.\n2. Đổi Description, Save.\n3. Reload, đối chiếu.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Description mới được lưu chính xác; field còn lại giữ baseline."
+  },
+  "RECRUIT_VAC_Update_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Positions=4; NNLinhB201\n1. Mở VAC_EDIT; chỉnh Positions=4, chọn NNLinhB201.\n2. Save rồi reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Positions=4 và Hiring Manager=MANAGER_B sau tải lại."
+  },
+  "RECRUIT_VAC_CancelCreate_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_CANCEL_RUN; QA Engineer; NVThangA101\n1. Mở Add, điền đầy đủ và chưa Save.\n2. Nhấn Cancel, trở lại danh sách.\n3. Tìm VAC_CANCEL_RUN.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không tạo bản ghi VAC_CANCEL_RUN."
+  },
+  "RECRUIT_VAC_CancelUpdate_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Name tạm='VAC_UNSAVED_RUN'\n1. Ghi baseline; mở edit và đổi Name.\n2. Nhấn Cancel trước Save.\n3. Mở lại VAC_EDIT.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Name và trường khác vẫn đúng baseline; không xuất hiện tên tạm."
+  },
+  "RECRUIT_CAND_Create_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN01; Email=an.run01@example.com; Vacancy=VAC_A\n1. Vào Recruitment > Candidates > Add.\n2. Nhập First, Last, Email và chọn VAC_A.\n3. Save và ghi lại Candidate ID; mở lại hồ sơ để xác minh dữ liệu đã lưu.\n4. Trở lại Candidates; tìm bằng Candidate Name, chọn đúng gợi ý, Search, mở đúng hồ sơ theo fixture/ID và đối chiếu Email với input (không tìm theo Email ở bộ lọc list).\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Tạo được ứng viên; tên, email và vacancy đúng input."
+  },
+  "RECRUIT_CAND_Create_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=Minh; Middle=Quang; Last=TranRUN02; Email=minh.run02@example.com; Phone=0900000002; Keywords=java,qa; Notes=demo; VAC_A\n1. Mở Add Candidate; nhập đủ dữ liệu và chọn VAC_A.\n2. Ghi nhận trạng thái checkbox Consent to keep data (không phải trường bắt buộc); Save.\n3. Mở hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Lưu đúng tên đầy đủ, email, phone, vacancy, keyword và notes."
+  },
+  "RECRUIT_CAND_Create_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First rỗng; Last=NguyenRUN03; Email=run03@example.com\n1. Mở Add Candidate, nhập Last và Email; First để rỗng.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "First Name báo Required; hồ sơ không được tạo."
+  },
+  "RECRUIT_CAND_Create_04": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last rỗng; Email=run04@example.com\n1. Mở Add Candidate, nhập First/Email; Last để rỗng.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Last Name báo Required; hồ sơ không được tạo."
+  },
+  "RECRUIT_CAND_Create_05": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN05; Email rỗng\n1. Mở Add Candidate, nhập First/Last, xóa Email.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Email báo Required; hồ sơ không được tạo."
+  },
+  "RECRUIT_CAND_Create_06": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN06; Email=run06@example.com; Vacancy rỗng\n1. Mở Add Candidate, điền First/Last/Email.\n2. Để trống Vacancy (không có rule Required trong Add Candidate); Save; mở lại hồ sơ nếu server chấp nhận.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Trường Vacancy không báo Required ở frontend; nếu server lưu thành công, hồ sơ mở lại có Vacancy trống. Ghi nhận riêng kết quả backend khi chạy thực tế."
+  },
+  "RECRUIT_CAND_Create_07": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN07; Email=run07@example.com; Consent=On\n1. Mở Add Candidate, nhập thông tin bắt buộc.\n2. Bật checkbox Consent to keep data (form Add Candidate thực sự có trường này).\n3. Save, mở lại Candidate Profile và đối chiếu trạng thái consent được lưu.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Candidate được lưu; Consent to keep data vẫn bật sau khi mở lại hồ sơ đúng Candidate ID."
+  },
+  "RECRUIT_CAND_Create_08": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality.run08@example.com\n1. Add ứng viên tên riêng hợp lệ với email hợp lệ.\n2. Save; lấy Candidate ID, mở lại đúng Profile và xác minh Email bằng giá trị input.\n3. Nếu kiểm tra list, tìm bằng Candidate Name + xác minh ID; không dùng Email filter.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Email hợp lệ được lưu nguyên vẹn trong Candidate Profile sau khi mở lại đúng Candidate ID; không yêu cầu bộ lọc Email."
+  },
+  "RECRUIT_CAND_Create_09": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality.example.com\n1. Add ứng viên với First/Last hợp lệ; nhập Email thiếu @.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Email báo invalid; không tạo hồ sơ."
+  },
+  "RECRUIT_CAND_Create_10": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality@\n1. Add ứng viên với First/Last hợp lệ; nhập Email=quality@.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Email báo invalid; không tạo hồ sơ."
+  },
+  "RECRUIT_CAND_Create_11": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Phone='abcXYZ'; Email=run11@example.com\n1. Add hồ sơ với tên và email hợp lệ, Phone=abcXYZ.\n2. Nhập Phone=abcXYZ, thử Save; xác minh lỗi validation tại Contact Number và không có hồ sơ mới.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'."
+  },
+  "RECRUIT_CAND_Create_12": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Phone=0900000012; Email=run12@example.com\n1. Add hồ sơ với First/Last/Email; nhập Phone=0900000012.\n2. Save, reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Contact Number giữ đúng '0900000012' và không mất số 0 đầu."
+  },
+  "RECRUIT_CAND_UploadCV_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.pdf; dung lượng <CV_LIMIT\n1. Chuẩn bị file PDF hợp lệ.\n2. Add Candidate; nhập đủ trường và chọn CV.\n3. Save rồi mở hồ sơ, đọc tên file.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "CV được đính kèm đúng tên và có thể mở/tải theo quyền của demo."
+  },
+  "RECRUIT_CAND_UploadCV_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.docx; dung lượng <CV_LIMIT\n1. Chuẩn bị DOCX hợp lệ.\n2. Add Candidate và upload file.\n3. Save; mở chi tiết hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "CV DOCX được đính kèm và hiển thị đúng tên."
+  },
+  "RECRUIT_CAND_UploadCV_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.exe; dung lượng nhỏ\n1. Add Candidate với thông tin hợp lệ.\n2. Chọn resume_run.exe; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hệ thống từ chối định dạng không hỗ trợ; không lưu tệp .exe."
+  },
+  "RECRUIT_CAND_UploadCV_04": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_oversize.pdf; dung lượng đúng maxFileSize+1 byte sau khi xác minh maxFileSize numeric trong cấu hình render Add Candidate.\n1. Xác minh giá trị maxFileSize (byte) từ cấu hình trang/component Add Candidate; đối chiếu nhãn dung lượng hiển thị, không suy ra chỉ từ '1 MB'. Nếu thiếu giá trị numeric thì ghi Needs verification, chưa chạy phép thử biên.\n2. Add Candidate, chọn PDF có kích thước maxFileSize+1 byte; thử Save và xác minh lỗi tại Resume; không phát sinh attachment quá cỡ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "File Resume > maxFileSize (byte) bị từ chối bằng validation của file-upload; không lưu attachment quá giới hạn. Phải xác minh maxFileSize thực tế trước khi chạy test biên."
+  },
+  "RECRUIT_CAND_UploadCV_05": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Chọn resume_run.pdf rồi hủy/tắt form, tạo hồ sơ mới không file\n1. Mở Add, chọn CV hợp lệ nhưng chưa Save.\n2. Cancel/đóng form.\n3. Mở Add lại, tạo ứng viên khác không file.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không có CV của lần thao tác hủy trong hồ sơ mới; không phát sinh ứng viên lần đầu."
+  },
+  "RECRUIT_CAND_Filter_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: VAC_A; CAND_FILTER_A thuộc VAC_A\n1. Vào Recruitment > Candidates.\n2. Chọn Vacancy=VAC_A; Search.\n3. Đối chiếu các dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "CAND_FILTER_A xuất hiện; kết quả thuộc VAC_A."
+  },
+  "RECRUIT_CAND_Search_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Tên chính xác CAND_FILTER_A\n1. Mở Candidates; gõ tên, chọn đúng suggestion nếu được yêu cầu.\n2. Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hiện CAND_FILTER_A, không lẫn CAND_FILTER_B khác tên."
+  },
+  "RECRUIT_CAND_Filter_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Keyword='run_keyword_a' trên CAND_FILTER_A\n1. Mở Candidates; nhập Keywords=run_keyword_a; Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hiện ứng viên có keyword phù hợp, gồm CAND_FILTER_A."
+  },
+  "RECRUIT_CAND_Filter_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: VAC_A; From=RUN_DATE−1 ngày; To=RUN_DATE+1 ngày (ngày tạo fixture thực tế)\n1. Ghi nhận ngày ứng tuyển thật của CAND_FILTER_A.\n2. Chọn Vacancy=VAC_A và khoảng ngày bao phủ đúng ngày đó.\n3. Search; đối chiếu kết quả ngày và vacancy.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data.",
+    "expected": "Chỉ xuất hiện ứng viên thỏa vacancy và ngày trong khoảng đã nhập."
+  },
+  "RECRUIT_CAND_Reset_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Vacancy=VAC_A; Keywords=run_keyword_a\n1. Áp dụng hai điều kiện; Search.\n2. Nhấn Reset.\n3. Kiểm tra input và kết quả.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc."
+  },
+  "RECRUIT_CAND_Update_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; Keywords=playwright,regression; Notes='Updated RUN'\n1. Mở chi tiết CAND_EDIT; ghi baseline.\n2. Bật Edit trên Candidate Profile; đổi Keywords/Notes; Save; reload đúng Profile ID.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Keywords và Notes đúng giá trị mới; email và vacancy không đổi."
+  },
+  "RECRUIT_CAND_CancelUpdate_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; Email tạm=unsaved@example.com\n1. Mở CAND_EDIT; ghi email gốc.\n2. Bật Edit, đổi email tạm nhưng KHÔNG Save; rời Candidate Profile qua Recruitment > Candidates.\n3. Mở lại chính Candidate ID và kiểm tra Email vẫn là baseline.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Email sau khi mở lại đúng Candidate ID vẫn là baseline; email chưa Save không được ghi vào hồ sơ."
+  },
+  "RECRUIT_CAND_VerifyDetails_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; First, Last, Email, Contact, Vacancy theo baseline\n1. Mở CAND_EDIT; ghi 5 trường baseline.\n2. Tải lại; đối chiếu từng trường và danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Chi tiết và dòng danh sách nhất quán; không mất dữ liệu khi reload."
+  },
+  "RECRUIT_FLOW_Status_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_01; Vacancy=VAC_A; vừa tạo chưa thao tác\n1. Tạo F_NEW_01 từ giao diện Candidates.\n2. Mở chi tiết và Candidate History.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject."
+  },
+  "RECRUIT_FLOW_Shortlist_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_02 có status Application Initiated; Notes='Shortlist RUN'\n1. Mở F_NEW_02.\n2. Nhấn Shortlist; nhập Notes nếu có; xác nhận Save/Shortlist.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Status chuyển Shortlisted; History ghi sự kiện shortlist đúng ứng viên."
+  },
+  "RECRUIT_FLOW_Reject_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_03 Application Initiated; Notes='Reject initial RUN'\n1. Mở F_NEW_03.\n2. Nhấn Reject để mở trang hành động; điền Notes nếu cần và Save.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Status chuyển Rejected; Candidate History có sự kiện reject."
+  },
+  "RECRUIT_FLOW_Reject_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_04 đang Shortlisted; Notes='Reject shortlisted RUN'\n1. Mở F_SHORT_04.\n2. Nhấn Reject; xác nhận.\n3. Reload và xem History.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Trạng thái Rejected; lịch sử còn sự kiện shortlist cũ và thêm reject."
+  },
+  "RECRUIT_FLOW_CancelShortlist_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_05 Application Initiated; Notes='Không được lưu'\n1. Mở F_NEW_05; nhấn Shortlist để mở trang thao tác.\n2. Điền Notes nếu có; nhấn Cancel trên trang Shortlist trước khi Save.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Status vẫn Application Initiated; History không có sự kiện Shortlist mới."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_06; Title='Interview RUN06'; Interviewer=INT_A; Date=2026-11-10; Time=10:30; Notes='First round'\n1. Mở F_SHORT_06 Shortlisted; nhấn Schedule Interview.\n2. Điền các trường chính xác và chọn INT_A từ gợi ý.\n3. Save; reload Candidate Details.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Chuyển sang Interview Scheduled; tiêu đề, người phỏng vấn, ngày 2026-11-10, giờ 10:30 và ghi chú đã lưu."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_07; Title rỗng; INT_A; Date=2026-11-10\n1. Mở Schedule Interview của F_SHORT_07.\n2. Để Title rỗng; điền các trường còn lại; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Interview Title hiển thị Required; chưa có lịch mới."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_08; Title='Interview RUN08'; Interviewer rỗng; Date=2026-11-10\n1. Mở Schedule Interview; điền Title và Date.\n2. Không chọn Interviewer; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Interviewer hiển thị Required; không tạo lịch."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_04": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_09; Title='Interview RUN09'; INT_A; Date rỗng\n1. Mở Schedule Interview; điền Title và Interviewer.\n2. Xóa Date, Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Date hiển thị Required; không lưu lịch."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_05": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_10; Date=31/02/2027; Title hợp lệ; INT_A\n1. Mở Schedule Interview.\n2. Nhập ngày 31/02/2027 theo định dạng UI (nếu datepicker chặn, ghi nhận).\n3. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Ngày không hợp lệ bị chặn hoặc báo lỗi; không tạo lịch với ngày này."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_06": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_11; Time=25:99; Title hợp lệ; INT_A; Date hợp lệ\n1. Mở Schedule Interview.\n2. Nhập/paste giờ 25:99 vào Time; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không nhận thời gian ngoài miền hợp lệ; chặn nhập hoặc báo lỗi."
+  },
+  "RECRUIT_FLOW_ScheduleInterview_07": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_12; Title='Interview RUN12'; INT_A; Date=2026-11-12; Time=14:00; Notes='Đánh giá kỹ năng QA'\n1. Mở Schedule Interview, nhập dữ liệu đầy đủ.\n2. Nhập Notes có dấu; Save.\n3. Mở chi tiết/history của lịch.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Ghi chú hiển thị chính xác, không lỗi dấu; lịch được tạo đúng candidate."
+  },
+  "RECRUIT_FLOW_SelectInterviewer_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_13; INT_A nhân viên còn hiệu lực\n1. Mở Schedule Interview.\n2. Gõ tiền tố tên INT_A; chọn đúng suggestion.\n3. Điền Title/Date, Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Interviewer là INT_A, không lưu tên gõ tự do."
+  },
+  "RECRUIT_FLOW_SelectInterviewer_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_14; INT_A và INT_B khác người\n1. Mở Schedule Interview.\n2. Chọn INT_A, bấm Add another (nếu control hiện), chọn INT_B từ đúng gợi ý, mỗi người chỉ xuất hiện một lần.\n3. Điền Title/Date; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Lưu đúng cả hai interviewer, không trùng; hiển thị đúng trên chi tiết."
+  },
+  "RECRUIT_FLOW_SelectInterviewer_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_15; gõ tên 'DELETED_INTERVIEWER_RUN' không tồn tại\n1. Mở Schedule Interview.\n2. Gõ tên không tồn tại vào Interviewer, không chọn suggestion.\n3. Điền Title/Date, Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không chấp nhận một chuỗi không khớp nhân viên còn hiệu lực; báo Required/Invalid."
+  },
+  "RECRUIT_FLOW_ValidateAction_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_16 Application Initiated\n1. Mở chi tiết F_NEW_16 chưa Shortlist.\n2. Kiểm tra nút hành động và menu.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không có thao tác Schedule Interview hợp lệ từ trạng thái đầu vào; phải Shortlist trước."
+  },
+  "RECRUIT_FLOW_ValidateAction_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_17 Shortlisted\n1. Mở F_SHORT_17.\n2. Quan sát menu hành động.\n3. Nhấn Schedule Interview và kiểm tra form.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Nút Schedule Interview khả dụng; mở được form lịch của đúng candidate."
+  },
+  "RECRUIT_FLOW_Status_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_18; Title='Interview RUN18'; INT_A; Date hợp lệ\n1. Mở F_SHORT_18; Schedule Interview đầy đủ.\n2. Save; trở lại chi tiết, kiểm tra trạng thái.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Status là Interview Scheduled; không còn status Shortlisted."
+  },
+  "RECRUIT_FLOW_ValidateAction_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_REJECT_19 có trạng thái Rejected\n1. Mở F_REJECT_19, quan sát tất cả nút.\n2. Thử truy cập lại menu nếu có.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Không hiển thị thao tác Shortlist trái quy tắc trạng thái; status vẫn Rejected."
+  },
+  "RECRUIT_FLOW_CancelReject_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_20 Shortlisted\n1. Mở F_SHORT_20; nhấn Reject.\n2. Trên trang Reject, nhấn Cancel trước Save (không giả định có dialog).\n3. Reload chi tiết.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Vẫn Shortlisted; không thêm bản ghi Reject vào History."
+  },
+  "RECRUIT_FLOW_VerifyDetails_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_21; name/email/vacancy cố định theo Test Data\n1. Vào Candidates; nhập Candidate Name của F_NEW_21, chọn đúng gợi ý và Search (không có Email filter).\n2. Mở đúng Candidate Profile (đối chiếu Candidate ID từ fixture), kiểm tra tên, Email, Vacancy và Status.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Tên, email, vacancy và trạng thái đúng một ứng viên; không hiển thị fixture khác."
+  },
+  "RECRUIT_FLOW_History_01": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_22 mới được tạo\n1. Mở F_NEW_22.\n2. Cuộn đến Candidate History, đọc các dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Có dữ liệu sự kiện khởi tạo/đính vacancy theo cơ chế bản demo; không có event interview/reject."
+  },
+  "RECRUIT_FLOW_History_02": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_23 đã chuyển từ Initiated bằng setup\n1. Mở F_SHORT_23, xem Candidate History.\n2. Mở View/chi tiết event nếu có.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Có event Shortlist gắn với đúng ứng viên và trình tự sau khi tạo."
+  },
+  "RECRUIT_FLOW_History_03": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_REJECT_24 được reject từ Initiated\n1. Mở F_REJECT_24, xem History.\n2. Đối chiếu description, trạng thái và ghi chú.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Có event Reject của đúng ứng viên; trạng thái Rejected phù hợp event."
+  },
+  "RECRUIT_FLOW_History_04": {
+    "steps": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SCHED_25 đã được đặt lịch Title='Interview RUN25'\n1. Mở F_SCHED_25 và Candidate History.\n2. Mở event phỏng vấn; đối chiếu Title/INT_A/Date.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+    "expected": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate."
+  }
+}

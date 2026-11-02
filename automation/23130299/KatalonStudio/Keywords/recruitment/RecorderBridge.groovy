@@ -1,7 +1,6 @@
 package recruitment
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.webui.driver.DriverFactory
@@ -11,6 +10,10 @@ import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.JavascriptExecutor
+import org.openqa.selenium.StaleElementReferenceException
+import org.openqa.selenium.TimeoutException
+import org.openqa.selenium.support.ui.WebDriverWait
+import java.time.Duration
 
 class RecorderBridge {
     String caseId
@@ -20,10 +23,59 @@ class RecorderBridge {
     boolean condition = false
     boolean isElse = false
     int shotCounter = 0
-    final String runStamp = new Date().format('yyyyMMdd_HHmmss_SSS')
+    String selectOwner = ''
+    final String runStamp = java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern('yyyyMMdd_HHmmss_SSS'))
+    final ExecutionContext executionContext = ExecutionContext.current()
+    final File output
+    final List<Map> ledger=[]
+    final String namespaceToken=executionContext.tokenFor('vacancy-helper')
     static final String BASE_URL = 'https://opensource-demo.orangehrmlive.com'
+    private int performanceSequence = 0
+    private final String performanceScope = 'recorder:'+UUID.randomUUID().toString()
+    private final List<String> performanceStack = []
 
-    RecorderBridge(String caseId) { this.caseId = caseId }
+    Object measure(String phase, Closure action) {
+        long start = System.nanoTime(), epoch = System.currentTimeMillis()
+        String id = performanceScope+':'+(++performanceSequence)
+        String parent = performanceStack ? performanceStack[-1] : null
+        performanceStack << id
+        String outcome = 'OK'
+        try { return action.call() }
+        catch (Throwable failure) { outcome = failure instanceof TimeoutException ? 'TIMEOUT' : 'ERROR'; throw failure }
+        finally {
+            performanceStack.removeAt(performanceStack.size()-1)
+            Map row = [caseId:caseId,phase:phase,operationId:id,parentId:parent,instrumentationScope:performanceScope,startEpochMs:epoch,
+                elapsedMs:(System.nanoTime()-start).intdiv(1000000L),outcome:outcome]
+            String json = new com.google.gson.Gson().toJson(row)
+            println('[PERFORMANCE] '+json)
+            try { new File(output,'performance.jsonl').append(json+'\n','UTF-8') }
+            catch (IOException unavailable) { println('[PERFORMANCE LOG UNAVAILABLE] '+unavailable.class.simpleName) }
+        }
+    }
+    WebDriverWait waitFor(int timeout = seconds) {
+        new WebDriverWait(driver(),Duration.ofSeconds(timeout)).pollingEvery(Duration.ofMillis(200))
+            .ignoring(StaleElementReferenceException)
+    }
+    boolean loginVisible() {
+        driver().currentUrl.contains('/auth/') || !driver().findElements(By.xpath("//input[@name='username']")).empty
+    }
+    boolean vacancyNavigationReady(String url) {
+        if (!RecruitmentUi.sameRoute(driver().currentUrl,url) || loginVisible() || driver().findElements(By.xpath('//aside//nav')).empty) return false
+        if (driver().findElements(By.xpath(VacancyChecks.LOADING+" | //div[contains(@class,'oxd-form-loader')]")).any { it.displayed }) return false
+        if (url.contains('/recruitment/addJobVacancy')) return waitForVacancyFormReady(url)
+        if (url.endsWith('/recruitment/viewJobVacancy')) return VacancyTable.state(driver()).ready == true
+        return !driver().findElements(By.xpath('//header//h6')).empty
+    }
+    boolean waitForVacancyFormReady(String url) {
+        String title = url ==~ /.*\/addJobVacancy\/[1-9]\d*$/ ? 'Edit Vacancy' : 'Add Vacancy'
+        return !driver().findElements(By.xpath("//h6[normalize-space()='${title}']")).empty &&
+            ['Vacancy Name','Hiring Manager','Number of Positions'].every { label ->
+                List<WebElement> fields=driver().findElements(By.xpath(VacancyChecks.group(label)+'//input'))
+                fields.size()==1 && fields[0].displayed && fields[0].enabled
+            } && (title != 'Edit Vacancy' || driver().findElement(By.xpath(VacancyChecks.group('Vacancy Name')+'//input')).getDomProperty('value'))
+    }
+
+    RecorderBridge(String caseId) { ConfigurationPreflight.guard(caseId); this.caseId = caseId; output=executionContext.caseDirectory(caseId,namespaceToken) }
 
     String expand(String str) {
         if (!str) return ''
@@ -33,73 +85,75 @@ class RecorderBridge {
         }
     }
     TestObject obj(String loc) {
-        String s = expand(loc)
+        String s = scopedLocator(expand(loc))
         TestObject o = new TestObject('dynamic_' + caseId)
         if (s.startsWith('xpath=')) o.addProperty('xpath', ConditionType.EQUALS, s.substring(6))
         else if (s.startsWith('css=')) o.addProperty('css', ConditionType.EQUALS, s.substring(4))
         else throw new IllegalArgumentException('Locator chua ho tro: ' + s)
         return o
     }
-    String xp(String loc) { return expand(loc).replaceFirst(/^xpath=/, '') }
-    WebDriver driver() { return DriverFactory.getWebDriver() }
+    String scopedLocator(String loc) {
+        if (loc.startsWith('xpath=//div') && loc.contains('oxd-select-option')) {
+            assert selectOwner : 'Open a label-scoped select before locating its options'
+            return 'xpath='+VacancyChecks.group(selectOwner)+loc.substring(6)
+        }
+        return loc
+    }
+    String xp(String loc) { return scopedLocator(expand(loc)).replaceFirst(/^xpath=/, '') }
+    WebDriver driver() {
+        assert ExecutionContext.peek().is(executionContext) : 'Recorder belongs to a different execution'
+        return ExecutionBrowser.driver()
+    }
     boolean hasBrowser() {
-        try { WebDriver d = DriverFactory.getWebDriver(); return d != null && d.getWindowHandle() != null }
+        try { WebDriver d = driver(); return d != null && d.getWindowHandle() != null }
         catch (Throwable ignored) { return false }
     }
     void ensureBrowser() {
-        if (!hasBrowser()) { WebUI.openBrowser(''); WebUI.maximizeWindow() }
+        SessionGuard.requireAllowance()
+        ExecutionLease.acquire()
+        if (!hasBrowser()) {
+            if (executionContext.ownedDriver) SessionGuard.lost('Owned Chrome session unavailable')
+            measure('BROWSER_START') { ExecutionBrowser.launch { WebUI.openBrowser(''); WebUI.maximizeWindow() } }
+        }
     }
     void go(String url) {
+        measure('NAVIGATION') { goInternal(url) }
+    }
+    protected void goInternal(String url) {
+        SessionGuard.requireAllowance()
         ensureBrowser()
         String resolved = expand(url)
         if (resolved.startsWith('/')) resolved = BASE_URL + resolved
         WebUI.navigateToUrl(resolved)
-        WebUI.waitForPageLoad(15, FailureHandling.OPTIONAL)
-        // The Recorder Chrome profile is not shared. Give the SPA time to redirect to login.
-        long detectUntil = System.currentTimeMillis() + 7000L
-        boolean loginPage = false
-        while (System.currentTimeMillis() < detectUntil) {
-            String here = driver().getCurrentUrl()
-            if (here.contains('/auth/login') || driver().findElements(By.xpath("//input[@name='username']")).size()>0) {
-                loginPage = true; break
-            }
-            if (driver().findElements(By.xpath("//button[normalize-space()='Add']")).size()>0 ||
-                here.contains('/recruitment/addJobVacancy/')) break
-            Thread.sleep(500L)
-        }
-        if (loginPage) {
+        waitFor().until { loginVisible() || vacancyNavigationReady(resolved) }
+        if (loginVisible()) {
+            SessionGuard.requireInitialLogin()
             println('[SETUP] Vui long DANG NHAP tai Chrome Katalon mo trong 120 giay. Khong luu password vao project.')
-            long deadline = System.currentTimeMillis() + 120000L
-            while (System.currentTimeMillis() < deadline) {
-                String here = driver().getCurrentUrl()
-                if (!here.contains('/auth/login') && driver().findElements(By.xpath("//input[@name='username']")).isEmpty()) break
-                Thread.sleep(700L)
-            }
-            assert !driver().getCurrentUrl().contains('/auth/login') : 'Login required: mo Chrome do Studio khoi dong va dang nhap OrangeHRM.'
+            try { measure('LOGIN_WAIT') { waitFor(120).until { !loginVisible() && !driver().findElements(By.xpath('//aside//nav')).empty } } }
+            catch (TimeoutException timeout) { SessionGuard.failedLogin(); throw timeout }
+            SessionGuard.requireAllowance()
             WebUI.navigateToUrl(resolved)
-            WebUI.waitForPageLoad(15, FailureHandling.OPTIONAL)
+            waitFor().until { if(loginVisible()) SessionGuard.lost('Navigation returned to Login'); vacancyNavigationReady(resolved) }
         }
+        if (!driver().findElements(By.xpath('//aside//nav')).empty) SessionGuard.authenticated()
     }
     String screenshotDirectory() {
         String raw = ''
         try { raw = String.valueOf(GlobalVariable.evidenceDir ?: '') }
         catch (Throwable ignored) {}
-        File dst = raw.trim() ? new File(raw.trim()) : new File(RunConfiguration.getProjectDir(), 'evidence/screenshots')
+        File dst = raw.trim() ? PortablePaths.resolve(raw,'evidence/screenshots') : executionContext.evidenceRoot
         dst.mkdirs()
         return dst.absolutePath
     }
     void screenshot(String label) {
-        if (!hasBrowser()) { println('[CAPTURE] SKIP - chua co Chrome'); return }
-        String safe = label.replaceAll(/[^A-Za-z0-9._-]/, '_')
-        if (!safe.toLowerCase().endsWith('.png')) safe += '.png'
-        File dir = new File(screenshotDirectory(), caseId + '/' + runStamp)
-        dir.mkdirs()
-        String file = new File(dir, safe).absolutePath
-        WebUI.takeScreenshot(file, FailureHandling.OPTIONAL)
-        if (new File(file).isFile()) println('[CAPTURE] SAVED ' + file)
-        else println('[CAPTURE WARNING] Khong thay PNG tai ' + file)
+        measure('SCREENSHOT') { EvidenceCapture.capture(label) }
     }
+
     void countCheckpoint(String label) { shotCounter++; screenshot(label) }
+    void journal(Map event) {
+        ledger << (event + executionContext.owner(caseId))
+        AtomicFiles.json(new File(output,'fixtures.json'),ledger)
+    }
     boolean selected(String loc) {
         return driver().findElement(By.xpath(xp(loc))).isSelected()
     }
@@ -107,33 +161,39 @@ class RecorderBridge {
         boolean now = selected(loc)
         if (now != wanted) {
             WebElement el = driver().findElement(By.xpath(xp(loc)))
-            // OrangeHRM renders hidden input checkboxes. Click via DOM to trigger React's change event.
-            ((JavascriptExecutor) driver()).executeScript('arguments[0].click();', el)
-            Thread.sleep(300L)
+            WebElement label = el.findElement(By.xpath('ancestor::label[1]'))
+            label.click()
+            new org.openqa.selenium.support.ui.WebDriverWait(driver(), java.time.Duration.ofSeconds(seconds)).until { selected(loc) == wanted }
+
         }
         assert selected(loc) == wanted : 'Checkbox cannot be set to ' + wanted + ': ' + loc
     }
     void waitValue(String loc, String expected, boolean textMode=false) {
-        long until = System.currentTimeMillis() + seconds*1000L
         String actual = ''
-        while (System.currentTimeMillis()<until) {
-            try {
-                TestObject to = obj(loc)
-                actual = textMode ? WebUI.getText(to) : WebUI.getAttribute(to, 'value')
-                if ((actual ?: '').trim().replaceAll(/\s+/, ' ') == expected.trim().replaceAll(/\s+/, ' ')) return
-            } catch(Throwable ignored) {}
-            Thread.sleep(450L)
+        waitFor().until {
+            List<WebElement> fields = driver().findElements(By.xpath(xp(loc)))
+            assert fields.size() <= 1 : 'Ambiguous value locator: '+loc
+            if (!fields) return false
+            actual = textMode ? fields[0].text : fields[0].getDomProperty('value')
+            // OXD employee labels may contain a blank middle name. Other input values stay exact.
+            boolean displayName = loc.contains('Hiring Manager')
+            return textMode || displayName ? VacancyChecks.normalizeManagerName(actual) == VacancyChecks.normalizeManagerName(expected) : (actual ?: '') == expected
         }
-        throw new AssertionError('Timeout checking '+loc+': expected ['+expected+'] but actual ['+actual+']')
     }
     int xpathCount(String loc) { return driver().findElements(By.xpath(xp(loc))).size() }
     void waitCount(String loc, int expected) {
-        long until = System.currentTimeMillis() + seconds*1000L
-        while (System.currentTimeMillis() < until) {
-            if (xpathCount(loc) == expected) return
-            Thread.sleep(500L)
+        waitFor().until { xpathCount(loc) == expected }
+    }
+    void waitForNavigationOutcome(String beforeUrl, String action) {
+        measure(action == 'Save' ? 'SAVE' : 'NAVIGATION_OUTCOME') {
+            waitFor().until {
+                if (loginVisible()) SessionGuard.lost(action+' outcome lost authentication; never replay Save')
+                if (driver().findElements(By.xpath(VacancyChecks.LOADING+" | //div[contains(@class,'oxd-form-loader')]")).any { it.displayed }) return false
+                if (driver().currentUrl != beforeUrl) return vacancyNavigationReady(driver().currentUrl)
+                if (action != 'Save') return false
+                return !driver().findElements(By.xpath("//form//*[contains(@class,'oxd-input-field-error-message')] | //div[contains(@class,'oxd-toast')]")).findAll { it.displayed }.empty
+            }
         }
-        throw new AssertionError('XPath count mismatch for '+loc+': expected '+expected+' actual '+xpathCount(loc))
     }
     // Only support the comparison expressions that occur in this particular .side project.
     boolean evalCondition(String input) {
@@ -172,7 +232,8 @@ class RecorderBridge {
                 String e=target
                 // The source tests only concatenate literal fragments with new Date().getTime().
                 if (!e.contains('new Date().getTime()')) throw new IllegalArgumentException('Unsupported storeEval: '+e)
-                vars[value]=e.replace('new Date().getTime()', String.valueOf(System.currentTimeMillis())).replaceAll(/['+]/, '')
+                vars[value]=e.replace('new Date().getTime()', namespaceToken+'_'+(++executionContext.sequence)).replaceAll(/['+]/, '')
+                assert vars[value].length()<=50 : 'Generated Vacancy name exceeds source validator length50'
                 break
             case 'open': go(target); break
             case 'waitForElementPresent':
@@ -182,14 +243,45 @@ class RecorderBridge {
             case 'assertElementNotPresent':
                 assert WebUI.verifyElementNotPresent(obj(rawTarget),2) : 'Unexpected element '+target;break
             case 'click':
-                if (target.contains("@type='checkbox'") || target.contains('@type="checkbox"')) {
+                String beforeClickUrl = driver().currentUrl
+                if (target.contains('oxd-select-text-input')) {
+                    WebElement control=driver().findElement(By.xpath(xp(rawTarget)))
+                    List<WebElement> labels=control.findElements(By.xpath("ancestor::div["+VacancyChecks.token('oxd-input-group')+"][1]//label"))
+                    assert labels.size()==1 && labels[0].text.trim() : 'Select must belong to exactly one labeled group'
+                    selectOwner=labels[0].text.trim()
+                    VacancyTable.click(driver(),control,seconds)
+                    break
+                }
+                if (target.contains('oxd-select-option')) {
+                    List<WebElement> options=driver().findElements(By.xpath(xp(rawTarget))).findAll { it.displayed && it.enabled }
+                    assert options.size()==1 : 'Exact option missing or ambiguous inside '+selectOwner
+                    String expected=options[0].text.trim()
+                    VacancyTable.click(driver(),options[0],seconds)
+                    waitValue(VacancyChecks.select(selectOwner),expected,true)
+                    break
+                }
+                if (target.contains('Save') || target.contains('Search') || target.contains('Reset') || target.contains('Cancel')) screenshot(caseId+'_BEFORE_ACTION.png')
+                if (target.contains('Save') && target.contains('button')) {
+                    Map attempt=[attemptId:UUID.randomUUID().toString(),name:vars['vacancyName'],url:RecruitmentUi.safeUrl(driver().currentUrl),
+                        state:'submitted',submitted:false,observed:false,verified:false,uncertain:false]
+                    journal(new LinkedHashMap(attempt))
+                    try {
+                        driver().findElement(By.xpath(xp(rawTarget))).click() // exactly one native submit; no keyword fallback/retry
+                        attempt.submitted=true;journal(new LinkedHashMap(attempt))
+                    } catch(Throwable error) {
+                        attempt.state='uncertain';attempt.uncertain=true;journal(new LinkedHashMap(attempt));throw error
+                    }
+                } else if (target.contains('button') && (target.contains('Search') || target.contains('Reset'))) {
+                    WebElement action = waitFor().until(org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable(By.xpath(xp(rawTarget))))
+                    measure(target.contains('Reset') ? 'RESET' : 'SEARCH') { VacancyTable.refresh(driver(),action,seconds) }
+                } else if (target.contains("@type='checkbox'") || target.contains('@type="checkbox"')) {
                     WebElement el=driver().findElement(By.xpath(xp(rawTarget)))
-                    ((JavascriptExecutor) driver()).executeScript('arguments[0].click();', el)
+                    el.findElement(By.xpath('ancestor::label[1]')).click()
                 } else {
                     WebUI.click(obj(rawTarget))
                 }
                 if (target.contains('Save') || target.contains('Search') || target.contains('Reset') || target.contains('Cancel')) {
-                    Thread.sleep(850L)
+                    if (!(target.contains('Search') || target.contains('Reset'))) waitForNavigationOutcome(beforeClickUrl,target.contains('Save') ? 'Save' : 'Cancel')
                     screenshot(caseId+'_'+String.format('%03d',++shotCounter)+'_AFTER_ACTION.png')
                 }
                 break
@@ -204,7 +296,16 @@ class RecorderBridge {
             case 'waitForValue': waitValue(rawTarget,value,false); break
             case 'storeText': vars[value]=WebUI.getText(obj(rawTarget)).trim();break
             case 'storeValue': vars[value]=WebUI.getAttribute(obj(rawTarget),'value') ?: '';break
-            case 'storeLocation': vars[target]=driver().getCurrentUrl();break
+            case 'storeLocation':
+                vars[target]=driver().getCurrentUrl()
+                def identity=(vars[target] =~ /\/addJobVacancy\/([1-9]\d*)$/)
+                if (identity.find()) {
+                    journal([name:vars['vacancyName'],numericId:identity.group(1),url:RecruitmentUi.safeUrl(vars[target]),
+                        state:'observed',submitted:true,observed:true,verified:false,uncertain:false])
+                    if(VacancyChecks.ownedFixtureName(vars['vacancyName'],namespaceToken))
+                        PimEmployeeFixtures.dependency('vacancy',identity.group(1),executionContext.managerDiscovery.lastSelection?.employeeId?.toString())
+                }
+                break
             case 'assertChecked': assert selected(rawTarget) : 'Expected checked '+target;break
             case 'assertNotChecked': assert !selected(rawTarget) : 'Expected unchecked '+target;break
             case 'ensureChecked': desiredState(rawTarget,true);break
@@ -214,12 +315,21 @@ class RecorderBridge {
             case 'assertXpathCount': assert xpathCount(rawTarget)==Integer.parseInt(value);break
             case 'waitForXpathCount': waitCount(rawTarget,Integer.parseInt(value));break
             case 'assertEval': assert evalCondition(rawTarget)==(value.toLowerCase()=='true') : 'Expected '+value+' for '+target;break
-            case 'pause': Thread.sleep(Long.parseLong(target));break
+            case 'pause': throw new IllegalArgumentException('Fixed pause unsupported; use an operation-specific observed condition');
             default: throw new IllegalArgumentException('Command unsupported: '+operation)
         }
     }
-    void finished() { screenshot(caseId+'_RESULT.png');println('[PASS ASSERTIONS] '+caseId+' (not verified until actual Studio run)') }
+    void finished() {
+        String name=vars['vacancyName']
+        if (!vars['savedVacancyUrl'] && VacancyChecks.ownedFixtureName(name,namespaceToken)) {
+            // Successful create paths have a saved numeric URL; negative/cancel drafts must remain absent.
+            new VacancyChecks(this).assertAbsent(name)
+        }
+        screenshot(caseId+'_RESULT.png')
+        println('[ASSERTIONS COMPLETED] '+caseId+'; inspect actual Katalon result')
+    }
     void failed(Throwable t) {
+        EvidenceCapture.failure(t, "RECORDER")
         try { screenshot(caseId+'_FAILED.png') } catch(Throwable ignored) {}
         println('[TEST FAILED] '+caseId+' -> '+t.toString())
     }

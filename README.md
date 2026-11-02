@@ -23,3 +23,8 @@ Dự án kiểm thử website [OrangeHRM Demo](https://opensource-demo.orangehrm
 - [Slide cá nhân ASM8](docs/presentations/README.md)
 
 Mỗi thành viên tự chọn công cụ và ghi hướng dẫn chạy trong thư mục của mình. Tích hợp qua **nhánh cá nhân → PR → dev**; `main` lưu các mốc thống nhất.
+
+
+## Assignment 8 — Recruitment release (23130299)
+
+Bổ sung bàn giao 02/11: báo cáo sửa phản hồi nhóm trưởng, Recruitment index, 75 case official.

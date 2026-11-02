@@ -1,0 +1,759 @@
+{
+  "RECRUIT_VAC_Create_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "c99798dee37facd40bd14f9dd1cb255425e9954f5b29bf4da693cfc4da283f72",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_01/Script20261023080000.groovy",
+    "intent": "Tạo vacancy với các trường bắt buộc",
+    "expected": "Lưu thành công; hiển thị đúng tên, Job Title, Hiring Manager, Positions=1.",
+    "workbookRow": 9
+  },
+  "RECRUIT_VAC_Create_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "46cfec23993e9f9f508f2e77857857f7f8449a3578f506d24856c0b14848c9ff",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_02/Script20261023080000.groovy",
+    "intent": "Tạo vacancy với đủ thông tin",
+    "expected": "Tên, mô tả, số lượng, manager, Active và Publish giữ đúng giá trị đã lưu.",
+    "workbookRow": 10
+  },
+  "RECRUIT_VAC_Create_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "87ebe0b8d16a79ca72973efcde7031e4b117f3317785062b8ee6c0e5996ed2d2",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_03/Script20261023080000.groovy",
+    "intent": "Không chọn Job Title",
+    "expected": "Job Title hiện Required; VAC_RUN03 không được tạo.",
+    "workbookRow": 11
+  },
+  "RECRUIT_VAC_Create_04": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "cb19e950d0afe46a676d3e4616ba381b586574ec489e78df41d36386205e135d",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_04/Script20261023080000.groovy",
+    "intent": "Để trống Vacancy Name",
+    "expected": "Vacancy Name hiện Required; không tạo vacancy.",
+    "workbookRow": 12
+  },
+  "RECRUIT_VAC_Create_05": {
+    "requires": [],
+    "scriptSha256": "fea0de311f2468ed287ed9930921bd1a9bd10ad454eac165bb2587019ccac5f3",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_05/Script20261023080000.groovy",
+    "intent": "Không chọn Hiring Manager",
+    "expected": "Hiring Manager hiện Required; không lưu.",
+    "workbookRow": 13
+  },
+  "RECRUIT_VAC_Create_06": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "1b0e8af7e2470f7f3cd030554b919248f5fbb2a40419b3d9f20e0e5112cfcd2f",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_06/Script20261023080000.groovy",
+    "intent": "Tên vacancy chỉ có khoảng trắng",
+    "expected": "Không tạo được vacancy chỉ có khoảng trắng; có lỗi bắt buộc/không hợp lệ.",
+    "workbookRow": 14
+  },
+  "RECRUIT_VAC_Create_07": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "aacf73cb1d67a7ceac5f716c2748b8c41e236964b8b08b3b1e976a3e31cbddd8",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_07/Script20261023080000.groovy",
+    "intent": "Hiring Manager từ autocomplete",
+    "expected": "Lưu đúng nhân viên từ suggestion, không phải chuỗi tên tự do.",
+    "workbookRow": 15
+  },
+  "RECRUIT_VAC_Create_08": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "e436e7b3de2b244edd92ca291145d3d6ebcb5ecd32595758163663001a0e8177",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_08/Script20261023080000.groovy",
+    "intent": "Số vị trí tuyển bằng 1",
+    "expected": "Chấp nhận giá trị 1; Positions=1 sau reload.",
+    "workbookRow": 16
+  },
+  "RECRUIT_VAC_Create_09": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "53889faeccb70bb617e73de34ccea43045bab913acd485a86c83d0fec3725c1e",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_09/Script20261023080000.groovy",
+    "intent": "Số vị trí tuyển bằng 0",
+    "expected": "Positions=0 bị validation của form từ chối (giá trị hợp lệ khi có số là 1–99); không tạo VAC_RUN09.",
+    "workbookRow": 17
+  },
+  "RECRUIT_VAC_Create_10": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "16747a20bf721960fe50011c50f2acac8f43ea730446e55053b6d786fd98e897",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_10/Script20261023080000.groovy",
+    "intent": "Số vị trí tuyển âm",
+    "expected": "Không lưu số âm; UI chặn hoặc hiển thị lỗi.",
+    "workbookRow": 18
+  },
+  "RECRUIT_VAC_Create_11": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "44a2f7e719cba165ff116e4913c5b0a23beae83688a198bc1ef9ba49ec929cd2",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_11/Script20261023080000.groovy",
+    "intent": "Số vị trí tuyển không phải số",
+    "expected": "Chỉ chấp nhận số; chuỗi 'abc' bị chặn hoặc báo Invalid; không lưu 'abc'.",
+    "workbookRow": 19
+  },
+  "RECRUIT_VAC_Create_12": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "c86b74ac4870988317a57ff577d020943a129a2c54524500d6515b40076e95dd",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_12/Script20261023080000.groovy",
+    "intent": "Lưu vacancy Active",
+    "expected": "Active bật và Publish tắt sau reload.",
+    "workbookRow": 20
+  },
+  "RECRUIT_VAC_Create_13": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "3ea9acfac3d09bb51e324da5bea80707458ba26b0d124e216a15c9f86f5e64bd",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_13/Script20261023080000.groovy",
+    "intent": "Lưu vacancy Inactive",
+    "expected": "Active vẫn tắt sau reload.",
+    "workbookRow": 21
+  },
+  "RECRUIT_VAC_Create_14": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "3c93a93f30f6eec8e9bbc285d8748569cff0bf288483bc7b490d6efef047d516",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Create_14/Script20261023080000.groovy",
+    "intent": "Lưu vacancy bật Publish",
+    "expected": "Hai checkbox giữ trạng thái On; không suy diễn về cổng tuyển dụng ngoài demo.",
+    "workbookRow": 22
+  },
+  "RECRUIT_VAC_Update_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "8fbd5b77c2a489a421e2d629766240fed9cb9ecbadce742a5e95a63fe6e23ea7",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_01/Script20261023080000.groovy",
+    "intent": "Đổi Active trên vacancy đã tồn tại",
+    "expected": "Mỗi lần reload phản ánh trạng thái đã lưu; các trường khác không đổi.",
+    "workbookRow": 23
+  },
+  "RECRUIT_VAC_Search_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "2f33954179860e46ec042aca7ba9f94b76fb023391f2db04aa53d4d14a795a52",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_01/Script20261023080000.groovy",
+    "intent": "Tìm vacancy theo Job Title",
+    "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+    "workbookRow": 24
+  },
+  "RECRUIT_VAC_Search_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "d35b08bc58529c1736e501b5491b1edeb747521613abe9aaa2bfb04979eafecb",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_02/Script20261023080000.groovy",
+    "intent": "Tìm vacancy theo Hiring Manager",
+    "expected": "VAC_FILTER_A xuất hiện; các dòng có manager phù hợp.",
+    "workbookRow": 25
+  },
+  "RECRUIT_VAC_Search_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "ed898f067822b9deba070aee215db459096869218542febfbd32f68c192d3255",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Search_03/Script20261023080000.groovy",
+    "intent": "Tìm vacancy theo Vacancy Name",
+    "expected": "Có VAC_FILTER_A, không có VAC_FILTER_B.",
+    "workbookRow": 26
+  },
+  "RECRUIT_VAC_Filter_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "316640dc631ee94cb00cf24adcabf058b24d84d5ed1023439f6234db1276c146",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Filter_01/Script20261023080000.groovy",
+    "intent": "Lọc kết hợp Job Title và Manager",
+    "expected": "Chỉ có vacancy thỏa đồng thời hai điều kiện.",
+    "workbookRow": 27
+  },
+  "RECRUIT_VAC_Filter_02": {
+    "requires": [],
+    "scriptSha256": "e840b93f9d7ec2702694a6d88085405ec13afcc19c8950ff6d705dc4254eca7f",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Filter_02/Script20261023080000.groovy",
+    "intent": "Lọc vacancy không tồn tại",
+    "expected": "Không có kết quả hoặc hiển thị No Records Found; không hiện dữ liệu khác.",
+    "workbookRow": 28
+  },
+  "RECRUIT_VAC_Reset_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "e8f91baf1a9381b02788620f25cf6476db4becbcd062ac63ab19473f5f032b31",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Reset_01/Script20261023080000.groovy",
+    "intent": "Reset điều kiện lọc vacancy",
+    "expected": "Bộ lọc về mặc định; danh sách trở về trạng thái không lọc.",
+    "workbookRow": 29
+  },
+  "RECRUIT_VAC_Update_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "2fb132b0e499b79ec7feddffba912fbfa7fc08d8b66c6694278c38437d2652a6",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_02/Script20261023080000.groovy",
+    "intent": "Sửa Description của vacancy",
+    "expected": "Description mới được lưu chính xác; field còn lại giữ baseline.",
+    "workbookRow": 30
+  },
+  "RECRUIT_VAC_Update_03": {
+    "requires": [
+      "hiringManagerName",
+      "hiringManagerAlternativeName"
+    ],
+    "scriptSha256": "7f639fda4a4c62b73248e454fe9e139a9225432d1166af0b9a17db929d82e93e",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_Update_03/Script20261023080000.groovy",
+    "intent": "Sửa Positions và Hiring Manager",
+    "expected": "Positions=4 và Hiring Manager=MANAGER_B sau tải lại.",
+    "workbookRow": 31
+  },
+  "RECRUIT_VAC_CancelCreate_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "445030ca171162ca0f0d3761ddd2bb9a1b1a0e5ad16ee850ee649c68cc9f3ca0",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_CancelCreate_01/Script20261023080000.groovy",
+    "intent": "Hủy tạo vacancy",
+    "expected": "Không tạo bản ghi VAC_CANCEL_RUN.",
+    "workbookRow": 32
+  },
+  "RECRUIT_VAC_CancelUpdate_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "98d935db8bbf58f36772cb1bb8ac5b3f9da57906088ff93827541d0bb7f9b312",
+    "script": "Scripts/RECRUIT_VAC/RECRUIT_VAC_CancelUpdate_01/Script20261023080000.groovy",
+    "intent": "Hủy sửa vacancy giữ dữ liệu cũ",
+    "expected": "Name và trường khác vẫn đúng baseline; không xuất hiện tên tạm.",
+    "workbookRow": 33
+  },
+  "RECRUIT_CAND_Create_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "3abcd73f108ddf2fe4c241a1eabfb196e419a3556891ae6801289fdfca14747a",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_01/Script20261027000000.groovy",
+    "intent": "Tạo ứng viên tối thiểu",
+    "expected": "Tạo được ứng viên; tên, email và vacancy đúng input.",
+    "workbookRow": 9
+  },
+  "RECRUIT_CAND_Create_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "6e934428ca9733707f7e1f1e7bae1e942a55ec91fff86d9f69fdcbc35bb39000",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_02/Script20261027000000.groovy",
+    "intent": "Tạo ứng viên với thông tin đầy đủ",
+    "expected": "Lưu đúng tên đầy đủ, email, phone, vacancy, keyword và notes.",
+    "workbookRow": 10
+  },
+  "RECRUIT_CAND_Create_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "b8e1fb5c42e1948de635a135e2e600569b4485f0a3e1e0af80e5f3236e2d2042",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_03/Script20261027000000.groovy",
+    "intent": "Bỏ trống First Name",
+    "expected": "First Name báo Required; hồ sơ không được tạo.",
+    "workbookRow": 11
+  },
+  "RECRUIT_CAND_Create_04": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "84e84ae1967bb5b5100c940c2d0cd62d84dfd0f71b6a96fc8d8fe747bfcfc47b",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_04/Script20261027000000.groovy",
+    "intent": "Bỏ trống Last Name",
+    "expected": "Last Name báo Required; hồ sơ không được tạo.",
+    "workbookRow": 12
+  },
+  "RECRUIT_CAND_Create_05": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "740beadda58c312ccd606078c4fef347170e5af4b2642bfc70ffc5552327812b",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_05/Script20261027000000.groovy",
+    "intent": "Bỏ trống Email",
+    "expected": "Email báo Required; hồ sơ không được tạo.",
+    "workbookRow": 13
+  },
+  "RECRUIT_CAND_Create_06": {
+    "requires": [],
+    "scriptSha256": "42b2278b3cab767e60c7e82ae4f438db3e303140b9ee086aadbb7c980aa022b6",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_06/Script20261027000000.groovy",
+    "intent": "Không chọn Vacancy tùy chọn",
+    "expected": "Trường Vacancy không báo Required ở frontend; nếu server lưu thành công, hồ sơ mở lại có Vacancy trống. Ghi nhận riêng kết quả backend khi chạy thực tế.",
+    "workbookRow": 14
+  },
+  "RECRUIT_CAND_Create_07": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "7a77862627404f10906c738fcd4aa8521169bf890df9acc041aabd565a89e42f",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_07/Script20261027000000.groovy",
+    "intent": "Kiểm tra consent khi tạo hồ sơ",
+    "expected": "Candidate được lưu; Consent to keep data vẫn bật sau khi mở lại hồ sơ đúng Candidate ID.",
+    "workbookRow": 15
+  },
+  "RECRUIT_CAND_Create_08": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "d0ee370fee4148b80fb70e65df6f6b9ee23cc6575e0931d6d0503b90986ab475",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_08/Script20261027000000.groovy",
+    "intent": "Email hợp lệ dạng example.com",
+    "expected": "Email hợp lệ được lưu nguyên vẹn trong Candidate Profile sau khi mở lại đúng Candidate ID; không yêu cầu bộ lọc Email.",
+    "workbookRow": 16
+  },
+  "RECRUIT_CAND_Create_09": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "c2db49542e3f3e988946fff7fc2de4ea32bbcc76b81d8751d4a9016c0c656263",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_09/Script20261027000000.groovy",
+    "intent": "Email thiếu ký tự @",
+    "expected": "Email báo invalid; không tạo hồ sơ.",
+    "workbookRow": 17
+  },
+  "RECRUIT_CAND_Create_10": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "320b74b6b8d58c2ab9c01ac2db572ac17845e9a87d4fb32cfdd39e519bd116d6",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_10/Script20261027000000.groovy",
+    "intent": "Email thiếu phần domain",
+    "expected": "Email báo invalid; không tạo hồ sơ.",
+    "workbookRow": 18
+  },
+  "RECRUIT_CAND_Create_11": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "1385cff14a0027ad8fd71f2b47cadf3edaeb1ba8bc09da68803e8c7f88ea93fc",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_11/Script20261027000000.groovy",
+    "intent": "Số điện thoại dạng chữ",
+    "expected": "Contact Number báo lỗi định dạng (chỉ chấp nhận chữ số và + - / ( ) dấu cách); Save không tạo Candidate khi nhập 'abcXYZ'.",
+    "workbookRow": 19
+  },
+  "RECRUIT_CAND_Create_12": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "1686daa22c9b6d4b51f144b5e26b0019906253e33115d869994abec38ae2db59",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Create_12/Script20261027000000.groovy",
+    "intent": "Số điện thoại hợp lệ",
+    "expected": "Contact Number giữ đúng '0900000012' và không mất số 0 đầu.",
+    "workbookRow": 20
+  },
+  "RECRUIT_CAND_UploadCV_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "35e17f23ea8296789bd74b38d409fd3caf48555d3afcd0bafe5d0a719d22e466",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_01/Script20261027000000.groovy",
+    "intent": "Tải lên CV PDF hợp lệ",
+    "expected": "CV được đính kèm đúng tên và có thể mở/tải theo quyền của demo.",
+    "workbookRow": 21
+  },
+  "RECRUIT_CAND_UploadCV_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "1d4ca55965bb3b096e9d284d86953f38f611938670dad7759c906fa5e9ef2b72",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_02/Script20261027000000.groovy",
+    "intent": "Tải lên CV DOCX hợp lệ",
+    "expected": "CV DOCX được đính kèm và hiển thị đúng tên.",
+    "workbookRow": 22
+  },
+  "RECRUIT_CAND_UploadCV_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "06c47f4f3ce3066d5c0848ffa2542abf853b73f24c878ce18e02fe19f93cb614",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_03/Script20261027000000.groovy",
+    "intent": "Tải CV định dạng không hợp lệ",
+    "expected": "Hệ thống từ chối định dạng không hỗ trợ; không lưu tệp .exe.",
+    "workbookRow": 23
+  },
+  "RECRUIT_CAND_UploadCV_04": {
+    "requires": [
+      "cvLimitBytes",
+      "hiringManagerName"
+    ],
+    "scriptSha256": "2805f1653fed3418f696ca998dfcc0dd24310cacc6e08fe24985b5ac0e22035b",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_04/Script20261027000000.groovy",
+    "intent": "Tải CV vượt dung lượng tối đa",
+    "expected": "File Resume > maxFileSize (byte) bị từ chối bằng validation của file-upload; không lưu attachment quá giới hạn. Phải xác minh maxFileSize thực tế trước khi chạy test biên.",
+    "workbookRow": 24
+  },
+  "RECRUIT_CAND_UploadCV_05": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "39b71ea1393d1ca2b681728bd74e77781079c5c7a3458daf734320d7c0f52e99",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_UploadCV_05/Script20261027000000.groovy",
+    "intent": "Hủy chọn CV trước lưu",
+    "expected": "Không có CV của lần thao tác hủy trong hồ sơ mới; không phát sinh ứng viên lần đầu.",
+    "workbookRow": 25
+  },
+  "RECRUIT_CAND_Filter_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "f3d4cdeba13d7f6a6ec328dfe03d22823eace8253c09a007d519be9f6bb8f3c3",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_01/Script20261027000000.groovy",
+    "intent": "Lọc ứng viên theo Vacancy",
+    "expected": "CAND_FILTER_A xuất hiện; kết quả thuộc VAC_A.",
+    "workbookRow": 26
+  },
+  "RECRUIT_CAND_Search_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "19fcd1e1e2a5cc3893d03522ad671596a4ffdb63c4ac24c158a810bb7492e869",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Search_01/Script20261027000000.groovy",
+    "intent": "Lọc theo Candidate Name",
+    "expected": "Hiện CAND_FILTER_A, không lẫn CAND_FILTER_B khác tên.",
+    "workbookRow": 27
+  },
+  "RECRUIT_CAND_Filter_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "03f5817912e254efe1ec4d2ac5ddc02b200ccdd2a2c11461a22d27e8f3027acb",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_02/Script20261027000000.groovy",
+    "intent": "Lọc ứng viên theo Keywords",
+    "expected": "Hiện ứng viên có keyword phù hợp, gồm CAND_FILTER_A.",
+    "workbookRow": 28
+  },
+  "RECRUIT_CAND_Filter_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "89dbc5d274a573eec22e1b95c5a5e994f05db6a794612c0bc0971bb4e2841de8",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Filter_03/Script20261027000000.groovy",
+    "intent": "Lọc kết hợp Vacancy và ngày ứng tuyển",
+    "expected": "Chỉ xuất hiện ứng viên thỏa vacancy và ngày trong khoảng đã nhập.",
+    "workbookRow": 29
+  },
+  "RECRUIT_CAND_Reset_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "5388c376521d03599480b1d2e35a20477aa21615bec7b378b32c21c3e6d4c10b",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Reset_01/Script20261027000000.groovy",
+    "intent": "Reset bộ lọc Candidates",
+    "expected": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+    "workbookRow": 30
+  },
+  "RECRUIT_CAND_Update_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "aacb460f7afc2833f399c6feec71436565657f3049c056495bd394c75ed14f5d",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_Update_01/Script20261027000000.groovy",
+    "intent": "Sửa Keywords và Notes hồ sơ",
+    "expected": "Keywords và Notes đúng giá trị mới; email và vacancy không đổi.",
+    "workbookRow": 31
+  },
+  "RECRUIT_CAND_CancelUpdate_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "67d30a43cc7da05305f3263fc3f5d25d0f48cb80cf0e9f0a4d17fbcf7745b81f",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_CancelUpdate_01/Script20261027000000.groovy",
+    "intent": "Hủy chỉnh sửa hồ sơ ứng viên",
+    "expected": "Email sau khi mở lại đúng Candidate ID vẫn là baseline; email chưa Save không được ghi vào hồ sơ.",
+    "workbookRow": 32
+  },
+  "RECRUIT_CAND_VerifyDetails_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "13465469b24525ee6fc7718a76f57e21a8654f8cc5c2d91a077d5fb456d71072",
+    "script": "Scripts/RECRUIT_CAND/RECRUIT_CAND_VerifyDetails_01/Script20261027000000.groovy",
+    "intent": "Đối chiếu dữ liệu hồ sơ sau tải lại",
+    "expected": "Chi tiết và dòng danh sách nhất quán; không mất dữ liệu khi reload.",
+    "workbookRow": 33
+  },
+  "RECRUIT_FLOW_Status_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "2b007ee8c04b3a572f46e768e72f8fab0699b2912f1db8c7d941955684074f89",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Status_01/Script20261027000000.groovy",
+    "intent": "Kiểm tra trạng thái ứng viên mới",
+    "expected": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",
+    "workbookRow": 9
+  },
+  "RECRUIT_FLOW_Shortlist_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "1dad84a8d57e0e60bda8d2816a5158dafb45b42998a4d8933a127c386c83c996",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01/Script20261027000000.groovy",
+    "intent": "Shortlist ứng viên mới",
+    "expected": "Status chuyển Shortlisted; History ghi sự kiện shortlist đúng ứng viên.",
+    "workbookRow": 10
+  },
+  "RECRUIT_FLOW_Reject_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "343ffa674c0328c7b04dc05ef5a91dfc298b7f33b293f937cfe85d67a3a1c757",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01/Script20261027000000.groovy",
+    "intent": "Reject ứng viên từ trạng thái ban đầu",
+    "expected": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+    "workbookRow": 11
+  },
+  "RECRUIT_FLOW_Reject_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "ed48dad02fa0b918559516dbb07aa25171b0fc280519c4df51135bd2b95e9b9c",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02/Script20261027000000.groovy",
+    "intent": "Reject ứng viên đã Shortlisted",
+    "expected": "Trạng thái Rejected; lịch sử còn sự kiện shortlist cũ và thêm reject.",
+    "workbookRow": 12
+  },
+  "RECRUIT_FLOW_CancelShortlist_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "78f7754ffb308c0d4f4e5f32d060a92d66314b73b707a92f3cee7ff8c5f58dc6",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01/Script20261027000000.groovy",
+    "intent": "Hủy thao tác Shortlist trước khi Save",
+    "expected": "Status vẫn Application Initiated; History không có sự kiện Shortlist mới.",
+    "workbookRow": 13
+  },
+  "RECRUIT_FLOW_ScheduleInterview_01": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "7af5314ac10e5922aa8a7f804c9b9331e132106219b1bfa89f51e38fc1ac437d",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01/Script20261027000000.groovy",
+    "intent": "Đặt lịch phỏng vấn với dữ liệu đầy đủ",
+    "expected": "Chuyển sang Interview Scheduled; tiêu đề, người phỏng vấn, ngày 2026-11-10, giờ 10:30 và ghi chú đã lưu.",
+    "workbookRow": 14
+  },
+  "RECRUIT_FLOW_ScheduleInterview_02": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "60f225d41c920d15ebfac663e628c094c14d07786bdfd4a984ea4a561af5fc75",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02/Script20261027000000.groovy",
+    "intent": "Bỏ trống Interview Title",
+    "expected": "Interview Title hiển thị Required; chưa có lịch mới.",
+    "workbookRow": 15
+  },
+  "RECRUIT_FLOW_ScheduleInterview_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "b8ef784b19fa58e6561db18912223ac615017e3e0ec823741652464e6f2ae536",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03/Script20261027000000.groovy",
+    "intent": "Bỏ trống Interviewer",
+    "expected": "Interviewer hiển thị Required; không tạo lịch.",
+    "workbookRow": 16
+  },
+  "RECRUIT_FLOW_ScheduleInterview_04": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "3aded86320ebf05522fe3063e5a8f80c527936be4ee8f477479ef5af7df2ffa4",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04/Script20261027000000.groovy",
+    "intent": "Bỏ trống ngày phỏng vấn",
+    "expected": "Date hiển thị Required; không lưu lịch.",
+    "workbookRow": 17
+  },
+  "RECRUIT_FLOW_ScheduleInterview_05": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "21bf624feccbabfdde2067130389a088f50e8dde9992bfc97b657e88597f1534",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05/Script20261027000000.groovy",
+    "intent": "Ngày phỏng vấn không tồn tại",
+    "expected": "Ngày không hợp lệ bị chặn hoặc báo lỗi; không tạo lịch với ngày này.",
+    "workbookRow": 18
+  },
+  "RECRUIT_FLOW_ScheduleInterview_06": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "15e8907d6ed5e7adc700df3d6b0714976041489829611d5eea1ed78f80b83c39",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06/Script20261027000000.groovy",
+    "intent": "Thời gian sai định dạng",
+    "expected": "Không nhận thời gian ngoài miền hợp lệ; chặn nhập hoặc báo lỗi.",
+    "workbookRow": 19
+  },
+  "RECRUIT_FLOW_ScheduleInterview_07": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "0db254871cd6c27b8a44a587eb59f8e55adabf4c51ba382846e0968d9b088c1e",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07/Script20261027000000.groovy",
+    "intent": "Lưu ghi chú phỏng vấn",
+    "expected": "Ghi chú hiển thị chính xác, không lỗi dấu; lịch được tạo đúng candidate.",
+    "workbookRow": 20
+  },
+  "RECRUIT_FLOW_SelectInterviewer_01": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "39dd0560b61580b1df2d2051cd62e4f7f9ee277beb99b6ce9b68c75b3ea1c670",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01/Script20261027000000.groovy",
+    "intent": "Chọn interviewer qua autocomplete",
+    "expected": "Interviewer là INT_A, không lưu tên gõ tự do.",
+    "workbookRow": 21
+  },
+  "RECRUIT_FLOW_SelectInterviewer_02": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA",
+      "interviewerB"
+    ],
+    "scriptSha256": "e5faa17ead993ae06bfc7ee876c6c57f4c59dab83a1cabadc2410361bf1babb6",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02/Script20261027000000.groovy",
+    "intent": "Chọn nhiều interviewer",
+    "expected": "Lưu đúng cả hai interviewer, không trùng; hiển thị đúng trên chi tiết.",
+    "workbookRow": 22
+  },
+  "RECRUIT_FLOW_SelectInterviewer_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "92ab71654914b572a5b020d0dec70bf435b1945112a26c153b97f1367bdca69b",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03/Script20261027000000.groovy",
+    "intent": "Không chọn interviewer đã xóa",
+    "expected": "Không chấp nhận một chuỗi không khớp nhân viên còn hiệu lực; báo Required/Invalid.",
+    "workbookRow": 23
+  },
+  "RECRUIT_FLOW_ValidateAction_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "e182b710529861902f31a444c69b87217adc2fd470bdcaa7d97ce318c28739a7",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01/Script20261027000000.groovy",
+    "intent": "Schedule Interview không có ở trạng thái mới",
+    "expected": "Không có thao tác Schedule Interview hợp lệ từ trạng thái đầu vào; phải Shortlist trước.",
+    "workbookRow": 24
+  },
+  "RECRUIT_FLOW_ValidateAction_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "2400ebfd7ba0b814e8fc54cb82af3eb8edbd53ab4dec31ca4f50be96d51be64a",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02/Script20261027000000.groovy",
+    "intent": "Schedule Interview xuất hiện sau Shortlist",
+    "expected": "Nút Schedule Interview khả dụng; mở được form lịch của đúng candidate.",
+    "workbookRow": 25
+  },
+  "RECRUIT_FLOW_Status_02": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "edaeff31bb3b6db61c7f310508766036e27ae7c4c63eddbcab79c5ffd8acc6ba",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_Status_02/Script20261027000000.groovy",
+    "intent": "Trạng thái sau khi đặt lịch",
+    "expected": "Status là Interview Scheduled; không còn status Shortlisted.",
+    "workbookRow": 26
+  },
+  "RECRUIT_FLOW_ValidateAction_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "ac19347189c707ee787164560961eb116926e3a958d79a72680cb6b0300e7672",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03/Script20261027000000.groovy",
+    "intent": "Không tái Shortlist sau khi Reject",
+    "expected": "Không hiển thị thao tác Shortlist trái quy tắc trạng thái; status vẫn Rejected.",
+    "workbookRow": 27
+  },
+  "RECRUIT_FLOW_CancelReject_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "f71cffd8a0820556901b01383406e3283a75cdb5e017212092fbdf073ebc91ce",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01/Script20261027000000.groovy",
+    "intent": "Hủy Reject không đổi trạng thái",
+    "expected": "Vẫn Shortlisted; không thêm bản ghi Reject vào History.",
+    "workbookRow": 28
+  },
+  "RECRUIT_FLOW_VerifyDetails_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "0356fa9a125c10a4b3a8ca6fc3ba94ce6cde7d44eb3bc7ace6bbd59a61299f8e",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01/Script20261027000000.groovy",
+    "intent": "Candidate Details chứa đúng bản ghi",
+    "expected": "Tên, email, vacancy và trạng thái đúng một ứng viên; không hiển thị fixture khác.",
+    "workbookRow": 29
+  },
+  "RECRUIT_FLOW_History_01": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "25da017a8f54a023a34eb7365c33fc09dd6447ad3717f024481551acf1bd18c4",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_01/Script20261027000000.groovy",
+    "intent": "History sau khi tạo ứng viên",
+    "expected": "Có dữ liệu sự kiện khởi tạo/đính vacancy theo cơ chế bản demo; không có event interview/reject.",
+    "workbookRow": 30
+  },
+  "RECRUIT_FLOW_History_02": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "afbeace8e5156a56fed96393250a230b5ae1d0998ce09d72141f9898e8dc0c6e",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_02/Script20261027000000.groovy",
+    "intent": "History sau Shortlist",
+    "expected": "Có event Shortlist gắn với đúng ứng viên và trình tự sau khi tạo.",
+    "workbookRow": 31
+  },
+  "RECRUIT_FLOW_History_03": {
+    "requires": [
+      "hiringManagerName"
+    ],
+    "scriptSha256": "22e5751de3eb7ff1619c27941466501fba496ad25f19312957d0060255352f15",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_03/Script20261027000000.groovy",
+    "intent": "History sau Reject",
+    "expected": "Có event Reject của đúng ứng viên; trạng thái Rejected phù hợp event.",
+    "workbookRow": 32
+  },
+  "RECRUIT_FLOW_History_04": {
+    "requires": [
+      "hiringManagerName",
+      "interviewerA"
+    ],
+    "scriptSha256": "fd1af5c722798f014be3fb6ccdee2355e7c4609c585374f85c27e5679c143f67",
+    "script": "Scripts/RECRUIT_FLOW/RECRUIT_FLOW_History_04/Script20261027000000.groovy",
+    "intent": "History sau Schedule Interview",
+    "expected": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",
+    "workbookRow": 33
+  }
+}

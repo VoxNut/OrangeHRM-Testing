@@ -5,7 +5,7 @@ import java.security.MessageDigest
 
 /** Read-only check; never synchronizes into a prepared or running worker. */
 class WorkerSnapshot {
-    static final List<String> SETTINGS=['hiringManagerName','hiringManagerAlternativeName','interviewerA','interviewerB','cvLimitBytes']
+    static final List<String> SETTINGS=['hiringManagerName','hiringManagerAlternativeName','interviewerA','interviewerB','cvLimitBytes','ASM7_ALLOW_PIM_FIXTURE_CREATE']
     static org.w3c.dom.Document xml(File file) {
         def factory=javax.xml.parsers.DocumentBuilderFactory.newInstance()
         factory.setFeature('http://apache.org/xml/features/disallow-doctype-decl',true)
@@ -40,6 +40,7 @@ class WorkerSnapshot {
             String name=row.getElementsByTagName('name').item(0).textContent,raw=row.getElementsByTagName('initValue').item(0).textContent
             if (name in SETTINGS) {
                 if (name=='cvLimitBytes' && raw==~ /-?\d+L?/) source[name]=raw.replaceFirst(/L$/,'').toLong()
+                else if (name=='ASM7_ALLOW_PIM_FIXTURE_CREATE' && raw in ['true','false']) source[name]=raw=='true'
                 else if (raw.size()>=2 && raw.startsWith("'") && raw.endsWith("'")) source[name]=raw.substring(1,raw.length()-1).replace("\\'","'").replace('\\\\','\\')
             }
         }

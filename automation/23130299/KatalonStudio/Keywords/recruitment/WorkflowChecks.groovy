@@ -86,11 +86,66 @@ class WorkflowChecks extends CandidateChecks {
         ready()
         List<WebElement> allowed = visible(actionButton)
         assert allowed.size() == 1 && allowed[0].enabled : 'Server-rendered allowed action missing/disabled: ' + action
+        String beforeStatus=status()
+        assert (action=='Shortlist' && beforeStatus==INITIAL) || (action=='Reject' && beforeStatus in [INITIAL,SHORT]) ||
+            (action=='Schedule Interview' && beforeStatus==SHORT) : 'Candidate status is not eligible for '+action
         allowed[0].click() // Native UI; source doWorkflow navigates to a dedicated action page.
-        heading(action == 'Schedule Interview' ? action : action + ' Candidate')
+        try {
+            waitFor().until {
+                Map state=pageState()
+                if(state.login) SessionGuard.lost('Workflow action form redirected to login')
+                if(state.networkError) throw new PimEmployeeFixtures.Fault('WORKFLOW_ACTION_DOCUMENT_UNAVAILABLE',
+                    'Action navigation returned a browser/server error document; no Save sent and no action replay')
+                if(!state.authenticated || !state.domComplete || state.loading || state.challenge) return false
+                if(actionCandidateId(driver().currentUrl)!=candidateId(d.url.toString())) return false
+                if(actionSelection(driver().currentUrl)!=[Shortlist:'2',Reject:'3','Schedule Interview':'4'][action])
+                    throw new IllegalStateException('Action route selectedAction differs from native button')
+                return actionMarkersReady(action,beforeStatus,d)
+            }
+        } catch(Throwable failure) {
+            if (WorkflowRouteRecovery.repairable(caseId)) {
+                WorkflowRouteRecovery.noteFlow(this,d,action,beforeStatus)
+            } else WorkflowRouteRecovery.note(executionContext,candidateId(d.url.toString()),driver().currentUrl)
+            navigationLog('ACTION_FORM_STOPPED',[action:action,candidateId:candidateId(d.url.toString()),
+                beforeStatus:beforeStatus,url:safeUrl(driver().currentUrl),errorType:failure.class.simpleName,
+                noSaveSent:true,noActionReplay:true])
+            if (WorkflowRouteRecovery.repairable(caseId) && failure instanceof TimeoutException && action=='Schedule Interview') {
+                workflowRecovery().restoreAction(this,d,action,beforeStatus) {
+                    actionMarkersReady(action,beforeStatus,d)
+                }
+                verifyRestoredAction(d)
+                return
+            }
+            throw failure
+        }
         assert actionCandidateId(driver().currentUrl) == candidateId(d.url.toString()) : 'Action page Candidate ID differs'
         assert candidateNameMatches(value(field('Candidate')), fullName(d)) : 'Action Candidate name differs'
         equalsValue(field('Vacancy'), d.vacancy.toString())
+    }
+    protected WorkflowRouteRecovery workflowRecovery() { new WorkflowRouteRecovery() }
+    protected void verifyRestoredAction(Map d) {
+        assert actionCandidateId(driver().currentUrl) == candidateId(d.url.toString()) : 'Action page Candidate ID differs'
+        assert candidateNameMatches(value(field('Candidate')), fullName(d)) : 'Action Candidate name differs'
+        equalsValue(field('Vacancy'), d.vacancy.toString())
+    }
+    protected boolean actionMarkersReady(String action,String beforeStatus,Map d) {
+        // CandidateActionLayout + action-specific controls, not heading/URL alone.
+        String title=action=='Schedule Interview' ? action : action+' Candidate'
+        String key=[Shortlist:'recruitment.shortlist_candidate',Reject:'recruitment.reject_candidate',
+            'Schedule Interview':'recruitment.schedule_interview'][action]
+        if(!shown("//h6[normalize-space()=${lit(title)} or normalize-space()=${lit(key)}]")) return false
+        if(!shown(field('Candidate')) || !shown(field('Vacancy')) || !shown(field('Current Status'))) return false
+        if(!candidateNameMatches(value(field('Candidate')),fullName(d)) || value(field('Vacancy'))!=d.vacancy ||
+            value(field('Current Status'))!=beforeStatus) return false
+        if(!interactive(button('Save')) || !interactive(button('Cancel'))) return false
+        if(action=='Schedule Interview') return interactive(field('Interview Title')) && interactive(interviewerInput(0)) &&
+            interactive(field('Date')) && interactive(field('Time')) && shown(area('Notes'))
+        return shown(area('Notes'))
+    }
+    static String actionSelection(String url) {
+        if(!actionCandidateId(url)) return null
+        List<String> actions=(new URI(url).rawQuery ?: '').split('&').findAll {it.startsWith('selectedAction=')}.collect {it.substring(15)}
+        actions.size()==1 && actions[0] in ['2','3','4'] ? actions[0] : null
     }
     static String actionCandidateId(String url) {
         try {
@@ -131,7 +186,10 @@ class WorkflowChecks extends CandidateChecks {
             attempt.state = 'verified'; track(new LinkedHashMap(attempt))
         } catch (Throwable failure) {
             attempt.state = context.saveAttempted == true ? 'uncertain' : 'prepared'
-            track(new LinkedHashMap(attempt)); throw failure
+            track(new LinkedHashMap(attempt))
+            if (attempt.state=='uncertain' && WorkflowRouteRecovery.repairable(caseId))
+                WorkflowRouteRecovery.noteUncertain(this,d,operation)
+            throw failure
         }
     }
     void transition(Map d, String action, String target, String note) {
@@ -208,6 +266,9 @@ class WorkflowChecks extends CandidateChecks {
         return candidateNameMatches(firstLast, normExp)
     }
     String selectInterviewer(int index, String expected) {
+        return (String) measure('INTERVIEWER_AUTOCOMPLETE') { selectInterviewerIdentity(index,expected) }
+    }
+    protected String selectInterviewerIdentity(int index, String expected) {
         assert expected?.trim() && expected.length() < 100 : 'EmployeeAutocomplete requires a nonblank name shorter than 100 characters'
         long deadline = System.nanoTime() + java.time.Duration.ofSeconds(seconds).toNanos()
         WebElement input = selectionWait(deadline).until {
@@ -216,16 +277,40 @@ class WorkflowChecks extends CandidateChecks {
             return fields && fields[0].enabled ? fields[0] : null
         }
         input.sendKeys(Keys.chord(Keys.CONTROL, 'a'), Keys.BACK_SPACE)
-        input.sendKeys(expected) // Full configured or discovered identity narrows the source's maximum five suggestions.
+        String query = interviewerQuery(expected)
         boolean clicked = false
         String selectedLabel = expected
-        selectionWait(deadline).until {
-            List<WebElement> matches = visible(interviewerOptions(index)).findAll { interviewerOptionMatches(it.text, expected) }
-            assert matches.size() <= 1 : 'Ambiguous employee identity; configure a uniquely identifiable interviewer'
-            if (!matches || !matches[0].enabled) return false
-            selectedLabel = VacancyChecks.normalizeManagerName(matches[0].text)
-            matches[0].click(); clicked = true; return true
+        List<String> queries = [query]
+        List<String> parts = VacancyChecks.normalizeManagerName(expected).tokenize(' ')
+        if (parts.size()>2) queries << parts.first()+' '+parts.last()
+        queries = queries.unique()
+        boolean found = false
+        for (String search : queries) {
+            query = search
+            WebElement freshInput = one(interviewerInput(index))
+            freshInput.sendKeys(Keys.chord(Keys.CONTROL, 'a'), Keys.BACK_SPACE)
+            freshInput.sendKeys(query)
+            String result = selectionWait(deadline).until {
+                List<WebElement> options = visible(interviewerOptions(index))
+                if (options.size()==1 && options[0].text.trim().equalsIgnoreCase('No records found')) return 'NOT_FOUND'
+                List<WebElement> matches = options.findAll { interviewerOptionMatches(it.text, expected) }
+                assert matches.size() <= 1 : 'Ambiguous employee identity; configure a uniquely identifiable interviewer'
+                if (!matches || !matches[0].enabled) return null
+                selectedLabel = VacancyChecks.normalizeManagerName(matches[0].text)
+                return 'READY'
+            }
+            if (result == 'READY') { found = true; break }
         }
+        if (!found) throw new EmployeeIdentity.NotFound('[INTERVIEWER NOT_FOUND] No exact active suggestion on Schedule Interview; no Save')
+        String settingKey = index == 0 ? 'interviewerA' : 'interviewerB'
+        Map cached = executionContext.interviewerDiscovery[settingKey] as Map
+        String previousId = cached?.employeeId && candidateNameMatches(cached.displayName?.toString(), selectedLabel) ? cached.employeeId.toString() : null
+        Map identity = EmployeeIdentity.resolve(driver(), '/api/v2/recruitment/interviewers', query, selectedLabel, previousId)
+        if (index > 0) assert identity.id.toString() != executionContext.interviewerDiscovery.interviewerA?.employeeId?.toString() :
+            'Interviewer B must be a different employee ID from A'
+        List<WebElement> exact = visible(interviewerOptions(index)).findAll { candidateNameMatches(it.text, selectedLabel) }
+        assert exact.size() == 1 : 'Interviewer suggestion changed while verifying employee identity'
+        centeredNativeClick(exact[0]); clicked = true
         selectionWait(deadline).until {
             List<WebElement> fields = visible(interviewerInput(index))
             String actualVal = fields.size() == 1 ? fields[0].getDomProperty('value') : ''
@@ -237,11 +322,12 @@ class WorkflowChecks extends CandidateChecks {
             }
             return false
         }
-        String settingKey = index == 0 ? 'interviewerA' : 'interviewerB'
         Map verifiedRecord = [
             state: 'VERIFIED',
             displayName: selectedLabel,
             selected: selectedLabel,
+            employeeId: identity.id.toString(),
+            searchQuery: query,
             verificationMethod: 'Schedule Interview InterviewerAutocomplete (/api/v2/recruitment/interviewers)',
             verifiedTimestamp: java.time.OffsetDateTime.now().toString(),
             executionId: executionContext.executionId
@@ -251,13 +337,22 @@ class WorkflowChecks extends CandidateChecks {
         executionContext.persist()
         return selectedLabel
     }
+    String interviewerQuery(String expected) {
+        String full = VacancyChecks.normalizeManagerName(expected)
+        List<Map> records = [executionContext.interviewerDiscovery.interviewerA, executionContext.interviewerDiscovery.interviewerB].findAll { it } as List<Map>
+        Map cached = records.find { it.state == 'VERIFIED' && candidateNameMatches(it.displayName?.toString(), full) && it.searchQuery }
+        if (cached) return cached.searchQuery.toString()
+        List<Map> managers = (executionContext.managerDiscovery?.verifiedPool ?: []) as List<Map>
+        Map manager = managers.find { it.state == 'VERIFIED' && candidateNameMatches(it.displayName?.toString(), full) }
+        return manager?.searchQuery?.toString() ?: manager?.tableDisplayName?.toString() ?: full
+    }
     void fillInterview(Map data) {
         replace(field('Interview Title'), data.title.toString())
         List<String> names = new ArrayList<String>((data.interviewers as List<String>) ?: [])
         assert names.size() <= 5 && names.collect { it.trim().replaceAll(/\s+/, ' ') }.unique(false).size() == names.size() : 'One to five distinct employee identities only'
         Set<String> chosenNormalized = new LinkedHashSet<>()
         names.eachWithIndex { String name, int index ->
-            if (index > 0) buttonClick('Add another')
+            if (index > 0) buttonClick('Add Another')
             assert visible("//div[${cls('orangehrm-recruitment-interviewer-input')}]").size() == index + 1 : 'Add another did not create exactly one interviewer field'
             String settingKey = index == 0 ? 'interviewerA' : 'interviewerB'
             boolean isManual = (executionContext.settings?.get(settingKey) ?: '').toString().trim() != ''
@@ -281,7 +376,8 @@ class WorkflowChecks extends CandidateChecks {
                         names[index] = verified
                         break
                     }
-                } catch (Throwable err) {
+                    verified = null
+                } catch (EmployeeIdentity.NotFound err) {
                     lastErr = err
                     if (isManual) throw err
                 }
@@ -311,8 +407,10 @@ class WorkflowChecks extends CandidateChecks {
         WebElement t = table('Description')
         List<String> headers = t.findElements(By.xpath(".//div[@role='columnheader']")).collect { it.text.trim() }
         int index = headers.indexOf('Description') + 1
+        String descriptionPath = index > 0 ? "./div[@role='cell'][${index}]" :
+            ".//div[${cls('oxd-table-card-cell')}][./div[${cls('header')} and normalize-space()='Description']]/div[${cls('data')}]"
         List<WebElement> rows = t.findElements(By.xpath(ROWS)).findAll {
-            historyEvent(it.findElement(By.xpath("./div[@role='cell'][${index}]")).text.trim()) == description
+            historyEvent(it.findElement(By.xpath(descriptionPath)).text.trim()) == description
         }
         assert rows.size() == 1 : 'Event is not unique on own Candidate History: ' + description
         List<WebElement> view = rows[0].findElements(By.xpath(".//button[.//i[${cls('bi-pencil-fill')}]]")).findAll { it.displayed && it.enabled }
@@ -405,7 +503,9 @@ class WorkflowChecks extends CandidateChecks {
             noTransition(d, SHORT, before)
             attempt.state = 'verified'; attempt.rejected = true; track(new LinkedHashMap(attempt))
         } catch (Throwable failure) {
-            attempt.state = 'uncertain'; track(new LinkedHashMap(attempt)); throw failure
+            attempt.state = 'uncertain'; track(new LinkedHashMap(attempt))
+            if (WorkflowRouteRecovery.repairable(caseId)) WorkflowRouteRecovery.noteUncertain(this,d,'Schedule Interview')
+            throw failure
         }
     }
     void inspectActionMenus() {

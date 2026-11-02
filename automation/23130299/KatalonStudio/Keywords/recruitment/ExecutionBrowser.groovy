@@ -28,7 +28,11 @@ class ExecutionBrowser {
         result.remove('debuggerAddress') // never attach to a different execution's browser
         result.prefs=new LinkedHashMap((previous.prefs ?: [:]) as Map)+[
             'download.default_directory':new File(c.root,'downloads').absolutePath,
-            'download.prompt_for_download':false,'download.directory_upgrade':true]
+            'download.prompt_for_download':false,'download.directory_upgrade':true,
+            // UploadCV_01 verifies the native downloaded file SHA. Scope PDF handling to this
+            // execution's fresh Chrome profile so FileUploadInput.window.open cannot become
+            // an inline-only viewer while the test is waiting for a completed download.
+            'plugins.always_open_pdf_externally':true]
         result
     }
     static void launch(Closure katalonLaunch) {
