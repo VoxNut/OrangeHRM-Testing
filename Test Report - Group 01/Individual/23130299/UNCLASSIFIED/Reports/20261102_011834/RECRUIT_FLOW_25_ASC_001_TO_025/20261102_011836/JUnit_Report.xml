@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="RECRUIT_FLOW_25_ASC_001_TO_025" time="4231.389" tests="25" passed="23" failures="0" errors="2" incompleted="0" skipped="0">
+   <testsuite name="RECRUIT_FLOW_25_ASC_001_TO_025" tests="25" passed="23" failures="0" errors="2" incompleted="0" skipped="0" time="4231.389" timestamp="2026-11-01T18:18:46.298Z" hostname="Admin - LAPTOP-GLHK2AN0.lan" id="Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025" status="ERROR">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\Admin\\Downloads\\23130299_NguyenVanThang_ASM7\\KatalonStudio\\Reports\\20261102_011834\\RECRUIT_FLOW_25_ASC_001_TO_025\\20261102_011836"/>
+         <property name="logFiles" value="C:\\Users\\Admin\\Downloads\\23130299_NguyenVanThang_ASM7\\KatalonStudio\\Reports\\20261102_011834\\RECRUIT_FLOW_25_ASC_001_TO_025\\20261102_011836\\console0.log, C:\\Users\\Admin\\Downloads\\23130299_NguyenVanThang_ASM7\\KatalonStudio\\Reports\\20261102_011834\\RECRUIT_FLOW_25_ASC_001_TO_025\\20261102_011836\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="executionBindingVariables" value="[]"/>
+         <property name="hostName" value="Admin - LAPTOP-GLHK2AN0.lan"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="11.6.0"/>
+         <property name="browser" value="Chrome 156.0.8078.79"/>
+         <property name="userFullName" value="Ritsuka Fujimaru"/>
+         <property name="hostAddress" value="192.168.100.207"/>
+         <property name="sessionId" value="4ecb5e9e7134db47eef1e3787af03463"/>
+         <property name="projectName" value="OrangeHRM_RECRUIT_VAC_KatalonStudio"/>
+         <property name="seleniumVersion" value="4.46.0"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Windows 11"/>
+      </properties>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01" time="131.918" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01" status="ERROR" tag="ASM7_NOT_RUN">
+         <error type="ERROR" message="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.&#xa;Reason:&#xa;org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318&#xa;(tried for 30 seconds with 200 milliseconds interval)&#xa;Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'&#xa;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'&#xa;Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD&#xa;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#xa;Session ID: 4ecb5e9e7134db47eef1e3787af03463&#xa;	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)&#xa;	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)&#xa;	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)&#xa;	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)&#xa;	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)&#xa;	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)&#xa;	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)&#xa;	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)&#xa;	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)&#xa;	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)&#xa;	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)&#xa;	at Script20261027000000.run(Script20261027000000.groovy:23)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)&#xa;	at S1102_0.run(S1102_0.groovy:41)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;"/>
+         <system-out><![CDATA[02-11-2026T01:18:47 - [TEST_CASE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)
+	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)
+	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)
+	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)
+	at Script20261027000000.run(Script20261027000000.groovy:23)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:18:48 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+02-11-2026T01:18:48 - [MESSAGE][INFO] - User set preference: ['args', '[--user-data-dir=C:\Users\Admin\Downloads\23130299_NguyenVanThang_ASM7\KatalonStudio\runtime\ASM7\executions\40b57a16-e348-43e4-a6b9-e3d00bb8bf9e\chrome-profile]']
+
+02-11-2026T01:18:48 - [MESSAGE][INFO] - User set preference: ['prefs', '{download.default_directory=C:\Users\Admin\Downloads\23130299_NguyenVanThang_ASM7\KatalonStudio\runtime\ASM7\executions\40b57a16-e348-43e4-a6b9-e3d00bb8bf9e\downloads, download.prompt_for_download=false, download.directory_upgrade=true, plugins.always_open_pdf_externally=true}']
+
+02-11-2026T01:18:48 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+02-11-2026T01:18:54 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+02-11-2026T01:18:54 - [MESSAGE][PASSED] - Current window maximized
+
+02-11-2026T01:18:59 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index' successfully
+
+02-11-2026T01:19:13 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index' successfully
+
+02-11-2026T01:19:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:19:27 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:19:28 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:19:28 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Status_01): null
+
+02-11-2026T01:19:28 - [TEST_STEP][PASSED] - try: Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:19:28 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "01"): Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:19:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index' successfully
+
+02-11-2026T01:19:36 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:19:49 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:19:57 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/11' successfully
+
+02-11-2026T01:20:02 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_01' is: 'Adna  36877'
+
+02-11-2026T01:20:56 - [TEST_STEP][ERROR] - catch (Throwable failure): Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)
+	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)
+	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)
+	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)
+	at Script20261027000000.run(Script20261027000000.groovy:23)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:20:56 - [TEST_STEP][PASSED] - ui.failure(failure): null
+
+02-11-2026T01:20:58 - [TEST_STEP][ERROR] - throw failure: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)
+	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)
+	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)
+	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)
+	at Script20261027000000.run(Script20261027000000.groovy:23)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:20:58 - [MESSAGE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)
+	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)
+	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)
+	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)
+	at Script20261027000000.run(Script20261027000000.groovy:23)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:20:58 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:20:58 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:20:58 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:20:58 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:20:58 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[02-11-2026T01:18:47 - [TEST_CASE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_01 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.CandidateChecks$_awaitCandidateRecord_closure15@362aa318
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.CandidateChecks.awaitCandidateRecord(CandidateChecks.groovy:357)
+	at recruitment.CandidateChecks.saveCandidateDraft(CandidateChecks.groovy:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy:286)
+	at recruitment.CandidateChecks$_saveNew_closure11.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at recruitment.CandidateChecks.saveNew(CandidateChecks.groovy:286)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy:279)
+	at recruitment.CandidateChecks$_create_closure10$_closure41.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.RecruitmentUi.measure(RecruitmentUi.groovy:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy:277)
+	at recruitment.CandidateChecks$_create_closure10.doCall(CandidateChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.CandidateChecks.create(CandidateChecks.groovy:283)
+	at recruitment.WorkflowChecks.prepareWorkflowFixture(WorkflowChecks.groovy:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy:17)
+	at recruitment.WorkflowChecks$_fixture_closure1.doCall(WorkflowChecks.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.EvidenceCapture.fixture(EvidenceCapture.groovy:17)
+	at recruitment.WorkflowChecks.fixture(WorkflowChecks.groovy:17)
+	at Script20261027000000.run(Script20261027000000.groovy:23)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01" time="135.353" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:20:59 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Shortlist_01
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:20:59 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:21:00 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:21:00 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Shortlist_01): null
+
+02-11-2026T01:21:00 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:21:00 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "02"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:21:04 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:21:16 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Shortlist_01' is: 'Adna  36877'
+
+02-11-2026T01:21:24 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/12' successfully
+
+02-11-2026T01:21:29 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Shortlist_01' is: 'Adna  36877'
+
+02-11-2026T01:21:53 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:22:10 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:22:16 - [TEST_STEP][PASSED] - ui.transition(d, "Shortlist", SHORT, "Shortlist " + token): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:22:17 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:22:27 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:22:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/82' successfully
+
+02-11-2026T01:23:08 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, SHORT]): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01" time="138.655" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:23:14 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_01
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:23:14 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:23:15 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:23:15 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Reject_01): null
+
+02-11-2026T01:23:15 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:23:15 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "03"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:23:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:23:33 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Reject_01' is: 'Adna  36877'
+
+02-11-2026T01:23:41 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/13' successfully
+
+02-11-2026T01:23:46 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Reject_01' is: 'Adna  36877'
+
+02-11-2026T01:24:10 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:24:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:24:35 - [TEST_STEP][PASSED] - ui.transition(d, "Reject", REJECTED, "Reject initial " + token): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:24:35 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:24:46 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:25:06 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83' successfully
+
+02-11-2026T01:25:27 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, REJECTED]): null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:25:32 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02" time="191.538" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:25:33 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Reject_02
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:25:33 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:25:34 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:25:34 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Reject_02): null
+
+02-11-2026T01:25:34 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:25:34 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "04"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:25:38 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:25:50 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Reject_02' is: 'Adna  36877'
+
+02-11-2026T01:25:59 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/14' successfully
+
+02-11-2026T01:26:04 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Reject_02' is: 'Adna  36877'
+
+02-11-2026T01:26:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:26:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:26:53 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:27:11 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:27:36 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:27:42 - [TEST_STEP][PASSED] - ui.transition(d, "Reject", REJECTED, "Reject shortlisted " + token): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:27:43 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:27:54 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:28:14 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/84' successfully
+
+02-11-2026T01:28:37 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, SHORT, REJECTED]): null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:28:44 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01" time="122.15" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:28:45 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelShortlist_01
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:28:45 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:28:47 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:28:47 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_CancelShortlist_01): null
+
+02-11-2026T01:28:47 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:28:47 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "05"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:28:55 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:29:10 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_CancelShortlist_01' is: 'Adna  36877'
+
+02-11-2026T01:29:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/15' successfully
+
+02-11-2026T01:29:24 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_CancelShortlist_01' is: 'Adna  36877'
+
+02-11-2026T01:29:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:04 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:10 - [TEST_STEP][PASSED] - ui.cancelTransition(d, "Shortlist", INITIAL, "Không được lưu"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:11 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:21 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:36 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/85' successfully
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:30:46 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01" time="214.664" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:30:47 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_01
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:30:47 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:30:48 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:30:49 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_01): null
+
+02-11-2026T01:30:49 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:30:49 - [TEST_STEP][PASSED] - interview = ui.interviewData("06"): null
+
+02-11-2026T01:30:49 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "06"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:30:54 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:31:07 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_01' is: 'Adna  36877'
+
+02-11-2026T01:31:15 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/16' successfully
+
+02-11-2026T01:31:19 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_01' is: 'Adna  36877'
+
+02-11-2026T01:31:43 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:31:57 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:32:07 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:32:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:32:50 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:32:56 - [TEST_STEP][PASSED] - ui.schedule(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:32:56 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:33:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:33:31 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:33:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:34:11 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/86' successfully
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:34:21 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02" time="181.641" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:34:21 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_02
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_02): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - interview = ui.interviewData("07", ["title":""]): null
+
+02-11-2026T01:34:22 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "07"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:34:26 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:34:39 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_02' is: 'Adna  36877'
+
+02-11-2026T01:34:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/17' successfully
+
+02-11-2026T01:34:51 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_02' is: 'Adna  36877'
+
+02-11-2026T01:35:15 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:35:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:35:39 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:35:59 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:36:23 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:36:29 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "title"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:36:30 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:36:41 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:36:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:37:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/87' successfully
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:37:22 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03" time="179.538" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:37:23 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_03
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:37:23 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:37:24 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:37:24 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_03): null
+
+02-11-2026T01:37:24 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:37:24 - [TEST_STEP][PASSED] - interview = ui.interviewData("08", ["interviewers":[]]): null
+
+02-11-2026T01:37:24 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "08"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:37:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:37:40 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_03' is: 'Adna  36877'
+
+02-11-2026T01:37:48 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/18' successfully
+
+02-11-2026T01:37:53 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_03' is: 'Adna  36877'
+
+02-11-2026T01:38:16 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:38:30 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:38:40 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:01 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:35 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "interviewer"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:35 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:46 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:39:52 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:40:11 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/88' successfully
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:40:22 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04" time="181.063" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:40:23 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_04
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:40:23 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:40:24 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_04): null
+
+02-11-2026T01:40:24 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:40:24 - [TEST_STEP][PASSED] - interview = ui.interviewData("09", ["date":""]): null
+
+02-11-2026T01:40:24 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "09"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:40:27 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:40:39 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_04' is: 'Adna  36877'
+
+02-11-2026T01:40:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/19' successfully
+
+02-11-2026T01:40:52 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_04' is: 'Adna  36877'
+
+02-11-2026T01:41:16 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:41:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:41:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:00 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:31 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "date"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:43 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:42:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:43:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/89' successfully
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:43:23 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05" time="181.091" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:43:24 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_05
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:43:24 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:43:25 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:43:25 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_05): null
+
+02-11-2026T01:43:25 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:43:25 - [TEST_STEP][PASSED] - interview = ui.interviewData("10"): null
+
+02-11-2026T01:43:25 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "10"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:43:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:43:41 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_05' is: 'Adna  36877'
+
+02-11-2026T01:43:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/20' successfully
+
+02-11-2026T01:43:54 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_05' is: 'Adna  36877'
+
+02-11-2026T01:44:18 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:44:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:44:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:00 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:31 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "invalidDate"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:43 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:45:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:46:14 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/90' successfully
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:46:24 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06" time="191.999" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:46:25 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_06
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:46:25 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:46:26 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:46:26 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_06): null
+
+02-11-2026T01:46:26 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:46:26 - [TEST_STEP][PASSED] - interview = ui.interviewData("11"): null
+
+02-11-2026T01:46:26 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "11"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:46:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:46:42 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_06' is: 'Adna  36877'
+
+02-11-2026T01:46:50 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/21' successfully
+
+02-11-2026T01:46:55 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_06' is: 'Adna  36877'
+
+02-11-2026T01:47:18 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:47:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:47:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:00 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:24 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:30 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "invalidTime"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:31 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:48:51 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:49:24 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/91' successfully
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:49:36 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07" time="213.127" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:49:37 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ScheduleInterview_07
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:49:37 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:49:38 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:49:38 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ScheduleInterview_07): null
+
+02-11-2026T01:49:38 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:49:38 - [TEST_STEP][PASSED] - interview = ui.interviewData("12", ["notes":"Đánh giá kỹ năng QA", "time":"14:00"]): null
+
+02-11-2026T01:49:38 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "12"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:49:41 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:49:54 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_07' is: 'Adna  36877'
+
+02-11-2026T01:50:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/22' successfully
+
+02-11-2026T01:50:06 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ScheduleInterview_07' is: 'Adna  36877'
+
+02-11-2026T01:50:31 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:50:45 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:50:55 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:51:14 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:51:39 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:51:45 - [TEST_STEP][PASSED] - ui.schedule(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:51:45 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:51:51 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:52:20 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:52:37 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:52:58 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/92' successfully
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:53:08 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01" time="215.154" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T01:53:10 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_01
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:53:10 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:53:11 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:53:11 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_01): null
+
+02-11-2026T01:53:11 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T01:53:11 - [TEST_STEP][PASSED] - interview = ui.interviewData("13"): null
+
+02-11-2026T01:53:11 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "13"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:53:15 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:53:27 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_01' is: 'Adna  36877'
+
+02-11-2026T01:53:35 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/23' successfully
+
+02-11-2026T01:53:40 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_01' is: 'Adna  36877'
+
+02-11-2026T01:54:05 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:54:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:54:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:54:48 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:55:13 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:55:19 - [TEST_STEP][PASSED] - ui.schedule(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:55:20 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:55:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:55:54 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:56:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:56:34 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/93' successfully
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:56:44 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02" time="195.757" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02" status="ERROR" tag="ASM7_NOT_RUN">
+         <error type="ERROR" message="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.&#xa;Reason:&#xa;org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c&#xa;(tried for 30 seconds with 200 milliseconds interval)&#xa;Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'&#xa;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'&#xa;Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD&#xa;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#xa;Session ID: 4ecb5e9e7134db47eef1e3787af03463&#xa;	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)&#xa;	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)&#xa;	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)&#xa;	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)&#xa;	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)&#xa;	at Script20261027000000.run(Script20261027000000.groovy:30)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)&#xa;	at S1102_0.run(S1102_0.groovy:41)&#xa;	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)&#xa;"/>
+         <system-out><![CDATA[02-11-2026T01:56:45 - [TEST_CASE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)
+	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)
+	at Script20261027000000.run(Script20261027000000.groovy:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T01:56:45 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_02): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - try: Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - interview = ui.interviewData("14"): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - second = toString().trim(): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - if (!(second) || second == interviewers[0]): null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - interviewers = [interviewers[0], second]: null
+
+02-11-2026T01:56:47 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "14"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:56:50 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T01:57:03 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_02' is: 'Adna  36877'
+
+02-11-2026T01:57:11 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/24' successfully
+
+02-11-2026T01:57:16 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_02' is: 'Adna  36877'
+
+02-11-2026T01:57:40 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:57:54 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:58:04 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:58:23 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:58:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:58:57 - [TEST_STEP][PASSED] - ui.schedule(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:58:58 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:59:08 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94' successfully
+
+02-11-2026T01:59:59 - [TEST_STEP][ERROR] - catch (Throwable failure): Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)
+	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)
+	at Script20261027000000.run(Script20261027000000.groovy:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T01:59:59 - [TEST_STEP][PASSED] - ui.failure(failure): null
+
+02-11-2026T02:00:00 - [TEST_STEP][ERROR] - throw failure: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)
+	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)
+	at Script20261027000000.run(Script20261027000000.groovy:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T02:00:00 - [MESSAGE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)
+	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)
+	at Script20261027000000.run(Script20261027000000.groovy:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+
+
+02-11-2026T02:00:00 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:00:00 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:00:00 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:00:00 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:00:00 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[02-11-2026T01:56:45 - [TEST_CASE][ERROR] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_02 FAILED.
+Reason:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for recruitment.RecruitmentUi$_click_closure8@511e402c
+(tried for 30 seconds with 200 milliseconds interval)
+Build info: version: '4.46.0', revision: 'df5a634 df5a6341cbb5f8f06b836bd595752775627c80dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.12'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver$ByteBuddy$jadaCpHD
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 156.0.8078.79, chrome: {chromedriverVersion: 156.0.8078.47 (1d17a2e2ee14..., userDataDir: C:\Users\Admin\Downloads\23...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53850}, goog:processID: 40812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53850/devtoo..., se:cdpVersion: 156.0.8078.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: {alert: ignore, beforeUnload: ignore, confirm: ignore, default: ignore, file: ignore, prompt: ignore}, webSocketUrl: ws://localhost:47203/sessio..., webauthn:extension:cmtgKey: true, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4ecb5e9e7134db47eef1e3787af03463
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at recruitment.RecruitmentUi.click(RecruitmentUi.groovy:203)
+	at recruitment.RecruitmentUi.buttonClick(RecruitmentUi.groovy:215)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks$_fillInterview_closure28.doCall(WorkflowChecks.groovy:355)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at recruitment.WorkflowChecks.fillInterview(WorkflowChecks.groovy:354)
+	at recruitment.WorkflowChecks.schedule(WorkflowChecks.groovy:394)
+	at Script20261027000000.run(Script20261027000000.groovy:30)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1102_0.run(S1102_0.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03" time="179.939" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:00:01 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_SelectInterviewer_03
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:00:01 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:00:02 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:00:02 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_SelectInterviewer_03): null
+
+02-11-2026T02:00:02 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:00:02 - [TEST_STEP][PASSED] - interview = ui.interviewData("15", ["interviewers":[]]): null
+
+02-11-2026T02:00:02 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "15"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:00:05 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:00:18 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_03' is: 'Adna  36877'
+
+02-11-2026T02:00:26 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/25' successfully
+
+02-11-2026T02:00:31 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_SelectInterviewer_03' is: 'Adna  36877'
+
+02-11-2026T02:00:55 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:01:09 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:01:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:01:37 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:08 - [TEST_STEP][PASSED] - ui.scheduleNegative(d, interview, "unknownInterviewer"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:09 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:21 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:27 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:02:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/95' successfully
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:03:00 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01" time="89.374" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:03:01 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_01
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:03:01 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:03:02 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:03:02 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_01): null
+
+02-11-2026T02:03:02 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:03:02 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "16"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/96' successfully
+
+02-11-2026T02:03:06 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:03:18 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_01' is: 'Adna  36877'
+
+02-11-2026T02:03:27 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/26' successfully
+
+02-11-2026T02:03:31 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_01' is: 'Adna  36877'
+
+02-11-2026T02:03:56 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/96' successfully
+
+02-11-2026T02:04:13 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/96' successfully
+
+02-11-2026T02:04:18 - [TEST_STEP][PASSED] - ui.forbiddenAction("Schedule Interview"): null
+
+02-11-2026T02:04:19 - [TEST_STEP][PASSED] - ui.reopen(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/96' successfully
+
+02-11-2026T02:04:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/96' successfully
+
+02-11-2026T02:04:24 - [TEST_STEP][PASSED] - ui.stage(INITIAL): null
+
+02-11-2026T02:04:25 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL]): null
+
+02-11-2026T02:04:29 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02" time="161.216" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:04:30 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_02
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:04:30 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:04:31 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:04:31 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_02): null
+
+02-11-2026T02:04:31 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:04:31 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "17"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:04:35 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:04:47 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_02' is: 'Adna  36877'
+
+02-11-2026T02:04:56 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/27' successfully
+
+02-11-2026T02:05:01 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_02' is: 'Adna  36877'
+
+02-11-2026T02:05:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:05:38 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:05:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:07 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:37 - [TEST_STEP][PASSED] - ui.scheduleForm(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:38 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:44 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:06:57 - [TEST_STEP][PASSED] - ui.one(WorkflowChecks.field("Interview Title")): null
+
+02-11-2026T02:06:57 - [TEST_STEP][PASSED] - ui.one(WorkflowChecks.field("Interviewer")): null
+
+02-11-2026T02:06:57 - [TEST_STEP][PASSED] - ui.buttonClick("Cancel"): null
+
+02-11-2026T02:07:00 - [TEST_STEP][PASSED] - ui.reopen(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:07:01 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/97' successfully
+
+02-11-2026T02:07:05 - [TEST_STEP][PASSED] - ui.stage(SHORT): null
+
+02-11-2026T02:07:06 - [TEST_STEP][PASSED] - ui.verifyDetails(d): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_02" time="222.592" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_02" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:07:11 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_Status_02
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:07:11 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:07:12 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:07:12 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:07:12 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:07:12 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:07:13 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_Status_02): null
+
+02-11-2026T02:07:13 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:07:13 - [TEST_STEP][PASSED] - interview = ui.interviewData("18"): null
+
+02-11-2026T02:07:13 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "18"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:07:16 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:07:29 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_02' is: 'Adna  36877'
+
+02-11-2026T02:07:37 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/28' successfully
+
+02-11-2026T02:07:42 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_Status_02' is: 'Adna  36877'
+
+02-11-2026T02:08:08 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:08:22 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:08:32 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:08:50 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:09:18 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:09:24 - [TEST_STEP][PASSED] - ui.schedule(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:09:24 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:09:30 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:09:59 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:10:16 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:10:37 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:10:47 - [TEST_STEP][PASSED] - ui.reopen(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:10:48 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/98' successfully
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - ui.stage(SCHEDULED): null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - assert ui.status() != SHORT: null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:10:53 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03" time="140.103" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:10:54 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_ValidateAction_03
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:10:54 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:10:55 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:10:55 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_ValidateAction_03): null
+
+02-11-2026T02:10:55 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:10:55 - [TEST_STEP][PASSED] - d = ui.fixture(REJECTED, "19"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:10:58 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:11:11 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_03' is: 'Adna  36877'
+
+02-11-2026T02:11:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/29' successfully
+
+02-11-2026T02:11:24 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_ValidateAction_03' is: 'Adna  36877'
+
+02-11-2026T02:11:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:12:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:12:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:12:30 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:12:55 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:13:01 - [TEST_STEP][PASSED] - ui.forbiddenAction("Shortlist"): null
+
+02-11-2026T02:13:02 - [TEST_STEP][PASSED] - ui.reopen(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:13:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/99' successfully
+
+02-11-2026T02:13:07 - [TEST_STEP][PASSED] - ui.stage(REJECTED): null
+
+02-11-2026T02:13:07 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, REJECTED]): null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:13:13 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01" time="166.314" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:13:14 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_CancelReject_01
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:13:14 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:13:15 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:13:15 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_CancelReject_01): null
+
+02-11-2026T02:13:15 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:13:15 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "20"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:13:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:13:33 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_CancelReject_01' is: 'Adna  36877'
+
+02-11-2026T02:13:41 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/30' successfully
+
+02-11-2026T02:13:46 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_CancelReject_01' is: 'Adna  36877'
+
+02-11-2026T02:14:10 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:14:23 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:14:34 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:14:51 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:15:16 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:15:22 - [TEST_STEP][PASSED] - ui.cancelTransition(d, "Reject", SHORT, "Không được lưu"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:15:23 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:15:34 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:15:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/100' successfully
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:16:00 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01" time="123.36" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:16:01 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_VerifyDetails_01
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_VerifyDetails_01): null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:16:01 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "21"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/101' successfully
+
+02-11-2026T02:16:05 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:16:18 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_VerifyDetails_01' is: 'Adna  36877'
+
+02-11-2026T02:16:26 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/31' successfully
+
+02-11-2026T02:16:30 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_VerifyDetails_01' is: 'Adna  36877'
+
+02-11-2026T02:16:55 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/101' successfully
+
+02-11-2026T02:17:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/101' successfully
+
+02-11-2026T02:17:18 - [TEST_STEP][PASSED] - ui.verifyListAndReopen(d, fixtureVacancy): null
+
+02-11-2026T02:17:53 - [TEST_STEP][PASSED] - ui.verifyDetails(d): null
+
+02-11-2026T02:17:58 - [TEST_STEP][PASSED] - ui.stage(INITIAL): null
+
+02-11-2026T02:17:58 - [TEST_STEP][PASSED] - ui.verifyDetails(d): null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:18:03 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_01" time="98.325" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_01" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:18:04 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_01: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_01
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:18:04 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:18:05 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:18:05 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_01): null
+
+02-11-2026T02:18:05 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:18:05 - [TEST_STEP][PASSED] - d = ui.fixture(INITIAL, "22"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/102' successfully
+
+02-11-2026T02:18:09 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:18:21 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_01' is: 'Adna  36877'
+
+02-11-2026T02:18:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/32' successfully
+
+02-11-2026T02:18:34 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_01' is: 'Adna  36877'
+
+02-11-2026T02:19:04 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/102' successfully
+
+02-11-2026T02:19:25 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/102' successfully
+
+02-11-2026T02:19:31 - [TEST_STEP][PASSED] - ui.reopen(d): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/102' successfully
+
+02-11-2026T02:19:31 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/102' successfully
+
+02-11-2026T02:19:36 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL]): null
+
+02-11-2026T02:19:40 - [TEST_STEP][PASSED] - ui.stage(INITIAL): null
+
+02-11-2026T02:19:41 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_02" time="161.478" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_02" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:19:42 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_02: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_02
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:19:42 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:19:43 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:19:43 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_02): null
+
+02-11-2026T02:19:43 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:19:43 - [TEST_STEP][PASSED] - d = ui.fixture(SHORT, "23"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:19:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:19:59 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_02' is: 'Adna  36877'
+
+02-11-2026T02:20:07 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/33' successfully
+
+02-11-2026T02:20:12 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_02' is: 'Adna  36877'
+
+02-11-2026T02:20:37 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:20:52 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:21:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:21:20 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:21:47 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:21:53 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, SHORT]): null
+
+02-11-2026T02:21:58 - [TEST_STEP][PASSED] - if (shortlistNote): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:21:59 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:22:18 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/103' successfully
+
+02-11-2026T02:22:22 - [TEST_STEP][PASSED] - ui.stage(SHORT): null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:22:23 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_03" time="160.83" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_03" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:22:24 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_03: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_03
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:22:24 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:22:25 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_03): null
+
+02-11-2026T02:22:25 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:22:25 - [TEST_STEP][PASSED] - d = ui.fixture(REJECTED, "24"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:22:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:22:41 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_03' is: 'Adna  36877'
+
+02-11-2026T02:22:49 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/34' successfully
+
+02-11-2026T02:22:54 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_03' is: 'Adna  36877'
+
+02-11-2026T02:23:19 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:23:33 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:23:42 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:24:02 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:24:28 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:24:34 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, REJECTED]): null
+
+02-11-2026T02:24:40 - [TEST_STEP][PASSED] - if (rejectNote): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:24:40 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:24:58 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/104' successfully
+
+02-11-2026T02:25:03 - [TEST_STEP][PASSED] - ui.stage(REJECTED): null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:25:04 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_04" time="252.655" classname="Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_04" status="PASSED" tag="ASM7_NOT_RUN">
+         <system-out><![CDATA[02-11-2026T02:25:05 - [TEST_CASE][PASSED] - Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_04: Test Cases/RECRUIT_FLOW/RECRUIT_FLOW_History_04
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - Start listener action : beforeCase: null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - if (!(ExecutionContext.peek())): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - SessionGuard.startCase(): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - EvidenceCapture.startCase(context.getTestCaseId()): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - caseId = tokenize("/").last(): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - admission = (recruitment.SessionRecovery.eligible(caseId)) ? new recruitment.SessionRecovery().admit(caseId, recruitment.ConfigurationPreflight.project()) : recruitment.ConfigurationPreflight.admit(caseId, recruitment.ConfigurationPreflight.project()): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - if (state != "READY"): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - ui = new recruitment.WorkflowChecks(RECRUIT_FLOW_History_04): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - ui.interviewData("25"): null
+
+02-11-2026T02:25:05 - [TEST_STEP][PASSED] - d = ui.fixture(SCHEDULED, "25"): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:25:09 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy' successfully
+
+02-11-2026T02:25:21 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_04' is: 'Adna  36877'
+
+02-11-2026T02:25:29 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/35' successfully
+
+02-11-2026T02:25:34 - [MESSAGE][PASSED] - Attribute 'value' of object 'dynamic_RECRUIT_FLOW_History_04' is: 'Adna  36877'
+
+02-11-2026T02:25:58 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:26:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:26:21 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:26:39 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:27:01 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:27:07 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:27:33 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:27:50 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:28:12 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:28:26 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:28:32 - [TEST_STEP][PASSED] - ui.historySequence([INITIAL, SHORT, SCHEDULED]): null
+
+02-11-2026T02:28:38 - [TEST_STEP][PASSED] - ui.verifyInterview(d, interview): Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:28:38 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:29:04 - [MESSAGE][PASSED] - Navigate to 'https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105' successfully
+
+02-11-2026T02:29:16 - [TEST_STEP][PASSED] - ui.finish(): null
+
+02-11-2026T02:29:16 - [TEST_STEP][PASSED] - Start listener action : afterCase: null
+
+02-11-2026T02:29:16 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:29:16 - [TEST_STEP][PASSED] - if (!(c) || caseId != tokenize("/").last()): null
+
+02-11-2026T02:29:16 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - EvidenceCapture.finish(context.getTestCaseStatus()): null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - if (!(suiteExecution)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[02-11-2026T01:18:46 - [TEST_STEP][PASSED] - Start listener action : beforeSuite: null
+
+02-11-2026T01:18:46 - [TEST_STEP][PASSED] - ExecutionBrowser.closeOwned(): null
+
+02-11-2026T01:18:46 - [TEST_STEP][PASSED] - ExecutionContext.start(context.getTestSuiteId(), true): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - SessionGuard.startSuite(): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - cases = ConfigurationPreflight.suiteCases(context.getTestSuiteId(), ConfigurationPreflight.project()): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T01:18:47 - [TEST_STEP][PASSED] - ConfigurationPreflight.initialize(ConfigurationPreflight.project(), cases): null
+
+02-11-2026T01:18:46 - [TEST_SUITE][ERROR] - RECRUIT_FLOW_25_ASC_001_TO_025: null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - Start listener action : afterSuite: null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - if (c && suiteId == context.getTestSuiteId()): null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - try: null
+
+02-11-2026T02:29:17 - [TEST_STEP][PASSED] - ExecutionBrowser.closeOwned(): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - c = ExecutionContext.peek(): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - if (c && employees): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - blocked = values().any({ -> ... }): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - state = (blocked) ? CONFIGURATION_BLOCKED : FINISHED: null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - ExecutionReport.observe({ -> ... }): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - c.end(state): null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - Finally: null
+
+02-11-2026T02:29:18 - [TEST_STEP][PASSED] - ExecutionContext.detach(): null]]></system-out>
+      <system-err><![CDATA[02-11-2026T01:18:46 - [TEST_SUITE][ERROR] - RECRUIT_FLOW_25_ASC_001_TO_025: null]]></system-err>
+   </testsuite>
+</testsuites>

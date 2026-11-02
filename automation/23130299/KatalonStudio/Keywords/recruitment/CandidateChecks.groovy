@@ -19,6 +19,7 @@ class CandidateChecks extends RecruitmentUi {
     final Map<String, Map> owned = [:]
     // Cache attempts before submission as well as confirmed records. Never replace an uncertain attempt.
     private final Map<String, Map> preparedVacancies = [:]
+    private final Map<String,String> generatedSuffixes = [:]
 
     CandidateChecks(String caseId) { super(caseId) }
 
@@ -78,6 +79,7 @@ class CandidateChecks extends RecruitmentUi {
                 checkbox(switches + "[.//*[normalize-space()='Active']]//input[@type='checkbox']", true)
                 checkbox(switches + "[.//*[contains(normalize-space(),'Publish in RSS Feed')]]//input[@type='checkbox']", false)
                 fixture.manager = manager
+                fixture.managerEmployeeId = executionContext.managerDiscovery.lastSelection?.employeeId
                 fixture.expected = [name:name, jobTitle:job, description:description, manager:manager,
                     positions:'3', active:true, published:false].asImmutable()
                 recordVacancy(fixture, 'prepared')
@@ -96,6 +98,7 @@ class CandidateChecks extends RecruitmentUi {
             context.recordConfirmed = true
             if (fixture.state != 'confirmed') countFixture('vacancy')
             recordVacancy(fixture, 'confirmed')
+            PimEmployeeFixtures.dependency('vacancy',new URI(fixture.url.toString()).path.tokenize('/')[-1],fixture.managerEmployeeId?.toString())
             navigationLog('FIXTURE_CONFIRMED', saveDiagnostics('Successfully Saved', context))
         } catch (Throwable error) {
             if (fixture.confirmed != true) recordVacancy(fixture, fixture.saveAttempted ? 'uncertain' : 'prepared')
@@ -106,7 +109,7 @@ class CandidateChecks extends RecruitmentUi {
         return fixture
     }
     static boolean vacancyRecordUrl(String url) {
-        return url != null && url ==~ /https:\/\/opensource-demo\.orangehrmlive\.com\/web\/index.php\/recruitment\/addJobVacancy\/\d+/
+        return url != null && url ==~ /https:\/\/opensource-demo\.orangehrmlive\.com\/web\/index\.php\/recruitment\/addJobVacancy\/[1-9]\d*/
     }
     static boolean vacancyValuesMatch(Map expected, Map actual) {
         List<String> keys = ['name', 'jobTitle', 'description', 'positions', 'active', 'published']
@@ -161,7 +164,7 @@ class CandidateChecks extends RecruitmentUi {
     private void verifyVacancy(Map fixture, Map context) {
         assert fixture.ownership == token && fixture.url && fixture.name?.toString()?.startsWith('VAC_23130299_' + token + '_') :
             'Only this case\'s exact Vacancy fixture may be verified'
-        assert fixture.url ==~ /https:\/\/opensource-demo\.orangehrmlive\.com\/web\/index.php\/recruitment\/addJobVacancy\/\d+/
+        assert vacancyRecordUrl(fixture.url.toString())
         String name = fixture.name.toString()
         String manager = fixture.manager.toString()
         String switches = "//div[${cls('orangerhrm-switch-wrapper')}]"
@@ -191,12 +194,28 @@ class CandidateChecks extends RecruitmentUi {
     }
 
     Map draft(Map vac, String suffix = 'A', Map overrides = [:]) {
-        Map d = [kind:'candidate', first:'An', middle:'', last:'Nguyen' + token + suffix,
+        Map d = [kind:'candidate', first:'An', middle:'', last:generatedLastName(token,suffix),
             email:('an.' + token + '.' + suffix.toLowerCase() + '@example.com'), phone:'', keywords:'', notes:'',
             vacancy:vac?.name ?: '', vacancyUrl:vac?.url, consent:false, resume:null, url:null, ownership:token,ownerExecutionId:executionContext.executionId]
         d.putAll(overrides)
+        if(!overrides.containsKey('last')) {
+            assert !generatedSuffixes.containsKey(d.last) || generatedSuffixes[d.last]==suffix : 'Generated fixture suffix collision; stop before Save'
+            generatedSuffixes[d.last.toString()]=suffix
+        }
+        d.validationRoles=[firstName:overrides.containsKey('first')?'business-input':'generated-fixture',
+            middleName:overrides.containsKey('middle')?'business-input':'generated-fixture',
+            lastName:overrides.containsKey('last')?'business-input':'generated-fixture',
+            email:overrides.containsKey('email')?'business-input':'generated-fixture']
         assert d.email.endsWith('@example.com') || d.email in ['', 'quality.example.com', 'quality@']
         return d
+    }
+    static String generatedLastName(String ownership,String suffix) {
+        assert ownership==~ /[a-f0-9]{20}/ : 'Fixture requires the complete 80-bit ownership token'
+        String original='Nguyen'+ownership+suffix
+        if(original.length()<=30) return original // Existing valid fixture data stays byte-identical.
+        // Only generated suffix is encoded; business overrides are applied afterwards without alteration.
+        String discriminator=java.security.MessageDigest.getInstance('SHA-256').digest(suffix.getBytes('UTF-8')).encodeHex().toString().take(4)
+        return 'Nguyen'+ownership+discriminator
     }
     static String fullName(Map d) { return [d.first, d.middle, d.last].findAll { it }.join(' ') }
     void openAdd(Map d) {
@@ -211,7 +230,7 @@ class CandidateChecks extends RecruitmentUi {
         waitForRoute(ROOT + 'addCandidate', 'Add Candidate')
         replace(FIRST, d.first.toString()); replace(MIDDLE, d.middle.toString()); replace(LAST, d.last.toString())
         replace(field('Email'), d.email.toString())
-        if (d.vacancy) choose('Vacancy', d.vacancy.toString())
+        if (d.vacancy) chooseCandidateVacancy(d)
         replace(field('Contact Number'), d.phone.toString())
         replace(field('Keywords'), d.keywords.toString())
         replace(area('Notes'), d.notes.toString())
@@ -224,6 +243,34 @@ class CandidateChecks extends RecruitmentUi {
         d.datePlaceholder = one(field('Date of Application')).getAttribute('placeholder')
         d.applicationIso = parseDate(date, d.datePlaceholder.toString()).toString()
         if (d.resume) upload(d.resume as File)
+    }
+    protected void chooseCandidateVacancy(Map d) {
+        try { choose('Vacancy',d.vacancy.toString()); return }
+        catch(IllegalStateException failure) {
+            // Narrow recovery for the historical negative-email case. Never changes its email/oracle.
+            if(caseId!='RECRUIT_CAND_Create_10' || !failure.message?.contains('state=missing')) throw failure
+            Map fixture=preparedVacancies.values().find {it.name==d.vacancy && it.url==d.vacancyUrl &&
+                it.ownership==token && it.confirmed==true && it.persistedVerified==true}
+            assert fixture && vacancyRecordUrl(fixture.url?.toString()) : 'No exact owned persisted Vacancy proof; no replacement fixture'
+            navigationLog('VACANCY_OPTION_RECONCILE',[vacancyId:new URI(fixture.url.toString()).path.tokenize('/')[-1],
+                expectedActive:true,reloadBudget:1,noSaveReplay:true])
+            // Fresh GET of the same numeric record checks all seven original fields, including Active.
+            // Missing/reset/changed record stops here. Never calls vacancy(), Save or another ID.
+            reconcileVacancyOption(fixture)
+            go(ROOT+'addCandidate','Add Candidate',true)
+            replace(FIRST,d.first.toString()); replace(MIDDLE,d.middle.toString()); replace(LAST,d.last.toString())
+            replace(field('Email'),d.email.toString())
+            try { choose('Vacancy',d.vacancy.toString()) }
+            catch(IllegalStateException stillMissing) {
+                navigationLog('VACANCY_OPTION_UNAVAILABLE_AFTER_PROOF',[vacancyId:new URI(fixture.url.toString()).path.tokenize('/')[-1],
+                    activePersisted:true,addFormStatusFilter:true,excludeInterviewers:true,
+                    diagnosis:'Eligibility or option request unavailable; no option fabrication or fixture replacement'])
+                throw stillMissing
+            }
+        }
+    }
+    protected void reconcileVacancyOption(Map fixture) {
+        verifyVacancy(fixture,[phase:'VERIFY_MISSING_VACANCY_OPTION'])
     }
     Map create(Map d) {
         Closure createOnce = {
@@ -241,7 +288,8 @@ class CandidateChecks extends RecruitmentUi {
     protected Map saveCandidateDraft(Map d) {
         assert d.ownership == token && candidateMaySubmit(d) : 'Only a new owned draft may be submitted once'
         assert sameRoute(driver().currentUrl, ROOT + 'addCandidate') : 'Save requires the Add Candidate form'
-        Map context = [phase:'SAVE_CANDIDATE', urlBeforeSave:safeUrl(driver().currentUrl), recordReopened:false]
+        Map context = [phase:'SAVE_CANDIDATE', urlBeforeSave:safeUrl(driver().currentUrl), recordReopened:false,
+            validationRoles:d.validationRoles ?: [:]]
         long started = System.nanoTime()
         recordCandidate(d, 'prepared')
         context.beforeSubmit = { d.saveAttempted = true; recordCandidate(d, 'submitted') }
@@ -250,17 +298,21 @@ class CandidateChecks extends RecruitmentUi {
             capture('BEFORE_CANDIDATE_SAVE')
             saveSuccess('Successfully Saved', context) { diagnostic -> observeCandidate(d, context) }
             context.waitingFor = 'Numeric /addCandidate/{id}, Candidate Profile, exact fields and Vacancy'
-            awaitCandidateRecord(d, context)
+            try { awaitCandidateRecord(d, context) }
+            catch(TimeoutException stalled) { reconcileCandidateProfile(d, context, stalled) }
             // Identity matched on the returned profile. Reopen that exact URL before confirming persistence.
             assert candidateRecordUrl(d.url?.toString()) && d.recordIdentified == true
             context.waitingFor = 'Fresh GET of identified Candidate Profile; exact saved fields and Vacancy'
-            go(d.url.toString(), 'Candidate Profile', true)
+            try { go(d.url.toString(), 'Candidate Profile', true) }
+            catch(TimeoutException stalled) { reconcileCandidateProfile(d, context, stalled) }
             context.recordReopened = true
             beginSavePhase(context)
             navigationLog('CANDIDATE_RECORD_REOPENED', [url:safeUrl(driver().currentUrl), candidateId:d.candidateId])
             awaitCandidateRecord(d, context)
             verifyCandidateFields(d) // All original field/date/Vacancy/consent assertions remain mandatory.
             d.persistedVerified = true; d.recordVerified = true
+            if(executionContext.authentication.candidatePending?.ownership==d.ownership)
+                executionContext.authentication.remove('candidatePending')
             context.recordConfirmed = true
             context.recordDiagnostics.recordConfirmed = true
             context.recordDiagnostics.reasonNotConfirmed = ''
@@ -283,6 +335,23 @@ class CandidateChecks extends RecruitmentUi {
             saveFailure(context, started, error)
             throw error
         }
+    }
+    protected CandidateReadback candidateReadback(){new CandidateReadback(executionContext)}
+    protected void reconcileCandidateProfile(Map d,Map save,TimeoutException original){
+        // This is a read-only continuation of the original dispatched Save, never create()/saveNew().
+        if(!caseId.startsWith('RECRUIT_CAND_') || d.saveAttempted!=true || d.recordIdentified!=true || !candidateRecordUrl(d.url?.toString()) || d.profileRecoveryAttempted==true)throw original
+        d.profileRecoveryAttempted=true
+        navigationLog('CANDIDATE_PROFILE_RECONCILE',[candidateId:d.candidateId,noSubmitReplay:true,
+            diagnosis:'Numeric route alone is not persistence proof; restore document, exact GET, then original UI assertions'])
+        try {
+            candidateDocumentRecovery().beforeAdmission(caseId)
+            Map proof=candidateReadback().candidate(d)
+            d.persistedReadback=true
+            navigationLog('CANDIDATE_EXACT_GET_CONFIRMED',proof+[recordConfirmed:false,uiAssertionsComplete:false])
+            go(d.url.toString(),'Candidate Profile',true) // One safe GET retry; does not submit a form.
+            save.recordReopened=true
+            awaitCandidateRecord(d,save)
+        } catch(RuntimeException stopped){stopped.addSuppressed(original);throw stopped}
     }
     private void awaitCandidateRecord(Map d, Map context) {
         waitFor().until {
@@ -327,7 +396,16 @@ class CandidateChecks extends RecruitmentUi {
             successToastSeen:d.successToastSeen == true, cleanup:'Manual only after exact owned URL/name verification',
             time:java.time.OffsetDateTime.now().toString()]
     }
-    protected void recordCandidate(Map d, String state) { track(candidateLedgerEntry(d, state)); d.saveState = state }
+    protected void recordCandidate(Map d, String state) {
+        if(caseId.startsWith('RECRUIT_CAND_') && state!='prepared' && state!='verified'){
+            executionContext.authentication.candidatePending=CandidateReadback.expected(d)+[caseId:caseId,
+                caseRunId:executionContext.caseRunId,saveState:state,persistedReadback:d.persistedReadback==true]
+            executionContext.persist()
+        }
+        track(candidateLedgerEntry(d, state)); d.saveState = state
+        if(state=='verified') PimEmployeeFixtures.dependency('candidate',candidateId(d.url?.toString()),null,
+            d.vacancyUrl ? new URI(d.vacancyUrl.toString()).path.tokenize('/')[-1] : null)
+    }
     private Map candidateProfileValues() {
         Map paths = [first:FIRST, middle:MIDDLE, last:LAST, email:field('Email'), phone:field('Contact Number'),
             keywords:field('Keywords'), notes:area('Notes'), applicationIso:field('Date of Application'),
@@ -453,8 +531,19 @@ class CandidateChecks extends RecruitmentUi {
     }
     void verifyListAndReopen(Map d, Map vac) {
         List<Map<String,String>> rows
-        if (d.vacancy) rows = byVacancy(vac)
-        else { list(); rows = allRows('Candidate') }
+        if (d.vacancy) {
+            try { rows = byVacancy(vac) }
+            catch(IllegalStateException missing) {
+                if(!caseId.startsWith('RECRUIT_CAND_') || !missing.message?.contains('state=missing'))throw missing
+                rows=lookupWithoutVacancyOption(d,vac,missing)
+            }
+        }
+        else {
+            // No Vacancy filter exists for this optional-association case. Use its exact name
+            // and later compare the native View result to the already verified numeric ID.
+            list(); autocomplete('Candidate Name', fullName(d)); tableAction('Search')
+            rows = allRows('Candidate')
+        }
         List<Map<String,String>> matches = rows.findAll { it.Candidate == fullName(d) }
         if (matches.size() != 1) {
             navigationLog('CANDIDATE_LIST_IDENTITY_MISMATCH', [candidateId:d.candidateId,
@@ -465,14 +554,27 @@ class CandidateChecks extends RecruitmentUi {
         assert matches.size() == 1 : 'Candidate not uniquely present in list: ' + fullName(d)
         assert d.vacancy ? matches[0].Vacancy == d.vacancy : matches[0].Vacancy in ['', '--', 'N/A'] : 'List/profile Vacancy mismatch'
         // Search by the exact owned name, then use the scoped View icon and compare the numeric URL.
-        list(); autocomplete('Candidate Name', fullName(d)); tableAction('Search')
+        if (d.vacancy) { list(); autocomplete('Candidate Name', fullName(d)); tableAction('Search') }
         List<Map<String,String>> exact = allRows('Candidate')
         assert exact.size() == 1 && exact[0].Candidate == fullName(d)
-        String row = "//div[@role='row'][./div[@role='cell'][normalize-space()=${lit(fullName(d))}]]"
+        String row = candidateRow(fullName(d))
         click(row + "//button[.//i[${cls('bi-eye-fill')} or ${cls('bi-eye')}]]")
         heading('Candidate Profile')
         assert driver().currentUrl == d.url : 'List opened another candidate'
         verifyDetails(d)
+    }
+    protected List<Map<String,String>> lookupWithoutVacancyOption(Map d,Map vac,IllegalStateException original){
+        requireOwned(d)
+        assert d.persistedVerified==true && vac.name==d.vacancy && vac.url==d.vacancyUrl : 'Same confirmed owned Candidate/Vacancy required'
+        Map proof=candidateReadback().candidate(d)
+        Map options=candidateReadback().vacancyOptions(false)
+        String vid=new URI(d.vacancyUrl.toString()).path.tokenize('/')[-1]
+        if(options.data.any{it.id.toString()==vid || it.name==d.vacancy})throw original
+        navigationLog('VACANCY_LIST_OPTION_UNAVAILABLE',[candidateId:d.candidateId,vacancyId:vid,
+            listParams:options.params,status:options.status,optionCount:options.data.size(),persistedReadback:proof.persistedReadback,
+            equivalentLookup:'Native exact Candidate Name -> numeric candidateId; filter unavailable, not fabricated',noSubmitReplay:true])
+        list();autocomplete('Candidate Name',fullName(d));tableAction('Search')
+        return allRows('Candidate') // Caller still asserts unique row/Vacancy/native eye/exact ID/all profile fields.
     }
     void verifyEmailLookup(Map d) {
         list()
@@ -482,7 +584,7 @@ class CandidateChecks extends RecruitmentUi {
         replace(field('Email'), d.email.toString()); tableAction('Search')
         List<Map<String,String>> result = allRows('Candidate')
         assert result.size() == 1 && result[0].Candidate == fullName(d) : 'Email search did not return exactly the owned candidate'
-        String row = "//div[@role='row'][./div[@role='cell'][normalize-space()=${lit(fullName(d))}]]"
+        String row = candidateRow(fullName(d))
         click(row + "//button[.//i[${cls('bi-eye-fill')} or ${cls('bi-eye')}]]")
         heading('Candidate Profile')
         assert driver().currentUrl == d.url
@@ -548,7 +650,9 @@ class CandidateChecks extends RecruitmentUi {
         if (state.login) throw new IllegalStateException('[UPDATE AUTHENTICATION REQUIRED] Submitted result is uncertain; do not replay Save')
         // The existing ID and freshly typed fields also exist BEFORE Update is persisted.
         // Never accept that dirty form alone as an acknowledgement of this submission.
-        if (diagnostic.successToastSeen != true && diagnostic.successToast != true) return false
+        // CandidateProfile sets editable=false and removes Save only after its PUT/attachment
+        // chain succeeds. This acknowledgement survives a short toast; fresh GET below remains mandatory.
+        if (diagnostic.successToastSeen != true && diagnostic.successToast != true && diagnostic.profileReadOnly != true) return false
         if (!sameRoute(driver().currentUrl, d.url.toString()) || !state.authenticated || !state.domComplete ||
             state.loading || state.challenge || state.networkError) return false
         Map comparison = candidateComparison(expected, candidateProfileValues())
@@ -574,10 +678,25 @@ class CandidateChecks extends RecruitmentUi {
         reopen(d); equalsValue(field('Email'), baseline); verifyDetails(d)
     }
     void upload(File file) {
+        measure('UPLOAD_READINESS') { uploadReady(file) }
+    }
+    protected void uploadReady(File file) {
         assert file.isFile() && file.length() > 0
         List<WebElement> inputs = driver().findElements(By.xpath("//input[@type='file']"))
         if (inputs.size() != 1) blocked('Resume file input missing/ambiguous. Inspect live DOM.')
         inputs[0].sendKeys(file.absolutePath)
+        // OxdFileInput emits its attachment model only after FileReader.onload. Native files
+        // alone do not prove base64/model readiness; the rendered filename is updated in onload.
+        waitFor().until {
+            ((JavascriptExecutor) driver()).executeScript('''
+                const fields=document.querySelectorAll('input[type="file"]');
+                if(fields.length!==1)return false;
+                const input=fields[0],files=input.files;
+                const display=input.closest('.oxd-input-group')?.querySelector('.oxd-file-input-div');
+                return files.length===1&&files[0].name===arguments[0]&&files[0].size===arguments[1]&&
+                    !!display&&display.textContent.trim()===arguments[0];
+            ''', file.name,file.length()) == true
+        }
         capture('RESUME_SELECTED')
     }
     String resumeText() { return one(group('Resume')).text }
@@ -588,9 +707,13 @@ class CandidateChecks extends RecruitmentUi {
     }
     static String sha256(File file) { return MessageDigest.getInstance('SHA-256').digest(file.bytes).encodeHex().toString() }
     static String resumeListDownload(String name, String vacancy) {
-        return "//div[@role='row'][./div[@role='cell'][normalize-space()=${lit(name)}]]" +
-            "[./div[@role='cell'][normalize-space()=${lit(vacancy)}]]//button[.//i[${cls('bi-download')}]]"
+        return candidateRow(name) + "[" + rowValue('Vacancy',vacancy) + "]//button[.//i[${cls('bi-download')}]]"
     }
+    static String rowValue(String label, String expected) {
+        return ".//div[${cls('oxd-table-card-cell')}][./div[${cls('header')} and normalize-space()=${lit(label)}]]/div[${cls('data')} and normalize-space()=${lit(expected)}]" +
+            " | ./div[@role='cell' and normalize-space()=${lit(expected)}]"
+    }
+    static String candidateRow(String name) { return "//div[@role='row']["+rowValue('Candidate',name)+"]" }
     static String candidateAttachmentUrl(String ownedProfileUrl) {
         String id = candidateId(ownedProfileUrl)
         assert id : 'Attachment requires an identified positive Candidate ID'

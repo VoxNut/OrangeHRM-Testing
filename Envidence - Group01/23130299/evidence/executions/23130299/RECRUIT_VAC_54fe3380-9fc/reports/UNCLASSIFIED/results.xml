@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="Test Suites/RECRUIT_VAC_25_ASC_001_TO_025" tests="25" failures="0" errors="1" skipped="0" time="1256.85" timestamp="2026-11-01T14:26:29.351650400+07:00"><testcase name="RECRUIT_VAC_Create_01" classname="RECRUIT_VAC" time="74.821"></testcase><testcase name="RECRUIT_VAC_Create_02" classname="RECRUIT_VAC" time="37.688"></testcase><testcase name="RECRUIT_VAC_Create_03" classname="RECRUIT_VAC" time="34.884"></testcase><testcase name="RECRUIT_VAC_Create_04" classname="RECRUIT_VAC" time="24.44"></testcase><testcase name="RECRUIT_VAC_Create_05" classname="RECRUIT_VAC" time="29.998"></testcase><testcase name="RECRUIT_VAC_Create_06" classname="RECRUIT_VAC" time="19.754"></testcase><testcase name="RECRUIT_VAC_Create_07" classname="RECRUIT_VAC" time="35.214"></testcase><testcase name="RECRUIT_VAC_Create_08" classname="RECRUIT_VAC" time="33.742"></testcase><testcase name="RECRUIT_VAC_Create_09" classname="RECRUIT_VAC" time="34.788"></testcase><testcase name="RECRUIT_VAC_Create_10" classname="RECRUIT_VAC" time="34.947"></testcase><testcase name="RECRUIT_VAC_Create_11" classname="RECRUIT_VAC" time="35.575"></testcase><testcase name="RECRUIT_VAC_Create_12" classname="RECRUIT_VAC" time="34.509"></testcase><testcase name="RECRUIT_VAC_Create_13" classname="RECRUIT_VAC" time="38.894"></testcase><testcase name="RECRUIT_VAC_Create_14" classname="RECRUIT_VAC" time="38.617"></testcase><testcase name="RECRUIT_VAC_Update_01" classname="RECRUIT_VAC" time="85.053"></testcase><testcase name="RECRUIT_VAC_Search_01" classname="RECRUIT_VAC" time="62.388"></testcase><testcase name="RECRUIT_VAC_Search_02" classname="RECRUIT_VAC" time="78.563"></testcase><testcase name="RECRUIT_VAC_Search_03" classname="RECRUIT_VAC" time="46.972"></testcase><testcase name="RECRUIT_VAC_Filter_01" classname="RECRUIT_VAC" time="93.176"></testcase><testcase name="RECRUIT_VAC_Filter_02" classname="RECRUIT_VAC" time="7.403"><error message="Test Cases/RECRUIT_VAC/RECRUIT_VAC_Filter_02 FAILED.
+Reason:
+java.lang.IllegalStateException: [BLOCKED / WORKBOOK-UI MISMATCH] REQUIREMENT_DISCREPANCY: RECRUIT_VAC_Filter_02 requires searching nonexistent Vacancy [VAC_NOT_EXIST_26c1d9385020]. Supplied viewJobVacancy.html and app.js use VacancyDropdown (select by existing id); no free-text Vacancy filter exists. No substitute fixture, incompatible Job Title or synthetic option was used. Requires an approved workbook/UI resolution; No Records Found remains unverified.
+	at recruitment.VacancyChecks.searchMissingVacancy(VacancyChecks.groovy:414)
+	at Script20261023080000.run(Script20261023080000.groovy:9)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1101_3.run(S1101_3.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+">Test Cases/RECRUIT_VAC/RECRUIT_VAC_Filter_02 FAILED.
+Reason:
+java.lang.IllegalStateException: [BLOCKED / WORKBOOK-UI MISMATCH] REQUIREMENT_DISCREPANCY: RECRUIT_VAC_Filter_02 requires searching nonexistent Vacancy [VAC_NOT_EXIST_26c1d9385020]. Supplied viewJobVacancy.html and app.js use VacancyDropdown (select by existing id); no free-text Vacancy filter exists. No substitute fixture, incompatible Job Title or synthetic option was used. Requires an approved workbook/UI resolution; No Records Found remains unverified.
+	at recruitment.VacancyChecks.searchMissingVacancy(VacancyChecks.groovy:414)
+	at Script20261023080000.run(Script20261023080000.groovy:9)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:203)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:115)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:533)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:524)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:503)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:495)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:359)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:188)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:115)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:241)
+	at S1101_3.run(S1101_3.groovy:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+</error></testcase><testcase name="RECRUIT_VAC_Reset_01" classname="RECRUIT_VAC" time="108.575"></testcase><testcase name="RECRUIT_VAC_Update_02" classname="RECRUIT_VAC" time="64.508"></testcase><testcase name="RECRUIT_VAC_Update_03" classname="RECRUIT_VAC" time="81.863"></testcase><testcase name="RECRUIT_VAC_CancelCreate_01" classname="RECRUIT_VAC" time="46.695"></testcase><testcase name="RECRUIT_VAC_CancelUpdate_01" classname="RECRUIT_VAC" time="54.137"></testcase></testsuite>

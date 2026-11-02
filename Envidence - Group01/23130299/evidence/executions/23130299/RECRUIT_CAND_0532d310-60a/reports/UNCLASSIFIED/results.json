@@ -1,0 +1,484 @@
+{
+  "kind": "KATALON_CALLBACK_DERIVED",
+  "module": "RECRUIT_CAND",
+  "suiteName": "Test Suites/RECRUIT_CAND_25_ASC_001_TO_025",
+  "executionId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+  "runKind": "UNCLASSIFIED",
+  "startedAt": "2026-11-01T21:35:13.755300400+07:00",
+  "endedAt": "2026-11-01T22:18:03.626211600+07:00",
+  "durationSeconds": 2569.87,
+  "environment": {
+    "os": "Windows 11",
+    "java": "21.0.12"
+  },
+  "integrationState": "ASM8_INTEGRATION_DEFERRED",
+  "expectedCaseIds": [
+    "RECRUIT_CAND_Create_01",
+    "RECRUIT_CAND_Create_02",
+    "RECRUIT_CAND_Create_03",
+    "RECRUIT_CAND_Create_04",
+    "RECRUIT_CAND_Create_05",
+    "RECRUIT_CAND_Create_06",
+    "RECRUIT_CAND_Create_07",
+    "RECRUIT_CAND_Create_08",
+    "RECRUIT_CAND_Create_09",
+    "RECRUIT_CAND_Create_10",
+    "RECRUIT_CAND_Create_11",
+    "RECRUIT_CAND_Create_12",
+    "RECRUIT_CAND_UploadCV_01",
+    "RECRUIT_CAND_UploadCV_02",
+    "RECRUIT_CAND_UploadCV_03",
+    "RECRUIT_CAND_UploadCV_04",
+    "RECRUIT_CAND_UploadCV_05",
+    "RECRUIT_CAND_Filter_01",
+    "RECRUIT_CAND_Search_01",
+    "RECRUIT_CAND_Filter_02",
+    "RECRUIT_CAND_Filter_03",
+    "RECRUIT_CAND_Reset_01",
+    "RECRUIT_CAND_Update_01",
+    "RECRUIT_CAND_CancelUpdate_01",
+    "RECRUIT_CAND_VerifyDetails_01"
+  ],
+  "cases": [
+    {
+      "caseId": "RECRUIT_CAND_Create_01",
+      "caseRunId": "121578de-ef62-4f14-85a5-f880d6a963fa",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:35:14.948129300+07:00",
+      "endedAt": "2026-11-01T21:37:50.830581500+07:00",
+      "durationSeconds": 155.882,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_01/r121578de/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_02",
+      "caseRunId": "c8b3a5d3-f4c3-4109-890c-a8d8cc98389f",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:37:51.765380800+07:00",
+      "endedAt": "2026-11-01T21:39:42.099149500+07:00",
+      "durationSeconds": 110.333,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_02/rc8b3a5d3/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_03",
+      "caseRunId": "a8fdc522-1eda-4372-a5d1-099a61871a08",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:39:42.916209900+07:00",
+      "endedAt": "2026-11-01T21:40:53.467960600+07:00",
+      "durationSeconds": 70.551,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_03/ra8fdc522/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_04",
+      "caseRunId": "d4d882f6-911f-4817-89da-3dda996798e3",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:40:54.082103600+07:00",
+      "endedAt": "2026-11-01T21:42:00.786545600+07:00",
+      "durationSeconds": 66.704,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_04/rd4d882f6/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_05",
+      "caseRunId": "eb73de6b-bcec-492d-91f0-36e85057654a",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:42:01.580338+07:00",
+      "endedAt": "2026-11-01T21:43:06.060208100+07:00",
+      "durationSeconds": 64.479,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_05/reb73de6b/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_06",
+      "caseRunId": "c55ddc83-1335-4cf0-8ed6-4671e6d71d30",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:43:06.915170400+07:00",
+      "endedAt": "2026-11-01T21:44:07.106764200+07:00",
+      "durationSeconds": 60.191,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_06/rc55ddc83/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_07",
+      "caseRunId": "374ac59d-03bc-4041-8f4c-fd1af733b098",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:44:07.829946800+07:00",
+      "endedAt": "2026-11-01T21:45:25.293682300+07:00",
+      "durationSeconds": 77.463,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_07/r374ac59d/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_08",
+      "caseRunId": "230dd3a2-76ad-4c9a-855e-b7b9e433a1ac",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:45:26.149389300+07:00",
+      "endedAt": "2026-11-01T21:47:14.368320700+07:00",
+      "durationSeconds": 108.218,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_08/r230dd3a2/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_09",
+      "caseRunId": "3b932f2b-3b7b-4f29-9b2c-922bd642f6be",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:47:15.274219200+07:00",
+      "endedAt": "2026-11-01T21:48:25.919175600+07:00",
+      "durationSeconds": 70.644,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_09/r3b932f2b/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_10",
+      "caseRunId": "38463023-4794-47c4-b860-70b74632a425",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:48:26.524983300+07:00",
+      "endedAt": "2026-11-01T21:49:41.198827500+07:00",
+      "durationSeconds": 74.673,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_10/r38463023/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_11",
+      "caseRunId": "611a1c09-9502-42c4-8b10-bdb756adfdd5",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:49:41.901456500+07:00",
+      "endedAt": "2026-11-01T21:50:44.671016700+07:00",
+      "durationSeconds": 62.769,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_11/r611a1c09/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Create_12",
+      "caseRunId": "b4bb6316-1410-4805-9c05-5ef7c4e3db32",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:50:45.391115800+07:00",
+      "endedAt": "2026-11-01T21:51:55.718911800+07:00",
+      "durationSeconds": 70.327,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Create_12/rb4bb6316/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_UploadCV_01",
+      "caseRunId": "0c3e9c56-af8d-42c1-b1bc-8121da104b9f",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:51:56.421827+07:00",
+      "endedAt": "2026-11-01T21:53:14.618369500+07:00",
+      "durationSeconds": 78.196,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_UploadCV_01/r0c3e9c56/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_UploadCV_02",
+      "caseRunId": "330accc7-2747-4a92-9afe-b5bf72e77d46",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:53:15.473540200+07:00",
+      "endedAt": "2026-11-01T21:54:31.291415500+07:00",
+      "durationSeconds": 75.817,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_UploadCV_02/r330accc7/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_UploadCV_03",
+      "caseRunId": "595f613e-2eb9-4395-a52e-5cc6b4057d26",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:54:31.946675700+07:00",
+      "endedAt": "2026-11-01T21:56:00.330695200+07:00",
+      "durationSeconds": 88.384,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_UploadCV_03/r595f613e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_UploadCV_04",
+      "caseRunId": "b66112c1-8976-46e6-a0ce-7195f7f8f74c",
+      "result": "SKIPPED",
+      "rawKatalonResult": "SKIPPED",
+      "startedAt": "2026-11-01T21:56:01.114287500+07:00",
+      "endedAt": "2026-11-01T21:56:01.182735900+07:00",
+      "durationSeconds": 0.068,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "MISSING_CONFIGURATION",
+      "executionState": "CONFIGURATION_BLOCKED",
+      "evidence": [
+        "RECRUIT_CAND_UploadCV_04/rb66112c1/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_UploadCV_05",
+      "caseRunId": "a5cc66ec-358e-4384-9108-cb6c1b47a325",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:56:01.249749600+07:00",
+      "endedAt": "2026-11-01T21:57:49.773482900+07:00",
+      "durationSeconds": 108.523,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_UploadCV_05/ra5cc66ec/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Filter_01",
+      "caseRunId": "828b9de0-e4f4-4c59-b603-667dbb868f8b",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T21:57:50.514170500+07:00",
+      "endedAt": "2026-11-01T22:00:26.164858100+07:00",
+      "durationSeconds": 155.65,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Filter_01/r828b9de0/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Search_01",
+      "caseRunId": "46c054a7-2e65-4674-9638-85a5de3fa236",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:00:26.933741200+07:00",
+      "endedAt": "2026-11-01T22:02:13.421332400+07:00",
+      "durationSeconds": 106.487,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Search_01/r46c054a7/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Filter_02",
+      "caseRunId": "8103e1a3-b4b7-4758-9ad2-226b6b49b4a3",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:02:14.129610300+07:00",
+      "endedAt": "2026-11-01T22:04:09.348467700+07:00",
+      "durationSeconds": 115.218,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Filter_02/r8103e1a3/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Filter_03",
+      "caseRunId": "0f2da1d6-704a-4913-979e-84a2c27a53b8",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:04:10.017993700+07:00",
+      "endedAt": "2026-11-01T22:07:12.338523200+07:00",
+      "durationSeconds": 182.32,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Filter_03/r0f2da1d6/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Reset_01",
+      "caseRunId": "7d5ff02e-18d0-403c-ad55-24f78b730983",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:07:13.149874400+07:00",
+      "endedAt": "2026-11-01T22:12:35.259861800+07:00",
+      "durationSeconds": 322.109,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Reset_01/r7d5ff02e/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_Update_01",
+      "caseRunId": "5c5b39d9-4aaf-4d5a-a205-9dcc56c82b86",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:12:36.022558100+07:00",
+      "endedAt": "2026-11-01T22:14:39.444944300+07:00",
+      "durationSeconds": 123.422,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_Update_01/r5c5b39d9/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_CancelUpdate_01",
+      "caseRunId": "773e7273-36ee-446f-bcbf-bba7e7f5208d",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:14:40.159788400+07:00",
+      "endedAt": "2026-11-01T22:16:08.470476400+07:00",
+      "durationSeconds": 88.31,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_CancelUpdate_01/r773e7273/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    },
+    {
+      "caseId": "RECRUIT_CAND_VerifyDetails_01",
+      "caseRunId": "102ebc41-2fef-4b2a-8b55-319f4e63ff20",
+      "result": "PASSED",
+      "rawKatalonResult": "PASSED",
+      "startedAt": "2026-11-01T22:16:09.162535900+07:00",
+      "endedAt": "2026-11-01T22:18:02.131234800+07:00",
+      "durationSeconds": 112.968,
+      "message": "",
+      "stackTrace": "",
+      "configurationState": "READY",
+      "executionState": "PASSED",
+      "evidence": [
+        "RECRUIT_CAND_VerifyDetails_01/r102ebc41/evidence.json"
+      ],
+      "source": "Katalon TestCaseContext.getTestCaseStatus() after execution"
+    }
+  ],
+  "limitations": [
+    "Supplementary listener report; retain the official Katalon report and console separately.",
+    "Katalon version is unknown unless recorded by the official report."
+  ],
+  "caseStartedAt": "2026-11-01T22:16:09.162535900+07:00",
+  "lifecycle": "CONFIGURATION_BLOCKED",
+  "summary": {
+    "PASSED": 24,
+    "FAILED": 0,
+    "ERROR": 0,
+    "SKIPPED": 1,
+    "INCOMPLETE": 0,
+    "UNKNOWN": 0,
+    "NOT_EXECUTED": 0
+  }
+}

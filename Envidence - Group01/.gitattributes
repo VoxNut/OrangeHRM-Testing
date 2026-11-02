@@ -1,4 +1,2 @@
-# Preserve original execution evidence bytes across Windows/Linux checkouts.
+# Preserve audited source/report/evidence SHA-256; no automatic line-ending conversion.
 * -text
-*.log binary
-*.bin binary

@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "99N75 425 5TlV",
+    "verifiedLabel": "99N75 425 5TlV",
+    "submitted": false,
+    "ownerExecutionId": "0532d310-60ab-4317-9cb7-e92005fefa11",
+    "caseId": "RECRUIT_CAND_Filter_01",
+    "processId": 26680,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_0532d310-60ab-4317-9cb7-e92005fefa11"
+  }
+]

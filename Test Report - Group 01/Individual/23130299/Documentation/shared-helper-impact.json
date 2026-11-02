@@ -1,0 +1,156 @@
+{
+  "classes": [
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/AtomicFiles.groovy",
+      "sha256": "7ff4f72fa2735b5372c25c377a4a5523db4e5dc8d77f71de027d8e783188d670",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "AtomicFiles"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/CandidateChecks.groovy",
+      "sha256": "48941bf4575464acf96d21c951a38407cfcd52ed1b21d2e38d27aa1904166c5e",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "CandidateChecks"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/ConfigurationPreflight.groovy",
+      "sha256": "749bef9af761274482807e59cab7aeab5a594310646a10dee3e93c4610519077",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "ConfigurationPreflight"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/EvidenceCapture.groovy",
+      "sha256": "31b0bbfe503e499e82e6282c5f5afe3b853e4b5558b5ae494819fbc14c539958",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "EvidenceCapture"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/ExecutionBrowser.groovy",
+      "sha256": "47bda9f859ec6f8cfbb336a2b8e6dd520aaa26791317f81e82ae2f30999c59bd",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "ExecutionBrowser"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/ExecutionContext.groovy",
+      "sha256": "f91278b885d0c974f4bd3d0e45d0f44616f0f4a11f8ba0eacdf8e524ab01cf54",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "ExecutionContext"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/ExecutionLease.groovy",
+      "sha256": "a6774e3dccaf76d7f1befeab6e6d738cdbfa724f1f8d54be035177e7cd130cdb",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "ExecutionLease"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/RecorderBridge.groovy",
+      "sha256": "a661793bb4b13c59057bcefe0df23195a9979de056d6843d3f4382473854f9c9",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "RecorderBridge"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/RecruitmentUi.groovy",
+      "sha256": "9743eef92d091b89379d07d93b4cf53911fc88ae182fc867944a84c61288fe9d",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "RecruitmentUi"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/ResumeFiles.groovy",
+      "sha256": "d70500a3ff1f9b0da191eac2bf0b8eddedbc068e293d667ced72c0a9e48af780",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "ResumeFiles"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/SessionGuard.groovy",
+      "sha256": "f5c1b6a6d2193752505d5beabc0a258c3cf67627ae9fb553ded6ccbf9899d705",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "SessionGuard"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/VacancyChecks.groovy",
+      "sha256": "052c49e49b1259bdb222205896be218981f7d851021aecc2a82f9cab03e52cc7",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "VacancyChecks"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/VacancyTable.groovy",
+      "sha256": "2fc739e065134489fc79c2ba4435f06d5eb7253cab674c51dd099af63d3ae4c5",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "VacancyTable"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/WorkerSnapshot.groovy",
+      "sha256": "6cf68f0e9ab3367dac44d1276148d00377a027b05e8993ac215ea38fbe25496d",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "WorkerSnapshot"
+      ]
+    },
+    {
+      "path": "automation/23130299/KatalonStudio/Keywords/recruitment/WorkflowChecks.groovy",
+      "sha256": "8c75c9aa879248f955cb1174bb5b24b6307b65c849e63e4ec7dadc8aa43ba212",
+      "package": [
+        "recruitment"
+      ],
+      "classes": [
+        "WorkflowChecks"
+      ]
+    }
+  ],
+  "otherMemberRecruitmentReferences": [],
+  "scope": "All recruitment Keywords live inside member project; no other Katalon .prj or direct helper imports found. No shared API change proposed."
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "kind": "manager-preflight",
+    "state": "READY",
+    "expected": "Adna  36877",
+    "verifiedLabel": "Adna 36877",
+    "submitted": false,
+    "ownerExecutionId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+    "caseId": "RECRUIT_FLOW_SelectInterviewer_02",
+    "processId": 40244,
+    "workerId": "main-1",
+    "runNamespace": "G01_23130299_40b57a16-e348-43e4-a6b9-e3d00bb8bf9e"
+  }
+]

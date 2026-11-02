@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "check": "antlr2-production",
+      "status": "PASS",
+      "units": 104
+    },
+    {
+      "check": "parrot-production",
+      "status": "PASS",
+      "units": 104
+    },
+    {
+      "check": "unchanged-10-group-portability",
+      "status": "PASS",
+      "groupsPassed": 10,
+      "exitCode": 0,
+      "harnessSha256": "b31d5e00400ef2d6d635c3ac9da1ca226eec517b4123497ec1c5ba9369fd6297",
+      "temporaryDirectoryFresh": true
+    },
+    {
+      "check": "member-layout-evidence-lifecycle",
+      "status": "PASS",
+      "exitCode": 0
+    },
+    {
+      "check": "standalone-launcher-preflight-only",
+      "status": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "scope": "OFFLINE ONLY; no browser, KRE, API or demo writes",
+  "sourcePreserved": true,
+  "fullLegacyRegression": "PARTIAL; previous failures are not rebaselined",
+  "status": "PASS"
+}

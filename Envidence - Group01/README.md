@@ -1,7 +1,5 @@
 # Envidence - Group01
 
-Minh chứng ASM8 theo Run ID: console log, screenshot thật, report gốc, ledger fixture/cleanup và SHA-256 script. Không lưu cookie, browser profile hoặc API key.
+[Recruitment report/evidence index](../Test%20Report%20-%20Group%2001/Individual/23130299/index.html) liên kết **288/288 PNG latest**, kiểm tra SHA-256 và manifest với runtime/case UUID; không chép hoặc đổi tên ảnh. [Danh sách theo case](../Test%20Report%20-%20Group%2001/Individual/23130299/RESULTS75.md) và [ảnh ERROR/STOPPED/FAILED](../Test%20Report%20-%20Group%2001/Individual/23130299/ANOMALY_SCREENSHOTS.md) tách latest, historical verified ở source reference, và HISTORICAL_EVIDENCE_UNMATCHED. Reference-only không phải file đã nộp; UNKNOWN được giữ nguyên khi thiếu liên kết chính xác. Suffix ảnh không quyết định final Katalon status.
 
-Lượt nhóm `ASM8_2026-10-31T01-13-22-203Z`; ba thư mục `ASM8_RETEST_*` giữ kết quả sửa Search/Sort. `source-snapshots.zip` trong mỗi lượt chứa source đúng SHA-256 đã chạy. PIM đã dọn 32 hồ sơ qua bốn lượt; Leave ghi `cleanupCompleted: true` trong ledger riêng.
-
-[Report nhóm](../Test%20Report%20-%20Group%2001/README.md)
+Spelling retained from assignment. `23130299/evidence/executions/23130299/` contains 288 original latest PNGs, original case manifests, supplementary results and execution logs in three UUID namespaces. `23130299/Documentation/RuntimeDiagnostics/` contains safe original PIM-read logs/fixture ledgers; no browser profile/session context is included. Group report index maps back to these exact files. Other members' evidence remains at canonical `evidence/executions/<member>/`; consolidation for all members is PENDING, with no files moved/deleted.

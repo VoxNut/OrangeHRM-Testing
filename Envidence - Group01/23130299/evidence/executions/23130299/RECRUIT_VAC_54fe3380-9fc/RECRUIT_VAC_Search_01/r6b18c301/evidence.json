@@ -1,0 +1,77 @@
+{
+  "suiteId": "Test Suites/RECRUIT_VAC_25_ASC_001_TO_025",
+  "caseId": "RECRUIT_VAC_Search_01",
+  "runId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+  "executionId": "54fe3380-9fcc-4fb6-8ce8-6aad4a471383",
+  "caseRunId": "6b18c301-b369-43bf-8ebf-56d97a7ba31b",
+  "processId": 50836,
+  "workerId": "main-1",
+  "timestamp": "2026-11-01T14:36:33.722553300+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-11-01T14:36:39.712092800+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy",
+      "checkpoint": "RECRUIT_VAC_Search_01_01_BEFORE_CREATE_ADD.png",
+      "kind": "before",
+      "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+      "observed": {
+        "phase": "RECRUIT_VAC_Search_01_01_BEFORE_CREATE_ADD.png",
+        "url": "/web/index.php/recruitment/viewJobVacancy",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 677,
+      "screenshotPath": "143639_001_BEFORE.png",
+      "sha256": "f84bfe90002c866beceb7c12dc3b33abf4d699b048a9e0aba90489ecedbcb604"
+    },
+    {
+      "timestamp": "2026-11-01T14:36:54.602082600+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy",
+      "checkpoint": "RECRUIT_VAC_Search_01_02_BEFORE_SETUP_CREATE_SAVE.png",
+      "kind": "before",
+      "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+      "observed": {
+        "phase": "RECRUIT_VAC_Search_01_02_BEFORE_SETUP_CREATE_SAVE.png",
+        "url": "/web/index.php/recruitment/addJobVacancy",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 621,
+      "screenshotPath": "143654_002_BEFORE.png",
+      "sha256": "acdad395b6097e473f2b21b7b734e8d287ca3832ae54c4881c8bb3c67d0fc88d"
+    },
+    {
+      "timestamp": "2026-11-01T14:37:02.771542600+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy/48",
+      "checkpoint": "RECRUIT_VAC_Search_01_003_AFTER_ACTION.png",
+      "kind": "after",
+      "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+      "observed": {
+        "phase": "RECRUIT_VAC_Search_01_003_AFTER_ACTION.png",
+        "url": "/web/index.php/recruitment/addJobVacancy/48",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 620,
+      "screenshotPath": "143702_003_AFTER.png",
+      "sha256": "c2e799a13b6d7afa1f40727c1a5fa59fe246bb12504940f11ea250b4ea5e1725"
+    },
+    {
+      "timestamp": "2026-11-01T14:37:36.818937500+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/viewJobVacancy",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 705,
+      "screenshotPath": "143736_004_RESULT.png",
+      "sha256": "2dcf431accdd3d5ff2df48f03dbdf64d4319b8b3e4d4f812a023d35cbdcf9ffb"
+    }
+  ]
+}

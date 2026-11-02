@@ -1,0 +1,77 @@
+{
+  "suiteId": "Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025",
+  "caseId": "RECRUIT_FLOW_Reject_01",
+  "runId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+  "executionId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+  "caseRunId": "b37c99c2-5ea3-4e17-835d-e77a95eb45dc",
+  "processId": 40244,
+  "workerId": "main-1",
+  "timestamp": "2026-11-02T01:23:14.984356200+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-11-02T01:24:35.314444300+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83",
+      "checkpoint": "BEFORE_ACTION_WORKFLOW",
+      "kind": "before",
+      "expected": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+      "observed": {
+        "phase": "BEFORE_ACTION_WORKFLOW",
+        "url": "/web/index.php/recruitment/addCandidate/83",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 663,
+      "screenshotPath": "012435_001_BEFORE.png",
+      "sha256": "34d97177adfffc6faadb7df12c451fdc521538c4ac5c9a098b50afae32879eaa"
+    },
+    {
+      "timestamp": "2026-11-02T01:24:59.255322600+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/changeCandidateVacancyStatus",
+      "checkpoint": "BEFORE_REJECT",
+      "kind": "before",
+      "expected": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+      "observed": {
+        "phase": "BEFORE_REJECT",
+        "url": "/web/index.php/recruitment/changeCandidateVacancyStatus",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 676,
+      "screenshotPath": "012459_002_BEFORE.png",
+      "sha256": "aed3abb58299d22a1640d8a559086efba78809c31517bc02b5c46a024475ea4a"
+    },
+    {
+      "timestamp": "2026-11-02T01:25:05.648495900+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83",
+      "checkpoint": "WORKFLOW_REJECT_AFTER_ACTION",
+      "kind": "after",
+      "expected": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+      "observed": {
+        "phase": "WORKFLOW_REJECT_AFTER_ACTION",
+        "url": "/web/index.php/recruitment/addCandidate/83",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 897,
+      "screenshotPath": "012505_003_AFTER.png",
+      "sha256": "80b0c09389aa23dffd14838c2af1d463f208fc3be5b71917ea01d96188664dd2"
+    },
+    {
+      "timestamp": "2026-11-02T01:25:33.597663500+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/83",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/addCandidate/83",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 668,
+      "screenshotPath": "012533_004_RESULT.png",
+      "sha256": "80b0c09389aa23dffd14838c2af1d463f208fc3be5b71917ea01d96188664dd2"
+    }
+  ]
+}

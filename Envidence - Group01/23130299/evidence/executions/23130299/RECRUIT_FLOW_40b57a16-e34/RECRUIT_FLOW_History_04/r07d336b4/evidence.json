@@ -1,0 +1,61 @@
+{
+  "suiteId": "Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025",
+  "caseId": "RECRUIT_FLOW_History_04",
+  "runId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+  "executionId": "40b57a16-e348-43e4-a6b9-e3d00bb8bf9e",
+  "caseRunId": "07d336b4-c8b8-422c-869c-078c17fc4f15",
+  "processId": 40244,
+  "workerId": "main-1",
+  "timestamp": "2026-11-02T02:25:05.067835300+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-11-02T02:28:32.009367100+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105",
+      "checkpoint": "BEFORE_ACTION_WORKFLOW",
+      "kind": "before",
+      "expected": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",
+      "observed": {
+        "phase": "BEFORE_ACTION_WORKFLOW",
+        "url": "/web/index.php/recruitment/addCandidate/105",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 655,
+      "screenshotPath": "022831_001_BEFORE.png",
+      "sha256": "5c447e7b0a85614012ebf05eaff9630c0a1ce0748bb8b6080e30bfb0562b505e"
+    },
+    {
+      "timestamp": "2026-11-02T02:29:02.563076300+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/candidateHistory/105/297",
+      "checkpoint": "INTERVIEW_DETAILS_VERIFIED",
+      "kind": "observation",
+      "expected": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",
+      "observed": {
+        "phase": "INTERVIEW_DETAILS_VERIFIED",
+        "url": "/web/index.php/recruitment/candidateHistory/105/297",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 670,
+      "screenshotPath": "022902_002_CHECK.png",
+      "sha256": "08b18dcde1d7a0802960449fd1fb4fb949c5c59ee6427f5d0a12ade5acabea67"
+    },
+    {
+      "timestamp": "2026-11-02T02:29:17.680717+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/105",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/addCandidate/105",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 677,
+      "screenshotPath": "022917_003_RESULT.png",
+      "sha256": "5c447e7b0a85614012ebf05eaff9630c0a1ce0748bb8b6080e30bfb0562b505e"
+    }
+  ]
+}

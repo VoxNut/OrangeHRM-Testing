@@ -25,7 +25,7 @@ class VacancyTable {
         JavascriptExecutor js=(JavascriptExecutor)driver
         js.executeScript("arguments[0].scrollIntoView({block:'center',inline:'nearest',behavior:'instant'});",element)
         Map previous=null
-        new WebDriverWait(driver,Duration.ofSeconds(seconds)).until {
+        new WebDriverWait(driver,Duration.ofSeconds(seconds)).pollingEvery(Duration.ofMillis(200)).until {
             Map point=(Map)js.executeScript('''
                 const e=arguments[0],r=e.getBoundingClientRect(),x=(Math.max(0,r.left)+Math.min(innerWidth,r.right))/2,y=(Math.max(0,r.top)+Math.min(innerHeight,r.bottom))/2;
                 const hit=document.elementFromPoint(x,y);
@@ -48,7 +48,8 @@ class VacancyTable {
             record.observer=new MutationObserver(changes=>{
                 for(const m of changes){
                     const target=m.target.nodeType===1?m.target:m.target.parentElement;
-                    if(target&&target.closest('.oxd-table-body,.oxd-pagination__ul,.oxd-form'))record.changed=true;
+                    // Focus/validation mutations in a form are not evidence that results refreshed.
+                    if(target&&target.closest('.oxd-table-body'))record.changed=true;
                     for(const n of [...m.addedNodes,...m.removedNodes])if(n.nodeType===1&&(n.matches('.oxd-loading-spinner,.oxd-form-loader')||n.querySelector('.oxd-loading-spinner,.oxd-form-loader')))record.changed=true;
                 }
             });
@@ -57,7 +58,7 @@ class VacancyTable {
         ''',key)
         try {
             click(driver,control,seconds)
-            new WebDriverWait(driver,Duration.ofSeconds(seconds)).until {
+            new WebDriverWait(driver,Duration.ofSeconds(seconds)).pollingEvery(Duration.ofMillis(200)).until {
                 Map now=state(driver)
                 if(now.login) SessionGuard.lost('Vacancy table refresh redirected to Login')
                 boolean observed=js.executeScript('return !!window[arguments[0]]?.changed;',key)==true
