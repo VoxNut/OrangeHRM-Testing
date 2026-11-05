@@ -1,12 +1,19 @@
 {
-  "name": "orangehrm-playwright-automation",
+  "name": "group01-linh-adm-tests",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
-    "test": "npx playwright test",
-    "asm7": "npx playwright test 23130171_NguyenThiThuyLinh_ASM7.mjs --reporter=list,html"
+    "test": "node admin-runner.mjs",
+    "struct": "node adm_struct.mjs",
+    "job": "node adm_job.mjs",
+    "user": "node adm_user.mjs",
+    "admin": "node admin-runner.mjs",
+    "admin:initial": "node admin-runner.mjs --phase initial",
+    "admin:retest": "node admin-runner.mjs --phase retest",
+    "legacy:read": "node admin-runner.mjs --legacy-read"
   },
-  "devDependencies": {
-    "@playwright/test": "^1.40.0"
+  "dependencies": {
+    "playwright": "1.64.1"
   }
 }
