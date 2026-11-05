@@ -1,0 +1,16 @@
+[Skipped] ADM_USER_Create_01 - Thiếu USER_EMPLOYEE_NAME để liên kết tài khoản.
+[Passed] ADM_USER_Create_02 - Test case thực hiện thành công.
+[Skipped] ADM_USER_Create_04 - Thiếu USER_EMPLOYEE_NAME.
+[Skipped] ADM_USER_Role_02 - Cần ESS_USERNAME và ESS_PASSWORD riêng.
+[Skipped] ADM_USER_Role_03 - Cần ESS_USERNAME và ESS_PASSWORD riêng.
+[Skipped] ADM_USER_Status_04 - Cần tài khoản Disabled riêng, được phép kích hoạt và khôi phục sau test.
+
+========== ADM_USER SUMMARY ==========
+Total   : 6
+Passed  : 1
+Failed  : 0
+Blocked : 0
+Skipped : 5
+Evidence: /Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER
+======================================
+

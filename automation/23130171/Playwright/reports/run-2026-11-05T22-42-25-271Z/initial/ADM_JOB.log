@@ -1,0 +1,67 @@
+[Blocked] ADM_JOB_Create_01 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Create_02 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Create_03 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Create_04 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Create_05 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Passed] ADM_JOB_Validation_01 - Test case thực hiện thành công.
+[Failed] ADM_JOB_Validation_02 - Không tìm thấy Job Title sau khi xử lý khoảng trắng.
+[Passed] ADM_JOB_Validation_03 - Test case thực hiện thành công.
+[Passed] ADM_JOB_Validation_04 - Test case thực hiện thành công.
+[Failed] ADM_JOB_Validation_05 - Không tìm thấy Job Title dài sau khi lưu.
+[Skipped] ADM_JOB_Specification_01 - Thiếu JOB_SPEC_VALID_FILE.
+[Blocked] ADM_JOB_Specification_02 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Specification_03 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Skipped] ADM_JOB_Specification_04 - Thiếu JOB_SPEC_SPECIAL_FILE.
+[Skipped] ADM_JOB_Specification_05 - Thiếu JOB_SPEC_LARGE_FILE.
+[Skipped] ADM_JOB_Specification_06 - Thiếu JOB_TITLE_WITH_SPEC có tệp đính kèm.
+[Skipped] ADM_JOB_Update_01 - Thiếu JOB_TITLE_TO_EDIT.
+[Blocked] ADM_JOB_Update_02 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_JOB_Update_03 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Skipped] ADM_JOB_Update_04 - Thiếu JOB_TITLE_TO_EDIT.
+[Blocked] ADM_JOB_Delete_01 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Skipped] ADM_JOB_Delete_02 - Thiếu JOB_TITLE_TO_DELETE.
+[Skipped] ADM_JOB_Delete_03 - OrangeHRM Demo mặc định không cung cấp thao tác Delete Selected trong Job Titles.
+[Skipped] ADM_JOB_Delete_04 - Không xóa dữ liệu dùng chung hoặc Job Title đang được sử dụng trên demo công khai.
+[Passed] ADM_JOB_Delete_05 - Test case thực hiện thành công.
+[CLEANUP] QA2026_1793918723597_7353: Deleted
+[CLEANUP] AUTO_JOB_#&_1793918706885: Deleted
+
+========== ADM_JOB SUMMARY ==========
+Total   : 25
+Passed  : 4
+Failed  : 2
+Blocked : 10
+Skipped : 9
+Evidence: /Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB
+=====================================
+

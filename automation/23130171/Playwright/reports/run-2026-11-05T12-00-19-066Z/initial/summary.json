@@ -1,0 +1,314 @@
+{
+  "ADM_STRUCT": {
+    "module": "ADM_STRUCT",
+    "exitCode": 0,
+    "total": 12,
+    "counts": {
+      "Passed": 11,
+      "Failed": 1,
+      "Blocked": 0,
+      "Skipped": 0,
+      "Untested": 0
+    },
+    "cases": [
+      {
+        "oldId": "TC_ADM_STRUCT_001",
+        "id": "ADM_STRUCT_Login_01",
+        "startedAt": "2026-11-05T12:00:27.690Z",
+        "status": "Passed",
+        "actual": "Đăng nhập và mở Organization Structure thành công.",
+        "assertions": [
+          "Đăng nhập và mở Organization Structure thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Login_01.png"
+        ],
+        "network": [],
+        "durationMs": 78,
+        "finishedAt": "2026-11-05T12:00:27.768Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_002",
+        "id": "ADM_STRUCT_View_01",
+        "startedAt": "2026-11-05T12:00:27.768Z",
+        "status": "Passed",
+        "actual": "Container cơ cấu tổ chức hiển thị.",
+        "assertions": [
+          "Container cơ cấu tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_01.png"
+        ],
+        "network": [],
+        "durationMs": 66,
+        "finishedAt": "2026-11-05T12:00:27.834Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_003",
+        "id": "ADM_STRUCT_View_02",
+        "startedAt": "2026-11-05T12:00:27.835Z",
+        "status": "Passed",
+        "actual": "Khu vực cây tổ chức hiển thị.",
+        "assertions": [
+          "Khu vực cây tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_02.png"
+        ],
+        "network": [],
+        "durationMs": 63,
+        "finishedAt": "2026-11-05T12:00:27.898Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_006",
+        "id": "ADM_STRUCT_EditMode_01",
+        "startedAt": "2026-11-05T12:00:27.899Z",
+        "status": "Passed",
+        "actual": "Bật chế độ Edit thành công.",
+        "assertions": [
+          "Bật chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_01.png"
+        ],
+        "network": [],
+        "durationMs": 104,
+        "finishedAt": "2026-11-05T12:00:28.003Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_007",
+        "id": "ADM_STRUCT_EditMode_02",
+        "startedAt": "2026-11-05T12:00:28.003Z",
+        "status": "Passed",
+        "actual": "Tắt chế độ Edit thành công.",
+        "assertions": [
+          "Tắt chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_02.png"
+        ],
+        "network": [],
+        "durationMs": 101,
+        "finishedAt": "2026-11-05T12:00:28.104Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_008",
+        "id": "ADM_STRUCT_EditMode_03",
+        "startedAt": "2026-11-05T12:00:28.105Z",
+        "status": "Passed",
+        "actual": "Edit được bật ở lần thứ nhất. | Edit được tắt ở lần thứ hai. | Edit được bật lại ở lần thứ ba.",
+        "assertions": [
+          "Edit được bật ở lần thứ nhất.",
+          "Edit được tắt ở lần thứ hai.",
+          "Edit được bật lại ở lần thứ ba."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_03.png"
+        ],
+        "network": [],
+        "durationMs": 199,
+        "finishedAt": "2026-11-05T12:00:28.304Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_009",
+        "id": "ADM_STRUCT_Create_01",
+        "startedAt": "2026-11-05T12:00:28.304Z",
+        "status": "Passed",
+        "actual": "Đơn vị cha được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị cha được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:28.714Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T12:00:29.173Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T12:00:32.042Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 3814,
+        "finishedAt": "2026-11-05T12:00:32.118Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_010",
+        "id": "ADM_STRUCT_Create_02",
+        "startedAt": "2026-11-05T12:00:32.119Z",
+        "status": "Passed",
+        "actual": "Đơn vị con được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị con được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_02.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:32.699Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T12:00:33.503Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T12:00:36.591Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 4967,
+        "finishedAt": "2026-11-05T12:00:37.086Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_011",
+        "id": "ADM_STRUCT_Validation_01",
+        "startedAt": "2026-11-05T12:00:37.086Z",
+        "status": "Passed",
+        "actual": "Form hiển thị lỗi khi thiếu trường bắt buộc.",
+        "assertions": [
+          "Form hiển thị lỗi khi thiếu trường bắt buộc."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Validation_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:37.508Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          }
+        ],
+        "durationMs": 879,
+        "finishedAt": "2026-11-05T12:00:37.965Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_017",
+        "id": "ADM_STRUCT_Update_01",
+        "startedAt": "2026-11-05T12:00:37.966Z",
+        "status": "Failed",
+        "actual": "AssertionError: Update unit HTTP 422",
+        "assertions": [],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Update_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:38.278Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          },
+          {
+            "time": "2026-11-05T12:00:39.693Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits/18"
+          },
+          {
+            "time": "2026-11-05T12:00:40.052Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T12:00:40.677Z",
+            "status": 422,
+            "method": "PUT",
+            "url": "/web/index.php/api/v2/admin/subunits/18"
+          },
+          {
+            "time": "2026-11-05T12:00:46.610Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "error": {
+          "name": "AssertionError",
+          "message": "Update unit HTTP 422",
+          "stack": "AssertionError [ERR_ASSERTION]: Update unit HTTP 422\n    at file:///D:/My%20WorkSpace/Software%20Testing/outputs/linh-admin-check/adm_struct.mjs:1055:16\n    at async runCase (file:///D:/My%20WorkSpace/Software%20Testing/outputs/linh-admin-check/adm_struct.mjs:547:5)\n    at async file:///D:/My%20WorkSpace/Software%20Testing/outputs/linh-admin-check/adm_struct.mjs:679:5"
+        },
+        "errorScreenshot": "screenshots\\ADM_STRUCT_Update_01_ERROR.png",
+        "durationMs": 8875,
+        "finishedAt": "2026-11-05T12:00:46.841Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_022",
+        "id": "ADM_STRUCT_Delete_01",
+        "startedAt": "2026-11-05T12:00:46.842Z",
+        "status": "Passed",
+        "actual": "Đơn vị con đã bị xóa khỏi cây tổ chức.",
+        "assertions": [
+          "Đơn vị con đã bị xóa khỏi cây tổ chức."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Delete_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:47.869Z",
+            "status": 200,
+            "method": "DELETE",
+            "url": "/web/index.php/api/v2/admin/subunits/18"
+          },
+          {
+            "time": "2026-11-05T12:00:50.743Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 11957,
+        "finishedAt": "2026-11-05T12:00:58.799Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_025",
+        "id": "ADM_STRUCT_Delete_04",
+        "startedAt": "2026-11-05T12:00:58.799Z",
+        "status": "Passed",
+        "actual": "Đơn vị cha vẫn tồn tại sau khi tải lại trang.",
+        "assertions": [
+          "Đơn vị cha vẫn tồn tại sau khi tải lại trang."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Delete_04.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T12:00:59.991Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 1315,
+        "finishedAt": "2026-11-05T12:01:00.114Z"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T12-00-19-066Z_initial_ADM_STRUCT\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T12-00-19-066Z\\initial\\ADM_STRUCT.log"
+  }
+}

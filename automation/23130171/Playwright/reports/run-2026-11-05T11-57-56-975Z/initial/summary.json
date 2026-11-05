@@ -1,0 +1,211 @@
+{
+  "ADM_STRUCT": {
+    "module": "ADM_STRUCT",
+    "exitCode": 0,
+    "total": 9,
+    "counts": {
+      "Passed": 9,
+      "Failed": 0,
+      "Blocked": 0,
+      "Skipped": 0,
+      "Untested": 0
+    },
+    "cases": [
+      {
+        "oldId": "TC_ADM_STRUCT_001",
+        "id": "ADM_STRUCT_Login_01",
+        "startedAt": "2026-11-05T11:58:05.023Z",
+        "status": "Passed",
+        "actual": "Đăng nhập và mở Organization Structure thành công.",
+        "assertions": [
+          "Đăng nhập và mở Organization Structure thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Login_01.png"
+        ],
+        "network": [],
+        "durationMs": 64,
+        "finishedAt": "2026-11-05T11:58:05.087Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_002",
+        "id": "ADM_STRUCT_View_01",
+        "startedAt": "2026-11-05T11:58:05.088Z",
+        "status": "Passed",
+        "actual": "Container cơ cấu tổ chức hiển thị.",
+        "assertions": [
+          "Container cơ cấu tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_01.png"
+        ],
+        "network": [],
+        "durationMs": 65,
+        "finishedAt": "2026-11-05T11:58:05.153Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_003",
+        "id": "ADM_STRUCT_View_02",
+        "startedAt": "2026-11-05T11:58:05.154Z",
+        "status": "Passed",
+        "actual": "Khu vực cây tổ chức hiển thị.",
+        "assertions": [
+          "Khu vực cây tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_02.png"
+        ],
+        "network": [],
+        "durationMs": 66,
+        "finishedAt": "2026-11-05T11:58:05.220Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_006",
+        "id": "ADM_STRUCT_EditMode_01",
+        "startedAt": "2026-11-05T11:58:05.221Z",
+        "status": "Passed",
+        "actual": "Bật chế độ Edit thành công.",
+        "assertions": [
+          "Bật chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_01.png"
+        ],
+        "network": [],
+        "durationMs": 102,
+        "finishedAt": "2026-11-05T11:58:05.323Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_007",
+        "id": "ADM_STRUCT_EditMode_02",
+        "startedAt": "2026-11-05T11:58:05.324Z",
+        "status": "Passed",
+        "actual": "Tắt chế độ Edit thành công.",
+        "assertions": [
+          "Tắt chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_02.png"
+        ],
+        "network": [],
+        "durationMs": 79,
+        "finishedAt": "2026-11-05T11:58:05.403Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_008",
+        "id": "ADM_STRUCT_EditMode_03",
+        "startedAt": "2026-11-05T11:58:05.404Z",
+        "status": "Passed",
+        "actual": "Edit được bật ở lần thứ nhất. | Edit được tắt ở lần thứ hai. | Edit được bật lại ở lần thứ ba.",
+        "assertions": [
+          "Edit được bật ở lần thứ nhất.",
+          "Edit được tắt ở lần thứ hai.",
+          "Edit được bật lại ở lần thứ ba."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_03.png"
+        ],
+        "network": [],
+        "durationMs": 152,
+        "finishedAt": "2026-11-05T11:58:05.556Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_009",
+        "id": "ADM_STRUCT_Create_01",
+        "startedAt": "2026-11-05T11:58:05.556Z",
+        "status": "Passed",
+        "actual": "Đơn vị cha được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị cha được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:58:06.105Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:58:06.928Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:58:10.488Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 5319,
+        "finishedAt": "2026-11-05T11:58:10.875Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_010",
+        "id": "ADM_STRUCT_Create_02",
+        "startedAt": "2026-11-05T11:58:10.876Z",
+        "status": "Passed",
+        "actual": "Đơn vị con được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị con được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_02.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:58:12.673Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:58:14.262Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:58:18.096Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 7447,
+        "finishedAt": "2026-11-05T11:58:18.323Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_011",
+        "id": "ADM_STRUCT_Validation_01",
+        "startedAt": "2026-11-05T11:58:18.324Z",
+        "status": "Passed",
+        "actual": "Form hiển thị lỗi khi thiếu trường bắt buộc.",
+        "assertions": [
+          "Form hiển thị lỗi khi thiếu trường bắt buộc."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Validation_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:58:19.278Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          }
+        ],
+        "durationMs": 1596,
+        "finishedAt": "2026-11-05T11:58:19.920Z"
+      }
+    ],
+    "error": "locator.click: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /^Cancel$/ }).last()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" data-v-10d463b7=\"\" class=\"oxd-button oxd-button--medium oxd-button--ghost\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-v-d5bfe35b=\"\" class=\"oxd-form-loader\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div data-v-d5bfe35b=\"\" class=\"oxd-form-loader\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    37 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div data-v-d5bfe35b=\"\" class=\"oxd-form-loader\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+    "cleanupFailed": true,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-57-56-975Z_initial_ADM_STRUCT\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-57-56-975Z\\initial\\ADM_STRUCT.log"
+  }
+}

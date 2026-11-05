@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright';
 
-const repo = process.env.ADM_REPO || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
+const repo = process.env.ADM_REPO || path.dirname(fileURLToPath(import.meta.url));
 const runId = process.env.ADM_RUN_ID || `ADM_${new Date().toISOString().replace(/[:.]/g, '-')}`;
 const out = path.join(repo, 'evidence/executions/23130171', runId);
 
@@ -34,8 +34,10 @@ const report = {
  setupErrors: []
 };
 
-const browser = await chromium.launch({ headless: false,
- slowMo: 500, // Độ trễ 300ms đủ mượt để nhìn rõ từng bước bấm mà không bị khựng
+const selected = (process.env.ADM_ONLY || '1,2,3').split(',').map(Number);
+assert.ok(selected.every(n => [1, 2, 3].includes(n)), 'Use adm_struct.mjs for cases that can modify data.');
+const browser = await chromium.launch({ headless: process.env.ADM_HEADLESS === 'true',
+ slowMo: Number(process.env.ADM_SLOW_MO ?? 500), // Độ trễ 300ms đủ mượt để nhìn rõ từng bước bấm mà không bị khựng
  args: [
   '--start-maximized',
   '--disable-gpu', // Tắt tăng tốc phần cứng giúp giảm giật lag khung hình
@@ -168,7 +170,7 @@ try {
  await write();
 
  for (let n = 1; n <= 25; n++) {
-  if (process.env.ADM_ONLY && !process.env.ADM_ONLY.split(',').map(Number).includes(n)) continue;
+  if (!selected.includes(n)) continue;
 
   await caseRun(n, async (item, check) => {
    if (n === 1) {

@@ -1,0 +1,4 @@
+ADM_STRUCT_Login_01: Passed (74 ms) Màn hình Organization Structure hiển thị thành công
+ADM_STRUCT_View_01: Passed (64 ms) Hiển thị cây tổ chức và khung container
+ADM_STRUCT_View_02: Passed (67 ms) Cơ cấu đơn vị cha/con hiển thị
+SUMMARY {"Passed":3,"Failed":0,"Blocked":0,"Untested":0} OUT D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-57-17-277Z_initial_LEGACY_STRUCT
