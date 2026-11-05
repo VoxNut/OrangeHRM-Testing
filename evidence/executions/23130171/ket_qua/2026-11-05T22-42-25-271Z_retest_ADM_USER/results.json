@@ -1,0 +1,97 @@
+{
+  "module": "ADM_USER",
+  "runId": "2026-11-05T22-42-25-271Z_retest_ADM_USER",
+  "startTime": "2026-11-05T22:58:03.287Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "results": [
+    {
+      "id": "ADM_USER_Create_01",
+      "title": "Tạo tài khoản hợp lệ",
+      "status": "Skipped",
+      "message": "Thiếu USER_EMPLOYEE_NAME để liên kết tài khoản.",
+      "durationMs": 15201,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/07_ADM_USER_Create_01.png"
+    },
+    {
+      "id": "ADM_USER_Create_02",
+      "title": "Bỏ trống trường bắt buộc",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 17554,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/08_ADM_USER_Create_02.png"
+    },
+    {
+      "id": "ADM_USER_Create_04",
+      "title": "Password và Confirm Password không khớp",
+      "status": "Skipped",
+      "message": "Thiếu USER_EMPLOYEE_NAME.",
+      "durationMs": 19857,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/10_ADM_USER_Create_04.png"
+    },
+    {
+      "id": "ADM_USER_Role_02",
+      "title": "ESS truy cập chức năng ESS",
+      "status": "Skipped",
+      "message": "Cần ESS_USERNAME và ESS_PASSWORD riêng.",
+      "durationMs": 16241,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/19_ADM_USER_Role_02.png"
+    },
+    {
+      "id": "ADM_USER_Role_03",
+      "title": "ESS không truy cập được Admin",
+      "status": "Skipped",
+      "message": "Cần ESS_USERNAME và ESS_PASSWORD riêng.",
+      "durationMs": 15906,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/20_ADM_USER_Role_03.png"
+    },
+    {
+      "id": "ADM_USER_Status_04",
+      "title": "Chuyển tài khoản Disabled sang Enabled",
+      "status": "Skipped",
+      "message": "Cần tài khoản Disabled riêng, được phép kích hoạt và khôi phục sau test.",
+      "durationMs": 14097,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_retest_ADM_USER/screenshots/25_ADM_USER_Status_04.png"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 1,
+    "failed": 0,
+    "blocked": 0,
+    "skipped": 5
+  },
+  "notes": [],
+  "endTime": "2026-11-05T22:59:43.815Z",
+  "apiResponses": [
+    {
+      "caseId": "ADM_USER_Create_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Create_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Create_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Role_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Role_03",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Status_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    }
+  ]
+}

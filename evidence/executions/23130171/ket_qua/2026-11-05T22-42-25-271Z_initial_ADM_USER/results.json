@@ -1,0 +1,339 @@
+{
+  "module": "ADM_USER",
+  "runId": "2026-11-05T22-42-25-271Z_initial_ADM_USER",
+  "startTime": "2026-11-05T22:52:42.735Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "results": [
+    {
+      "id": "ADM_USER_Filter_01",
+      "title": "Lọc theo Username",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 14297,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/01_ADM_USER_Filter_01.png"
+    },
+    {
+      "id": "ADM_USER_Filter_02",
+      "title": "Lọc theo User Role",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 12075,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/02_ADM_USER_Filter_02.png"
+    },
+    {
+      "id": "ADM_USER_Filter_03",
+      "title": "Lọc theo Employee Name",
+      "status": "Skipped",
+      "message": "Thiếu USER_EMPLOYEE_NAME.",
+      "durationMs": 10360,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/03_ADM_USER_Filter_03.png"
+    },
+    {
+      "id": "ADM_USER_Filter_04",
+      "title": "Lọc theo Status",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 13644,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/04_ADM_USER_Filter_04.png"
+    },
+    {
+      "id": "ADM_USER_Filter_05",
+      "title": "Kết hợp nhiều điều kiện",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 13297,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/05_ADM_USER_Filter_05.png"
+    },
+    {
+      "id": "ADM_USER_Filter_06",
+      "title": "Tìm kiếm không có kết quả",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 10959,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/06_ADM_USER_Filter_06.png"
+    },
+    {
+      "id": "ADM_USER_Create_01",
+      "title": "Tạo tài khoản hợp lệ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12715,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/07_ADM_USER_Create_01.png"
+    },
+    {
+      "id": "ADM_USER_Create_02",
+      "title": "Bỏ trống trường bắt buộc",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12839,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/08_ADM_USER_Create_02.png"
+    },
+    {
+      "id": "ADM_USER_Create_03",
+      "title": "Username đã tồn tại",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 20920,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/09_ADM_USER_Create_03.png"
+    },
+    {
+      "id": "ADM_USER_Create_04",
+      "title": "Password và Confirm Password không khớp",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12712,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/10_ADM_USER_Create_04.png"
+    },
+    {
+      "id": "ADM_USER_Create_05",
+      "title": "Hủy tạo tài khoản",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 13967,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/11_ADM_USER_Create_05.png"
+    },
+    {
+      "id": "ADM_USER_Update_01",
+      "title": "Cập nhật User Role",
+      "status": "Skipped",
+      "message": "Thiếu USER_TEST_ACCOUNT riêng. Không sử dụng tài khoản Admin.",
+      "durationMs": 15379,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/12_ADM_USER_Update_01.png"
+    },
+    {
+      "id": "ADM_USER_Update_02",
+      "title": "Cập nhật Status",
+      "status": "Skipped",
+      "message": "Thiếu USER_TEST_ACCOUNT riêng.",
+      "durationMs": 11479,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/13_ADM_USER_Update_02.png"
+    },
+    {
+      "id": "ADM_USER_Username_01",
+      "title": "Username phải duy nhất",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 12365,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/14_ADM_USER_Username_01.png"
+    },
+    {
+      "id": "ADM_USER_Username_02",
+      "title": "Chọn Employee hợp lệ",
+      "status": "Skipped",
+      "message": "Thiếu USER_EMPLOYEE_NAME.",
+      "durationMs": 10226,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/15_ADM_USER_Username_02.png"
+    },
+    {
+      "id": "ADM_USER_Username_03",
+      "title": "Autocomplete Employee",
+      "status": "Skipped",
+      "message": "Thiếu USER_EMPLOYEE_NAME.",
+      "durationMs": 10931,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/16_ADM_USER_Username_03.png"
+    },
+    {
+      "id": "ADM_USER_Username_04",
+      "title": "Không chọn Employee",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 14123,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/17_ADM_USER_Username_04.png"
+    },
+    {
+      "id": "ADM_USER_Role_01",
+      "title": "Admin truy cập chức năng quản trị",
+      "status": "Passed",
+      "message": "Test case thực hiện thành công.",
+      "durationMs": 9537,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/18_ADM_USER_Role_01.png"
+    },
+    {
+      "id": "ADM_USER_Role_02",
+      "title": "ESS truy cập chức năng ESS",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13039,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/19_ADM_USER_Role_02.png"
+    },
+    {
+      "id": "ADM_USER_Role_03",
+      "title": "ESS không truy cập được Admin",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12893,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/20_ADM_USER_Role_03.png"
+    },
+    {
+      "id": "ADM_USER_Role_04",
+      "title": "Kiểm tra quyền sau khi thay đổi Role",
+      "status": "Skipped",
+      "message": "Cần tài khoản ESS riêng và quy trình khôi phục quyền; không thay đổi quyền tài khoản dùng chung.",
+      "durationMs": 14257,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/21_ADM_USER_Role_04.png"
+    },
+    {
+      "id": "ADM_USER_Status_01",
+      "title": "Tài khoản Enabled đăng nhập được",
+      "status": "Skipped",
+      "message": "Cần ENABLED_USERNAME và ENABLED_PASSWORD riêng.",
+      "durationMs": 8890,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/22_ADM_USER_Status_01.png"
+    },
+    {
+      "id": "ADM_USER_Status_02",
+      "title": "Tài khoản Disabled không đăng nhập được",
+      "status": "Skipped",
+      "message": "Cần DISABLED_USERNAME và DISABLED_PASSWORD riêng.",
+      "durationMs": 9217,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/23_ADM_USER_Status_02.png"
+    },
+    {
+      "id": "ADM_USER_Status_03",
+      "title": "Chuyển tài khoản Enabled sang Disabled",
+      "status": "Skipped",
+      "message": "Cần tài khoản kiểm thử riêng, được phép vô hiệu hóa và khôi phục sau test.",
+      "durationMs": 10628,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/24_ADM_USER_Status_03.png"
+    },
+    {
+      "id": "ADM_USER_Status_04",
+      "title": "Chuyển tài khoản Disabled sang Enabled",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13035,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/25_ADM_USER_Status_04.png"
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "passed": 10,
+    "failed": 0,
+    "blocked": 6,
+    "skipped": 9
+  },
+  "notes": [],
+  "endTime": "2026-11-05T22:58:02.238Z",
+  "apiResponses": [
+    {
+      "caseId": "ADM_USER_Filter_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&username=Admin&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&userRoleId=1&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_03",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&status=1&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_05",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_05",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&username=Admin&userRoleId=1&status=1&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_06",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Filter_06",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&username=NO_SUCH_USER_1793919239708_5166&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Create_03",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Create_05",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Update_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Update_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Username_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Username_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Username_03",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Username_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Role_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Role_04",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Status_01",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Status_02",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    },
+    {
+      "caseId": "ADM_USER_Status_03",
+      "status": 200,
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u.userName&sortOrder=ASC"
+    }
+  ]
+}

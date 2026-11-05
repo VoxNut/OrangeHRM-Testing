@@ -1,0 +1,245 @@
+{
+  "module": "ADM_JOB",
+  "runId": "ADM_JOB_2026-11-05T22-11-59-924Z",
+  "startTime": "2026-11-05T22:11:59.924Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "results": [
+    {
+      "id": "ADM_JOB_Create_01",
+      "title": "Tạo Job Title hợp lệ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25208,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/01_ADM_JOB_Create_01.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/01_ADM_JOB_Create_01_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Create_02",
+      "title": "Bỏ trống Job Title",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25428,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/02_ADM_JOB_Create_02.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/02_ADM_JOB_Create_02_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Create_03",
+      "title": "Job Title trùng",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24913,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/03_ADM_JOB_Create_03.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/03_ADM_JOB_Create_03_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Create_04",
+      "title": "Tạo Job Title kèm mô tả",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24799,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/04_ADM_JOB_Create_04.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/04_ADM_JOB_Create_04_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Create_05",
+      "title": "Hủy tạo Job Title",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 27107,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/05_ADM_JOB_Create_05.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/05_ADM_JOB_Create_05_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Validation_01",
+      "title": "Job Title chỉ có khoảng trắng",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25238,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/06_ADM_JOB_Validation_01.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/06_ADM_JOB_Validation_01_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Validation_02",
+      "title": "Khoảng trắng đầu cuối",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24651,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/07_ADM_JOB_Validation_02.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/07_ADM_JOB_Validation_02_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Validation_03",
+      "title": "Ký tự đặc biệt",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24954,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/08_ADM_JOB_Validation_03.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/08_ADM_JOB_Validation_03_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Validation_04",
+      "title": "Chữ và số",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25845,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/09_ADM_JOB_Validation_04.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/09_ADM_JOB_Validation_04_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Validation_05",
+      "title": "Job Title dài",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25025,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/10_ADM_JOB_Validation_05.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/10_ADM_JOB_Validation_05_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_01",
+      "title": "Upload tệp hợp lệ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24730,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/11_ADM_JOB_Specification_01.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/11_ADM_JOB_Specification_01_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_02",
+      "title": "Upload tệp không hỗ trợ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24975,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/12_ADM_JOB_Specification_02.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/12_ADM_JOB_Specification_02_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_03",
+      "title": "Không đính kèm tệp",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24828,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/13_ADM_JOB_Specification_03.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/13_ADM_JOB_Specification_03_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_04",
+      "title": "Tên tệp có khoảng trắng và ký tự đặc biệt",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25519,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/14_ADM_JOB_Specification_04.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/14_ADM_JOB_Specification_04_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_05",
+      "title": "Tệp dung lượng lớn",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25825,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/15_ADM_JOB_Specification_05.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/15_ADM_JOB_Specification_05_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Specification_06",
+      "title": "Xem hoặc tải Job Specification",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24663,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/16_ADM_JOB_Specification_06.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/16_ADM_JOB_Specification_06_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Update_01",
+      "title": "Cập nhật tên Job Title",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24954,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/17_ADM_JOB_Update_01.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/17_ADM_JOB_Update_01_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Update_02",
+      "title": "Cập nhật mô tả",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25095,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/18_ADM_JOB_Update_02.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/18_ADM_JOB_Update_02_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Update_03",
+      "title": "Cập nhật Job Specification",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24841,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/19_ADM_JOB_Update_03.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/19_ADM_JOB_Update_03_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Update_04",
+      "title": "Hủy chỉnh sửa",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25011,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/20_ADM_JOB_Update_04.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/20_ADM_JOB_Update_04_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Delete_01",
+      "title": "Xóa Job Title kiểm thử",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 26153,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/21_ADM_JOB_Delete_01.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/21_ADM_JOB_Delete_01_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Delete_02",
+      "title": "Hủy xóa Job Title",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 24199,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/22_ADM_JOB_Delete_02.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/22_ADM_JOB_Delete_02_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Delete_03",
+      "title": "Xóa nhiều Job Titles",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25799,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/23_ADM_JOB_Delete_03.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/23_ADM_JOB_Delete_03_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Delete_04",
+      "title": "Xóa Job Title đang được sử dụng",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25613,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/24_ADM_JOB_Delete_04.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/24_ADM_JOB_Delete_04_ERROR.png"
+    },
+    {
+      "id": "ADM_JOB_Delete_05",
+      "title": "Kiểm tra sau xóa và reload",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 25527,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/25_ADM_JOB_Delete_05.png",
+      "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_JOB_2026-11-05T22-11-59-924Z/screenshots/25_ADM_JOB_Delete_05_ERROR.png"
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "passed": 0,
+    "failed": 0,
+    "blocked": 25,
+    "skipped": 0
+  },
+  "createdJobTitles": [],
+  "cleanup": [],
+  "apiResponses": [],
+  "notes": [],
+  "endTime": "2026-11-05T22:26:04.545Z"
+}

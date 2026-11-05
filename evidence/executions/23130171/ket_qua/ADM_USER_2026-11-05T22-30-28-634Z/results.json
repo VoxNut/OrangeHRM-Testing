@@ -1,0 +1,218 @@
+{
+  "module": "ADM_USER",
+  "runId": "ADM_USER_2026-11-05T22-30-28-634Z",
+  "startTime": "2026-11-05T22:30:28.634Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
+  "results": [
+    {
+      "id": "ADM_USER_Filter_01",
+      "title": "Lọc theo Username",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13206,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/01_ADM_USER_Filter_01.png"
+    },
+    {
+      "id": "ADM_USER_Filter_02",
+      "title": "Lọc theo User Role",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12989,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/02_ADM_USER_Filter_02.png"
+    },
+    {
+      "id": "ADM_USER_Filter_03",
+      "title": "Lọc theo Employee Name",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 14983,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/03_ADM_USER_Filter_03.png"
+    },
+    {
+      "id": "ADM_USER_Filter_04",
+      "title": "Lọc theo Status",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 14790,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/04_ADM_USER_Filter_04.png"
+    },
+    {
+      "id": "ADM_USER_Filter_05",
+      "title": "Kết hợp nhiều điều kiện",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12947,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/05_ADM_USER_Filter_05.png"
+    },
+    {
+      "id": "ADM_USER_Filter_06",
+      "title": "Tìm kiếm không có kết quả",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12823,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/06_ADM_USER_Filter_06.png"
+    },
+    {
+      "id": "ADM_USER_Create_01",
+      "title": "Tạo tài khoản hợp lệ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13272,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/07_ADM_USER_Create_01.png"
+    },
+    {
+      "id": "ADM_USER_Create_02",
+      "title": "Bỏ trống trường bắt buộc",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13255,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/08_ADM_USER_Create_02.png"
+    },
+    {
+      "id": "ADM_USER_Create_03",
+      "title": "Username đã tồn tại",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12904,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/09_ADM_USER_Create_03.png"
+    },
+    {
+      "id": "ADM_USER_Create_04",
+      "title": "Password và Confirm Password không khớp",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12956,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/10_ADM_USER_Create_04.png"
+    },
+    {
+      "id": "ADM_USER_Create_05",
+      "title": "Hủy tạo tài khoản",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13182,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/11_ADM_USER_Create_05.png"
+    },
+    {
+      "id": "ADM_USER_Update_01",
+      "title": "Cập nhật User Role",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12852,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/12_ADM_USER_Update_01.png"
+    },
+    {
+      "id": "ADM_USER_Update_02",
+      "title": "Cập nhật Status",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12928,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/13_ADM_USER_Update_02.png"
+    },
+    {
+      "id": "ADM_USER_Username_01",
+      "title": "Username phải duy nhất",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13855,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/14_ADM_USER_Username_01.png"
+    },
+    {
+      "id": "ADM_USER_Username_02",
+      "title": "Chọn Employee hợp lệ",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 14631,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/15_ADM_USER_Username_02.png"
+    },
+    {
+      "id": "ADM_USER_Username_03",
+      "title": "Autocomplete Employee",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13229,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/16_ADM_USER_Username_03.png"
+    },
+    {
+      "id": "ADM_USER_Username_04",
+      "title": "Không chọn Employee",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13070,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/17_ADM_USER_Username_04.png"
+    },
+    {
+      "id": "ADM_USER_Role_01",
+      "title": "Admin truy cập chức năng quản trị",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 14719,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/18_ADM_USER_Role_01.png"
+    },
+    {
+      "id": "ADM_USER_Role_02",
+      "title": "ESS truy cập chức năng ESS",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13273,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/19_ADM_USER_Role_02.png"
+    },
+    {
+      "id": "ADM_USER_Role_03",
+      "title": "ESS không truy cập được Admin",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12859,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/20_ADM_USER_Role_03.png"
+    },
+    {
+      "id": "ADM_USER_Role_04",
+      "title": "Kiểm tra quyền sau khi thay đổi Role",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13055,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/21_ADM_USER_Role_04.png"
+    },
+    {
+      "id": "ADM_USER_Status_01",
+      "title": "Tài khoản Enabled đăng nhập được",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12995,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/22_ADM_USER_Status_01.png"
+    },
+    {
+      "id": "ADM_USER_Status_02",
+      "title": "Tài khoản Disabled không đăng nhập được",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 13948,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/23_ADM_USER_Status_02.png"
+    },
+    {
+      "id": "ADM_USER_Status_03",
+      "title": "Chuyển tài khoản Enabled sang Disabled",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 14923,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/24_ADM_USER_Status_03.png"
+    },
+    {
+      "id": "ADM_USER_Status_04",
+      "title": "Chuyển tài khoản Disabled sang Enabled",
+      "status": "Blocked",
+      "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "durationMs": 12967,
+      "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/ADM_USER_2026-11-05T22-30-28-634Z/screenshots/25_ADM_USER_Status_04.png"
+    }
+  ],
+  "summary": {
+    "total": 25,
+    "passed": 0,
+    "failed": 0,
+    "blocked": 25,
+    "skipped": 0
+  },
+  "notes": [],
+  "endTime": "2026-11-05T22:40:56.747Z",
+  "apiResponses": []
+}
