@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Tạo ứng viên tối thiểu
+Expected (workbook): Tạo được ứng viên; tên, email và vacancy đúng input.</description>
+  <name>RECRUIT_CAND_Create_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A9:H9; selectors need live verification.</comment>
+  <testCaseGuid>f941407a-2743-5214-a27e-cca296dc1a69</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Tải CV định dạng không hợp lệ
+Expected (workbook): Hệ thống từ chối định dạng không hỗ trợ; không lưu tệp .exe.</description>
+  <name>RECRUIT_CAND_UploadCV_03</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A23:H23; selectors need live verification.</comment>
+  <testCaseGuid>5bcd8a2a-3e74-5d85-a80a-cb079d21beda</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,27 @@
+[LOGIN] Đang truy cập OrangeHRM...
+
+========== ADM_STRUCT SUMMARY ==========
+{
+  "Passed": 0,
+  "Failed": 0,
+  "Blocked": 0,
+  "Skipped": 0,
+  "Untested": 0
+}
+
+========== CLEANUP SUMMARY ==========
+{
+  "Passed": 0,
+  "Failed": 0,
+  "AlreadyAbsent": 0,
+  "NotAttempted": 0
+}
+
+Total duration: 45683 ms
+Report: /Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_STRUCT/results.json
+Evidence: /Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_STRUCT
+
+FATAL: page.goto: Timeout 45000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+

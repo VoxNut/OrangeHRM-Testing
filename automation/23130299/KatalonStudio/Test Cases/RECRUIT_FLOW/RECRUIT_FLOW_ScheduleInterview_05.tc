@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Ngày phỏng vấn không tồn tại
+Expected (workbook): Ngày không hợp lệ bị chặn hoặc báo lỗi; không tạo lịch với ngày này.</description>
+  <name>RECRUIT_FLOW_ScheduleInterview_05</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A18:H18; selectors need live verification.</comment>
+  <testCaseGuid>198c8c36-3b6b-53d2-980b-95e2249e0f10</testCaseGuid>
+</TestCaseEntity>

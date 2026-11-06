@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Lọc ứng viên theo Vacancy
+Expected (workbook): CAND_FILTER_A xuất hiện; kết quả thuộc VAC_A.</description>
+  <name>RECRUIT_CAND_Filter_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A26:H26; selectors need live verification.</comment>
+  <testCaseGuid>e9538e03-b812-5508-8a94-5bb004b2ab8f</testCaseGuid>
+</TestCaseEntity>

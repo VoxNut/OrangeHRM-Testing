@@ -1,0 +1,67 @@
+{
+  "LEGACY_STRUCT": {
+    "module": "LEGACY_STRUCT",
+    "exitCode": 0,
+    "total": 3,
+    "counts": {
+      "Passed": 3,
+      "Failed": 0,
+      "Blocked": 0,
+      "Untested": 0
+    },
+    "cases": [
+      {
+        "oldId": "TC_ADM_STRUCT_001",
+        "id": "ADM_STRUCT_Login_01",
+        "startedAt": "2026-11-05T11:57:30.642Z",
+        "status": "Passed",
+        "actual": "Màn hình Organization Structure hiển thị thành công",
+        "assertions": [
+          "Màn hình Organization Structure hiển thị thành công"
+        ],
+        "screenshots": [
+          "screenshots/ADM_STRUCT_Login_01.png"
+        ],
+        "durationMs": 74,
+        "finishedAt": "2026-11-05T11:57:30.716Z",
+        "network": []
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_002",
+        "id": "ADM_STRUCT_View_01",
+        "startedAt": "2026-11-05T11:57:30.716Z",
+        "status": "Passed",
+        "actual": "Hiển thị cây tổ chức và khung container",
+        "assertions": [
+          "Hiển thị cây tổ chức và khung container"
+        ],
+        "screenshots": [
+          "screenshots/ADM_STRUCT_View_01.png"
+        ],
+        "durationMs": 64,
+        "finishedAt": "2026-11-05T11:57:30.780Z",
+        "network": []
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_003",
+        "id": "ADM_STRUCT_View_02",
+        "startedAt": "2026-11-05T11:57:30.781Z",
+        "status": "Passed",
+        "actual": "Cơ cấu đơn vị cha/con hiển thị",
+        "assertions": [
+          "Cơ cấu đơn vị cha/con hiển thị"
+        ],
+        "screenshots": [
+          "screenshots/ADM_STRUCT_View_02.png"
+        ],
+        "durationMs": 67,
+        "finishedAt": "2026-11-05T11:57:30.848Z",
+        "network": []
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-57-17-277Z_initial_LEGACY_STRUCT\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-57-17-277Z\\initial\\LEGACY_STRUCT.log"
+  }
+}

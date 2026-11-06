@@ -1,0 +1,352 @@
+[
+  {
+    "module": "PIM_PERSONAL",
+    "row": 9,
+    "id": "PIM_PERSONAL_Update_01",
+    "title": "Cập nhật đầy đủ ba thành phần tên",
+    "expected": "Ba trường giữ đúng giá trị mới sau tải lại. Đúng employee key, không sửa nhân viên khác."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 10,
+    "id": "PIM_PERSONAL_Update_02",
+    "title": "First Name bắt buộc",
+    "expected": "First Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 11,
+    "id": "PIM_PERSONAL_Update_03",
+    "title": "Last Name bắt buộc",
+    "expected": "Last Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 12,
+    "id": "PIM_PERSONAL_Update_04",
+    "title": "First Name đúng giới hạn 30 ký tự",
+    "expected": "Lưu nguyên 30 ký tự và không có lỗi giới hạn."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 13,
+    "id": "PIM_PERSONAL_Update_05",
+    "title": "First Name vượt giới hạn 30 ký tự",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 14,
+    "id": "PIM_PERSONAL_Update_06",
+    "title": "Middle Name vượt giới hạn 30 ký tự",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 15,
+    "id": "PIM_PERSONAL_Update_07",
+    "title": "Last Name vượt giới hạn 30 ký tự",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 16,
+    "id": "PIM_PERSONAL_Update_08",
+    "title": "Employee Id dài 10 ký tự",
+    "expected": "ID mới 10 ký tự được lưu nguyên và hồ sơ vẫn là F_PERSON."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 17,
+    "id": "PIM_PERSONAL_Update_09",
+    "title": "Employee Id dài 11 ký tự",
+    "expected": "Có lỗi giới hạn 10 ký tự, không lưu ID 11 ký tự."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 18,
+    "id": "PIM_PERSONAL_Update_10",
+    "title": "Other Id dài 30 ký tự",
+    "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 19,
+    "id": "PIM_PERSONAL_Update_11",
+    "title": "Other Id dài 31 ký tự",
+    "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 20,
+    "id": "PIM_PERSONAL_Update_12",
+    "title": "Driver's License Number dài 30 ký tự",
+    "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 21,
+    "id": "PIM_PERSONAL_Update_13",
+    "title": "Driver's License Number dài 31 ký tự",
+    "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 22,
+    "id": "PIM_PERSONAL_Update_14",
+    "title": "Date of Birth là ngày nhuận hợp lệ",
+    "expected": "Lưu đúng ngày 29/02/2000. Không có lỗi định dạng ngày."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 23,
+    "id": "PIM_PERSONAL_Update_15",
+    "title": "Date of Birth là ngày không tồn tại",
+    "expected": "Hiển thị lỗi ngày/định dạng; không lưu ngày 30/02/2000."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 24,
+    "id": "PIM_PERSONAL_Update_16",
+    "title": "License Expiry Date hợp lệ",
+    "expected": "Lưu đúng ngày 31/12/2030, không có lỗi định dạng."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 25,
+    "id": "PIM_PERSONAL_Update_17",
+    "title": "License Expiry Date không hợp lệ",
+    "expected": "Hiển thị lỗi ngày/định dạng và không lưu ngày không tồn tại."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 26,
+    "id": "PIM_PERSONAL_Update_18",
+    "title": "Thay đổi Nationality",
+    "expected": "Nationality giữ đúng nhãn đã chọn sau tải lại."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 27,
+    "id": "PIM_PERSONAL_Update_19",
+    "title": "Thay đổi Marital Status",
+    "expected": "Trạng thái hôn nhân được lưu đúng lựa chọn đã ghi trong run."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 28,
+    "id": "PIM_PERSONAL_Update_20",
+    "title": "Thay đổi Gender",
+    "expected": "Chỉ radio đã chọn được đánh dấu. Giá trị giữ đúng sau tải lại."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 29,
+    "id": "PIM_PERSONAL_CreateAttachment_01",
+    "title": "Thêm attachment hợp lệ vào Personal Details",
+    "expected": "Có đúng một dòng tệp mới với tên và mô tả đã nhập. Tệp tải về đọc được."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 30,
+    "id": "PIM_PERSONAL_CreateAttachment_02",
+    "title": "Không chọn file khi thêm attachment",
+    "expected": "Trường file hiển thị Required. Không xuất hiện dòng attachment mới."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 31,
+    "id": "PIM_PERSONAL_CreateAttachment_03",
+    "title": "Mô tả attachment đúng 200 ký tự",
+    "expected": "Attachment được lưu. Mô tả có đủ 200 ký tự, không bị cắt."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 32,
+    "id": "PIM_PERSONAL_CreateAttachment_04",
+    "title": "Mô tả attachment vượt 200 ký tự",
+    "expected": "Có lỗi giới hạn 200 ký tự. Không lưu mô tả vượt giới hạn."
+  },
+  {
+    "module": "PIM_PERSONAL",
+    "row": 33,
+    "id": "PIM_PERSONAL_DeleteAttachment_01",
+    "title": "Hủy rồi xác nhận xóa attachment của nhóm",
+    "expected": "Sau Cancel, tệp vẫn có. Sau xác nhận xóa, đúng tệp đích biến mất và các tệp khác không thay đổi."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 9,
+    "id": "PIM_JOB_UpdateJob_01",
+    "title": "Lưu Joined Date hợp lệ",
+    "expected": "Joined Date được lưu đúng ngày 01/10/2024."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 10,
+    "id": "PIM_JOB_UpdateJob_02",
+    "title": "Joined Date không tồn tại",
+    "expected": "Có lỗi ngày/định dạng. Không lưu ngày 31/02/2024."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 11,
+    "id": "PIM_JOB_UpdateJob_03",
+    "title": "Thay đổi Job Title",
+    "expected": "Job Title giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 12,
+    "id": "PIM_JOB_UpdateJob_04",
+    "title": "Thay đổi Job Category",
+    "expected": "Job Category giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 13,
+    "id": "PIM_JOB_UpdateJob_05",
+    "title": "Thay đổi Sub Unit",
+    "expected": "Sub Unit giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 14,
+    "id": "PIM_JOB_UpdateJob_06",
+    "title": "Thay đổi Location",
+    "expected": "Location giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 15,
+    "id": "PIM_JOB_UpdateJob_07",
+    "title": "Thay đổi Employment Status",
+    "expected": "Employment Status giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 16,
+    "id": "PIM_JOB_UpdateJob_08",
+    "title": "Lưu đồng thời các trường Job Details",
+    "expected": "Ngày và toàn bộ 5 danh mục đều giữ đúng giá trị đã lưu trên F_JOB."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 17,
+    "id": "PIM_JOB_UpdateJob_09",
+    "title": "Xóa Joined Date tùy chọn",
+    "expected": "Có thể lưu Joined Date rỗng. Không tự gán ngày khác."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 18,
+    "id": "PIM_JOB_ToggleContract_01",
+    "title": "Bật hiển thị Employment Contract Details",
+    "expected": "Hiển thị Start Date, End Date và vùng Contract Details/upload. Không coi thao tác bật là bằng chứng đã lưu hợp đồng."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 19,
+    "id": "PIM_JOB_ToggleContract_02",
+    "title": "Tắt phần mở rộng hợp đồng không xóa dữ liệu",
+    "expected": "Phần hợp đồng ẩn rồi hiện. Ngày và tệp vẫn còn khi bật lại. Không tự xóa dữ liệu do thao tác toggle."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 20,
+    "id": "PIM_JOB_UpdateContract_01",
+    "title": "Hợp đồng có End Date sau Start Date",
+    "expected": "Lưu đúng hai ngày. End Date sau Start Date, không có lỗi."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 21,
+    "id": "PIM_JOB_UpdateContract_02",
+    "title": "End Date trước Start Date",
+    "expected": "End Date có lỗi yêu cầu sau Start Date. Không lưu cặp ngày sai."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 22,
+    "id": "PIM_JOB_UpdateContract_03",
+    "title": "End Date bằng Start Date",
+    "expected": "End Date bị từ chối vì phải sau Start Date (không chấp nhận cùng ngày theo baseline 5.9)."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 23,
+    "id": "PIM_JOB_UpdateContract_04",
+    "title": "Start Date không tồn tại",
+    "expected": "Có lỗi ngày/định dạng tại Start Date. Không lưu ngày không tồn tại."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 24,
+    "id": "PIM_JOB_UpdateContract_05",
+    "title": "End Date không tồn tại",
+    "expected": "Có lỗi ngày/định dạng tại End Date. Không lưu ngày không tồn tại."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 25,
+    "id": "PIM_JOB_UploadContract_01",
+    "title": "Tải tệp hợp đồng PDF hợp lệ",
+    "expected": "Tên contract_v1.pdf còn sau tải lại. Nội dung tải xuống là hợp đồng mẫu v1."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 26,
+    "id": "PIM_JOB_UploadContract_02",
+    "title": "Từ chối tệp hợp đồng vượt giới hạn",
+    "expected": "Có lỗi dung lượng. Tệp hợp đồng cũ không bị thay bằng tệp quá cỡ."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 27,
+    "id": "PIM_JOB_UploadContract_03",
+    "title": "Từ chối loại file hợp đồng không cho phép",
+    "expected": "Có lỗi loại tệp. Không lưu tệp không được phép, hợp đồng cũ còn nguyên."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 28,
+    "id": "PIM_JOB_KeepContract_01",
+    "title": "Giữ tệp hợp đồng hiện tại khi đổi ngày",
+    "expected": "Ngày kết thúc mới được lưu. Tệp vẫn là contract_v1.pdf, nội dung không đổi."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 29,
+    "id": "PIM_JOB_ReplaceContract_01",
+    "title": "Thay thế tệp hợp đồng hiện tại",
+    "expected": "Tệp hợp đồng hiện tại là contract_v2.pdf với nội dung v2; không còn dùng v1 làm tệp hiện tại."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 30,
+    "id": "PIM_JOB_ReplaceContract_02",
+    "title": "Replace Current nhưng không chọn tệp mới",
+    "expected": "Vùng tệp mới hiển thị Required. Không mất tệp hợp đồng cũ."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 31,
+    "id": "PIM_JOB_DeleteContract_01",
+    "title": "Xóa riêng tệp hợp đồng hiện tại",
+    "expected": "Tệp hiện tại được xóa. Hai ngày hợp đồng không bị đổi ngoài ý muốn."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 32,
+    "id": "PIM_JOB_CreateAttachment_01",
+    "title": "Thêm attachment tại tab Job",
+    "expected": "Có dòng attachment với đúng tên và mô tả tại tab Job, không nhầm attachment của Personal Details."
+  },
+  {
+    "module": "PIM_JOB",
+    "row": 33,
+    "id": "PIM_JOB_CancelAttachment_01",
+    "title": "Hủy thêm attachment tại tab Job",
+    "expected": "Form thêm đóng. Không có dòng mới với mô tả G01N01 Job cancel."
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Reject ứng viên đã Shortlisted
+Expected (workbook): Trạng thái Rejected; lịch sử còn sự kiện shortlist cũ và thêm reject.</description>
+  <name>RECRUIT_FLOW_Reject_02</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A12:H12; selectors need live verification.</comment>
+  <testCaseGuid>432a6442-4288-5bd5-994a-220883789b02</testCaseGuid>
+</TestCaseEntity>

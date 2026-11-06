@@ -1,0 +1,40 @@
+PIM_EMP_Create_01: Passed (15335 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Employee List trả đúng 1 dòng | Đúng ID và tên nhân viên vừa tạo
+PIM_EMP_Create_02: Passed (11994 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input
+PIM_EMP_Create_03: Passed (7180 ms) Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_04: Passed (7454 ms) Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_05: Passed (5989 ms) Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_06: Passed (12371 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input
+PIM_EMP_Create_07: Passed (5935 ms) Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_08: Passed (12369 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input
+PIM_EMP_Create_09: Passed (5798 ms) Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_10: Passed (12111 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input
+PIM_EMP_Create_11: Passed (5728 ms) Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai
+PIM_EMP_Create_12: Passed (12233 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input
+PIM_EMP_Create_13: Passed (6931 ms) Lỗi đúng trường: Should not exceed 10 characters | Không chuyển sang hồ sơ mới | Form chặn ID 11 ký tự; tìm prefix hợp lệ không có hồ sơ mới
+PIM_EMP_Create_14: Passed (5131 ms) Lỗi đúng trường: Employee Id already exists | Không chuyển sang hồ sơ mới | Chỉ còn một dòng F_DUP sau khi thử ID trùng | F_DUP không bị thay bằng tên nhập thử
+PIM_EMP_CancelCreate_01: Passed (6183 ms) Cancel quay về Employee List | Không có hồ sơ với ID vừa hủy
+PIM_EMP_UploadPhoto_01: Passed (12237 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/224 | Ảnh profile tải được sau reload
+PIM_EMP_UploadPhoto_02: Passed (12648 ms) Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/226 | Ảnh profile tải được sau reload
+PIM_EMP_UploadPhoto_03: Passed (5832 ms) Upload validation: File type not allowed | Save bị chặn ở Add Employee | Validation vẫn hiển thị sau Save | Không tạo hồ sơ và không lưu ảnh không hợp lệ
+PIM_EMP_UploadPhoto_04: Passed (5610 ms) Upload validation: Attachment Size Exceeded | Save bị chặn ở Add Employee | Validation vẫn hiển thị sau Save | Không tạo hồ sơ và không lưu ảnh không hợp lệ
+PIM_EMP_Search_01: Passed (2183 ms) Tìm theo Employee Id trả 1 dòng | ID kết quả khớp chính xác
+PIM_EMP_Search_02: Blocked (21776 ms) TimeoutError: locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('option').filter({ hasText: /G01N01\s+Minh\s+NhutPerson/ }) to be visible[22m
+
+PIM_EMP_Search_03: Passed (2215 ms) ID không tồn tại hiển thị No Records Found và bảng không có dòng
+PIM_EMP_Filter_01: Passed (2363 ms) Có positive control F_FILTER | Không có negative control F_FILTER_NEG | Mọi dòng khớp đồng thời Job Title và Employment Status | Đã kiểm tra toàn bộ 1 dòng kết quả
+PIM_EMP_Reset_01: Passed (2938 ms) Reset xóa Employee Id | Employment Status về mặc định | Search mới không giữ bộ lọc ID/status trước đó
+PIM_EMP_Sort_01: Failed (2557 ms) AssertionError: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   '123445',
++   '99n75',
+    '<b>x</b>',
+    '<i>qa</i>',
+-   '123445',
+-   '99n75',
+    'a8dco',
+    'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+SUMMARY {"Passed":23,"Failed":1,"Blocked":1,"Untested":0} OUT D:\My WorkSpace\OrangeHRM-Testing\Envidence - Group01\ASM8_2026-10-31T01-13-22-203Z\pim-emp\evidence\executions\23130226\ASM8_2026-10-31T01-13-22-203Z

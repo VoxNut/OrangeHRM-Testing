@@ -1,62 +1,30 @@
 # Group01 – OrangeHRM Testing
 
-Tài liệu phân tích, thiết kế test case và kế hoạch automation cho môn Software Testing, Assignment 6.
-
-- Website: https://opensource-demo.orangehrmlive.com/
-- Mỗi thành viên tự chọn công cụ automation phù hợp; giảng viên không bắt buộc một công cụ chung.
-- Phạm vi: kiểm thử chức năng trên dữ liệu giả do nhóm tạo. Không pentest, quét lỗ hổng hoặc load test demo công khai.
+Dự án kiểm thử website [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/) cho môn Software Testing.
 
 ## Thành viên
 
-| MSSV | Họ tên | Vai trò | Chức năng đã nhận |
+| MSSV | Họ tên | Vai trò | Chức năng |
 | --- | --- | --- | --- |
 | 23130226 | Võ Minh Nhựt | Nhóm trưởng | PIM_EMP, PIM_PERSONAL, PIM_JOB |
-| 23130299 | Nguyễn Văn Thắng | Thành viên | Chưa chọn |
-| 23130339 | Tôn Bích Trâm | Thành viên | Chưa chọn |
-| 22130254 | Cao Tiến Thành | Thành viên | Chưa chọn |
-| 23130171 | Nguyễn Thị Thủy Linh | Thành viên | Chưa chọn |
+| 23130299 | Nguyễn Văn Thắng | Thành viên | RECR_VAC, RECR_CAND, RECR_FLOW |
+| 23130339 | Tôn Bích Trâm | Thành viên | TIME_ATTEND, TIME_MY, TIME_EMP |
+| 22130254 | Cao Tiến Thành | Thành viên | LEAVE_CONFIG, LEAVE_SELF, LEAVE_ADMIN |
+| 23130171 | Nguyễn Thị Thủy Linh | Thành viên | ADM_STRUCT, ADM_JOB, ADM_USER |
 
-## Cấu trúc
+## Tài liệu và mã nguồn
 
-```text
-OrangeHRM-Testing/
-├── Group01.txt
-├── README.md
-├── CONTRIBUTING.md
-├── docs/
-│   ├── planning/function-allocation.md
-│   ├── templates/README.md
-│   ├── test-cases/
-│   │   ├── README.md
-│   │   ├── members/                  # Workbook riêng từng thành viên
-│   │   └── merged/                   # Workbook tổng hợp do nhóm trưởng quản lý
-│   └── automation/README.md
-├── automation/                       # Chia theo MSSV/công cụ/chức năng khi triển khai
-├── test-data/                        # Dữ liệu giả và hướng dẫn fixture
-└── evidence/
-    ├── git/                         # Ảnh push nhánh riêng và merge dev
-    └── executions/                  # Log và screenshot test thực tế
-```
+- [Phân công chức năng](docs/planning/function-allocation.md)
+- [Test case](docs/test-cases/README.md) · [Format workbook](docs/templates/README.md)
+- [Automation](automation/README.md) · [Kế hoạch triển khai](docs/automation/README.md)
+- [Dữ liệu test](test-data/README.md) · [Kết quả chạy](evidence/executions/README.md)
+- [Quy trình đóng góp](CONTRIBUTING.md)
+- [ASM8: cài đặt và chạy suite nhóm](Automation%20Testing%20Project%20-%20Group%2001/README.md)
+- [Slide cá nhân ASM8](docs/presentations/README.md)
 
-## Bắt đầu làm bài
+Mỗi thành viên tự chọn công cụ và ghi hướng dẫn chạy trong thư mục của mình. Tích hợp qua **nhánh cá nhân → PR → dev**; `main` lưu các mốc thống nhất.
 
-1. Xem `docs/planning/function-allocation.md`, đăng ký đủ 3 chức năng không trùng người khác.
-2. Đọc `docs/templates/README.md` và workbook mẫu của Nhựt trên nhánh `nhut` trước khi viết tài liệu riêng.
-3. Tuần đầu hoàn thiện ít nhất 1 chức năng khoảng 20–30 test case. Tiếp tục đủ 3 chức năng theo tiến độ của nhóm.
-4. Làm trên nhánh riêng, commit và push, chụp bằng chứng, tạo pull request vào `dev`. Xem `CONTRIBUTING.md`.
-5. Nhóm trưởng review rồi gộp tài liệu đã thống nhất vào `docs/test-cases/merged/Group01_OrangeHRM.xlsx`.
 
-## Nhánh
+## Assignment 8 — Recruitment release (23130299)
 
-- `main`: bản nền và các mốc đã được nhóm thống nhất.
-- `dev`: tích hợp phần của thành viên sau review.
-- `nhut`: phần PIM của Võ Minh Nhựt.
-- Nhánh thành viên đề xuất: `thang/asm6-<module>`, `tram/asm6-<module>`, `thanh/asm6-<module>`, `linh/asm6-<module>`; thay `<module>` bằng tên phần đã chọn.
-
-Luồng nộp: **nhánh thành viên → pull request → dev**. Không sửa workbook của thành viên khác trên nhánh riêng. Chưa có automation execution thì để `Untested`; không dùng log hoặc ảnh mẫu làm minh chứng thực thi.
-
-## Công cụ automation
-
-Các thành viên không cần dùng cùng công cụ. Mỗi người ghi rõ công cụ, phiên bản, cách cài đặt/import, cách chạy và dữ liệu cần chuẩn bị trong phần của mình. Katalon Recorder trong kế hoạch PIM chỉ là lựa chọn của Nhựt, không phải quy định của cả nhóm.
-
-Tài liệu test design dùng format chung và không phụ thuộc công cụ. Suite/script, assertion và báo cáo chạy phải tương ứng công cụ thực tế của người thực hiện. Lưu theo `automation/MaSV/TenCongCu/MaChucNang/`.
+Bổ sung bàn giao 02/11: báo cáo sửa phản hồi nhóm trưởng, Recruitment index, 75 case official.

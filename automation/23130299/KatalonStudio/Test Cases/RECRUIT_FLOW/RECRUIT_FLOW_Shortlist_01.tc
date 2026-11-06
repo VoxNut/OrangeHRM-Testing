@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Shortlist ứng viên mới
+Expected (workbook): Status chuyển Shortlisted; History ghi sự kiện shortlist đúng ứng viên.</description>
+  <name>RECRUIT_FLOW_Shortlist_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A10:H10; selectors need live verification.</comment>
+  <testCaseGuid>543ba8d2-a4f9-54be-bdc2-4149001190ec</testCaseGuid>
+</TestCaseEntity>

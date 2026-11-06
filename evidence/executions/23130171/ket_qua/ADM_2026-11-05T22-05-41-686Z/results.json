@@ -1,0 +1,67 @@
+{
+  "runId": "ADM_2026-11-05T22-05-41-686Z",
+  "startedAt": "2026-11-05T22:05:41.689Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "tool": "Playwright",
+  "browser": "156.0.8078.4",
+  "created": [],
+  "results": [
+    {
+      "oldId": "TC_ADM_STRUCT_001",
+      "id": "ADM_STRUCT_Login_01",
+      "startedAt": "2026-11-05T22:05:56.403Z",
+      "status": "Passed",
+      "actual": "Màn hình Organization Structure hiển thị thành công",
+      "assertions": [
+        "Màn hình Organization Structure hiển thị thành công"
+      ],
+      "screenshots": [
+        "screenshots/ADM_STRUCT_Login_01.png"
+      ],
+      "durationMs": 139,
+      "finishedAt": "2026-11-05T22:05:56.542Z",
+      "network": []
+    },
+    {
+      "oldId": "TC_ADM_STRUCT_002",
+      "id": "ADM_STRUCT_View_01",
+      "startedAt": "2026-11-05T22:05:56.543Z",
+      "status": "Passed",
+      "actual": "Hiển thị cây tổ chức và khung container",
+      "assertions": [
+        "Hiển thị cây tổ chức và khung container"
+      ],
+      "screenshots": [
+        "screenshots/ADM_STRUCT_View_01.png"
+      ],
+      "durationMs": 152,
+      "finishedAt": "2026-11-05T22:05:56.695Z",
+      "network": []
+    },
+    {
+      "oldId": "TC_ADM_STRUCT_003",
+      "id": "ADM_STRUCT_View_02",
+      "startedAt": "2026-11-05T22:05:56.695Z",
+      "status": "Passed",
+      "actual": "Cơ cấu đơn vị cha/con hiển thị",
+      "assertions": [
+        "Cơ cấu đơn vị cha/con hiển thị"
+      ],
+      "screenshots": [
+        "screenshots/ADM_STRUCT_View_02.png"
+      ],
+      "durationMs": 137,
+      "finishedAt": "2026-11-05T22:05:56.832Z",
+      "network": []
+    }
+  ],
+  "cleanup": [],
+  "setupErrors": [],
+  "finishedAt": "2026-11-05T22:05:56.833Z",
+  "summary": {
+    "Passed": 3,
+    "Failed": 0,
+    "Blocked": 0,
+    "Untested": 0
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Hủy Reject không đổi trạng thái
+Expected (workbook): Vẫn Shortlisted; không thêm bản ghi Reject vào History.</description>
+  <name>RECRUIT_FLOW_CancelReject_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A28:H28; selectors need live verification.</comment>
+  <testCaseGuid>f7cd6fbf-8216-5ac4-b345-a9ac9684e20b</testCaseGuid>
+</TestCaseEntity>

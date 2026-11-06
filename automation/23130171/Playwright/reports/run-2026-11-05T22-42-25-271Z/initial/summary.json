@@ -1,0 +1,480 @@
+{
+  "ADM_STRUCT": {
+    "module": "ADM_STRUCT",
+    "exitCode": 0,
+    "total": 0,
+    "counts": {
+      "Passed": 0,
+      "Failed": 0,
+      "Blocked": 0,
+      "Skipped": 0,
+      "Untested": 0
+    },
+    "cases": [],
+    "error": "page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "cleanupFailed": false,
+    "reportFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_STRUCT/results.json",
+    "logFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/reports/run-2026-11-05T22-42-25-271Z/initial/ADM_STRUCT.log"
+  },
+  "ADM_JOB": {
+    "module": "ADM_JOB",
+    "exitCode": 0,
+    "total": 25,
+    "counts": {
+      "total": 25,
+      "passed": 4,
+      "failed": 2,
+      "blocked": 10,
+      "skipped": 9
+    },
+    "cases": [
+      {
+        "id": "ADM_JOB_Create_01",
+        "title": "Tạo Job Title hợp lệ",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 13988,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/01_ADM_JOB_Create_01.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/01_ADM_JOB_Create_01_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Create_02",
+        "title": "Bỏ trống Job Title",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 23929,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/02_ADM_JOB_Create_02.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/02_ADM_JOB_Create_02_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Create_03",
+        "title": "Job Title trùng",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 15005,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/03_ADM_JOB_Create_03.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/03_ADM_JOB_Create_03_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Create_04",
+        "title": "Tạo Job Title kèm mô tả",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 13620,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/04_ADM_JOB_Create_04.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/04_ADM_JOB_Create_04_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Create_05",
+        "title": "Hủy tạo Job Title",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12865,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/05_ADM_JOB_Create_05.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/05_ADM_JOB_Create_05_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Validation_01",
+        "title": "Job Title chỉ có khoảng trắng",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 12417,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/06_ADM_JOB_Validation_01.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Validation_02",
+        "title": "Khoảng trắng đầu cuối",
+        "status": "Failed",
+        "message": "Không tìm thấy Job Title sau khi xử lý khoảng trắng.",
+        "durationMs": 11169,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/07_ADM_JOB_Validation_02.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/07_ADM_JOB_Validation_02_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Validation_03",
+        "title": "Ký tự đặc biệt",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 16304,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/08_ADM_JOB_Validation_03.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Validation_04",
+        "title": "Chữ và số",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 16676,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/09_ADM_JOB_Validation_04.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Validation_05",
+        "title": "Job Title dài",
+        "status": "Failed",
+        "message": "Không tìm thấy Job Title dài sau khi lưu.",
+        "durationMs": 11484,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/10_ADM_JOB_Validation_05.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/10_ADM_JOB_Validation_05_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Specification_01",
+        "title": "Upload tệp hợp lệ",
+        "status": "Skipped",
+        "message": "Thiếu JOB_SPEC_VALID_FILE.",
+        "durationMs": 10558,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/11_ADM_JOB_Specification_01.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Specification_02",
+        "title": "Upload tệp không hỗ trợ",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12722,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/12_ADM_JOB_Specification_02.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/12_ADM_JOB_Specification_02_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Specification_03",
+        "title": "Không đính kèm tệp",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 13264,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/13_ADM_JOB_Specification_03.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/13_ADM_JOB_Specification_03_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Specification_04",
+        "title": "Tên tệp có khoảng trắng và ký tự đặc biệt",
+        "status": "Skipped",
+        "message": "Thiếu JOB_SPEC_SPECIAL_FILE.",
+        "durationMs": 10721,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/14_ADM_JOB_Specification_04.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Specification_05",
+        "title": "Tệp dung lượng lớn",
+        "status": "Skipped",
+        "message": "Thiếu JOB_SPEC_LARGE_FILE.",
+        "durationMs": 14159,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/15_ADM_JOB_Specification_05.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Specification_06",
+        "title": "Xem hoặc tải Job Specification",
+        "status": "Skipped",
+        "message": "Thiếu JOB_TITLE_WITH_SPEC có tệp đính kèm.",
+        "durationMs": 10021,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/16_ADM_JOB_Specification_06.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Update_01",
+        "title": "Cập nhật tên Job Title",
+        "status": "Skipped",
+        "message": "Thiếu JOB_TITLE_TO_EDIT.",
+        "durationMs": 13413,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/17_ADM_JOB_Update_01.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Update_02",
+        "title": "Cập nhật mô tả",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 16662,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/18_ADM_JOB_Update_02.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/18_ADM_JOB_Update_02_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Update_03",
+        "title": "Cập nhật Job Specification",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 14216,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/19_ADM_JOB_Update_03.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/19_ADM_JOB_Update_03_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Update_04",
+        "title": "Hủy chỉnh sửa",
+        "status": "Skipped",
+        "message": "Thiếu JOB_TITLE_TO_EDIT.",
+        "durationMs": 14624,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/20_ADM_JOB_Update_04.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Delete_01",
+        "title": "Xóa Job Title kiểm thử",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12842,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/21_ADM_JOB_Delete_01.png",
+        "errorScreenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/21_ADM_JOB_Delete_01_ERROR.png"
+      },
+      {
+        "id": "ADM_JOB_Delete_02",
+        "title": "Hủy xóa Job Title",
+        "status": "Skipped",
+        "message": "Thiếu JOB_TITLE_TO_DELETE.",
+        "durationMs": 16933,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/22_ADM_JOB_Delete_02.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Delete_03",
+        "title": "Xóa nhiều Job Titles",
+        "status": "Skipped",
+        "message": "OrangeHRM Demo mặc định không cung cấp thao tác Delete Selected trong Job Titles.",
+        "durationMs": 11216,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/23_ADM_JOB_Delete_03.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Delete_04",
+        "title": "Xóa Job Title đang được sử dụng",
+        "status": "Skipped",
+        "message": "Không xóa dữ liệu dùng chung hoặc Job Title đang được sử dụng trên demo công khai.",
+        "durationMs": 10105,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/24_ADM_JOB_Delete_04.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Delete_05",
+        "title": "Kiểm tra sau xóa và reload",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 32449,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/screenshots/25_ADM_JOB_Delete_05.png",
+        "errorScreenshot": null
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_JOB/results.json",
+    "logFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/reports/run-2026-11-05T22-42-25-271Z/initial/ADM_JOB.log"
+  },
+  "ADM_USER": {
+    "module": "ADM_USER",
+    "exitCode": 0,
+    "total": 25,
+    "counts": {
+      "total": 25,
+      "passed": 10,
+      "failed": 0,
+      "blocked": 6,
+      "skipped": 9
+    },
+    "cases": [
+      {
+        "id": "ADM_USER_Filter_01",
+        "title": "Lọc theo Username",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 14297,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/01_ADM_USER_Filter_01.png"
+      },
+      {
+        "id": "ADM_USER_Filter_02",
+        "title": "Lọc theo User Role",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 12075,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/02_ADM_USER_Filter_02.png"
+      },
+      {
+        "id": "ADM_USER_Filter_03",
+        "title": "Lọc theo Employee Name",
+        "status": "Skipped",
+        "message": "Thiếu USER_EMPLOYEE_NAME.",
+        "durationMs": 10360,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/03_ADM_USER_Filter_03.png"
+      },
+      {
+        "id": "ADM_USER_Filter_04",
+        "title": "Lọc theo Status",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 13644,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/04_ADM_USER_Filter_04.png"
+      },
+      {
+        "id": "ADM_USER_Filter_05",
+        "title": "Kết hợp nhiều điều kiện",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 13297,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/05_ADM_USER_Filter_05.png"
+      },
+      {
+        "id": "ADM_USER_Filter_06",
+        "title": "Tìm kiếm không có kết quả",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 10959,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/06_ADM_USER_Filter_06.png"
+      },
+      {
+        "id": "ADM_USER_Create_01",
+        "title": "Tạo tài khoản hợp lệ",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12715,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/07_ADM_USER_Create_01.png"
+      },
+      {
+        "id": "ADM_USER_Create_02",
+        "title": "Bỏ trống trường bắt buộc",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12839,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/08_ADM_USER_Create_02.png"
+      },
+      {
+        "id": "ADM_USER_Create_03",
+        "title": "Username đã tồn tại",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 20920,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/09_ADM_USER_Create_03.png"
+      },
+      {
+        "id": "ADM_USER_Create_04",
+        "title": "Password và Confirm Password không khớp",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12712,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/10_ADM_USER_Create_04.png"
+      },
+      {
+        "id": "ADM_USER_Create_05",
+        "title": "Hủy tạo tài khoản",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 13967,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/11_ADM_USER_Create_05.png"
+      },
+      {
+        "id": "ADM_USER_Update_01",
+        "title": "Cập nhật User Role",
+        "status": "Skipped",
+        "message": "Thiếu USER_TEST_ACCOUNT riêng. Không sử dụng tài khoản Admin.",
+        "durationMs": 15379,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/12_ADM_USER_Update_01.png"
+      },
+      {
+        "id": "ADM_USER_Update_02",
+        "title": "Cập nhật Status",
+        "status": "Skipped",
+        "message": "Thiếu USER_TEST_ACCOUNT riêng.",
+        "durationMs": 11479,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/13_ADM_USER_Update_02.png"
+      },
+      {
+        "id": "ADM_USER_Username_01",
+        "title": "Username phải duy nhất",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 12365,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/14_ADM_USER_Username_01.png"
+      },
+      {
+        "id": "ADM_USER_Username_02",
+        "title": "Chọn Employee hợp lệ",
+        "status": "Skipped",
+        "message": "Thiếu USER_EMPLOYEE_NAME.",
+        "durationMs": 10226,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/15_ADM_USER_Username_02.png"
+      },
+      {
+        "id": "ADM_USER_Username_03",
+        "title": "Autocomplete Employee",
+        "status": "Skipped",
+        "message": "Thiếu USER_EMPLOYEE_NAME.",
+        "durationMs": 10931,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/16_ADM_USER_Username_03.png"
+      },
+      {
+        "id": "ADM_USER_Username_04",
+        "title": "Không chọn Employee",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 14123,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/17_ADM_USER_Username_04.png"
+      },
+      {
+        "id": "ADM_USER_Role_01",
+        "title": "Admin truy cập chức năng quản trị",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 9537,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/18_ADM_USER_Role_01.png"
+      },
+      {
+        "id": "ADM_USER_Role_02",
+        "title": "ESS truy cập chức năng ESS",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 13039,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/19_ADM_USER_Role_02.png"
+      },
+      {
+        "id": "ADM_USER_Role_03",
+        "title": "ESS không truy cập được Admin",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 12893,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/20_ADM_USER_Role_03.png"
+      },
+      {
+        "id": "ADM_USER_Role_04",
+        "title": "Kiểm tra quyền sau khi thay đổi Role",
+        "status": "Skipped",
+        "message": "Cần tài khoản ESS riêng và quy trình khôi phục quyền; không thay đổi quyền tài khoản dùng chung.",
+        "durationMs": 14257,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/21_ADM_USER_Role_04.png"
+      },
+      {
+        "id": "ADM_USER_Status_01",
+        "title": "Tài khoản Enabled đăng nhập được",
+        "status": "Skipped",
+        "message": "Cần ENABLED_USERNAME và ENABLED_PASSWORD riêng.",
+        "durationMs": 8890,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/22_ADM_USER_Status_01.png"
+      },
+      {
+        "id": "ADM_USER_Status_02",
+        "title": "Tài khoản Disabled không đăng nhập được",
+        "status": "Skipped",
+        "message": "Cần DISABLED_USERNAME và DISABLED_PASSWORD riêng.",
+        "durationMs": 9217,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/23_ADM_USER_Status_02.png"
+      },
+      {
+        "id": "ADM_USER_Status_03",
+        "title": "Chuyển tài khoản Enabled sang Disabled",
+        "status": "Skipped",
+        "message": "Cần tài khoản kiểm thử riêng, được phép vô hiệu hóa và khôi phục sau test.",
+        "durationMs": 10628,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/24_ADM_USER_Status_03.png"
+      },
+      {
+        "id": "ADM_USER_Status_04",
+        "title": "Chuyển tài khoản Disabled sang Enabled",
+        "status": "Blocked",
+        "message": "page.goto: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\", waiting until \"domcontentloaded\"\u001b[22m\n",
+        "durationMs": 13035,
+        "screenshot": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/screenshots/25_ADM_USER_Status_04.png"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER/results.json",
+    "logFile": "/Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/reports/run-2026-11-05T22-42-25-271Z/initial/ADM_USER.log"
+  }
+}

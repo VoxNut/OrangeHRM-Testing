@@ -1,7 +1,13 @@
-# Automation suites và scripts
+# Automation
 
-Mỗi thành viên tự chọn công cụ; không bắt buộc dùng chung Katalon Recorder. Thư mục này chứa suite/script thực tế sau khi triển khai.
+Lưu script theo `MaSV/TenCongCu/`, kèm README hướng dẫn cài đặt, chạy, fixture và cleanup.
 
-Hiện chưa có suite thực thi. Không xem các tài liệu test design là automation scripts đã chạy.
+| Thành viên | Công cụ |
+| --- | --- |
+| 23130226 | [Playwright – PIM](23130226/Playwright/README.md) |
+| 23130299 | [Katalon Studio – Recruitment](23130299/KatalonStudio/README.md) |
+| 23130339 | [Puppeteer – Time](23130339/KatalonRecorder/ASM07.md) |
+| 22130254 | [Cypress – Leave](22130254/cypress/README.md) |
+| 23130171 | [Playwright – Admin](23130171/Playwright/README.md) |
 
-Khi bổ sung, lưu theo `MaSV/TenCongCu/MaChucNang/` và kèm README: công cụ/phiên bản, runtime hoặc extension/browser cần dùng, file suite/script, cách cài đặt/import, dữ liệu, tiền điều kiện, cách reset và lệnh/nút chạy. Tránh lưu tài khoản thật hoặc phiên đăng nhập vào Git.
+[Chạy tích hợp ASM8](../Automation%20Testing%20Project%20-%20Group%2001/README.md) · [Kế hoạch nhóm](../docs/automation/README.md) · [Kết quả chạy](../evidence/executions/README.md)

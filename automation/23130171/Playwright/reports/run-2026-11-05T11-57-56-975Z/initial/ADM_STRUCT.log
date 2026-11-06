@@ -1,0 +1,62 @@
+[LOGIN] Đang truy cập OrangeHRM...
+[LOGIN] HTTP: 200
+[LOGIN] URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+[LOGIN] Đăng nhập thành công.
+ADM_STRUCT_Login_01: Passed (64 ms) Đăng nhập và mở Organization Structure thành công.
+ADM_STRUCT_View_01: Passed (65 ms) Container cơ cấu tổ chức hiển thị.
+ADM_STRUCT_View_02: Passed (66 ms) Khu vực cây tổ chức hiển thị.
+ADM_STRUCT_EditMode_01: Passed (102 ms) Bật chế độ Edit thành công.
+ADM_STRUCT_EditMode_02: Passed (79 ms) Tắt chế độ Edit thành công.
+ADM_STRUCT_EditMode_03: Passed (152 ms) Edit được bật ở lần thứ nhất. | Edit được tắt ở lần thứ hai. | Edit được bật lại ở lần thứ ba.
+ADM_STRUCT_Create_01: Passed (5319 ms) Đơn vị cha được tạo và hiển thị.
+ADM_STRUCT_Create_02: Passed (7447 ms) Đơn vị con được tạo và hiển thị.
+ADM_STRUCT_Validation_01: Passed (1596 ms) Form hiển thị lỗi khi thiếu trường bắt buộc.
+
+========== ADM_STRUCT SUMMARY ==========
+{
+  "Passed": 9,
+  "Failed": 0,
+  "Blocked": 0,
+  "Skipped": 0,
+  "Untested": 0
+}
+
+========== CLEANUP SUMMARY ==========
+{
+  "Passed": 0,
+  "Failed": 1,
+  "AlreadyAbsent": 0,
+  "NotAttempted": 0
+}
+
+Total duration: 68231 ms
+Report: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-57-56-975Z_initial_ADM_STRUCT\results.json
+Evidence: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-57-56-975Z_initial_ADM_STRUCT
+
+FATAL: locator.click: Timeout 20000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: /^Cancel$/ }).last()[22m
+[2m    - locator resolved to <button type="button" data-v-10d463b7="" class="oxd-button oxd-button--medium oxd-button--ghost">…</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div data-v-d5bfe35b="" class="oxd-form-loader">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div data-v-d5bfe35b="" class="oxd-form-loader">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    37 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div data-v-d5bfe35b="" class="oxd-form-loader">…</div> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+

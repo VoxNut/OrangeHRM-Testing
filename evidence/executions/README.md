@@ -1,5 +1,13 @@
-# Minh chứng thực thi
+# Kết quả thực thi
 
-Sau khi chạy, lưu theo `MaSV/RunID/CaseID/`. Bao gồm log nguyên bản và ảnh thể hiện input, assertion hoặc thông báo và kết quả.
+Recruitment 02/11: [index official/supplementary/evidence](../../Test%20Report%20-%20Group%2001/Individual/23130299/index.html), [75 case](../../Test%20Report%20-%20Group%2001/Individual/23130299/RESULTS75.md), [phân tích ảnh lỗi](../../Test%20Report%20-%20Group%2001/Individual/23130299/ANOMALY_SCREENSHOTS.md). Latest PNG đã có tại `Envidence - Group01/23130299/`; không sao chép lại. Các ảnh cũ trong namespace này giữ nguyên lịch sử; không dùng cho execution latest nếu không khớp UUID/report.
 
-Ghi ngày/giờ, phiên bản browser/extension và trạng thái fixture. Phân biệt run lỗi ban đầu và rerun sau sửa. Không đặt tên Passed cho case chưa chạy, không dùng ảnh UI rời để chứng minh assertion đã chạy.
+Lưu theo `MaSV/RunID/`: report/log, ảnh theo Case ID, môi trường, thời điểm chạy và cleanup.
+
+- [23130226 – PIM](23130226/README.md)
+- [23130299 – Recruitment](23130299/): VAC có HTML; CAND/FLOW có screenshot ngày 30/10.
+- [23130171 – Admin](23130171/ADM_STRUCT/): ảnh và workbook đã nộp.
+- Leave/Time: xem report ASM8 để phân biệt lần chạy mới với nội dung demo ASM7.
+- [Report ASM8](../../Test%20Report%20-%20Group%2001/README.md) · [Evidence ASM8](../../Envidence%20-%20Group01/README.md)
+
+Đối chiếu Result với đúng run; giữ riêng kết quả ban đầu và retest.

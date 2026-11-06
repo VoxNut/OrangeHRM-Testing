@@ -1,0 +1,35 @@
+import recruitment.RecorderBridge
+
+def runner = new RecorderBridge('RECRUIT_VAC_CancelCreate_01')
+try {
+    runner.step('setTimeout', '30000', '')
+    runner.step('echo', 'START RECRUIT_VAC_CancelCreate_01 (original TC_RECRUIT_VAC_024)', '')
+    runner.step('open', '/web/index.php/recruitment/viewJobVacancy', '')
+    runner.step('waitForElementPresent', 'xpath=//button[normalize-space()=\'Add\']', '')
+    runner.step('echo', 'SCREENSHOT_CHECKPOINT RECRUIT_VAC_CancelCreate_01_01_BEFORE_CREATE_ADD.png', '')
+    runner.step('captureEntirePageScreenshot', 'RECRUIT_VAC_CancelCreate_01_01_BEFORE_CREATE_ADD.png', '')
+    runner.step('click', 'xpath=//button[normalize-space()=\'Add\']', '')
+    runner.step('waitForElementPresent', 'xpath=//h6[normalize-space()=\'Add Vacancy\']', '')
+    runner.step('storeEval', '\'G01_23130299_\'+new Date().getTime()+\'_CANCEL\'', 'vacancyName')
+    runner.step('echo', 'FIXTURE ${vacancyName} / RECRUIT_VAC_CancelCreate_01', '')
+    runner.step('click', 'xpath=//label[normalize-space()=\'Job Title\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-text-input \')]', '')
+    runner.step('waitForElementPresent', 'xpath=//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-option \')][.//span[normalize-space()="QA Engineer"]]', '')
+    runner.step('click', 'xpath=//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-option \')][.//span[normalize-space()="QA Engineer"]]', '')
+    runner.step('assertText', 'xpath=//label[normalize-space()=\'Job Title\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-text-input \')]', 'QA Engineer')
+    runner.step('type', 'xpath=//label[normalize-space()=\'Vacancy Name\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//input', '${vacancyName}')
+    runner.step('type', 'xpath=//label[normalize-space()=\'Description\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//textarea', 'Unsaved cancel creation')
+    runner.vars['managerName'] = new recruitment.VacancyChecks(runner).chooseConfiguredManager()
+    runner.step('type', 'xpath=//label[normalize-space()=\'Number of Positions\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//input', '1')
+    runner.step('echo', 'SCREENSHOT_CHECKPOINT RECRUIT_VAC_CancelCreate_01_02_BEFORE_CANCEL_CREATE.png', '')
+    runner.step('captureEntirePageScreenshot', 'RECRUIT_VAC_CancelCreate_01_02_BEFORE_CANCEL_CREATE.png', '')
+    runner.step('click', 'xpath=//form[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-form \')]//button[normalize-space()=\'Cancel\']', '')
+    runner.step('waitForElementPresent', 'xpath=//h5[normalize-space()=\'Vacancies\']', '')
+    runner.step('click', 'xpath=//label[normalize-space()=\'Vacancy\']/ancestor::div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-input-group \')][1]//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-text-input \')]', '')
+    runner.step('assertElementNotPresent', 'xpath=//div[contains(concat(\' \',normalize-space(@class),\' \'),\' oxd-select-option \')][.//span[normalize-space()="${vacancyName}"]]', '')
+    runner.step('echo', 'CANCEL CREATE verified no item in Vacancy dropdown', '')
+    runner.step('echo', 'ASSERTIONS COMPLETED: RECRUIT_VAC_CancelCreate_01; inspect screenshot tab and keep own fixture ledger.', '')
+    runner.finished()
+} catch (Throwable t) {
+    runner.failed(t)
+    throw t
+}

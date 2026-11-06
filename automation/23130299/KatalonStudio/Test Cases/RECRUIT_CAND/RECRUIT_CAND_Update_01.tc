@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Sửa Keywords và Notes hồ sơ
+Expected (workbook): Keywords và Notes đúng giá trị mới; email và vacancy không đổi.</description>
+  <name>RECRUIT_CAND_Update_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A31:H31; selectors need live verification.</comment>
+  <testCaseGuid>c722c619-1d47-5c44-ba2e-d2f310000a7a</testCaseGuid>
+</TestCaseEntity>

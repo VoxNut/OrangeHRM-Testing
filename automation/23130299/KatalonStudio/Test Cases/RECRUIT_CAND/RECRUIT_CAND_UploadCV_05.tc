@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Hủy chọn CV trước lưu
+Expected (workbook): Không có CV của lần thao tác hủy trong hồ sơ mới; không phát sinh ứng viên lần đầu.</description>
+  <name>RECRUIT_CAND_UploadCV_05</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A25:H25; selectors need live verification.</comment>
+  <testCaseGuid>60c16af1-aca6-55b8-9fda-826e4d7bbe2e</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Tải lên CV PDF hợp lệ
+Expected (workbook): CV được đính kèm đúng tên và có thể mở/tải theo quyền của demo.</description>
+  <name>RECRUIT_CAND_UploadCV_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A21:H21; selectors need live verification.</comment>
+  <testCaseGuid>5ecfa3d4-f9cf-5e83-9d67-af042bc952a9</testCaseGuid>
+</TestCaseEntity>

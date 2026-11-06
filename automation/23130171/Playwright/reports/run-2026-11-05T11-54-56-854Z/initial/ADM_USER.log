@@ -1,0 +1,15 @@
+[Passed] ADM_USER_Create_02 - Test case thực hiện thành công.
+[Passed] ADM_USER_Create_03 - Test case thực hiện thành công.
+[Passed] ADM_USER_Create_05 - Test case thực hiện thành công.
+[Passed] ADM_USER_Username_01 - Test case thực hiện thành công.
+[Passed] ADM_USER_Username_04 - Test case thực hiện thành công.
+
+========== ADM_USER SUMMARY ==========
+Total   : 5
+Passed  : 5
+Failed  : 0
+Blocked : 0
+Skipped : 0
+Evidence: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-54-56-854Z_initial_ADM_USER
+======================================
+

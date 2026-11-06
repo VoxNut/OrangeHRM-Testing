@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Schedule Interview xuất hiện sau Shortlist
+Expected (workbook): Nút Schedule Interview khả dụng; mở được form lịch của đúng candidate.</description>
+  <name>RECRUIT_FLOW_ValidateAction_02</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A25:H25; selectors need live verification.</comment>
+  <testCaseGuid>9717807a-bb59-5ad0-b2d8-272bb496dae0</testCaseGuid>
+</TestCaseEntity>

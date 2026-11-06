@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Chọn nhiều interviewer
+Expected (workbook): Lưu đúng cả hai interviewer, không trùng; hiển thị đúng trên chi tiết.</description>
+  <name>RECRUIT_FLOW_SelectInterviewer_02</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A22:H22; selectors need live verification.</comment>
+  <testCaseGuid>ad8422cb-c418-5fbe-900e-8fc07449c45d</testCaseGuid>
+</TestCaseEntity>

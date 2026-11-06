@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Reset bộ lọc Candidates
+Expected (workbook): Hai filter về mặc định; danh sách trở lại trạng thái không lọc.</description>
+  <name>RECRUIT_CAND_Reset_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A30:H30; selectors need live verification.</comment>
+  <testCaseGuid>579444b1-b51f-5c23-9ffb-1438f2ff0b6f</testCaseGuid>
+</TestCaseEntity>

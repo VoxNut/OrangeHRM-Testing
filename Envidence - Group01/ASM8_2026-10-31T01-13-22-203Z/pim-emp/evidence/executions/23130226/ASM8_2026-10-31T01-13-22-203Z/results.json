@@ -1,0 +1,1772 @@
+{
+  "runId": "ASM8_2026-10-31T01-13-22-203Z",
+  "startedAt": "2026-10-31T01:13:23.962Z",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+  "tool": "Playwright",
+  "browser": "156.0.4314.50",
+  "fixtures": {
+    "G1N01D0001": {
+      "key": "213",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/213",
+      "id": "G1N01D0001"
+    },
+    "G1N01P0001": {
+      "key": "214",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/214",
+      "id": "G1N01P0001"
+    },
+    "G1N01F0001": {
+      "key": "215",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/215",
+      "id": "G1N01F0001"
+    },
+    "G1N01F0002": {
+      "key": "216",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/216",
+      "id": "G1N01F0002"
+    }
+  },
+  "created": [
+    {
+      "id": "G1N01D0001",
+      "key": "213",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/213"
+    },
+    {
+      "id": "G1N01P0001",
+      "key": "214",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/214"
+    },
+    {
+      "id": "G1N01F0001",
+      "key": "215",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/215"
+    },
+    {
+      "id": "G1N01F0002",
+      "key": "216",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/216"
+    },
+    {
+      "id": "G1N01A0001",
+      "key": "217",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/217"
+    },
+    {
+      "id": "G1N01A0002",
+      "key": "218",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/218"
+    },
+    {
+      "id": "G1N01A0006",
+      "key": "220",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/220"
+    },
+    {
+      "id": "G1N01A0008",
+      "key": "221",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/221"
+    },
+    {
+      "id": "G1N01A0010",
+      "key": "222",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/222"
+    },
+    {
+      "id": "G1N01A0012",
+      "key": "223",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/223"
+    },
+    {
+      "id": "G1N01A0016",
+      "key": "224",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/224"
+    },
+    {
+      "id": "G1N01A0017",
+      "key": "226",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/226"
+    }
+  ],
+  "results": [
+    {
+      "oldId": "TC_PIM_EMP_001",
+      "id": "PIM_EMP_Create_01",
+      "startedAt": "2026-10-31T01:14:24.563Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Employee List trả đúng 1 dòng | Đúng ID và tên nhân viên vừa tạo",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+        "Employee List trả đúng 1 dòng",
+        "Đúng ID và tên nhân viên vừa tạo"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_01-saved.png",
+        "screenshots/PIM_EMP_Create_01.png"
+      ],
+      "employeeKey": "217",
+      "durationMs": 15335,
+      "finishedAt": "2026-10-31T01:14:39.898Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:14:24.615Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/215"
+        },
+        {
+          "time": "2026-10-31T01:14:24.663Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/215/custom-fields?screen=job"
+        },
+        {
+          "time": "2026-10-31T01:14:24.832Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/215/screen/job/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:14:26.868Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:27.565Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0001&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:29.030Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:30.447Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:34.352Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:14:34.435Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:14:34.613Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:14:34.630Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217"
+        },
+        {
+          "time": "2026-10-31T01:14:35.065Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:36.963Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:14:37.076Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:14:37.155Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217"
+        },
+        {
+          "time": "2026-10-31T01:14:37.222Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/217/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:14:37.565Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:39.270Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:39.816Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0001&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_002",
+      "id": "PIM_EMP_Create_02",
+      "startedAt": "2026-10-31T01:14:39.900Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_02-saved.png",
+        "screenshots/PIM_EMP_Create_02.png"
+      ],
+      "employeeKey": "218",
+      "durationMs": 11994,
+      "finishedAt": "2026-10-31T01:14:51.894Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:14:41.429Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:42.032Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0002&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:43.348Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:44.742Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:48.628Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:14:48.682Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218"
+        },
+        {
+          "time": "2026-10-31T01:14:48.727Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:14:48.815Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:14:49.108Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:50.811Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218"
+        },
+        {
+          "time": "2026-10-31T01:14:50.857Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:14:50.901Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:14:50.953Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/218/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:14:51.369Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_003",
+      "id": "PIM_EMP_Create_03",
+      "startedAt": "2026-10-31T01:14:51.895Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Required",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_03-validation.png",
+        "screenshots/PIM_EMP_Create_03.png"
+      ],
+      "durationMs": 7180,
+      "finishedAt": "2026-10-31T01:14:59.075Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:14:53.312Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:54.023Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0003&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:55.371Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:14:58.265Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:14:58.997Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0003&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_004",
+      "id": "PIM_EMP_Create_04",
+      "startedAt": "2026-10-31T01:14:59.076Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Required",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_04-validation.png",
+        "screenshots/PIM_EMP_Create_04.png"
+      ],
+      "durationMs": 7454,
+      "finishedAt": "2026-10-31T01:15:06.530Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:00.453Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:01.122Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0004&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:02.572Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:05.786Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:06.433Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0004&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_005",
+      "id": "PIM_EMP_Create_05",
+      "startedAt": "2026-10-31T01:15:06.531Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Required | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Required",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_05-validation.png",
+        "screenshots/PIM_EMP_Create_05.png"
+      ],
+      "durationMs": 5989,
+      "finishedAt": "2026-10-31T01:15:12.520Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:08.100Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:08.626Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0005&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:09.965Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:11.707Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:12.438Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0005&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_006",
+      "id": "PIM_EMP_Create_06",
+      "startedAt": "2026-10-31T01:15:12.522Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_06-saved.png",
+        "screenshots/PIM_EMP_Create_06.png"
+      ],
+      "employeeKey": "220",
+      "durationMs": 12371,
+      "finishedAt": "2026-10-31T01:15:24.893Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:14.037Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:14.590Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0006&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:15.941Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:17.391Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:21.329Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:15:21.433Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:15:21.524Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:15:21.574Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220"
+        },
+        {
+          "time": "2026-10-31T01:15:21.990Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:23.782Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220"
+        },
+        {
+          "time": "2026-10-31T01:15:23.826Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:15:23.893Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:15:23.933Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/220/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:15:24.400Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_007",
+      "id": "PIM_EMP_Create_07",
+      "startedAt": "2026-10-31T01:15:24.894Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Should not exceed 30 characters",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_07-validation.png",
+        "screenshots/PIM_EMP_Create_07.png"
+      ],
+      "durationMs": 5935,
+      "finishedAt": "2026-10-31T01:15:30.829Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:26.567Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:27.171Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0007&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:28.495Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:30.197Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:30.742Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0007&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_008",
+      "id": "PIM_EMP_Create_08",
+      "startedAt": "2026-10-31T01:15:30.830Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_08-saved.png",
+        "screenshots/PIM_EMP_Create_08.png"
+      ],
+      "employeeKey": "221",
+      "durationMs": 12369,
+      "finishedAt": "2026-10-31T01:15:43.199Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:32.311Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:32.909Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0008&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:34.266Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:35.724Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:39.807Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:15:39.845Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221"
+        },
+        {
+          "time": "2026-10-31T01:15:39.888Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:15:39.927Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:15:40.346Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:42.141Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221"
+        },
+        {
+          "time": "2026-10-31T01:15:42.183Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:15:42.225Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:15:42.374Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/221/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:15:42.658Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_009",
+      "id": "PIM_EMP_Create_09",
+      "startedAt": "2026-10-31T01:15:43.200Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Should not exceed 30 characters",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_09-validation.png",
+        "screenshots/PIM_EMP_Create_09.png"
+      ],
+      "durationMs": 5798,
+      "finishedAt": "2026-10-31T01:15:48.998Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:44.723Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:45.300Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0009&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:46.646Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:48.423Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:48.924Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0009&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_010",
+      "id": "PIM_EMP_Create_10",
+      "startedAt": "2026-10-31T01:15:49.000Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_10-saved.png",
+        "screenshots/PIM_EMP_Create_10.png"
+      ],
+      "employeeKey": "222",
+      "durationMs": 12111,
+      "finishedAt": "2026-10-31T01:16:01.111Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:15:50.376Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:51.037Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0010&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:15:52.355Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:53.762Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:15:57.691Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:15:57.854Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:15:57.855Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222"
+        },
+        {
+          "time": "2026-10-31T01:15:57.887Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:15:58.361Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:00.078Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:00.117Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222"
+        },
+        {
+          "time": "2026-10-31T01:16:00.195Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:00.236Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/222/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:00.531Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_011",
+      "id": "PIM_EMP_Create_11",
+      "startedAt": "2026-10-31T01:16:01.112Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Should not exceed 30 characters | Không chuyển sang hồ sơ mới | Search xác nhận không có hồ sơ mang ID input sai",
+      "assertions": [
+        "Lỗi đúng trường: Should not exceed 30 characters",
+        "Không chuyển sang hồ sơ mới",
+        "Search xác nhận không có hồ sơ mang ID input sai"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_11-validation.png",
+        "screenshots/PIM_EMP_Create_11.png"
+      ],
+      "durationMs": 5728,
+      "finishedAt": "2026-10-31T01:16:06.840Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:02.568Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:03.236Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0011&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:04.577Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:06.248Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:06.746Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0011&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_012",
+      "id": "PIM_EMP_Create_12",
+      "startedAt": "2026-10-31T01:16:06.841Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_12-saved.png",
+        "screenshots/PIM_EMP_Create_12.png"
+      ],
+      "employeeKey": "223",
+      "durationMs": 12233,
+      "finishedAt": "2026-10-31T01:16:19.074Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:08.405Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:08.943Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0012&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:10.290Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:11.726Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:15.604Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:15.650Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:15.683Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223"
+        },
+        {
+          "time": "2026-10-31T01:16:15.798Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:16.278Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:17.970Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223"
+        },
+        {
+          "time": "2026-10-31T01:16:18.048Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:18.155Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:18.198Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/223/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:18.510Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_013",
+      "id": "PIM_EMP_Create_13",
+      "startedAt": "2026-10-31T01:16:19.075Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Should not exceed 10 characters | Không chuyển sang hồ sơ mới | Form chặn ID 11 ký tự; tìm prefix hợp lệ không có hồ sơ mới",
+      "assertions": [
+        "Lỗi đúng trường: Should not exceed 10 characters",
+        "Không chuyển sang hồ sơ mới",
+        "Form chặn ID 11 ký tự; tìm prefix hợp lệ không có hồ sơ mới"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_13-validation.png",
+        "screenshots/PIM_EMP_Create_13.png"
+      ],
+      "durationMs": 6931,
+      "finishedAt": "2026-10-31T01:16:26.006Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:20.437Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:21.128Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0013&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:22.497Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:25.402Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:25.924Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0013&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_014",
+      "id": "PIM_EMP_Create_14",
+      "startedAt": "2026-10-31T01:16:26.007Z",
+      "status": "Passed",
+      "actual": "Lỗi đúng trường: Employee Id already exists | Không chuyển sang hồ sơ mới | Chỉ còn một dòng F_DUP sau khi thử ID trùng | F_DUP không bị thay bằng tên nhập thử",
+      "assertions": [
+        "Lỗi đúng trường: Employee Id already exists",
+        "Không chuyển sang hồ sơ mới",
+        "Chỉ còn một dòng F_DUP sau khi thử ID trùng",
+        "F_DUP không bị thay bằng tên nhập thử"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Create_14-validation.png",
+        "screenshots/PIM_EMP_Create_14.png"
+      ],
+      "durationMs": 5131,
+      "finishedAt": "2026-10-31T01:16:31.138Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:27.336Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:30.468Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:31.023Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01D0001&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_015",
+      "id": "PIM_EMP_CancelCreate_01",
+      "startedAt": "2026-10-31T01:16:31.140Z",
+      "status": "Passed",
+      "actual": "Cancel quay về Employee List | Không có hồ sơ với ID vừa hủy",
+      "assertions": [
+        "Cancel quay về Employee List",
+        "Không có hồ sơ với ID vừa hủy"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_CancelCreate_01.png"
+      ],
+      "durationMs": 6183,
+      "finishedAt": "2026-10-31T01:16:37.323Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:32.513Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:33.206Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0015&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:34.552Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:36.700Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:37.246Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0015&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_016",
+      "id": "PIM_EMP_UploadPhoto_01",
+      "startedAt": "2026-10-31T01:16:37.324Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/224 | Ảnh profile tải được sau reload",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+        "Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/224",
+        "Ảnh profile tải được sau reload"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_UploadPhoto_01-saved.png",
+        "screenshots/PIM_EMP_UploadPhoto_01.png"
+      ],
+      "employeeKey": "224",
+      "durationMs": 12237,
+      "finishedAt": "2026-10-31T01:16:49.561Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:38.757Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:39.258Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0016&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:40.606Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:42.056Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:45.965Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224"
+        },
+        {
+          "time": "2026-10-31T01:16:46.009Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:46.086Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:46.160Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:46.532Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:48.254Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224"
+        },
+        {
+          "time": "2026-10-31T01:16:48.333Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:48.399Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:48.538Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/224/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:48.997Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_017",
+      "id": "PIM_EMP_UploadPhoto_02",
+      "startedAt": "2026-10-31T01:16:49.563Z",
+      "status": "Passed",
+      "actual": "Save và reload: First/Middle/Last/Employee Id khớp chính xác input | Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/226 | Ảnh profile tải được sau reload",
+      "assertions": [
+        "Save và reload: First/Middle/Last/Employee Id khớp chính xác input",
+        "Ảnh profile được lưu: /web/index.php/pim/viewPhoto/empNumber/226",
+        "Ảnh profile tải được sau reload"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_UploadPhoto_02-saved.png",
+        "screenshots/PIM_EMP_UploadPhoto_02.png"
+      ],
+      "employeeKey": "226",
+      "durationMs": 12648,
+      "finishedAt": "2026-10-31T01:17:02.211Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:16:50.980Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:51.642Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0017&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:16:53.026Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:54.577Z",
+          "status": 200,
+          "method": "POST",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:16:58.630Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:16:58.687Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:16:58.753Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:16:58.765Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226"
+        },
+        {
+          "time": "2026-10-31T01:16:59.206Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:17:01.049Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/custom-fields?screen=personal"
+        },
+        {
+          "time": "2026-10-31T01:17:01.089Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/screen/personal/attachments?limit=50&offset=0"
+        },
+        {
+          "time": "2026-10-31T01:17:01.129Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226"
+        },
+        {
+          "time": "2026-10-31T01:17:01.203Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees/226/personal-details"
+        },
+        {
+          "time": "2026-10-31T01:17:01.678Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_018",
+      "id": "PIM_EMP_UploadPhoto_03",
+      "startedAt": "2026-10-31T01:17:02.212Z",
+      "status": "Passed",
+      "actual": "Upload validation: File type not allowed | Save bị chặn ở Add Employee | Validation vẫn hiển thị sau Save | Không tạo hồ sơ và không lưu ảnh không hợp lệ",
+      "assertions": [
+        "Upload validation: File type not allowed",
+        "Save bị chặn ở Add Employee",
+        "Validation vẫn hiển thị sau Save",
+        "Không tạo hồ sơ và không lưu ảnh không hợp lệ"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_UploadPhoto_03-validation.png",
+        "screenshots/PIM_EMP_UploadPhoto_03.png"
+      ],
+      "durationMs": 5832,
+      "finishedAt": "2026-10-31T01:17:08.044Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:03.885Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:04.482Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0018&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:05.827Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:17:07.462Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:07.958Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0018&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_019",
+      "id": "PIM_EMP_UploadPhoto_04",
+      "startedAt": "2026-10-31T01:17:08.045Z",
+      "status": "Passed",
+      "actual": "Upload validation: Attachment Size Exceeded | Save bị chặn ở Add Employee | Validation vẫn hiển thị sau Save | Không tạo hồ sơ và không lưu ảnh không hợp lệ",
+      "assertions": [
+        "Upload validation: Attachment Size Exceeded",
+        "Save bị chặn ở Add Employee",
+        "Validation vẫn hiển thị sau Save",
+        "Không tạo hồ sơ và không lưu ảnh không hợp lệ"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_UploadPhoto_04-validation.png",
+        "screenshots/PIM_EMP_UploadPhoto_04.png"
+      ],
+      "durationMs": 5610,
+      "finishedAt": "2026-10-31T01:17:13.655Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:09.430Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:09.933Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0019&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:11.279Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees"
+        },
+        {
+          "time": "2026-10-31T01:17:13.054Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:13.560Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01A0019&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_020",
+      "id": "PIM_EMP_Search_01",
+      "startedAt": "2026-10-31T01:17:13.656Z",
+      "status": "Passed",
+      "actual": "Tìm theo Employee Id trả 1 dòng | ID kết quả khớp chính xác",
+      "assertions": [
+        "Tìm theo Employee Id trả 1 dòng",
+        "ID kết quả khớp chính xác"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Search_01.png"
+      ],
+      "durationMs": 2183,
+      "finishedAt": "2026-10-31T01:17:15.839Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:15.154Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:15.748Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01D0001&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_021",
+      "id": "PIM_EMP_Search_02",
+      "startedAt": "2026-10-31T01:17:15.841Z",
+      "status": "Blocked",
+      "actual": "TimeoutError: locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option').filter({ hasText: /G01N01\\s+Minh\\s+NhutPerson/ }) to be visible\u001b[22m\n",
+      "assertions": [],
+      "screenshots": [
+        "screenshots/PIM_EMP_Search_02.png"
+      ],
+      "error": {
+        "name": "TimeoutError",
+        "message": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option').filter({ hasText: /G01N01\\s+Minh\\s+NhutPerson/ }) to be visible\u001b[22m\n",
+        "stack": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('option').filter({ hasText: /G01N01\\s+Minh\\s+NhutPerson/ }) to be visible\u001b[22m\n\n    at D:\\My WorkSpace\\OrangeHRM-Testing\\automation\\23130226\\Playwright\\run-pim.mjs:82:225\n    at async caseRun (D:\\My WorkSpace\\OrangeHRM-Testing\\automation\\23130226\\Playwright\\run-pim.mjs:36:6)\n    at async file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:60:115"
+      },
+      "durationMs": 21776,
+      "finishedAt": "2026-10-31T01:17:37.617Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:17.389Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:18.655Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?nameOrId=G01N01&includeEmployees=onlyCurrent"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_022",
+      "id": "PIM_EMP_Search_03",
+      "startedAt": "2026-10-31T01:17:37.618Z",
+      "status": "Passed",
+      "actual": "ID không tồn tại hiển thị No Records Found và bảng không có dòng",
+      "assertions": [
+        "ID không tồn tại hiển thị No Records Found và bảng không có dòng"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Search_03.png"
+      ],
+      "durationMs": 2215,
+      "finishedAt": "2026-10-31T01:17:39.833Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:39.180Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:39.747Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01NONE1&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_023",
+      "id": "PIM_EMP_Filter_01",
+      "startedAt": "2026-10-31T01:17:39.835Z",
+      "status": "Passed",
+      "actual": "Có positive control F_FILTER | Không có negative control F_FILTER_NEG | Mọi dòng khớp đồng thời Job Title và Employment Status | Đã kiểm tra toàn bộ 1 dòng kết quả",
+      "assertions": [
+        "Có positive control F_FILTER",
+        "Không có negative control F_FILTER_NEG",
+        "Mọi dòng khớp đồng thời Job Title và Employment Status",
+        "Đã kiểm tra toàn bộ 1 dòng kết quả"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Filter_01.png"
+      ],
+      "durationMs": 2363,
+      "finishedAt": "2026-10-31T01:17:42.198Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:41.233Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:42.104Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&empStatusId=1&includeEmployees=onlyCurrent&jobTitleId=31&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_024",
+      "id": "PIM_EMP_Reset_01",
+      "startedAt": "2026-10-31T01:17:42.200Z",
+      "status": "Passed",
+      "actual": "Reset xóa Employee Id | Employment Status về mặc định | Search mới không giữ bộ lọc ID/status trước đó",
+      "assertions": [
+        "Reset xóa Employee Id",
+        "Employment Status về mặc định",
+        "Search mới không giữ bộ lọc ID/status trước đó"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Reset_01.png"
+      ],
+      "durationMs": 2938,
+      "finishedAt": "2026-10-31T01:17:45.138Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:43.552Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:44.360Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&employeeId=G1N01D0001&empStatusId=1&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:44.913Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:45.130Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    },
+    {
+      "oldId": "TC_PIM_EMP_025",
+      "id": "PIM_EMP_Sort_01",
+      "startedAt": "2026-10-31T01:17:45.140Z",
+      "status": "Failed",
+      "actual": "AssertionError: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '123445',\n+   '99n75',\n    '<b>x</b>',\n    '<i>qa</i>',\n-   '123445',\n-   '99n75',\n    'a8dco',\n    'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n",
+      "assertions": [
+        "Có ít nhất 2 tên để đối chiếu"
+      ],
+      "screenshots": [
+        "screenshots/PIM_EMP_Sort_01.png"
+      ],
+      "error": {
+        "name": "AssertionError",
+        "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '123445',\n+   '99n75',\n    '<b>x</b>',\n    '<i>qa</i>',\n-   '123445',\n-   '99n75',\n    'a8dco',\n    'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n",
+        "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   '123445',\n+   '99n75',\n    '<b>x</b>',\n    '<i>qa</i>',\n-   '123445',\n-   '99n75',\n    'a8dco',\n    'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n    'abcdefghijklmnopqrstuvwxyzabcd',\n\n    at file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:87:973\n    at async caseRun (file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:36:6)\n    at async file:///D:/My%20WorkSpace/OrangeHRM-Testing/automation/23130226/Playwright/run-pim.mjs:60:115"
+      },
+      "durationMs": 2557,
+      "finishedAt": "2026-10-31T01:17:47.697Z",
+      "network": [
+        {
+          "time": "2026-10-31T01:17:46.574Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        },
+        {
+          "time": "2026-10-31T01:17:47.332Z",
+          "status": 200,
+          "method": "GET",
+          "url": "/web/index.php/api/v2/pim/employees?limit=50&offset=0&model=detailed&includeEmployees=onlyCurrent&sortField=employee.firstName&sortOrder=ASC"
+        }
+      ]
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "G1N01D0001",
+      "key": "213",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01P0001",
+      "key": "214",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01F0001",
+      "key": "215",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01F0002",
+      "key": "216",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0001",
+      "key": "217",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0002",
+      "key": "218",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0006",
+      "key": "220",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0008",
+      "key": "221",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0010",
+      "key": "222",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0012",
+      "key": "223",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0016",
+      "key": "224",
+      "status": "Deleted"
+    },
+    {
+      "id": "G1N01A0017",
+      "key": "226",
+      "status": "Deleted"
+    }
+  ],
+  "setupErrors": [],
+  "assets": {
+    "jpg": 523,
+    "png": 1087,
+    "pdf": 583,
+    "large": 1048577
+  },
+  "catalog": {
+    "title": "<b>x</b> swarmm4",
+    "status": "Freelance"
+  },
+  "finishedAt": "2026-10-31T01:19:51.915Z",
+  "summary": {
+    "Passed": 23,
+    "Failed": 1,
+    "Blocked": 1,
+    "Untested": 0
+  }
+}

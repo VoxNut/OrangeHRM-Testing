@@ -1,0 +1,527 @@
+[
+  {
+    "id": "PIM_EMP_Create_01",
+    "module": "PIM_EMP",
+    "title": "Tạo nhân viên với các trường bắt buộc",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle để trống; Last=NhutA001; ID=G1N01A0001\n1. Vào PIM > Add Employee.\n2. Nhập dữ liệu. Giữ Create Login Details tắt.\n3. Save. Ghi employee key trên URL.\n4. Về Employee List, tìm đúng Employee Id.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Mở hồ sơ nhân viên vừa tạo. Danh sách có đúng nhân viên G01N01 NhutA001 với ID đã nhập."
+  },
+  {
+    "id": "PIM_EMP_Create_02",
+    "module": "PIM_EMP",
+    "title": "Tạo nhân viên có đủ họ, tên đệm và tên",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle=Minh; Last=NhutA002; ID=G1N01A0002\n1. Mở Add Employee.\n2. Nhập đủ ba thành phần tên và ID.\n3. Save. Mở lại Personal Details theo employee key.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Ba ô tên giữ đúng G01N01, Minh, NhutA002 sau tải lại. ID đúng G1N01A0002."
+  },
+  {
+    "id": "PIM_EMP_Create_03",
+    "module": "PIM_EMP",
+    "title": "Bỏ trống First Name",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First rỗng; Last=NhutA003; ID=G1N01A0003\n1. Mở Add Employee.\n2. Xóa First Name, nhập Last và ID.\n3. Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "First Name hiển thị Required. Không chuyển sang hồ sơ mới và không tạo nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_04",
+    "module": "PIM_EMP",
+    "title": "Bỏ trống Last Name",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Last rỗng; ID=G1N01A0004\n1. Mở Add Employee.\n2. Nhập First và ID, để Last trống.\n3. Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Last Name hiển thị Required. Không tạo nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_05",
+    "module": "PIM_EMP",
+    "title": "First Name chỉ có dấu cách",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=\"   \" (3 dấu cách); Last=NhutA005; ID=G1N01A0005\n1. Mở Add Employee.\n2. Nhập đúng ba dấu cách vào First, nhập Last và ID.\n3. Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "First Name bị từ chối do chỉ có khoảng trắng. Không tạo nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_06",
+    "module": "PIM_EMP",
+    "title": "First Name dài 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; Middle=Minh; Last=NhutA006; ID=G1N01A0006. First=30 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Save, mở lại hồ sơ và đối chiếu đủ số ký tự.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "First Name được lưu nguyên đủ 30 ký tự. Tạo đúng một nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_07",
+    "module": "PIM_EMP",
+    "title": "First Name dài 31 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; Middle=Minh; Last=NhutA007; ID=G1N01A0007. First=31 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Rời ô tên rồi Save; quan sát lỗi giới hạn. Tải lại form không lưu để kiểm tra không tạo hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Có lỗi giới hạn 30 ký tự tại First Name. Không lưu giá trị 31 ký tự. Nếu UI chặn ký tự thứ 31, xác nhận maxlength và không coi là đã lưu chuỗi 31 ký tự."
+  },
+  {
+    "id": "PIM_EMP_Create_08",
+    "module": "PIM_EMP",
+    "title": "Last Name dài 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle=Minh; Last=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; ID=G1N01A0008. Last=30 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Save, mở lại hồ sơ và đối chiếu đủ số ký tự.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Last Name được lưu nguyên đủ 30 ký tự. Tạo đúng một nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_09",
+    "module": "PIM_EMP",
+    "title": "Last Name dài 31 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle=Minh; Last=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; ID=G1N01A0009. Last=31 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Rời ô tên rồi Save; quan sát lỗi giới hạn. Tải lại form không lưu để kiểm tra không tạo hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Có lỗi giới hạn 30 ký tự tại Last Name. Không lưu giá trị 31 ký tự. Nếu UI chặn ký tự thứ 31, xác nhận maxlength và không coi là đã lưu chuỗi 31 ký tự."
+  },
+  {
+    "id": "PIM_EMP_Create_10",
+    "module": "PIM_EMP",
+    "title": "Middle Name dài 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; Last=NhutA010; ID=G1N01A0010. Middle=30 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Save, mở lại hồ sơ và đối chiếu đủ số ký tự.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Middle Name được lưu nguyên đủ 30 ký tự. Tạo đúng một nhân viên."
+  },
+  {
+    "id": "PIM_EMP_Create_11",
+    "module": "PIM_EMP",
+    "title": "Middle Name dài 31 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Middle=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA; Last=NhutA011; ID=G1N01A0011. Middle=31 ký tự.\n1. Mở Add Employee.\n2. Nhập chuỗi đúng độ dài trong Test Data, điền các trường còn lại hợp lệ.\n3. Rời ô tên rồi Save; quan sát lỗi giới hạn. Tải lại form không lưu để kiểm tra không tạo hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Có lỗi giới hạn 30 ký tự tại Middle Name. Không lưu giá trị 31 ký tự. Nếu UI chặn ký tự thứ 31, xác nhận maxlength và không coi là đã lưu chuỗi 31 ký tự."
+  },
+  {
+    "id": "PIM_EMP_Create_12",
+    "module": "PIM_EMP",
+    "title": "Employee Id đúng giới hạn 10 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: ID=G1N01A0012 (10 ký tự, chưa tồn tại); First=G01N01; Last=NhutA012\n1. Mở Add Employee.\n2. Nhập tên và ID 10 ký tự.\n3. Save. Mở lại hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "ID giữ nguyên G1N01A0012, không cắt ngắn hoặc đổi."
+  },
+  {
+    "id": "PIM_EMP_Create_13",
+    "module": "PIM_EMP",
+    "title": "Employee Id vượt giới hạn 10 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: ID=G1N01A0013X (11 ký tự); First=G01N01; Middle=Minh; Last=NhutA013\n1. Mở Add Employee.\n2. Nhập ID 11 ký tự và First=G01N01; Middle=Minh; Last=NhutA013.\n3. Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Có lỗi giới hạn 10 ký tự. Không lưu ID 11 ký tự. Nếu UI giới hạn nhập, ghi rõ giá trị thực nhập."
+  },
+  {
+    "id": "PIM_EMP_Create_14",
+    "module": "PIM_EMP",
+    "title": "Employee Id trùng nhân viên hiện có",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. F_DUP (G1N01D0001) đã tạo trong setup.\nInput: ID=G1N01D0001 của F_DUP; First=G01N01; Last=NhutDuplicateAttempt\n1. Xác nhận F_DUP đã tồn tại.\n2. Mở Add Employee, nhập ID trùng và tên khác.\n3. Rời ô ID để kích hoạt kiểm tra, rồi Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Thông báo ID đã tồn tại. Không tạo thêm nhân viên sử dụng ID của F_DUP."
+  },
+  {
+    "id": "PIM_EMP_CancelCreate_01",
+    "module": "PIM_EMP",
+    "title": "Hủy tạo nhân viên chưa lưu",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại.\nInput: First=G01N01; Last=NhutCancel; ID=G1N01A0015\n1. Mở Add Employee, điền dữ liệu nhưng không Save.\n2. Bấm Cancel.\n3. Tìm ID vừa nhập trong Employee List.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Quay về Employee List. Không có nhân viên mới với ID G1N01A0015."
+  },
+  {
+    "id": "PIM_EMP_UploadPhoto_01",
+    "module": "PIM_EMP",
+    "title": "Tạo nhân viên kèm ảnh JPG hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại. Tệp thử đúng định dạng/dung lượng trong Test Data đã chuẩn bị.\nInput: photo_valid.jpg, 200×200 px, >0 và <1 MiB; ID=G1N01A0016; First=G01N01; Middle=Minh; Last=NhutA016\n1. Mở Add Employee.\n2. Chọn ảnh đúng định dạng; nhập tên và ID.\n3. Save, mở lại hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Ảnh được chấp nhận, hồ sơ tạo thành công và hiển thị ảnh đã tải lên."
+  },
+  {
+    "id": "PIM_EMP_UploadPhoto_02",
+    "module": "PIM_EMP",
+    "title": "Tạo nhân viên kèm ảnh PNG hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại. Tệp thử đúng định dạng/dung lượng trong Test Data đã chuẩn bị.\nInput: photo_valid.png, 200×200 px, >0 và <1 MiB; ID=G1N01A0017; First=G01N01; Middle=Minh; Last=NhutA017\n1. Mở Add Employee.\n2. Chọn ảnh đúng định dạng; nhập tên và ID.\n3. Save, mở lại hồ sơ.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Ảnh được chấp nhận, hồ sơ tạo thành công và hiển thị ảnh đã tải lên."
+  },
+  {
+    "id": "PIM_EMP_UploadPhoto_03",
+    "module": "PIM_EMP",
+    "title": "Từ chối tệp không phải ảnh đại diện",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại. Tệp thử đúng định dạng/dung lượng trong Test Data đã chuẩn bị.\nInput: photo_invalid.pdf (PDF thực, không đổi đuôi); First=G01N01; Middle=Minh; Last=NhutA018; ID=G1N01A0018\n1. Mở Add Employee.\n2. Chọn tệp PDF tại ô ảnh đại diện.\n3. Quan sát lỗi trước khi Save.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Hiển thị lỗi loại tệp. Không thay ảnh đại diện bằng PDF."
+  },
+  {
+    "id": "PIM_EMP_UploadPhoto_04",
+    "module": "PIM_EMP",
+    "title": "Từ chối ảnh đại diện vượt 1 MiB",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM. Create Login Details tắt. Employee Id dùng cho hồ sơ mới chưa tồn tại. Tệp thử đúng định dạng/dung lượng trong Test Data đã chuẩn bị.\nInput: photo_over_1m.png, PNG hợp lệ, 1.048.577 byte\n1. Xác nhận dung lượng tệp.\n2. Mở Add Employee, chọn ảnh quá cỡ.\n3. Quan sát thông báo validation.\nDọn dẹp: bỏ thay đổi chưa lưu. Nếu tạo thành công, chỉ xóa nhân viên của case này sau khi giữ bằng chứng; không xóa fixture dùng chung.",
+    "expected": "Hiển thị lỗi dung lượng tối đa 1 MiB. Ảnh quá cỡ không được chấp nhận."
+  },
+  {
+    "id": "PIM_EMP_Search_01",
+    "module": "PIM_EMP",
+    "title": "Tìm nhân viên theo Employee Id",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. F_DUP (G1N01D0001) đã tạo trong setup.\nInput: Employee Id=G1N01D0001 (F_DUP)\n1. Vào Employee List, bấm Reset.\n2. Nhập Employee Id, bấm Search.\n3. Đối chiếu mọi dòng kết quả.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Có F_DUP với đúng Employee Id đã nhập. Không có nhân viên mang ID khác trong tập kết quả."
+  },
+  {
+    "id": "PIM_EMP_Search_02",
+    "module": "PIM_EMP",
+    "title": "Tìm nhân viên bằng autocomplete tên",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. F_PERSON (G1N01P0001) đã tạo trong setup.\nInput: Employee Name: chọn chính xác G01N01 Minh NhutPerson (F_PERSON)\n1. Vào Employee List, Reset.\n2. Nhập G01N01 vào Employee Name; đợi gợi ý.\n3. Chọn đúng F_PERSON trong gợi ý, bấm Search.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Hiển thị nhân viên đã chọn với Employee Id G1N01P0001."
+  },
+  {
+    "id": "PIM_EMP_Search_03",
+    "module": "PIM_EMP",
+    "title": "Tìm Employee Id không tồn tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List.\nInput: Employee Id=G1N01NONE1 (10 ký tự, xác nhận chưa tồn tại)\n1. Vào Employee List, Reset.\n2. Nhập ID không tồn tại, Search.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Hiển thị trạng thái không có bản ghi. Không hiển thị dòng nhân viên cũ."
+  },
+  {
+    "id": "PIM_EMP_Filter_01",
+    "module": "PIM_EMP",
+    "title": "Lọc kết hợp Employment Status và Job Title",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. Hai fixture F_FILTER/F_FILTER_NEG đã chuẩn bị theo Test Data; ghi nhãn TITLE_A và STATUS_A trước run.\nInput: STATUS_A và TITLE_A của F_FILTER; F_FILTER_NEG khác ít nhất một tiêu chí\n1. Vào Employee List, Reset.\n2. Chọn STATUS_A và TITLE_A theo Test Data, Search.\n3. Kiểm tra toàn bộ trang kết quả; mở các trang kế tiếp nếu có.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Có F_FILTER. Mọi kết quả đồng thời thỏa hai tiêu chí. Không có F_FILTER_NEG."
+  },
+  {
+    "id": "PIM_EMP_Reset_01",
+    "module": "PIM_EMP",
+    "title": "Reset xóa bộ lọc đã nhập",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. F_DUP (G1N01D0001) đã tạo trong setup. STATUS_A là nhãn hợp lệ đã ghi trước run.\nInput: Employee Id=G1N01D0001; Employment Status=STATUS_A\n1. Vào Employee List.\n2. Điền ID và chọn status; bấm Search.\n3. Bấm Reset và quan sát các ô lọc.\n4. Bấm Search theo điều kiện mặc định.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Employee Id rỗng, status về mặc định. Search không còn bị giới hạn bởi ID và status trước đó."
+  },
+  {
+    "id": "PIM_EMP_Sort_01",
+    "module": "PIM_EMP",
+    "title": "Sắp xếp danh sách theo First Name",
+    "input": "Tiền điều kiện: Admin đã đăng nhập; vào PIM > Employee List. Có ít nhất hai nhân viên tên khác nhau; ghi tổng số bản ghi trước sắp xếp.\nInput: Ít nhất hai nhân viên có First Name khác nhau trong tập kết quả\n1. Vào Employee List, Reset rồi Search.\n2. Bấm sắp xếp First (& Middle) Name tăng dần.\n3. Đối chiếu chuỗi tên tại trang hiện tại; đổi sang giảm dần và kiểm tra lại.\nDọn dẹp: bấm Reset để trả bộ lọc về mặc định; giữ các fixture cho case khác.",
+    "expected": "Tên trên trang hiện tại được sắp xếp đúng chiều tăng/giảm đã chọn theo quy tắc giao diện. Tổng số bản ghi không đổi; không có lỗi tải bảng khi đổi chiều."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_01",
+    "module": "PIM_PERSONAL",
+    "title": "Cập nhật đầy đủ ba thành phần tên",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: F_PERSON; First=G01N01; Middle=Minh; Last=NhutUpdated\n1. Mở Personal Details của F_PERSON theo employee key.\n2. Nhập đủ ba thành phần tên.\n3. Save của khối Personal Details, tải lại trang.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Ba trường giữ đúng giá trị mới sau tải lại. Đúng employee key, không sửa nhân viên khác."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_02",
+    "module": "PIM_PERSONAL",
+    "title": "First Name bắt buộc",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: First Name rỗng; các trường còn lại giữ dữ liệu gốc\n1. Mở Personal Details F_PERSON.\n2. Xóa trường cần kiểm tra.\n3. Save; sau quan sát, tải lại không lưu để khôi phục.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "First Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_03",
+    "module": "PIM_PERSONAL",
+    "title": "Last Name bắt buộc",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Last Name rỗng; các trường còn lại giữ dữ liệu gốc\n1. Mở Personal Details F_PERSON.\n2. Xóa trường cần kiểm tra.\n3. Save; sau quan sát, tải lại không lưu để khôi phục.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Last Name hiển thị Required. Không lưu tên rỗng; giá trị cũ còn nguyên sau tải lại."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_04",
+    "module": "PIM_PERSONAL",
+    "title": "First Name đúng giới hạn 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: First=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (30 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Thay First bằng chuỗi 30 ký tự.\n3. Save, tải lại và đếm ký tự.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu nguyên 30 ký tự và không có lỗi giới hạn."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_05",
+    "module": "PIM_PERSONAL",
+    "title": "First Name vượt giới hạn 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: First=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (31 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập chuỗi 31 ký tự vào trường cần kiểm tra.\n3. Save. Tải lại không lưu để kiểm tra dữ liệu gốc.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_06",
+    "module": "PIM_PERSONAL",
+    "title": "Middle Name vượt giới hạn 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Middle=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (31 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập chuỗi 31 ký tự vào trường cần kiểm tra.\n3. Save. Tải lại không lưu để kiểm tra dữ liệu gốc.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_07",
+    "module": "PIM_PERSONAL",
+    "title": "Last Name vượt giới hạn 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Last=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (31 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập chuỗi 31 ký tự vào trường cần kiểm tra.\n3. Save. Tải lại không lưu để kiểm tra dữ liệu gốc.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 30 ký tự; không lưu chuỗi vượt giới hạn. Nếu UI chặn nhập, ghi rõ giới hạn thực tế."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_08",
+    "module": "PIM_PERSONAL",
+    "title": "Employee Id dài 10 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Employee Id=G1N01P0010; ID chưa dùng\n1. Mở Personal Details F_PERSON bằng employee key, ghi ID cũ.\n2. Thay Employee Id rồi Save.\n3. Tải lại, kiểm tra giá trị và khôi phục ID gốc.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "ID mới 10 ký tự được lưu nguyên và hồ sơ vẫn là F_PERSON."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_09",
+    "module": "PIM_PERSONAL",
+    "title": "Employee Id dài 11 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Employee Id=G1N01P0010X; ID chưa dùng\n1. Mở Personal Details F_PERSON bằng employee key, ghi ID cũ.\n2. Thay Employee Id rồi Save.\n3. Tải lại, kiểm tra giá trị và khôi phục ID gốc.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 10 ký tự, không lưu ID 11 ký tự."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_10",
+    "module": "PIM_PERSONAL",
+    "title": "Other Id dài 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Other Id=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB (30 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập đúng chuỗi vào trường chỉ định.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_11",
+    "module": "PIM_PERSONAL",
+    "title": "Other Id dài 31 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Other Id=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB (31 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập đúng chuỗi vào trường chỉ định.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_12",
+    "module": "PIM_PERSONAL",
+    "title": "Driver's License Number dài 30 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Driver's License Number=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB (30 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập đúng chuỗi vào trường chỉ định.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu nguyên 30 ký tự, không có lỗi giới hạn."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_13",
+    "module": "PIM_PERSONAL",
+    "title": "Driver's License Number dài 31 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Driver's License Number=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB (31 ký tự)\n1. Mở Personal Details F_PERSON.\n2. Nhập đúng chuỗi vào trường chỉ định.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 30 ký tự. Giá trị vượt giới hạn không được lưu."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_14",
+    "module": "PIM_PERSONAL",
+    "title": "Date of Birth là ngày nhuận hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Ngày 29/02/2000; nhập theo định dạng đang hiển thị trên UI\n1. Mở Personal Details F_PERSON.\n2. Nhập ngày sinh nhuận.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu đúng ngày 29/02/2000. Không có lỗi định dạng ngày."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_15",
+    "module": "PIM_PERSONAL",
+    "title": "Date of Birth là ngày không tồn tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Ngày 30/02/2000; dùng thứ tự ngày-tháng-năm của UI\n1. Mở Personal Details F_PERSON.\n2. Nhập ngày không tồn tại.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Hiển thị lỗi ngày/định dạng; không lưu ngày 30/02/2000."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_16",
+    "module": "PIM_PERSONAL",
+    "title": "License Expiry Date hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Ngày 31/12/2030; theo định dạng UI\n1. Mở Personal Details F_PERSON.\n2. Nhập License Expiry Date.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu đúng ngày 31/12/2030, không có lỗi định dạng."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_17",
+    "module": "PIM_PERSONAL",
+    "title": "License Expiry Date không hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Ngày 31/04/2030; theo định dạng UI\n1. Mở Personal Details F_PERSON.\n2. Nhập ngày không tồn tại.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Hiển thị lỗi ngày/định dạng và không lưu ngày không tồn tại."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_18",
+    "module": "PIM_PERSONAL",
+    "title": "Thay đổi Nationality",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: NATIONALITY_A: lựa chọn hợp lệ đầu tiên khác giá trị gốc; ghi nhãn trước run\n1. Mở Personal Details F_PERSON.\n2. Chọn NATIONALITY_A, Save.\n3. Tải lại trang.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Nationality giữ đúng nhãn đã chọn sau tải lại."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_19",
+    "module": "PIM_PERSONAL",
+    "title": "Thay đổi Marital Status",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Marital Status=Married (nếu ban đầu Married thì chọn Single và ghi lại)\n1. Mở Personal Details F_PERSON.\n2. Chọn trạng thái hôn nhân khác giá trị gốc.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Trạng thái hôn nhân được lưu đúng lựa chọn đã ghi trong run."
+  },
+  {
+    "id": "PIM_PERSONAL_Update_20",
+    "module": "PIM_PERSONAL",
+    "title": "Thay đổi Gender",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Gender=Female; nếu dữ liệu gốc Female thì chọn Male\n1. Mở Personal Details F_PERSON.\n2. Chọn radio Gender khác giá trị gốc.\n3. Save và tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Chỉ radio đã chọn được đánh dấu. Giá trị giữ đúng sau tải lại."
+  },
+  {
+    "id": "PIM_PERSONAL_CreateAttachment_01",
+    "module": "PIM_PERSONAL",
+    "title": "Thêm attachment hợp lệ vào Personal Details",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: attachment_valid.pdf, <1 MiB; Description=G01N01 Personal attachment\n1. Mở F_PERSON > Personal Details > Attachments.\n2. Bấm Add tại Attachments, chọn PDF và nhập mô tả.\n3. Save, tải lại trang, kiểm tra dòng và mở/download tệp.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có đúng một dòng tệp mới với tên và mô tả đã nhập. Tệp tải về đọc được."
+  },
+  {
+    "id": "PIM_PERSONAL_CreateAttachment_02",
+    "module": "PIM_PERSONAL",
+    "title": "Không chọn file khi thêm attachment",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: File rỗng; Description=G01N01 No file\n1. Mở Attachments của Personal Details F_PERSON.\n2. Bấm Add, không chọn file, nhập mô tả.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Trường file hiển thị Required. Không xuất hiện dòng attachment mới."
+  },
+  {
+    "id": "PIM_PERSONAL_CreateAttachment_03",
+    "module": "PIM_PERSONAL",
+    "title": "Mô tả attachment đúng 200 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: attachment_valid.pdf; Description=DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (200 ký tự)\n1. Mở Attachments F_PERSON, bấm Add.\n2. Chọn PDF và nhập mô tả đúng 200 ký tự.\n3. Save, mở Edit tệp vừa thêm.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Attachment được lưu. Mô tả có đủ 200 ký tự, không bị cắt."
+  },
+  {
+    "id": "PIM_PERSONAL_CreateAttachment_04",
+    "module": "PIM_PERSONAL",
+    "title": "Mô tả attachment vượt 200 ký tự",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: attachment_valid.pdf; Description=DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD (201 ký tự)\n1. Mở Add Attachment F_PERSON.\n2. Chọn PDF, nhập mô tả 201 ký tự.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi giới hạn 200 ký tự. Không lưu mô tả vượt giới hạn."
+  },
+  {
+    "id": "PIM_PERSONAL_DeleteAttachment_01",
+    "module": "PIM_PERSONAL",
+    "title": "Hủy rồi xác nhận xóa attachment của nhóm",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_PERSON tồn tại và có dữ liệu gốc để khôi phục.\nInput: Attachment F_PERSON có mô tả G01N01 Personal attachment đã tạo trong setup\n1. Chụp/ghi tên tệp đích. Bấm Delete trên đúng dòng.\n2. Bấm Cancel/No ở xác nhận. Kiểm tra tệp còn tồn tại.\n3. Xóa lại, xác nhận Yes. Tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Sau Cancel, tệp vẫn có. Sau xác nhận xóa, đúng tệp đích biến mất và các tệp khác không thay đổi."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_01",
+    "module": "PIM_JOB",
+    "title": "Lưu Joined Date hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: F_JOB; Joined Date=01/10/2024 theo định dạng UI\n1. Mở F_JOB > Job.\n2. Nhập Joined Date hợp lệ.\n3. Save của khối Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Joined Date được lưu đúng ngày 01/10/2024."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_02",
+    "module": "PIM_JOB",
+    "title": "Joined Date không tồn tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Joined Date=31/02/2024 theo định dạng UI\n1. Mở Job F_JOB.\n2. Nhập ngày không tồn tại.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi ngày/định dạng. Không lưu ngày 31/02/2024."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_03",
+    "module": "PIM_JOB",
+    "title": "Thay đổi Job Title",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Job Title=TITLE_A: chọn giá trị hợp lệ khác giá trị cũ, ghi nhãn trước run\n1. Mở Job F_JOB, ghi giá trị gốc.\n2. Chọn giá trị đã thống nhất trong Test Data.\n3. Save của Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Job Title giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_04",
+    "module": "PIM_JOB",
+    "title": "Thay đổi Job Category",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Job Category=CATEGORY_A: chọn giá trị hợp lệ khác giá trị cũ, ghi nhãn trước run\n1. Mở Job F_JOB, ghi giá trị gốc.\n2. Chọn giá trị đã thống nhất trong Test Data.\n3. Save của Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Job Category giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_05",
+    "module": "PIM_JOB",
+    "title": "Thay đổi Sub Unit",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Sub Unit=SUBUNIT_A: chọn giá trị hợp lệ khác giá trị cũ, ghi nhãn trước run\n1. Mở Job F_JOB, ghi giá trị gốc.\n2. Chọn giá trị đã thống nhất trong Test Data.\n3. Save của Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Sub Unit giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_06",
+    "module": "PIM_JOB",
+    "title": "Thay đổi Location",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Location=LOCATION_A: chọn giá trị hợp lệ khác giá trị cũ, ghi nhãn trước run\n1. Mở Job F_JOB, ghi giá trị gốc.\n2. Chọn giá trị đã thống nhất trong Test Data.\n3. Save của Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Location giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_07",
+    "module": "PIM_JOB",
+    "title": "Thay đổi Employment Status",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Employment Status=STATUS_A: chọn giá trị hợp lệ khác giá trị cũ, ghi nhãn trước run\n1. Mở Job F_JOB, ghi giá trị gốc.\n2. Chọn giá trị đã thống nhất trong Test Data.\n3. Save của Job, tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Employment Status giữ đúng nhãn đã chọn sau tải lại; không thay đổi nhân viên khác."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_08",
+    "module": "PIM_JOB",
+    "title": "Lưu đồng thời các trường Job Details",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Joined=01/10/2024; TITLE_A; CATEGORY_A; SUBUNIT_A; LOCATION_A; STATUS_A\n1. Mở Job F_JOB.\n2. Nhập ngày và chọn đủ 5 danh mục theo Test Data.\n3. Save, chuyển tab Personal Details rồi quay lại Job.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Ngày và toàn bộ 5 danh mục đều giữ đúng giá trị đã lưu trên F_JOB."
+  },
+  {
+    "id": "PIM_JOB_UpdateJob_09",
+    "module": "PIM_JOB",
+    "title": "Xóa Joined Date tùy chọn",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Joined Date rỗng; các danh mục giữ dữ liệu gốc\n1. Mở Job F_JOB có Joined Date.\n2. Xóa ngày, Save.\n3. Tải lại.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có thể lưu Joined Date rỗng. Không tự gán ngày khác."
+  },
+  {
+    "id": "PIM_JOB_ToggleContract_01",
+    "module": "PIM_JOB",
+    "title": "Bật hiển thị Employment Contract Details",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Include Employment Contract Details đang tắt\n1. Mở Job F_JOB.\n2. Bật Include Employment Contract Details.\n3. Quan sát phần mở rộng, không Save thay đổi.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Hiển thị Start Date, End Date và vùng Contract Details/upload. Không coi thao tác bật là bằng chứng đã lưu hợp đồng."
+  },
+  {
+    "id": "PIM_JOB_ToggleContract_02",
+    "module": "PIM_JOB",
+    "title": "Tắt phần mở rộng hợp đồng không xóa dữ liệu",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Hợp đồng fixture đã có ngày và tệp, toggle đang bật\n1. Mở Job F_JOB, ghi ngày và tên tệp hợp đồng.\n2. Tắt toggle để ẩn phần hợp đồng, sau đó bật lại trước Save.\n3. Quan sát ngày và tệp.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Phần hợp đồng ẩn rồi hiện. Ngày và tệp vẫn còn khi bật lại. Không tự xóa dữ liệu do thao tác toggle."
+  },
+  {
+    "id": "PIM_JOB_UpdateContract_01",
+    "module": "PIM_JOB",
+    "title": "Hợp đồng có End Date sau Start Date",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Start=01/01/2026; End=31/12/2026; theo định dạng UI\n1. Mở Job F_JOB, bật Contract Details.\n2. Nhập hai ngày hợp lệ, Save.\n3. Tải lại, bật phần hợp đồng nếu cần.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Lưu đúng hai ngày. End Date sau Start Date, không có lỗi."
+  },
+  {
+    "id": "PIM_JOB_UpdateContract_02",
+    "module": "PIM_JOB",
+    "title": "End Date trước Start Date",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Start=01/01/2026; End=31/12/2025\n1. Mở Job F_JOB, bật Contract Details.\n2. Nhập hai ngày.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "End Date có lỗi yêu cầu sau Start Date. Không lưu cặp ngày sai."
+  },
+  {
+    "id": "PIM_JOB_UpdateContract_03",
+    "module": "PIM_JOB",
+    "title": "End Date bằng Start Date",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Start=01/01/2026; End=01/01/2026\n1. Mở Job F_JOB, bật Contract Details.\n2. Nhập cùng ngày bắt đầu và kết thúc.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "End Date bị từ chối vì phải sau Start Date (không chấp nhận cùng ngày theo baseline 5.9)."
+  },
+  {
+    "id": "PIM_JOB_UpdateContract_04",
+    "module": "PIM_JOB",
+    "title": "Start Date không tồn tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Start=31/02/2026; End=31/12/2026\n1. Mở Job F_JOB, bật Contract Details.\n2. Nhập dữ liệu, Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi ngày/định dạng tại Start Date. Không lưu ngày không tồn tại."
+  },
+  {
+    "id": "PIM_JOB_UpdateContract_05",
+    "module": "PIM_JOB",
+    "title": "End Date không tồn tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: Start=01/01/2026; End=31/04/2026\n1. Mở Job F_JOB, bật Contract Details.\n2. Nhập dữ liệu, Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi ngày/định dạng tại End Date. Không lưu ngày không tồn tại."
+  },
+  {
+    "id": "PIM_JOB_UploadContract_01",
+    "module": "PIM_JOB",
+    "title": "Tải tệp hợp đồng PDF hợp lệ",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: contract_v1.pdf, >0 và <1 MiB; ngày hợp đồng hợp lệ\n1. Mở Job F_JOB, bật Contract Details; đảm bảo fixture chưa có tệp.\n2. Chọn contract_v1.pdf và điền ngày hợp lệ.\n3. Save, tải lại, mở/download tệp.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Tên contract_v1.pdf còn sau tải lại. Nội dung tải xuống là hợp đồng mẫu v1."
+  },
+  {
+    "id": "PIM_JOB_UploadContract_02",
+    "module": "PIM_JOB",
+    "title": "Từ chối tệp hợp đồng vượt giới hạn",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: contract_over_limit.pdf; dung lượng lớn hơn Max Attachment Size đang cấu hình\n1. Ghi Max Attachment Size từ Admin > Configuration > Attachments hoặc hint của Job.\n2. Chuẩn bị PDF lớn hơn giới hạn đúng 1 byte.\n3. Chọn tệp trong Contract Details và Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi dung lượng. Tệp hợp đồng cũ không bị thay bằng tệp quá cỡ."
+  },
+  {
+    "id": "PIM_JOB_UploadContract_03",
+    "module": "PIM_JOB",
+    "title": "Từ chối loại file hợp đồng không cho phép",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: contract_disallowed.csv; MIME text/csv không nằm trong allowed list của môi trường\n1. Đối chiếu allowed list tại cấu hình attachments/hint. Nếu CSV được phép, dùng một loại thực sự bị cấm và ghi lại tên.\n2. Chọn tệp bị cấm tại Contract Details.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có lỗi loại tệp. Không lưu tệp không được phép, hợp đồng cũ còn nguyên."
+  },
+  {
+    "id": "PIM_JOB_KeepContract_01",
+    "module": "PIM_JOB",
+    "title": "Giữ tệp hợp đồng hiện tại khi đổi ngày",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: F_JOB đã có contract_v1.pdf; lựa chọn Keep Current; End đổi sang 31/12/2027\n1. Mở Contract Details của F_JOB.\n2. Giữ Keep Current, đổi End Date hợp lệ.\n3. Save, tải lại, download tệp.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Ngày kết thúc mới được lưu. Tệp vẫn là contract_v1.pdf, nội dung không đổi."
+  },
+  {
+    "id": "PIM_JOB_ReplaceContract_01",
+    "module": "PIM_JOB",
+    "title": "Thay thế tệp hợp đồng hiện tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: F_JOB có contract_v1.pdf; chọn Replace Current; file=contract_v2.pdf\n1. Mở Contract Details.\n2. Chọn Replace Current, tải contract_v2.pdf.\n3. Save, tải lại, download tệp.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Tệp hợp đồng hiện tại là contract_v2.pdf với nội dung v2; không còn dùng v1 làm tệp hiện tại."
+  },
+  {
+    "id": "PIM_JOB_ReplaceContract_02",
+    "module": "PIM_JOB",
+    "title": "Replace Current nhưng không chọn tệp mới",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: F_JOB có tệp hợp đồng; Replace Current; new file rỗng\n1. Mở Contract Details.\n2. Chọn Replace Current, không chọn file mới.\n3. Save.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Vùng tệp mới hiển thị Required. Không mất tệp hợp đồng cũ."
+  },
+  {
+    "id": "PIM_JOB_DeleteContract_01",
+    "module": "PIM_JOB",
+    "title": "Xóa riêng tệp hợp đồng hiện tại",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: F_JOB có contract_v1.pdf của nhóm; chọn Delete Current\n1. Mở Contract Details, ghi hai ngày hiện có.\n2. Chọn Delete Current, Save.\n3. Tải lại và kiểm tra vùng tệp và ngày.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Tệp hiện tại được xóa. Hai ngày hợp đồng không bị đổi ngoài ý muốn."
+  },
+  {
+    "id": "PIM_JOB_CreateAttachment_01",
+    "module": "PIM_JOB",
+    "title": "Thêm attachment tại tab Job",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: attachment_valid.pdf; Description=G01N01 Job attachment\n1. Mở Job F_JOB > Attachments > Add.\n2. Chọn PDF, nhập mô tả, Save.\n3. Tải lại tab Job và đối chiếu đúng dòng.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Có dòng attachment với đúng tên và mô tả tại tab Job, không nhầm attachment của Personal Details."
+  },
+  {
+    "id": "PIM_JOB_CancelAttachment_01",
+    "module": "PIM_JOB",
+    "title": "Hủy thêm attachment tại tab Job",
+    "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_JOB tồn tại. Danh mục công việc có lựa chọn hợp lệ.\nInput: attachment_valid.pdf; Description=G01N01 Job cancel\n1. Mở Job F_JOB > Attachments > Add.\n2. Chọn file và nhập mô tả, bấm Cancel thay vì Save.\n3. Tải lại tab Job.\nKết thúc: khôi phục fixture theo Test Data.",
+    "expected": "Form thêm đóng. Không có dòng mới với mô tả G01N01 Job cancel."
+  }
+]

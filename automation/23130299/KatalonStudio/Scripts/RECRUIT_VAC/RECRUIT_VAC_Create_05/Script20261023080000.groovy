@@ -1,0 +1,36 @@
+import recruitment.RecorderBridge
+
+def runner = new RecorderBridge('RECRUIT_VAC_Create_05')
+try {
+    runner.step('setTimeout', '30000', '')
+    runner.step('echo', 'START RECRUIT_VAC_Create_05 (original TC_RECRUIT_VAC_005)', '')
+    runner.step('store', 'QA Engineer', 'jobTitle')
+    runner.step('open', '/web/index.php/recruitment/viewJobVacancy', '')
+    runner.step('waitForElementPresent', 'xpath=//button[normalize-space()="Add"]', '')
+    runner.step('echo', 'SCREENSHOT_CHECKPOINT RECRUIT_VAC_Create_05_01_BEFORE_ADD.png', '')
+    runner.step('captureEntirePageScreenshot', 'RECRUIT_VAC_Create_05_01_BEFORE_ADD.png', '')
+    runner.step('click', 'xpath=//button[normalize-space()="Add"]', '')
+    runner.step('waitForElementPresent', 'xpath=//h6[normalize-space()="Add Vacancy"]', '')
+    runner.step('assertElementPresent', 'xpath=//label[normalize-space()="Vacancy Name"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//input', '')
+    runner.step('storeEval', '\'G01_23130299_\'+new Date().getTime()+\'_V05\'', 'vacancyName')
+    runner.step('click', 'xpath=//label[normalize-space()="Job Title"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//div[contains(concat(" ",normalize-space(@class)," ")," oxd-select-text-input ")]', '')
+    runner.step('waitForElementPresent', 'xpath=//div[contains(concat(" ",normalize-space(@class)," ")," oxd-select-option ")][.//span[normalize-space()="${jobTitle}"]]', '')
+    runner.step('click', 'xpath=//div[contains(concat(" ",normalize-space(@class)," ")," oxd-select-option ")][.//span[normalize-space()="${jobTitle}"]]', '')
+    runner.step('assertText', 'xpath=//label[normalize-space()="Job Title"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//div[contains(concat(" ",normalize-space(@class)," ")," oxd-select-text-input ")]', '${jobTitle}')
+    runner.step('type', 'xpath=//label[normalize-space()="Vacancy Name"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//input', '${vacancyName}')
+    runner.step('type', 'xpath=//label[normalize-space()="Number of Positions"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//input', '1')
+    runner.step('assertValue', 'xpath=//label[normalize-space()="Hiring Manager"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//input[@placeholder="Type for hints..."]', '')
+    runner.step('echo', 'SCREENSHOT_CHECKPOINT RECRUIT_VAC_Create_05_02_BEFORE_SAVE.png', '')
+    runner.step('captureEntirePageScreenshot', 'RECRUIT_VAC_Create_05_02_BEFORE_SAVE.png', '')
+    runner.step('click', 'xpath=//form[contains(concat(" ",normalize-space(@class)," ")," oxd-form ")]//button[@type="submit" and normalize-space()="Save"]', '')
+    runner.step('waitForElementPresent', 'xpath=//label[normalize-space()="Hiring Manager"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//*[contains(concat(" ",normalize-space(@class)," ")," oxd-input-field-error-message ")]', '')
+    runner.step('assertText', 'xpath=//label[normalize-space()="Hiring Manager"]/ancestor::div[contains(concat(" ",normalize-space(@class)," ")," oxd-input-group ")][1]//*[contains(concat(" ",normalize-space(@class)," ")," oxd-input-field-error-message ")]', 'Required')
+    runner.step('assertElementPresent', 'xpath=//h6[normalize-space()="Add Vacancy"]', '')
+    runner.step('echo', 'ASSERT: Required at Hiring Manager; stayed on Add Vacancy; no successful insert intended.', '')
+    runner.step('echo', 'SMOKE STEPS REUSED from user-supplied file.', '')
+    runner.step('echo', 'ASSERTIONS COMPLETED: RECRUIT_VAC_Create_05; inspect screenshot tab and keep own fixture ledger.', '')
+    runner.finished()
+} catch (Throwable t) {
+    runner.failed(t)
+    throw t
+}

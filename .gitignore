@@ -20,3 +20,10 @@ desktop.ini
 *.inspect.ndjson
 tmp/
 .scratch/
+
+# Personal Classroom packages are kept locally, not in the group repository
+/submission/
+/submissions/
+
+# ASM7 local recordings and execution output; publish selected evidence separately
+/automation/23130226/Playwright/results/

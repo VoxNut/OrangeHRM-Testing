@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Kiểm tra trạng thái ứng viên mới
+Expected (workbook): Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.</description>
+  <name>RECRUIT_FLOW_Status_01</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A9:H9; selectors need live verification.</comment>
+  <testCaseGuid>3634c835-c9c7-5f2c-8431-3721b93dea9d</testCaseGuid>
+</TestCaseEntity>

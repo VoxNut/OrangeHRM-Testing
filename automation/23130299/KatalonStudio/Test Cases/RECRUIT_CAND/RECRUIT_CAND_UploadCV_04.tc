@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Tải CV vượt dung lượng tối đa
+Expected (workbook): Hiển thị lỗi vượt giới hạn; file quá lớn không được đính kèm.</description>
+  <name>RECRUIT_CAND_UploadCV_04</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A24:H24; selectors need live verification.</comment>
+  <testCaseGuid>b37560c1-c3d3-5cfa-85a2-4d0f551f7270</testCaseGuid>
+</TestCaseEntity>

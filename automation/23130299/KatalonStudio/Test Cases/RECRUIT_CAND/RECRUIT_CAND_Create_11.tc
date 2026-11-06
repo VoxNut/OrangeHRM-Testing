@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Số điện thoại dạng chữ
+Expected (workbook): Không nhận số điện thoại sai dạng nếu có validation; ghi lại thông báo đúng UI.</description>
+  <name>RECRUIT_CAND_Create_11</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A19:H19; selectors need live verification.</comment>
+  <testCaseGuid>7519c67d-ec30-5d16-b0b2-629933df34d7</testCaseGuid>
+</TestCaseEntity>

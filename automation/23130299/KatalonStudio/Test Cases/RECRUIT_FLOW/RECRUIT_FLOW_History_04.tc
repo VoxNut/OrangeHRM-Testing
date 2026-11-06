@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>History sau Schedule Interview
+Expected (workbook): Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.</description>
+  <name>RECRUIT_FLOW_History_04</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A33:H33; selectors need live verification.</comment>
+  <testCaseGuid>94c35ce2-9223-5687-81a9-59d9b7d8f4ca</testCaseGuid>
+</TestCaseEntity>

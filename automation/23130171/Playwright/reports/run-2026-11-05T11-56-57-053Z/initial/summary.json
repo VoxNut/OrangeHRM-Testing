@@ -1,0 +1,422 @@
+{
+  "ADM_STRUCT": {
+    "module": "ADM_STRUCT",
+    "exitCode": 0,
+    "total": 12,
+    "counts": {
+      "Passed": 10,
+      "Failed": 0,
+      "Blocked": 0,
+      "Skipped": 2,
+      "Untested": 0
+    },
+    "cases": [
+      {
+        "oldId": "TC_ADM_STRUCT_001",
+        "id": "ADM_STRUCT_Login_01",
+        "startedAt": "2026-11-05T11:57:13.813Z",
+        "status": "Passed",
+        "actual": "Đăng nhập và mở Organization Structure thành công.",
+        "assertions": [
+          "Đăng nhập và mở Organization Structure thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Login_01.png"
+        ],
+        "network": [],
+        "durationMs": 61,
+        "finishedAt": "2026-11-05T11:57:13.874Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_002",
+        "id": "ADM_STRUCT_View_01",
+        "startedAt": "2026-11-05T11:57:13.875Z",
+        "status": "Passed",
+        "actual": "Container cơ cấu tổ chức hiển thị.",
+        "assertions": [
+          "Container cơ cấu tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_01.png"
+        ],
+        "network": [],
+        "durationMs": 63,
+        "finishedAt": "2026-11-05T11:57:13.938Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_003",
+        "id": "ADM_STRUCT_View_02",
+        "startedAt": "2026-11-05T11:57:13.938Z",
+        "status": "Passed",
+        "actual": "Khu vực cây tổ chức hiển thị.",
+        "assertions": [
+          "Khu vực cây tổ chức hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_View_02.png"
+        ],
+        "network": [],
+        "durationMs": 67,
+        "finishedAt": "2026-11-05T11:57:14.005Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_006",
+        "id": "ADM_STRUCT_EditMode_01",
+        "startedAt": "2026-11-05T11:57:14.006Z",
+        "status": "Passed",
+        "actual": "Bật chế độ Edit thành công.",
+        "assertions": [
+          "Bật chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_01.png"
+        ],
+        "network": [],
+        "durationMs": 104,
+        "finishedAt": "2026-11-05T11:57:14.110Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_007",
+        "id": "ADM_STRUCT_EditMode_02",
+        "startedAt": "2026-11-05T11:57:14.110Z",
+        "status": "Passed",
+        "actual": "Tắt chế độ Edit thành công.",
+        "assertions": [
+          "Tắt chế độ Edit thành công."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_02.png"
+        ],
+        "network": [],
+        "durationMs": 81,
+        "finishedAt": "2026-11-05T11:57:14.192Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_008",
+        "id": "ADM_STRUCT_EditMode_03",
+        "startedAt": "2026-11-05T11:57:14.193Z",
+        "status": "Passed",
+        "actual": "Edit được bật ở lần thứ nhất. | Edit được tắt ở lần thứ hai. | Edit được bật lại ở lần thứ ba.",
+        "assertions": [
+          "Edit được bật ở lần thứ nhất.",
+          "Edit được tắt ở lần thứ hai.",
+          "Edit được bật lại ở lần thứ ba."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_EditMode_03.png"
+        ],
+        "network": [],
+        "durationMs": 202,
+        "finishedAt": "2026-11-05T11:57:14.395Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_009",
+        "id": "ADM_STRUCT_Create_01",
+        "startedAt": "2026-11-05T11:57:14.395Z",
+        "status": "Passed",
+        "actual": "Đơn vị cha được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị cha được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:57:15.189Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:57:15.804Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:57:18.670Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 4371,
+        "finishedAt": "2026-11-05T11:57:18.766Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_010",
+        "id": "ADM_STRUCT_Create_02",
+        "startedAt": "2026-11-05T11:57:18.767Z",
+        "status": "Passed",
+        "actual": "Đơn vị con được tạo và hiển thị.",
+        "assertions": [
+          "Đơn vị con được tạo và hiển thị."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Create_02.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:57:19.228Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:57:19.707Z",
+            "status": 200,
+            "method": "POST",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          },
+          {
+            "time": "2026-11-05T11:57:22.565Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 3993,
+        "finishedAt": "2026-11-05T11:57:22.760Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_011",
+        "id": "ADM_STRUCT_Validation_01",
+        "startedAt": "2026-11-05T11:57:22.761Z",
+        "status": "Passed",
+        "actual": "Form hiển thị lỗi khi thiếu trường bắt buộc.",
+        "assertions": [
+          "Form hiển thị lỗi khi thiếu trường bắt buộc."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Validation_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:57:23.386Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits"
+          }
+        ],
+        "durationMs": 1581,
+        "finishedAt": "2026-11-05T11:57:24.342Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_017",
+        "id": "ADM_STRUCT_Update_01",
+        "startedAt": "2026-11-05T11:57:24.342Z",
+        "status": "Skipped",
+        "actual": "Không có đơn vị con để kiểm tra cập nhật tên.",
+        "assertions": [],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Update_01.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:57:24.446Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "skipReason": "Không có đơn vị con để kiểm tra cập nhật tên.",
+        "durationMs": 165,
+        "finishedAt": "2026-11-05T11:57:24.507Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_022",
+        "id": "ADM_STRUCT_Delete_01",
+        "startedAt": "2026-11-05T11:57:24.508Z",
+        "status": "Skipped",
+        "actual": "Không có đơn vị con để kiểm tra xóa.",
+        "assertions": [],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Delete_01.png"
+        ],
+        "network": [],
+        "skipReason": "Không có đơn vị con để kiểm tra xóa.",
+        "durationMs": 65,
+        "finishedAt": "2026-11-05T11:57:24.573Z"
+      },
+      {
+        "oldId": "TC_ADM_STRUCT_025",
+        "id": "ADM_STRUCT_Delete_04",
+        "startedAt": "2026-11-05T11:57:24.574Z",
+        "status": "Passed",
+        "actual": "Đơn vị cha vẫn tồn tại sau khi tải lại trang.",
+        "assertions": [
+          "Đơn vị cha vẫn tồn tại sau khi tải lại trang."
+        ],
+        "screenshots": [
+          "screenshots\\ADM_STRUCT_Delete_04.png"
+        ],
+        "network": [
+          {
+            "time": "2026-11-05T11:57:27.020Z",
+            "status": 200,
+            "method": "GET",
+            "url": "/web/index.php/api/v2/admin/subunits?mode=tree"
+          }
+        ],
+        "durationMs": 2501,
+        "finishedAt": "2026-11-05T11:57:27.075Z"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_STRUCT\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-56-57-053Z\\initial\\ADM_STRUCT.log"
+  },
+  "ADM_JOB": {
+    "module": "ADM_JOB",
+    "exitCode": 0,
+    "total": 3,
+    "counts": {
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "blocked": 0,
+      "skipped": 0
+    },
+    "cases": [
+      {
+        "id": "ADM_JOB_Create_01",
+        "title": "Tạo Job Title hợp lệ",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 15798,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_JOB\\screenshots\\01_ADM_JOB_Create_01.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Create_02",
+        "title": "Bỏ trống Job Title",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8957,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_JOB\\screenshots\\02_ADM_JOB_Create_02.png",
+        "errorScreenshot": null
+      },
+      {
+        "id": "ADM_JOB_Delete_01",
+        "title": "Xóa Job Title kiểm thử",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 28848,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_JOB\\screenshots\\21_ADM_JOB_Delete_01.png",
+        "errorScreenshot": null
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_JOB\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-56-57-053Z\\initial\\ADM_JOB.log"
+  },
+  "ADM_USER": {
+    "module": "ADM_USER",
+    "exitCode": 0,
+    "total": 11,
+    "counts": {
+      "total": 11,
+      "passed": 10,
+      "failed": 0,
+      "blocked": 1,
+      "skipped": 0
+    },
+    "cases": [
+      {
+        "id": "ADM_USER_Filter_01",
+        "title": "Lọc theo Username",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 14034,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\01_ADM_USER_Filter_01.png"
+      },
+      {
+        "id": "ADM_USER_Filter_02",
+        "title": "Lọc theo User Role",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 10255,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\02_ADM_USER_Filter_02.png"
+      },
+      {
+        "id": "ADM_USER_Filter_04",
+        "title": "Lọc theo Status",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 10017,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\04_ADM_USER_Filter_04.png"
+      },
+      {
+        "id": "ADM_USER_Filter_05",
+        "title": "Kết hợp nhiều điều kiện",
+        "status": "Blocked",
+        "message": "locator.click: Timeout 12000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /^login$/i })\u001b[22m\n",
+        "durationMs": 17041,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\05_ADM_USER_Filter_05.png"
+      },
+      {
+        "id": "ADM_USER_Filter_06",
+        "title": "Tìm kiếm không có kết quả",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8313,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\06_ADM_USER_Filter_06.png"
+      },
+      {
+        "id": "ADM_USER_Create_02",
+        "title": "Bỏ trống trường bắt buộc",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8679,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\08_ADM_USER_Create_02.png"
+      },
+      {
+        "id": "ADM_USER_Create_03",
+        "title": "Username đã tồn tại",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 9675,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\09_ADM_USER_Create_03.png"
+      },
+      {
+        "id": "ADM_USER_Create_05",
+        "title": "Hủy tạo tài khoản",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8912,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\11_ADM_USER_Create_05.png"
+      },
+      {
+        "id": "ADM_USER_Username_01",
+        "title": "Username phải duy nhất",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 9870,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\14_ADM_USER_Username_01.png"
+      },
+      {
+        "id": "ADM_USER_Username_04",
+        "title": "Không chọn Employee",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 10742,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\17_ADM_USER_Username_04.png"
+      },
+      {
+        "id": "ADM_USER_Role_01",
+        "title": "Admin truy cập chức năng quản trị",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8456,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\screenshots\\18_ADM_USER_Role_01.png"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-56-57-053Z_initial_ADM_USER\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-56-57-053Z\\initial\\ADM_USER.log"
+  }
+}

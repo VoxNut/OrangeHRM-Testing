@@ -1,0 +1,24 @@
+[Passed] ADM_USER_Filter_01 - Test case thực hiện thành công.
+[Passed] ADM_USER_Filter_02 - Test case thực hiện thành công.
+[Passed] ADM_USER_Filter_04 - Test case thực hiện thành công.
+[Blocked] ADM_USER_Filter_05 - locator.click: Timeout 12000ms exceeded.
+Call log:
+[2m  - waiting for getByRole('button', { name: /^login$/i })[22m
+
+[Passed] ADM_USER_Filter_06 - Test case thực hiện thành công.
+[Passed] ADM_USER_Create_02 - Test case thực hiện thành công.
+[Passed] ADM_USER_Create_03 - Test case thực hiện thành công.
+[Passed] ADM_USER_Create_05 - Test case thực hiện thành công.
+[Passed] ADM_USER_Username_01 - Test case thực hiện thành công.
+[Passed] ADM_USER_Username_04 - Test case thực hiện thành công.
+[Passed] ADM_USER_Role_01 - Test case thực hiện thành công.
+
+========== ADM_USER SUMMARY ==========
+Total   : 11
+Passed  : 10
+Failed  : 0
+Blocked : 1
+Skipped : 0
+Evidence: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-56-57-053Z_initial_ADM_USER
+======================================
+

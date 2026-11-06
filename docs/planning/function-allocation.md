@@ -1,32 +1,31 @@
 # Phân công chức năng
 
-Mỗi thành viên nhận 3 chức năng, khoảng 20–30 test case mỗi chức năng. Tuần đầu nộp ít nhất một chức năng theo yêu cầu Classroom. Phần chưa có người nhận không phải đã phân công.
+Mỗi thành viên phụ trách 3 chức năng, thiết kế 20–30 case/chức năng; mục tiêu 25 case. Nội dung chi tiết và số case thực tế nằm trong workbook cá nhân.
 
-| Mã | Chức năng | Người phụ trách |
+| Mã | Phạm vi | Người phụ trách |
 | --- | --- | --- |
-| PIM_EMP | Employee List & Add Employee | 23130226 – Võ Minh Nhựt |
-| PIM_PERSONAL | Personal Details & Attachments | 23130226 – Võ Minh Nhựt |
-| PIM_JOB | Job Details & Employment Contract | 23130226 – Võ Minh Nhựt |
-| LEAVE_CONFIG | Leave Types & Entitlements | Chưa chọn |
-| LEAVE_SELF | Apply Leave & My Leave | Chưa chọn |
-| LEAVE_ADMIN | Leave List & Request Actions | Chưa chọn |
-| TIME_ATTEND | Punch In/Out & Attendance Records | Chưa chọn |
-| TIME_MY | My Timesheets | Chưa chọn |
-| TIME_EMP | Employee Timesheets & Review | Chưa chọn |
-| RECR_VAC | Vacancies | Chưa chọn |
-| RECR_CAND | Candidates | Chưa chọn |
-| RECR_FLOW | Candidate Workflow & Interviews | Chưa chọn |
-| ADM_STRUCT | Organization Structure | Chưa chọn |
-| ADM_JOB | Job Titles & Job Specifications | Chưa chọn |
-| ADM_USER | User Management & Roles | Chưa chọn |
+| PIM_EMP | Thêm nhân viên, validation, ảnh, tìm/lọc, Reset, sắp xếp, phân trang, Cancel | 23130226 – Võ Minh Nhựt |
+| PIM_PERSONAL | Họ tên/định danh, ngày sinh/bằng lái, quốc tịch, hôn nhân, giới tính, attachments | 23130226 – Võ Minh Nhựt |
+| PIM_JOB | Ngày vào làm, danh mục công việc, hợp đồng, ngày/tệp hợp đồng, attachments | 23130226 – Võ Minh Nhựt |
+| LEAVE_CONFIG | Loại phép, validation, cấp/lọc/đối chiếu entitlement | 22130254 – Cao Tiến Thành |
+| LEAVE_SELF | Apply Leave, ngày/thời lượng, số dư, My Leave, chi tiết và hủy đơn | 22130254 – Cao Tiến Thành |
+| LEAVE_ADMIN | Lọc Leave List, chi tiết, comments, duyệt/từ chối/hủy theo quyền và trạng thái | 22130254 – Cao Tiến Thành |
+| TIME_ATTEND | Punch In/Out, ngày/giờ, ghi chú, records, thời lượng và quyền sửa | 23130339 – Tôn Bích Trâm |
+| TIME_MY | Kỳ tuần, Project/Activity, giờ, dòng, Reset, tổng giờ, Save/Submit | 23130339 – Tôn Bích Trâm |
+| TIME_EMP | Tìm/xem timesheet nhân viên, tổng giờ, history, comments, Approve/Reject | 23130339 – Tôn Bích Trâm |
+| RECR_VAC | Tạo/sửa vacancy, validation, manager, số lượng, Active/Publish, lọc/Reset/Cancel | 23130299 – Nguyễn Văn Thắng |
+| RECR_CAND | Hồ sơ ứng viên, validation, CV, ngày, notes/consent, lọc/Reset | 23130299 – Nguyễn Văn Thắng |
+| RECR_FLOW | Shortlist/Reject, lịch phỏng vấn, interviewer, chuyển trạng thái và history | 23130299 – Nguyễn Văn Thắng |
+| ADM_STRUCT | Cây tổ chức, Edit, node cha/con, validation, sửa/hủy/xóa | 23130171 – Nguyễn Thị Thủy Linh |
+| ADM_JOB | Job Titles, description/note, specification, validation, sửa/hủy/xóa | 23130171 – Nguyễn Thị Thủy Linh |
+| ADM_USER | Tài khoản, employee/role/status, mật khẩu, lọc/Reset, đăng nhập và phân quyền | 23130171 – Nguyễn Thị Thủy Linh |
 
-## Phối hợp fixture
+## Dữ liệu và phối hợp
 
-- PIM_JOB dùng danh mục Job Title, Category, Sub Unit, Location và Status có sẵn. Không xóa danh mục dùng chung.
-- LEAVE_CONFIG cần chuẩn bị quỹ phép trước LEAVE_SELF. LEAVE_ADMIN cần đơn riêng và người duyệt có quyền phù hợp.
-- TIME_MY cần Project/Activity. TIME_EMP cần timesheet Submitted của nhân viên khác người duyệt.
-- RECR_VAC chuẩn bị vacancy và manager, RECR_CAND chuẩn bị ứng viên, RECR_FLOW dùng ứng viên riêng cho từng nhánh trạng thái.
-- ADM_STRUCT, ADM_JOB và ADM_USER chỉ sửa/xóa dữ liệu nhóm tự tạo. Không sửa tài khoản Admin demo.
-- Trước khi chốt test case phê duyệt, xác nhận vai trò và nút hành động xuất hiện trên fixture. Thiếu fixture không tự động được xem là lỗi sản phẩm.
+- PIM: nhân viên riêng, danh mục công việc tồn tại; ghi employee key để mở lại và cleanup.
+- Leave: cấu hình loại/quỹ phép trước Apply Leave; người duyệt và người xin nghỉ khác nhau.
+- Time: chuẩn bị Project/Activity, tuần có thể sửa và timesheet Submitted cho case phê duyệt; xác nhận múi giờ/quyền sửa.
+- Recruitment: vacancy/manager trước ứng viên; mỗi nhánh workflow có ứng viên và trạng thái đầu vào riêng.
+- Admin: dùng node, chức danh, employee và tài khoản test riêng; xóa node con trước node cha.
 
-Nhóm trưởng cập nhật bảng sau khi các thành viên chọn phần. Không mặc định mỗi người phải nhận trọn một module nếu quyền/dữ liệu phụ thuộc không phù hợp.
+Xác nhận validation, giới hạn tệp/ngày và nút hành động trên UI trước khi chốt expected. Chỉ sửa/xóa dữ liệu nhóm tạo; không đổi tài khoản Admin demo.

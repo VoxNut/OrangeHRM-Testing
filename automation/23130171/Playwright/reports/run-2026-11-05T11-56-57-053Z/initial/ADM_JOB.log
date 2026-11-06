@@ -1,0 +1,14 @@
+[Passed] ADM_JOB_Create_01 - Test case thực hiện thành công.
+[Passed] ADM_JOB_Create_02 - Test case thực hiện thành công.
+[Passed] ADM_JOB_Delete_01 - Test case thực hiện thành công.
+[CLEANUP] AUTO_JOB_CREATE_1793879863107_7483: Deleted
+
+========== ADM_JOB SUMMARY ==========
+Total   : 3
+Passed  : 3
+Failed  : 0
+Blocked : 0
+Skipped : 0
+Evidence: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T11-56-57-053Z_initial_ADM_JOB
+=====================================
+

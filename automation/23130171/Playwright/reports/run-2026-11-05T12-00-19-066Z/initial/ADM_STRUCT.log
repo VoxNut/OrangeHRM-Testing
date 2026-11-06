@@ -1,0 +1,39 @@
+[LOGIN] Đang truy cập OrangeHRM...
+[LOGIN] HTTP: 200
+[LOGIN] URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+[LOGIN] Đăng nhập thành công.
+ADM_STRUCT_Login_01: Passed (78 ms) Đăng nhập và mở Organization Structure thành công.
+ADM_STRUCT_View_01: Passed (66 ms) Container cơ cấu tổ chức hiển thị.
+ADM_STRUCT_View_02: Passed (63 ms) Khu vực cây tổ chức hiển thị.
+ADM_STRUCT_EditMode_01: Passed (104 ms) Bật chế độ Edit thành công.
+ADM_STRUCT_EditMode_02: Passed (101 ms) Tắt chế độ Edit thành công.
+ADM_STRUCT_EditMode_03: Passed (199 ms) Edit được bật ở lần thứ nhất. | Edit được tắt ở lần thứ hai. | Edit được bật lại ở lần thứ ba.
+ADM_STRUCT_Create_01: Passed (3814 ms) Đơn vị cha được tạo và hiển thị.
+ADM_STRUCT_Create_02: Passed (4967 ms) Đơn vị con được tạo và hiển thị.
+ADM_STRUCT_Validation_01: Passed (879 ms) Form hiển thị lỗi khi thiếu trường bắt buộc.
+ADM_STRUCT_Update_01: Failed (8875 ms) AssertionError: Update unit HTTP 422
+ADM_STRUCT_Delete_01: Passed (11957 ms) Đơn vị con đã bị xóa khỏi cây tổ chức.
+ADM_STRUCT_Delete_04: Passed (1315 ms) Đơn vị cha vẫn tồn tại sau khi tải lại trang.
+
+========== ADM_STRUCT SUMMARY ==========
+{
+  "Passed": 11,
+  "Failed": 1,
+  "Blocked": 0,
+  "Skipped": 0,
+  "Untested": 0
+}
+
+========== CLEANUP SUMMARY ==========
+{
+  "Passed": 1,
+  "Failed": 0,
+  "AlreadyAbsent": 1,
+  "NotAttempted": 1
+}
+
+Total duration: 62779 ms
+Report: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T12-00-19-066Z_initial_ADM_STRUCT\results.json
+Evidence: D:\My WorkSpace\Software Testing\outputs\linh-admin-check\evidence\executions\23130171\2026-11-05T12-00-19-066Z_initial_ADM_STRUCT
+
+[RESET] locator.click: Timeout 4000ms exceeded.

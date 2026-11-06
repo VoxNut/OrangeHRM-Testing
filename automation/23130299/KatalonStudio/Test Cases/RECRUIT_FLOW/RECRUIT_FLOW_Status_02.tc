@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Trạng thái sau khi đặt lịch
+Expected (workbook): Status là Interview Scheduled; không còn status Shortlisted.</description>
+  <name>RECRUIT_FLOW_Status_02</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A26:H26; selectors need live verification.</comment>
+  <testCaseGuid>a5dd7593-101a-545f-aea5-3d60470b0f0a</testCaseGuid>
+</TestCaseEntity>

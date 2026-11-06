@@ -1,0 +1,53 @@
+[Passed] ADM_USER_Filter_01 - Test case thực hiện thành công.
+[Passed] ADM_USER_Filter_02 - Test case thực hiện thành công.
+[Skipped] ADM_USER_Filter_03 - Thiếu USER_EMPLOYEE_NAME.
+[Passed] ADM_USER_Filter_04 - Test case thực hiện thành công.
+[Passed] ADM_USER_Filter_05 - Test case thực hiện thành công.
+[Passed] ADM_USER_Filter_06 - Test case thực hiện thành công.
+[Blocked] ADM_USER_Create_01 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_USER_Create_02 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Passed] ADM_USER_Create_03 - Test case thực hiện thành công.
+[Blocked] ADM_USER_Create_04 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Passed] ADM_USER_Create_05 - Test case thực hiện thành công.
+[Skipped] ADM_USER_Update_01 - Thiếu USER_TEST_ACCOUNT riêng. Không sử dụng tài khoản Admin.
+[Skipped] ADM_USER_Update_02 - Thiếu USER_TEST_ACCOUNT riêng.
+[Passed] ADM_USER_Username_01 - Test case thực hiện thành công.
+[Skipped] ADM_USER_Username_02 - Thiếu USER_EMPLOYEE_NAME.
+[Skipped] ADM_USER_Username_03 - Thiếu USER_EMPLOYEE_NAME.
+[Passed] ADM_USER_Username_04 - Test case thực hiện thành công.
+[Passed] ADM_USER_Role_01 - Test case thực hiện thành công.
+[Blocked] ADM_USER_Role_02 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Blocked] ADM_USER_Role_03 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+[Skipped] ADM_USER_Role_04 - Cần tài khoản ESS riêng và quy trình khôi phục quyền; không thay đổi quyền tài khoản dùng chung.
+[Skipped] ADM_USER_Status_01 - Cần ENABLED_USERNAME và ENABLED_PASSWORD riêng.
+[Skipped] ADM_USER_Status_02 - Cần DISABLED_USERNAME và DISABLED_PASSWORD riêng.
+[Skipped] ADM_USER_Status_03 - Cần tài khoản kiểm thử riêng, được phép vô hiệu hóa và khôi phục sau test.
+[Blocked] ADM_USER_Status_04 - page.goto: Timeout 12000ms exceeded.
+Call log:
+[2m  - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "domcontentloaded"[22m
+
+
+========== ADM_USER SUMMARY ==========
+Total   : 25
+Passed  : 10
+Failed  : 0
+Blocked : 6
+Skipped : 9
+Evidence: /Users/tl/Downloads/OrangeHRM-Testing/automation/23130171/Playwright/evidence/executions/23130171/2026-11-05T22-42-25-271Z_initial_ADM_USER
+======================================
+

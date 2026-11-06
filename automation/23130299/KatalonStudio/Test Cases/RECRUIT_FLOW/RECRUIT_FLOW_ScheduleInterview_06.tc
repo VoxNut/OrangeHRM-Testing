@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Thời gian sai định dạng
+Expected (workbook): Không nhận thời gian ngoài miền hợp lệ; chặn nhập hoặc báo lỗi.</description>
+  <name>RECRUIT_FLOW_ScheduleInterview_06</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_FLOW!A19:H19; selectors need live verification.</comment>
+  <testCaseGuid>212a4be8-a5fe-5cc8-834a-5ab6377c89d6</testCaseGuid>
+</TestCaseEntity>

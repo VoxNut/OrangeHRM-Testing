@@ -1,0 +1,783 @@
+{
+  "RECRUIT_VAC": [
+    {
+      "row": 9,
+      "A": "RECRUIT_VAC_Create_01",
+      "B": "Tạo vacancy với các trường bắt buộc",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN01; Job Title=QA Engineer; Hiring Manager=NVThangA101; Positions=1\n1. Vào Recruitment > Vacancies > Add.\n2. Điền tên, chọn QA Engineer, chọn NVThangA101 qua suggestion; Positions=1.\n3. Save, tìm VAC_RUN01 và mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Lưu thành công; hiển thị đúng tên, Job Title, Hiring Manager, Positions=1.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_01\\20261023_115501_970"
+    },
+    {
+      "row": 10,
+      "A": "RECRUIT_VAC_Create_02",
+      "B": "Tạo vacancy với đủ thông tin",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN02; QA Engineer; NVThangA101; Positions=3; Description=QA automation; Active=On; Publish=On\n1. Mở Add Vacancy.\n2. Điền tất cả các trường và bật hai checkbox.\n3. Save; tìm lại VAC_RUN02, mở edit.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Tên, mô tả, số lượng, manager, Active và Publish giữ đúng giá trị đã lưu.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_02\\20261023_115554_453"
+    },
+    {
+      "row": 11,
+      "A": "RECRUIT_VAC_Create_03",
+      "B": "Không chọn Job Title",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN03; Job Title trống; Manager=NVThangA101\n1. Mở Add Vacancy; điền tên, manager và để Job Title rỗng.\n2. Bấm Save; kiểm tra lỗi và tìm tên.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Job Title hiện Required; VAC_RUN03 không được tạo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nNegative; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_03\\20261023_115632_409"
+    },
+    {
+      "row": 12,
+      "A": "RECRUIT_VAC_Create_04",
+      "B": "Để trống Vacancy Name",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name rỗng; QA Engineer; NVThangA101\n1. Mở Add Vacancy; chọn QA Engineer, NVThangA101 và để trống Name.\n2. Bấm Save; quan sát validation.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Vacancy Name hiện Required; không tạo vacancy.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nNegative; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_04\\20261023_115648_301"
+    },
+    {
+      "row": 13,
+      "A": "RECRUIT_VAC_Create_05",
+      "B": "Không chọn Hiring Manager",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN05; QA Engineer; Manager trống\n1. Mở Add Vacancy; điền Name và QA Engineer nhưng không chọn Manager.\n2. Bấm Save; kiểm tra lỗi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hiring Manager hiện Required; không lưu.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nNegative; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_05\\20261023_115705_926"
+    },
+    {
+      "row": 14,
+      "A": "RECRUIT_VAC_Create_06",
+      "B": "Tên vacancy chỉ có khoảng trắng",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name='   '; QA Engineer; NVThangA101\n1. Mở Add Vacancy; nhập 3 dấu cách tại Name.\n2. Bấm Save, tìm bản ghi nếu cần.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không tạo được vacancy chỉ có khoảng trắng; có lỗi bắt buộc/không hợp lệ.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nNegative; Phân vùng tương đương\nAutomation: P1\nCần kiểm tra UI: Xác nhận trim trên demo trước khi cố định expected.\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_06\\20261023_115719_740"
+    },
+    {
+      "row": 15,
+      "A": "RECRUIT_VAC_Create_07",
+      "B": "Hiring Manager từ autocomplete",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN07; gõ tiền tố NVThangA101, chọn suggestion chính xác\n1. Mở Add Vacancy, điền Name và QA Engineer.\n2. Gõ một phần NVThangA101, chọn đúng suggestion; Save.\n3. Mở lại bản ghi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Lưu đúng nhân viên từ suggestion, không phải chuỗi tên tự do.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_01\nPositive; Phân vùng tương đương / Autocomplete\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_07\\20261023_115737_960"
+    },
+    {
+      "row": 16,
+      "A": "RECRUIT_VAC_Create_08",
+      "B": "Số vị trí tuyển bằng 1",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN08; Positions=1\n1. Mở Add, nhập đủ trường và Positions=1.\n2. Save rồi mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Chấp nhận giá trị 1; Positions=1 sau reload.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_02\nPositive; Phân tích giá trị biên\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_08\\20261023_115805_408"
+    },
+    {
+      "row": 17,
+      "A": "RECRUIT_VAC_Create_09",
+      "B": "Số vị trí tuyển bằng 0",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN09; Positions=0\n1. Mở Add, nhập đủ trường và Positions=0.\n2. Save; xem validation và kiểm tra danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không chấp nhận 0 nếu quy tắc số lượng phải dương; không tạo VAC_RUN09.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_02\nNegative; Phân tích giá trị biên\nAutomation: P1\nCần kiểm tra UI: Kiểm tra giới hạn số lượng của bản demo; cập nhật nếu 0 được phép.\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_09\\20261023_115832_715"
+    },
+    {
+      "row": 18,
+      "A": "RECRUIT_VAC_Create_10",
+      "B": "Số vị trí tuyển âm",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN10; Positions=-1\n1. Mở Add, nhập đủ trường và -1 vào Positions.\n2. Save; quan sát lỗi.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không lưu số âm; UI chặn hoặc hiển thị lỗi.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_02\nNegative; Phân tích giá trị biên\nAutomation: P1\nCần kiểm tra UI: Xác nhận có ràng buộc >=1.\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_10\\20261023_115853_350"
+    },
+    {
+      "row": 19,
+      "A": "RECRUIT_VAC_Create_11",
+      "B": "Số vị trí tuyển không phải số",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN11; Positions='abc'\n1. Mở Add, điền Name/QA Engineer/NVThangA101.\n2. Nhập hoặc paste 'abc' vào Positions; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Chỉ chấp nhận số; chuỗi 'abc' bị chặn hoặc báo Invalid; không lưu 'abc'.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_02\nNegative; Phân tích giá trị biên\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_11\\20261023_115923_537"
+    },
+    {
+      "row": 20,
+      "A": "RECRUIT_VAC_Create_12",
+      "B": "Lưu vacancy Active",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN12; Active=On; Publish=Off\n1. Mở Add, điền đủ trường.\n2. Bật Active, tắt Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Active bật và Publish tắt sau reload.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_03\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_12\\20261023_115952_922"
+    },
+    {
+      "row": 21,
+      "A": "RECRUIT_VAC_Create_13",
+      "B": "Lưu vacancy Inactive",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN13; Active=Off; Publish=Off\n1. Mở Add, nhập đủ trường.\n2. Tắt Active và Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Active vẫn tắt sau reload.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_03\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_13\\20261023_120026_939"
+    },
+    {
+      "row": 22,
+      "A": "RECRUIT_VAC_Create_14",
+      "B": "Lưu vacancy bật Publish",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_RUN14; Active=On; Publish=On\n1. Mở Add, nhập đủ trường.\n2. Bật Active và Publish; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hai checkbox giữ trạng thái On; không suy diễn về cổng tuyển dụng ngoài demo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_03\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Create_14\\20261023_120057_775"
+    },
+    {
+      "row": 23,
+      "A": "RECRUIT_VAC_Update_01",
+      "B": "Đổi Active trên vacancy đã tồn tại",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Active=On→Off→On\n1. Mở VAC_EDIT (Active=On).\n2. Đổi Off, Save và reload.\n3. Đổi lại On, Save và reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Mỗi lần reload phản ánh trạng thái đã lưu; các trường khác không đổi.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_03\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Update_01\\20261023_120127_246"
+    },
+    {
+      "row": 24,
+      "A": "RECRUIT_VAC_Search_01",
+      "B": "Tìm vacancy theo Job Title",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer; VAC_FILTER_A thuộc QA Engineer\n1. Vào Vacancies; chọn Job Title=QA Engineer, Search.\n2. Kiểm tra tên và Job Title trên từng dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "VAC_FILTER_A xuất hiện; toàn bộ kết quả thuộc QA Engineer.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Search_01\\20261023_120214_025"
+    },
+    {
+      "row": 25,
+      "A": "RECRUIT_VAC_Search_02",
+      "B": "Tìm vacancy theo Hiring Manager",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: NVThangA101; VAC_FILTER_A thuộc NVThangA101\n1. Mở Vacancies, chọn Manager=NVThangA101, Search.\n2. Kiểm tra danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "VAC_FILTER_A xuất hiện; các dòng có manager phù hợp.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Search_02\\20261023_120300_138"
+    },
+    {
+      "row": 26,
+      "A": "RECRUIT_VAC_Search_03",
+      "B": "Tìm vacancy theo Vacancy Name",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_FILTER_A\n1. Mở Vacancies, nhập/chọn đúng Vacancy Name=VAC_FILTER_A.\n2. Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Có VAC_FILTER_A, không có VAC_FILTER_B.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Search_03\\20261023_120351_395"
+    },
+    {
+      "row": 27,
+      "A": "RECRUIT_VAC_Filter_01",
+      "B": "Lọc kết hợp Job Title và Manager",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer + NVThangA101\n1. Mở Vacancies; chọn QA Engineer và NVThangA101.\n2. Search; đối chiếu mỗi dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Chỉ có vacancy thỏa đồng thời hai điều kiện.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nPositive; Bảng quyết định\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Filter_01\\20261023_120426_216"
+    },
+    {
+      "row": 28,
+      "A": "RECRUIT_VAC_Filter_02",
+      "B": "Lọc vacancy không tồn tại",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_NOT_EXIST_RUN\n1. Tìm tên vacancy được bảo đảm chưa tồn tại.\n2. Search; quan sát bảng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không có kết quả hoặc hiển thị No Records Found; không hiện dữ liệu khác.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nNegative; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Filter_02\\20261023_120523_413"
+    },
+    {
+      "row": 29,
+      "A": "RECRUIT_VAC_Reset_01",
+      "B": "Reset điều kiện lọc vacancy",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: QA Engineer + NVThangA101\n1. Áp dụng hai bộ lọc, Search.\n2. Nhấn Reset.\n3. Kiểm tra input và danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Bộ lọc về mặc định; danh sách trở về trạng thái không lọc.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_04\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_Reset_01\\20261023_120602_233"
+    },
+    {
+      "row": 30,
+      "A": "RECRUIT_VAC_Update_02",
+      "B": "Sửa Description của vacancy",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Description cũ→'Description updated RUN'\n1. Ghi baseline của VAC_EDIT; mở edit.\n2. Đổi Description, Save.\n3. Reload, đối chiếu.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Description mới được lưu chính xác; field còn lại giữ baseline.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Failed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_05\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: ERROR (Katalon) – Timeout chờ toast Successfully Updated; không đủ bằng chứng xác nhận persistence.\nẢnh: RECRUIT_VAC_Update_02\\20261023_120736_956"
+    },
+    {
+      "row": 31,
+      "A": "RECRUIT_VAC_Update_03",
+      "B": "Sửa Positions và Hiring Manager",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Positions=4; NNLinhB201\n1. Mở VAC_EDIT; chỉnh Positions=4, chọn NNLinhB201.\n2. Save rồi reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Positions=4 và Hiring Manager=MANAGER_B sau tải lại.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Failed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_05\nPositive; Phân vùng tương đương\nAutomation: P1\n\nRun 20261023_115454: ERROR (Katalon) – Timeout chờ toast Successfully Updated; không đủ bằng chứng xác nhận persistence.\nẢnh: RECRUIT_VAC_Update_03\\20261023_120838_516"
+    },
+    {
+      "row": 32,
+      "A": "RECRUIT_VAC_CancelCreate_01",
+      "B": "Hủy tạo vacancy",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: Name=VAC_CANCEL_RUN; QA Engineer; NVThangA101\n1. Mở Add, điền đầy đủ và chưa Save.\n2. Nhấn Cancel, trở lại danh sách.\n3. Tìm VAC_CANCEL_RUN.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không tạo bản ghi VAC_CANCEL_RUN.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_05\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_CancelCreate_01\\20261023_121008_008"
+    },
+    {
+      "row": 33,
+      "A": "RECRUIT_VAC_CancelUpdate_01",
+      "B": "Hủy sửa vacancy giữ dữ liệu cũ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có QA Engineer, NVThangA101 hợp lệ; dữ liệu khác biệt theo RUN_ID.\nInput: VAC_EDIT; Name tạm='VAC_UNSAVED_RUN'\n1. Ghi baseline; mở edit và đổi Name.\n2. Nhấn Cancel trước Save.\n3. Mở lại VAC_EDIT.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Name và trường khác vẫn đúng baseline; không xuất hiện tên tạm.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Passed",
+      "G": "46318",
+      "H": "TD_RECRUIT_VAC_05\nPositive; Chuyển trạng thái\nAutomation: P1\n\nRun 20261023_115454: PASSED theo execution report.\nẢnh: RECRUIT_VAC_CancelUpdate_01\\20261023_121027_749"
+    }
+  ],
+  "RECRUIT_CAND": [
+    {
+      "row": 9,
+      "A": "RECRUIT_CAND_Create_01",
+      "B": "Tạo ứng viên tối thiểu",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN01; Email=an.run01@example.com; Vacancy=VAC_A\n1. Vào Recruitment > Candidates > Add.\n2. Nhập First, Last, Email và chọn VAC_A.\n3. Save; trở lại list, tìm đúng email và mở hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Tạo được ứng viên; tên, email và vacancy đúng input.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 10,
+      "A": "RECRUIT_CAND_Create_02",
+      "B": "Tạo ứng viên với thông tin đầy đủ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=Minh; Middle=Quang; Last=TranRUN02; Email=minh.run02@example.com; Phone=0900000002; Keywords=java,qa; Notes=demo; VAC_A\n1. Mở Add Candidate; nhập đủ dữ liệu và chọn VAC_A.\n2. Chọn consent theo trạng thái cho phép lưu; Save.\n3. Mở hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Lưu đúng tên đầy đủ, email, phone, vacancy, keyword và notes.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 11,
+      "A": "RECRUIT_CAND_Create_03",
+      "B": "Bỏ trống First Name",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First rỗng; Last=NguyenRUN03; Email=run03@example.com\n1. Mở Add Candidate, nhập Last và Email; First để rỗng.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "First Name báo Required; hồ sơ không được tạo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 12,
+      "A": "RECRUIT_CAND_Create_04",
+      "B": "Bỏ trống Last Name",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last rỗng; Email=run04@example.com\n1. Mở Add Candidate, nhập First/Email; Last để rỗng.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Last Name báo Required; hồ sơ không được tạo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 13,
+      "A": "RECRUIT_CAND_Create_05",
+      "B": "Bỏ trống Email",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN05; Email rỗng\n1. Mở Add Candidate, nhập First/Last, xóa Email.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Email báo Required; hồ sơ không được tạo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 14,
+      "A": "RECRUIT_CAND_Create_06",
+      "B": "Không chọn Vacancy tùy chọn",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN06; Email=run06@example.com; Vacancy rỗng\n1. Mở Add Candidate, điền First/Last/Email.\n2. Để trống Vacancy; Save; mở hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Nếu demo cho phép vacancy tùy chọn: lưu ứng viên và hiển thị Vacancy rỗng; ghi nhận chính xác hành vi.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nPositive; Phân vùng tương đương\nAutomation: P1\nCần kiểm tra UI: Theo hướng dẫn OrangeHRM, Vacancy không đánh dấu bắt buộc; kiểm tra trên demo."
+    },
+    {
+      "row": 15,
+      "A": "RECRUIT_CAND_Create_07",
+      "B": "Kiểm tra consent khi tạo hồ sơ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: First=An; Last=NguyenRUN07; Email=run07@example.com; Consent=On\n1. Mở Add Candidate, nhập thông tin bắt buộc.\n2. Bật checkbox consent (nếu có).\n3. Save và mở lại hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Lưu thành công; trạng thái consent đúng tùy chọn hoặc hệ thống có ghi nhận chọn đồng ý.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_01\nPositive; Phân vùng tương đương\nAutomation: P1\nCần kiểm tra UI: Demo có thể chỉ hiển thị consent ở form riêng; điều chỉnh nếu UI khác."
+    },
+    {
+      "row": 16,
+      "A": "RECRUIT_CAND_Create_08",
+      "B": "Email hợp lệ dạng example.com",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality.run08@example.com\n1. Add ứng viên tên riêng hợp lệ với email hợp lệ.\n2. Save và mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Email được lưu nguyên vẹn; có thể tìm đúng hồ sơ.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_02\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 17,
+      "A": "RECRUIT_CAND_Create_09",
+      "B": "Email thiếu ký tự @",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality.example.com\n1. Add ứng viên với First/Last hợp lệ; nhập Email thiếu @.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Email báo invalid; không tạo hồ sơ.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_02\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 18,
+      "A": "RECRUIT_CAND_Create_10",
+      "B": "Email thiếu phần domain",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Email=quality@\n1. Add ứng viên với First/Last hợp lệ; nhập Email=quality@.\n2. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Email báo invalid; không tạo hồ sơ.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_02\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 19,
+      "A": "RECRUIT_CAND_Create_11",
+      "B": "Số điện thoại dạng chữ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Phone='abcXYZ'; Email=run11@example.com\n1. Add hồ sơ với tên và email hợp lệ, Phone=abcXYZ.\n2. Save; kiểm tra trạng thái và hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không nhận số điện thoại sai dạng nếu có validation; ghi lại thông báo đúng UI.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_02\nNegative; Phân vùng tương đương\nAutomation: P1\nCần kiểm tra UI: Demo có thể cho phép Phone tự do; xác nhận quy tắc trước khi khóa kỳ vọng."
+    },
+    {
+      "row": 20,
+      "A": "RECRUIT_CAND_Create_12",
+      "B": "Số điện thoại hợp lệ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Phone=0900000012; Email=run12@example.com\n1. Add hồ sơ với First/Last/Email; nhập Phone=0900000012.\n2. Save, reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Contact Number giữ đúng '0900000012' và không mất số 0 đầu.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_02\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 21,
+      "A": "RECRUIT_CAND_UploadCV_01",
+      "B": "Tải lên CV PDF hợp lệ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.pdf; dung lượng <CV_LIMIT\n1. Chuẩn bị file PDF hợp lệ.\n2. Add Candidate; nhập đủ trường và chọn CV.\n3. Save rồi mở hồ sơ, đọc tên file.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "CV được đính kèm đúng tên và có thể mở/tải theo quyền của demo.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_03\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 22,
+      "A": "RECRUIT_CAND_UploadCV_02",
+      "B": "Tải lên CV DOCX hợp lệ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.docx; dung lượng <CV_LIMIT\n1. Chuẩn bị DOCX hợp lệ.\n2. Add Candidate và upload file.\n3. Save; mở chi tiết hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "CV DOCX được đính kèm và hiển thị đúng tên.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_03\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 23,
+      "A": "RECRUIT_CAND_UploadCV_03",
+      "B": "Tải CV định dạng không hợp lệ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_run.exe; dung lượng nhỏ\n1. Add Candidate với thông tin hợp lệ.\n2. Chọn resume_run.exe; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hệ thống từ chối định dạng không hỗ trợ; không lưu tệp .exe.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_03\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 24,
+      "A": "RECRUIT_CAND_UploadCV_04",
+      "B": "Tải CV vượt dung lượng tối đa",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: resume_oversize.pdf; dung lượng CV_LIMIT+1 byte\n1. Đọc giới hạn file được hiển thị trên UI.\n2. Add Candidate, chọn file PDF vượt đúng 1 byte; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hiển thị lỗi vượt giới hạn; file quá lớn không được đính kèm.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_03\nNegative; Phân tích giá trị biên\nAutomation: P1\nCần kiểm tra UI: CV_LIMIT lấy từ demo, không áp dụng mặc định 5MB của bản thương mại."
+    },
+    {
+      "row": 25,
+      "A": "RECRUIT_CAND_UploadCV_05",
+      "B": "Hủy chọn CV trước lưu",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Chọn resume_run.pdf rồi hủy/tắt form, tạo hồ sơ mới không file\n1. Mở Add, chọn CV hợp lệ nhưng chưa Save.\n2. Cancel/đóng form.\n3. Mở Add lại, tạo ứng viên khác không file.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không có CV của lần thao tác hủy trong hồ sơ mới; không phát sinh ứng viên lần đầu.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_03\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 26,
+      "A": "RECRUIT_CAND_Filter_01",
+      "B": "Lọc ứng viên theo Vacancy",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: VAC_A; CAND_FILTER_A thuộc VAC_A\n1. Vào Recruitment > Candidates.\n2. Chọn Vacancy=VAC_A; Search.\n3. Đối chiếu các dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "CAND_FILTER_A xuất hiện; kết quả thuộc VAC_A.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_04\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 27,
+      "A": "RECRUIT_CAND_Search_01",
+      "B": "Lọc theo Candidate Name",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Tên chính xác CAND_FILTER_A\n1. Mở Candidates; gõ tên, chọn đúng suggestion nếu được yêu cầu.\n2. Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hiện CAND_FILTER_A, không lẫn CAND_FILTER_B khác tên.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_04\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 28,
+      "A": "RECRUIT_CAND_Filter_02",
+      "B": "Lọc ứng viên theo Keywords",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Keyword='run_keyword_a' trên CAND_FILTER_A\n1. Mở Candidates; nhập Keywords=run_keyword_a; Search.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hiện ứng viên có keyword phù hợp, gồm CAND_FILTER_A.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_04\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 29,
+      "A": "RECRUIT_CAND_Filter_03",
+      "B": "Lọc kết hợp Vacancy và ngày ứng tuyển",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: VAC_A; From=RUN_DATE−1 ngày; To=RUN_DATE+1 ngày (ngày tạo fixture thực tế)\n1. Ghi nhận ngày ứng tuyển thật của CAND_FILTER_A.\n2. Chọn Vacancy=VAC_A và khoảng ngày bao phủ đúng ngày đó.\n3. Search; đối chiếu kết quả ngày và vacancy.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data.",
+      "D": "Chỉ xuất hiện ứng viên thỏa vacancy và ngày trong khoảng đã nhập.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_04\nPositive; Bảng quyết định\nAutomation: P1"
+    },
+    {
+      "row": 30,
+      "A": "RECRUIT_CAND_Reset_01",
+      "B": "Reset bộ lọc Candidates",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: Vacancy=VAC_A; Keywords=run_keyword_a\n1. Áp dụng hai điều kiện; Search.\n2. Nhấn Reset.\n3. Kiểm tra input và kết quả.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Hai filter về mặc định; danh sách trở lại trạng thái không lọc.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_04\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 31,
+      "A": "RECRUIT_CAND_Update_01",
+      "B": "Sửa Keywords và Notes hồ sơ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; Keywords=playwright,regression; Notes='Updated RUN'\n1. Mở chi tiết CAND_EDIT; ghi baseline.\n2. Edit, đổi Keywords/Notes; Save; reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Keywords và Notes đúng giá trị mới; email và vacancy không đổi.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 32,
+      "A": "RECRUIT_CAND_CancelUpdate_01",
+      "B": "Hủy chỉnh sửa hồ sơ ứng viên",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; Email tạm=unsaved@example.com\n1. Mở CAND_EDIT; ghi email gốc.\n2. Vào Edit, đổi email; nhấn Cancel/Back.\n3. Reload hồ sơ.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Email vẫn đúng baseline; không lưu email tạm.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_05\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 33,
+      "A": "RECRUIT_CAND_VerifyDetails_01",
+      "B": "Đối chiếu dữ liệu hồ sơ sau tải lại",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; có VAC_A đang hiệu lực; email example.com và fixture hồ sơ riêng theo RUN_ID.\nInput: CAND_EDIT; First, Last, Email, Contact, Vacancy theo baseline\n1. Mở CAND_EDIT; ghi 5 trường baseline.\n2. Tải lại; đối chiếu từng trường và danh sách.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Chi tiết và dòng danh sách nhất quán; không mất dữ liệu khi reload.",
+      "E": "Không phụ thuộc test case khác; fixture được thiết lập trước case và khôi phục sau case.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_CAND_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    }
+  ],
+  "RECRUIT_FLOW": [
+    {
+      "row": 9,
+      "A": "RECRUIT_FLOW_Status_01",
+      "B": "Kiểm tra trạng thái ứng viên mới",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_01; Vacancy=VAC_A; vừa tạo chưa thao tác\n1. Tạo F_NEW_01 từ giao diện Candidates.\n2. Mở chi tiết và Candidate History.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_01\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 10,
+      "A": "RECRUIT_FLOW_Shortlist_01",
+      "B": "Shortlist ứng viên mới",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_02 có status Application Initiated; Notes='Shortlist RUN'\n1. Mở F_NEW_02.\n2. Nhấn Shortlist; nhập Notes nếu có; xác nhận Save/Shortlist.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Status chuyển Shortlisted; History ghi sự kiện shortlist đúng ứng viên.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_01\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 11,
+      "A": "RECRUIT_FLOW_Reject_01",
+      "B": "Reject ứng viên từ trạng thái ban đầu",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_03 Application Initiated; Notes='Reject initial RUN'\n1. Mở F_NEW_03.\n2. Nhấn Reject; xác nhận trong hộp thoại.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Status chuyển Rejected; Candidate History có sự kiện reject.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_01\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 12,
+      "A": "RECRUIT_FLOW_Reject_02",
+      "B": "Reject ứng viên đã Shortlisted",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_04 đang Shortlisted; Notes='Reject shortlisted RUN'\n1. Mở F_SHORT_04.\n2. Nhấn Reject; xác nhận.\n3. Reload và xem History.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Trạng thái Rejected; lịch sử còn sự kiện shortlist cũ và thêm reject.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_01\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 13,
+      "A": "RECRUIT_FLOW_CancelShortlist_01",
+      "B": "Hủy hộp thoại Shortlist",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_05 Application Initiated; Notes='Không được lưu'\n1. Mở F_NEW_05; nhấn Shortlist.\n2. Điền Notes nếu có; nhấn Cancel/Back thay vì xác nhận.\n3. Reload.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Status vẫn Application Initiated; History không có sự kiện Shortlist mới.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_01\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 14,
+      "A": "RECRUIT_FLOW_ScheduleInterview_01",
+      "B": "Đặt lịch phỏng vấn với dữ liệu đầy đủ",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_06; Title='Interview RUN06'; Interviewer=INT_A; Date=2026-11-10; Time=10:30; Notes='First round'\n1. Mở F_SHORT_06 Shortlisted; nhấn Schedule Interview.\n2. Điền các trường chính xác và chọn INT_A từ gợi ý.\n3. Save; reload Candidate Details.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Chuyển sang Interview Scheduled; tiêu đề, người phỏng vấn, ngày 2026-11-10, giờ 10:30 và ghi chú đã lưu.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 15,
+      "A": "RECRUIT_FLOW_ScheduleInterview_02",
+      "B": "Bỏ trống Interview Title",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_07; Title rỗng; INT_A; Date=2026-11-10\n1. Mở Schedule Interview của F_SHORT_07.\n2. Để Title rỗng; điền các trường còn lại; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Interview Title hiển thị Required; chưa có lịch mới.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 16,
+      "A": "RECRUIT_FLOW_ScheduleInterview_03",
+      "B": "Bỏ trống Interviewer",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_08; Title='Interview RUN08'; Interviewer rỗng; Date=2026-11-10\n1. Mở Schedule Interview; điền Title và Date.\n2. Không chọn Interviewer; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Interviewer hiển thị Required; không tạo lịch.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 17,
+      "A": "RECRUIT_FLOW_ScheduleInterview_04",
+      "B": "Bỏ trống ngày phỏng vấn",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_09; Title='Interview RUN09'; INT_A; Date rỗng\n1. Mở Schedule Interview; điền Title và Interviewer.\n2. Xóa Date, Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Date hiển thị Required; không lưu lịch.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nNegative; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 18,
+      "A": "RECRUIT_FLOW_ScheduleInterview_05",
+      "B": "Ngày phỏng vấn không tồn tại",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_10; Date=31/02/2027; Title hợp lệ; INT_A\n1. Mở Schedule Interview.\n2. Nhập ngày 31/02/2027 theo định dạng UI (nếu datepicker chặn, ghi nhận).\n3. Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Ngày không hợp lệ bị chặn hoặc báo lỗi; không tạo lịch với ngày này.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nNegative; Phân vùng tương đương / Giá trị biên\nAutomation: P1"
+    },
+    {
+      "row": 19,
+      "A": "RECRUIT_FLOW_ScheduleInterview_06",
+      "B": "Thời gian sai định dạng",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_11; Time=25:99; Title hợp lệ; INT_A; Date hợp lệ\n1. Mở Schedule Interview.\n2. Nhập/paste giờ 25:99 vào Time; Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không nhận thời gian ngoài miền hợp lệ; chặn nhập hoặc báo lỗi.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nNegative; Phân vùng tương đương / Giá trị biên\nAutomation: P1\nCần kiểm tra UI: Kiểm tra giao diện Time có cho nhập tự do hay chỉ chọn giờ."
+    },
+    {
+      "row": 20,
+      "A": "RECRUIT_FLOW_ScheduleInterview_07",
+      "B": "Lưu ghi chú phỏng vấn",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_12; Title='Interview RUN12'; INT_A; Date=2026-11-12; Time=14:00; Notes='Đánh giá kỹ năng QA'\n1. Mở Schedule Interview, nhập dữ liệu đầy đủ.\n2. Nhập Notes có dấu; Save.\n3. Mở chi tiết/history của lịch.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Ghi chú hiển thị chính xác, không lỗi dấu; lịch được tạo đúng candidate.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_02\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 21,
+      "A": "RECRUIT_FLOW_SelectInterviewer_01",
+      "B": "Chọn interviewer qua autocomplete",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_13; INT_A nhân viên còn hiệu lực\n1. Mở Schedule Interview.\n2. Gõ tiền tố tên INT_A; chọn đúng suggestion.\n3. Điền Title/Date, Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Interviewer là INT_A, không lưu tên gõ tự do.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_03\nPositive; Phân vùng tương đương / Autocomplete\nAutomation: P1"
+    },
+    {
+      "row": 22,
+      "A": "RECRUIT_FLOW_SelectInterviewer_02",
+      "B": "Chọn nhiều interviewer",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_14; INT_A và INT_B khác người\n1. Mở Schedule Interview.\n2. Chọn INT_A, tiếp tục chọn INT_B qua suggestion.\n3. Điền Title/Date; Save; mở lại.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Lưu đúng cả hai interviewer, không trùng; hiển thị đúng trên chi tiết.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_03\nPositive; Phân vùng tương đương\nAutomation: P1\nCần kiểm tra UI: Chỉ chạy nếu bản demo hỗ trợ multi-select; nếu không, ghi Blocked và phiên bản."
+    },
+    {
+      "row": 23,
+      "A": "RECRUIT_FLOW_SelectInterviewer_03",
+      "B": "Không chọn interviewer đã xóa",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_15; gõ tên 'DELETED_INTERVIEWER_RUN' không tồn tại\n1. Mở Schedule Interview.\n2. Gõ tên không tồn tại vào Interviewer, không chọn suggestion.\n3. Điền Title/Date, Save.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không chấp nhận một chuỗi không khớp nhân viên còn hiệu lực; báo Required/Invalid.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_03\nNegative; Phân vùng tương đương / Autocomplete\nAutomation: P1"
+    },
+    {
+      "row": 24,
+      "A": "RECRUIT_FLOW_ValidateAction_01",
+      "B": "Schedule Interview không có ở trạng thái mới",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_16 Application Initiated\n1. Mở chi tiết F_NEW_16 chưa Shortlist.\n2. Kiểm tra nút hành động và menu.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không có thao tác Schedule Interview hợp lệ từ trạng thái đầu vào; phải Shortlist trước.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_04\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 25,
+      "A": "RECRUIT_FLOW_ValidateAction_02",
+      "B": "Schedule Interview xuất hiện sau Shortlist",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_17 Shortlisted\n1. Mở F_SHORT_17.\n2. Quan sát menu hành động.\n3. Nhấn Schedule Interview và kiểm tra form.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Nút Schedule Interview khả dụng; mở được form lịch của đúng candidate.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_04\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 26,
+      "A": "RECRUIT_FLOW_Status_02",
+      "B": "Trạng thái sau khi đặt lịch",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_18; Title='Interview RUN18'; INT_A; Date hợp lệ\n1. Mở F_SHORT_18; Schedule Interview đầy đủ.\n2. Save; trở lại chi tiết, kiểm tra trạng thái.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Status là Interview Scheduled; không còn status Shortlisted.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_04\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 27,
+      "A": "RECRUIT_FLOW_ValidateAction_03",
+      "B": "Không tái Shortlist sau khi Reject",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_REJECT_19 có trạng thái Rejected\n1. Mở F_REJECT_19, quan sát tất cả nút.\n2. Thử truy cập lại menu nếu có.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Không hiển thị thao tác Shortlist trái quy tắc trạng thái; status vẫn Rejected.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_04\nPositive; Chuyển trạng thái\nAutomation: P1\nCần kiểm tra UI: Ghi nhận flow nếu phiên bản hỗ trợ Re-activate ứng viên."
+    },
+    {
+      "row": 28,
+      "A": "RECRUIT_FLOW_CancelReject_01",
+      "B": "Hủy Reject không đổi trạng thái",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_20 Shortlisted\n1. Mở F_SHORT_20; nhấn Reject.\n2. Nhấn Cancel/Back trong dialog.\n3. Reload chi tiết.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Vẫn Shortlisted; không thêm bản ghi Reject vào History.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_04\nPositive; Chuyển trạng thái\nAutomation: P1"
+    },
+    {
+      "row": 29,
+      "A": "RECRUIT_FLOW_VerifyDetails_01",
+      "B": "Candidate Details chứa đúng bản ghi",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_21; name/email/vacancy cố định theo Test Data\n1. Vào Candidates; tìm bằng email F_NEW_21.\n2. Mở chi tiết, đối chiếu name/email/vacancy.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Tên, email, vacancy và trạng thái đúng một ứng viên; không hiển thị fixture khác.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 30,
+      "A": "RECRUIT_FLOW_History_01",
+      "B": "History sau khi tạo ứng viên",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_NEW_22 mới được tạo\n1. Mở F_NEW_22.\n2. Cuộn đến Candidate History, đọc các dòng.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Có dữ liệu sự kiện khởi tạo/đính vacancy theo cơ chế bản demo; không có event interview/reject.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 31,
+      "A": "RECRUIT_FLOW_History_02",
+      "B": "History sau Shortlist",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SHORT_23 đã chuyển từ Initiated bằng setup\n1. Mở F_SHORT_23, xem Candidate History.\n2. Mở View/chi tiết event nếu có.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Có event Shortlist gắn với đúng ứng viên và trình tự sau khi tạo.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 32,
+      "A": "RECRUIT_FLOW_History_03",
+      "B": "History sau Reject",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_REJECT_24 được reject từ Initiated\n1. Mở F_REJECT_24, xem History.\n2. Đối chiếu description, trạng thái và ghi chú.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Có event Reject của đúng ứng viên; trạng thái Rejected phù hợp event.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    },
+    {
+      "row": 33,
+      "A": "RECRUIT_FLOW_History_04",
+      "B": "History sau Schedule Interview",
+      "C": "Tiền điều kiện: Đã đăng nhập Admin/Recruitment; VAC_A và INTERVIEWER_A/B hiệu lực; ứng viên độc lập đúng trạng thái đầu vào.\nInput: F_SCHED_25 đã được đặt lịch Title='Interview RUN25'\n1. Mở F_SCHED_25 và Candidate History.\n2. Mở event phỏng vấn; đối chiếu Title/INT_A/Date.\nKết thúc: khôi phục / dọn dẹp fixture theo Test Data; không dùng bản ghi của người khác.",
+      "D": "Có event Interview Scheduled; chi tiết trùng dữ liệu lịch đã lưu và đúng candidate.",
+      "E": "Không phụ thuộc test khác; fixture đúng trạng thái được tạo trong setup.\nRiêng flow, không dùng candidate đã Rejected cho nhánh Shortlisted.",
+      "F": "Untested",
+      "H": "TD_RECRUIT_FLOW_05\nPositive; Phân vùng tương đương\nAutomation: P1"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TestCaseEntity>
+  <description>Lọc kết hợp Vacancy và ngày ứng tuyển
+Expected (workbook): Chỉ xuất hiện ứng viên thỏa vacancy và ngày trong khoảng đã nhập.</description>
+  <name>RECRUIT_CAND_Filter_03</name>
+  <tag>ASM7_NOT_RUN</tag>
+  <comment>Workbook RECRUIT_CAND!A29:H29; selectors need live verification.</comment>
+  <testCaseGuid>4e3e0c92-98cf-5842-bbbe-3cc2688b46fb</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,60 @@
+{
+  "ADM_USER": {
+    "module": "ADM_USER",
+    "exitCode": 0,
+    "total": 5,
+    "counts": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "blocked": 0,
+      "skipped": 0
+    },
+    "cases": [
+      {
+        "id": "ADM_USER_Create_02",
+        "title": "Bỏ trống trường bắt buộc",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 9242,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\screenshots\\08_ADM_USER_Create_02.png"
+      },
+      {
+        "id": "ADM_USER_Create_03",
+        "title": "Username đã tồn tại",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 11704,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\screenshots\\09_ADM_USER_Create_03.png"
+      },
+      {
+        "id": "ADM_USER_Create_05",
+        "title": "Hủy tạo tài khoản",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 12168,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\screenshots\\11_ADM_USER_Create_05.png"
+      },
+      {
+        "id": "ADM_USER_Username_01",
+        "title": "Username phải duy nhất",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 10418,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\screenshots\\14_ADM_USER_Username_01.png"
+      },
+      {
+        "id": "ADM_USER_Username_04",
+        "title": "Không chọn Employee",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 9751,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\screenshots\\17_ADM_USER_Username_04.png"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T11-54-56-854Z_initial_ADM_USER\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T11-54-56-854Z\\initial\\ADM_USER.log"
+  }
+}

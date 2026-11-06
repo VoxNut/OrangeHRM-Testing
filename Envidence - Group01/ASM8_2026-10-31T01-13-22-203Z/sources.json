@@ -1,0 +1,75 @@
+{
+  "commit": "2dd65b6e85b3db46b989cc3a628416f1dd5a3475",
+  "runId": "ASM8_2026-10-31T01-13-22-203Z",
+  "sources": [
+    {
+      "key": "pim-emp",
+      "member": "23130226",
+      "tool": "Playwright",
+      "source": "automation/23130226/Playwright/run-pim.mjs",
+      "sha256": "9e426bdaebedb1b9ba64d749045d44108a038e30c643ccc1d18dce72fb1b1a54",
+      "planned": 25
+    },
+    {
+      "key": "pim-details",
+      "member": "23130226",
+      "tool": "Playwright",
+      "source": "automation/23130226/Playwright/run-pim-details.mjs",
+      "sha256": "ac74322fc851c71821017e1eca134fda37380c6d83784b379b301f0880b35cae",
+      "planned": 50
+    },
+    {
+      "key": "leave",
+      "member": "22130254",
+      "tool": "Cypress",
+      "source": "automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+      "sha256": "728afa511a3b3b1e51b2351c099233099802e96298d5a597bcb24cf3d2f6ae6a",
+      "planned": 6
+    },
+    {
+      "key": "admin",
+      "member": "23130171",
+      "tool": "Playwright",
+      "source": "automation/23130171/Playwright/23130171_NguyenThiThuyLinh_ASM7.mjs",
+      "skip": "Chưa chạy: selector sửa/xóa .first()/.last() chưa giới hạn node do suite tạo; thiếu assertion ở một số case. Cần tác giả sửa fixture/cleanup trước khi chạy trên demo dùng chung.",
+      "sha256": "199cbea8812301aab5b98ba3852e56b468085b202c9327b5397a3d1fef945bd6",
+      "planned": 25
+    },
+    {
+      "key": "time",
+      "member": "23130339",
+      "tool": "Puppeteer",
+      "source": "automation/23130339/KatalonRecorder/23130339_TonBichTram_ASM7.js",
+      "skip": "Chưa chạy: dùng attendance/timesheet Admin dùng chung, catch bỏ qua lỗi, chưa có kết quả theo Case ID và exit code lỗi. Cần nhân viên test riêng, assertion và cleanup được đối chiếu.",
+      "sha256": "7c37e7701f40e36abe18500e5986d4b953a19482ce3a2dfb667aa4a4c2bbe3d8",
+      "planned": 6
+    },
+    {
+      "key": "recruit-vac",
+      "member": "23130299",
+      "tool": "Katalon Studio",
+      "source": "automation/23130299/KatalonStudio/Test Suites/RECRUIT_VAC_25_ASC_001_TO_025.ts",
+      "sha256": "4d8a43e1504228a97ed01004daa0d1d1ef067cc9ca5f5d32f5370be060878e09",
+      "skip": "Bỏ qua theo yêu cầu nhóm trưởng ngày 31/10/2026. Project thiếu Profiles/default.glbl và maintenance/preflight58-plan.json; chưa có Katalon Runtime Engine trên máy chạy.",
+      "planned": 25
+    },
+    {
+      "key": "recruit-cand",
+      "member": "23130299",
+      "tool": "Katalon Studio",
+      "source": "automation/23130299/KatalonStudio/Test Suites/RECRUIT_CAND_25_ASC_001_TO_025.ts",
+      "sha256": "c6a6d4deabea70decb455845f984ca1c4a391f4745312d0ddf7b4a923270902b",
+      "skip": "Bỏ qua theo yêu cầu nhóm trưởng ngày 31/10/2026. Project thiếu Profiles/default.glbl và maintenance/preflight58-plan.json; chưa có Katalon Runtime Engine trên máy chạy.",
+      "planned": 25
+    },
+    {
+      "key": "recruit-flow",
+      "member": "23130299",
+      "tool": "Katalon Studio",
+      "source": "automation/23130299/KatalonStudio/Test Suites/RECRUIT_FLOW_25_ASC_001_TO_025.ts",
+      "sha256": "40e57ea32516e31917f062398b83f698b506dec01b8110eb27109aabc1dca408",
+      "skip": "Bỏ qua theo yêu cầu nhóm trưởng ngày 31/10/2026. Project thiếu Profiles/default.glbl và maintenance/preflight58-plan.json; chưa có Katalon Runtime Engine trên máy chạy.",
+      "planned": 25
+    }
+  ]
+}

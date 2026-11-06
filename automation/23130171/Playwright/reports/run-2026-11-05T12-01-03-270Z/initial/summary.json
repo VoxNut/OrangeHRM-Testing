@@ -1,0 +1,28 @@
+{
+  "ADM_USER": {
+    "module": "ADM_USER",
+    "exitCode": 0,
+    "total": 1,
+    "counts": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "blocked": 0,
+      "skipped": 0
+    },
+    "cases": [
+      {
+        "id": "ADM_USER_Filter_05",
+        "title": "Kết hợp nhiều điều kiện",
+        "status": "Passed",
+        "message": "Test case thực hiện thành công.",
+        "durationMs": 8909,
+        "screenshot": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T12-01-03-270Z_initial_ADM_USER\\screenshots\\05_ADM_USER_Filter_05.png"
+      }
+    ],
+    "error": null,
+    "cleanupFailed": false,
+    "reportFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\evidence\\executions\\23130171\\2026-11-05T12-01-03-270Z_initial_ADM_USER\\results.json",
+    "logFile": "D:\\My WorkSpace\\Software Testing\\outputs\\linh-admin-check\\reports\\run-2026-11-05T12-01-03-270Z\\initial\\ADM_USER.log"
+  }
+}
