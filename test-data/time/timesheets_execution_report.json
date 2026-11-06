@@ -1,0 +1,212 @@
+[
+  {
+    "id": "TIME_MY_AddRow_01",
+    "description": "Kiểm tra thêm dòng công việc mới thành công",
+    "expected": "Dòng công việc mới xuất hiện và Save hiển thị thông báo thành công.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1379,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_AddRow_01.png"
+  },
+  {
+    "id": "TIME_MY_AddRow_02",
+    "description": "Kiểm tra báo lỗi khi thêm dòng trùng Project và Activity",
+    "expected": "Hệ thống từ chối lưu dòng có cùng Project và Activity.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1194,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_AddRow_02.png"
+  },
+  {
+    "id": "TIME_MY_DelRow_01",
+    "description": "Kiểm tra xóa dòng công việc khỏi bảng giờ",
+    "expected": "Số dòng giảm 1 và thay đổi được lưu thành công.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1236,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_DelRow_01.png"
+  },
+  {
+    "id": "TIME_MY_Input_01",
+    "description": "Kiểm tra nhập số giờ hợp lệ trong ngày",
+    "expected": "Giá trị 8 và 4.5 được lưu và giữ nguyên sau reload.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1378,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Input_01.png"
+  },
+  {
+    "id": "TIME_MY_Input_02",
+    "description": "Kiểm tra nhập 0 giờ cho ngày không làm việc",
+    "expected": "Giá trị 0 được lưu và giữ nguyên sau reload.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1300,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Input_02.png"
+  },
+  {
+    "id": "TIME_MY_Limit_01",
+    "description": "Kiểm tra chặn nhập quá 24 giờ trong một ngày",
+    "expected": "Không cho lưu giá trị 25 giờ trong một ngày.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1305,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Limit_01.png"
+  },
+  {
+    "id": "TIME_MY_Limit_02",
+    "description": "Kiểm tra tổng giờ nhiều Project trong một ngày vượt 24 giờ",
+    "expected": "Không cho lưu tổng 25 giờ ở cùng một ngày trên hai dòng.",
+    "actual": "Cần cấu hình TIMESHEET_PROJECT_2 là Project khác.",
+    "status": "BLOCKED",
+    "error": "Cần cấu hình TIMESHEET_PROJECT_2 là Project khác.",
+    "durationMs": 697,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Limit_02.png"
+  },
+  {
+    "id": "TIME_MY_Format_01",
+    "description": "Kiểm tra chặn số âm trong ô giờ",
+    "expected": "Giá trị -5 không được lưu.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 2060,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Format_01.png"
+  },
+  {
+    "id": "TIME_MY_Format_02",
+    "description": "Kiểm tra chặn chữ cái/ký tự đặc biệt trong ô giờ",
+    "expected": "Chuỗi abc không được lưu thành dữ liệu giờ.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 3142,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Format_02.png"
+  },
+  {
+    "id": "TIME_MY_Calc_01",
+    "description": "Kiểm tra Row Total tự tính theo hàng ngang",
+    "expected": "8 + 8 + 8 + 8 + 8 + 0 + 0 = 40.00.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1352,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Calc_01.png"
+  },
+  {
+    "id": "TIME_MY_Calc_02",
+    "description": "Kiểm tra Column Total tự tính theo chiều dọc",
+    "expected": "Hai dòng có 4 giờ cùng ngày tạo Column Total bằng 8.00.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 1595,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Calc_02.png"
+  },
+  {
+    "id": "TIME_MY_Nav_01",
+    "description": "Kiểm tra chuyển sang tuần kế tiếp",
+    "expected": "Mốc tuần thay đổi sau khi bấm Next Week.",
+    "actual": "Không tìm thấy nút Next Week.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Next Week.",
+    "durationMs": 1233,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Nav_01.png"
+  },
+  {
+    "id": "TIME_MY_Nav_02",
+    "description": "Kiểm tra chuyển về tuần trước",
+    "expected": "Mốc tuần thay đổi sau khi bấm Previous Week.",
+    "actual": "Không tìm thấy nút Previous Week.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Previous Week.",
+    "durationMs": 1222,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Nav_02.png"
+  },
+  {
+    "id": "TIME_MY_Save_01",
+    "description": "Kiểm tra Save Draft và dữ liệu sau reload",
+    "expected": "Giá trị đã lưu vẫn tồn tại sau khi F5 và trạng thái vẫn Not Submitted.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 2857,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Save_01.png"
+  },
+  {
+    "id": "TIME_MY_Reset_01",
+    "description": "Kiểm tra Cancel/Reset khi có thay đổi chưa lưu",
+    "expected": "Dữ liệu được hoàn tác về trạng thái ban đầu trước khi sửa.",
+    "actual": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Edit trên giao diện My Timesheet.",
+    "durationMs": 2821,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Reset_01.png"
+  },
+  {
+    "id": "TIME_MY_Submit_01",
+    "description": "Kiểm tra Submit Timesheet trống (không có giờ làm)",
+    "expected": "Hệ thống từ chối Submit bảng giờ chưa điền dữ liệu hoặc trống.",
+    "actual": "Không tìm thấy nút Submit.",
+    "status": "BLOCKED",
+    "error": "Không tìm thấy nút Submit.",
+    "durationMs": 1514,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Submit_01.png"
+  },
+  {
+    "id": "TIME_MY_Submit_02",
+    "description": "Kiểm tra Submit Timesheet hợp lệ thành công",
+    "expected": "Trạng thái chuyển thành Submitted sau khi nộp.",
+    "actual": "Bỏ qua test Submit do chưa bật biến môi trường RUN_DESTRUCTIVE_TESTS=true.",
+    "status": "BLOCKED",
+    "error": "Bỏ qua test Submit do chưa bật biến môi trường RUN_DESTRUCTIVE_TESTS=true.",
+    "durationMs": 1407,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Submit_02.png"
+  },
+  {
+    "id": "TIME_MY_State_01",
+    "description": "Kiểm tra khóa giao diện (Read-only) sau khi Submit",
+    "expected": "Các ô nhập giờ chuyển sang trạng thái chỉ đọc, ẩn nút chỉnh sửa.",
+    "actual": "Timesheet chưa ở trạng thái Submitted/Approved để kiểm tra Read-only.",
+    "status": "BLOCKED",
+    "error": "Timesheet chưa ở trạng thái Submitted/Approved để kiểm tra Read-only.",
+    "durationMs": 2325,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_State_01.png"
+  },
+  {
+    "id": "TIME_MY_State_02",
+    "description": "Kiểm tra trạng thái Timesheet bị từ chối (Rejected)",
+    "expected": "Hiển thị trạng thái Rejected và cho phép chỉnh sửa lại nếu cấu hình hỗ trợ.",
+    "actual": "Timesheet hiện không ở trạng thái Rejected trên tài khoản test này.",
+    "status": "BLOCKED",
+    "error": "Timesheet hiện không ở trạng thái Rejected trên tài khoản test này.",
+    "durationMs": 2278,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_State_02.png"
+  },
+  {
+    "id": "TIME_MY_State_03",
+    "description": "Kiểm tra trạng thái Timesheet đã được duyệt (Approved)",
+    "expected": "Hiển thị trạng thái Approved và khóa hoàn toàn các thao tác chỉnh sửa.",
+    "actual": "Timesheet hiện không ở trạng thái Approved trên tài khoản test này.",
+    "status": "BLOCKED",
+    "error": "Timesheet hiện không ở trạng thái Approved trên tài khoản test này.",
+    "durationMs": 3640,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_State_03.png"
+  },
+  {
+    "id": "TIME_MY_Comment_01",
+    "description": "Kiểm tra xem lịch sử Comment/Action Log của bảng giờ",
+    "expected": "Hiển thị khu vực lịch sử thao tác hoặc khung nhập ghi chú.",
+    "actual": "Không tìm thấy thông tin Comment hoặc Action Log trên trang.",
+    "status": "FAILED",
+    "error": "Không tìm thấy thông tin Comment hoặc Action Log trên trang.",
+    "durationMs": 1807,
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_timesheets\\TIME_MY_Comment_01.png"
+  }
+]

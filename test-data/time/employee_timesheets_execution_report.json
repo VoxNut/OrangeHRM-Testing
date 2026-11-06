@@ -1,0 +1,162 @@
+[
+  {
+    "caseId": "TIME_EMP_Search_01",
+    "description": "Tìm kiếm bảng giờ nhân viên theo Tên hợp lệ",
+    "expectedOutcome": "Hiển thị đúng bảng giờ nhân viên, thông tin tên và tuần chính xác",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Search_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Search_02",
+    "description": "Tìm kiếm với tên nhân viên không tồn tại",
+    "expectedOutcome": "Hiển thị cảnh báo No Records Found / Invalid, không chuyển hướng",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Search_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Search_03",
+    "description": "Bỏ trống ô tên nhân viên khi tìm kiếm",
+    "expectedOutcome": "Hiển thị thông báo bắt buộc nhập Required",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Search_03_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Approve_01",
+    "description": "Duyệt (Approve) Bảng giờ ở trạng thái Submitted",
+    "expectedOutcome": "Hiển thị Successfully Approved, trạng thái chuyển thành Approved",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Approve_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Approve_02",
+    "description": "Kiểm tra giao diện Timesheet sau khi được Approve",
+    "expectedOutcome": "Nút Approve/Reject bị vô hiệu hóa, bảng giờ chuyển Read-only",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Approve_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Reject_01",
+    "description": "Từ chối (Reject) Bảng giờ có kèm lý do/Comment",
+    "expectedOutcome": "Thông báo Successfully Rejected hiển thị, trạng thái chuyển Rejected",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Reject_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Reject_02",
+    "description": "Từ chối (Reject) Bảng giờ khi bỏ trống ô Comment",
+    "expectedOutcome": "Yêu cầu nhập lý do hoặc xử lý rõ ràng",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Reject_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Edit_01",
+    "description": "Admin chỉnh sửa ô số giờ trên Timesheet của nhân viên",
+    "expectedOutcome": "Lưu thành công, cột Total và tổng tuần tự động tính toán lại",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Edit_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Edit_02",
+    "description": "Admin thêm dòng Project/Activity mới cho nhân viên",
+    "expectedOutcome": "Thêm dòng mới thành công, dữ liệu lưu chính xác",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Edit_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Edit_03",
+    "description": "Admin xóa dòng công việc khỏi Timesheet của nhân viên",
+    "expectedOutcome": "Dòng công việc bị xóa, tổng giờ cập nhật giảm tương ứng",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Edit_03_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Edit_04",
+    "description": "Admin sửa số giờ vượt quá 24h/ngày trên bảng giờ nhân viên",
+    "expectedOutcome": "Báo lỗi Should not exceed 24 hours, chặn không cho lưu",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Edit_04_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Nav_01",
+    "description": "Xem bảng giờ nhân viên ở các tuần trước/sau",
+    "expectedOutcome": "Bảng hiển thị chính xác dữ liệu giờ làm việc theo tuần",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Nav_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Create_01",
+    "description": "Tạo mới Bảng giờ cho nhân viên chưa tự khai báo (Create Timesheet)",
+    "expectedOutcome": "Khởi tạo thành công bảng giờ mới, trạng thái lưu dạng nháp",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Create_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Log_01",
+    "description": "Kiểm tra lịch sử thao tác (Action Log / Audit Trail)",
+    "expectedOutcome": "Hiển thị chính xác người thực hiện, hành động, thời gian và lý do",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Log_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Status_01",
+    "description": "Lọc danh sách Timesheet theo trạng thái Submitted",
+    "expectedOutcome": "Danh sách chỉ trả về các Timesheet chờ duyệt",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Status_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Status_02",
+    "description": "Tra cứu Timesheet ở trạng thái Not Submitted",
+    "expectedOutcome": "Hiển thị đúng trạng thái Not Submitted cho phép Admin xem/nhắc nhở",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Status_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Reset_01",
+    "description": "Hủy thay đổi khi đang sửa Timesheet của nhân viên",
+    "expectedOutcome": "Các ô nhập liệu quay lại giá trị ban đầu, không lưu thay đổi",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Reset_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Bulk_01",
+    "description": "Kiểm tra duyệt đồng loạt (Bulk Approve)",
+    "expectedOutcome": "Tất cả Timesheet được chọn đồng loạt chuyển trạng thái Approved",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Bulk_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Export_01",
+    "description": "Xuất file/In thông tin Timesheet nhân viên",
+    "expectedOutcome": "Xuất dữ liệu ra đúng định dạng hoặc mở giao diện in hợp lệ",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Export_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_EMP_Security_01",
+    "description": "Kiểm tra bảo mật URL khi truy cập trực tiếp Timesheet nhân viên",
+    "expectedOutcome": "Hệ thống kiểm tra quyền hợp lệ trước khi hiển thị dữ liệu",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots_employee_timesheets\\TIME_EMP_Security_01_result.png",
+    "note": ""
+  }
+]
