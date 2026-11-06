@@ -1,0 +1,177 @@
+[
+  {
+    "caseId": "TIME_ATTEND_PunchIn_01",
+    "description": "Kiểm tra nhập giờ Punch In hợp lệ",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchIn_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_PunchOut_01",
+    "description": "Kiểm tra nhập giờ Punch Out hợp lệ",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchOut_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_PunchIn_02",
+    "description": "Kiểm tra báo lỗi khi nhập giờ Punch In tương lai",
+    "status": "FAILED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchIn_02_result.png",
+    "note": "Thực tế demo không chặn lỗi, vẫn cho phép lưu bản ghi"
+  },
+  {
+    "caseId": "TIME_ATTEND_PunchIn_03",
+    "description": "Kiểm tra báo lỗi khi nhập ngày Punch In tương lai",
+    "status": "FAILED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchIn_03_result.png",
+    "note": "Thực tế demo không chặn lỗi, vẫn cho phép lưu bản ghi"
+  },
+  {
+    "caseId": "TIME_ATTEND_PunchOut_02",
+    "description": "Kiểm tra báo lỗi giờ Out nhỏ hơn giờ In",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchOut_02_result.png",
+    "note": "Hệ thống chặn lỗi thành công"
+  },
+  {
+    "caseId": "TIME_ATTEND_PunchOut_03",
+    "description": "Kiểm tra báo lỗi ngày Out trước ngày In",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_PunchOut_03_result.png",
+    "note": "Hệ thống chặn lỗi thành công"
+  },
+  {
+    "caseId": "TIME_ATTEND_Format_01",
+    "description": "Kiểm tra định dạng ngày/giờ sai",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Format_01_result.png",
+    "note": "Hệ thống chặn lỗi thành công"
+  },
+  {
+    "caseId": "TIME_ATTEND_Timezone_01",
+    "description": "Kiểm tra múi giờ khi ghi nhận bản ghi",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Timezone_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Status_01",
+    "description": "Kiểm tra form Punch In mặc định",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Status_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Status_02",
+    "description": "Chuyển sang form Punch Out",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Status_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Status_03",
+    "description": "Trở về form Punch In sau khi Out",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Status_03_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Status_04",
+    "description": "Kiểm tra quên Out qua ngày",
+    "status": "FAILED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Status_04_result.png",
+    "note": "Thực tế demo không chặn lỗi, vẫn cho phép lưu bản ghi"
+  },
+  {
+    "caseId": "TIME_ATTEND_Status_05",
+    "description": "Punch In/Out nhiều lần liên tiếp",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Status_05_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Note_01",
+    "description": "Nhập Note hợp lệ thành công",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Note_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Note_02",
+    "description": "Bỏ trống Note khi chấm công",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Note_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Note_03",
+    "description": "Nhập note vượt quá 250 ký tự",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Note_03_result.png",
+    "note": "Hệ thống chặn lỗi thành công"
+  },
+  {
+    "caseId": "TIME_ATTEND_Record_01",
+    "description": "Tra cứu My Records theo ngày",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Record_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Record_02",
+    "description": "Tra cứu ngày không có dữ liệu",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Record_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Calc_01",
+    "description": "Kiểm tra tính toán Duration",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Calc_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Calc_02",
+    "description": "Kiểm tra tổng thời gian Total",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Calc_02_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_EmpRecord_01",
+    "description": "Tra cứu Employee Records",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_EmpRecord_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Edit_01",
+    "description": "Chỉnh sửa bản ghi Employee hợp lệ",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Edit_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Edit_02",
+    "description": "Chỉnh sửa bản ghi lỗi logic thời gian",
+    "status": "FAILED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Edit_02_result.png",
+    "note": "Thực tế demo không chặn lỗi, vẫn cho phép lưu bản ghi"
+  },
+  {
+    "caseId": "TIME_ATTEND_Permission_01",
+    "description": "Quyền truy cập menu Employee Records",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Permission_01_result.png",
+    "note": ""
+  },
+  {
+    "caseId": "TIME_ATTEND_Permission_02",
+    "description": "Kiểm tra thao tác phân quyền My Records",
+    "status": "PASSED",
+    "screenshot": "C:\\Users\\LENOVO\\Desktop\\DAI HOC\\Nam4_HK1\\Testing_CoNga\\DoAnCK\\automation\\23130339\\KatalonRecorder\\screenshots\\TIME_ATTEND_Permission_02_result.png",
+    "note": ""
+  }
+]
