@@ -1,0 +1,230 @@
+[
+  {
+    "id": "ADD_CORRUPT_PHOTO_1",
+    "inputs": {
+      "file": "fake.jpg",
+      "content": "plain text",
+      "attempt": 1,
+      "employeeId": "C9f6b2407f"
+    },
+    "startedAt": "2026-11-07T02:49:11.590Z",
+    "screenshots": [
+      "ADD_CORRUPT_PHOTO_1-input.png",
+      "ADD_CORRUPT_PHOTO_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 215,
+            "lastName": "Corrupte7a5fe84",
+            "firstName": "ASM9",
+            "middleName": "",
+            "employeeId": "C9f6b2407f",
+            "terminationId": null
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": [],
+        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:49:14.637Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "ADD_CORRUPT_PHOTO_2",
+    "inputs": {
+      "file": "fake.jpg",
+      "content": "plain text",
+      "attempt": 2,
+      "employeeId": "C9e7c923f8"
+    },
+    "startedAt": "2026-11-07T02:49:14.639Z",
+    "screenshots": [
+      "ADD_CORRUPT_PHOTO_2-input.png",
+      "ADD_CORRUPT_PHOTO_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 216,
+            "lastName": "Corrupte7a5fe84",
+            "firstName": "ASM9",
+            "middleName": "",
+            "employeeId": "C9e7c923f8",
+            "terminationId": null
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": [],
+        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:49:19.065Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "ADD_CORRUPT_PHOTO_3",
+    "inputs": {
+      "file": "fake.jpg",
+      "content": "plain text",
+      "attempt": 3,
+      "employeeId": "C91d761959"
+    },
+    "startedAt": "2026-11-07T02:49:19.066Z",
+    "screenshots": [
+      "ADD_CORRUPT_PHOTO_3-input.png",
+      "ADD_CORRUPT_PHOTO_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 217,
+            "lastName": "Corrupte7a5fe84",
+            "firstName": "ASM9",
+            "middleName": "",
+            "employeeId": "C91d761959",
+            "terminationId": null
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": [],
+        "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:49:22.394Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "PHOTO_READBACK_215",
+    "inputs": {
+      "id": "C9f6b2407f",
+      "key": "215"
+    },
+    "startedAt": "2026-11-07T02:51:38.391Z",
+    "screenshots": [
+      "PHOTO_READBACK_215-observed.png"
+    ],
+    "observations": [
+      {
+        "employee": "C9f6b2407f",
+        "photos": [
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7",
+            "width": 200,
+            "loaded": true
+          },
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/215",
+            "width": 0,
+            "loaded": true
+          }
+        ],
+        "http": 200,
+        "contentType": "image/jpeg",
+        "bytes": 45
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:51:41.575Z",
+    "runId": "ASM9_2026-11-07T02-51-02-710Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "f1901c1b88474bc32531222ba92fe9d8aa9cc96efbe6bc2d27a22a05ae4b2b84"
+  },
+  {
+    "id": "PHOTO_READBACK_216",
+    "inputs": {
+      "id": "C9e7c923f8",
+      "key": "216"
+    },
+    "startedAt": "2026-11-07T02:51:51.917Z",
+    "screenshots": [
+      "PHOTO_READBACK_216-observed.png"
+    ],
+    "observations": [
+      {
+        "employee": "C9e7c923f8",
+        "photos": [
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7",
+            "width": 200,
+            "loaded": true
+          },
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/216",
+            "width": 0,
+            "loaded": true
+          }
+        ],
+        "http": 200,
+        "contentType": "image/jpeg",
+        "bytes": 45
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:51:55.124Z",
+    "runId": "ASM9_2026-11-07T02-51-02-710Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "f1901c1b88474bc32531222ba92fe9d8aa9cc96efbe6bc2d27a22a05ae4b2b84"
+  },
+  {
+    "id": "PHOTO_READBACK_217",
+    "inputs": {
+      "id": "C91d761959",
+      "key": "217"
+    },
+    "startedAt": "2026-11-07T02:52:05.526Z",
+    "screenshots": [
+      "PHOTO_READBACK_217-observed.png"
+    ],
+    "observations": [
+      {
+        "employee": "C91d761959",
+        "photos": [
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/7",
+            "width": 200,
+            "loaded": true
+          },
+          {
+            "url": "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPhoto/empNumber/217",
+            "width": 0,
+            "loaded": true
+          }
+        ],
+        "http": 200,
+        "contentType": "image/jpeg",
+        "bytes": 45
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:52:08.696Z",
+    "runId": "ASM9_2026-11-07T02-51-02-710Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "f1901c1b88474bc32531222ba92fe9d8aa9cc96efbe6bc2d27a22a05ae4b2b84"
+  }
+]
