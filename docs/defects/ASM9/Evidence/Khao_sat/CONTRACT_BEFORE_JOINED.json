@@ -1,0 +1,74 @@
+{
+  "id": "CONTRACT_BEFORE_JOINED",
+  "inputs": {
+    "joinedDate": "2026-01-01",
+    "start": "2020-01-01",
+    "end": "2020-12-31"
+  },
+  "startedAt": "2026-11-07T02:40:16.583Z",
+  "screenshots": [
+    "CONTRACT_BEFORE_JOINED-input.png",
+    "CONTRACT_BEFORE_JOINED-observed.png"
+  ],
+  "observations": [
+    {
+      "http": 200,
+      "body": {
+        "data": {
+          "empNumber": 186,
+          "joinedDate": "2026-01-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        },
+        "meta": [],
+        "rels": []
+      },
+      "errors": []
+    },
+    {
+      "startDate": "2020-01-01",
+      "endDate": "2020-12-31",
+      "contractAttachment": {
+        "id": null,
+        "filename": null,
+        "size": null,
+        "fileType": null,
+        "attachedBy": null,
+        "attachedByName": null,
+        "attachedTime": null,
+        "attachedDate": null
+      }
+    }
+  ],
+  "status": "Observed",
+  "finishedAt": "2026-11-07T02:40:23.928Z",
+  "runId": "ASM9_2026-11-07T02-37-08-981Z"
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "WHITESPACE_SAVE_1",
+    "inputs": {
+      "employeeId": "   ",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:43:08.324Z",
+    "screenshots": [
+      "WHITESPACE_SAVE_1-input.png",
+      "WHITESPACE_SAVE_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "employeeId"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loader": 1,
+        "errors": []
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:43:32.907Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  },
+  {
+    "id": "WHITESPACE_SAVE_2",
+    "inputs": {
+      "employeeId": "   ",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:43:32.908Z",
+    "screenshots": [
+      "WHITESPACE_SAVE_2-input.png",
+      "WHITESPACE_SAVE_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "employeeId"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loader": 1,
+        "errors": []
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:43:57.322Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  },
+  {
+    "id": "WHITESPACE_SAVE_3",
+    "inputs": {
+      "employeeId": "   ",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:43:57.323Z",
+    "screenshots": [
+      "WHITESPACE_SAVE_3-input.png",
+      "WHITESPACE_SAVE_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "employeeId"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loader": 1,
+        "errors": []
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:44:21.907Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  }
+]

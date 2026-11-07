@@ -1,0 +1,45 @@
+{
+  "id": "SEARCH_SPACED_ID",
+  "inputs": {
+    "employeeId": " X981ac "
+  },
+  "startedAt": "2026-11-07T02:44:47.816Z",
+  "screenshots": [
+    "SEARCH_SPACED_ID-observed.png"
+  ],
+  "observations": [
+    {
+      "http": 200,
+      "body": {
+        "data": {
+          "empNumber": 195,
+          "lastName": "NhutB92d76c009",
+          "firstName": "G01N01",
+          "middleName": "Minh",
+          "employeeId": " X981ac ",
+          "otherId": "",
+          "drivingLicenseNo": "",
+          "drivingLicenseExpiredDate": null,
+          "gender": null,
+          "maritalStatus": "",
+          "birthday": null,
+          "terminationId": null,
+          "nationality": {
+            "id": null,
+            "name": null
+          }
+        },
+        "meta": [],
+        "rels": []
+      },
+      "errors": []
+    },
+    {
+      "search": " X981ac ",
+      "rowCount": 1
+    }
+  ],
+  "status": "Observed",
+  "finishedAt": "2026-11-07T02:45:02.519Z",
+  "runId": "ASM9_2026-11-07T02-41-15-979Z"
+}

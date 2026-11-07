@@ -1,0 +1,389 @@
+[
+  {
+    "id": "PARTIAL_JOB_SAVE_1",
+    "inputs": {
+      "oldJoined": "2024-01-01",
+      "newJoined": "2025-02-01",
+      "oldContract": "2024-01-01..2024-12-31",
+      "newContract": "2025-02-01..2025-12-31",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:47:05.449Z",
+    "screenshots": [
+      "PARTIAL_JOB_SAVE_1-input.png",
+      "PARTIAL_JOB_SAVE_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 213,
+            "joinedDate": "2025-02-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "contractHttp": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "contractAttachment"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "job": {
+          "empNumber": 213,
+          "joinedDate": "2025-02-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        },
+        "contract": {
+          "startDate": "2024-01-01",
+          "endDate": "2024-12-31",
+          "contractAttachment": {
+            "id": null,
+            "filename": null,
+            "size": null,
+            "fileType": null,
+            "attachedBy": null,
+            "attachedByName": null,
+            "attachedTime": null,
+            "attachedDate": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:41.389Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  },
+  {
+    "id": "PARTIAL_JOB_SAVE_2",
+    "inputs": {
+      "oldJoined": "2024-01-01",
+      "newJoined": "2025-02-01",
+      "oldContract": "2024-01-01..2024-12-31",
+      "newContract": "2025-02-01..2025-12-31",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:47:41.390Z",
+    "screenshots": [
+      "PARTIAL_JOB_SAVE_2-input.png",
+      "PARTIAL_JOB_SAVE_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 213,
+            "joinedDate": "2025-02-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "contractHttp": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "contractAttachment"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "job": {
+          "empNumber": 213,
+          "joinedDate": "2025-02-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        },
+        "contract": {
+          "startDate": "2024-01-01",
+          "endDate": "2024-12-31",
+          "contractAttachment": {
+            "id": null,
+            "filename": null,
+            "size": null,
+            "fileType": null,
+            "attachedBy": null,
+            "attachedByName": null,
+            "attachedTime": null,
+            "attachedDate": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:48:21.879Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  },
+  {
+    "id": "PARTIAL_JOB_SAVE_3",
+    "inputs": {
+      "oldJoined": "2024-01-01",
+      "newJoined": "2025-02-01",
+      "oldContract": "2024-01-01..2024-12-31",
+      "newContract": "2025-02-01..2025-12-31",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:48:21.880Z",
+    "screenshots": [
+      "PARTIAL_JOB_SAVE_3-input.png",
+      "PARTIAL_JOB_SAVE_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 213,
+            "joinedDate": "2025-02-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "contractHttp": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "contractAttachment"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "job": {
+          "empNumber": 213,
+          "joinedDate": "2025-02-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        },
+        "contract": {
+          "startDate": "2024-01-01",
+          "endDate": "2024-12-31",
+          "contractAttachment": {
+            "id": null,
+            "filename": null,
+            "size": null,
+            "fileType": null,
+            "attachedBy": null,
+            "attachedByName": null,
+            "attachedTime": null,
+            "attachedDate": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:49:12.345Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  }
+]

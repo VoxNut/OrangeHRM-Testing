@@ -1,0 +1,194 @@
+[
+  {
+    "id": "LICENSE_BEFORE_BIRTH_1",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "licenseExpiry": "1990-01-01",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:47:15.322Z",
+    "screenshots": [
+      "LICENSE_BEFORE_BIRTH_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "lastName": "NhutA92d76c009",
+            "firstName": "G01N01",
+            "middleName": "Minh",
+            "employeeId": "A92d76c009",
+            "otherId": "INITIAL",
+            "drivingLicenseNo": "B9-new",
+            "drivingLicenseExpiredDate": "1990-01-01",
+            "gender": null,
+            "maritalStatus": "",
+            "birthday": "2000-01-01",
+            "terminationId": null,
+            "nationality": {
+              "id": null,
+              "name": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "INITIAL",
+        "drivingLicenseNo": "B9-new",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:29.376Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "LICENSE_BEFORE_BIRTH_2",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "licenseExpiry": "1990-01-01",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:47:29.377Z",
+    "screenshots": [
+      "LICENSE_BEFORE_BIRTH_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "lastName": "NhutA92d76c009",
+            "firstName": "G01N01",
+            "middleName": "Minh",
+            "employeeId": "A92d76c009",
+            "otherId": "INITIAL",
+            "drivingLicenseNo": "B9-new",
+            "drivingLicenseExpiredDate": "1990-01-01",
+            "gender": null,
+            "maritalStatus": "",
+            "birthday": "2000-01-01",
+            "terminationId": null,
+            "nationality": {
+              "id": null,
+              "name": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "INITIAL",
+        "drivingLicenseNo": "B9-new",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:42.477Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "LICENSE_BEFORE_BIRTH_3",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "licenseExpiry": "1990-01-01",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:47:42.478Z",
+    "screenshots": [
+      "LICENSE_BEFORE_BIRTH_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "lastName": "NhutA92d76c009",
+            "firstName": "G01N01",
+            "middleName": "Minh",
+            "employeeId": "A92d76c009",
+            "otherId": "INITIAL",
+            "drivingLicenseNo": "B9-new",
+            "drivingLicenseExpiredDate": "1990-01-01",
+            "gender": null,
+            "maritalStatus": "",
+            "birthday": "2000-01-01",
+            "terminationId": null,
+            "nationality": {
+              "id": null,
+              "name": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "INITIAL",
+        "drivingLicenseNo": "B9-new",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:55.226Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  }
+]

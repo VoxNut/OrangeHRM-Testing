@@ -1,0 +1,350 @@
+[
+  {
+    "id": "JOIN_BEFORE_BIRTH_1",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "joinedDate": "1990-01-01",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:46:07.553Z",
+    "screenshots": [
+      "JOIN_BEFORE_BIRTH_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "joinedDate": "1990-01-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "personal": {
+          "empNumber": 186,
+          "lastName": "NhutA92d76c009",
+          "firstName": "G01N01",
+          "middleName": "Minh",
+          "employeeId": "A92d76c009",
+          "otherId": "INITIAL",
+          "drivingLicenseNo": "B9-new",
+          "drivingLicenseExpiredDate": "1990-01-01",
+          "gender": null,
+          "maritalStatus": "",
+          "birthday": "2000-01-01",
+          "terminationId": null,
+          "nationality": {
+            "id": null,
+            "name": null
+          }
+        },
+        "job": {
+          "empNumber": 186,
+          "joinedDate": "1990-01-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:46:31.345Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "JOIN_BEFORE_BIRTH_2",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "joinedDate": "1990-01-01",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:46:31.346Z",
+    "screenshots": [
+      "JOIN_BEFORE_BIRTH_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "joinedDate": "1990-01-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "personal": {
+          "empNumber": 186,
+          "lastName": "NhutA92d76c009",
+          "firstName": "G01N01",
+          "middleName": "Minh",
+          "employeeId": "A92d76c009",
+          "otherId": "INITIAL",
+          "drivingLicenseNo": "B9-new",
+          "drivingLicenseExpiredDate": "1990-01-01",
+          "gender": null,
+          "maritalStatus": "",
+          "birthday": "2000-01-01",
+          "terminationId": null,
+          "nationality": {
+            "id": null,
+            "name": null
+          }
+        },
+        "job": {
+          "empNumber": 186,
+          "joinedDate": "1990-01-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:46:52.934Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "JOIN_BEFORE_BIRTH_3",
+    "inputs": {
+      "birthday": "2000-01-01",
+      "joinedDate": "1990-01-01",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:46:52.935Z",
+    "screenshots": [
+      "JOIN_BEFORE_BIRTH_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "empNumber": 186,
+            "joinedDate": "1990-01-01",
+            "jobTitle": {
+              "id": null,
+              "title": null,
+              "isDeleted": null
+            },
+            "jobSpecificationAttachment": {
+              "id": null,
+              "filename": null
+            },
+            "empStatus": {
+              "id": null,
+              "name": null
+            },
+            "jobCategory": {
+              "id": null,
+              "name": null
+            },
+            "subunit": {
+              "id": null,
+              "name": null,
+              "unitId": null
+            },
+            "location": {
+              "id": null,
+              "name": null
+            },
+            "employeeTerminationRecord": {
+              "id": null,
+              "date": null
+            }
+          },
+          "meta": [],
+          "rels": []
+        },
+        "errors": []
+      },
+      {
+        "personal": {
+          "empNumber": 186,
+          "lastName": "NhutA92d76c009",
+          "firstName": "G01N01",
+          "middleName": "Minh",
+          "employeeId": "A92d76c009",
+          "otherId": "INITIAL",
+          "drivingLicenseNo": "B9-new",
+          "drivingLicenseExpiredDate": "1990-01-01",
+          "gender": null,
+          "maritalStatus": "",
+          "birthday": "2000-01-01",
+          "terminationId": null,
+          "nationality": {
+            "id": null,
+            "name": null
+          }
+        },
+        "job": {
+          "empNumber": 186,
+          "joinedDate": "1990-01-01",
+          "jobTitle": {
+            "id": null,
+            "title": null,
+            "isDeleted": null
+          },
+          "jobSpecificationAttachment": {
+            "id": null,
+            "filename": null
+          },
+          "empStatus": {
+            "id": null,
+            "name": null
+          },
+          "jobCategory": {
+            "id": null,
+            "name": null
+          },
+          "subunit": {
+            "id": null,
+            "name": null,
+            "unitId": null
+          },
+          "location": {
+            "id": null,
+            "name": null
+          },
+          "employeeTerminationRecord": {
+            "id": null,
+            "date": null
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:15.321Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  }
+]

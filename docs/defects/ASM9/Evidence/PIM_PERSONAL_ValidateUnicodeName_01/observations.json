@@ -1,0 +1,83 @@
+[
+  {
+    "id": "UNICODE_NAME_1",
+    "inputs": {
+      "firstName": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+      "codePoints": 16,
+      "utf16Units": 32,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:44:21.908Z",
+    "screenshots": [
+      "UNICODE_NAME_1-observed.png"
+    ],
+    "observations": [
+      {
+        "body": null,
+        "errors": [
+          "Should not exceed 30 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:44:30.490Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  },
+  {
+    "id": "UNICODE_NAME_2",
+    "inputs": {
+      "firstName": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+      "codePoints": 16,
+      "utf16Units": 32,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:44:30.492Z",
+    "screenshots": [
+      "UNICODE_NAME_2-observed.png"
+    ],
+    "observations": [
+      {
+        "body": null,
+        "errors": [
+          "Should not exceed 30 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:44:39.096Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  },
+  {
+    "id": "UNICODE_NAME_3",
+    "inputs": {
+      "firstName": "𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀𠀀",
+      "codePoints": 16,
+      "utf16Units": 32,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:44:39.096Z",
+    "screenshots": [
+      "UNICODE_NAME_3-observed.png"
+    ],
+    "observations": [
+      {
+        "body": null,
+        "errors": [
+          "Should not exceed 30 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:44:47.815Z",
+    "runId": "ASM9_2026-11-07T02-41-15-979Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "d793a116752e9ab649af319ae3e83ac1c3e8a00504165e81c0ada9e30369bbe2"
+  }
+]

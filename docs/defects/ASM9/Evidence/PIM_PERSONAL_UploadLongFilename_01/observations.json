@@ -1,0 +1,161 @@
+[
+  {
+    "id": "LONG_FILENAME_1",
+    "inputs": {
+      "filenameLength": 105,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:46:52.476Z",
+    "screenshots": [
+      "LONG_FILENAME_1-input.png",
+      "LONG_FILENAME_1-after-save.png",
+      "LONG_FILENAME_1-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "attachment"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loaderVisible": true
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:46:56.692Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  },
+  {
+    "id": "LONG_FILENAME_2",
+    "inputs": {
+      "filenameLength": 105,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:46:56.693Z",
+    "screenshots": [
+      "LONG_FILENAME_2-input.png",
+      "LONG_FILENAME_2-after-save.png",
+      "LONG_FILENAME_2-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "attachment"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loaderVisible": true
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:01.098Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  },
+  {
+    "id": "LONG_FILENAME_3",
+    "inputs": {
+      "filenameLength": 105,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:47:01.098Z",
+    "screenshots": [
+      "LONG_FILENAME_3-input.png",
+      "LONG_FILENAME_3-after-save.png",
+      "LONG_FILENAME_3-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 422,
+        "body": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {
+              "invalidParamKeys": [
+                "attachment"
+              ]
+            }
+          }
+        },
+        "errors": []
+      },
+      {
+        "loaderVisible": true
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:47:05.448Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  },
+  {
+    "id": "FILENAME_VALID_100",
+    "inputs": {
+      "filenameLength": 100
+    },
+    "startedAt": "2026-11-07T02:46:47.861Z",
+    "screenshots": [
+      "FILENAME_VALID_100-input.png",
+      "FILENAME_VALID_100-after-save.png",
+      "FILENAME_VALID_100-observed.png"
+    ],
+    "observations": [
+      {
+        "http": 200,
+        "body": {
+          "data": {
+            "id": 1,
+            "description": "ASM9 filename 100 valid",
+            "filename": "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV.pdf",
+            "size": 921,
+            "fileType": "application/pdf",
+            "attachedBy": 1,
+            "attachedByName": "Admin",
+            "attachedTime": "08:17",
+            "attachedDate": "2026-11-07"
+          },
+          "meta": {
+            "empNumber": 213,
+            "screen": "personal"
+          },
+          "rels": []
+        },
+        "errors": []
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:46:52.476Z",
+    "runId": "ASM9_2026-11-07T02-46-31-612Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "4f8fb7554204dfdaf5ee0e48fea27193d683350b5c1d3c7e64f94c392ec99ccd"
+  }
+]
