@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_FLOW_003",
+  "module": "RECRUIT_FLOW",
+  "title": "Mở Time picker tự đổi giờ phỏng vấn hợp lệ 11:59 PM thành 11:00 PM",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Opening the time picker changed valid11:59 PM to11:00 PM without selecting hour/minute/period,2/2 independent contexts. Altered draft was not Saved; fresh backend readback remained23:59.",
+  "actualResultAsReported": "1. Fresh GET và textbox xác nhận baseline 23:59 / 11:59 PM.\n2. Chỉ click mở picker, phút 59 chuyển thành 00; textbox thành 11:00 PM, không có thông báo.\n3. Hai lần độc lập tái hiện; Back/fresh GET vẫn giữ 23:59 vì không Save draft đổi.",
+  "reproductionAsReported": "Always trong phạm vi 2/2 browser contexts độc lập; altered-time Save=0. Chưa khẳng định lỗi persisted data.",
+  "severity": "Medium",
+  "priority": "P2",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Time_ban_dau_11_59_PM.png",
+      "purpose": "First attempt: valid11:59PM before opening picker",
+      "actualObservation": "Fresh persisted baseline23:59 established by direct GET.",
+      "sha256": "531e413fe84875a48d50a9e3815ef92d884396c834b49265b0091d2b96a37751",
+      "originalSource": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0206_persisted_2359_before_open_picker.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Mo_picker_thanh_11_00_PM.png",
+      "purpose": "First attempt: only opening picker changes draft",
+      "actualObservation": "No hour/minute/period selection, no altered-time Save.",
+      "sha256": "e3782ad52a1a1f9189372c5125ff2cd8a522e0cfb23d769d78b03ecee0cfd1c8",
+      "originalSource": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0209_time_after_opening_picker_without_selection_attempt1.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0203_native_get_response.json",
+      "sha256": "50752c1887a25ffcfb3cd215daab651dea7816bd4d869aab65d8536bda81f4be",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "requestAt": "2026-11-09T21:35:26.213627+07:00",
+        "responseAt": "2026-11-09T21:35:26.768928+07:00",
+        "method": "GET",
+        "path": "/web/index.php/api/v2/recruitment/candidates/85/interviews/7",
+        "status": 200,
+        "interview": {
+          "id": 7,
+          "interviewDate": "2026-11-10",
+          "interviewTime": "23:59"
+        }
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0205_time_widget_audit.json",
+      "sha256": "2aa43d56edf133d43aa328c61c12fbc49bd30eb9f3a8adb55b696dddb25bb8d2",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "at": "2026-11-09T21:35:27.810593+07:00",
+        "value": "11:59 PM",
+        "errors": [],
+        "TimeGroupVisibleText": "Time"
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0207_native_time_picker_open.json",
+      "sha256": "aa433acf085aa08f12d2f1f537831e5193d16e49c9a22392e81a7339e44ea344",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "at": "2026-11-09T21:35:28.323931+07:00",
+        "time": "11:00 PM",
+        "pickerInputs": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "11:00 PM",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--focus"
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "11",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--active oxd-time-hour-input-text"
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "00",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--active oxd-time-minute-input-text"
+          },
+          {
+            "type": "radio",
+            "name": "am",
+            "value": "AM",
+            "checked": false,
+            "visible": true,
+            "class": ""
+          },
+          {
+            "type": "radio",
+            "name": "pm",
+            "value": "PM",
+            "checked": true,
+            "visible": true,
+            "class": ""
+          }
+        ],
+        "TimeGroupVisibleText": null
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0254_native_get_response.json",
+      "sha256": "e3484ef41993b6e00e242a2b048dfac213e0919d1a7e3fb77389ae17d78ca68d",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "requestAt": "2026-11-09T21:43:32.986917+07:00",
+        "responseAt": "2026-11-09T21:43:33.394493+07:00",
+        "method": "GET",
+        "path": "/web/index.php/api/v2/recruitment/candidates/85/interviews/7",
+        "status": 200,
+        "interview": {
+          "id": 7,
+          "interviewDate": "2026-11-10",
+          "interviewTime": "23:59"
+        }
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0256_time_widget_audit.json",
+      "sha256": "c9993a0f3ad13e6de3bc0e943e1a0da6d48bfcf306b296f3c21ae130b9c2c6f4",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "at": "2026-11-09T21:43:34.894584+07:00",
+        "value": "11:59 PM",
+        "errors": [],
+        "TimeGroupVisibleText": "Time"
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0258_native_time_picker_open.json",
+      "sha256": "040d7b61f9b8015447a7a0abdc0a5896f236e5c5bc55650309d8c8f30dba47b6",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "at": "2026-11-09T21:43:35.371289+07:00",
+        "time": "11:00 PM",
+        "pickerInputs": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "11:00 PM",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--focus"
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "11",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--active oxd-time-hour-input-text"
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "00",
+            "checked": false,
+            "visible": true,
+            "class": "oxd-input oxd-input--active oxd-time-minute-input-text"
+          },
+          {
+            "type": "radio",
+            "name": "am",
+            "value": "AM",
+            "checked": false,
+            "visible": true,
+            "class": ""
+          },
+          {
+            "type": "radio",
+            "name": "pm",
+            "value": "PM",
+            "checked": true,
+            "visible": true,
+            "class": ""
+          }
+        ],
+        "TimeGroupVisibleText": null
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0278_native_get_response.json",
+      "sha256": "4a344c49278fd68bb5d9e76c97f206f7de88befecf67d8385f595e58a59efca7",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "requestAt": "2026-11-09T21:44:18.276855+07:00",
+        "responseAt": "2026-11-09T21:44:18.776963+07:00",
+        "method": "GET",
+        "path": "/web/index.php/api/v2/recruitment/candidates/85/interviews/7",
+        "status": 200,
+        "interview": {
+          "id": 7,
+          "interviewDate": "2026-11-10",
+          "interviewTime": "23:59"
+        }
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T03_TIME_BOUNDARY/raw/0280_time_widget_audit.json",
+      "sha256": "bd718e525201eaf1eff1fdb915167620ce1e31fdcde404b29f952c0f63cdcb2e",
+      "role": "Exact valid before/opening-only after/fresh unchanged persisted readback",
+      "observedFacts": {
+        "at": "2026-11-09T21:44:20.161912+07:00",
+        "value": "11:59 PM",
+        "errors": [],
+        "TimeGroupVisibleText": "Time"
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "Changed23:00 draft was never Saved; backend remained23:59.",
+    "Independent context screenshots have identical bytes to the first pair; only one PNG pair is copied, with alternate capture provenance in the manifest.",
+    "No claim of persisted wrong time, timezone rollover or notification dispatch."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

@@ -1,0 +1,202 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_CAND_004",
+  "module": "RECRUIT_CAND",
+  "title": "Phân trang Candidate không công bố trang hiện tại cho công nghệ hỗ trợ",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Visible selected-page CSS changed with pagination, but native page-number buttons and parent AX subtree exposed no current/selected or equivalent meaningful page-state text.",
+  "actualResultAsReported": "1. CSS đánh dấu trang chuyển 1→2; AX chỉ có page buttons không công bố current/selected/pressed hoặc mô tả tương đương.\n2. GET pagination và Previous keyboard hoạt động.\n3. Không thử actual screen-reader speech.",
+  "reproductionAsReported": "Always trong phạm vi 4/4 page1→page2 AX/DOM sequences (2 trước + 2 độc lập ở sprint cuối).",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Pagination_trang_2_luot_1.png",
+      "purpose": "Visible pagination page2 in first sequence",
+      "actualObservation": "CSS selected state and API offset50 are reconciled in metadata; colors alone can also reflect hover/focus.",
+      "sha256": "76894bfe64c5d959c5eca4d90acc13d134a35326a7b2f043bc5eefc742c7b3b5",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE07_FUNCTIONAL/raw/0343_pagination_page2_visual_state_no_ax_state_attempt1.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Pagination_trang_2_luot_doc_lap.png",
+      "purpose": "Independent page2 sequence",
+      "actualObservation": "This is a separate historical capture, not a screenshot of an AX inspector.",
+      "sha256": "51cb1b094d790ddc0915dfc5356c069a5d3784c199cde3c8da121eb6eb09efc1",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE07_FUNCTIONAL/raw/0397_pagination_page2_visual_state_no_ax_state_attempt2.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE07_FUNCTIONAL/raw/0390_pagination_current_semantics.json",
+      "sha256": "dd41034b201408be03983d887dc38ee385a65f93cc052927812ea56657d83c43",
+      "role": "Exact relevant structured historical observation; no new test",
+      "observedFacts": {
+        "at": "2026-11-09T13:40:29.315606+07:00",
+        "text": "1\n2",
+        "AX": "- navigation \"Pagination Navigation\":\n  - list:\n    - listitem:\n      - button \"1\"\n    - listitem:\n      - button \"2\"\n    - listitem:\n      - button \"\"",
+        "controls": [
+          {
+            "text": "1",
+            "selectedCSS": true,
+            "bg": "rgb(241, 242, 245)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "2",
+            "selectedCSS": false,
+            "bg": "rgb(255, 255, 255)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "",
+            "selectedCSS": false,
+            "bg": "rgb(255, 255, 255)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE07_FUNCTIONAL/raw/0395_pagination_current_semantics.json",
+      "sha256": "1a3be2fe893bfa6d9f65cfbcffe1f3074f734a15ad24df7f96ea71843b7a5aa5",
+      "role": "Exact relevant structured historical observation; no new test",
+      "observedFacts": {
+        "at": "2026-11-09T13:40:32.729104+07:00",
+        "text": "1\n2",
+        "AX": "- navigation \"Pagination Navigation\":\n  - list:\n    - listitem:\n      - button \"\"\n    - listitem:\n      - button \"1\"\n    - listitem:\n      - button \"2\"",
+        "controls": [
+          {
+            "text": "",
+            "selectedCSS": false,
+            "bg": "rgb(255, 255, 255)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "1",
+            "selectedCSS": false,
+            "bg": "rgb(21, 244, 233)",
+            "color": "rgb(6, 0, 0)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "2",
+            "selectedCSS": true,
+            "bg": "rgb(241, 242, 245)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T05_PAGINATION/raw/0330_pagination_current_semantics.json",
+      "sha256": "d6721f0d72d6096fa788fef8d8a97c55b3a6280d6897aaa70883c1bea0594403",
+      "role": "Independent final-sprint current-page DOM/AX observation",
+      "observedFacts": {
+        "at": "2026-11-09T21:45:17.024850+07:00",
+        "text": "1\n2",
+        "AX": "- navigation \"Pagination Navigation\":\n  - list:\n    - listitem:\n      - button \"\"\n    - listitem:\n      - button \"1\"\n    - listitem:\n      - button \"2\"",
+        "controls": [
+          {
+            "text": "",
+            "selectedCSS": false,
+            "bg": "rgb(255, 255, 255)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "1",
+            "selectedCSS": false,
+            "bg": "rgb(21, 244, 233)",
+            "color": "rgb(6, 0, 0)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "2",
+            "selectedCSS": true,
+            "bg": "rgb(241, 242, 245)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T05_PAGINATION/raw/0347_pagination_current_semantics.json",
+      "sha256": "9a416864d99352ca3f06f4581e674124e6552f5b5139758682d773a5b4a8084f",
+      "role": "Independent final-sprint current-page DOM/AX observation",
+      "observedFacts": {
+        "at": "2026-11-09T21:46:32.017574+07:00",
+        "text": "1\n2",
+        "AX": "- navigation \"Pagination Navigation\":\n  - list:\n    - listitem:\n      - button \"\"\n    - listitem:\n      - button \"1\"\n    - listitem:\n      - button \"2\"",
+        "controls": [
+          {
+            "text": "",
+            "selectedCSS": false,
+            "bg": "rgb(255, 255, 255)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "1",
+            "selectedCSS": false,
+            "bg": "rgb(21, 244, 233)",
+            "color": "rgb(6, 0, 0)",
+            "disabled": false,
+            "attributes": {}
+          },
+          {
+            "text": "2",
+            "selectedCSS": true,
+            "bg": "rgb(241, 242, 245)",
+            "color": "rgb(146, 155, 170)",
+            "disabled": false,
+            "attributes": {}
+          }
+        ]
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "PNG does not show the computed accessibility tree.",
+    "Absence of aria-current alone is not proof; full navigation AX and equivalent state/text were inspected.",
+    "Keyboard page navigation worked; no actual screen-reader speech or website-wide WCAG verdict."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

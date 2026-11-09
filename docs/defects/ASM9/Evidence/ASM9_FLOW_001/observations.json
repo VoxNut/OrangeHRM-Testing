@@ -1,0 +1,379 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_FLOW_001",
+  "module": "RECRUIT_FLOW",
+  "title": "Save History không hiển thị trạng thái đang xử lý khi request chưa hoàn tất",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "During valid History Save, samples and screenshots completed before response headers showed no form loader/busy feedback; PUT200 and fresh note readback succeeded.",
+  "actualResultAsReported": "1. Trong cả hai Save, không có form loader ở các DOM samples khi request còn pending; Save vẫn hiển thị.\n2. HTTP 200 và fresh readback cho thấy Notes đã lưu đúng.\n3. Không phát hiện double-submit và không mô phỏng mạng chậm.",
+  "reproductionAsReported": "Always trong phạm vi 2/2 valid History Saves độc lập. DOM frames trong mỗi lượt không được tính thành lượt tái hiện mới.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_History_truoc_Save_hop_le.png",
+      "purpose": "Draft valid note before the one native Save",
+      "actualObservation": "No loading expected before dispatch.",
+      "sha256": "7ada166f78497fe66cd4ad866c7f4839b1e6c15587fec3e22c1a9f6198177d14",
+      "originalSource": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0137_p1_history236_before_single_note_save.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_History_khi_request_dang_pending.png",
+      "purpose": "History remains visible during the actual pending request",
+      "actualObservation": "Timing metadata establishes screenshot occurred before response headers; image alone does not prove pending.",
+      "sha256": "bfdcb698f1d76a37cc7ac4b13c1c0d911559b26d0b077e9e74d2367bd1173c11",
+      "originalSource": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0140_natural_pending_historySave.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "03_History_note_sau_fresh_read.png",
+      "purpose": "Fresh persisted note after successful Save",
+      "actualObservation": "Direct fresh read verifies the synthetic note; not a data-loss finding.",
+      "sha256": "d322e6224f18187d792973face309fae48ffd51f1ac380b04e8a8e6543b59ba1",
+      "originalSource": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0166_p1_history236_fresh_note_verified.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "04_Khong_busy_feedback_o_luot_doc_lap.png",
+      "purpose": "Independent valid History Save pending capture",
+      "actualObservation": "Second independent Save, same missing busy feedback; no double-click or duplicate write claim.",
+      "sha256": "63eb2d2bc37f088c478c26e4eb8cdf3475f9afc41ecbe6693b4cce155f111b68",
+      "originalSource": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_G_FLOW_RETEST/raw/0185_natural_pending_historySave.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0141_natural_pending_state_samples.json",
+      "sha256": "c870034043de3bba8f5c8572397dd63200eee7ee0cadf70bf47b871c0519cc88",
+      "role": "Unthrottled naturally pending request timing and UI samples",
+      "observedFacts": {
+        "requestAt": "2026-11-09T00:00:33.371984+07:00",
+        "headersAt": "2026-11-09T00:00:33.782425+07:00",
+        "frames": [
+          {
+            "sampleStartedAt": "2026-11-09T00:00:33.382150+07:00",
+            "sampleCompletedAt": "2026-11-09T00:00:33.390859+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.008755599999858532,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T00:00:33.440689+07:00",
+            "sampleCompletedAt": "2026-11-09T00:00:33.447815+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.06571020000046701,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T00:00:33.629039+07:00",
+            "sampleCompletedAt": "2026-11-09T00:00:33.635587+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.25347730000066804,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T00:00:33.676328+07:00",
+            "sampleCompletedAt": "2026-11-09T00:00:33.683932+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.3018320000010135,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T00:00:33.738997+07:00",
+            "sampleCompletedAt": "2026-11-09T00:00:33.745857+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.363766399999804,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          }
+        ],
+        "networkManipulation": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_G_FLOW_RETEST/raw/0187_natural_pending_state_samples.json",
+      "sha256": "206b44603a6c2d8b7913aa8743e737531af57a18db052c401ea6f166792aa618",
+      "role": "Unthrottled naturally pending request timing and UI samples",
+      "observedFacts": {
+        "requestAt": "2026-11-09T12:31:37.544665+07:00",
+        "headersAt": "2026-11-09T12:31:38.388432+07:00",
+        "frames": [
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.554183+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.563967+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.009841399998549605,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.607051+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.614002+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.059878199999729986,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.793087+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.800612+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.24648659999911615,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.842429+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.868844+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.31476719999955094,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.919552+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.929250+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.375177399999302,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:37.981450+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:37.990169+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.4360789999991539,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.043801+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.051336+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.4972311000001355,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.105466+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.113613+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.559492099999261,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.169073+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.176916+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.6227959999996528,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.230241+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.236838+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.6827247999990504,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.292548+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.299128+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.7450302999986889,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          },
+          {
+            "sampleStartedAt": "2026-11-09T12:31:38.353844+07:00",
+            "sampleCompletedAt": "2026-11-09T12:31:38.359895+07:00",
+            "beforeResponseHeadersAtEnd": true,
+            "elapsedFromObserverStart": 0.8057744999987335,
+            "loaders": [],
+            "SaveButtons": [
+              {
+                "text": "Save",
+                "disabled": false,
+                "type": "submit"
+              }
+            ],
+            "errors": []
+          }
+        ],
+        "networkManipulation": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0142_native_mutation_response.json",
+      "sha256": "22b37f38faa841f90ce73b4cfd20fe8dd7a5c03fc062cf537b37746fe2f25fc1",
+      "role": "Original valid History PUT response metadata",
+      "observedFacts": {
+        "requestAt": "2026-11-09T00:00:33.371984+07:00",
+        "responseAt": "2026-11-09T00:00:33.782425+07:00",
+        "method": "PUT",
+        "path": "/web/index.php/api/v2/recruitment/candidates/87/history/236",
+        "status": 200
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE01_HISTORY_LOADING/raw/0165_fresh_mutation_reconciliation.json",
+      "sha256": "899925acdf1233a65be877505a5cb816e331afabf9635e2c350fa0a5a650030b",
+      "role": "Persisted note consistency; no applicant contact fields",
+      "observedFacts": {
+        "outcome": "VERIFIED_OUTCOME",
+        "mismatches": {},
+        "otherChanges": {},
+        "freshHistoryNote": "F9_23130299_234101_8cba0d_HISTORY_VALID_A01"
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "Still image alone does not establish pending; request/header and screenshot intervals are included.",
+    "No throttling or response mock was used.",
+    "No duplicate submission or persisted data loss was demonstrated.",
+    "Source loading/isLoading mismatch is corroboration, not a new defect count."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

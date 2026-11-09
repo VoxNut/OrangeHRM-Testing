@@ -1,0 +1,61 @@
+{
+  "suiteId": "STANDALONE",
+  "caseId": "RECRUIT_FLOW_Status_01",
+  "runId": "4135020d-052d-4f23-a1d9-194ced588aeb",
+  "executionId": "4135020d-052d-4f23-a1d9-194ced588aeb",
+  "caseRunId": "c7f16afd-ccf8-4a7f-9b98-a3723bc3017d",
+  "processId": 2536,
+  "workerId": "main-1",
+  "timestamp": "2026-10-30T19:47:42.135435300+07:00",
+  "finalResult": "PASSED",
+  "checkpoints": [
+    {
+      "timestamp": "2026-10-30T19:50:06.952568500+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94",
+      "checkpoint": "BEFORE_ACTION_WORKFLOW",
+      "kind": "before",
+      "expected": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",
+      "observed": {
+        "phase": "BEFORE_ACTION_WORKFLOW",
+        "url": "/web/index.php/recruitment/addCandidate/94",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 679,
+      "screenshotPath": "C:\\Users\\Admin\\IdeaProjects\\OrangeHRM-Testing\\evidence\\executions\\23130299\\RECRUIT_FLOW_4135020d-052d-4f23-a1d9-194ced588aeb\\screenshots\\RECRUIT_FLOW_Status_01\\c7f16afd-ccf8-4a7f-9b98-a3723bc3017d\\01_BEFORE_ACTION.png",
+      "sha256": "802271020e344660217a2db9db7eca2353e9312c8b474ccbcaba17f8c345935e"
+    },
+    {
+      "timestamp": "2026-10-30T19:50:17.865743800+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94",
+      "checkpoint": "ASSERTIONS_COMPLETED",
+      "kind": "observation",
+      "expected": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",
+      "observed": {
+        "phase": "ASSERTIONS_COMPLETED",
+        "url": "/web/index.php/recruitment/addCandidate/94",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 762,
+      "screenshotPath": "C:\\Users\\Admin\\IdeaProjects\\OrangeHRM-Testing\\evidence\\executions\\23130299\\RECRUIT_FLOW_4135020d-052d-4f23-a1d9-194ced588aeb\\screenshots\\RECRUIT_FLOW_Status_01\\c7f16afd-ccf8-4a7f-9b98-a3723bc3017d\\02_ASSERTIONS.png",
+      "sha256": "802271020e344660217a2db9db7eca2353e9312c8b474ccbcaba17f8c345935e"
+    },
+    {
+      "timestamp": "2026-10-30T19:50:18.561748500+07:00",
+      "browser": "chrome",
+      "url": "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/94",
+      "checkpoint": "RESULT",
+      "kind": "terminal",
+      "expected": "Trạng thái đầu vào là Application Initiated hoặc nhãn khởi tạo tương đương; chưa có sự kiện Shortlist/Reject.",
+      "observed": {
+        "phase": "RESULT",
+        "url": "/web/index.php/recruitment/addCandidate/94",
+        "assertions": "Final result supplied by Katalon AfterTestCase"
+      },
+      "elapsedMs": 670,
+      "screenshotPath": "C:\\Users\\Admin\\IdeaProjects\\OrangeHRM-Testing\\evidence\\executions\\23130299\\RECRUIT_FLOW_4135020d-052d-4f23-a1d9-194ced588aeb\\screenshots\\RECRUIT_FLOW_Status_01\\c7f16afd-ccf8-4a7f-9b98-a3723bc3017d\\03_RESULT.png",
+      "sha256": "802271020e344660217a2db9db7eca2353e9312c8b474ccbcaba17f8c345935e"
+    }
+  ]
+}

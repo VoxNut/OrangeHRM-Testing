@@ -1,0 +1,167 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_FLOW_002",
+  "module": "RECRUIT_FLOW",
+  "title": "Interview Time âm thầm xóa giờ nhập sai sau blur mà không báo nguyên nhân",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Invalid25:99 PM input was retained while typing, then cleared on native Tab/blur without inline/toast feedback. Valid correction worked; no invalid Save.",
+  "actualResultAsReported": "1. Sau khi gõ, input còn chuỗi sai; khi Tab/blur, nó thành rỗng ngay.\n2. Không thấy inline error hoặc toast tại các trường hợp đã quan sát.\n3. Giá trị hợp lệ vẫn xử lý chính xác; không có invalid Save hoặc persisted loss.",
+  "reproductionAsReported": "Always trong phạm vi 3/3 fresh-form sequences (Schedule + History + retest độc lập). Không thử server nhận giờ sai.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Time_bi_xoa_sau_Tab_tren_Schedule.png",
+      "purpose": "Schedule form after invalid-time blur",
+      "actualObservation": "Field is blank and no error shown; the exact invalid text before blur is recorded in JSON.",
+      "sha256": "a544b9d550d6c3081669562b5456b6ca8e2a74177606c77c76fca2b7e18b6c2f",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE06_TIME/raw/0237_invalid_time_cleared_no_error_attempt1.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Time_bi_xoa_o_History_doc_lap.png",
+      "purpose": "Independent History form after invalid-time blur",
+      "actualObservation": "Fresh form reproduces the same silent clearing; not an image of the invalid text before blur.",
+      "sha256": "217b30c08a77772845d1095436570e022596e6c38f11d4f16269da555d82a144",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE06_TIME/raw/0288_invalid_time_cleared_no_error_attempt2.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE06_TIME/raw/0231_input_and_blur.json",
+      "sha256": "f3b1657f64d04de55cbb1849d10186d85d62a8d6a368a7fa0c1f56385b3672d7",
+      "role": "Native invalid time input and blur result",
+      "observedFacts": {
+        "at": "2026-11-09T13:32:39.433933+07:00",
+        "label": "Time",
+        "exactInput": "10:30 AM",
+        "codePointLength": 8,
+        "afterTyping": "10:30 AM",
+        "afterBlur": "10:30 AM",
+        "inlineErrors": [],
+        "toasts": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE06_TIME/raw/0235_input_and_blur.json",
+      "sha256": "0cd924b5455032958809cfbf4f21b9978e1d8cdde5fd52849afc35ee846cf0be",
+      "role": "Native invalid time input and blur result",
+      "observedFacts": {
+        "at": "2026-11-09T13:32:40.150047+07:00",
+        "label": "Time",
+        "exactInput": "25:99 PM",
+        "codePointLength": 8,
+        "afterTyping": "25:99 PM",
+        "afterBlur": "",
+        "inlineErrors": [],
+        "toasts": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE06_TIME/raw/0286_input_and_blur.json",
+      "sha256": "70f15ac5900068756daee8af1182e478a7b179f1cb1ff07d8ef52f797d2d904f",
+      "role": "Native invalid time input and blur result",
+      "observedFacts": {
+        "at": "2026-11-09T13:35:46.325005+07:00",
+        "label": "Time",
+        "exactInput": "25:99 PM",
+        "codePointLength": 8,
+        "afterTyping": "25:99 PM",
+        "afterBlur": "",
+        "inlineErrors": [],
+        "toasts": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T06_TIME_RETEST/raw/0365_input_and_blur.json",
+      "sha256": "5b9013cbb6ac8f097601e890ca4687b45105db041ad022aa4335943abee24e7c",
+      "role": "Independent final-sprint invalid-time/correction read-only retest",
+      "observedFacts": {
+        "at": "2026-11-09T21:46:45.848871+07:00",
+        "label": "Time",
+        "exactInput": "25:99 PM",
+        "codePointLength": 8,
+        "afterTyping": "25:99 PM",
+        "afterBlur": "",
+        "TimeGroupVisibleText": null
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T06_TIME_RETEST/raw/0366_time_widget_audit.json",
+      "sha256": "10599ac92d014f41fc975c1780712584af4a8fa50b33ea24af80036d8b0c333e",
+      "role": "Independent final-sprint invalid-time/correction read-only retest",
+      "observedFacts": {
+        "at": "2026-11-09T21:46:45.875828+07:00",
+        "value": "",
+        "attributes": {
+          "type": "text",
+          "placeholder": "hh:mm",
+          "pattern": null,
+          "maxlength": null,
+          "aria": null
+        },
+        "errors": [],
+        "TimeGroupVisibleText": "Time"
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T06_TIME_RETEST/raw/0368_input_and_blur.json",
+      "sha256": "b021f7f612550c8d866b98d230089fdbf5a0f9f675125ba7f5623f685f443993",
+      "role": "Independent final-sprint invalid-time/correction read-only retest",
+      "observedFacts": {
+        "at": "2026-11-09T21:46:46.411808+07:00",
+        "label": "Time",
+        "exactInput": "11:59 PM",
+        "codePointLength": 8,
+        "afterTyping": "11:59 PM",
+        "afterBlur": "11:59 PM",
+        "TimeGroupVisibleText": null
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T06_TIME_RETEST/raw/0384_time_widget_audit.json",
+      "sha256": "320f389a5f5a4ce0c3a136f37136972699f16037f930f2b79da1287af47ff65e",
+      "role": "Independent final-sprint invalid-time/correction read-only retest",
+      "observedFacts": {
+        "at": "2026-11-09T21:46:58.538976+07:00",
+        "value": "11:59 PM",
+        "attributes": {
+          "type": "text",
+          "placeholder": "hh:mm",
+          "pattern": null,
+          "maxlength": null,
+          "aria": null
+        },
+        "errors": [],
+        "TimeGroupVisibleText": "Time"
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "No historical PNG of the invalid text before blur is claimed; exact input/afterTyping/afterBlur exist in metadata.",
+    "No invalid Save was sent.",
+    "Three fresh-form sequences, not one attempt per invalid string; no actual screen-reader speech."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}
