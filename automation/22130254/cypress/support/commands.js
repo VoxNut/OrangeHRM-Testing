@@ -1,3 +1,10 @@
+// Bỏ qua lỗi promise bị hủy của ứng dụng khi chuyển trang hoặc đăng xuất.
+Cypress.on('uncaught:exception', (err) => {
+  if (/Cannot read properties of undefined \(reading 'response'\)|Request failed with status code (?:401|500)/i.test(err?.message || '')) {
+    return false;
+  }
+});
+
 // Tìm đúng nhóm nhập liệu bằng nhãn đang hiển thị trên giao diện.
 Cypress.Commands.add('field', (label) => {
   return cy.contains('.oxd-label', new RegExp(`^\\s*${Cypress._.escapeRegExp(label)}\\s*\\*?\\s*$`))

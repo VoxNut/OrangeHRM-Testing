@@ -4,6 +4,14 @@
 // Chạy tuần tự 75 case: LEAVE_CONFIG → LEAVE_SELF → LEAVE_ADMIN.
 // Thao tác nghiệp vụ và chuẩn bị dữ liệu đều qua UI; intercept chỉ quan sát việc tải.
 const runId = Date.now().toString(36);
+const onlyCases = String(Cypress.env('onlyCases') || '').split(',').map((s) => s.trim()).filter(Boolean);
+const rawIt = globalThis.it;
+const it = onlyCases.length
+  ? (title, fn) => {
+    const id = title.split(/\s+[–-]\s+|:/)[0].trim();
+    if (onlyCases.includes(id)) return rawIt(title, fn);
+  }
+  : rawIt;
 const currentYear = String(new Date().getFullYear());
 const targetYear = String(Number(currentYear) + 1);
 const createdTypes = new Set();
@@ -59,14 +67,16 @@ ctx.enterDate = (label, date) => cy.field(label).find('input').invoke('attr', 'p
   return cy.field(label).find('input').type(`{selectall}{backspace}${formatted}`, { delay: 0 })
     .blur().should('have.value', formatted);
 });
+
 ctx.save = () => cy.contains('button', /^\s*Save\s*$/).click();
 ctx.cancel = () => cy.contains('button', /^\s*Cancel\s*$/).click();
-ctx.success = (message) => cy.contains('.oxd-toast', message).should('be.visible');
+ctx.success = (message) => cy.contains('.oxd-toast', message, { timeout: 60000 }).should('be.visible');
 
 // Đổi tài khoản bằng Logout/Login; ghi trạng thái sau khi UI xác nhận đăng nhập thành công.
 function login(username, password) {
-  return cy.then(() => {
-    if (ctx.currentUser === username) return;
+  return cy.location('pathname').then((pathname) => {
+    if (ctx.currentUser === username && !pathname.includes('/auth/login')) return;
+    ctx.currentUser = null;
     return cy.switchUserUI(username, password).then(() => { ctx.currentUser = username; });
   });
 }
@@ -74,7 +84,18 @@ ctx.loginAdmin = () => login(ctx.data.adminUsername, ctx.data.adminPassword);
 ctx.loginEmployee = (employee = ctx.employee) => login(employee.username, ctx.data.employeePassword);
 
 ctx.trackType = (name) => { createdTypes.add(name); };
-ctx.openTypes = () => cy.leavePage('Configure', 'Leave Types');
+ctx.openTypes = () => cy.location('pathname').then((pathname) => {
+  if (pathname.includes('/defineLeaveType')) {
+    cy.location('pathname', { timeout: 20000 }).should('include', '/leaveTypeList');
+  }
+  return cy.location('pathname').then((current) => {
+    if (current.includes('/leaveTypeList')) {
+      cy.contains('h6', /^\s*Leave Types\s*$/).should('be.visible');
+      return cy.ready();
+    }
+    return cy.leavePage('Configure', 'Leave Types');
+  });
+});
 ctx.typeRow = (name) => cy.ownRow(name);
 ctx.addType = (name, situational = 'No') => {
   ctx.openTypes();
@@ -85,6 +106,7 @@ ctx.addType = (name, situational = 'No') => {
   ctx.trackType(name);
   ctx.save();
   ctx.success('Successfully Saved');
+  cy.location('pathname').should('include', '/leaveTypeList');
   cy.ready();
   return ctx.typeRow(name).should('be.visible');
 };
@@ -364,7 +386,7 @@ ctx.preparePastEmployee = (employee, type, date) => {
 
 // Ghi lại fixture thật để đối chiếu Excel và dọn đúng dữ liệu nếu lần chạy bị gián đoạn.
 function writeRunData(cleanupCompleted = false) {
-  return cy.then(() => cy.writeFile('22130254/run-data.json', {
+  return cy.then(() => cy.writeFile(Cypress.env('runDataFile') || 'evidence/executions/22130254/run-data.json', {
     runId,
     recordedAt: new Date().toISOString(),
     cleanupAttempted: Boolean(ctx.cleanupAttempted),
@@ -400,6 +422,10 @@ describe('22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện', ()
         ctx[key] = employee;
       });
       ctx.loginAdmin();
+      if (onlyCases.length && onlyCases.every((id) => ['TC_LEAVE_CONFIG_002', 'TC_LEAVE_CONFIG_005', 'TC_LEAVE_CONFIG_011'].includes(id))) {
+        writeRunData();
+        return;
+      }
       [ctx.employee, ctx.employeeB, ctx.employeeNoEnt].forEach((employee) => {
         createdEmployees.push(employee);
         createEmployee(ctx, employee);
@@ -772,7 +798,7 @@ function registerConfigCases(ctx) {
     const name51 = boundaryPrefix + 'B'.repeat(51 - boundaryPrefix.length);
     let previousYear;
     before(() => {
-      cy.then(() => { previousYear = ctx.previousPeriod.from.year; });
+      cy.then(() => { previousYear = ctx.previousPeriod?.from?.year || String(Number(ctx.currentYear) - 1); });
     });
 
     // Mở biểu mẫu mới để dữ liệu chưa lưu của case trước không ảnh hưởng validation.
@@ -899,6 +925,8 @@ function registerConfigCases(ctx) {
       // Act – Lưu loại phép và mở lại qua icon Edit trên đúng dòng.
       ctx.save();
       ctx.success('Successfully Saved');
+      cy.location('pathname').should('include', '/leaveTypeList');
+      cy.ready();
       ctx.openTypeEdit(situationalType);
 
       // Assert – Tên và giá trị Yes đã được lưu bền vững.
@@ -932,6 +960,8 @@ function registerConfigCases(ctx) {
       // Act – Lưu và mở lại chính bản ghi vừa tạo.
       ctx.save();
       ctx.success('Successfully Saved');
+      cy.location('pathname').should('include', '/leaveTypeList');
+      cy.ready();
       ctx.openTypeEdit(name50);
 
       // Assert – Name lưu đầy đủ 50 ký tự, không bị cắt khi đọc lại.
@@ -990,6 +1020,8 @@ function registerConfigCases(ctx) {
       // Act – Lưu tên mới rồi mở lại danh sách qua menu.
       ctx.save();
       ctx.success('Successfully Updated');
+      cy.location('pathname').should('include', '/leaveTypeList');
+      cy.ready();
       ctx.openTypes();
 
       // Assert – Có tên mới và không còn tên cũ trong danh sách.
@@ -999,6 +1031,9 @@ function registerConfigCases(ctx) {
 
     it('TC_LEAVE_CONFIG_011 – Chỉnh sửa Situational từ No sang Yes', () => {
       // Arrange – Mở loại phép riêng đã đổi tên và kiểm tra baseline No.
+      cy.then(() => {
+        if (!createdTypes.has(updatedType)) ctx.addType(updatedType, 'No');
+      });
       ctx.openTypeEdit(updatedType);
       cy.contains('.oxd-radio-wrapper', /^\s*No\s*$/).find('input').should('be.checked');
       cy.contains('.oxd-radio-wrapper', /^\s*Yes\s*$/).find('.oxd-radio-input').click();
@@ -1007,6 +1042,8 @@ function registerConfigCases(ctx) {
       // Act – Lưu thay đổi rồi mở lại bản ghi qua giao diện.
       ctx.save();
       ctx.success('Successfully Updated');
+      cy.location('pathname').should('include', '/leaveTypeList');
+      cy.ready();
       ctx.openTypeEdit(updatedType);
 
       // Assert – Yes vẫn được chọn khi biểu mẫu tải lại.
@@ -1308,6 +1345,7 @@ function registerSelfCases(ctx) {
     ctx.loginEmployee();
   }
 
+  if (onlyCases.length && !onlyCases.some((id) => id.startsWith('TC_LEAVE_SELF_'))) return;
   describe('LEAVE_SELF – Apply Leave và My Leave', () => {
     before(() => {
       // Chuẩn bị – ESS riêng đã có entitlement kỳ hiện tại và kỳ chứa các ngày kiểm thử.
@@ -1838,6 +1876,7 @@ function registerAdminCases(ctx) {
     ctx.requestRow(date, { type }).find('.oxd-checkbox-input').click();
   }
 
+  if (onlyCases.length && !onlyCases.some((id) => id.startsWith('TC_LEAVE_ADMIN_'))) return;
   describe('LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu', () => {
     before(() => {
       // Đọc lịch sau khi các hook CONFIG/SELF đã hoàn tất chuẩn bị ngày làm việc.

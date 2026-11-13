@@ -20,12 +20,12 @@ Nếu Cypress báo `bad option: --smoke-test`, xóa biến `ELECTRON_RUN_AS_NODE
 | Thành viên | Script trong inventory | ASM8 |
 | --- | ---: | --- |
 | 23130226 | 75 case PIM | Chạy 25 EMP, sau đó 50 Personal/Job |
-| 22130254 | 6 case Leave | Chạy Cypress, fixture và cleanup riêng |
+| 22130254 | 75 case Leave | Chạy Cypress (25 CONFIG, 25 SELF, 25 ADMIN), fixture và cleanup riêng |
 | 23130171 | 25 case ADM_STRUCT | Skipped: selector sửa/xóa chưa giới hạn node test, thiếu assertion/cleanup |
 | 23130339 | 6 bước Time theo tài liệu | Skipped: dùng dữ liệu Admin, bỏ qua lỗi, chưa có report theo case |
 | 23130299 | 75 case Recruitment | Skipped theo yêu cầu nhóm trưởng, thiếu cấu hình/Katalon |
 
-Inventory có 187 ID, gồm 6 ID Time lấy từ mô tả ASM7. Đây không phải toàn bộ case thiết kế trong workbook. Chưa có script ADM_JOB/ADM_USER; các suite ASM7 rút gọn không chứng minh đã triển khai đủ 20–30 case/chức năng.
+Inventory có 256 ID, gồm 6 ID Time lấy từ mô tả ASM7. Đây không phải toàn bộ case thiết kế trong workbook. Chưa có script ADM_JOB/ADM_USER.
 
 ## Chạy riêng và đọc kết quả
 

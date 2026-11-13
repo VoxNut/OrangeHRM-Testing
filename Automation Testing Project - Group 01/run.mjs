@@ -10,8 +10,10 @@ const repo = path.dirname(here);
 const args = process.argv.slice(2);
 const member = args.find(a => a.startsWith('--member='))?.split('=')[1];
 const retest = args.includes('--retest-pim');
-assert(args.every(a => ['--check', '--retest-pim'].includes(a) || /^--member=\d{8}$/.test(a)), 'Unknown argument');
-assert(!(retest && member), 'Select either a member or the targeted PIM retest');
+const retestLeave = args.includes('--retest-leave');
+const leaveRetestIds = ['TC_LEAVE_CONFIG_002', 'TC_LEAVE_CONFIG_005', 'TC_LEAVE_CONFIG_011'];
+assert(args.every(a => ['--check', '--retest-pim', '--retest-leave'].includes(a) || /^--member=\d{8}$/.test(a)), 'Unknown argument');
+assert([Boolean(retest), Boolean(retestLeave), Boolean(member)].filter(Boolean).length <= 1, 'Select either a member or a targeted retest');
 const read = file => fs.readFile(path.join(repo, file), 'utf8');
 const pim = JSON.parse(await read('Automation Testing Project - Group 01/pim-cases.json'));
 const suites = [
@@ -45,7 +47,7 @@ for (const module of ['VAC', 'CAND', 'FLOW']) {
     cases: [...text.matchAll(/<testCaseId>([^<]+)<\/testCaseId>/g)].map(m => ({ id: m[1].split('/').at(-1), title: m[1].split('/').at(-1), module: `RECRUIT_${module}`, expected: 'Assertion trong script Katalon gốc' })) });
 }
 const all = suites.flatMap(s => s.cases.map(c => ({ ...c, member: s.member, suite: s.key })));
-assert.equal(all.length, 187, 'Review inventory when member scripts change');
+assert.equal(all.length, 256, 'Review inventory when member scripts change');
 assert.equal(new Set(all.map(c => c.id)).size, all.length, 'Duplicate Case ID');
 assert.equal(pim.length, 75);
 const totals = rows => Object.fromEntries(['Pass', 'Fail', 'Skipped'].map(s => [s, rows.filter(r => r.status === s).length]));
@@ -56,15 +58,19 @@ if (args.includes('--check')) {
   console.log(`Inventory OK: ${all.length} IDs; 5 members; 13 functions represented. ADM_JOB/ADM_USER have no script in dev.`);
   process.exit(0);
 }
-const runId = `ASM8${retest ? '_RETEST' : ''}_${new Date().toISOString().replace(/[:.]/g, '-')}`;
+const runId = `ASM8${retest || retestLeave ? '_RETEST' : ''}_${new Date().toISOString().replace(/[:.]/g, '-')}`;
 const evidence = path.join(repo, 'Envidence - Group01', runId);
 const reportDir = path.join(repo, 'Test Report - Group 01', runId);
 await fs.mkdir(evidence, { recursive: true });
 await fs.mkdir(reportDir, { recursive: true });
-const selected = retest ? suites.filter(s => s.key === 'pim-emp').map(s => ({ ...s, cases: s.cases.filter(c => ['PIM_EMP_Search_02', 'PIM_EMP_Sort_01'].includes(c.id)) })) : suites.filter(s => !member || s.member === member);
+const selected = retest
+  ? suites.filter(s => s.key === 'pim-emp').map(s => ({ ...s, cases: s.cases.filter(c => ['PIM_EMP_Search_02', 'PIM_EMP_Sort_01'].includes(c.id)) }))
+  : retestLeave
+    ? suites.filter(s => s.key === 'leave').map(s => ({ ...s, cases: s.cases.filter(c => leaveRetestIds.includes(c.id)) }))
+    : suites.filter(s => !member || s.member === member);
 const report = { runId, startedAt: new Date().toISOString(), finishedAt: null, durationMs: null,
   commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: repo, encoding: 'utf8' }).trim(),
-  baseUrl: 'https://opensource-demo.orangehrmlive.com/', scope: retest ? 'pim-retest' : member || 'group',
+  baseUrl: 'https://opensource-demo.orangehrmlive.com/', scope: retest ? 'pim-retest' : retestLeave ? 'leave-retest' : member || 'group',
   results: selected.flatMap(s => s.cases.map(c => ({ ...c, suite: s.key, member: s.member, status: 'Skipped', reason: s.skip || 'Chưa tới bước chạy', originalStatus: 'NotRun' }))),
   suites: selected.map(({ cases, ...s }) => ({ ...s, planned: cases.length })), issues: [] };
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -138,7 +144,7 @@ for (const s of selected) {
       await fs.mkdir(dir, { recursive: true });
       const raw = await cypress.run({ project: repo, configFile: path.join(here, 'cypress.config.cjs'), browser: 'edge', headless: true,
         config: { screenshotsFolder: path.join(dir, 'screenshots'), videosFolder: path.join(dir, 'videos') },
-        env: { runDataFile: path.join(dir, 'run-data.json') } });
+        env: { runDataFile: path.join(dir, 'run-data.json'), ...(retestLeave ? { onlyCases: leaveRetestIds.join(',') } : {}) } });
       const rawFile = path.join(dir, 'cypress-results.json');
       await fs.writeFile(rawFile, JSON.stringify(raw, null, 2));
       entry.rawReport = path.relative(repo, rawFile).split(path.sep).join('/');
@@ -148,10 +154,10 @@ for (const s of selected) {
         const id = t.title.join(' ').match(/TC_LEAVE_[A-Z]+_\d{3}/)?.[0];
         const row = report.results.find(r => r.suite === s.key && r.id === id);
         assert(row, `Unknown Cypress test ${t.title}`);
-        const screenshots = (run.screenshots || []).filter(shot => shot.testId === t.testId || path.basename(shot.path).includes(id));
+        const screenshots = (run.screenshots || []).filter(shot => (shot.testId && shot.testId === t.testId) || path.basename(shot.path).includes(id));
         Object.assign(row, { status: t.state === 'passed' ? 'Pass' : t.state === 'failed' ? 'Fail' : 'Skipped', originalStatus: t.state,
           actual: t.displayError || (t.state === 'passed' ? 'Toàn bộ assertion Cypress trong case hoàn tất.' : 'Hook hoặc case phụ thuộc chưa hoàn tất.'),
-          durationMs: t.attempts?.reduce((n, a) => n + (a.wallClockDuration || 0), 0), evidence: [rawFile, ...screenshots.map(x => x.path)] });
+          durationMs: t.duration ?? t.attempts?.reduce((n, a) => n + (a.wallClockDuration || 0), 0), evidence: [rawFile, ...screenshots.map(x => x.path)] });
       }
       const ledger = JSON.parse(await fs.readFile(path.join(dir, 'run-data.json'), 'utf8'));
       entry.cleanup = ledger.cleanupCompleted;

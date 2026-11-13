@@ -1,0 +1,1812 @@
+{
+  "browserName": "edge",
+  "browserPath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "browserVersion": "157.0.4341.46",
+  "config": {
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 20000,
+    "requestTimeout": 30000,
+    "responseTimeout": 60000,
+    "viewportWidth": 1440,
+    "viewportHeight": 1000,
+    "retries": 0,
+    "baseUrl": "https://opensource-demo.orangehrmlive.com",
+    "specPattern": "D:\\Tester\\OrangeHRM-Testing\\automation\\22130254\\cypress\\e2e\\**\\*.cy.js",
+    "supportFile": "D:\\Tester\\OrangeHRM-Testing\\Automation Testing Project - Group 01\\cypress-support.cjs",
+    "fixturesFolder": "D:\\Tester\\OrangeHRM-Testing\\automation\\22130254\\cypress\\fixtures",
+    "testIsolation": false,
+    "projectRoot": "D:\\Tester\\OrangeHRM-Testing",
+    "projectName": "OrangeHRM-Testing",
+    "configFile": "cypress.config.cjs",
+    "isTextTerminal": true,
+    "screenshotsFolder": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots",
+    "videosFolder": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\videos",
+    "animationDistanceThreshold": 5,
+    "arch": "x64",
+    "blockHosts": null,
+    "chromeWebSecurity": true,
+    "clientCertificates": [],
+    "defaultBrowser": null,
+    "allowCypressEnv": true,
+    "downloadsFolder": "D:\\Tester\\OrangeHRM-Testing\\cypress\\downloads",
+    "env": {
+      "runDataFile": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\run-data.json"
+    },
+    "expose": {},
+    "execTimeout": 60000,
+    "experimentalCspAllowList": false,
+    "experimentalInteractiveRunEvents": false,
+    "experimentalRunAllSpecs": false,
+    "experimentalMemoryManagement": false,
+    "experimentalModifyObstructiveThirdPartyCode": false,
+    "injectDocumentDomain": false,
+    "experimentalOriginDependencies": false,
+    "experimentalSourceRewriting": false,
+    "experimentalSingleTabRunMode": false,
+    "experimentalWebKitSupport": false,
+    "experimentalFastVisibility": false,
+    "fileServerFolder": "D:\\Tester\\OrangeHRM-Testing",
+    "excludeSpecPattern": "*.hot-update.js",
+    "includeShadowDom": false,
+    "justInTimeCompile": true,
+    "keystrokeDelay": 0,
+    "modifyObstructiveCode": true,
+    "numTestsKeptInMemory": 0,
+    "platform": "win32",
+    "pageLoadTimeout": 60000,
+    "port": 54011,
+    "projectId": null,
+    "redirectionLimit": 20,
+    "removeSRIAttributes": false,
+    "reporter": "spec",
+    "reporterOptions": null,
+    "resolvedNodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "resolvedNodeVersion": "24.18.0",
+    "slowTestThreshold": 10000,
+    "scrollBehavior": "top",
+    "taskTimeout": 60000,
+    "trashAssetsBeforeRuns": true,
+    "userAgent": null,
+    "videoCompression": false,
+    "waitForAnimations": true,
+    "watchForFileChanges": false,
+    "browsers": [
+      {
+        "channel": "stable",
+        "displayName": "Chrome",
+        "family": "chromium",
+        "majorVersion": "157",
+        "name": "chrome",
+        "path": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+        "version": "157.0.8103.52"
+      },
+      {
+        "channel": "stable",
+        "displayName": "Edge",
+        "family": "chromium",
+        "majorVersion": "157",
+        "name": "edge",
+        "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "version": "157.0.4341.46"
+      },
+      {
+        "channel": "stable",
+        "displayName": "Electron",
+        "family": "chromium",
+        "majorVersion": 138,
+        "name": "electron",
+        "path": "",
+        "version": "138.0.7204.251"
+      }
+    ],
+    "cypressBinaryRoot": "C:\\Users\\LENOVO\\AppData\\Local\\Cypress\\Cache\\15.21.1\\Cypress\\resources\\app",
+    "hosts": null,
+    "isInteractive": false,
+    "version": "15.21.1",
+    "testingType": "e2e",
+    "browser": null,
+    "cypressInternalEnv": "production"
+  },
+  "cypressVersion": "15.21.1",
+  "endedTestsAt": "2026-11-13T09:59:37.467Z",
+  "osName": "win32",
+  "osVersion": "Microsoft Windows 10 Home Single Language - 10.0.19045",
+  "runs": [
+    {
+      "error": null,
+      "reporter": "spec",
+      "reporterStats": {
+        "suites": 4,
+        "tests": 75,
+        "passes": 72,
+        "pending": 0,
+        "failures": 3,
+        "start": "2026-11-13T08:58:27.927Z",
+        "end": "2026-11-13T09:59:37.484Z",
+        "duration": 3669557
+      },
+      "screenshots": [
+        {
+          "height": 727,
+          "name": "TC_LEAVE_CONFIG_003",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_003.png",
+          "takenAt": "2026-11-13T09:03:38.381Z",
+          "width": 1254
+        },
+        {
+          "height": 813,
+          "name": "TC_LEAVE_CONFIG_009",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_009.png",
+          "takenAt": "2026-11-13T09:03:42.346Z",
+          "width": 1254
+        },
+        {
+          "height": 1223,
+          "name": "TC_LEAVE_CONFIG_001",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_001.png",
+          "takenAt": "2026-11-13T09:04:07.690Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": null,
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_002 (failed).png",
+          "takenAt": "2026-11-13T09:05:21.278Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_004",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_004.png",
+          "takenAt": "2026-11-13T09:06:32.128Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": null,
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_005 (failed).png",
+          "takenAt": "2026-11-13T09:08:28.556Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_006",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_006.png",
+          "takenAt": "2026-11-13T09:09:52.726Z",
+          "width": 1254
+        },
+        {
+          "height": 1325,
+          "name": "TC_LEAVE_CONFIG_007",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_007.png",
+          "takenAt": "2026-11-13T09:11:37.462Z",
+          "width": 1254
+        },
+        {
+          "height": 1376,
+          "name": "TC_LEAVE_CONFIG_010",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_010.png",
+          "takenAt": "2026-11-13T09:13:40.875Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": null,
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_011 (failed).png",
+          "takenAt": "2026-11-13T09:14:44.760Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_012",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_012.png",
+          "takenAt": "2026-11-13T09:15:18.456Z",
+          "width": 1254
+        },
+        {
+          "height": 1376,
+          "name": "TC_LEAVE_CONFIG_013",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_013.png",
+          "takenAt": "2026-11-13T09:15:41.863Z",
+          "width": 1254
+        },
+        {
+          "height": 1376,
+          "name": "TC_LEAVE_CONFIG_014",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_014.png",
+          "takenAt": "2026-11-13T09:16:15.479Z",
+          "width": 1254
+        },
+        {
+          "height": 1376,
+          "name": "TC_LEAVE_CONFIG_015",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_015.png",
+          "takenAt": "2026-11-13T09:16:26.905Z",
+          "width": 1254
+        },
+        {
+          "height": 800,
+          "name": "TC_LEAVE_CONFIG_016",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_016.png",
+          "takenAt": "2026-11-13T09:17:04.931Z",
+          "width": 1254
+        },
+        {
+          "height": 800,
+          "name": "TC_LEAVE_CONFIG_017",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_017.png",
+          "takenAt": "2026-11-13T09:17:54.782Z",
+          "width": 1254
+        },
+        {
+          "height": 800,
+          "name": "TC_LEAVE_CONFIG_008",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_008.png",
+          "takenAt": "2026-11-13T09:19:54.063Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_018",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_018.png",
+          "takenAt": "2026-11-13T09:20:19.535Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_019",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_019.png",
+          "takenAt": "2026-11-13T09:20:48.769Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_020",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_020.png",
+          "takenAt": "2026-11-13T09:21:22.058Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_021",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_021.png",
+          "takenAt": "2026-11-13T09:22:09.273Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_022",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_022.png",
+          "takenAt": "2026-11-13T09:22:47.997Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_023",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_023.png",
+          "takenAt": "2026-11-13T09:23:22.003Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_024",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_024.png",
+          "takenAt": "2026-11-13T09:23:46.780Z",
+          "width": 1254
+        },
+        {
+          "height": 800,
+          "name": "TC_LEAVE_CONFIG_025",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_025.png",
+          "takenAt": "2026-11-13T09:24:40.582Z",
+          "width": 1254
+        },
+        {
+          "height": 844,
+          "name": "TC_LEAVE_SELF_001",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_001.png",
+          "takenAt": "2026-11-13T09:25:22.727Z",
+          "width": 1254
+        },
+        {
+          "height": 832,
+          "name": "TC_LEAVE_SELF_002",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_002.png",
+          "takenAt": "2026-11-13T09:25:43.964Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_SELF_003",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_003.png",
+          "takenAt": "2026-11-13T09:26:17.737Z",
+          "width": 1254
+        },
+        {
+          "height": 795,
+          "name": "TC_LEAVE_SELF_004",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_004.png",
+          "takenAt": "2026-11-13T09:26:25.503Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_005",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_005.png",
+          "takenAt": "2026-11-13T09:26:33.885Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_006",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_006.png",
+          "takenAt": "2026-11-13T09:26:45.003Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_007",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_007.png",
+          "takenAt": "2026-11-13T09:26:51.509Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_SELF_008",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_008.png",
+          "takenAt": "2026-11-13T09:27:27.377Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_009",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_009.png",
+          "takenAt": "2026-11-13T09:27:35.950Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_010",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_010.png",
+          "takenAt": "2026-11-13T09:27:43.430Z",
+          "width": 1254
+        },
+        {
+          "height": 727,
+          "name": "TC_LEAVE_SELF_011",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_011.png",
+          "takenAt": "2026-11-13T09:27:58.074Z",
+          "width": 1254
+        },
+        {
+          "height": 844,
+          "name": "TC_LEAVE_SELF_012",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_012.png",
+          "takenAt": "2026-11-13T09:28:21.848Z",
+          "width": 1254
+        },
+        {
+          "height": 832,
+          "name": "TC_LEAVE_SELF_013",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_013.png",
+          "takenAt": "2026-11-13T09:28:35.707Z",
+          "width": 1254
+        },
+        {
+          "height": 1144,
+          "name": "TC_LEAVE_SELF_014",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_014.png",
+          "takenAt": "2026-11-13T09:28:58.276Z",
+          "width": 1254
+        },
+        {
+          "height": 786,
+          "name": "TC_LEAVE_SELF_015",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_015.png",
+          "takenAt": "2026-11-13T09:29:21.577Z",
+          "width": 1254
+        },
+        {
+          "height": 1139,
+          "name": "TC_LEAVE_SELF_016",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_016.png",
+          "takenAt": "2026-11-13T09:29:45.123Z",
+          "width": 1254
+        },
+        {
+          "height": 832,
+          "name": "TC_LEAVE_SELF_017",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_017.png",
+          "takenAt": "2026-11-13T09:29:52.993Z",
+          "width": 1254
+        },
+        {
+          "height": 786,
+          "name": "TC_LEAVE_SELF_018",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_018.png",
+          "takenAt": "2026-11-13T09:29:58.038Z",
+          "width": 1254
+        },
+        {
+          "height": 1033,
+          "name": "TC_LEAVE_SELF_019",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_019.png",
+          "takenAt": "2026-11-13T09:30:29.606Z",
+          "width": 1254
+        },
+        {
+          "height": 1139,
+          "name": "TC_LEAVE_SELF_020",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_020.png",
+          "takenAt": "2026-11-13T09:30:52.562Z",
+          "width": 1254
+        },
+        {
+          "height": 832,
+          "name": "TC_LEAVE_SELF_021",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_021.png",
+          "takenAt": "2026-11-13T09:30:58.352Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_SELF_022",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_022.png",
+          "takenAt": "2026-11-13T09:31:29.459Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_SELF_023",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_023.png",
+          "takenAt": "2026-11-13T09:33:04.326Z",
+          "width": 1254
+        },
+        {
+          "height": 777,
+          "name": "TC_LEAVE_SELF_024",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_024.png",
+          "takenAt": "2026-11-13T09:34:15.196Z",
+          "width": 1254
+        },
+        {
+          "height": 777,
+          "name": "TC_LEAVE_SELF_025",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_025.png",
+          "takenAt": "2026-11-13T09:35:05.926Z",
+          "width": 1254
+        },
+        {
+          "height": 935,
+          "name": "TC_LEAVE_ADMIN_001",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_001.png",
+          "takenAt": "2026-11-13T09:36:31.080Z",
+          "width": 1254
+        },
+        {
+          "height": 994,
+          "name": "TC_LEAVE_ADMIN_002",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_002.png",
+          "takenAt": "2026-11-13T09:36:34.958Z",
+          "width": 1254
+        },
+        {
+          "height": 935,
+          "name": "TC_LEAVE_ADMIN_003",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_003.png",
+          "takenAt": "2026-11-13T09:36:41.903Z",
+          "width": 1254
+        },
+        {
+          "height": 998,
+          "name": "TC_LEAVE_ADMIN_004",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_004.png",
+          "takenAt": "2026-11-13T09:36:46.080Z",
+          "width": 1254
+        },
+        {
+          "height": 998,
+          "name": "TC_LEAVE_ADMIN_005",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_005.png",
+          "takenAt": "2026-11-13T09:36:53.656Z",
+          "width": 1254
+        },
+        {
+          "height": 974,
+          "name": "TC_LEAVE_ADMIN_006",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_006.png",
+          "takenAt": "2026-11-13T09:36:55.803Z",
+          "width": 1254
+        },
+        {
+          "height": 998,
+          "name": "TC_LEAVE_ADMIN_007",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_007.png",
+          "takenAt": "2026-11-13T09:37:03.560Z",
+          "width": 1254
+        },
+        {
+          "height": 900,
+          "name": "TC_LEAVE_ADMIN_008",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_008.png",
+          "takenAt": "2026-11-13T09:39:23.094Z",
+          "width": 1254
+        },
+        {
+          "height": 974,
+          "name": "TC_LEAVE_ADMIN_009",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_009.png",
+          "takenAt": "2026-11-13T09:39:31.108Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_010",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_010.png",
+          "takenAt": "2026-11-13T09:39:43.487Z",
+          "width": 1254
+        },
+        {
+          "height": 789,
+          "name": "TC_LEAVE_ADMIN_011",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_011.png",
+          "takenAt": "2026-11-13T09:40:01.033Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_012",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_012.png",
+          "takenAt": "2026-11-13T09:40:27.214Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_ADMIN_013",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_013.png",
+          "takenAt": "2026-11-13T09:41:33.179Z",
+          "width": 1254
+        },
+        {
+          "height": 775,
+          "name": "TC_LEAVE_ADMIN_014",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_014.png",
+          "takenAt": "2026-11-13T09:43:03.556Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_015",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_015.png",
+          "takenAt": "2026-11-13T09:43:21.437Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_016",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_016.png",
+          "takenAt": "2026-11-13T09:43:27.802Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_017",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_017.png",
+          "takenAt": "2026-11-13T09:44:02.585Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_018",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_018.png",
+          "takenAt": "2026-11-13T09:44:17.831Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_019",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_019.png",
+          "takenAt": "2026-11-13T09:44:26.726Z",
+          "width": 1254
+        },
+        {
+          "height": 1132,
+          "name": "TC_LEAVE_ADMIN_020",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_020.png",
+          "takenAt": "2026-11-13T09:46:22.251Z",
+          "width": 1254
+        },
+        {
+          "height": 1124,
+          "name": "TC_LEAVE_ADMIN_021",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_021.png",
+          "takenAt": "2026-11-13T09:46:37.292Z",
+          "width": 1254
+        },
+        {
+          "height": 1152,
+          "name": "TC_LEAVE_ADMIN_022",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_022.png",
+          "takenAt": "2026-11-13T09:46:53.627Z",
+          "width": 1254
+        },
+        {
+          "height": 918,
+          "name": "TC_LEAVE_ADMIN_023",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_023.png",
+          "takenAt": "2026-11-13T09:55:42.937Z",
+          "width": 1254
+        },
+        {
+          "height": 814,
+          "name": "TC_LEAVE_ADMIN_024",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_024.png",
+          "takenAt": "2026-11-13T09:55:54.471Z",
+          "width": 1254
+        },
+        {
+          "height": 872,
+          "name": "TC_LEAVE_ADMIN_025",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_025.png",
+          "takenAt": "2026-11-13T09:56:47.075Z",
+          "width": 1254
+        }
+      ],
+      "spec": {
+        "absolute": "D:/Tester/OrangeHRM-Testing/automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+        "fileExtension": ".js",
+        "fileName": "22130254_CaoTienThanh_ASM7",
+        "name": "22130254_CaoTienThanh_ASM7.cy.js",
+        "relative": "automation\\22130254\\cypress\\e2e\\leave\\22130254_CaoTienThanh_ASM7.cy.js"
+      },
+      "stats": {
+        "duration": 3669563,
+        "endedAt": "2026-11-13T09:59:37.467Z",
+        "failures": 3,
+        "passes": 72,
+        "pending": 0,
+        "skipped": 0,
+        "startedAt": "2026-11-13T08:58:27.904Z",
+        "suites": 4,
+        "tests": 75
+      },
+      "tests": [
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 311389,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_003 – Bỏ trống trường Leave Type Name"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 3347,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_009 – Hủy thao tác thêm mới Leave Type"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 25415,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_001 – Thêm mới Leave Type với các trường bắt buộc"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "failed"
+            }
+          ],
+          "displayError": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation10Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+          "duration": 73183,
+          "state": "failed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_002 – Thêm mới Leave Type với Situational bằng Yes"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 70820,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_004 – Nhập Leave Type Name chỉ chứa khoảng trắng"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "failed"
+            }
+          ],
+          "displayError": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation13Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+          "duration": 116452,
+          "state": "failed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_005 – Leave Type Name đúng biên tối đa 50 ký tự"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 84132,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_006 – Leave Type Name vượt biên với 51 ký tự"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 105127,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_007 – Nhập Leave Type Name trùng với tên đã tồn tại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 123342,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_010 – Chỉnh sửa tên Leave Type thành tên mới hợp lệ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "failed"
+            }
+          ],
+          "displayError": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation20Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+          "duration": 63196,
+          "state": "failed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_011 – Chỉnh sửa Situational từ No sang Yes"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 33750,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_012 – Chỉnh sửa Leave Type nhưng xóa trống Name"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 23583,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_013 – Chỉnh sửa Leave Type nhưng bấm Cancel"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 33730,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_014 – Xóa Leave Type riêng và xác nhận trên modal"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 11027,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_015 – Hủy thao tác xóa Leave Type trên modal"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 37981,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_016 – Thêm Leave Entitlement hợp lệ với số ngày nguyên"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 49779,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_017 – Thêm Leave Entitlement hợp lệ với 7.50 ngày"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 119009,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_008 – Lọc Employee Entitlements theo nhân viên, loại phép và kỳ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 25315,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_018 – Thêm Leave Entitlement nhưng bỏ trống Employee Name"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 29032,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_019 – Nhập Employee Name không tồn tại khi thêm Entitlement"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 33243,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_020 – Thêm Leave Entitlement nhưng không chọn Leave Type"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 47112,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_021 – Thêm Leave Entitlement nhưng để trống Entitlement"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 38773,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_022 – Nhập Entitlement bằng chữ và ký tự đặc biệt"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 34062,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_023 – Nhập Entitlement là số âm"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 24353,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_024 – Nhập Entitlement có nhiều hơn 2 chữ số thập phân"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 53780,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_025 – Hủy thao tác thêm Leave Entitlement khi đang nhập liệu"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 42158,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_001 – Nộp đơn nghỉ một ngày hợp lệ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 21263,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_002 – Nộp đơn nghỉ ba ngày làm việc liên tiếp"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 33331,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_003 – Nộp đơn nghỉ nửa ngày buổi sáng"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7677,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_004 – Không chọn Leave Type khi nộp đơn"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 8245,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_005 – Bỏ trống From Date khi nộp đơn"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 11408,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_006 – Bỏ trống To Date khi nộp đơn"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 6199,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_007 – Chọn To Date trước From Date"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 35853,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_008 – Nộp đơn theo giờ bằng Specify Time"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 8274,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_009 – Nhập From Date là ngày 30 tháng Hai không tồn tại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7534,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_010 – Nhập To Date là ngày 31 tháng Tư không tồn tại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 14260,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_011 – Apply không khả dụng khi chưa có entitlement kỳ hiện tại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 23683,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_012 – Chặn đơn trùng hoàn toàn ngày đã xin nghỉ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 13477,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_013 – Chặn đơn giao thoa một ngày với đơn nhiều ngày"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 22980,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_014 – Lưu nguyên vẹn Comments đúng 250 ký tự"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 22234,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_015 – Chặn Comments dài 251 ký tự"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 23774,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_016 – My Leave mặc định hiển thị đơn của chính nhân viên"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7529,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_017 – Lọc My Leave theo khoảng From Date và To Date"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 5219,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_018 – Tìm khoảng ngày không có đơn trong My Leave"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 31058,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_019 – Chỉ hiển thị trạng thái Pending Approval trong My Leave"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 22762,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_020 – Lọc My Leave theo loại phép cụ thể"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 5920,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_021 – Reset bộ lọc về mặc định của My Leave"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 30315,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_022 – Hủy đơn Pending Approval và hoàn lại số dư"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 95024,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_023 – Hủy đơn Scheduled và hoàn lại số dư"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 70465,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_024 – Đơn Rejected không có Cancel khả dụng"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 50891,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_SELF – Apply Leave và My Leave",
+            "TC_LEAVE_SELF_025 – Đơn Taken trong quá khứ không cho ESS Cancel"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 85128,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_001 – Tìm theo tên nhân viên bằng autocomplete"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 3387,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_002 – Tên nhân viên không tồn tại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7117,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_003 – Kết hợp loại phép và Pending Approval"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 3862,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_004 – Lọc theo Sub Unit của nhân viên"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7607,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_005 – Lọc khoảng ngày hợp lệ"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 2071,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_006 – From Date lớn hơn To Date"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7981,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_007 – Lọc đồng thời Pending và Scheduled"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 139114,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_008 – Include Past Employees hiển thị đơn của người thôi việc"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 7982,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_009 – Reset phục hồi bộ lọc mặc định"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 12030,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_010 – Approve một đơn Pending Approval"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 17451,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_011 – Scheduled đồng bộ sang My Leave của nhân viên"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 25991,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_012 – Reject một đơn Pending Approval"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 65879,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_013 – Reject hoàn lại đúng hai ngày vào số dư"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 90341,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_014 – Admin Cancel đơn Scheduled và hoàn một ngày"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 17525,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_015 – Đơn Rejected không thể Approve lại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 6183,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_016 – Đơn Cancelled không thể Approve lại"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 34776,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_017 – Admin xem bình luận do ESS đã lưu"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 14896,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_018 – Admin thêm bình luận và đọc lại sau khi lưu"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 8841,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_019 – Cancel modal bỏ bình luận chưa lưu"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 115586,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_020 – Checkbox header chọn toàn bộ dòng fixture trên trang"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 14865,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_021 – Bulk Approve đúng hai đơn và giữ đơn không chọn"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 16193,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_022 – Bulk Reject đúng hai đơn và giữ đơn không chọn"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 530739,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_023 – Phân trang với 51 đơn fixture được tạo qua UI"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 9540,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_024 – View Leave Details mở đúng đơn và Back về danh sách"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 222116,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_ADMIN – Danh sách phép và xử lý yêu cầu",
+            "TC_LEAVE_ADMIN_025 – Đối chiếu số ngày và số dư trên dòng Admin"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ],
+  "startedTestsAt": "2026-11-13T08:58:27.904Z",
+  "totalDuration": 3669563,
+  "totalFailed": 3,
+  "totalPassed": 72,
+  "totalPending": 0,
+  "totalSkipped": 0,
+  "totalSuites": 4,
+  "totalTests": 75
+}

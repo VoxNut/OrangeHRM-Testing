@@ -1,0 +1,229 @@
+{
+  "browserName": "edge",
+  "browserPath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "browserVersion": "157.0.4341.46",
+  "config": {
+    "video": false,
+    "screenshotOnRunFailure": true,
+    "defaultCommandTimeout": 20000,
+    "requestTimeout": 30000,
+    "responseTimeout": 60000,
+    "viewportWidth": 1440,
+    "viewportHeight": 1000,
+    "retries": 0,
+    "baseUrl": "https://opensource-demo.orangehrmlive.com",
+    "specPattern": "D:\\Tester\\OrangeHRM-Testing\\automation\\22130254\\cypress\\e2e\\**\\*.cy.js",
+    "supportFile": "D:\\Tester\\OrangeHRM-Testing\\Automation Testing Project - Group 01\\cypress-support.cjs",
+    "fixturesFolder": "D:\\Tester\\OrangeHRM-Testing\\automation\\22130254\\cypress\\fixtures",
+    "testIsolation": false,
+    "projectRoot": "D:\\Tester\\OrangeHRM-Testing",
+    "projectName": "OrangeHRM-Testing",
+    "configFile": "cypress.config.cjs",
+    "isTextTerminal": true,
+    "screenshotsFolder": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots",
+    "videosFolder": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\videos",
+    "animationDistanceThreshold": 5,
+    "arch": "x64",
+    "blockHosts": null,
+    "chromeWebSecurity": true,
+    "clientCertificates": [],
+    "defaultBrowser": null,
+    "allowCypressEnv": true,
+    "downloadsFolder": "D:\\Tester\\OrangeHRM-Testing\\cypress\\downloads",
+    "env": {
+      "runDataFile": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\run-data.json",
+      "onlyCases": "TC_LEAVE_CONFIG_002,TC_LEAVE_CONFIG_005,TC_LEAVE_CONFIG_011"
+    },
+    "expose": {},
+    "execTimeout": 60000,
+    "experimentalCspAllowList": false,
+    "experimentalInteractiveRunEvents": false,
+    "experimentalRunAllSpecs": false,
+    "experimentalMemoryManagement": false,
+    "experimentalModifyObstructiveThirdPartyCode": false,
+    "injectDocumentDomain": false,
+    "experimentalOriginDependencies": false,
+    "experimentalSourceRewriting": false,
+    "experimentalSingleTabRunMode": false,
+    "experimentalWebKitSupport": false,
+    "experimentalFastVisibility": false,
+    "fileServerFolder": "D:\\Tester\\OrangeHRM-Testing",
+    "excludeSpecPattern": "*.hot-update.js",
+    "includeShadowDom": false,
+    "justInTimeCompile": true,
+    "keystrokeDelay": 0,
+    "modifyObstructiveCode": true,
+    "numTestsKeptInMemory": 0,
+    "platform": "win32",
+    "pageLoadTimeout": 60000,
+    "port": 64594,
+    "projectId": null,
+    "redirectionLimit": 20,
+    "removeSRIAttributes": false,
+    "reporter": "spec",
+    "reporterOptions": null,
+    "resolvedNodePath": "C:\\Program Files\\nodejs\\node.exe",
+    "resolvedNodeVersion": "24.18.0",
+    "slowTestThreshold": 10000,
+    "scrollBehavior": "top",
+    "taskTimeout": 60000,
+    "trashAssetsBeforeRuns": true,
+    "userAgent": null,
+    "videoCompression": false,
+    "waitForAnimations": true,
+    "watchForFileChanges": false,
+    "browsers": [
+      {
+        "channel": "stable",
+        "displayName": "Chrome",
+        "family": "chromium",
+        "majorVersion": "157",
+        "name": "chrome",
+        "path": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+        "version": "157.0.8103.52"
+      },
+      {
+        "channel": "stable",
+        "displayName": "Edge",
+        "family": "chromium",
+        "majorVersion": "157",
+        "name": "edge",
+        "path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "version": "157.0.4341.46"
+      },
+      {
+        "channel": "stable",
+        "displayName": "Electron",
+        "family": "chromium",
+        "majorVersion": 138,
+        "name": "electron",
+        "path": "",
+        "version": "138.0.7204.251"
+      }
+    ],
+    "cypressBinaryRoot": "C:\\Users\\LENOVO\\AppData\\Local\\Cypress\\Cache\\15.21.1\\Cypress\\resources\\app",
+    "hosts": null,
+    "isInteractive": false,
+    "version": "15.21.1",
+    "testingType": "e2e",
+    "browser": null,
+    "cypressInternalEnv": "production"
+  },
+  "cypressVersion": "15.21.1",
+  "endedTestsAt": "2026-11-13T10:55:27.638Z",
+  "osName": "win32",
+  "osVersion": "Microsoft Windows 10 Home Single Language - 10.0.19045",
+  "runs": [
+    {
+      "error": null,
+      "reporter": "spec",
+      "reporterStats": {
+        "suites": 2,
+        "tests": 3,
+        "passes": 3,
+        "pending": 0,
+        "failures": 0,
+        "start": "2026-11-13T10:54:22.965Z",
+        "end": "2026-11-13T10:55:27.639Z",
+        "duration": 64674
+      },
+      "screenshots": [
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_002",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_002.png",
+          "takenAt": "2026-11-13T10:54:47.226Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_005",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_005.png",
+          "takenAt": "2026-11-13T10:54:56.627Z",
+          "width": 1254
+        },
+        {
+          "height": 627,
+          "name": "TC_LEAVE_CONFIG_011",
+          "path": "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_011.png",
+          "takenAt": "2026-11-13T10:55:13.509Z",
+          "width": 1254
+        }
+      ],
+      "spec": {
+        "absolute": "D:/Tester/OrangeHRM-Testing/automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+        "fileExtension": ".js",
+        "fileName": "22130254_CaoTienThanh_ASM7",
+        "name": "22130254_CaoTienThanh_ASM7.cy.js",
+        "relative": "automation\\22130254\\cypress\\e2e\\leave\\22130254_CaoTienThanh_ASM7.cy.js"
+      },
+      "stats": {
+        "duration": 64678,
+        "endedAt": "2026-11-13T10:55:27.638Z",
+        "failures": 0,
+        "passes": 3,
+        "pending": 0,
+        "skipped": 0,
+        "startedAt": "2026-11-13T10:54:22.960Z",
+        "suites": 2,
+        "tests": 3
+      },
+      "tests": [
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 24536,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_002 – Thêm mới Leave Type với Situational bằng Yes"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 9300,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_005 – Leave Type Name đúng biên tối đa 50 ký tự"
+          ]
+        },
+        {
+          "attempts": [
+            {
+              "state": "passed"
+            }
+          ],
+          "displayError": null,
+          "duration": 30784,
+          "state": "passed",
+          "title": [
+            "22130254_CaoTienThanh_ASM7 – Kiểm thử Leave qua giao diện",
+            "LEAVE_CONFIG – Leave Types & Entitlements",
+            "TC_LEAVE_CONFIG_011 – Chỉnh sửa Situational từ No sang Yes"
+          ]
+        }
+      ],
+      "video": null
+    }
+  ],
+  "startedTestsAt": "2026-11-13T10:54:22.960Z",
+  "totalDuration": 64678,
+  "totalFailed": 0,
+  "totalPassed": 3,
+  "totalPending": 0,
+  "totalSkipped": 0,
+  "totalSuites": 2,
+  "totalTests": 3
+}

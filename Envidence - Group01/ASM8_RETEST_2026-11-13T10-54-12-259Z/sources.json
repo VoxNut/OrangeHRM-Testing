@@ -1,0 +1,14 @@
+{
+  "commit": "c1c08323e76458be5aef08cc36561968df9617f9",
+  "runId": "ASM8_RETEST_2026-11-13T10-54-12-259Z",
+  "sources": [
+    {
+      "key": "leave",
+      "member": "22130254",
+      "tool": "Cypress",
+      "source": "automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+      "sha256": "3f4dd0af338068124c24e287a87d7152e61e1431d44c353855e3d1de1ac12bdb",
+      "planned": 3
+    }
+  ]
+}

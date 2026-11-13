@@ -1,0 +1,88 @@
+{
+  "runId": "ASM8_RETEST_2026-11-13T10-54-12-259Z",
+  "startedAt": "2026-11-13T10:54:12.261Z",
+  "finishedAt": "2026-11-13T10:55:27.842Z",
+  "durationMs": 75542,
+  "commit": "c1c08323e76458be5aef08cc36561968df9617f9",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/",
+  "scope": "leave-retest",
+  "results": [
+    {
+      "id": "TC_LEAVE_CONFIG_002",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm mới Leave Type với tùy chọn Situational = Yes",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bộ fixture F_TYPE_SIT chưa tồn tại.\nInput: Name=G01T01_Maternity; Is Entitlement Situational=Yes\n1. Vào Leave > Configure > Leave Types > Add.\n2. Nhập Name=G01T01_Maternity.\n3. Chọn radio Is Entitlement Situational=Yes.\n4. Bấm Save. Mở lại bản ghi để kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Lưu thành công. Khi mở lại bản ghi G01T01_Maternity, radio Is Entitlement Situational được chọn là Yes.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 24536,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_002.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_005",
+      "module": "LEAVE_CONFIG",
+      "title": "Leave Type Name đúng biên tối đa 50 ký tự",
+      "input": "Tiền điều kiện: Admin đăng nhập; tên chưa tồn tại.\nInput: Name = G01T01_ + 43 ký tự A, đúng 50 ký tự; Situational = No.\n1. Mở Configure > Leave Types > Add.\n2. Nhập chuỗi NAME_50, xác nhận độ dài 50.\n3. Save; mở lại đúng bản ghi để đọc đủ tên.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Lưu thành công. Khi mở Edit, Name có đúng 50 ký tự đã nhập; không mất dữ liệu dù ô danh sách có thể wrap/rút gọn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 9300,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_005.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_011",
+      "module": "LEAVE_CONFIG",
+      "title": "Chỉnh sửa Leave Type đổi Is Entitlement Situational từ No sang Yes",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual_Updated có Situational=No.\nInput: Situational đổi thành Yes\n1. Mở Edit bản ghi G01T01_Annual_Updated.\n2. Chọn radio Is Entitlement Situational=Yes.\n3. Bấm Save. Mở lại bản ghi kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Lưu thành công. Radio Situational giữ giá trị Yes sau khi reload trang.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 30784,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_RETEST_2026-11-13T10-54-12-259Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_011.png"
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "key": "leave",
+      "member": "22130254",
+      "tool": "Cypress",
+      "source": "automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+      "sha256": "3f4dd0af338068124c24e287a87d7152e61e1431d44c353855e3d1de1ac12bdb",
+      "planned": 3,
+      "startedAt": "2026-11-13T10:54:12.300Z",
+      "rawReport": "Envidence - Group01/ASM8_RETEST_2026-11-13T10-54-12-259Z/leave/cypress-results.json",
+      "browser": "157.0.4341.46",
+      "cleanup": true,
+      "finishedAt": "2026-11-13T10:55:27.840Z"
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "Pass": 3,
+    "Fail": 0,
+    "Skipped": 0
+  },
+  "attempted": 3,
+  "selected": 3
+}

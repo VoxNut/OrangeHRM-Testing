@@ -8,6 +8,7 @@
     "test:pim": "node \"Automation Testing Project - Group 01/run.mjs\" --member=23130226",
     "test:leave": "node \"Automation Testing Project - Group 01/run.mjs\" --member=22130254",
     "retest:pim": "node \"Automation Testing Project - Group 01/run.mjs\" --retest-pim",
+    "retest:leave": "node \"Automation Testing Project - Group 01/run.mjs\" --retest-leave",
     "cy:open": "cypress open --config-file \"Automation Testing Project - Group 01/cypress.config.cjs\""
   },
   "devDependencies": {

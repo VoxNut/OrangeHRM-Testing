@@ -1,0 +1,1384 @@
+{
+  "runId": "ASM8_2026-11-13T08-57-47-357Z",
+  "startedAt": "2026-11-13T08:57:47.359Z",
+  "finishedAt": "2026-11-13T09:59:38.083Z",
+  "durationMs": 3710674,
+  "commit": "c1c08323e76458be5aef08cc36561968df9617f9",
+  "baseUrl": "https://opensource-demo.orangehrmlive.com/",
+  "scope": "22130254",
+  "results": [
+    {
+      "id": "TC_LEAVE_CONFIG_003",
+      "module": "LEAVE_CONFIG",
+      "title": "Bỏ trống trường Leave Type Name",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Name rỗng; Is Entitlement Situational=No\n1. Vào Leave > Configure > Leave Types > Add.\n2. Để trống ô Name.\n3. Bấm Save.\n4. Quan sát thông báo lỗi tại form.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường Name hiển thị thông báo lỗi \"Required\". Không tạo Leave Type mới và form không đóng.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 311389,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_003.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_009",
+      "module": "LEAVE_CONFIG",
+      "title": "Hủy thao tác thêm mới Leave Type",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Name=G01T01_CancelType\n1. Mở Add Leave Type, nhập dữ liệu vào Name.\n2. Bấm nút Cancel thay vì Save.\n3. Tìm kiếm tên vừa nhập trong danh sách Leave Types.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Form thêm mới đóng lại, quay về danh sách Leave Types. Không xuất hiện loại phép G01T01_CancelType.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 3347,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_009.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_001",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm mới Leave Type với các trường bắt buộc",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bộ fixture F_TYPE chưa tồn tại.\nInput: Name=G01T01_Annual; Is Entitlement Situational=No (mặc định)\n1. Vào Leave > Configure > Leave Types.\n2. Bấm nút + Add.\n3. Nhập Name, giữ nguyên Situational là No.\n4. Bấm Save. Đối chiếu danh sách Leave Types.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Radio Is Entitlement Situational = No được chọn trước Save. Sau Save có Successfully Saved và đúng tên loại phép trong danh sách; danh sách chỉ có Name và Actions.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 25415,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_001.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_002",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm mới Leave Type với tùy chọn Situational = Yes",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bộ fixture F_TYPE_SIT chưa tồn tại.\nInput: Name=G01T01_Maternity; Is Entitlement Situational=Yes\n1. Vào Leave > Configure > Leave Types > Add.\n2. Nhập Name=G01T01_Maternity.\n3. Chọn radio Is Entitlement Situational=Yes.\n4. Bấm Save. Mở lại bản ghi để kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Lưu thành công. Khi mở lại bản ghi G01T01_Maternity, radio Is Entitlement Situational được chọn là Yes.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Fail",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "failed",
+      "actual": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation10Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+      "durationMs": 73183,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_002 (failed).png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_004",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập Leave Type Name chỉ chứa khoảng trắng",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Name=\"   \" (3 dấu cách)\n1. Mở form Add Leave Type.\n2. Nhập 3 dấu cách vào ô Name.\n3. Bấm Save.\n4. Quan sát phản hồi validation của hệ thống.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hệ thống từ chối lưu và hiển thị thông báo lỗi \"Required\" hoặc không hợp lệ do chuỗi chỉ có khoảng trắng. Không tạo bản ghi.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 70820,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_004.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_005",
+      "module": "LEAVE_CONFIG",
+      "title": "Leave Type Name đúng biên tối đa 50 ký tự",
+      "input": "Tiền điều kiện: Admin đăng nhập; tên chưa tồn tại.\nInput: Name = G01T01_ + 43 ký tự A, đúng 50 ký tự; Situational = No.\n1. Mở Configure > Leave Types > Add.\n2. Nhập chuỗi NAME_50, xác nhận độ dài 50.\n3. Save; mở lại đúng bản ghi để đọc đủ tên.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Lưu thành công. Khi mở Edit, Name có đúng 50 ký tự đã nhập; không mất dữ liệu dù ô danh sách có thể wrap/rút gọn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Fail",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "failed",
+      "actual": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation13Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+      "durationMs": 116452,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_005 (failed).png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_006",
+      "module": "LEAVE_CONFIG",
+      "title": "Leave Type Name vượt biên 50 ký tự (51 ký tự)",
+      "input": "Tiền điều kiện: Admin đăng nhập.\nInput: Name = G01T01_ + 44 ký tự A, đúng 51 ký tự.\n1. Mở Add Leave Type.\n2. Nhập NAME_51 và quan sát khả năng nhập ký tự thứ 51.\n3. Nếu trường nhận đủ 51 ký tự, Save để kiểm tra validation.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Không lưu tên dài 51 ký tự: input chặn ký tự thứ 51 hoặc validation Should not exceed 50 characters. Nếu input chỉ nhận 50, ghi nhận chiều dài thực nhận; không coi việc lưu 50 ký tự là lưu 51.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 84132,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_006.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_007",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập Leave Type Name trùng với tên loại phép đã tồn tại",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Loại phép F_TYPE (G01T01_Annual) đã tồn tại trong hệ thống.\nInput: Name=G01T01_Annual (trùng hoàn toàn F_TYPE)\n1. Mở Add Leave Type.\n2. Nhập Name=G01T01_Annual.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị thông báo lỗi \"Already exists\" tại trường Name. Hệ thống không cho phép lưu bản ghi trùng tên.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 105127,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_007.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_010",
+      "module": "LEAVE_CONFIG",
+      "title": "Chỉnh sửa tên Leave Type thành tên mới hợp lệ",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual tồn tại.\nInput: Name mới=G01T01_Annual_Updated\n1. Vào Leave Types, tìm dòng G01T01_Annual, bấm icon Edit.\n2. Thay đổi Name thành G01T01_Annual_Updated.\n3. Bấm Save. Tải lại trang danh sách.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Thông báo \"Successfully Updated\". Dòng loại phép hiển thị tên mới G01T01_Annual_Updated, tên cũ không còn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 123342,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_010.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_011",
+      "module": "LEAVE_CONFIG",
+      "title": "Chỉnh sửa Leave Type đổi Is Entitlement Situational từ No sang Yes",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual_Updated có Situational=No.\nInput: Situational đổi thành Yes\n1. Mở Edit bản ghi G01T01_Annual_Updated.\n2. Chọn radio Is Entitlement Situational=Yes.\n3. Bấm Save. Mở lại bản ghi kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Lưu thành công. Radio Situational giữ giá trị Yes sau khi reload trang.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Fail",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "failed",
+      "actual": "CypressError: Timed out retrying after 20000ms: `cy.wait()` timed out waiting `20000ms` for the 1st request to the route: `leaveNavigation20Reset`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:75946:18)\n    at Object.errByPath (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:76006:10)\n    at checkForXhr (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137347:84)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:137372:28)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise.attempt.Promise.try (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4288:29)\n    at whenStable (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152458:70)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:152358:14)\n    at tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1780:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1492:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1549:18)\n    at Promise._settlePromise0 (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1594:10)\n    at Promise._settlePromises (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1674:18)\n    at Promise._fulfill (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1618:18)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:5423:46)",
+      "durationMs": 63196,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_011 (failed).png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_012",
+      "module": "LEAVE_CONFIG",
+      "title": "Chỉnh sửa Leave Type nhưng xóa trống trường Name",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual_Updated tồn tại.\nInput: Name xóa rỗng\n1. Mở Edit bản ghi G01T01_Annual_Updated.\n2. Xóa toàn bộ nội dung trong ô Name.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị lỗi \"Required\" tại trường Name. Hệ thống không lưu tên rỗng, dữ liệu cũ vẫn giữ nguyên khi reload.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 33750,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_012.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_013",
+      "module": "LEAVE_CONFIG",
+      "title": "Chỉnh sửa Leave Type nhưng bấm Cancel",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual_Updated tồn tại.\nInput: Nhập tên mới tạm thời nhưng Cancel\n1. Mở Edit bản ghi, nhập tên khác.\n2. Bấm nút Cancel.\n3. Kiểm tra tên trong danh sách.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Đóng form chỉnh sửa. Tên bản ghi trong danh sách vẫn giữ nguyên giá trị trước khi sửa.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 23583,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_013.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_014",
+      "module": "LEAVE_CONFIG",
+      "title": "Xóa Leave Type của nhóm và xác nhận trên modal",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi fixture G01T01_DeleteType đã tạo trước.\nInput: Chọn xóa dòng G01T01_DeleteType\n1. Vào Leave Types, bấm icon Delete tại dòng G01T01_DeleteType.\n2. Modal xác nhận hiện ra, bấm \"Yes, Delete\".\n3. Quan sát thông báo và danh sách.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị thông báo \"Successfully Deleted\". Bản ghi G01T01_DeleteType biến mất hoàn toàn khỏi danh sách.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 33730,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_014.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_015",
+      "module": "LEAVE_CONFIG",
+      "title": "Hủy thao tác xóa Leave Type trên modal xác nhận",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Bản ghi G01T01_Annual_Updated tồn tại.\nInput: Bấm Delete nhưng chọn No, Cancel\n1. Bấm icon Delete tại dòng G01T01_Annual_Updated.\n2. Trên modal xác nhận, bấm nút \"No, Cancel\".\n3. Kiểm tra danh sách bản ghi.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Modal đóng lại. Bản ghi G01T01_Annual_Updated vẫn còn nguyên vẹn trong danh sách, không bị xóa.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 11027,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_015.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_016",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm Leave Entitlement hợp lệ với số ngày nguyên cho nhân viên",
+      "input": "Tiền điều kiện: Admin đăng nhập; F_EMP/F_TYPE tồn tại; tổ hợp nhân viên, loại phép, kỳ thử nghiệm chưa có entitlement.\nInput: Individual Employee; Employee = F_EMP; Leave Type = F_TYPE; Entitlement = 20; chọn kỳ sẽ xin nghỉ (ASM7: 2027).\n1. Mở Entitlements > Add Entitlements.\n2. Chọn F_EMP qua autocomplete, F_TYPE và đúng Leave Period.\n3. Nhập Entitlement = 20, Save.\n4. Ở Updating Entitlement, Confirm; kiểm tra lại bảng Employee Entitlements.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Successfully Saved. Bảng có đúng F_TYPE, kỳ đã chọn và Days bằng số 20; chấp nhận cách hiển thị 20 hoặc 20.00 vì giá trị số tương đương.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 37981,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_016.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_017",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm Leave Entitlement hợp lệ với số ngày thập phân (7.5 ngày)",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Nhân viên F_EMP và F_TYPE sẵn sàng.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement=7.50\n1. Vào Add Entitlements.\n2. Điền đầy đủ thông tin nhân viên và loại phép.\n3. Nhập Entitlement=7.50. Bấm Save.\n4. Mở xem chi tiết hạn mức của nhân viên.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Lưu thành công. Hạn mức được cộng thêm chính xác 7.50 Ngày vào hồ sơ của nhân viên F_EMP.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 49779,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_017.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_008",
+      "module": "LEAVE_CONFIG",
+      "title": "Lọc Employee Entitlements và đối chiếu hạn mức theo nhân viên, loại phép, kỳ",
+      "input": "Tiền điều kiện: Admin đăng nhập; F_EMP và F_EMP_B có entitlement cùng F_TYPE ở hai kỳ; baseline từng tổ hợp đã ghi.\nInput: Employee = F_EMP; Leave Type = F_TYPE; Leave Period = 2026; tổng riêng tổ hợp này = 20 ngày.\n1. Mở Entitlements > Employee Entitlements.\n2. Chọn F_EMP qua autocomplete, F_TYPE và kỳ 2026.\n3. Search; đọc Leave Type, Valid From/To và Days của từng dòng.\n4. Đối chiếu Total Days với tổng các dòng, loại trừ entitlement nhân viên/kỳ khác.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Chỉ trả về entitlement đúng nhân viên, loại phép và kỳ đã chọn. Tổng Days = 20; không cộng dữ liệu F_EMP_B hoặc kỳ khác.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 119009,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_008.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_018",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm Leave Entitlement nhưng bỏ trống Employee Name",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee Name rỗng; Leave Type=F_TYPE; Entitlement=10.00\n1. Mở Add Entitlements.\n2. Để trống ô Employee Name, chọn Leave Type và nhập số ngày.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường Employee Name hiển thị thông báo lỗi \"Required\". Không tạo entitlement.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 25315,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_018.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_019",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập Employee Name không tồn tại khi thêm Entitlement",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee Name=\"NonExistentEmployee_G01X\"\n1. Mở Add Entitlements.\n2. Gõ \"NonExistentEmployee_G01X\" vào ô Employee Name.\n3. Quan sát dropdown gợi ý autocomplete.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Dropdown gợi ý hiển thị \"No Records Found\". Hệ thống không cho phép chọn tên tự do không có trong danh sách nhân viên.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 29032,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_019.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_020",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm Leave Entitlement nhưng không chọn Leave Type",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. F_EMP sẵn sàng.\nInput: Employee=F_EMP; Leave Type trống (-- Select --); Entitlement=10.00\n1. Mở Add Entitlements.\n2. Chọn F_EMP, giữ Leave Type ở trạng thái chưa chọn.\n3. Nhập Entitlement=10.00, bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường Leave Type hiển thị lỗi \"Required\". Không thực hiện lưu.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 33243,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_020.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_021",
+      "module": "LEAVE_CONFIG",
+      "title": "Thêm Leave Entitlement nhưng để trống trường Entitlement",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. F_EMP và F_TYPE sẵn sàng.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement rỗng\n1. Mở Add Entitlements, chọn F_EMP và F_TYPE.\n2. Để trống ô Entitlement.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường Entitlement hiển thị thông báo lỗi \"Required\". Không tạo entitlement.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 47112,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_021.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_022",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập giá trị Entitlement bằng chữ hoặc ký tự không phải số",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement=\"abc@#$\"\n1. Mở Add Entitlements.\n2. Nhập chuỗi ký tự chữ và ký tự đặc biệt vào ô Entitlement.\n3. Bấm Save hoặc rời trường.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị lỗi định dạng số \"Should be a number\" hoặc \"Expected a number\". Hệ thống từ chối lưu giá trị phi số.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 38773,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_022.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_023",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập giá trị Entitlement là số âm",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement=\"-5.00\"\n1. Mở Add Entitlements.\n2. Nhập số âm -5.00 vào ô Entitlement.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị thông báo lỗi không cho phép số âm (\"Should be greater than 0\" hoặc \"Invalid number\"). Không lưu hạn mức âm.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 34062,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_023.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_024",
+      "module": "LEAVE_CONFIG",
+      "title": "Nhập giá trị Entitlement có nhiều hơn 2 chữ số thập phân",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement=\"10.555\"\n1. Mở Add Entitlements.\n2. Nhập số có 3 chữ số thập phân 10.555 vào Entitlement.\n3. Bấm Save.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Báo lỗi định dạng số thập phân tối đa 2 chữ số (\"Should be a valid decimal\" hoặc tự động làm tròn/chặn nhập). Không lưu số có 3 chữ số thập phân không hợp lệ.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 24353,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_024.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_CONFIG_025",
+      "module": "LEAVE_CONFIG",
+      "title": "Hủy thao tác thêm Leave Entitlement khi đang nhập liệu",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee=F_EMP; Leave Type=F_TYPE; Entitlement=20.00\n1. Mở Add Entitlements, nhập các thông tin.\n2. Bấm nút Cancel thay vì Save.\n3. Mở xem danh sách hạn mức của F_EMP.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Cancel quay về trang trước. Tổng entitlement của đúng nhân viên/loại phép/kỳ không tăng so với baseline; không có bản ghi mới do thao tác vừa hủy.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 53780,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_CONFIG_025.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_001",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn xin nghỉ phép 1 ngày hợp lệ khi đủ hạn mức",
+      "input": "Tiền điều kiện: ESS đăng nhập; F_TYPE có hạn mức khả dụng ít nhất 1 ngày trong kỳ xin nghỉ; ngày chưa có đơn.\nInput: F_TYPE; From Date = To Date = D0; Full Day; comments riêng theo RUN. ASM7: D0 = 2027-11-01.\n1. Mở Apply; chọn F_TYPE.\n2. Nhập cùng ngày làm việc D0 cho From/To theo placeholder UI; Duration mặc định Full Day.\n3. Nhập Comments và Apply.\n4. Mở My Leave, lọc đúng khoảng ngày/loại phép của fixture để tìm đơn.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Successfully Saved. My Leave có đúng đơn D0 của nhân viên/loại phép fixture, Pending Approval và Number of Days = 1.00.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 42158,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_001.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_002",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn xin nghỉ phép nhiều ngày liên tiếp hợp lệ",
+      "input": "Tiền điều kiện: Nhân viên ESS có Leave Balance >= 3 ngày tại F_TYPE.\nInput: Leave Type=F_TYPE; From Date=2026-11-16; To Date=2026-11-18 (3 ngày làm việc); Comments=\"G01T01 3 days leave\"\n1. Vào Leave > Apply.\n2. Chọn F_TYPE, nhập From Date=2026-11-16, To Date=2026-11-18.\n3. Bấm Apply.\n4. Đối chiếu trong My Leave.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Nộp đơn thành công. Đơn hiển thị trong My Leave với khoảng ngày 2026-11-16 to 2026-11-18, Number of Days=3.00, Status=\"Pending Approval\".",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 21263,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_002.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_003",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn nghỉ nửa ngày buổi sáng",
+      "input": "Tiền điều kiện: ESS có ít nhất 0.50 ngày; 2026-11-23 là ngày làm việc đủ ngày, chưa có đơn.\nInput: F_TYPE; From = To = 2026-11-23; Duration = Half Day - Morning.\n1. Mở Apply và chọn F_TYPE.\n2. Nhập From/To cùng ngày; chọn Half Day - Morning.\n3. Apply; tìm đúng đơn trong My Leave.\n4. Đối chiếu thời lượng và số dư trước/sau.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Nộp thành công. Đơn Pending Approval, thời lượng nửa ngày buổi sáng, Number of Days = 0.50; số dư giảm 0.50 ngày.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 33331,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_003.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_004",
+      "module": "LEAVE_SELF",
+      "title": "Không chọn Leave Type khi nộp đơn",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Leave Type trống (-- Select --); From Date=2026-11-10; To Date=2026-11-10\n1. Vào Leave > Apply.\n2. Giữ nguyên ô Leave Type không chọn, nhập From Date và To Date.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường Leave Type hiển thị lỗi \"Required\". Đơn không được gửi đi.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7677,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_004.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_005",
+      "module": "LEAVE_SELF",
+      "title": "Bỏ trống trường From Date khi nộp đơn",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Leave Type=F_TYPE; From Date rỗng; To Date=2026-11-10\n1. Mở Apply Leave, chọn Leave Type F_TYPE.\n2. Để trống ô From Date, chỉ nhập To Date.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường From Date hiển thị thông báo lỗi \"Required\". Không thể nộp đơn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 8245,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_005.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_006",
+      "module": "LEAVE_SELF",
+      "title": "Bỏ trống trường To Date khi nộp đơn",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Leave Type=F_TYPE; From Date=2026-11-10; To Date rỗng\n1. Mở Apply Leave, chọn Leave Type F_TYPE.\n2. Nhập From Date, xóa trống ô To Date.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường To Date hiển thị thông báo lỗi \"Required\". Không thể nộp đơn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 11408,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_006.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_007",
+      "module": "LEAVE_SELF",
+      "title": "Chọn To Date trước From Date khi nộp đơn",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Leave Type=F_TYPE; From Date=2026-11-20; To Date=2026-11-15 (To < From)\n1. Chọn F_TYPE.\n2. Nhập From Date=2026-11-20.\n3. Nhập To Date=2026-11-15.\n4. Bấm Apply hoặc quan sát validation.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường To Date báo lỗi \"To date should be after from date\". Nút Apply không gửi dữ liệu.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 6199,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_007.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_008",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn theo giờ bằng Duration = Specify Time",
+      "input": "Tiền điều kiện: ESS fixture F_SHIFT_8H có ca 09:00–17:00, đủ số dư; ngày 2026-11-25 chưa có đơn.\nInput: F_TYPE; From = To = 2026-11-25; Specify Time; From Time = 09:00; To Time = 11:00.\n1. Mở Apply, chọn loại phép và cùng ngày.\n2. Chọn Duration = Specify Time.\n3. Nhập 09:00–11:00 theo định dạng giờ UI, Apply.\n4. Tìm đơn trong My Leave và đối chiếu 2 giờ trên ca đủ 8 giờ.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Nộp thành công. Đơn Pending Approval; thời lượng 2 giờ tương đương Number of Days = 0.25 với fixture ca 8 giờ đã xác nhận.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 35853,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_008.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_009",
+      "module": "LEAVE_SELF",
+      "title": "Nhập From Date là ngày không tồn tại trên lịch",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: From Date=2026-02-30 (ngày 30/02 không tồn tại); To Date=2026-03-02\n1. Nhập From Date=2026-02-30 vào ô ngày.\n2. Nhập To Date hợp lệ.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Báo lỗi định dạng ngày không hợp lệ (\"Should be a valid date\" hoặc \"Invalid Date\"). Đơn không được chấp nhận.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 8274,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_009.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_010",
+      "module": "LEAVE_SELF",
+      "title": "Nhập To Date là ngày không tồn tại trên lịch",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: From Date=2026-04-28; To Date=2026-04-31 (tháng 4 chỉ có 30 ngày)\n1. Nhập From Date hợp lệ.\n2. Nhập To Date=2026-04-31.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Báo lỗi định dạng ngày không hợp lệ tại ô To Date. Đơn không được chấp nhận.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7534,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_010.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_011",
+      "module": "LEAVE_SELF",
+      "title": "Apply không khả dụng khi nhân viên chưa có entitlement kỳ hiện tại",
+      "input": "Tiền điều kiện: ESS F_EMP_NOENT không có entitlement kỳ hiện tại cho bất kỳ Leave Type; không thay đổi tài khoản nhân viên khác.\nInput: Tài khoản ESS riêng, chưa cấp phép kỳ hiện tại.\n1. Đăng nhập F_EMP_NOENT.\n2. Mở Leave > Apply.\n3. Quan sát thông báo và sự hiện diện của form nộp đơn.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Hiển thị No Leave Types with Leave Balance. Form chọn loại phép/ngày và nút Apply không khả dụng; không thể nộp đơn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 14260,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_011.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_012",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn xin nghỉ trùng hoàn toàn khoảng ngày với đơn đã có",
+      "input": "Tiền điều kiện: Đã có đơn xin nghỉ phép ngày 2026-11-10 (TC_LEAVE_SELF_001) ở trạng thái Pending hoặc Scheduled.\nInput: Leave Type=F_TYPE; From=2026-11-10; To=2026-11-10\n1. Vào Apply Leave.\n2. Nhập trùng ngày 2026-11-10 với đơn đã có.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị Overlapping Leave Request(s) Found, không tạo thêm đơn trùng. Tìm lại đúng nhân viên/loại phép/ngày trong My Leave và chỉ có một đơn ban đầu.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 23683,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_012.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_013",
+      "module": "LEAVE_SELF",
+      "title": "Nộp đơn xin nghỉ trùng một phần khoảng ngày (giao thoa 1 ngày)",
+      "input": "Tiền điều kiện: Đã có đơn từ 2026-11-16 đến 2026-11-18.\nInput: From=2026-11-18; To=2026-11-20 (trùng ngày 18/11)\n1. Mở Apply Leave.\n2. Nhập khoảng ngày giao thoa với đơn cũ.\n3. Bấm Apply.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị Overlapping Leave Request(s) Found và cảnh báo từ chối nộp. Không thêm đơn mới giao thoa ngày với đơn đầu vào.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 13477,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_013.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_014",
+      "module": "LEAVE_SELF",
+      "title": "Nhập nội dung Comments đúng biên tối đa 250 ký tự",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Comments=chuỗi đúng 250 ký tự; ngày hợp lệ chưa trùng\n1. Nhập thông tin ngày hợp lệ.\n2. Dán chuỗi 250 ký tự vào trường Comments.\n3. Bấm Apply. Xem đơn trong My Leave.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Đơn được gửi thành công. Comments lưu nguyên vẹn 250 ký tự mà không bị cắt bớt.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 22980,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_014.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_015",
+      "module": "LEAVE_SELF",
+      "title": "Nhập nội dung Comments vượt biên 250 ký tự (251 ký tự)",
+      "input": "Tiền điều kiện: Đang ở trang Apply Leave.\nInput: Comments=chuỗi 251 ký tự\n1. Nhập thông tin ngày hợp lệ.\n2. Dán chuỗi 251 ký tự vào Comments.\n3. Bấm Apply hoặc quan sát ô nhập.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Hiển thị lỗi vượt quá độ dài \"Should not exceed 250 characters\" hoặc input chặn ký tự thứ 251. Không lưu chuỗi 251 ký tự.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 22234,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_015.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_016",
+      "module": "LEAVE_SELF",
+      "title": "Xem danh sách My Leave với bộ lọc trạng thái mặc định",
+      "input": "Tiền điều kiện: Người dùng đã nộp ít nhất 1 đơn xin nghỉ phép.\nInput: Vào trang My Leave List\n1. Vào Leave > My Leave.\n2. Quan sát các bộ lọc mặc định và bảng kết quả.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Bảng hiển thị danh sách đơn của chính người dùng đăng nhập. Các cột Date, Employee Name, Leave Type, Leave Balance, Number of Days, Status hiển thị rõ ràng.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 23774,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_016.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_017",
+      "module": "LEAVE_SELF",
+      "title": "Lọc danh sách My Leave theo khoảng thời gian From Date - To Date",
+      "input": "Tiền điều kiện: Có các đơn nộp trong tháng 11/2026.\nInput: From Date=2026-11-01; To Date=2026-11-30\n1. Vào My Leave, nhập From Date và To Date tháng 11.\n2. Bấm Search.\n3. Kiểm tra ngày của các dòng hiển thị.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Tất cả các bản ghi trả về đều có ngày nghỉ nằm trong khoảng từ 01/11/2026 đến 30/11/2026.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7529,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_017.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_018",
+      "module": "LEAVE_SELF",
+      "title": "Lọc danh sách My Leave với khoảng thời gian không có đơn",
+      "input": "Tiền điều kiện: Đang ở trang My Leave.\nInput: From Date=2025-01-01; To Date=2025-01-05 (khoảng ngày không có đơn)\n1. Nhập khoảng ngày vào bộ lọc.\n2. Bấm Search.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Bảng kết quả hiển thị thông báo \"No Records Found\". Không có dòng dữ liệu cũ nào còn sót lại.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 5219,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_018.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_019",
+      "module": "LEAVE_SELF",
+      "title": "Lọc danh sách My Leave theo trạng thái Pending Approval",
+      "input": "Tiền điều kiện: Có đơn Pending Approval và đơn đã Cancelled trong My Leave.\nInput: Show Leave with Status chỉ chọn duy nhất \"Pending Approval\"\n1. Tại bộ lọc Status, xóa các trạng thái khác, chỉ để lại \"Pending Approval\".\n2. Bấm Search.\n3. Đối chiếu cột Status của mọi dòng.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Tất cả các dòng kết quả đều có giá trị cột Status là \"Pending Approval\", không lẫn trạng thái khác.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 31058,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_019.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_020",
+      "module": "LEAVE_SELF",
+      "title": "Lọc danh sách My Leave theo Leave Type cụ thể",
+      "input": "Tiền điều kiện: Có các đơn thuộc loại F_TYPE và loại phép khác.\nInput: Leave Type=F_TYPE\n1. Chọn F_TYPE tại dropdown Leave Type.\n2. Bấm Search.\n3. Kiểm tra cột Leave Type ở tất cả các dòng.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Mọi dòng trả về đều có cột Leave Type đúng là F_TYPE.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 22762,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_020.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_021",
+      "module": "LEAVE_SELF",
+      "title": "Reset bộ lọc trên trang My Leave",
+      "input": "Tiền điều kiện: Đang ở My Leave với các ô From Date, To Date đã nhập dữ liệu và chọn loại phép.\nInput: Bấm nút Reset\n1. Nhập From Date, To Date và chọn Leave Type.\n2. Bấm Search để có kết quả lọc.\n3. Bấm nút Reset.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Reset khôi phục From/To về đầu/cuối kỳ phép mặc định; Leave Type về chưa chọn và các chip trạng thái về mặc định của My Leave. Bảng tải lại theo bộ lọc mặc định, không yêu cầu ngày bị xóa rỗng.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 5920,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_021.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_022",
+      "module": "LEAVE_SELF",
+      "title": "Hủy đơn xin nghỉ phép đang ở trạng thái Pending Approval",
+      "input": "Tiền điều kiện: Có một đơn F_REQ_PEND ở trạng thái \"Pending Approval\". Ghi lại Leave Balance trước khi hủy.\nInput: Bấm nút Cancel tại dòng đơn F_REQ_PEND\n1. Vào My Leave, tìm đơn F_REQ_PEND.\n2. Tại cột Actions, bấm nút Cancel.\n3. Tải lại trang và quan sát trạng thái.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Thông báo \"Successfully Updated\". Trạng thái đơn chuyển từ \"Pending Approval\" sang \"Cancelled\". Số dư phép (Leave Balance) được hoàn lại số ngày của đơn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 30315,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_022.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_023",
+      "module": "LEAVE_SELF",
+      "title": "Hủy đơn xin nghỉ phép đang ở trạng thái Scheduled (đã duyệt)",
+      "input": "Tiền điều kiện: Có đơn F_REQ_SCHED ở trạng thái \"Scheduled\" (đã được Admin Approve trước đó).\nInput: Bấm Cancel tại dòng F_REQ_SCHED\n1. Vào My Leave, tìm đơn có Status=\"Scheduled\".\n2. Bấm nút Cancel ở cột Actions.\n3. Tải lại trang kiểm tra trạng thái.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Thao tác thành công. Trạng thái đơn đổi thành \"Cancelled\", số ngày nghỉ được hoàn lại vào Leave Balance của nhân viên.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 95024,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_023.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_024",
+      "module": "LEAVE_SELF",
+      "title": "Kiểm tra đơn đã Rejected không có tùy chọn Cancel",
+      "input": "Tiền điều kiện: Có đơn ở trạng thái \"Rejected\" (bị từ chối bởi Admin).\nInput: Đơn Status=\"Rejected\"\n1. Vào My Leave, tìm đơn có Status=\"Rejected\".\n2. Quan sát cột Actions của dòng này.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Tại cột Actions của đơn Rejected không xuất hiện nút Cancel hoặc nút Cancel bị vô hiệu hóa, không thể click.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 70465,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_024.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_SELF_025",
+      "module": "LEAVE_SELF",
+      "title": "Kiểm tra đơn đã Taken trong quá khứ không cho phép Cancel",
+      "input": "Tiền điều kiện: Có đơn ở trạng thái \"Taken\" (kỳ nghỉ đã diễn ra xong trong quá khứ).\nInput: Đơn Status=\"Taken\"\n1. Vào My Leave, lọc và tìm đơn có Status=\"Taken\".\n2. Kiểm tra thao tác tại cột Actions.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Không cho phép Cancel đơn đã Taken. Không hiển thị nút Cancel trên dòng bản ghi này.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 50891,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_SELF_025.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_001",
+      "module": "LEAVE_ADMIN",
+      "title": "Tìm kiếm Leave List theo Employee Name hợp lệ qua autocomplete",
+      "input": "Tiền điều kiện: Admin khác ESS; có hai đơn fixture Pending Approval của F_EMP trong khoảng lọc.\nInput: Employee = F_EMP qua autocomplete; From = D0; To = D2; Status = Pending Approval mặc định.\n1. Mở Leave List.\n2. Chờ tải danh sách và kỳ phép; nhập khoảng ngày có đơn.\n3. Chọn đúng F_EMP từ autocomplete, Search.\n4. Đối chiếu mỗi dòng với họ tên nhân viên và trạng thái đầu vào.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Có đúng hai đơn fixture đang Pending Approval. Mọi dòng trả về thuộc F_EMP; không có đơn của nhân viên khác.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 85128,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_001.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_002",
+      "module": "LEAVE_ADMIN",
+      "title": "Tìm kiếm Leave List với Employee Name không tồn tại",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: Employee Name=\"Unknown_Employee_G01X\"\n1. Mở Leave List.\n2. Gõ tên không tồn tại vào Employee Name.\n3. Quan sát gợi ý và bấm Search nếu cho phép.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Autocomplete hiển thị No Records Found và không chọn được nhân viên. Nếu Search khi còn chuỗi chưa chọn, Employee Name phải báo Invalid; bảng cũ không được coi là kết quả tìm kiếm thành công theo tên không tồn tại.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 3387,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_002.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_003",
+      "module": "LEAVE_ADMIN",
+      "title": "Lọc Leave List kết hợp Leave Type và trạng thái Pending Approval",
+      "input": "Tiền điều kiện: Admin đăng nhập; hai đơn F_EMP đang Pending Approval; bộ lọc nhân viên/ngày đã chọn đúng.\nInput: Employee = F_EMP; Leave Type = F_TYPE; Show Leave with Status chỉ Pending Approval.\n1. Chọn F_TYPE.\n2. Xóa chip trạng thái khác, chọn riêng Pending Approval.\n3. Search; kiểm tra toàn bộ dòng kết quả.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Hai đơn trả về đều đúng F_TYPE và Pending Approval, đồng thời giữ đúng nhân viên/khoảng ngày đã lọc.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7117,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_003.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_004",
+      "module": "LEAVE_ADMIN",
+      "title": "Lọc Leave List theo Sub Unit của tổ chức",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Có nhân viên thuộc Sub Unit chỉ định (vd: SUBUNIT_A).\nInput: Sub Unit=SUBUNIT_A\n1. Chọn giá trị SUBUNIT_A tại dropdown Sub Unit.\n2. Bấm Search. Đối chiếu danh sách.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Danh sách chỉ chứa các đơn của những nhân viên thuộc đúng Sub Unit đã chọn.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 3862,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_004.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_005",
+      "module": "LEAVE_ADMIN",
+      "title": "Lọc Leave List theo khoảng thời gian From Date - To Date hợp lệ",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: From Date=2026-11-01; To Date=2026-11-30\n1. Nhập From Date và To Date vào bộ lọc Leave List.\n2. Bấm Search.\n3. Kiểm tra ngày của các dòng trong bảng.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Tất cả các đơn hiển thị đều có ngày nghỉ rơi vào khoảng từ 01/11/2026 đến 30/11/2026.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7607,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_005.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_006",
+      "module": "LEAVE_ADMIN",
+      "title": "Lọc Leave List với From Date lớn hơn To Date",
+      "input": "Tiền điều kiện: Admin đã đăng nhập.\nInput: From Date=2026-11-30; To Date=2026-11-01 (From > To)\n1. Nhập From Date lớn hơn To Date.\n2. Bấm Search hoặc quan sát validation.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Trường To Date hiển thị lỗi \"To date should be after from date\". Hệ thống không thực hiện truy vấn với khoảng ngày sai.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 2071,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_006.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_007",
+      "module": "LEAVE_ADMIN",
+      "title": "Lọc đồng thời nhiều trạng thái trong Show Leave with Status",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Có sẵn đơn Pending Approval và đơn Scheduled.\nInput: Status chọn cả hai chip: \"Pending Approval\" và \"Scheduled\"\n1. Thêm cả hai trạng thái vào bộ chọn Status.\n2. Bấm Search.\n3. Kiểm tra các dòng kết quả.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Bảng kết quả hiển thị đồng thời các đơn có trạng thái Pending Approval và Scheduled, không hiển thị Rejected hay Cancelled.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7981,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_007.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_008",
+      "module": "LEAVE_ADMIN",
+      "title": "Bật toggle Include Past Employees khi tìm kiếm",
+      "input": "Tiền điều kiện: Admin đã đăng nhập. Trong hệ thống có nhân viên đã nghỉ việc từng có đơn nghỉ phép.\nInput: Bật toggle \"Include Past Employees\"\n1. Bật toggle Include Past Employees sang trạng thái On.\n2. Bấm Search.\n3. Đối chiếu danh sách kết quả.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Danh sách kết quả bao gồm cả các đơn nghỉ phép lịch sử của nhân viên đã thôi việc (Past Employees).",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 139114,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_008.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_009",
+      "module": "LEAVE_ADMIN",
+      "title": "Bấm nút Reset trên form lọc Leave List",
+      "input": "Tiền điều kiện: Đang ở Leave List với các trường lọc đã chọn giá trị tùy biến.\nInput: Bấm nút Reset\n1. Điền From Date, To Date, chọn Employee Name và Sub Unit.\n2. Bấm Search.\n3. Bấm nút Reset.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Reset phục hồi From/To về đầu/cuối kỳ phép mặc định; Employee Name và Sub Unit về chưa chọn; Status trở về Pending Approval; bảng tải lại. Không yêu cầu ngày rỗng.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 7982,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_009.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_010",
+      "module": "LEAVE_ADMIN",
+      "title": "Phê duyệt (Approve) một đơn nghỉ phép đang ở trạng thái Pending Approval",
+      "input": "Tiền điều kiện: Có đơn nghỉ phép F_REQ_PEND của nhân viên F_EMP ở trạng thái \"Pending Approval\".\nInput: Click nút Approve tại dòng đơn F_REQ_PEND\n1. Vào Leave List, tìm dòng F_REQ_PEND.\n2. Tại cột Actions, nhấp nút Approve (hoặc chọn Approve trong menu hành động).\n3. Tải lại danh sách kiểm tra.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Thông báo \"Successfully Updated\". Cột Status của đơn chuyển ngay từ \"Pending Approval\" sang \"Scheduled\". Nút Approve/Reject biến mất.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 12030,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_010.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_011",
+      "module": "LEAVE_ADMIN",
+      "title": "Xác nhận trạng thái Scheduled sau khi Approve hiển thị đồng bộ bên Employee",
+      "input": "Tiền điều kiện: Có đơn riêng đã được Admin Approve thành Scheduled; ASM7 dùng đơn D1 từ TC_LEAVE_ADMIN_010.\nInput: ESS của đúng F_EMP; cùng Leave Type, ngày và thời lượng đơn đã duyệt.\n1. Đăng xuất Admin, đăng nhập ESS F_EMP.\n2. Mở My Leave và lọc đúng kỳ/loại phép/ngày.\n3. Tìm đúng đơn đã duyệt, đối chiếu với thông tin phía Admin.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "My Leave hiển thị Scheduled trên đúng đơn/loại phép; ngày và Number of Days khớp bản ghi Admin đã duyệt (ASM7: D1, 1.00 ngày).",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 17451,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_011.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_012",
+      "module": "LEAVE_ADMIN",
+      "title": "Từ chối (Reject) một đơn nghỉ phép đang ở trạng thái Pending Approval",
+      "input": "Tiền điều kiện: Có đơn nghỉ phép F_REQ_REJ ở trạng thái \"Pending Approval\".\nInput: Click nút Reject tại dòng đơn F_REQ_REJ\n1. Vào Leave List, tìm đơn F_REQ_REJ.\n2. Tại cột Actions, nhấp nút Reject.\n3. Tải lại trang và quan sát trạng thái.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Thông báo \"Successfully Updated\". Trạng thái của đơn chuyển ngay thành \"Rejected\".",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 25991,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_012.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_013",
+      "module": "LEAVE_ADMIN",
+      "title": "Kiểm tra hoàn trả hạn mức phép sau khi Admin Reject đơn",
+      "input": "Tiền điều kiện: Admin và ESS riêng; F_REQ_REJ_2D đang Pending Approval, đúng 2 ngày làm việc; ghi balance ngay trước Reject.\nInput: Đơn riêng 2 ngày; không dùng đơn đã Approve/Reject ở case khác.\n1. ESS đọc balance B_before trong đúng kỳ phép.\n2. Admin lọc đúng nhân viên/loại phép/ngày và Reject F_REQ_REJ_2D.\n3. Xác nhận trạng thái Rejected.\n4. ESS đọc lại balance B_after của cùng kỳ.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "B_after = B_before + 2.00; chỉ hoàn số ngày của đơn đã Reject, không thay đổi entitlement gốc.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 65879,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_013.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_014",
+      "module": "LEAVE_ADMIN",
+      "title": "Admin thực hiện Hủy (Cancel) một đơn nghỉ phép đang Scheduled",
+      "input": "Tiền điều kiện: Admin có quyền Cancel; đơn fixture Scheduled ở ngày tương lai.\nInput: Đơn riêng F_REQ_SCHED.\n1. Lọc đúng nhân viên, loại phép, khoảng ngày và Scheduled.\n2. Ở dòng fixture mở More > Cancel Leave.\n3. Kiểm tra lại đơn và balance cùng kỳ.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Successfully Updated. Đơn chuyển Cancelled; số dư hoàn lại số ngày của đơn, không thay đổi đơn khác.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 90341,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_014.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_015",
+      "module": "LEAVE_ADMIN",
+      "title": "Kiểm tra không thể thực hiện Approve lại đơn đã ở trạng thái Rejected",
+      "input": "Tiền điều kiện: Đơn có Status=\"Rejected\".\nInput: Đơn Rejected trong Leave List\n1. Lọc đơn có trạng thái \"Rejected\".\n2. Quan sát cột Actions của bản ghi.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Không có nút Approve trên dòng đơn đã Rejected. Không thể thay đổi trạng thái từ Rejected sang Approved/Scheduled.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 17525,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_015.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_016",
+      "module": "LEAVE_ADMIN",
+      "title": "Kiểm tra không thể thực hiện Approve lại đơn đã ở trạng thái Cancelled",
+      "input": "Tiền điều kiện: Đơn có Status=\"Cancelled\".\nInput: Đơn Cancelled trong Leave List\n1. Lọc đơn có trạng thái \"Cancelled\".\n2. Quan sát các nút hành động tại cột Actions.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Không xuất hiện nút Approve đối với đơn đã Cancelled.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 6183,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_016.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_017",
+      "module": "LEAVE_ADMIN",
+      "title": "Xem bình luận (View Comments) của nhân viên trên đơn nghỉ phép",
+      "input": "Tiền điều kiện: Đơn fixture có comment nhân viên; Admin được xem đơn.\nInput: Đúng đơn có comment G01T01 đã ghi trong fixture.\n1. Lọc/tìm đúng dòng fixture.\n2. Mở chức năng Comments của đơn.\n3. Đọc nội dung trong Leave Request Comments.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Modal Leave Request Comments mở. Nội dung đã lưu khớp ghi chú của nhân viên; chỉ đối chiếu các thông tin tác giả/thời gian có hiển thị trên UI.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 34776,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_017.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_018",
+      "module": "LEAVE_ADMIN",
+      "title": "Admin thêm bình luận ghi chú mới vào đơn nghỉ phép",
+      "input": "Tiền điều kiện: Admin được phép ghi comment trên đơn fixture.\nInput: Admin Comment = Đã xác nhận với trưởng bộ phận G01T01.\n1. Mở More > Add Comment hoặc Comments của đúng đơn.\n2. Nhập comment trong Leave Request Comments.\n3. Bấm Save, đóng rồi mở lại Comments.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Lưu thành công; khi mở lại có đúng nội dung comment Admin vừa thêm, không ghi vào đơn khác.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 14896,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_018.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_019",
+      "module": "LEAVE_ADMIN",
+      "title": "Đóng modal bình luận bằng nút Cancel/Close mà không lưu",
+      "input": "Tiền điều kiện: Đang mở modal Comments.\nInput: Nhập text tạm thời vào ô comment nhưng bấm Close/Cancel\n1. Nhập đoạn text thử nghiệm.\n2. Bấm nút Cancel hoặc icon X đóng modal.\n3. Mở lại modal Comments.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Modal đóng lại. Đoạn text chưa lưu bị hủy bỏ, danh sách comment cũ không bị thay đổi.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 8841,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_019.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_020",
+      "module": "LEAVE_ADMIN",
+      "title": "Chọn checkbox header để chọn tất cả các dòng trên trang Leave List",
+      "input": "Tiền điều kiện: Bảng đã lọc Leave Type và kỳ của F_REQ_BULK; tất cả dòng trang hiện tại đã xác nhận thuộc fixture.\nInput: Chỉ các dòng có khóa/người xin nghỉ của RUN.\n1. Đối chiếu từng dòng là fixture riêng.\n2. Nhấp checkbox header của trang hiện tại.\n3. Quan sát các checkbox và số bản ghi được chọn.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Tất cả dòng fixture trên trang hiện tại được chọn; không chọn ngầm trang khác hoặc bản ghi ngoài fixture.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 115586,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_020.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_021",
+      "module": "LEAVE_ADMIN",
+      "title": "Thực hiện phê duyệt hàng loạt (Bulk Approve) nhiều đơn Pending Approval",
+      "input": "Tiền điều kiện: Admin có quyền; tối thiểu hai đơn fixture riêng đang Pending Approval, chưa dùng trong nhánh khác.\nInput: F_REQ_BULK_APPROVE; hai đơn đúng nhân viên/loại phép/kỳ.\n1. Lọc đúng Leave Type/kỳ của fixture; kiểm tra khóa từng dòng.\n2. Tích đúng hai checkbox của đơn Pending Approval.\n3. Bấm Approve trên thanh thao tác hàng loạt.\n4. Xác nhận hộp thoại Approve bằng Confirm.\n5. Tìm lại đúng các đơn đã chọn và đối chiếu trạng thái.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Cập nhật thành công. Cả hai đơn đã chọn chuyển Scheduled; đơn không được chọn không bị thay đổi.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 14865,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_021.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_022",
+      "module": "LEAVE_ADMIN",
+      "title": "Thực hiện từ chối hàng loạt (Bulk Reject) nhiều đơn Pending Approval",
+      "input": "Tiền điều kiện: Admin có quyền; tối thiểu hai đơn fixture riêng đang Pending Approval, chưa dùng trong nhánh khác.\nInput: F_REQ_BULK_REJECT; hai đơn đúng nhân viên/loại phép/kỳ.\n1. Lọc đúng Leave Type/kỳ của fixture; kiểm tra khóa từng dòng.\n2. Tích đúng hai checkbox của đơn Pending Approval.\n3. Bấm Reject trên thanh thao tác hàng loạt.\n4. Xác nhận hộp thoại Reject bằng Confirm.\n5. Tìm lại đúng các đơn đã chọn và đối chiếu trạng thái.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Cập nhật thành công. Cả hai đơn đã chọn chuyển Rejected; đơn không được chọn không bị thay đổi.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 16193,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_022.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_023",
+      "module": "LEAVE_ADMIN",
+      "title": "Kiểm tra phân trang (Pagination) trên bảng danh sách Leave List",
+      "input": "Tiền điều kiện: F_PAGINATION có ít nhất 51 đơn fixture riêng; biết khóa các đơn và kích thước trang thực tế.\nInput: Leave Type = F_TYPE_PAGE; kỳ chứa toàn bộ fixture; bộ lọc status phù hợp.\n1. Lọc riêng dữ liệu F_PAGINATION.\n2. Ghi khóa các đơn trang 1 và số trang/kích thước trang.\n3. Cuộn xuống phân trang, Next hoặc chọn trang 2.\n4. Đối chiếu khóa trang 2 với dữ liệu chuẩn bị và trang 1.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Chuyển trang đúng, số trang được đánh dấu; bản ghi trang 2 đúng fixture tiếp theo và không trùng khóa trang 1. Nếu chưa đủ dữ liệu phân trang thì tiền điều kiện chưa đạt, không ghi Passed.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 530739,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_023.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_024",
+      "module": "LEAVE_ADMIN",
+      "title": "Xem chi tiết đơn bằng View Leave Details",
+      "input": "Tiền điều kiện: Admin được xem đơn fixture; ghi lại nhân viên, ngày, loại phép và trạng thái của dòng.\nInput: Đúng dòng đơn fixture, không dùng dữ liệu khác trên demo.\n1. Lọc/tìm đúng dòng Leave List.\n2. Mở More > View Leave Details.\n3. Đối chiếu nhân viên, thông tin đơn và trạng thái từng ngày với dòng ban đầu.\n4. Bấm Back để quay về danh sách.\nKết thúc: Manual: khôi phục baseline và chỉ dọn fixture của case. ASM7: giữ dữ liệu cho case phụ thuộc, cleanup một lần ở cuối suite.",
+      "expected": "Mở trang Leave Request Details của đúng đơn. Thông tin nhân viên/đơn và trạng thái ngày khớp dữ liệu ban đầu; Back quay về danh sách.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 9540,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_024.png"
+      ]
+    },
+    {
+      "id": "TC_LEAVE_ADMIN_025",
+      "module": "LEAVE_ADMIN",
+      "title": "Đối chiếu tính chính xác của Number of Days và Leave Balance trên từng dòng đơn",
+      "input": "Tiền điều kiện: Có đơn nghỉ phép đã lưu trong Leave List.\nInput: Chọn 1 dòng đơn bất kỳ để đối chiếu dữ liệu\n1. Kiểm tra From Date và To Date của đơn (vd: 3 ngày làm việc).\n2. Đối chiếu cột Number of Days.\n3. Đối chiếu cột Leave Balance (Days) với hạn mức gốc trừ đi số ngày đã nghỉ.\nKết thúc: khôi phục fixture theo Test Data.",
+      "expected": "Number of Days khớp lịch làm việc và thời lượng đơn (trừ ngày không làm việc/điều chỉnh nửa ngày). Leave Balance khớp entitlement trừ các ngày đã phân bổ/đã nghỉ trong cùng kỳ tại lúc kiểm tra; không giả định chỉ trừ duy nhất đơn đang xem.",
+      "suite": "leave",
+      "member": "22130254",
+      "status": "Pass",
+      "reason": "Chưa tới bước chạy",
+      "originalStatus": "passed",
+      "actual": "Toàn bộ assertion Cypress trong case hoàn tất.",
+      "durationMs": 222116,
+      "evidence": [
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\cypress-results.json",
+        "D:\\Tester\\OrangeHRM-Testing\\Envidence - Group01\\ASM8_2026-11-13T08-57-47-357Z\\leave\\screenshots\\22130254_CaoTienThanh_ASM7.cy.js\\TC_LEAVE_ADMIN_025.png"
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "key": "leave",
+      "member": "22130254",
+      "tool": "Cypress",
+      "source": "automation/22130254/cypress/e2e/leave/22130254_CaoTienThanh_ASM7.cy.js",
+      "sha256": "c92bdf8177608a19d77b9b986ac1980e8de49ad2208fa8746845a2a6199c0067",
+      "planned": 75,
+      "startedAt": "2026-11-13T08:57:47.409Z",
+      "rawReport": "Envidence - Group01/ASM8_2026-11-13T08-57-47-357Z/leave/cypress-results.json",
+      "browser": "157.0.4341.46",
+      "cleanup": true,
+      "finishedAt": "2026-11-13T09:59:37.950Z"
+    }
+  ],
+  "issues": [],
+  "summary": {
+    "Pass": 72,
+    "Fail": 3,
+    "Skipped": 0
+  },
+  "attempted": 75,
+  "selected": 75
+}
