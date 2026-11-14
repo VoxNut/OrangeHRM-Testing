@@ -1,0 +1,6 @@
+{
+  "scenario": "Nhấn Save khi để trống ô Comment trong modal Leave Request Comments",
+  "observed": "UI chặn đúng với thông báo Required và không bị kẹt form loader.",
+  "conclusion": "Không ghi defect",
+  "executedAt": "2026-11-13"
+}

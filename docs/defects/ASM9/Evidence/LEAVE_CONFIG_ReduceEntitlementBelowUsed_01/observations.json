@@ -1,0 +1,233 @@
+[
+  {
+    "id": "REDUCE_BELOW_USED_1",
+    "inputs": {
+      "entitlementId": 153,
+      "initialEntitlement": 10,
+      "daysUsed": 3,
+      "updatedEntitlement": 1,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:34:11.455Z",
+    "screenshots": [
+      "REDUCE_BELOW_USED_1-input.png",
+      "REDUCE_BELOW_USED_1-observed.png"
+    ],
+    "observations": [
+      {
+        "putStatus": 200,
+        "updatedRecord": {
+          "id": 153,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 1,
+          "daysUsed": 3,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "2027-01-01",
+          "toDate": "2027-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": false
+        },
+        "leaveBalance": {
+          "balance": {
+            "entitled": 0,
+            "used": 0,
+            "scheduled": 0,
+            "pending": 0,
+            "taken": 0,
+            "balance": 0,
+            "asAtDate": "2026-11-13",
+            "endDate": "2026-12-31"
+          }
+        },
+        "leaveBalance2027": {
+          "negative": true,
+          "balance": {
+            "entitled": 1,
+            "used": 3,
+            "scheduled": 3,
+            "pending": 0,
+            "taken": 0,
+            "balance": -2,
+            "asAtDate": "2027-06-07",
+            "endDate": "2027-12-31"
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:15.512Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "REDUCE_BELOW_USED_2",
+    "inputs": {
+      "entitlementId": 153,
+      "initialEntitlement": 10,
+      "daysUsed": 3,
+      "updatedEntitlement": 1,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:34:17.343Z",
+    "screenshots": [
+      "REDUCE_BELOW_USED_2-input.png",
+      "REDUCE_BELOW_USED_2-observed.png"
+    ],
+    "observations": [
+      {
+        "putStatus": 200,
+        "updatedRecord": {
+          "id": 153,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 1,
+          "daysUsed": 3,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "2027-01-01",
+          "toDate": "2027-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": false
+        },
+        "leaveBalance": {
+          "balance": {
+            "entitled": 0,
+            "used": 0,
+            "scheduled": 0,
+            "pending": 0,
+            "taken": 0,
+            "balance": 0,
+            "asAtDate": "2026-11-13",
+            "endDate": "2026-12-31"
+          }
+        },
+        "leaveBalance2027": {
+          "negative": true,
+          "balance": {
+            "entitled": 1,
+            "used": 3,
+            "scheduled": 3,
+            "pending": 0,
+            "taken": 0,
+            "balance": -2,
+            "asAtDate": "2027-06-07",
+            "endDate": "2027-12-31"
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:21.854Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "REDUCE_BELOW_USED_3",
+    "inputs": {
+      "entitlementId": 153,
+      "initialEntitlement": 10,
+      "daysUsed": 3,
+      "updatedEntitlement": 1,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:34:24.750Z",
+    "screenshots": [
+      "REDUCE_BELOW_USED_3-input.png",
+      "REDUCE_BELOW_USED_3-observed.png"
+    ],
+    "observations": [
+      {
+        "putStatus": 200,
+        "updatedRecord": {
+          "id": 153,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 1,
+          "daysUsed": 3,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "2027-01-01",
+          "toDate": "2027-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": false
+        },
+        "leaveBalance": {
+          "balance": {
+            "entitled": 0,
+            "used": 0,
+            "scheduled": 0,
+            "pending": 0,
+            "taken": 0,
+            "balance": 0,
+            "asAtDate": "2026-11-13",
+            "endDate": "2026-12-31"
+          }
+        },
+        "leaveBalance2027": {
+          "negative": true,
+          "balance": {
+            "entitled": 1,
+            "used": 3,
+            "scheduled": 3,
+            "pending": 0,
+            "taken": 0,
+            "balance": -2,
+            "asAtDate": "2027-06-07",
+            "endDate": "2027-12-31"
+          }
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:28.988Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "scenario": "Đăng ký Specify Time 22 giờ (01:00 - 23:00) trong 1 ngày làm việc chuẩn 8 giờ",
+  "observed": "API trả HTTP 400: Work Shift Length Exceeded.",
+  "conclusion": "Không ghi defect",
+  "executedAt": "2026-11-13"
+}

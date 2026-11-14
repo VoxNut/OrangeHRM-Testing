@@ -1,0 +1,244 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_VAC_001",
+  "module": "RECRUIT_VAC",
+  "title": "Nhãn hiển thị không gắn với input tương ứng trên form Recruitment",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Visible Vacancy Name/Positions labels had no programmatic input association and computed textbox names were empty; Candidate Email/Notes shared generic placeholder names.",
+  "actualResultAsReported": "1. Vacancy Name và Positions có AX name rỗng ở hai lần fresh-open.\n2. Email/Notes bên Candidate cùng được đặt tên “Type here”, không nhận tên theo nhãn.\n3. Không điền hoặc Save dữ liệu.",
+  "reproductionAsReported": "Add Vacancy: 2/2 fresh opens trong cùng một browser context; Candidate Email/Notes: 1/1 supporting manifestation. Không có AT speech retest.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Vacancy_form_va_nhan_hien_thi.png",
+      "purpose": "Visible Vacancy Name and Positions labels",
+      "actualObservation": "The screenshot provides visual label context; DOM labels/AX names are embedded separately.",
+      "sha256": "ca2dbe7415a6faf6e94799178cea4a7e3436b2730fd52052c9577957cccb0fff",
+      "originalSource": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161_G_APPENDIX/raw/007_vacancy_visible_labels.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161_G_APPENDIX/raw/004_form_label_ax_addJobVacancy_1.json",
+      "sha256": "3505641805086bfb81addd6caa6e2e1f41b3d897e4d92cc16dabf14ea118be61",
+      "role": "Visible-label association and actual computed input names; no entered values",
+      "observedFacts": {
+        "at": "2026-11-09T11:32:40.405243+07:00",
+        "route": "addJobVacancy",
+        "freshOpenOrdinal": 1,
+        "fields": [
+          {
+            "DOM": {
+              "visibleLabel": "Vacancy Name",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": null,
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox"
+          },
+          {
+            "DOM": {
+              "visibleLabel": "Number of Positions",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": null,
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox"
+          }
+        ],
+        "SaveClicked": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161_G_APPENDIX/raw/006_form_label_ax_addJobVacancy_2.json",
+      "sha256": "76c6efebcaad19a9fd57a1f73c36cb08653e49d664c1522b291f9056f84f91cb",
+      "role": "Visible-label association and actual computed input names; no entered values",
+      "observedFacts": {
+        "at": "2026-11-09T11:32:43.192175+07:00",
+        "route": "addJobVacancy",
+        "freshOpenOrdinal": 2,
+        "fields": [
+          {
+            "DOM": {
+              "visibleLabel": "Vacancy Name",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": null,
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox"
+          },
+          {
+            "DOM": {
+              "visibleLabel": "Number of Positions",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": null,
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox"
+          }
+        ],
+        "SaveClicked": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161_G_APPENDIX/raw/009_form_label_ax_addCandidate_1.json",
+      "sha256": "44a0d874225ecdc4602b285e3843a891b8f1db3b06a41ff4b9e4f24076d1c03b",
+      "role": "Visible-label association and actual computed input names; no entered values",
+      "observedFacts": {
+        "at": "2026-11-09T11:32:46.113584+07:00",
+        "route": "addCandidate",
+        "freshOpenOrdinal": 1,
+        "fields": [
+          {
+            "DOM": {
+              "visibleLabel": "Email",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": "Type here",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "Type here",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox \"Type here\""
+          },
+          {
+            "DOM": {
+              "visibleLabel": "Notes",
+              "labelFor": null,
+              "id": "",
+              "name": "",
+              "type": "textarea",
+              "placeholder": "Type here",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "nativeLabels": [],
+              "required": false,
+              "ariaRequired": null,
+              "disabled": false,
+              "readonly": false,
+              "visible": true
+            },
+            "AX": [
+              {
+                "role": "textbox",
+                "name": "Type here",
+                "ignored": false
+              }
+            ],
+            "ariaSnapshot": "- textbox \"Type here\""
+          }
+        ],
+        "SaveClicked": false
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "No screenshot of an AX inspector exists for this chosen capture.",
+    "Native label association and computed AX evidence are included; missing one attribute alone is not the claim.",
+    "No actual screen-reader speech was measured; Candidate fields are supporting manifestations of the same master."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

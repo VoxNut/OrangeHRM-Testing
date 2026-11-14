@@ -1,0 +1,89 @@
+[
+  {
+    "id": "COMMENT_MAXLEN_MISMATCH_1",
+    "inputs": {
+      "testedComment253Length": 253,
+      "testedComment256Length": 256,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:42:41.285Z",
+    "screenshots": [
+      "COMMENT_MAXLEN_MISMATCH_1-input.png",
+      "COMMENT_MAXLEN_MISMATCH_1-observed.png"
+    ],
+    "observations": [
+      {
+        "assignLeaveErrorsAt253Chars": [
+          "Should not exceed 250 characters"
+        ],
+        "leaveListModalErrorsAt253Chars": [],
+        "leaveListModalErrorsAt256Chars": [
+          "Should not exceed 255 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:42:49.534Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "COMMENT_MAXLEN_MISMATCH_2",
+    "inputs": {
+      "testedComment253Length": 253,
+      "testedComment256Length": 256,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:42:49.534Z",
+    "screenshots": [
+      "COMMENT_MAXLEN_MISMATCH_2-input.png",
+      "COMMENT_MAXLEN_MISMATCH_2-observed.png"
+    ],
+    "observations": [
+      {
+        "assignLeaveErrorsAt253Chars": [
+          "Should not exceed 250 characters"
+        ],
+        "leaveListModalErrorsAt253Chars": [],
+        "leaveListModalErrorsAt256Chars": [
+          "Should not exceed 255 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:42:56.467Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "COMMENT_MAXLEN_MISMATCH_3",
+    "inputs": {
+      "testedComment253Length": 253,
+      "testedComment256Length": 256,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:42:56.467Z",
+    "screenshots": [
+      "COMMENT_MAXLEN_MISMATCH_3-input.png",
+      "COMMENT_MAXLEN_MISMATCH_3-observed.png"
+    ],
+    "observations": [
+      {
+        "assignLeaveErrorsAt253Chars": [
+          "Should not exceed 250 characters"
+        ],
+        "leaveListModalErrorsAt253Chars": [],
+        "leaveListModalErrorsAt256Chars": [
+          "Should not exceed 255 characters"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:43:03.636Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

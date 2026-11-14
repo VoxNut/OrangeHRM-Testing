@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_CAND_005",
+  "module": "RECRUIT_CAND",
+  "title": "Reset bộ lọc ngày nhưng focus/blur lại tự khôi phục điều kiện tìm kiếm cũ",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Reset cleared typed date filters, but subsequent unedited focus/blur restored old dates and Search sent them in the GET query. Picker-only negative control stayed blank.",
+  "actualResultAsReported": "1. Ngay sau Reset, ô ngày rỗng và GET trả danh sách không lọc.\n2. Focus/blur không nhập dữ liệu khiến From/To cũ quay lại, GET tiếp theo gửi ISO range cũ.\n3. Một chuỗi cho kết quả 66→6 records; thử nhập qua picker-only không tái hiện.",
+  "reproductionAsReported": "Always CHỈ trên typed-date path đã thử: 4/4; đối chứng picker-only: không tái hiện 0/1. Không ghi Always toàn bộ cách nhập ngày.",
+  "severity": "Medium",
+  "priority": "P2",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Ngay_trong_sau_Reset_o_luot_doi_chieu.png",
+      "purpose": "Reset visibly clears date fields in an earlier sequence of the same investigation",
+      "actualObservation": "Separate historical sequence from the focus-only reproduction; not presented as adjacent frames of one attempt.",
+      "sha256": "1170d821ad92ff18dc464745ddab2c7c5a71143f8626be0625a5d4d17bc62e3b",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0448_date_filters_after_native_reset.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Ngay_cu_khoi_phuc_sau_focus_blur.png",
+      "purpose": "Typed dates return after unedited keyboard focus/blur",
+      "actualObservation": "The following native GET re-applies stale dates; count by itself is not the oracle.",
+      "sha256": "5d3819fe3408e94beb7befdefaf81e245547ee5a9b87bccc068fa04b88fe17c1",
+      "originalSource": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0471_cleared_date_returns_after_unedited_keyboard_blur.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0447_native_date_filter_controls.json",
+      "sha256": "1f11b130bb716937dabfcac9f96490772ba00e552fad37c17ac4a1ae28cf167e",
+      "role": "Reset/date restoration or effective GET from historical typed-date test",
+      "observedFacts": {
+        "at": "2026-11-09T13:44:05.713114+07:00",
+        "inputs": [
+          {
+            "placeholder": "From",
+            "value": "",
+            "defaultValue": "",
+            "focused": false
+          },
+          {
+            "placeholder": "To",
+            "value": "",
+            "defaultValue": "",
+            "focused": false
+          }
+        ],
+        "keywords": "",
+        "errors": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0469_native_reset_unedited_focus_blur.json",
+      "sha256": "598647616310d74f745f9372c53ef520143d705678eef9d3d148694717a2b156",
+      "role": "Reset/date restoration or effective GET from historical typed-date test",
+      "observedFacts": {
+        "at": "2026-11-09T13:47:26.976080+07:00",
+        "nativeShiftTabs": 3,
+        "reached": true,
+        "before": "",
+        "atFocus": "",
+        "afterUneditedBlur": "2026-08-11",
+        "typedAfterReset": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0470_native_date_filter_controls.json",
+      "sha256": "781439a1912fb9c9197af195f4c815e5504deec8b47d219990ccb46a2207ac1e",
+      "role": "Reset/date restoration or effective GET from historical typed-date test",
+      "observedFacts": {
+        "at": "2026-11-09T13:47:27.011340+07:00",
+        "inputs": [
+          {
+            "placeholder": "From",
+            "value": "2026-08-11",
+            "defaultValue": "",
+            "focused": false
+          },
+          {
+            "placeholder": "To",
+            "value": "2026-10-11",
+            "defaultValue": "",
+            "focused": true
+          }
+        ],
+        "keywords": "",
+        "errors": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE08_TRIAGE/raw/0472_native_get_response.json",
+      "sha256": "d7b34aadcc354bc537508d77a5b4e98649c1715a2637555b651ce10ea7e52bfb",
+      "role": "Reset/date restoration or effective GET from historical typed-date test",
+      "observedFacts": {
+        "method": "GET",
+        "path": "/web/index.php/api/v2/recruitment/candidates",
+        "query": {
+          "limit": [
+            "50"
+          ],
+          "offset": [
+            "0"
+          ],
+          "fromDate": [
+            "2026-11-08"
+          ],
+          "toDate": [
+            "2026-11-10"
+          ],
+          "model": [
+            "list"
+          ],
+          "sortField": [
+            "candidate.dateOfApplication"
+          ],
+          "sortOrder": [
+            "DESC"
+          ]
+        },
+        "requestAt": "2026-11-09T13:47:27.305098+07:00",
+        "responseAt": "2026-11-09T13:47:27.815378+07:00",
+        "status": 200,
+        "total": 6,
+        "returnedCount": 6
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T04_DATE_RESET/raw/0296_native_reset_unedited_focus_blur.json",
+      "sha256": "d7dcb60db0c9a460b092943c60df5237e7d8c576ab06faeddc02bae2172f58d8",
+      "role": "Final-sprint typed/picker differential; applicant IDs/names omitted",
+      "observedFacts": {
+        "at": "2026-11-09T21:44:31.505330+07:00",
+        "nativeShiftTabs": 3,
+        "reached": true,
+        "before": "",
+        "atFocus": "",
+        "afterUneditedBlur": "2026-08-11",
+        "typedAfterReset": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T04_DATE_RESET/raw/0300_native_autocomplete_effective_query.json",
+      "sha256": "dadd1c23aff75a12e1fdc415d3f2c2671f67a58fb18220b7fa9e986f7f505686",
+      "role": "Final-sprint typed/picker differential; applicant IDs/names omitted",
+      "observedFacts": {
+        "at": "2026-11-09T21:44:34.734586+07:00",
+        "query": {
+          "limit": [
+            "50"
+          ],
+          "offset": [
+            "0"
+          ],
+          "fromDate": [
+            "2026-11-08"
+          ],
+          "toDate": [
+            "2026-11-10"
+          ],
+          "model": [
+            "list"
+          ],
+          "sortField": [
+            "candidate.dateOfApplication"
+          ],
+          "sortOrder": [
+            "DESC"
+          ]
+        },
+        "lastResponseAt": "2026-11-09T21:44:32.113858+07:00",
+        "total": 8,
+        "errors": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T04_DATE_RESET/raw/0314_native_reset_unedited_focus_blur.json",
+      "sha256": "cb73963934e27be63b058936b425663d3c2ca4795e3079e7633d7eb3b4442b94",
+      "role": "Final-sprint typed/picker differential; applicant IDs/names omitted",
+      "observedFacts": {
+        "at": "2026-11-09T21:45:06.846298+07:00",
+        "nativeShiftTabs": 3,
+        "reached": true,
+        "before": "",
+        "atFocus": "",
+        "afterUneditedBlur": "",
+        "typedAfterReset": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FINAL_HUNT_20261109_212031_02fd2b/T04_DATE_RESET/raw/0318_native_autocomplete_effective_query.json",
+      "sha256": "224f8c11663b602cd4bd1700b2df0271b886ae0e44350d65400cfeaa1e0839af",
+      "role": "Final-sprint typed/picker differential; applicant IDs/names omitted",
+      "observedFacts": {
+        "at": "2026-11-09T21:45:10.057750+07:00",
+        "query": {
+          "limit": [
+            "50"
+          ],
+          "offset": [
+            "0"
+          ],
+          "model": [
+            "list"
+          ],
+          "sortField": [
+            "candidate.dateOfApplication"
+          ],
+          "sortOrder": [
+            "DESC"
+          ]
+        },
+        "lastResponseAt": "2026-11-09T21:45:07.600397+07:00",
+        "total": 68,
+        "errors": []
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "Two PNGs are from separate sequences in the same investigation, not claimed as consecutive frames.",
+    "Typed-date path observed4/4; picker-only negative control did not reproduce0/1.",
+    "No equal-date400 defect or database loss claimed."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

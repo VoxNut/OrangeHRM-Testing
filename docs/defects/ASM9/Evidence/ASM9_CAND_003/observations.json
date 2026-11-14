@@ -1,0 +1,336 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_CAND_003",
+  "module": "RECRUIT_CAND",
+  "title": "Chức năng sắp xếp danh sách Candidate không thao tác được bằng bàn phím",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Complete native Tab cycles never reached the sort controls; actual icon host lacked keyboard-operable semantics, while native mouse control opened the sort menu.",
+  "actualResultAsReported": "1. Sort trigger không nằm trong focus order và không có điều khiển keyboard tương đương được xác minh.\n2. Chuột mở menu và gửi GET sort thành công.\n3. Vacancy List có cùng biểu hiện; không khẳng định tính đúng của thứ tự nhiều dòng.",
+  "reproductionAsReported": "Always trong phạm vi Candidate: 4/4 chu trình fresh-context đầy đủ; Vacancy có manifestation 2 lần. Probe Tab bị giới hạn không tính lượt hoàn chỉnh.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Candidate_menu_Sort_mo_bang_chuot.png",
+      "purpose": "Mouse opens the Candidate sort menu",
+      "actualObservation": "Keyboard reachability is established by metadata, not this still image.",
+      "sha256": "f39522667e9359c1ffbb039b259ecac0d4d38c6da183045315294c162883e4e1",
+      "originalSource": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0290_candidate_mouse_sort_menu_keyboard_unreachable.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Vacancy_menu_Sort_mo_bang_chuot.png",
+      "purpose": "Mouse opens the Vacancy sort menu",
+      "actualObservation": "Same shared keyboard failure manifestation; no separate defect.",
+      "sha256": "efdbd8f1c4658b6d45606994bd9d8bb7a36ec8da2afee1b958910eb5e50720b6",
+      "originalSource": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0301_vacancy_mouse_sort_menu_keyboard_unreachable.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0277_widget_semantics_ax.json",
+      "sha256": "9a959ce90104e653af9a314a966b28e1416827da205478e629c93cc3bf2fcef9",
+      "role": "Sort header and actual icon DOM/AX",
+      "observedFacts": {
+        "at": "2026-11-09T12:38:36.708130+07:00",
+        "selector": ".oxd-table-header-cell:nth-child(3), .oxd-table-header-cell:nth-child(3) .oxd-table-header-sort-icon",
+        "elements": [
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": "columnheader",
+              "tabindex": null,
+              "class": "oxd-table-header-cell oxd-padding-cell oxd-table-th",
+              "text": "CandidateAscendingDescending",
+              "attributes": {
+                "role": "columnheader"
+              },
+              "focused": false
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "columnheader"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "Candidate ",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "contents",
+                      "value": {
+                        "type": "computedString",
+                        "value": "Candidate "
+                      }
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title",
+                      "superseded": true
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "readonly",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  },
+                  {
+                    "name": "required",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "I",
+              "role": null,
+              "tabindex": null,
+              "class": "oxd-icon bi-arrow-down-up oxd-icon-button__icon oxd-table-header-sort-icon",
+              "text": "",
+              "attributes": {},
+              "focused": false
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    }
+                  ]
+                },
+                "properties": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0299_widget_semantics_ax.json",
+      "sha256": "590dba420071644ac9c6a6e46bc7556986a9147d81c9110da3afac4512c2dc2d",
+      "role": "Sort header and actual icon DOM/AX",
+      "observedFacts": {
+        "at": "2026-11-09T12:39:20.066918+07:00",
+        "selector": ".oxd-table-header-cell:nth-child(2), .oxd-table-header-cell:nth-child(2) .oxd-table-header-sort-icon",
+        "elements": [
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": "columnheader",
+              "tabindex": null,
+              "class": "oxd-table-header-cell oxd-padding-cell oxd-table-th",
+              "text": "VacancyAscendingDescending",
+              "attributes": {
+                "role": "columnheader"
+              },
+              "focused": false
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "columnheader"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "Vacancy ",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "contents",
+                      "value": {
+                        "type": "computedString",
+                        "value": "Vacancy "
+                      }
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title",
+                      "superseded": true
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "readonly",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  },
+                  {
+                    "name": "required",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "I",
+              "role": null,
+              "tabindex": null,
+              "class": "oxd-icon bi-sort-alpha-down oxd-icon-button__icon oxd-table-header-sort-icon",
+              "text": "",
+              "attributes": {},
+              "focused": false
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    }
+                  ]
+                },
+                "properties": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE05_FILTERS/raw/0106_complete_native_tab_cycle.json",
+      "sha256": "ce422a7d168ab53f08388db569cd5feed87c2eaab30283f7051bb0beab1ea84b",
+      "role": "Complete native Tab cycle; bounded probes excluded from reproduction denominator",
+      "observedFacts": {
+        "at": "2026-11-09T13:28:02.621870+07:00",
+        "cycleComplete": true,
+        "tabs": 222,
+        "sortFocusCount": 0
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE07_FUNCTIONAL/raw/0337_complete_native_tab_cycle.json",
+      "sha256": "2a304a953f386b44755ff713ae84666da3682f2d5f3588dfde2edd40d3e6d790",
+      "role": "Complete native Tab cycle; bounded probes excluded from reproduction denominator",
+      "observedFacts": {
+        "at": "2026-11-09T13:36:46.685130+07:00",
+        "cycleComplete": true,
+        "tabs": 224,
+        "sortFocusCount": 0
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0289_selection_identity_sort_menu.json",
+      "sha256": "01f945c39144b7d202d36d4d444a3f68f30dc1d423fd29cff208202608db9138",
+      "role": "Native mouse positive control for sorting",
+      "observedFacts": {
+        "at": "2026-11-09T12:39:07.816923+07:00",
+        "menu": "Ascending\nDescending",
+        "query": {
+          "limit": [
+            "50"
+          ],
+          "offset": [
+            "0"
+          ],
+          "model": [
+            "list"
+          ],
+          "sortField": [
+            "candidate.dateOfApplication"
+          ],
+          "sortOrder": [
+            "DESC"
+          ]
+        },
+        "responseAt": "2026-11-09T12:39:02.710208+07:00"
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_I_DISCOVERY/raw/0300_native_mouse_control_sort.json",
+      "sha256": "a56d9ba3867cf223a33ff278325d2773e87bc9a89012d6beb6bdfde318181875",
+      "role": "Native mouse positive control for sorting",
+      "observedFacts": {
+        "at": "2026-11-09T12:39:20.388499+07:00",
+        "selector": ".oxd-table-header-cell:nth-child(2) .oxd-table-header-sort-icon"
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "Mouse menu screenshots are positive controls, not images of a complete keyboard sequence.",
+    "Complete native Tab cycles and DOM/AX support keyboard non-operability; limited150-Tab probes do not count as completed cycles.",
+    "No screen-reader speech or mutation was performed in this packaging task."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

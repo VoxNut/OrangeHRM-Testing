@@ -1,0 +1,107 @@
+[
+  {
+    "id": "APPROVE_AFTER_TERM_1",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "scheduledLeaveDate": "2027-09-07",
+      "includePastEmployees": true,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:35:43.223Z",
+    "screenshots": [
+      "APPROVE_AFTER_TERM_1-input.png",
+      "APPROVE_AFTER_TERM_1-observed.png"
+    ],
+    "observations": [
+      {
+        "requestStatus": 200,
+        "leaveRequestDetail": {
+          "id": 107,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-09-07"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:50.017Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "APPROVE_AFTER_TERM_2",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "scheduledLeaveDate": "2027-09-08",
+      "includePastEmployees": true,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:35:50.479Z",
+    "screenshots": [
+      "APPROVE_AFTER_TERM_2-input.png",
+      "APPROVE_AFTER_TERM_2-observed.png"
+    ],
+    "observations": [
+      {
+        "requestStatus": 200,
+        "leaveRequestDetail": {
+          "id": 108,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-09-08"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:55.093Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "APPROVE_AFTER_TERM_3",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "scheduledLeaveDate": "2027-09-09",
+      "includePastEmployees": true,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:35:55.412Z",
+    "screenshots": [
+      "APPROVE_AFTER_TERM_3-input.png",
+      "APPROVE_AFTER_TERM_3-observed.png"
+    ],
+    "observations": [
+      {
+        "requestStatus": 200,
+        "leaveRequestDetail": {
+          "id": 109,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-09-09"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:36:00.058Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

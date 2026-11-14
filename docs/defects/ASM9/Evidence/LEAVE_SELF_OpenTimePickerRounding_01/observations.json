@@ -1,0 +1,83 @@
+[
+  {
+    "id": "TIMEPICKER_ROUNDING_1",
+    "inputs": {
+      "fromTime": "09:00 AM",
+      "toTimeBeforeClick": "11:59 AM",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:34:58.600Z",
+    "screenshots": [
+      "TIMEPICKER_ROUNDING_1-input.png",
+      "TIMEPICKER_ROUNDING_1-observed.png"
+    ],
+    "observations": [
+      {
+        "toBefore": "11:59 AM",
+        "durationHoursBefore": "2.98",
+        "toAfterClick": "11:00 AM",
+        "durationHoursAfterClick": "2.00",
+        "roundedMinuteStep": 15
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:01.949Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "TIMEPICKER_ROUNDING_2",
+    "inputs": {
+      "fromTime": "09:00 AM",
+      "toTimeBeforeClick": "11:59 AM",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:35:03.902Z",
+    "screenshots": [
+      "TIMEPICKER_ROUNDING_2-input.png",
+      "TIMEPICKER_ROUNDING_2-observed.png"
+    ],
+    "observations": [
+      {
+        "toBefore": "11:59 AM",
+        "durationHoursBefore": "2.98",
+        "toAfterClick": "11:00 AM",
+        "durationHoursAfterClick": "2.00",
+        "roundedMinuteStep": 15
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:07.037Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "TIMEPICKER_ROUNDING_3",
+    "inputs": {
+      "fromTime": "09:00 AM",
+      "toTimeBeforeClick": "11:59 AM",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:35:08.752Z",
+    "screenshots": [
+      "TIMEPICKER_ROUNDING_3-input.png",
+      "TIMEPICKER_ROUNDING_3-observed.png"
+    ],
+    "observations": [
+      {
+        "toBefore": "11:59 AM",
+        "durationHoursBefore": "2.98",
+        "toAfterClick": "11:00 AM",
+        "durationHoursAfterClick": "2.00",
+        "roundedMinuteStep": 15
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:12.129Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

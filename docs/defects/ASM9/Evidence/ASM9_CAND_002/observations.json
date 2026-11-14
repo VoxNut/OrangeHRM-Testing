@@ -1,0 +1,183 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_CAND_002",
+  "module": "RECRUIT_CAND",
+  "title": "Nút thao tác dòng chỉ được đặt tên bằng ký tự icon, không mô tả chức năng",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Computed AX button names were icon glyphs instead of descriptive action names on Candidate/Vacancy row controls; role button and View keyboard activation worked.",
+  "actualResultAsReported": "1. AX name của các nút chỉ là mã ký tự PUA; không có tên mô tả hành động.\n2. Candidate và Vacancy đều tái hiện trên các lần mở mới.\n3. Native Tab/Enter/Space của View vẫn hoạt động; không ghi lỗi keyboard activation.",
+  "reproductionAsReported": "Candidate View/Delete: 2/2 fresh opens; Vacancy Edit/Delete: 2/2; Download: 1/1 manifestation. Một master defect, không tách từng icon.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Candidate_row_action_buttons.png",
+      "purpose": "Candidate action icons in their rendered context",
+      "actualObservation": "Screenshot shows icon controls, not computed AX names.",
+      "sha256": "18692f38ae03254164fa3648b0b4bb4938fe2e59310f757712fba50b6f308c0a",
+      "originalSource": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161/PHASE_F_LIST_UI/raw/0098_candidate_action_names_read2.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Vacancy_row_action_buttons.png",
+      "purpose": "Vacancy action icons supporting the same master",
+      "actualObservation": "Screenshot shows the shared icon action manifestation; no buttons activated here.",
+      "sha256": "80e3ef271a309a30f6d9e0b89023b5ce8e11f74952bd0581d051641a60eb053d",
+      "originalSource": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161/PHASE_F_LIST_UI/raw/0120_vacancy_action_names_read2.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161/PHASE_F_LIST_UI/raw/0075_row_actions_accessibility.json",
+      "sha256": "f735651e74b3e21a70fd82bc6f31feca91b52684061da44c78ed9ec77ec4f583",
+      "role": "Exact relevant structured historical observation; no new test",
+      "observedFacts": {
+        "at": "2026-11-09T11:09:03.782925+07:00",
+        "path": "/web/index.php/recruitment/viewCandidates",
+        "buttons": [
+          {
+            "index": 0,
+            "DOM": {
+              "type": "button",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "title": "",
+              "text": "",
+              "disabled": false,
+              "icons": [
+                {
+                  "class": "oxd-icon bi-eye-fill",
+                  "pseudo": "\"\""
+                }
+              ]
+            },
+            "AX": [
+              {
+                "role": "button",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "aria": "- button \"\""
+          },
+          {
+            "index": 1,
+            "DOM": {
+              "type": "button",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "title": "",
+              "text": "",
+              "disabled": false,
+              "icons": [
+                {
+                  "class": "oxd-icon bi-trash",
+                  "pseudo": "\"\""
+                }
+              ]
+            },
+            "AX": [
+              {
+                "role": "button",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "aria": "- button \"\""
+          }
+        ],
+        "actionsClicked": 0
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_ADV_HUNT_23130299_20261109_105635_8df161/PHASE_F_LIST_UI/raw/0119_row_actions_accessibility.json",
+      "sha256": "ef33a3cd5f15ad61d58c2ced9cc96eccb154e55dba2c1554c85d67d948c75319",
+      "role": "Exact relevant structured historical observation; no new test",
+      "observedFacts": {
+        "at": "2026-11-09T11:14:15.273529+07:00",
+        "path": "/web/index.php/recruitment/viewJobVacancy",
+        "buttons": [
+          {
+            "index": 0,
+            "DOM": {
+              "type": "button",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "title": "",
+              "text": "",
+              "disabled": false,
+              "icons": [
+                {
+                  "class": "oxd-icon bi-trash",
+                  "pseudo": "\"\""
+                }
+              ]
+            },
+            "AX": [
+              {
+                "role": "button",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "aria": "- button \"\""
+          },
+          {
+            "index": 1,
+            "DOM": {
+              "type": "button",
+              "ariaLabel": null,
+              "ariaLabelledBy": null,
+              "title": "",
+              "text": "",
+              "disabled": false,
+              "icons": [
+                {
+                  "class": "oxd-icon bi-pencil-fill",
+                  "pseudo": "\"\""
+                }
+              ]
+            },
+            "AX": [
+              {
+                "role": "button",
+                "name": "",
+                "ignored": false
+              }
+            ],
+            "aria": "- button \"\""
+          }
+        ],
+        "actionsClicked": 0
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "Computed names are glyph characters, not empty strings.",
+    "No actual screen-reader speech was tested.",
+    "PNG alone does not prove accessible-name computation.",
+    "Candidate/Vacancy/Download manifestations are one master defect; Delete was not activated."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

@@ -1,0 +1,239 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_CAND_001",
+  "module": "RECRUIT_CAND",
+  "title": "Candidate Profile bị kẹt loading sau khi Save bị từ chối (HTTP 422)",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "Native Profile PUT422 completed, but Profile remained covered by a loader at original~68.4s and independent~60.024s. Fresh navigation recovered the form and captured persisted baseline was unchanged.",
+  "actualResultAsReported": "1. PUT nhận HTTP 422; giao diện xuất hiện thông báo lỗi.\n2. Profile vẫn bị spinner che sau 68,4 giây ở lượt gốc và 60,024 giây ở retest.\n3. Fresh-open phục hồi form; Notes và các trường baseline vẫn nguyên.",
+  "reproductionAsReported": "Always trong đúng điều kiện đã thử: 2/2 controlled Saves (gốc 1/1 + independent retest 1/1). Không khẳng định mọi kiểu HTTP422 đều lỗi.",
+  "severity": "Medium",
+  "priority": "P2",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Candidate_truoc_Save.png",
+      "purpose": "Draft Notes before the one native Save",
+      "actualObservation": "Owned Profile draft visible; no claim that Notes251 is server-valid.",
+      "sha256": "35ef24afe98f31598685ce02b28dbf4dad9460749ee252702673d4dfbb4d82ba",
+      "originalSource": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0262_dh02_profile_notes251_before_save.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "02_Thong_bao_loi_sau_Save.png",
+      "purpose": "Immediate post-response state",
+      "actualObservation": "Visible Invalid Parameter toast and Profile loader; HTTP422 is established by metadata.",
+      "sha256": "fa489eaa0f2cbc8a29b6e860292ac14e989e59201fbabff48b6c9db3ae6cc646",
+      "originalSource": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0268_timed_ui_response_plus_0_target.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "03_Loading_van_con_sau_68_giay.png",
+      "purpose": "Original sustained-loading sample",
+      "actualObservation": "Target60 sample was observed about68.4s after rejection; timestamp supported by native metadata.",
+      "sha256": "d5b41bfcad5dc4c29bf9a053800b8ca45d9c2994c5e7e2e6562e2b5957b1e675",
+      "originalSource": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0274_timed_ui_response_plus_60_target.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "04_Profile_phuc_hoi_sau_mo_lai.png",
+      "purpose": "Read-only fresh navigation recovery",
+      "actualObservation": "Fresh-open renders baseline form again; baseline equality from reconciliation JSON.",
+      "sha256": "512c2ea2e001315c19ed7c86178f68779a7f6fa54905911b5a1c8ae179b68ea4",
+      "originalSource": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0282_dh02_fresh_profile_after_rejected_save_readonly.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    },
+    {
+      "file": "05_Loading_o_luot_tai_hien_doc_lap.png",
+      "purpose": "Independent retest after rejection",
+      "actualObservation": "Fresh owned fixture in independent retest remains loading at actual+60.024s.",
+      "sha256": "9e4d7abc961972f2efbee002ea57380193d6c84ec78f0642279a3df3c8f50e34",
+      "originalSource": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE05_CAND001_RETEST/raw/0431_response_plus_60.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0265_native_mutation_response.json",
+      "sha256": "34f7600d310c5d6671cf3fa56837ec6764daa6192ac33cc0892eda0d9ea2b702",
+      "role": "Original native rejected Save metadata; safeBody omitted",
+      "observedFacts": {
+        "method": "PUT",
+        "path": "/web/index.php/api/v2/recruitment/candidates/88",
+        "requestAt": "2026-11-08T14:51:29.136842+07:00",
+        "responseAt": "2026-11-08T14:51:29.681340+07:00",
+        "status": 422,
+        "validation": {
+          "error": {
+            "status": "422",
+            "message": "Invalid Parameter",
+            "data": {}
+          }
+        }
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0273_timed_ui_response_plus_60_target.json",
+      "sha256": "97946e6d7282ba25afafc3b73277ab0e41406ac982f25972798acdca593a94e2",
+      "role": "Original timed post-response UI",
+      "observedFacts": {
+        "at": "2026-11-08T14:52:38.074278+07:00",
+        "uiAt": "2026-11-08T07:52:38.078Z",
+        "loaders": [
+          "oxd-form-loader",
+          "oxd-loading-spinner"
+        ],
+        "errors": [],
+        "toasts": []
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_HUNT_23130299_20261108_141823_c81519/raw/0280_mutation_fresh_reconciliation.json",
+      "sha256": "0dfed2038c8c74dc933ec038aebbf86025ce6c3e6531e9183386261ead6e19d6",
+      "role": "Fresh persistence reconciliation; identity/contact values omitted",
+      "observedFacts": {
+        "outcome": "REJECTED_VERIFIED_UNCHANGED",
+        "baselineEqualsFreshCapturedFields": true,
+        "unrelatedFieldChanges": {},
+        "freshNotesLength": 250
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_FULL_HUNT_23130299_20261108_234059_8cba0d/PHASE05_CAND001_RETEST/TIMING_AND_REJECTION_ANALYSIS.json",
+      "sha256": "5251693797f625c52526696a2823e509af97a364369f375e3a9b66df5f7eca62",
+      "role": "Exact relevant structured historical observation; no new test",
+      "observedFacts": {
+        "initialResponseState": {
+          "DOMAt": "2026-11-08T17:20:04.630Z",
+          "elapsedSecondsFromResponseHeadersToDOM": 0.15531,
+          "formLoader": true,
+          "toasts": [
+            "ErrorInvalid Parameter×"
+          ]
+        },
+        "timedSamples": [
+          {
+            "targetSeconds": 0,
+            "actualElapsedSecondsFromBodyObserver": 1.1720829999976559,
+            "DOMAt": "2026-11-08T17:20:05.663Z",
+            "responseAt": "2026-11-09T00:20:04.474690+07:00",
+            "elapsedSecondsFromResponseHeadersToDOM": 1.18831,
+            "formLoader": true,
+            "editTogglePresent": false,
+            "notesCodePoints": 251,
+            "inlineErrors": [],
+            "toasts": [
+              "ErrorInvalid Parameter×"
+            ]
+          },
+          {
+            "targetSeconds": 5,
+            "actualElapsedSecondsFromBodyObserver": 5.028825199999119,
+            "DOMAt": "2026-11-08T17:20:09.521Z",
+            "responseAt": "2026-11-09T00:20:04.474690+07:00",
+            "elapsedSecondsFromResponseHeadersToDOM": 5.04631,
+            "formLoader": true,
+            "editTogglePresent": false,
+            "notesCodePoints": 251,
+            "inlineErrors": [],
+            "toasts": []
+          },
+          {
+            "targetSeconds": 15,
+            "actualElapsedSecondsFromBodyObserver": 15.025858400000288,
+            "DOMAt": "2026-11-08T17:20:19.516Z",
+            "responseAt": "2026-11-09T00:20:04.474690+07:00",
+            "elapsedSecondsFromResponseHeadersToDOM": 15.04131,
+            "formLoader": true,
+            "editTogglePresent": false,
+            "notesCodePoints": 251,
+            "inlineErrors": [],
+            "toasts": []
+          },
+          {
+            "targetSeconds": 30,
+            "actualElapsedSecondsFromBodyObserver": 30.017686899998807,
+            "DOMAt": "2026-11-08T17:20:34.508Z",
+            "responseAt": "2026-11-09T00:20:04.474690+07:00",
+            "elapsedSecondsFromResponseHeadersToDOM": 30.03331,
+            "formLoader": true,
+            "editTogglePresent": false,
+            "notesCodePoints": 251,
+            "inlineErrors": [],
+            "toasts": []
+          },
+          {
+            "targetSeconds": 60,
+            "actualElapsedSecondsFromBodyObserver": 60.02386839999963,
+            "DOMAt": "2026-11-08T17:21:04.515Z",
+            "responseAt": "2026-11-09T00:20:04.474690+07:00",
+            "elapsedSecondsFromResponseHeadersToDOM": 60.04031,
+            "formLoader": true,
+            "editTogglePresent": false,
+            "notesCodePoints": 251,
+            "inlineErrors": [],
+            "toasts": []
+          }
+        ],
+        "mutationRequestFinishedEvents": [
+          {
+            "at": "2026-11-09T00:20:04.478019+07:00",
+            "phase": "PHASE05_CAND001_RETEST",
+            "case": "P5-CAND001-INDEPENDENT-RETEST-A01",
+            "event": "NATIVE_REQUEST_FINISHED",
+            "method": "PUT",
+            "path": "/web/index.php/api/v2/recruitment/candidates/87",
+            "finishedAt": "2026-11-09T00:20:04.477382+07:00"
+          }
+        ],
+        "bodyCapture": "invalidParamKeys[comment] retained; exact server rule/message beyond genericInvalidParameter UNKNOWN",
+        "attempts": {
+          "original": {
+            "observed": 1,
+            "attempted": 1
+          },
+          "independentThisBatch": {
+            "observed": 1,
+            "attempted": 1
+          },
+          "combined": {
+            "observed": 2,
+            "attempted": 2
+          }
+        },
+        "multipleSamplesAreNotMultipleReproductions": true,
+        "baselineUnchanged": true,
+        "attachmentSecondPUTOnRejectedIntent": 0
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "HTTP422 itself is not the defect.",
+    "Screenshots show UI; HTTP status and timing require the included historical metadata.",
+    "Two controlled Saves total, not one attempt per screenshot.",
+    "No whole-site or universal error-path claim."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

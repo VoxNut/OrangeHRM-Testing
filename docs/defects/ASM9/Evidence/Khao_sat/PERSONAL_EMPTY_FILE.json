@@ -1,0 +1,24 @@
+{
+  "id": "PERSONAL_EMPTY_FILE",
+  "inputs": {
+    "bytes": 0,
+    "filename": "empty.pdf"
+  },
+  "startedAt": "2026-11-07T02:45:02.519Z",
+  "screenshots": [
+    "PERSONAL_EMPTY_FILE-input.png",
+    "PERSONAL_EMPTY_FILE-after-save.png",
+    "PERSONAL_EMPTY_FILE-observed.png"
+  ],
+  "observations": [
+    {
+      "body": null,
+      "errors": [
+        "Required"
+      ]
+    }
+  ],
+  "status": "Observed",
+  "finishedAt": "2026-11-07T02:45:12.894Z",
+  "runId": "ASM9_2026-11-07T02-41-15-979Z"
+}

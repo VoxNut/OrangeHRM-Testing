@@ -1,0 +1,104 @@
+[
+  {
+    "id": "ACCUM_OVER_LIMIT_1",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "leaveType": "ASM9_LT_06548",
+      "period": "2029-01-01..2029-12-31",
+      "firstAdd": 6000,
+      "secondAdd": 6000,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:33:57.957Z",
+    "screenshots": [
+      "ACCUM_OVER_LIMIT_1-input.png",
+      "ACCUM_OVER_LIMIT_1-observed.png"
+    ],
+    "observations": [
+      {
+        "firstPostStatus": 200,
+        "secondPostStatus": 200,
+        "mergedEntitlementId": 150,
+        "mergedEntitlement": 12000,
+        "editFormValidationErrors": [
+          "Required",
+          "Should be less than 10000"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:01.998Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ACCUM_OVER_LIMIT_2",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "leaveType": "ASM9_LT_06548",
+      "period": "2030-01-01..2030-12-31",
+      "firstAdd": 6000,
+      "secondAdd": 6000,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:34:01.999Z",
+    "screenshots": [
+      "ACCUM_OVER_LIMIT_2-input.png",
+      "ACCUM_OVER_LIMIT_2-observed.png"
+    ],
+    "observations": [
+      {
+        "firstPostStatus": 200,
+        "secondPostStatus": 200,
+        "mergedEntitlementId": 151,
+        "mergedEntitlement": 12000,
+        "editFormValidationErrors": [
+          "Required",
+          "Should be less than 10000"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:06.258Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ACCUM_OVER_LIMIT_3",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "leaveType": "ASM9_LT_06548",
+      "period": "2031-01-01..2031-12-31",
+      "firstAdd": 6000,
+      "secondAdd": 6000,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:34:06.258Z",
+    "screenshots": [
+      "ACCUM_OVER_LIMIT_3-input.png",
+      "ACCUM_OVER_LIMIT_3-observed.png"
+    ],
+    "observations": [
+      {
+        "firstPostStatus": 200,
+        "secondPostStatus": 200,
+        "mergedEntitlementId": 152,
+        "mergedEntitlement": 12000,
+        "editFormValidationErrors": [
+          "Required",
+          "Should be less than 10000"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:10.480Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "RESET_DATE_RESTORE_1",
+    "inputs": {
+      "typedFromDate": "2027-01-05",
+      "action": "Click Reset then focus+blur From Date without typing",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:35:16.649Z",
+    "screenshots": [
+      "RESET_DATE_RESTORE_1-input.png",
+      "RESET_DATE_RESTORE_1-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterReset": "2026-01-01",
+        "valueAfterFocusBlur": "2027-01-05"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:20.368Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "RESET_DATE_RESTORE_2",
+    "inputs": {
+      "typedFromDate": "2027-02-05",
+      "action": "Click Reset then focus+blur From Date without typing",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:35:20.368Z",
+    "screenshots": [
+      "RESET_DATE_RESTORE_2-input.png",
+      "RESET_DATE_RESTORE_2-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterReset": "2026-01-01",
+        "valueAfterFocusBlur": "2027-02-05"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:23.788Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "RESET_DATE_RESTORE_3",
+    "inputs": {
+      "typedFromDate": "2027-03-05",
+      "action": "Click Reset then focus+blur From Date without typing",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:35:23.788Z",
+    "screenshots": [
+      "RESET_DATE_RESTORE_3-input.png",
+      "RESET_DATE_RESTORE_3-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterReset": "2026-01-01",
+        "valueAfterFocusBlur": "2027-03-05"
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:27.450Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

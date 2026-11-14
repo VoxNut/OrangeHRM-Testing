@@ -1,0 +1,119 @@
+[
+  {
+    "id": "STALE_LOST_UPDATE_1",
+    "inputs": {
+      "firstTab": "Other Id=NEW-A",
+      "secondTab": "License=NEW-B",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-07T02:47:55.227Z",
+    "screenshots": [
+      "STALE_LOST_UPDATE_1-first-tab-saved.png",
+      "STALE_LOST_UPDATE_1-observed.png"
+    ],
+    "observations": [
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "BASE",
+        "drivingLicenseNo": "NEW-B",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:48:18.077Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "STALE_LOST_UPDATE_2",
+    "inputs": {
+      "firstTab": "Other Id=NEW-A",
+      "secondTab": "License=NEW-B",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-07T02:48:18.078Z",
+    "screenshots": [
+      "STALE_LOST_UPDATE_2-first-tab-saved.png",
+      "STALE_LOST_UPDATE_2-observed.png"
+    ],
+    "observations": [
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "BASE",
+        "drivingLicenseNo": "NEW-B",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:48:51.753Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  },
+  {
+    "id": "STALE_LOST_UPDATE_3",
+    "inputs": {
+      "firstTab": "Other Id=NEW-A",
+      "secondTab": "License=NEW-B",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-07T02:48:51.754Z",
+    "screenshots": [
+      "STALE_LOST_UPDATE_3-first-tab-saved.png",
+      "STALE_LOST_UPDATE_3-observed.png"
+    ],
+    "observations": [
+      {
+        "empNumber": 186,
+        "lastName": "NhutA92d76c009",
+        "firstName": "G01N01",
+        "middleName": "Minh",
+        "employeeId": "A92d76c009",
+        "otherId": "BASE",
+        "drivingLicenseNo": "NEW-B",
+        "drivingLicenseExpiredDate": "1990-01-01",
+        "gender": null,
+        "maritalStatus": "",
+        "birthday": "2000-01-01",
+        "terminationId": null,
+        "nationality": {
+          "id": null,
+          "name": null
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-07T02:49:11.588Z",
+    "runId": "ASM9_2026-11-07T02-46-00-277Z",
+    "browser": "157.0.4341.42",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php",
+    "scriptSha256": "11e463245ab6b787ff26fb2aceafb8b7545321e59b453ed78f5ddb61b22e09b8"
+  }
+]

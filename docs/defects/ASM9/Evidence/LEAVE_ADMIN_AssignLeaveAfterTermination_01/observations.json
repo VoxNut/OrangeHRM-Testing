@@ -1,0 +1,107 @@
+[
+  {
+    "id": "ASSIGN_AFTER_TERM_1",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "assignedLeaveDate": "2027-08-03",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:35:29.568Z",
+    "screenshots": [
+      "ASSIGN_AFTER_TERM_1-input.png",
+      "ASSIGN_AFTER_TERM_1-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "leaveRequestId": 104,
+        "savedRequest": {
+          "id": 104,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-08-03"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:31.169Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ASSIGN_AFTER_TERM_2",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "assignedLeaveDate": "2027-08-04",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:35:34.961Z",
+    "screenshots": [
+      "ASSIGN_AFTER_TERM_2-input.png",
+      "ASSIGN_AFTER_TERM_2-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "leaveRequestId": 105,
+        "savedRequest": {
+          "id": 105,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-08-04"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:35.416Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ASSIGN_AFTER_TERM_3",
+    "inputs": {
+      "empNumber": 273,
+      "employeeId": "T9B06548",
+      "terminationDate": "2026-11-01",
+      "assignedLeaveDate": "2027-08-05",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:35:38.211Z",
+    "screenshots": [
+      "ASSIGN_AFTER_TERM_3-input.png",
+      "ASSIGN_AFTER_TERM_3-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "leaveRequestId": 106,
+        "savedRequest": {
+          "id": 106,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "dateApplied": "2027-08-05"
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:39.186Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

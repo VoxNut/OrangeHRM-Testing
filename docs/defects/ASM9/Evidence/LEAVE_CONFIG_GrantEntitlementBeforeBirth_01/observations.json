@@ -1,0 +1,167 @@
+[
+  {
+    "id": "ENTITLEMENT_BEFORE_BIRTH_1",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "birthday": "2000-01-01",
+      "joinedDate": "2027-06-01",
+      "fromDate": "1995-01-01",
+      "toDate": "1995-12-31",
+      "entitlement": 10,
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:34:32.456Z",
+    "screenshots": [
+      "ENTITLEMENT_BEFORE_BIRTH_1-input.png",
+      "ENTITLEMENT_BEFORE_BIRTH_1-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "savedEntitlement": {
+          "id": 154,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 10,
+          "daysUsed": 0,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "1995-01-01",
+          "toDate": "1995-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": true
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:32.853Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ENTITLEMENT_BEFORE_BIRTH_2",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "birthday": "2000-01-01",
+      "joinedDate": "2027-06-01",
+      "fromDate": "1996-01-01",
+      "toDate": "1996-12-31",
+      "entitlement": 10,
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:34:36.085Z",
+    "screenshots": [
+      "ENTITLEMENT_BEFORE_BIRTH_2-input.png",
+      "ENTITLEMENT_BEFORE_BIRTH_2-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "savedEntitlement": {
+          "id": 155,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 10,
+          "daysUsed": 0,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "1996-01-01",
+          "toDate": "1996-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": true
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:36.987Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "ENTITLEMENT_BEFORE_BIRTH_3",
+    "inputs": {
+      "empNumber": 272,
+      "employeeId": "T9A06548",
+      "birthday": "2000-01-01",
+      "joinedDate": "2027-06-01",
+      "fromDate": "1997-01-01",
+      "toDate": "1997-12-31",
+      "entitlement": 10,
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:34:39.119Z",
+    "screenshots": [
+      "ENTITLEMENT_BEFORE_BIRTH_3-input.png",
+      "ENTITLEMENT_BEFORE_BIRTH_3-observed.png"
+    ],
+    "observations": [
+      {
+        "postStatus": 200,
+        "savedEntitlement": {
+          "id": 156,
+          "employee": {
+            "empNumber": 272,
+            "lastName": "Active06548",
+            "firstName": "ThanhA9",
+            "middleName": "Tien",
+            "employeeId": "T9A06548",
+            "terminationId": null
+          },
+          "entitlement": 10,
+          "daysUsed": 0,
+          "leaveType": {
+            "id": 20,
+            "name": "ASM9_LT_06548",
+            "deleted": false
+          },
+          "fromDate": "1997-01-01",
+          "toDate": "1997-12-31",
+          "creditedDate": "2026-11-13",
+          "entitlementType": {
+            "id": 1,
+            "name": "Added"
+          },
+          "deleted": false,
+          "deletable": true
+        }
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:34:39.562Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]

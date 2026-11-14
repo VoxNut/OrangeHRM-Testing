@@ -1,0 +1,733 @@
+{
+  "schemaVersion": "1.0",
+  "defectId": "ASM9_VAC_002",
+  "module": "RECRUIT_VAC",
+  "title": "Dropdown Job Title không cung cấp role và trạng thái mở/đóng cho công nghệ hỗ trợ",
+  "environment": {
+    "system": "OrangeHRM public demo",
+    "target": "https://opensource-demo.orangehrmlive.com/",
+    "UIVersionAsRecorded": "OS 5.9",
+    "backendBuild": null,
+    "browserAsRecorded": "Chrome156.0.8078.81",
+    "headless": true,
+    "platform": "Windows",
+    "locale": "en-US",
+    "timezone": "Asia/Saigon",
+    "liveVerificationDuringPackaging": false
+  },
+  "observedBehavior": "The actual tabindex0 Job Title interactive host had generic/missing role/expanded semantics in open/closed states; ancestors/native alternatives did not supply a valid equivalent. Keyboard selection worked.",
+  "actualResultAsReported": "1. Focused DIV và wrappers đều có AX role generic, không có expanded state khi đóng/mở/chọn.\n2. Popup expose listbox/options; ArrowDown/Enter vẫn chọn được.\n3. Không tìm thấy phần tử chủ tương đương có đầy đủ role/state trong audit.",
+  "reproductionAsReported": "Always trong phạm vi 4/4 fresh forms (2 gốc + 2 independent contexts). Chromium AX, chưa đo screen-reader speech.",
+  "severity": "Low",
+  "priority": "P3",
+  "statusAsReported": "Confirmed",
+  "screenshots": [
+    {
+      "file": "01_Job_Title_dropdown_mo_bang_keyboard.png",
+      "purpose": "Actual Job Title dropdown open via keyboard",
+      "actualObservation": "This PNG shows an open widget; role/expanded semantics require the included actual-host DOM/AX observations.",
+      "sha256": "5d2a0edb48f46d02d5e43416cc0dee3b50280110b45d95c77bdd61dd83b44d52",
+      "originalSource": "evidence/ASM9_ACCESSIBILITY_HUNT_20261109_122416_1c8fc9/PHASE_E_TRIAGE/raw/0074_jobtitle_keyboard_open_state.png",
+      "originalIndexCaptureAt": null,
+      "proofScope": "Rendered historical UI only; relevant DOM/AX/network metadata is below."
+    }
+  ],
+  "historicalObservations": [
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0031_actual_select_host_semantics.json",
+      "sha256": "2d8cd73a16c9f1724522baf32a3b659fcaee4e12e510e0b4b29cfb2c0cfb2d2b",
+      "role": "Actual interactive host, ancestor/native alternatives and popup state; not wrapper-only",
+      "observedFacts": {
+        "at": "2026-11-09T13:22:54.882372+07:00",
+        "focusedActualHost": true,
+        "hostDOM": {
+          "tag": "DIV",
+          "tabindex": 0,
+          "role": null,
+          "expanded": null,
+          "controls": null,
+          "text": "-- Select --"
+        },
+        "ancestorDOM": [
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-text oxd-select-text--focus"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-wrapper"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": ""
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-input-group oxd-input-field-bottom-space"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-item oxd-grid-item--gutters"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-3 orangehrm-full-width-grid"
+          }
+        ],
+        "widgetAX": "- text: Job Title* -- Select -- \n- listbox:\n  - option \"-- Select --\"\n  - option \"Account Assistant\"\n  - option \"Automaton Tester\"\n  - option \"CEO\"\n  - option \"Chief Executive Officer\"\n  - option \"Chief Financial Officer\"\n  - option \"Chief Technical Officer\"\n  - option \"Content Specialist\"\n  - option \"Customer Success Manager\"\n  - option \"Database Administrator\"\n  - option \"Finance Manager\"\n  - option \"Financial Analyst\"\n  - option \"Head of Support\"\n  - option \"HR Associate\"\n  - option \"HR Manager\"\n  - option \"IT Manager\"\n  - option \"Network Administrator\"\n  - option \"Payroll Administrator\"\n  - option \"Pre-Sales Coordinator\"\n  - option \"QA Engineer\"\n  - option \"QA Lead\"\n  - option \"qwer\"\n  - option \"rsjsrii\"\n  - option \"Sales Representative\"\n  - option \"Social Media Marketer\"\n  - option \"Software Architect\"\n  - option \"Software Engineer\"\n  - option \"Student892539\"\n  - option \"Support Specialist\"\n  - option \"VP - Client Services\"\n  - option \"VP - Sales & Marketing\"\n  - option \"амиус\"\n  - option \"их эмч\"\n  - option \"хүний нөөцийн менежэр\"\n  - option \"Эм зүйч\"\n  - option \"Эм зүйч хүлээн авахын\"",
+        "nativeSelectCount": 0,
+        "alternativeInteractiveCount": 0,
+        "popupVisible": true
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0035_actual_select_host_semantics.json",
+      "sha256": "71d8accba5e9d99488de8b0109d73c85da90289e38d8152af90cabc9b32f426a",
+      "role": "Actual interactive host, ancestor/native alternatives and popup state; not wrapper-only",
+      "observedFacts": {
+        "at": "2026-11-09T13:22:55.681825+07:00",
+        "focusedActualHost": true,
+        "hostDOM": {
+          "tag": "DIV",
+          "tabindex": 0,
+          "role": null,
+          "expanded": null,
+          "controls": null,
+          "text": "Account Assistant"
+        },
+        "ancestorDOM": [
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-text oxd-select-text--focus"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-wrapper"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": ""
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-input-group oxd-input-field-bottom-space"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-item oxd-grid-item--gutters"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-3 orangehrm-full-width-grid"
+          }
+        ],
+        "widgetAX": "- text: Job Title* Account Assistant ",
+        "nativeSelectCount": 0,
+        "alternativeInteractiveCount": 0,
+        "popupVisible": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0059_actual_select_host_semantics.json",
+      "sha256": "a982ca30e4e5ab434e95631d104df01a54dc23bc9d15cb50eae12a5747f499cb",
+      "role": "Actual interactive host, ancestor/native alternatives and popup state; not wrapper-only",
+      "observedFacts": {
+        "at": "2026-11-09T13:25:03.057427+07:00",
+        "focusedActualHost": true,
+        "hostDOM": {
+          "tag": "DIV",
+          "tabindex": 0,
+          "role": null,
+          "expanded": null,
+          "controls": null,
+          "text": "-- Select --"
+        },
+        "ancestorDOM": [
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-text oxd-select-text--focus"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-wrapper"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": ""
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-input-group oxd-input-field-bottom-space"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-item oxd-grid-item--gutters"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-3 orangehrm-full-width-grid"
+          }
+        ],
+        "widgetAX": "- text: Job Title* -- Select -- \n- listbox:\n  - option \"-- Select --\"\n  - option \"Account Assistant\"\n  - option \"Automaton Tester\"\n  - option \"CEO\"\n  - option \"Chief Executive Officer\"\n  - option \"Chief Financial Officer\"\n  - option \"Chief Technical Officer\"\n  - option \"Content Specialist\"\n  - option \"Customer Success Manager\"\n  - option \"Database Administrator\"\n  - option \"Finance Manager\"\n  - option \"Financial Analyst\"\n  - option \"Head of Support\"\n  - option \"HR Associate\"\n  - option \"HR Manager\"\n  - option \"IT Manager\"\n  - option \"Network Administrator\"\n  - option \"Payroll Administrator\"\n  - option \"Pre-Sales Coordinator\"\n  - option \"QA Engineer\"\n  - option \"QA Lead\"\n  - option \"qwer\"\n  - option \"rsjsrii\"\n  - option \"Sales Representative\"\n  - option \"Social Media Marketer\"\n  - option \"Software Architect\"\n  - option \"Software Engineer\"\n  - option \"Student892539\"\n  - option \"Support Specialist\"\n  - option \"VP - Client Services\"\n  - option \"VP - Sales & Marketing\"\n  - option \"амиус\"\n  - option \"их эмч\"\n  - option \"хүний нөөцийн менежэр\"\n  - option \"Эм зүйч\"\n  - option \"Эм зүйч хүлээн авахын\"",
+        "nativeSelectCount": 0,
+        "alternativeInteractiveCount": 0,
+        "popupVisible": true
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0063_actual_select_host_semantics.json",
+      "sha256": "0ded19bcbb966732ecb1321544b52668238bb31f3f67ebd1ff5beb511376232b",
+      "role": "Actual interactive host, ancestor/native alternatives and popup state; not wrapper-only",
+      "observedFacts": {
+        "at": "2026-11-09T13:25:03.800814+07:00",
+        "focusedActualHost": true,
+        "hostDOM": {
+          "tag": "DIV",
+          "tabindex": 0,
+          "role": null,
+          "expanded": null,
+          "controls": null,
+          "text": "Account Assistant"
+        },
+        "ancestorDOM": [
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-text oxd-select-text--focus"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-select-wrapper"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": ""
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-input-group oxd-input-field-bottom-space"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-item oxd-grid-item--gutters"
+          },
+          {
+            "tag": "DIV",
+            "role": null,
+            "tabindex": null,
+            "expanded": null,
+            "controls": null,
+            "class": "oxd-grid-3 orangehrm-full-width-grid"
+          }
+        ],
+        "widgetAX": "- text: Job Title* Account Assistant ",
+        "nativeSelectCount": 0,
+        "alternativeInteractiveCount": 0,
+        "popupVisible": false
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0032_widget_semantics_ax.json",
+      "sha256": "0733cae09785a1d1a6173d04e9881a0e171ef65ded021c01803444e694fcbf85",
+      "role": "Actual computed role/name/state from Chromium AX",
+      "observedFacts": {
+        "at": "2026-11-09T13:22:55.058878+07:00",
+        "selector": ".oxd-select-text-input, .oxd-select-wrapper, [role=listbox]",
+        "elements": [
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": null,
+              "tabindex": null,
+              "class": "oxd-select-wrapper",
+              "visible": true,
+              "text": "-- Select ---- Select --Account AssistantAutomaton TesterCEOChief Executive OfficerChief Financial OfficerChief Technical OfficerContent SpecialistCustomer Success ManagerDatabase ",
+              "label": "Job Title",
+              "attributes": {},
+              "labelRefs": [],
+              "errors": [],
+              "focused": false,
+              "focusVisible": false,
+              "outline": "rgb(0, 0, 0) none 3px",
+              "border": "0px none rgb(0, 0, 0)",
+              "shadow": "none",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    }
+                  ]
+                },
+                "properties": []
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": null,
+              "tabindex": "0",
+              "class": "oxd-select-text-input",
+              "visible": true,
+              "text": "-- Select --",
+              "label": "Job Title",
+              "attributes": {
+                "tabindex": "0"
+              },
+              "labelRefs": [],
+              "errors": [],
+              "focused": true,
+              "focusVisible": true,
+              "outline": "rgb(100, 114, 140) none 0px",
+              "border": "0px none rgb(100, 114, 140)",
+              "shadow": "none",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "-- Select --",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "contents",
+                      "value": {
+                        "type": "computedString",
+                        "value": "-- Select --"
+                      }
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title",
+                      "superseded": true
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "focusable",
+                    "value": {
+                      "type": "booleanOrUndefined",
+                      "value": true
+                    }
+                  },
+                  {
+                    "name": "focused",
+                    "value": {
+                      "type": "booleanOrUndefined",
+                      "value": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": "listbox",
+              "tabindex": null,
+              "class": "oxd-select-dropdown --positon-bottom",
+              "visible": true,
+              "text": "-- Select --Account AssistantAutomaton TesterCEOChief Executive OfficerChief Financial OfficerChief Technical OfficerContent SpecialistCustomer Success ManagerDatabase Administrato",
+              "label": "Job Title",
+              "attributes": {
+                "role": "listbox"
+              },
+              "labelRefs": [],
+              "errors": [],
+              "focused": false,
+              "focusVisible": false,
+              "outline": "rgb(100, 114, 140) none 3px",
+              "border": "1px solid rgb(232, 234, 239)",
+              "shadow": "rgba(0, 0, 0, 0.15) 0px 5px 15px -8px",
+              "background": "rgb(255, 255, 255)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "listbox"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title"
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "multiselectable",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  },
+                  {
+                    "name": "orientation",
+                    "value": {
+                      "type": "token",
+                      "value": "vertical"
+                    }
+                  },
+                  {
+                    "name": "required",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "historicalWorkspacePath": "evidence/ASM9_NEXT_HUNT_20261109_132122_b3263d/PHASE02_VAC002/raw/0060_widget_semantics_ax.json",
+      "sha256": "8178fac7406ae7b145a82123c35eb5492cdb4a961b0d6c72642ae0b7de2c97a7",
+      "role": "Actual computed role/name/state from Chromium AX",
+      "observedFacts": {
+        "at": "2026-11-09T13:25:03.205961+07:00",
+        "selector": ".oxd-select-text-input, .oxd-select-wrapper, [role=listbox]",
+        "elements": [
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": null,
+              "tabindex": null,
+              "class": "oxd-select-wrapper",
+              "visible": true,
+              "text": "-- Select ---- Select --Account AssistantAutomaton TesterCEOChief Executive OfficerChief Financial OfficerChief Technical OfficerContent SpecialistCustomer Success ManagerDatabase ",
+              "label": "Job Title",
+              "attributes": {},
+              "labelRefs": [],
+              "errors": [],
+              "focused": false,
+              "focusVisible": false,
+              "outline": "rgb(0, 0, 0) none 3px",
+              "border": "0px none rgb(0, 0, 0)",
+              "shadow": "none",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    }
+                  ]
+                },
+                "properties": []
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": null,
+              "tabindex": "0",
+              "class": "oxd-select-text-input",
+              "visible": true,
+              "text": "-- Select --",
+              "label": "Job Title",
+              "attributes": {
+                "tabindex": "0"
+              },
+              "labelRefs": [],
+              "errors": [],
+              "focused": true,
+              "focusVisible": true,
+              "outline": "rgb(100, 114, 140) none 0px",
+              "border": "0px none rgb(100, 114, 140)",
+              "shadow": "none",
+              "background": "rgba(0, 0, 0, 0)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "generic"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "-- Select --",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "contents",
+                      "value": {
+                        "type": "computedString",
+                        "value": "-- Select --"
+                      }
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title",
+                      "superseded": true
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "focusable",
+                    "value": {
+                      "type": "booleanOrUndefined",
+                      "value": true
+                    }
+                  },
+                  {
+                    "name": "focused",
+                    "value": {
+                      "type": "booleanOrUndefined",
+                      "value": true
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "DOM": {
+              "tag": "DIV",
+              "role": "listbox",
+              "tabindex": null,
+              "class": "oxd-select-dropdown --positon-bottom",
+              "visible": true,
+              "text": "-- Select --Account AssistantAutomaton TesterCEOChief Executive OfficerChief Financial OfficerChief Technical OfficerContent SpecialistCustomer Success ManagerDatabase Administrato",
+              "label": "Job Title",
+              "attributes": {
+                "role": "listbox"
+              },
+              "labelRefs": [],
+              "errors": [],
+              "focused": false,
+              "focusVisible": false,
+              "outline": "rgb(100, 114, 140) none 3px",
+              "border": "1px solid rgb(232, 234, 239)",
+              "shadow": "rgba(0, 0, 0, 0.15) 0px 5px 15px -8px",
+              "background": "rgb(255, 255, 255)"
+            },
+            "AX": [
+              {
+                "ignored": false,
+                "role": {
+                  "type": "role",
+                  "value": "listbox"
+                },
+                "name": {
+                  "type": "computedString",
+                  "value": "",
+                  "sources": [
+                    {
+                      "type": "relatedElement",
+                      "attribute": "aria-labelledby"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "aria-label"
+                    },
+                    {
+                      "type": "attribute",
+                      "attribute": "title"
+                    }
+                  ]
+                },
+                "properties": [
+                  {
+                    "name": "multiselectable",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  },
+                  {
+                    "name": "orientation",
+                    "value": {
+                      "type": "token",
+                      "value": "vertical"
+                    }
+                  },
+                  {
+                    "name": "required",
+                    "value": {
+                      "type": "boolean",
+                      "value": false
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "sourcePointerBase": "Paths under historicalWorkspacePath/originalSource are provenance relative to the ASM9 workspace, not files required inside this submission. Selected facts are embedded here; local screenshots use file names above.",
+  "limitations": [
+    "A generic outer wrapper alone is not a defect; actual tabindex0 host and alternative semantics were inspected.",
+    "Keyboard option selection works; the finding concerns programmatic role/expanded state.",
+    "No actual AT speech; no separate ID for another OxdSelect manifestation."
+  ],
+  "actualScreenReaderSpeechTested": false,
+  "compiledAt": "2026-11-09T22:52:33.964237+07:00",
+  "compiledFromExistingEvidenceOnly": true,
+  "newLiveTests": 0,
+  "newRecruitmentMutations": 0,
+  "evidenceStatus": "VERIFIED_PNG_AND_HISTORICAL_METADATA"
+}

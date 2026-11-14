@@ -1,0 +1,77 @@
+[
+  {
+    "id": "INVALID_TIME_CLEAR_1",
+    "inputs": {
+      "typedTime": "25:99 PM",
+      "attempt": 1
+    },
+    "startedAt": "2026-11-13T16:35:01.950Z",
+    "screenshots": [
+      "INVALID_TIME_CLEAR_1-input.png",
+      "INVALID_TIME_CLEAR_1-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterBlur": "",
+        "fieldErrorMessages": [
+          "Required"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:03.901Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "INVALID_TIME_CLEAR_2",
+    "inputs": {
+      "typedTime": "25:99 PM",
+      "attempt": 2
+    },
+    "startedAt": "2026-11-13T16:35:07.037Z",
+    "screenshots": [
+      "INVALID_TIME_CLEAR_2-input.png",
+      "INVALID_TIME_CLEAR_2-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterBlur": "",
+        "fieldErrorMessages": [
+          "Required"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:08.751Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  },
+  {
+    "id": "INVALID_TIME_CLEAR_3",
+    "inputs": {
+      "typedTime": "25:99 PM",
+      "attempt": 3
+    },
+    "startedAt": "2026-11-13T16:35:12.129Z",
+    "screenshots": [
+      "INVALID_TIME_CLEAR_3-input.png",
+      "INVALID_TIME_CLEAR_3-observed.png"
+    ],
+    "observations": [
+      {
+        "valueAfterBlur": "",
+        "fieldErrorMessages": [
+          "Required"
+        ]
+      }
+    ],
+    "status": "Observed",
+    "finishedAt": "2026-11-13T16:35:13.984Z",
+    "runId": "ASM9_22130254_2026-11-13T16-31-00-000Z",
+    "browser": "157.0.4341.46",
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/web/index.php"
+  }
+]
